@@ -1,0 +1,6 @@
+[submodule "ondewo-vtsi-api"]
+	path = ondewo-vtsi-api
+	url = https://github.com/ondewo/ondewo-vtsi-api.git
+[submodule "ondewo-proto-compiler"]
+	path = ondewo-proto-compiler
+	url = https://github.com/ondewo/ondewo-proto-compiler.git
