@@ -81,6 +81,14 @@ namespace Ondewo.Sip {
     static readonly grpc::Marshaller<global::Ondewo.Sip.SipStatusHistoryResponse> __Marshaller_ondewo_sip_SipStatusHistoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipStatusHistoryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Sip.SipPlayWavFilesRequest> __Marshaller_ondewo_sip_SipPlayWavFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipPlayWavFilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest> __Marshaller_ondewo_sip_SipReportAnsweringMachineDetectedRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Sip.SipSetCallMediaControlRequest> __Marshaller_ondewo_sip_SipSetCallMediaControlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipSetCallMediaControlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Sip.SipCallAudioRequest> __Marshaller_ondewo_sip_SipCallAudioRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipCallAudioRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Sip.SipCallAudioResponse> __Marshaller_ondewo_sip_SipCallAudioResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipCallAudioResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Sip.SipStartSessionRequest, global::Ondewo.Sip.SipStatus> __Method_SipStartSession = new grpc::Method<global::Ondewo.Sip.SipStartSessionRequest, global::Ondewo.Sip.SipStatus>(
@@ -170,6 +178,30 @@ namespace Ondewo.Sip {
         __Marshaller_google_protobuf_Empty,
         __Marshaller_ondewo_sip_SipStatus);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest, global::Ondewo.Sip.SipStatus> __Method_SipReportAnsweringMachineDetected = new grpc::Method<global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest, global::Ondewo.Sip.SipStatus>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SipReportAnsweringMachineDetected",
+        __Marshaller_ondewo_sip_SipReportAnsweringMachineDetectedRequest,
+        __Marshaller_ondewo_sip_SipStatus);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Sip.SipSetCallMediaControlRequest, global::Ondewo.Sip.SipStatus> __Method_SipSetCallMediaControl = new grpc::Method<global::Ondewo.Sip.SipSetCallMediaControlRequest, global::Ondewo.Sip.SipStatus>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SipSetCallMediaControl",
+        __Marshaller_ondewo_sip_SipSetCallMediaControlRequest,
+        __Marshaller_ondewo_sip_SipStatus);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse> __Method_SipStreamCallAudio = new grpc::Method<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "SipStreamCallAudio",
+        __Marshaller_ondewo_sip_SipCallAudioRequest,
+        __Marshaller_ondewo_sip_SipCallAudioResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -230,6 +262,17 @@ namespace Ondewo.Sip {
 
       /// <summary>
       /// &lt;p>Transfers a call in an active SIP session for an account registered at a SIP server to another SIP account or phone number specified by &lt;code>transfer_id&lt;/code>&lt;/p>
+      /// &lt;p>Call scoping: when the gRPC metadatum &lt;code>x-ondewo-expected-call-id&lt;/code> is present it must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call, otherwise the request is refused with
+      /// &lt;code>exception_name=CallScopeMismatch&lt;/code> and nothing is assigned to the status. When it is absent the request is
+      /// accepted for backward compatibility (unless the server requires call scoping).&lt;/p>
+      /// &lt;p>With &lt;code>outcome_timeout_ms = 0&lt;/code> the call is transferred as before (REFER, then an immediate hangup).
+      /// With &lt;code>outcome_timeout_ms &amp;gt; 0&lt;/code> see &lt;code>SipTransferCallRequest.outcome_timeout_ms&lt;/code>.&lt;/p>
+      /// &lt;p>Refused while invited participants are present (see
+      /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>): a REFER into a conference bridge transfers every
+      /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
+      /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
+      /// is sent and the call is kept.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -278,6 +321,8 @@ namespace Ondewo.Sip {
 
       /// <summary>
       /// &lt;p>Plays wav files during an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>: a present &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum must
+      /// match &lt;code>SipStatus.call_id&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -290,6 +335,9 @@ namespace Ondewo.Sip {
 
       /// <summary>
       /// &lt;p>Mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>. Sent by the in-container speech-to-speech pipeline it mutes only
+      /// the bot's own mixer slot; sent by a remote client it sets the operator mute of
+      /// &lt;code>SipSetCallMediaControl&lt;/code>, which the pipeline cannot undo.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -302,12 +350,74 @@ namespace Ondewo.Sip {
 
       /// <summary>
       /// &lt;p>Un-mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping and the split between the pipeline's own mute and the operator mute as for &lt;code>SipMute&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ondewo.Sip.SipStatus> SipUnMute(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Reports that answering machine detection reached a verdict on the ongoing outgoing call. Sets the status
+      /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> carrying &lt;code>amd_result&lt;/code>; the call stays up.&lt;/p>
+      /// &lt;p>Called by the speech-to-speech pipeline (ONDEWO-CSI) inside the same container, i.e. over loopback only.
+      /// Refused, and the current status left untouched, when no outgoing call is connected: the returned
+      /// &lt;code>SipStatus&lt;/code> then carries the refusal in &lt;code>exception_name&lt;/code> and &lt;code>description&lt;/code>&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Sip.SipStatus> SipReportAnsweringMachineDetected(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Call-scoped operator media control of the ongoing call: mute the bot and/or pause its listening.&lt;/p>
+      /// &lt;p>Metadata REQUIRED: &lt;code>x-ondewo-expected-call-id&lt;/code> (must equal &lt;code>SipStatus.call_id&lt;/code> of the ongoing
+      /// call) and &lt;code>x-ondewo-sip-call-control-token&lt;/code> (the per-container call-control token).&lt;/p>
+      /// &lt;p>Every request sets a desired level per owner and never toggles; a repeat leaves the level unchanged. The bot is
+      /// muted while ANY owner holds a mute, and its listening is paused while ANY owner holds a pause.&lt;/p>
+      /// &lt;p>Returns the live status with &lt;code>call_id&lt;/code>, &lt;code>bot_muted&lt;/code>, &lt;code>listening_paused&lt;/code> and
+      /// &lt;code>call_audio_streams&lt;/code> filled. Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
+      /// &lt;code>description&lt;/code> (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>,
+      /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
+      /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
+      /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Sip.SipStatus> SipSetCallMediaControl(global::Ondewo.Sip.SipSetCallMediaControlRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Bidirectional live audio of the ongoing call.&lt;/p>
+      /// &lt;p>The first request MUST be &lt;code>config&lt;/code> and must arrive within 2 seconds. Metadata as for
+      /// &lt;code>SipSetCallMediaControl&lt;/code>.&lt;/p>
+      /// &lt;p>LISTEN receives the caller (plus any conference participants) mixed with the bot. TALK sends the agent's audio to
+      /// the caller; it REQUIRES &lt;code>take_over&lt;/code>, i.e. the bot is muted and does not listen while the stream is
+      /// connected, and in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>gRPC status codes: &lt;code>UNAUTHENTICATED&lt;/code> (token), &lt;code>FAILED_PRECONDITION&lt;/code> (call id mismatch, no
+      /// connected call, answering machine detection in progress, bot still speaking at TALK start),
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (missing or invalid &lt;code>config&lt;/code>, wrong frame size),
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap reached, a second TALK). A normal end sends one &lt;code>ended&lt;/code>
+      /// message and then OK.&lt;/p>
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task SipStreamCallAudio(grpc::IAsyncStreamReader<global::Ondewo.Sip.SipCallAudioRequest> requestStream, grpc::IServerStreamWriter<global::Ondewo.Sip.SipCallAudioResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -535,6 +645,17 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Transfers a call in an active SIP session for an account registered at a SIP server to another SIP account or phone number specified by &lt;code>transfer_id&lt;/code>&lt;/p>
+      /// &lt;p>Call scoping: when the gRPC metadatum &lt;code>x-ondewo-expected-call-id&lt;/code> is present it must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call, otherwise the request is refused with
+      /// &lt;code>exception_name=CallScopeMismatch&lt;/code> and nothing is assigned to the status. When it is absent the request is
+      /// accepted for backward compatibility (unless the server requires call scoping).&lt;/p>
+      /// &lt;p>With &lt;code>outcome_timeout_ms = 0&lt;/code> the call is transferred as before (REFER, then an immediate hangup).
+      /// With &lt;code>outcome_timeout_ms &amp;gt; 0&lt;/code> see &lt;code>SipTransferCallRequest.outcome_timeout_ms&lt;/code>.&lt;/p>
+      /// &lt;p>Refused while invited participants are present (see
+      /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>): a REFER into a conference bridge transfers every
+      /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
+      /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
+      /// is sent and the call is kept.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -548,6 +669,17 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Transfers a call in an active SIP session for an account registered at a SIP server to another SIP account or phone number specified by &lt;code>transfer_id&lt;/code>&lt;/p>
+      /// &lt;p>Call scoping: when the gRPC metadatum &lt;code>x-ondewo-expected-call-id&lt;/code> is present it must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call, otherwise the request is refused with
+      /// &lt;code>exception_name=CallScopeMismatch&lt;/code> and nothing is assigned to the status. When it is absent the request is
+      /// accepted for backward compatibility (unless the server requires call scoping).&lt;/p>
+      /// &lt;p>With &lt;code>outcome_timeout_ms = 0&lt;/code> the call is transferred as before (REFER, then an immediate hangup).
+      /// With &lt;code>outcome_timeout_ms &amp;gt; 0&lt;/code> see &lt;code>SipTransferCallRequest.outcome_timeout_ms&lt;/code>.&lt;/p>
+      /// &lt;p>Refused while invited participants are present (see
+      /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>): a REFER into a conference bridge transfers every
+      /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
+      /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
+      /// is sent and the call is kept.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -559,6 +691,17 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Transfers a call in an active SIP session for an account registered at a SIP server to another SIP account or phone number specified by &lt;code>transfer_id&lt;/code>&lt;/p>
+      /// &lt;p>Call scoping: when the gRPC metadatum &lt;code>x-ondewo-expected-call-id&lt;/code> is present it must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call, otherwise the request is refused with
+      /// &lt;code>exception_name=CallScopeMismatch&lt;/code> and nothing is assigned to the status. When it is absent the request is
+      /// accepted for backward compatibility (unless the server requires call scoping).&lt;/p>
+      /// &lt;p>With &lt;code>outcome_timeout_ms = 0&lt;/code> the call is transferred as before (REFER, then an immediate hangup).
+      /// With &lt;code>outcome_timeout_ms &amp;gt; 0&lt;/code> see &lt;code>SipTransferCallRequest.outcome_timeout_ms&lt;/code>.&lt;/p>
+      /// &lt;p>Refused while invited participants are present (see
+      /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>): a REFER into a conference bridge transfers every
+      /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
+      /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
+      /// is sent and the call is kept.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -572,6 +715,17 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Transfers a call in an active SIP session for an account registered at a SIP server to another SIP account or phone number specified by &lt;code>transfer_id&lt;/code>&lt;/p>
+      /// &lt;p>Call scoping: when the gRPC metadatum &lt;code>x-ondewo-expected-call-id&lt;/code> is present it must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call, otherwise the request is refused with
+      /// &lt;code>exception_name=CallScopeMismatch&lt;/code> and nothing is assigned to the status. When it is absent the request is
+      /// accepted for backward compatibility (unless the server requires call scoping).&lt;/p>
+      /// &lt;p>With &lt;code>outcome_timeout_ms = 0&lt;/code> the call is transferred as before (REFER, then an immediate hangup).
+      /// With &lt;code>outcome_timeout_ms &amp;gt; 0&lt;/code> see &lt;code>SipTransferCallRequest.outcome_timeout_ms&lt;/code>.&lt;/p>
+      /// &lt;p>Refused while invited participants are present (see
+      /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>): a REFER into a conference bridge transfers every
+      /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
+      /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
+      /// is sent and the call is kept.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -727,6 +881,8 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Plays wav files during an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>: a present &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum must
+      /// match &lt;code>SipStatus.call_id&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -740,6 +896,8 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Plays wav files during an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>: a present &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum must
+      /// match &lt;code>SipStatus.call_id&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -751,6 +909,8 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Plays wav files during an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>: a present &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum must
+      /// match &lt;code>SipStatus.call_id&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -764,6 +924,8 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Plays wav files during an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>: a present &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum must
+      /// match &lt;code>SipStatus.call_id&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -775,6 +937,9 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>. Sent by the in-container speech-to-speech pipeline it mutes only
+      /// the bot's own mixer slot; sent by a remote client it sets the operator mute of
+      /// &lt;code>SipSetCallMediaControl&lt;/code>, which the pipeline cannot undo.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -788,6 +953,9 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>. Sent by the in-container speech-to-speech pipeline it mutes only
+      /// the bot's own mixer slot; sent by a remote client it sets the operator mute of
+      /// &lt;code>SipSetCallMediaControl&lt;/code>, which the pipeline cannot undo.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -799,6 +967,9 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>. Sent by the in-container speech-to-speech pipeline it mutes only
+      /// the bot's own mixer slot; sent by a remote client it sets the operator mute of
+      /// &lt;code>SipSetCallMediaControl&lt;/code>, which the pipeline cannot undo.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -812,6 +983,9 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping as for &lt;code>SipTransferCall&lt;/code>. Sent by the in-container speech-to-speech pipeline it mutes only
+      /// the bot's own mixer slot; sent by a remote client it sets the operator mute of
+      /// &lt;code>SipSetCallMediaControl&lt;/code>, which the pipeline cannot undo.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -823,6 +997,7 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Un-mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping and the split between the pipeline's own mute and the operator mute as for &lt;code>SipMute&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -836,6 +1011,7 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Un-mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping and the split between the pipeline's own mute and the operator mute as for &lt;code>SipMute&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -847,6 +1023,7 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Un-mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping and the split between the pipeline's own mute and the operator mute as for &lt;code>SipMute&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -860,6 +1037,7 @@ namespace Ondewo.Sip {
       }
       /// <summary>
       /// &lt;p>Un-mutes the microphone in an ongoing call of an active SIP session&lt;/p>
+      /// &lt;p>Call scoping and the split between the pipeline's own mute and the operator mute as for &lt;code>SipMute&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -868,6 +1046,200 @@ namespace Ondewo.Sip {
       public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipUnMuteAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SipUnMute, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Reports that answering machine detection reached a verdict on the ongoing outgoing call. Sets the status
+      /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> carrying &lt;code>amd_result&lt;/code>; the call stays up.&lt;/p>
+      /// &lt;p>Called by the speech-to-speech pipeline (ONDEWO-CSI) inside the same container, i.e. over loopback only.
+      /// Refused, and the current status left untouched, when no outgoing call is connected: the returned
+      /// &lt;code>SipStatus&lt;/code> then carries the refusal in &lt;code>exception_name&lt;/code> and &lt;code>description&lt;/code>&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipReportAnsweringMachineDetected(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipReportAnsweringMachineDetected(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Reports that answering machine detection reached a verdict on the ongoing outgoing call. Sets the status
+      /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> carrying &lt;code>amd_result&lt;/code>; the call stays up.&lt;/p>
+      /// &lt;p>Called by the speech-to-speech pipeline (ONDEWO-CSI) inside the same container, i.e. over loopback only.
+      /// Refused, and the current status left untouched, when no outgoing call is connected: the returned
+      /// &lt;code>SipStatus&lt;/code> then carries the refusal in &lt;code>exception_name&lt;/code> and &lt;code>description&lt;/code>&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipReportAnsweringMachineDetected(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SipReportAnsweringMachineDetected, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Reports that answering machine detection reached a verdict on the ongoing outgoing call. Sets the status
+      /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> carrying &lt;code>amd_result&lt;/code>; the call stays up.&lt;/p>
+      /// &lt;p>Called by the speech-to-speech pipeline (ONDEWO-CSI) inside the same container, i.e. over loopback only.
+      /// Refused, and the current status left untouched, when no outgoing call is connected: the returned
+      /// &lt;code>SipStatus&lt;/code> then carries the refusal in &lt;code>exception_name&lt;/code> and &lt;code>description&lt;/code>&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipReportAnsweringMachineDetectedAsync(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipReportAnsweringMachineDetectedAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Reports that answering machine detection reached a verdict on the ongoing outgoing call. Sets the status
+      /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> carrying &lt;code>amd_result&lt;/code>; the call stays up.&lt;/p>
+      /// &lt;p>Called by the speech-to-speech pipeline (ONDEWO-CSI) inside the same container, i.e. over loopback only.
+      /// Refused, and the current status left untouched, when no outgoing call is connected: the returned
+      /// &lt;code>SipStatus&lt;/code> then carries the refusal in &lt;code>exception_name&lt;/code> and &lt;code>description&lt;/code>&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipReportAnsweringMachineDetectedAsync(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SipReportAnsweringMachineDetected, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Call-scoped operator media control of the ongoing call: mute the bot and/or pause its listening.&lt;/p>
+      /// &lt;p>Metadata REQUIRED: &lt;code>x-ondewo-expected-call-id&lt;/code> (must equal &lt;code>SipStatus.call_id&lt;/code> of the ongoing
+      /// call) and &lt;code>x-ondewo-sip-call-control-token&lt;/code> (the per-container call-control token).&lt;/p>
+      /// &lt;p>Every request sets a desired level per owner and never toggles; a repeat leaves the level unchanged. The bot is
+      /// muted while ANY owner holds a mute, and its listening is paused while ANY owner holds a pause.&lt;/p>
+      /// &lt;p>Returns the live status with &lt;code>call_id&lt;/code>, &lt;code>bot_muted&lt;/code>, &lt;code>listening_paused&lt;/code> and
+      /// &lt;code>call_audio_streams&lt;/code> filled. Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
+      /// &lt;code>description&lt;/code> (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>,
+      /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
+      /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
+      /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipSetCallMediaControl(global::Ondewo.Sip.SipSetCallMediaControlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipSetCallMediaControl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Call-scoped operator media control of the ongoing call: mute the bot and/or pause its listening.&lt;/p>
+      /// &lt;p>Metadata REQUIRED: &lt;code>x-ondewo-expected-call-id&lt;/code> (must equal &lt;code>SipStatus.call_id&lt;/code> of the ongoing
+      /// call) and &lt;code>x-ondewo-sip-call-control-token&lt;/code> (the per-container call-control token).&lt;/p>
+      /// &lt;p>Every request sets a desired level per owner and never toggles; a repeat leaves the level unchanged. The bot is
+      /// muted while ANY owner holds a mute, and its listening is paused while ANY owner holds a pause.&lt;/p>
+      /// &lt;p>Returns the live status with &lt;code>call_id&lt;/code>, &lt;code>bot_muted&lt;/code>, &lt;code>listening_paused&lt;/code> and
+      /// &lt;code>call_audio_streams&lt;/code> filled. Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
+      /// &lt;code>description&lt;/code> (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>,
+      /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
+      /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
+      /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipSetCallMediaControl(global::Ondewo.Sip.SipSetCallMediaControlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SipSetCallMediaControl, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Call-scoped operator media control of the ongoing call: mute the bot and/or pause its listening.&lt;/p>
+      /// &lt;p>Metadata REQUIRED: &lt;code>x-ondewo-expected-call-id&lt;/code> (must equal &lt;code>SipStatus.call_id&lt;/code> of the ongoing
+      /// call) and &lt;code>x-ondewo-sip-call-control-token&lt;/code> (the per-container call-control token).&lt;/p>
+      /// &lt;p>Every request sets a desired level per owner and never toggles; a repeat leaves the level unchanged. The bot is
+      /// muted while ANY owner holds a mute, and its listening is paused while ANY owner holds a pause.&lt;/p>
+      /// &lt;p>Returns the live status with &lt;code>call_id&lt;/code>, &lt;code>bot_muted&lt;/code>, &lt;code>listening_paused&lt;/code> and
+      /// &lt;code>call_audio_streams&lt;/code> filled. Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
+      /// &lt;code>description&lt;/code> (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>,
+      /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
+      /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
+      /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipSetCallMediaControlAsync(global::Ondewo.Sip.SipSetCallMediaControlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipSetCallMediaControlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Call-scoped operator media control of the ongoing call: mute the bot and/or pause its listening.&lt;/p>
+      /// &lt;p>Metadata REQUIRED: &lt;code>x-ondewo-expected-call-id&lt;/code> (must equal &lt;code>SipStatus.call_id&lt;/code> of the ongoing
+      /// call) and &lt;code>x-ondewo-sip-call-control-token&lt;/code> (the per-container call-control token).&lt;/p>
+      /// &lt;p>Every request sets a desired level per owner and never toggles; a repeat leaves the level unchanged. The bot is
+      /// muted while ANY owner holds a mute, and its listening is paused while ANY owner holds a pause.&lt;/p>
+      /// &lt;p>Returns the live status with &lt;code>call_id&lt;/code>, &lt;code>bot_muted&lt;/code>, &lt;code>listening_paused&lt;/code> and
+      /// &lt;code>call_audio_streams&lt;/code> filled. Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
+      /// &lt;code>description&lt;/code> (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>,
+      /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
+      /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
+      /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipSetCallMediaControlAsync(global::Ondewo.Sip.SipSetCallMediaControlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SipSetCallMediaControl, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Bidirectional live audio of the ongoing call.&lt;/p>
+      /// &lt;p>The first request MUST be &lt;code>config&lt;/code> and must arrive within 2 seconds. Metadata as for
+      /// &lt;code>SipSetCallMediaControl&lt;/code>.&lt;/p>
+      /// &lt;p>LISTEN receives the caller (plus any conference participants) mixed with the bot. TALK sends the agent's audio to
+      /// the caller; it REQUIRES &lt;code>take_over&lt;/code>, i.e. the bot is muted and does not listen while the stream is
+      /// connected, and in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>gRPC status codes: &lt;code>UNAUTHENTICATED&lt;/code> (token), &lt;code>FAILED_PRECONDITION&lt;/code> (call id mismatch, no
+      /// connected call, answering machine detection in progress, bot still speaking at TALK start),
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (missing or invalid &lt;code>config&lt;/code>, wrong frame size),
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap reached, a second TALK). A normal end sends one &lt;code>ended&lt;/code>
+      /// message and then OK.&lt;/p>
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse> SipStreamCallAudio(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipStreamCallAudio(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Bidirectional live audio of the ongoing call.&lt;/p>
+      /// &lt;p>The first request MUST be &lt;code>config&lt;/code> and must arrive within 2 seconds. Metadata as for
+      /// &lt;code>SipSetCallMediaControl&lt;/code>.&lt;/p>
+      /// &lt;p>LISTEN receives the caller (plus any conference participants) mixed with the bot. TALK sends the agent's audio to
+      /// the caller; it REQUIRES &lt;code>take_over&lt;/code>, i.e. the bot is muted and does not listen while the stream is
+      /// connected, and in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>gRPC status codes: &lt;code>UNAUTHENTICATED&lt;/code> (token), &lt;code>FAILED_PRECONDITION&lt;/code> (call id mismatch, no
+      /// connected call, answering machine detection in progress, bot still speaking at TALK start),
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (missing or invalid &lt;code>config&lt;/code>, wrong frame size),
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap reached, a second TALK). A normal end sends one &lt;code>ended&lt;/code>
+      /// message and then OK.&lt;/p>
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse> SipStreamCallAudio(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_SipStreamCallAudio, null, options);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -893,7 +1265,10 @@ namespace Ondewo.Sip {
           .AddMethod(__Method_SipGetSipStatusHistory, serviceImpl.SipGetSipStatusHistory)
           .AddMethod(__Method_SipPlayWavFiles, serviceImpl.SipPlayWavFiles)
           .AddMethod(__Method_SipMute, serviceImpl.SipMute)
-          .AddMethod(__Method_SipUnMute, serviceImpl.SipUnMute).Build();
+          .AddMethod(__Method_SipUnMute, serviceImpl.SipUnMute)
+          .AddMethod(__Method_SipReportAnsweringMachineDetected, serviceImpl.SipReportAnsweringMachineDetected)
+          .AddMethod(__Method_SipSetCallMediaControl, serviceImpl.SipSetCallMediaControl)
+          .AddMethod(__Method_SipStreamCallAudio, serviceImpl.SipStreamCallAudio).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -914,6 +1289,9 @@ namespace Ondewo.Sip {
       serviceBinder.AddMethod(__Method_SipPlayWavFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipPlayWavFilesRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipPlayWavFiles));
       serviceBinder.AddMethod(__Method_SipMute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ondewo.Sip.SipStatus>(serviceImpl.SipMute));
       serviceBinder.AddMethod(__Method_SipUnMute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ondewo.Sip.SipStatus>(serviceImpl.SipUnMute));
+      serviceBinder.AddMethod(__Method_SipReportAnsweringMachineDetected, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipReportAnsweringMachineDetected));
+      serviceBinder.AddMethod(__Method_SipSetCallMediaControl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipSetCallMediaControlRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipSetCallMediaControl));
+      serviceBinder.AddMethod(__Method_SipStreamCallAudio, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse>(serviceImpl.SipStreamCallAudio));
     }
 
   }

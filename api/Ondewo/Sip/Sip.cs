@@ -26,77 +26,261 @@ namespace Ondewo.Sip {
           string.Concat(
             "ChRvbmRld28vc2lwL3NpcC5wcm90bxIKb25kZXdvLnNpcBobZ29vZ2xlL3By",
             "b3RvYnVmL2VtcHR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIigKEVNpcEVuZENhbGxSZXF1ZXN0EhMKC2hhcmRfaGFuZ3VwGAEg",
-            "ASgIIpcBChNTaXBTdGFydENhbGxSZXF1ZXN0EhEKCWNhbGxlZV9pZBgBIAEo",
-            "CRI9CgdoZWFkZXJzGAIgAygLMiwub25kZXdvLnNpcC5TaXBTdGFydENhbGxS",
-            "ZXF1ZXN0LkhlYWRlcnNFbnRyeRouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASJyChlTaXBSZWdpc3RlckFjY291bnRS",
-            "ZXF1ZXN0EhQKDGFjY291bnRfbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEo",
-            "CRIVCg1hdXRoX3VzZXJuYW1lGAMgASgJEhYKDm91dGJvdW5kX3Byb3h5GAQg",
-            "ASgJIkwKFlNpcFN0YXJ0U2Vzc2lvblJlcXVlc3QSFAoMYWNjb3VudF9uYW1l",
-            "GAEgASgJEhwKFGF1dG9fYW5zd2VyX2ludGVydmFsGAIgASgFIp8BChZTaXBU",
-            "cmFuc2ZlckNhbGxSZXF1ZXN0EhMKC3RyYW5zZmVyX2lkGAEgASgJEkAKB2hl",
-            "YWRlcnMYAiADKAsyLy5vbmRld28uc2lwLlNpcFRyYW5zZmVyQ2FsbFJlcXVl",
-            "c3QuSGVhZGVyc0VudHJ5Gi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBIrEHCglTaXBTdGF0dXMSFAoMYWNjb3VudF9u",
-            "YW1lGAEgASgJEi0KCXRpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASNQoLc3RhdHVzX3R5cGUYAyABKA4yIC5vbmRld28uc2lw",
-            "LlNpcFN0YXR1cy5TdGF0dXNUeXBlEhEKCWNhbGxlZV9pZBgEIAEoCRIYChB0",
-            "cmFuc2Zlcl9jYWxsX2lkGAUgASgJEjMKB2hlYWRlcnMYBiADKAsyIi5vbmRl",
-            "d28uc2lwLlNpcFN0YXR1cy5IZWFkZXJzRW50cnkSEwoLZGVzY3JpcHRpb24Y",
-            "ByABKAkSFgoOZXhjZXB0aW9uX25hbWUYCCABKAkSGwoTZXhjZXB0aW9uX3Ry",
-            "YWNlYmFjaxgJIAEoCRIYChBubHVfc2Vzc2lvbl9uYW1lGAogASgJGi4KDEhl",
-            "YWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIrEE",
-            "CgpTdGF0dXNUeXBlEg4KCk5PX1NFU1NJT04QABIOCgpSRUdJU1RFUkVEEAES",
-            "CQoFUkVBRFkQAhIbChdJTkNPTUlOR19DQUxMX0lOSVRJQVRFRBADEhsKF09V",
-            "VEdPSU5HX0NBTExfSU5JVElBVEVEEAQSGwoXT1VUR09JTkdfQ0FMTF9DT05O",
-            "RUNURUQQBRIbChdJTkNPTUlOR19DQUxMX0NPTk5FQ1RFRBAGEhsKF1RSQU5T",
-            "RkVSX0NBTExfSU5JVElBVEVEEAcSGQoVU09GVF9IQU5HVVBfSU5JVElBVEVE",
-            "EAgSGQoVSEFSRF9IQU5HVVBfSU5JVElBVEVEEAkSGAoUSU5DT01JTkdfQ0FM",
-            "TF9GQUlMRUQQChIYChRPVVRHT0lOR19DQUxMX0ZBSUxFRBALEhoKFklOQ09N",
-            "SU5HX0NBTExfRklOSVNIRUQQDBIaChZPVVRHT0lOR19DQUxMX0ZJTklTSEVE",
-            "EA0SHwobU0VTU0lPTl9SRUdJU1RSQVRJT05fRkFJTEVEEA4SEwoPU0VTU0lP",
-            "Tl9TVEFSVEVEEA8SEQoNU0VTU0lPTl9FTkRFRBAQEhgKFFRSQU5TRkVSX0NB",
-            "TExfRkFJTEVEEBESFAoQTUlDUk9QSE9ORV9NVVRFRBASEhYKEk1JQ1JPUEhP",
-            "TkVfVU5NVVRFRBATEh8KG01JQ1JPUEhPTkVfV0FWX0ZJTEVTX1BMQVlFRBAU",
-            "EhMKD05PX09OR09JTkdfQ0FMTBAVIkkKGFNpcFN0YXR1c0hpc3RvcnlSZXNw",
-            "b25zZRItCg5zdGF0dXNfaGlzdG9yeRgBIAMoCzIVLm9uZGV3by5zaXAuU2lw",
-            "U3RhdHVzIisKFlNpcFBsYXlXYXZGaWxlc1JlcXVlc3QSEQoJd2F2X2ZpbGVz",
-            "GAEgAygMMrUGCgNTaXASTgoPU2lwU3RhcnRTZXNzaW9uEiIub25kZXdvLnNp",
-            "cC5TaXBTdGFydFNlc3Npb25SZXF1ZXN0GhUub25kZXdvLnNpcC5TaXBTdGF0",
-            "dXMiABJACg1TaXBFbmRTZXNzaW9uEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "GhUub25kZXdvLnNpcC5TaXBTdGF0dXMiABJICgxTaXBTdGFydENhbGwSHy5v",
-            "bmRld28uc2lwLlNpcFN0YXJ0Q2FsbFJlcXVlc3QaFS5vbmRld28uc2lwLlNp",
-            "cFN0YXR1cyIAEkQKClNpcEVuZENhbGwSHS5vbmRld28uc2lwLlNpcEVuZENh",
-            "bGxSZXF1ZXN0GhUub25kZXdvLnNpcC5TaXBTdGF0dXMiABJOCg9TaXBUcmFu",
-            "c2ZlckNhbGwSIi5vbmRld28uc2lwLlNpcFRyYW5zZmVyQ2FsbFJlcXVlc3Qa",
-            "FS5vbmRld28uc2lwLlNpcFN0YXR1cyIAElQKElNpcFJlZ2lzdGVyQWNjb3Vu",
-            "dBIlLm9uZGV3by5zaXAuU2lwUmVnaXN0ZXJBY2NvdW50UmVxdWVzdBoVLm9u",
-            "ZGV3by5zaXAuU2lwU3RhdHVzIgASQgoPU2lwR2V0U2lwU3RhdHVzEhYuZ29v",
-            "Z2xlLnByb3RvYnVmLkVtcHR5GhUub25kZXdvLnNpcC5TaXBTdGF0dXMiABJY",
-            "ChZTaXBHZXRTaXBTdGF0dXNIaXN0b3J5EhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5GiQub25kZXdvLnNpcC5TaXBTdGF0dXNIaXN0b3J5UmVzcG9uc2UiABJO",
-            "Cg9TaXBQbGF5V2F2RmlsZXMSIi5vbmRld28uc2lwLlNpcFBsYXlXYXZGaWxl",
-            "c1JlcXVlc3QaFS5vbmRld28uc2lwLlNpcFN0YXR1cyIAEjoKB1NpcE11dGUS",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkaFS5vbmRld28uc2lwLlNpcFN0YXR1",
-            "cyIAEjwKCVNpcFVuTXV0ZRIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRoVLm9u",
-            "ZGV3by5zaXAuU2lwU3RhdHVzIgBiBnByb3RvMw=="));
+            "LnByb3RvIr8CChFTaXBFbmRDYWxsUmVxdWVzdBITCgtoYXJkX2hhbmd1cBgB",
+            "IAEoCBI/CgplbmRfcmVhc29uGAIgASgOMisub25kZXdvLnNpcC5TaXBFbmRD",
+            "YWxsUmVxdWVzdC5FbmRDYWxsUmVhc29uEj8KCmFtZF9yZXN1bHQYAyABKAsy",
+            "Ky5vbmRld28uc2lwLkFuc3dlcmluZ01hY2hpbmVEZXRlY3Rpb25SZXN1bHQi",
+            "kgEKDUVuZENhbGxSZWFzb24SHwobRU5EX0NBTExfUkVBU09OX1VOU1BFQ0lG",
+            "SUVEEAASFQoRQU5TV0VSSU5HX01BQ0hJTkUQARIoCiRBTlNXRVJJTkdfTUFD",
+            "SElORV9WT0lDRV9NRVNTQUdFX0xFRlQQAhIfChtFTkRfQ0FMTF9SRUFTT05f",
+            "VFJBTlNGRVJSRUQQAyJrCihTaXBSZXBvcnRBbnN3ZXJpbmdNYWNoaW5lRGV0",
+            "ZWN0ZWRSZXF1ZXN0Ej8KCmFtZF9yZXN1bHQYASABKAsyKy5vbmRld28uc2lw",
+            "LkFuc3dlcmluZ01hY2hpbmVEZXRlY3Rpb25SZXN1bHQi/wUKH0Fuc3dlcmlu",
+            "Z01hY2hpbmVEZXRlY3Rpb25SZXN1bHQSRAoHdmVyZGljdBgBIAEoDjIzLm9u",
+            "ZGV3by5zaXAuQW5zd2VyaW5nTWFjaGluZURldGVjdGlvblJlc3VsdC5WZXJk",
+            "aWN0EkAKBWNhdXNlGAIgASgOMjEub25kZXdvLnNpcC5BbnN3ZXJpbmdNYWNo",
+            "aW5lRGV0ZWN0aW9uUmVzdWx0LkNhdXNlEhIKCmNvbmZpZGVuY2UYAyABKAIS",
+            "EwoLZGVjaXNpb25fbXMYBCABKAUSDwoHcnVsZV9pZBgFIAEoCRIXCg9tYXRj",
+            "aGVkX2N1ZV9pZHMYBiADKAkSTQoMYWN0aW9uX3Rha2VuGAcgASgOMjcub25k",
+            "ZXdvLnNpcC5BbnN3ZXJpbmdNYWNoaW5lRGV0ZWN0aW9uUmVzdWx0LkFjdGlv",
+            "blRha2VuEg8KB2NhbGxfaWQYCCABKAkilgEKB1ZlcmRpY3QSFwoTVkVSRElD",
+            "VF9VTlNQRUNJRklFRBAAEgkKBUhVTUFOEAESCwoHTUFDSElORRACEgcKA0lW",
+            "UhADEgcKA0ZBWBAEEhgKFE5FVFdPUktfQU5OT1VOQ0VNRU5UEAUSEgoOQ0FM",
+            "TF9TQ1JFRU5JTkcQBhINCglOT19TUEVFQ0gQBxILCgdVTktOT1dOEAgilQEK",
+            "BUNhdXNlEhUKEUNBVVNFX1VOU1BFQ0lGSUVEEAASCwoHQ0FERU5DRRABEgsK",
+            "B0tFWVdPUkQQAhIICgRCRUVQEAMSCAoEVE9ORRAEEhcKE0NBREVOQ0VfQU5E",
+            "X0tFWVdPUkQQBRIUChBDQURFTkNFX0FORF9CRUVQEAYSCwoHVElNRU9VVBAH",
+            "EgsKB1NJTEVOQ0UQCCJwCgtBY3Rpb25UYWtlbhIcChhBQ1RJT05fVEFLRU5f",
+            "VU5TUEVDSUZJRUQQABILCgdIVU5HX1VQEAESDQoJQ09OVElOVUVEEAISDwoL",
+            "REVURUNUX09OTFkQAxIWChJMRUZUX1ZPSUNFX01FU1NBR0UQBCKXAQoTU2lw",
+            "U3RhcnRDYWxsUmVxdWVzdBIRCgljYWxsZWVfaWQYASABKAkSPQoHaGVhZGVy",
+            "cxgCIAMoCzIsLm9uZGV3by5zaXAuU2lwU3RhcnRDYWxsUmVxdWVzdC5IZWFk",
+            "ZXJzRW50cnkaLgoMSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEicgoZU2lwUmVnaXN0ZXJBY2NvdW50UmVxdWVzdBIUCgxh",
+            "Y2NvdW50X25hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkSFQoNYXV0aF91",
+            "c2VybmFtZRgDIAEoCRIWCg5vdXRib3VuZF9wcm94eRgEIAEoCSJMChZTaXBT",
+            "dGFydFNlc3Npb25SZXF1ZXN0EhQKDGFjY291bnRfbmFtZRgBIAEoCRIcChRh",
+            "dXRvX2Fuc3dlcl9pbnRlcnZhbBgCIAEoBSK7AQoWU2lwVHJhbnNmZXJDYWxs",
+            "UmVxdWVzdBITCgt0cmFuc2Zlcl9pZBgBIAEoCRJACgdoZWFkZXJzGAIgAygL",
+            "Mi8ub25kZXdvLnNpcC5TaXBUcmFuc2ZlckNhbGxSZXF1ZXN0LkhlYWRlcnNF",
+            "bnRyeRIaChJvdXRjb21lX3RpbWVvdXRfbXMYAyABKA0aLgoMSGVhZGVyc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilQkKCVNpcFN0",
+            "YXR1cxIUCgxhY2NvdW50X25hbWUYASABKAkSLQoJdGltZXN0YW1wGAIgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI1CgtzdGF0dXNfdHlwZRgD",
+            "IAEoDjIgLm9uZGV3by5zaXAuU2lwU3RhdHVzLlN0YXR1c1R5cGUSEQoJY2Fs",
+            "bGVlX2lkGAQgASgJEhgKEHRyYW5zZmVyX2NhbGxfaWQYBSABKAkSMwoHaGVh",
+            "ZGVycxgGIAMoCzIiLm9uZGV3by5zaXAuU2lwU3RhdHVzLkhlYWRlcnNFbnRy",
+            "eRITCgtkZXNjcmlwdGlvbhgHIAEoCRIWCg5leGNlcHRpb25fbmFtZRgIIAEo",
+            "CRIbChNleGNlcHRpb25fdHJhY2ViYWNrGAkgASgJEhgKEG5sdV9zZXNzaW9u",
+            "X25hbWUYCiABKAkSPwoKYW1kX3Jlc3VsdBgLIAEoCzIrLm9uZGV3by5zaXAu",
+            "QW5zd2VyaW5nTWFjaGluZURldGVjdGlvblJlc3VsdBIPCgdjYWxsX2lkGAwg",
+            "ASgJEhEKCWJvdF9tdXRlZBgNIAEoCBIYChBsaXN0ZW5pbmdfcGF1c2VkGA4g",
+            "ASgIEhoKEmNhbGxfYXVkaW9fc3RyZWFtcxgPIAEoBRIZChFzaXBfcmVzcG9u",
+            "c2VfY29kZRgQIAEoBRouCgxIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASLfBAoKU3RhdHVzVHlwZRIOCgpOT19TRVNTSU9O",
+            "EAASDgoKUkVHSVNURVJFRBABEgkKBVJFQURZEAISGwoXSU5DT01JTkdfQ0FM",
+            "TF9JTklUSUFURUQQAxIbChdPVVRHT0lOR19DQUxMX0lOSVRJQVRFRBAEEhsK",
+            "F09VVEdPSU5HX0NBTExfQ09OTkVDVEVEEAUSGwoXSU5DT01JTkdfQ0FMTF9D",
+            "T05ORUNURUQQBhIbChdUUkFOU0ZFUl9DQUxMX0lOSVRJQVRFRBAHEhkKFVNP",
+            "RlRfSEFOR1VQX0lOSVRJQVRFRBAIEhkKFUhBUkRfSEFOR1VQX0lOSVRJQVRF",
+            "RBAJEhgKFElOQ09NSU5HX0NBTExfRkFJTEVEEAoSGAoUT1VUR09JTkdfQ0FM",
+            "TF9GQUlMRUQQCxIaChZJTkNPTUlOR19DQUxMX0ZJTklTSEVEEAwSGgoWT1VU",
+            "R09JTkdfQ0FMTF9GSU5JU0hFRBANEh8KG1NFU1NJT05fUkVHSVNUUkFUSU9O",
+            "X0ZBSUxFRBAOEhMKD1NFU1NJT05fU1RBUlRFRBAPEhEKDVNFU1NJT05fRU5E",
+            "RUQQEBIYChRUUkFOU0ZFUl9DQUxMX0ZBSUxFRBAREhQKEE1JQ1JPUEhPTkVf",
+            "TVVURUQQEhIWChJNSUNST1BIT05FX1VOTVVURUQQExIfChtNSUNST1BIT05F",
+            "X1dBVl9GSUxFU19QTEFZRUQQFBITCg9OT19PTkdPSU5HX0NBTEwQFRIsCihP",
+            "VVRHT0lOR19DQUxMX0FOU1dFUklOR19NQUNISU5FX0RFVEVDVEVEEBYiSQoY",
+            "U2lwU3RhdHVzSGlzdG9yeVJlc3BvbnNlEi0KDnN0YXR1c19oaXN0b3J5GAEg",
+            "AygLMhUub25kZXdvLnNpcC5TaXBTdGF0dXMi1wEKHVNpcFNldENhbGxNZWRp",
+            "YUNvbnRyb2xSZXF1ZXN0EjIKCWJvdF92b2ljZRgBIAEoDjIfLm9uZGV3by5z",
+            "aXAuTWVkaWFDb250cm9sU2V0dGluZxI2Cg1ib3RfbGlzdGVuaW5nGAIgASgO",
+            "Mh8ub25kZXdvLnNpcC5NZWRpYUNvbnRyb2xTZXR0aW5nEiwKBW93bmVyGAMg",
+            "ASgOMh0ub25kZXdvLnNpcC5NZWRpYUNvbnRyb2xPd25lchIcChRwYXJ0aWNp",
+            "cGFudHNfcHJlc2VudBgEIAEoCCKoAQoSU2lwQ2FsbEF1ZGlvQ29uZmlnEioK",
+            "BG1vZGUYASABKA4yHC5vbmRld28uc2lwLlNpcENhbGxBdWRpb01vZGUSFgoO",
+            "c2FtcGxlX3JhdGVfaHoYAiABKAUSEAoIZnJhbWVfbXMYAyABKAUSEQoJdGFr",
+            "ZV9vdmVyGAQgASgIEhEKCXN0cmVhbV9pZBgFIAEoCRIWCg5tYXhfZHVyYXRp",
+            "b25fcxgGIAEoBSI4ChFTaXBDYWxsQXVkaW9GcmFtZRIRCglwY21fczE2bGUY",
+            "ASABKAwSEAoIc2VxdWVuY2UYAiABKAQimQEKE1NpcENhbGxBdWRpb1JlcXVl",
+            "c3QSMAoGY29uZmlnGAEgASgLMh4ub25kZXdvLnNpcC5TaXBDYWxsQXVkaW9D",
+            "b25maWdIABIuCgVhdWRpbxgCIAEoCzIdLm9uZGV3by5zaXAuU2lwQ2FsbEF1",
+            "ZGlvRnJhbWVIABIVCgthZ2VudF9tdXRlZBgDIAEoCEgAQgkKB3JlcXVlc3Qi",
+            "fgoTU2lwQ2FsbEF1ZGlvU3RhcnRlZBIRCglzdHJlYW1faWQYASABKAkSFgoO",
+            "c2FtcGxlX3JhdGVfaHoYAiABKAUSEAoIZnJhbWVfbXMYAyABKAUSKgoEbW9k",
+            "ZRgEIAEoDjIcLm9uZGV3by5zaXAuU2lwQ2FsbEF1ZGlvTW9kZSKGAQoRU2lw",
+            "Q2FsbEF1ZGlvU3RhdHMSEwoLZnJhbWVzX3NlbnQYASABKAQSFgoOZnJhbWVz",
+            "X2Ryb3BwZWQYAiABKAQSFwoPZnJhbWVzX3JlY2VpdmVkGAMgASgEEhEKCXVu",
+            "ZGVycnVucxgEIAEoBBIYChBmcmFtZXNfZGlzY2FyZGVkGAUgASgEIlYKEVNp",
+            "cENhbGxBdWRpb0VuZGVkEjEKBnJlYXNvbhgBIAEoDjIhLm9uZGV3by5zaXAu",
+            "U2lwQ2FsbEF1ZGlvRW5kUmVhc29uEg4KBmRldGFpbBgCIAEoCSLmAQoUU2lw",
+            "Q2FsbEF1ZGlvUmVzcG9uc2USMgoHc3RhcnRlZBgBIAEoCzIfLm9uZGV3by5z",
+            "aXAuU2lwQ2FsbEF1ZGlvU3RhcnRlZEgAEi4KBWF1ZGlvGAIgASgLMh0ub25k",
+            "ZXdvLnNpcC5TaXBDYWxsQXVkaW9GcmFtZUgAEi4KBXN0YXRzGAMgASgLMh0u",
+            "b25kZXdvLnNpcC5TaXBDYWxsQXVkaW9TdGF0c0gAEi4KBWVuZGVkGAQgASgL",
+            "Mh0ub25kZXdvLnNpcC5TaXBDYWxsQXVkaW9FbmRlZEgAQgoKCHJlc3BvbnNl",
+            "IisKFlNpcFBsYXlXYXZGaWxlc1JlcXVlc3QSEQoJd2F2X2ZpbGVzGAEgAygM",
+            "KncKE01lZGlhQ29udHJvbFNldHRpbmcSIwofTUVESUFfQ09OVFJPTF9TRVRU",
+            "SU5HX1VOQ0hBTkdFRBAAEhwKGE1FRElBX0NPTlRST0xfU0VUVElOR19PThAB",
+            "Eh0KGU1FRElBX0NPTlRST0xfU0VUVElOR19PRkYQAip/ChFNZWRpYUNvbnRy",
+            "b2xPd25lchIjCh9NRURJQV9DT05UUk9MX09XTkVSX1VOU1BFQ0lGSUVEEAAS",
+            "IAocTUVESUFfQ09OVFJPTF9PV05FUl9PUEVSQVRPUhABEiMKH01FRElBX0NP",
+            "TlRST0xfT1dORVJfUEFSVElDSVBBTlQQAip1ChBTaXBDYWxsQXVkaW9Nb2Rl",
+            "EiMKH1NJUF9DQUxMX0FVRElPX01PREVfVU5TUEVDSUZJRUQQABIeChpTSVBf",
+            "Q0FMTF9BVURJT19NT0RFX0xJU1RFThABEhwKGFNJUF9DQUxMX0FVRElPX01P",
+            "REVfVEFMSxACKsQCChVTaXBDYWxsQXVkaW9FbmRSZWFzb24SKQolU0lQX0NB",
+            "TExfQVVESU9fRU5EX1JFQVNPTl9VTlNQRUNJRklFRBAAEisKJ1NJUF9DQUxM",
+            "X0FVRElPX0VORF9SRUFTT05fQ0xJRU5UX0NMT1NFRBABEigKJFNJUF9DQUxM",
+            "X0FVRElPX0VORF9SRUFTT05fQ0FMTF9FTkRFRBACEi4KKlNJUF9DQUxMX0FV",
+            "RElPX0VORF9SRUFTT05fQ0FMTF9UUkFOU0ZFUlJFRBADEioKJlNJUF9DQUxM",
+            "X0FVRElPX0VORF9SRUFTT05fTUFYX0RVUkFUSU9OEAQSJQohU0lQX0NBTExf",
+            "QVVESU9fRU5EX1JFQVNPTl9TVEFMTEVEEAUSJgoiU0lQX0NBTExfQVVESU9f",
+            "RU5EX1JFQVNPTl9JTlRFUk5BTBAGMuwICgNTaXASTgoPU2lwU3RhcnRTZXNz",
+            "aW9uEiIub25kZXdvLnNpcC5TaXBTdGFydFNlc3Npb25SZXF1ZXN0GhUub25k",
+            "ZXdvLnNpcC5TaXBTdGF0dXMiABJACg1TaXBFbmRTZXNzaW9uEhYuZ29vZ2xl",
+            "LnByb3RvYnVmLkVtcHR5GhUub25kZXdvLnNpcC5TaXBTdGF0dXMiABJICgxT",
+            "aXBTdGFydENhbGwSHy5vbmRld28uc2lwLlNpcFN0YXJ0Q2FsbFJlcXVlc3Qa",
+            "FS5vbmRld28uc2lwLlNpcFN0YXR1cyIAEkQKClNpcEVuZENhbGwSHS5vbmRl",
+            "d28uc2lwLlNpcEVuZENhbGxSZXF1ZXN0GhUub25kZXdvLnNpcC5TaXBTdGF0",
+            "dXMiABJOCg9TaXBUcmFuc2ZlckNhbGwSIi5vbmRld28uc2lwLlNpcFRyYW5z",
+            "ZmVyQ2FsbFJlcXVlc3QaFS5vbmRld28uc2lwLlNpcFN0YXR1cyIAElQKElNp",
+            "cFJlZ2lzdGVyQWNjb3VudBIlLm9uZGV3by5zaXAuU2lwUmVnaXN0ZXJBY2Nv",
+            "dW50UmVxdWVzdBoVLm9uZGV3by5zaXAuU2lwU3RhdHVzIgASRQoPU2lwR2V0",
+            "U2lwU3RhdHVzEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GhUub25kZXdvLnNp",
+            "cC5TaXBTdGF0dXMiA5ACARJbChZTaXBHZXRTaXBTdGF0dXNIaXN0b3J5EhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5GiQub25kZXdvLnNpcC5TaXBTdGF0dXNI",
+            "aXN0b3J5UmVzcG9uc2UiA5ACARJOCg9TaXBQbGF5V2F2RmlsZXMSIi5vbmRl",
+            "d28uc2lwLlNpcFBsYXlXYXZGaWxlc1JlcXVlc3QaFS5vbmRld28uc2lwLlNp",
+            "cFN0YXR1cyIAEjoKB1NpcE11dGUSFi5nb29nbGUucHJvdG9idWYuRW1wdHka",
+            "FS5vbmRld28uc2lwLlNpcFN0YXR1cyIAEjwKCVNpcFVuTXV0ZRIWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eRoVLm9uZGV3by5zaXAuU2lwU3RhdHVzIgAScgoh",
+            "U2lwUmVwb3J0QW5zd2VyaW5nTWFjaGluZURldGVjdGVkEjQub25kZXdvLnNp",
+            "cC5TaXBSZXBvcnRBbnN3ZXJpbmdNYWNoaW5lRGV0ZWN0ZWRSZXF1ZXN0GhUu",
+            "b25kZXdvLnNpcC5TaXBTdGF0dXMiABJcChZTaXBTZXRDYWxsTWVkaWFDb250",
+            "cm9sEikub25kZXdvLnNpcC5TaXBTZXRDYWxsTWVkaWFDb250cm9sUmVxdWVz",
+            "dBoVLm9uZGV3by5zaXAuU2lwU3RhdHVzIgASXQoSU2lwU3RyZWFtQ2FsbEF1",
+            "ZGlvEh8ub25kZXdvLnNpcC5TaXBDYWxsQXVkaW9SZXF1ZXN0GiAub25kZXdv",
+            "LnNpcC5TaXBDYWxsQXVkaW9SZXNwb25zZSIAKAEwAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipEndCallRequest), global::Ondewo.Sip.SipEndCallRequest.Parser, new[]{ "HardHangup" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Sip.MediaControlSetting), typeof(global::Ondewo.Sip.MediaControlOwner), typeof(global::Ondewo.Sip.SipCallAudioMode), typeof(global::Ondewo.Sip.SipCallAudioEndReason), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipEndCallRequest), global::Ondewo.Sip.SipEndCallRequest.Parser, new[]{ "HardHangup", "EndReason", "AmdResult" }, null, new[]{ typeof(global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest), global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest.Parser, new[]{ "AmdResult" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.AnsweringMachineDetectionResult), global::Ondewo.Sip.AnsweringMachineDetectionResult.Parser, new[]{ "Verdict", "Cause", "Confidence", "DecisionMs", "RuleId", "MatchedCueIds", "ActionTaken", "CallId" }, null, new[]{ typeof(global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict), typeof(global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause), typeof(global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipStartCallRequest), global::Ondewo.Sip.SipStartCallRequest.Parser, new[]{ "CalleeId", "Headers" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipRegisterAccountRequest), global::Ondewo.Sip.SipRegisterAccountRequest.Parser, new[]{ "AccountName", "Password", "AuthUsername", "OutboundProxy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipStartSessionRequest), global::Ondewo.Sip.SipStartSessionRequest.Parser, new[]{ "AccountName", "AutoAnswerInterval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipTransferCallRequest), global::Ondewo.Sip.SipTransferCallRequest.Parser, new[]{ "TransferId", "Headers" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipStatus), global::Ondewo.Sip.SipStatus.Parser, new[]{ "AccountName", "Timestamp", "StatusType", "CalleeId", "TransferCallId", "Headers", "Description", "ExceptionName", "ExceptionTraceback", "NluSessionName" }, null, new[]{ typeof(global::Ondewo.Sip.SipStatus.Types.StatusType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipTransferCallRequest), global::Ondewo.Sip.SipTransferCallRequest.Parser, new[]{ "TransferId", "Headers", "OutcomeTimeoutMs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipStatus), global::Ondewo.Sip.SipStatus.Parser, new[]{ "AccountName", "Timestamp", "StatusType", "CalleeId", "TransferCallId", "Headers", "Description", "ExceptionName", "ExceptionTraceback", "NluSessionName", "AmdResult", "CallId", "BotMuted", "ListeningPaused", "CallAudioStreams", "SipResponseCode" }, null, new[]{ typeof(global::Ondewo.Sip.SipStatus.Types.StatusType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipStatusHistoryResponse), global::Ondewo.Sip.SipStatusHistoryResponse.Parser, new[]{ "StatusHistory" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipSetCallMediaControlRequest), global::Ondewo.Sip.SipSetCallMediaControlRequest.Parser, new[]{ "BotVoice", "BotListening", "Owner", "ParticipantsPresent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioConfig), global::Ondewo.Sip.SipCallAudioConfig.Parser, new[]{ "Mode", "SampleRateHz", "FrameMs", "TakeOver", "StreamId", "MaxDurationS" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioFrame), global::Ondewo.Sip.SipCallAudioFrame.Parser, new[]{ "PcmS16Le", "Sequence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioRequest), global::Ondewo.Sip.SipCallAudioRequest.Parser, new[]{ "Config", "Audio", "AgentMuted" }, new[]{ "Request" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioStarted), global::Ondewo.Sip.SipCallAudioStarted.Parser, new[]{ "StreamId", "SampleRateHz", "FrameMs", "Mode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioStats), global::Ondewo.Sip.SipCallAudioStats.Parser, new[]{ "FramesSent", "FramesDropped", "FramesReceived", "Underruns", "FramesDiscarded" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioEnded), global::Ondewo.Sip.SipCallAudioEnded.Parser, new[]{ "Reason", "Detail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipCallAudioResponse), global::Ondewo.Sip.SipCallAudioResponse.Parser, new[]{ "Started", "Audio", "Stats", "Ended" }, new[]{ "Response" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Sip.SipPlayWavFilesRequest), global::Ondewo.Sip.SipPlayWavFilesRequest.Parser, new[]{ "WavFiles" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// &lt;p>Desired setting of one media control flag&lt;/p>
+  /// </summary>
+  public enum MediaControlSetting {
+    /// <summary>
+    /// Leave the flag as it is for this owner
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_SETTING_UNCHANGED")] Unchanged = 0,
+    /// <summary>
+    /// The flag is on: the bot speaks (&lt;code>bot_voice&lt;/code>) or the bot listens (&lt;code>bot_listening&lt;/code>)
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_SETTING_ON")] On = 1,
+    /// <summary>
+    /// The flag is off: the bot is muted (&lt;code>bot_voice&lt;/code>) or the bot's listening is paused (&lt;code>bot_listening&lt;/code>)
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_SETTING_OFF")] Off = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>Owner of a media control hold. Each owner holds its own mute and pause; releasing one owner's hold never releases
+  /// another owner's&lt;/p>
+  /// </summary>
+  public enum MediaControlOwner {
+    /// <summary>
+    /// Same as &lt;code>MEDIA_CONTROL_OWNER_OPERATOR&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_OWNER_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// An operator, e.g. a supervisor muting the bot
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_OWNER_OPERATOR")] Operator = 1,
+    /// <summary>
+    /// The bot policy of invited conference participants, set while at least one participant is ringing or joined. Its
+    /// hold mutes or pauses the bot only when a participant's bot policy asks for it; it also carries
+    /// &lt;code>SipSetCallMediaControlRequest.participants_present&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("MEDIA_CONTROL_OWNER_PARTICIPANT")] Participant = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>Mode of a &lt;code>SipStreamCallAudio&lt;/code> stream&lt;/p>
+  /// </summary>
+  public enum SipCallAudioMode {
+    /// <summary>
+    /// Same as &lt;code>SIP_CALL_AUDIO_MODE_LISTEN&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Receive the call audio only
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_MODE_LISTEN")] Listen = 1,
+    /// <summary>
+    /// Receive the caller's audio and send audio to the caller. Requires &lt;code>take_over&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_MODE_TALK")] Talk = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>Why a &lt;code>SipStreamCallAudio&lt;/code> stream ended&lt;/p>
+  /// </summary>
+  public enum SipCallAudioEndReason {
+    /// <summary>
+    /// No reason recorded
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The client cancelled or half-closed the stream
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_CLIENT_CLOSED")] ClientClosed = 1,
+    /// <summary>
+    /// The call ended
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_CALL_ENDED")] CallEnded = 2,
+    /// <summary>
+    /// The call was transferred
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_CALL_TRANSFERRED")] CallTransferred = 3,
+    /// <summary>
+    /// &lt;code>max_duration_s&lt;/code> was reached
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_MAX_DURATION")] MaxDuration = 4,
+    /// <summary>
+    /// The client did not read the audio in time
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_STALLED")] Stalled = 5,
+    /// <summary>
+    /// An internal error ended the stream
+    /// </summary>
+    [pbr::OriginalName("SIP_CALL_AUDIO_END_REASON_INTERNAL")] Internal = 6,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// &lt;p>Ends an ongoing call of the active SIP session of the active SIP account&lt;/p>
@@ -137,6 +321,8 @@ namespace Ondewo.Sip {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SipEndCallRequest(SipEndCallRequest other) : this() {
       hardHangup_ = other.hardHangup_;
+      endReason_ = other.endReason_;
+      amdResult_ = other.amdResult_ != null ? other.amdResult_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -161,6 +347,38 @@ namespace Ondewo.Sip {
       }
     }
 
+    /// <summary>Field number for the "end_reason" field.</summary>
+    public const int EndReasonFieldNumber = 2;
+    private global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason endReason_ = global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified;
+    /// <summary>
+    /// Optional: reason for ending the call. Leave unset for an ordinary hangup
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason EndReason {
+      get { return endReason_; }
+      set {
+        endReason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "amd_result" field.</summary>
+    public const int AmdResultFieldNumber = 3;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult amdResult_;
+    /// <summary>
+    /// Optional: result of the answering machine detection that decided to end the call. Only meaningful together with
+    /// &lt;code>end_reason = ANSWERING_MACHINE&lt;/code> or &lt;code>end_reason = ANSWERING_MACHINE_VOICE_MESSAGE_LEFT&lt;/code>;
+    /// it is carried into &lt;code>SipStatus.amd_result&lt;/code> of the terminal status of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult AmdResult {
+      get { return amdResult_; }
+      set {
+        amdResult_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -177,6 +395,8 @@ namespace Ondewo.Sip {
         return true;
       }
       if (HardHangup != other.HardHangup) return false;
+      if (EndReason != other.EndReason) return false;
+      if (!object.Equals(AmdResult, other.AmdResult)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -185,6 +405,8 @@ namespace Ondewo.Sip {
     public override int GetHashCode() {
       int hash = 1;
       if (HardHangup != false) hash ^= HardHangup.GetHashCode();
+      if (EndReason != global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified) hash ^= EndReason.GetHashCode();
+      if (amdResult_ != null) hash ^= AmdResult.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -207,6 +429,14 @@ namespace Ondewo.Sip {
         output.WriteRawTag(8);
         output.WriteBool(HardHangup);
       }
+      if (EndReason != global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EndReason);
+      }
+      if (amdResult_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AmdResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -221,6 +451,14 @@ namespace Ondewo.Sip {
         output.WriteRawTag(8);
         output.WriteBool(HardHangup);
       }
+      if (EndReason != global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EndReason);
+      }
+      if (amdResult_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(AmdResult);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -233,6 +471,12 @@ namespace Ondewo.Sip {
       int size = 0;
       if (HardHangup != false) {
         size += 1 + 1;
+      }
+      if (EndReason != global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndReason);
+      }
+      if (amdResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AmdResult);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -248,6 +492,15 @@ namespace Ondewo.Sip {
       }
       if (other.HardHangup != false) {
         HardHangup = other.HardHangup;
+      }
+      if (other.EndReason != global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason.Unspecified) {
+        EndReason = other.EndReason;
+      }
+      if (other.amdResult_ != null) {
+        if (amdResult_ == null) {
+          AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+        }
+        AmdResult.MergeFrom(other.AmdResult);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -270,6 +523,17 @@ namespace Ondewo.Sip {
             break;
           case 8: {
             HardHangup = input.ReadBool();
+            break;
+          }
+          case 16: {
+            EndReason = (global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
             break;
           }
         }
@@ -295,10 +559,866 @@ namespace Ondewo.Sip {
             HardHangup = input.ReadBool();
             break;
           }
+          case 16: {
+            EndReason = (global::Ondewo.Sip.SipEndCallRequest.Types.EndCallReason) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SipEndCallRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// &lt;p>Why the call is being ended&lt;/p>
+      /// </summary>
+      public enum EndCallReason {
+        /// <summary>
+        /// No specific reason given. The call ends as an ordinary hangup, exactly as before this field existed
+        /// </summary>
+        [pbr::OriginalName("END_CALL_REASON_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Answering machine detection decided the callee is not a person to talk to (answering machine, fax,
+        /// network announcement, ...) and the call is hung up WITHOUT leaving a voice message. The terminal status
+        /// of the call is &lt;code>OUTGOING_CALL_FINISHED&lt;/code> with the description
+        /// &lt;code>Answering machine detected with hang up&lt;/code>
+        /// </summary>
+        [pbr::OriginalName("ANSWERING_MACHINE")] AnsweringMachine = 1,
+        /// <summary>
+        /// Answering machine detection decided the callee is an answering machine, a voice message was left on it,
+        /// and the call is hung up afterwards (or when the voice message timeout expired). The terminal status of
+        /// the call is &lt;code>OUTGOING_CALL_FINISHED&lt;/code> with the description
+        /// &lt;code>Answering machine detected with left voice message and hang up&lt;/code>
+        /// </summary>
+        [pbr::OriginalName("ANSWERING_MACHINE_VOICE_MESSAGE_LEFT")] AnsweringMachineVoiceMessageLeft = 2,
+        /// <summary>
+        /// A WARM transfer completed: the transfer target joined the call and the bot leaves it. The terminal status of
+        /// the call is &lt;code>*_CALL_FINISHED&lt;/code> with the description &lt;code>Call transferred&lt;/code> and
+        /// &lt;code>transfer_call_id&lt;/code> set to the transfer target
+        /// </summary>
+        [pbr::OriginalName("END_CALL_REASON_TRANSFERRED")] Transferred = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// &lt;p>Reports the verdict of the answering machine detection of the ongoing outgoing call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipReportAnsweringMachineDetectedRequest : pb::IMessage<SipReportAnsweringMachineDetectedRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipReportAnsweringMachineDetectedRequest> _parser = new pb::MessageParser<SipReportAnsweringMachineDetectedRequest>(() => new SipReportAnsweringMachineDetectedRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipReportAnsweringMachineDetectedRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipReportAnsweringMachineDetectedRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipReportAnsweringMachineDetectedRequest(SipReportAnsweringMachineDetectedRequest other) : this() {
+      amdResult_ = other.amdResult_ != null ? other.amdResult_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipReportAnsweringMachineDetectedRequest Clone() {
+      return new SipReportAnsweringMachineDetectedRequest(this);
+    }
+
+    /// <summary>Field number for the "amd_result" field.</summary>
+    public const int AmdResultFieldNumber = 1;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult amdResult_;
+    /// <summary>
+    /// Result of the answering machine detection. Written to &lt;code>SipStatus.amd_result&lt;/code> of the
+    /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> status of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult AmdResult {
+      get { return amdResult_; }
+      set {
+        amdResult_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipReportAnsweringMachineDetectedRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipReportAnsweringMachineDetectedRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(AmdResult, other.AmdResult)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (amdResult_ != null) hash ^= AmdResult.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (amdResult_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AmdResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (amdResult_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(AmdResult);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (amdResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AmdResult);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipReportAnsweringMachineDetectedRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.amdResult_ != null) {
+        if (amdResult_ == null) {
+          AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+        }
+        AmdResult.MergeFrom(other.AmdResult);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Result of the answering machine detection (AMD) of an outbound call&lt;/p>
+  /// &lt;p>Carries identifiers from closed vocabularies only: never audio, transcript text or a phone number&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AnsweringMachineDetectionResult : pb::IMessage<AnsweringMachineDetectionResult>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnsweringMachineDetectionResult> _parser = new pb::MessageParser<AnsweringMachineDetectionResult>(() => new AnsweringMachineDetectionResult());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnsweringMachineDetectionResult> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionResult() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionResult(AnsweringMachineDetectionResult other) : this() {
+      verdict_ = other.verdict_;
+      cause_ = other.cause_;
+      confidence_ = other.confidence_;
+      decisionMs_ = other.decisionMs_;
+      ruleId_ = other.ruleId_;
+      matchedCueIds_ = other.matchedCueIds_.Clone();
+      actionTaken_ = other.actionTaken_;
+      callId_ = other.callId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionResult Clone() {
+      return new AnsweringMachineDetectionResult(this);
+    }
+
+    /// <summary>Field number for the "verdict" field.</summary>
+    public const int VerdictFieldNumber = 1;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict verdict_ = global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified;
+    /// <summary>
+    /// Who or what answered the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict Verdict {
+      get { return verdict_; }
+      set {
+        verdict_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cause" field.</summary>
+    public const int CauseFieldNumber = 2;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause cause_ = global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified;
+    /// <summary>
+    /// Evidence that led to the verdict
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause Cause {
+      get { return cause_; }
+      set {
+        cause_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 3;
+    private float confidence_;
+    /// <summary>
+    /// Confidence of the verdict, between &lt;code>0.0&lt;/code> and &lt;code>1.0&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "decision_ms" field.</summary>
+    public const int DecisionMsFieldNumber = 4;
+    private int decisionMs_;
+    /// <summary>
+    /// Time in milliseconds from the call being connected until the verdict was reached
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int DecisionMs {
+      get { return decisionMs_; }
+      set {
+        decisionMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rule_id" field.</summary>
+    public const int RuleIdFieldNumber = 5;
+    private string ruleId_ = "";
+    /// <summary>
+    /// Identifier of the detection rule that produced the verdict
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RuleId {
+      get { return ruleId_; }
+      set {
+        ruleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "matched_cue_ids" field.</summary>
+    public const int MatchedCueIdsFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_matchedCueIds_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> matchedCueIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Identifiers of the cues that matched, e.g. keyword or tone identifiers. Identifiers only, never transcript text
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> MatchedCueIds {
+      get { return matchedCueIds_; }
+    }
+
+    /// <summary>Field number for the "action_taken" field.</summary>
+    public const int ActionTakenFieldNumber = 7;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken actionTaken_ = global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified;
+    /// <summary>
+    /// What was done because of the verdict
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken ActionTaken {
+      get { return actionTaken_; }
+      set {
+        actionTaken_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "call_id" field.</summary>
+    public const int CallIdFieldNumber = 8;
+    private string callId_ = "";
+    /// <summary>
+    /// Identifier of the call the result belongs to, i.e. the value of the &lt;code>X-ondewo-vtsi-caller-call-id&lt;/code>
+    /// header of the call. Used to match a result to its call by identity rather than by recency
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallId {
+      get { return callId_; }
+      set {
+        callId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnsweringMachineDetectionResult);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnsweringMachineDetectionResult other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Verdict != other.Verdict) return false;
+      if (Cause != other.Cause) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
+      if (DecisionMs != other.DecisionMs) return false;
+      if (RuleId != other.RuleId) return false;
+      if(!matchedCueIds_.Equals(other.matchedCueIds_)) return false;
+      if (ActionTaken != other.ActionTaken) return false;
+      if (CallId != other.CallId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Verdict != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified) hash ^= Verdict.GetHashCode();
+      if (Cause != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified) hash ^= Cause.GetHashCode();
+      if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
+      if (DecisionMs != 0) hash ^= DecisionMs.GetHashCode();
+      if (RuleId.Length != 0) hash ^= RuleId.GetHashCode();
+      hash ^= matchedCueIds_.GetHashCode();
+      if (ActionTaken != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified) hash ^= ActionTaken.GetHashCode();
+      if (CallId.Length != 0) hash ^= CallId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Verdict != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Verdict);
+      }
+      if (Cause != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Cause);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Confidence);
+      }
+      if (DecisionMs != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DecisionMs);
+      }
+      if (RuleId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RuleId);
+      }
+      matchedCueIds_.WriteTo(output, _repeated_matchedCueIds_codec);
+      if (ActionTaken != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ActionTaken);
+      }
+      if (CallId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CallId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Verdict != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Verdict);
+      }
+      if (Cause != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Cause);
+      }
+      if (Confidence != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(Confidence);
+      }
+      if (DecisionMs != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(DecisionMs);
+      }
+      if (RuleId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(RuleId);
+      }
+      matchedCueIds_.WriteTo(ref output, _repeated_matchedCueIds_codec);
+      if (ActionTaken != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) ActionTaken);
+      }
+      if (CallId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(CallId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Verdict != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Verdict);
+      }
+      if (Cause != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Cause);
+      }
+      if (Confidence != 0F) {
+        size += 1 + 4;
+      }
+      if (DecisionMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(DecisionMs);
+      }
+      if (RuleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RuleId);
+      }
+      size += matchedCueIds_.CalculateSize(_repeated_matchedCueIds_codec);
+      if (ActionTaken != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActionTaken);
+      }
+      if (CallId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnsweringMachineDetectionResult other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Verdict != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict.Unspecified) {
+        Verdict = other.Verdict;
+      }
+      if (other.Cause != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause.Unspecified) {
+        Cause = other.Cause;
+      }
+      if (other.Confidence != 0F) {
+        Confidence = other.Confidence;
+      }
+      if (other.DecisionMs != 0) {
+        DecisionMs = other.DecisionMs;
+      }
+      if (other.RuleId.Length != 0) {
+        RuleId = other.RuleId;
+      }
+      matchedCueIds_.Add(other.matchedCueIds_);
+      if (other.ActionTaken != global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken.Unspecified) {
+        ActionTaken = other.ActionTaken;
+      }
+      if (other.CallId.Length != 0) {
+        CallId = other.CallId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Verdict = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Cause = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause) input.ReadEnum();
+            break;
+          }
+          case 29: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            DecisionMs = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            RuleId = input.ReadString();
+            break;
+          }
+          case 50: {
+            matchedCueIds_.AddEntriesFrom(input, _repeated_matchedCueIds_codec);
+            break;
+          }
+          case 56: {
+            ActionTaken = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            CallId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Verdict = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Verdict) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            Cause = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.Cause) input.ReadEnum();
+            break;
+          }
+          case 29: {
+            Confidence = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            DecisionMs = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            RuleId = input.ReadString();
+            break;
+          }
+          case 50: {
+            matchedCueIds_.AddEntriesFrom(ref input, _repeated_matchedCueIds_codec);
+            break;
+          }
+          case 56: {
+            ActionTaken = (global::Ondewo.Sip.AnsweringMachineDetectionResult.Types.ActionTaken) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            CallId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnsweringMachineDetectionResult message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// &lt;p>Who or what answered the call&lt;/p>
+      /// </summary>
+      public enum Verdict {
+        /// <summary>
+        /// No verdict available
+        /// </summary>
+        [pbr::OriginalName("VERDICT_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// A person answered the call
+        /// </summary>
+        [pbr::OriginalName("HUMAN")] Human = 1,
+        /// <summary>
+        /// An answering machine or voicemail answered the call
+        /// </summary>
+        [pbr::OriginalName("MACHINE")] Machine = 2,
+        /// <summary>
+        /// An interactive voice response system (IVR) answered the call
+        /// </summary>
+        [pbr::OriginalName("IVR")] Ivr = 3,
+        /// <summary>
+        /// A fax machine answered the call
+        /// </summary>
+        [pbr::OriginalName("FAX")] Fax = 4,
+        /// <summary>
+        /// A network announcement answered the call, e.g. "the number you have dialed is not available"
+        /// </summary>
+        [pbr::OriginalName("NETWORK_ANNOUNCEMENT")] NetworkAnnouncement = 5,
+        /// <summary>
+        /// A call screening service answered the call, e.g. asking the caller to state their name
+        /// </summary>
+        [pbr::OriginalName("CALL_SCREENING")] CallScreening = 6,
+        /// <summary>
+        /// Nothing was said within the detection window
+        /// </summary>
+        [pbr::OriginalName("NO_SPEECH")] NoSpeech = 7,
+        /// <summary>
+        /// The detection could not decide
+        /// </summary>
+        [pbr::OriginalName("UNKNOWN")] Unknown = 8,
+      }
+
+      /// <summary>
+      /// &lt;p>Evidence that led to the verdict&lt;/p>
+      /// </summary>
+      public enum Cause {
+        /// <summary>
+        /// No cause available
+        /// </summary>
+        [pbr::OriginalName("CAUSE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The speech cadence, e.g. a long uninterrupted greeting
+        /// </summary>
+        [pbr::OriginalName("CADENCE")] Cadence = 1,
+        /// <summary>
+        /// A keyword or phrase typical of the verdict
+        /// </summary>
+        [pbr::OriginalName("KEYWORD")] Keyword = 2,
+        /// <summary>
+        /// A voicemail beep
+        /// </summary>
+        [pbr::OriginalName("BEEP")] Beep = 3,
+        /// <summary>
+        /// A tone, e.g. a fax or special information tone
+        /// </summary>
+        [pbr::OriginalName("TONE")] Tone = 4,
+        /// <summary>
+        /// Both the speech cadence and a keyword
+        /// </summary>
+        [pbr::OriginalName("CADENCE_AND_KEYWORD")] CadenceAndKeyword = 5,
+        /// <summary>
+        /// Both the speech cadence and a voicemail beep
+        /// </summary>
+        [pbr::OriginalName("CADENCE_AND_BEEP")] CadenceAndBeep = 6,
+        /// <summary>
+        /// The detection window ended before any other evidence decided
+        /// </summary>
+        [pbr::OriginalName("TIMEOUT")] Timeout = 7,
+        /// <summary>
+        /// Silence throughout the detection window
+        /// </summary>
+        [pbr::OriginalName("SILENCE")] Silence = 8,
+      }
+
+      /// <summary>
+      /// &lt;p>What was done because of the verdict&lt;/p>
+      /// </summary>
+      public enum ActionTaken {
+        /// <summary>
+        /// No action recorded
+        /// </summary>
+        [pbr::OriginalName("ACTION_TAKEN_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The call was hung up
+        /// </summary>
+        [pbr::OriginalName("HUNG_UP")] HungUp = 1,
+        /// <summary>
+        /// The call continued as normal
+        /// </summary>
+        [pbr::OriginalName("CONTINUED")] Continued = 2,
+        /// <summary>
+        /// Detection only: the verdict was recorded, but the call was not influenced by it
+        /// </summary>
+        [pbr::OriginalName("DETECT_ONLY")] DetectOnly = 3,
+        /// <summary>
+        /// A voice message was left on the answering machine, and the call was hung up afterwards
+        /// </summary>
+        [pbr::OriginalName("LEFT_VOICE_MESSAGE")] LeftVoiceMessage = 4,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -320,7 +1440,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -553,7 +1673,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -878,7 +1998,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1123,7 +2243,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1145,6 +2265,7 @@ namespace Ondewo.Sip {
     public SipTransferCallRequest(SipTransferCallRequest other) : this() {
       transferId_ = other.transferId_;
       headers_ = other.headers_.Clone();
+      outcomeTimeoutMs_ = other.outcomeTimeoutMs_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1175,12 +2296,48 @@ namespace Ondewo.Sip {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// The headers to include when transferring the call
+    /// The headers to include when transferring the call. They are sent on the REFER. Note that Asterisk (res_pjsip,
+    /// measured on 18.6 and 22) does NOT forward headers of a REFER to the transfer target: the target receives the
+    /// headers of the transferred caller's original INVITE. Hand headers to the target through the dialplan instead
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Headers {
       get { return headers_; }
+    }
+
+    /// <summary>Field number for the "outcome_timeout_ms" field.</summary>
+    public const int OutcomeTimeoutMsFieldNumber = 3;
+    private uint outcomeTimeoutMs_;
+    /// <summary>
+    /// &lt;p>Optional. How long to wait, in milliseconds, for the SIP server's answer to the REFER before reporting the outcome.
+    /// Clamped to 10000.&lt;/p>
+    /// &lt;p>&lt;code>0&lt;/code> (default): legacy behaviour, unchanged: REFER, then an immediate hangup.&lt;/p>
+    /// &lt;p>&lt;code>&amp;gt; 0&lt;/code>: the call is kept until the outcome is known:&lt;/p>
+    /// &lt;ul>
+    ///   &lt;li>REFER accepted (&lt;code>202&lt;/code>): the hangup is held for a short grace in which a terminal NOTIFY with a
+    ///   &lt;code>404&lt;/code> sipfrag (unknown target) still counts as a refusal; any other sipfrag, or none, means accepted.
+    ///   The bot then hangs up and &lt;code>TRANSFER_CALL_INITIATED&lt;/code> is returned with
+    ///   &lt;code>sip_response_code = 202&lt;/code>. The call ends as &lt;code>*_CALL_FINISHED&lt;/code> with the description
+    ///   &lt;code>Call transferred&lt;/code>.&lt;/li>
+    ///   &lt;li>REFER refused (a final response &lt;code>&amp;gt;= 400&lt;/code>, or the &lt;code>404&lt;/code> sipfrag above): the call is KEPT
+    ///   with the bot, nothing is assigned to the shared status, and &lt;code>TRANSFER_CALL_FAILED&lt;/code> is returned with
+    ///   &lt;code>description = reason=refer-rejected&lt;/code> and &lt;code>sip_response_code&lt;/code> (&lt;code>0&lt;/code> when the SIP
+    ///   stack did not report the code, e.g. a declined REFER).&lt;/li>
+    ///   &lt;li>No answer within the timeout: the call is KEPT and &lt;code>TRANSFER_CALL_FAILED&lt;/code> is returned with
+    ///   &lt;code>description = reason=refer-timeout&lt;/code>. A late acceptance still ends the bot's leg.&lt;/li>
+    ///   &lt;li>The call ended while waiting: &lt;code>NO_ONGOING_CALL&lt;/code> is returned.&lt;/li>
+    /// &lt;/ul>
+    /// &lt;p>A &lt;code>202&lt;/code> does not mean the target answered: when the dialplan's dial to the target then fails (busy, no
+    /// answer, unreachable) the caller is lost. Validate targets up front, or use a WARM transfer.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OutcomeTimeoutMs {
+      get { return outcomeTimeoutMs_; }
+      set {
+        outcomeTimeoutMs_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1200,6 +2357,7 @@ namespace Ondewo.Sip {
       }
       if (TransferId != other.TransferId) return false;
       if (!Headers.Equals(other.Headers)) return false;
+      if (OutcomeTimeoutMs != other.OutcomeTimeoutMs) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1209,6 +2367,7 @@ namespace Ondewo.Sip {
       int hash = 1;
       if (TransferId.Length != 0) hash ^= TransferId.GetHashCode();
       hash ^= Headers.GetHashCode();
+      if (OutcomeTimeoutMs != 0) hash ^= OutcomeTimeoutMs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1232,6 +2391,10 @@ namespace Ondewo.Sip {
         output.WriteString(TransferId);
       }
       headers_.WriteTo(output, _map_headers_codec);
+      if (OutcomeTimeoutMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(OutcomeTimeoutMs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1247,6 +2410,10 @@ namespace Ondewo.Sip {
         output.WriteString(TransferId);
       }
       headers_.WriteTo(ref output, _map_headers_codec);
+      if (OutcomeTimeoutMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteUInt32(OutcomeTimeoutMs);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1261,6 +2428,9 @@ namespace Ondewo.Sip {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TransferId);
       }
       size += headers_.CalculateSize(_map_headers_codec);
+      if (OutcomeTimeoutMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OutcomeTimeoutMs);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1277,6 +2447,9 @@ namespace Ondewo.Sip {
         TransferId = other.TransferId;
       }
       headers_.MergeFrom(other.headers_);
+      if (other.OutcomeTimeoutMs != 0) {
+        OutcomeTimeoutMs = other.OutcomeTimeoutMs;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1302,6 +2475,10 @@ namespace Ondewo.Sip {
           }
           case 18: {
             headers_.AddEntriesFrom(input, _map_headers_codec);
+            break;
+          }
+          case 24: {
+            OutcomeTimeoutMs = input.ReadUInt32();
             break;
           }
         }
@@ -1331,6 +2508,10 @@ namespace Ondewo.Sip {
             headers_.AddEntriesFrom(ref input, _map_headers_codec);
             break;
           }
+          case 24: {
+            OutcomeTimeoutMs = input.ReadUInt32();
+            break;
+          }
         }
       }
     }
@@ -1356,7 +2537,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1386,6 +2567,12 @@ namespace Ondewo.Sip {
       exceptionName_ = other.exceptionName_;
       exceptionTraceback_ = other.exceptionTraceback_;
       nluSessionName_ = other.nluSessionName_;
+      amdResult_ = other.amdResult_ != null ? other.amdResult_.Clone() : null;
+      callId_ = other.callId_;
+      botMuted_ = other.botMuted_;
+      listeningPaused_ = other.listeningPaused_;
+      callAudioStreams_ = other.callAudioStreams_;
+      sipResponseCode_ = other.sipResponseCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1545,6 +2732,105 @@ namespace Ondewo.Sip {
       }
     }
 
+    /// <summary>Field number for the "amd_result" field.</summary>
+    public const int AmdResultFieldNumber = 11;
+    private global::Ondewo.Sip.AnsweringMachineDetectionResult amdResult_;
+    /// <summary>
+    /// Result of the answering machine detection of the call. Set on
+    /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> and on the terminal status of every call on which answering machine detection ran, including a
+    /// &lt;code>HUMAN&lt;/code> verdict; unset otherwise
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.AnsweringMachineDetectionResult AmdResult {
+      get { return amdResult_; }
+      set {
+        amdResult_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "call_id" field.</summary>
+    public const int CallIdFieldNumber = 12;
+    private string callId_ = "";
+    /// <summary>
+    /// Identifier of the ongoing call, minted per call: the value of the &lt;code>X-ondewo-vtsi-caller-call-id&lt;/code> header of
+    /// an outgoing call when present, otherwise a random UUID. Empty when no call is ongoing. Set on every status of the
+    /// call, including the entries of &lt;code>SipGetSipStatusHistory&lt;/code>. Clients send it back as the
+    /// &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum to scope a request to this call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallId {
+      get { return callId_; }
+      set {
+        callId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bot_muted" field.</summary>
+    public const int BotMutedFieldNumber = 13;
+    private bool botMuted_;
+    /// <summary>
+    /// &lt;code>true&lt;/code> while the bot is muted by an operator, a conference participant policy or a TALK take-over of
+    /// &lt;code>SipSetCallMediaControl&lt;/code> / &lt;code>SipStreamCallAudio&lt;/code>. Not the bot's own pipeline mute
+    /// (&lt;code>MICROPHONE_MUTED&lt;/code>). Cleared when the call ends
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BotMuted {
+      get { return botMuted_; }
+      set {
+        botMuted_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "listening_paused" field.</summary>
+    public const int ListeningPausedFieldNumber = 14;
+    private bool listeningPaused_;
+    /// <summary>
+    /// &lt;code>true&lt;/code> while the bot does not listen to the caller (see &lt;code>bot_muted&lt;/code> for who sets it). Cleared
+    /// when the call ends
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ListeningPaused {
+      get { return listeningPaused_; }
+      set {
+        listeningPaused_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "call_audio_streams" field.</summary>
+    public const int CallAudioStreamsFieldNumber = 15;
+    private int callAudioStreams_;
+    /// <summary>
+    /// Number of connected &lt;code>SipStreamCallAudio&lt;/code> streams of the ongoing call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CallAudioStreams {
+      get { return callAudioStreams_; }
+      set {
+        callAudioStreams_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_response_code" field.</summary>
+    public const int SipResponseCodeFieldNumber = 16;
+    private int sipResponseCode_;
+    /// <summary>
+    /// SIP response code of the last transfer attempt of the ongoing call (&lt;code>202&lt;/code> when accepted, the refusal code
+    /// otherwise, &lt;code>0&lt;/code> when unknown). Call-scoped
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SipResponseCode {
+      get { return sipResponseCode_; }
+      set {
+        sipResponseCode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1570,6 +2856,12 @@ namespace Ondewo.Sip {
       if (ExceptionName != other.ExceptionName) return false;
       if (ExceptionTraceback != other.ExceptionTraceback) return false;
       if (NluSessionName != other.NluSessionName) return false;
+      if (!object.Equals(AmdResult, other.AmdResult)) return false;
+      if (CallId != other.CallId) return false;
+      if (BotMuted != other.BotMuted) return false;
+      if (ListeningPaused != other.ListeningPaused) return false;
+      if (CallAudioStreams != other.CallAudioStreams) return false;
+      if (SipResponseCode != other.SipResponseCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1587,6 +2879,12 @@ namespace Ondewo.Sip {
       if (ExceptionName.Length != 0) hash ^= ExceptionName.GetHashCode();
       if (ExceptionTraceback.Length != 0) hash ^= ExceptionTraceback.GetHashCode();
       if (NluSessionName.Length != 0) hash ^= NluSessionName.GetHashCode();
+      if (amdResult_ != null) hash ^= AmdResult.GetHashCode();
+      if (CallId.Length != 0) hash ^= CallId.GetHashCode();
+      if (BotMuted != false) hash ^= BotMuted.GetHashCode();
+      if (ListeningPaused != false) hash ^= ListeningPaused.GetHashCode();
+      if (CallAudioStreams != 0) hash ^= CallAudioStreams.GetHashCode();
+      if (SipResponseCode != 0) hash ^= SipResponseCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1642,6 +2940,30 @@ namespace Ondewo.Sip {
         output.WriteRawTag(82);
         output.WriteString(NluSessionName);
       }
+      if (amdResult_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AmdResult);
+      }
+      if (CallId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CallId);
+      }
+      if (BotMuted != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(BotMuted);
+      }
+      if (ListeningPaused != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(ListeningPaused);
+      }
+      if (CallAudioStreams != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(CallAudioStreams);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(SipResponseCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1689,6 +3011,30 @@ namespace Ondewo.Sip {
         output.WriteRawTag(82);
         output.WriteString(NluSessionName);
       }
+      if (amdResult_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AmdResult);
+      }
+      if (CallId.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CallId);
+      }
+      if (BotMuted != false) {
+        output.WriteRawTag(104);
+        output.WriteBool(BotMuted);
+      }
+      if (ListeningPaused != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(ListeningPaused);
+      }
+      if (CallAudioStreams != 0) {
+        output.WriteRawTag(120);
+        output.WriteInt32(CallAudioStreams);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(SipResponseCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1726,6 +3072,24 @@ namespace Ondewo.Sip {
       }
       if (NluSessionName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NluSessionName);
+      }
+      if (amdResult_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AmdResult);
+      }
+      if (CallId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallId);
+      }
+      if (BotMuted != false) {
+        size += 1 + 1;
+      }
+      if (ListeningPaused != false) {
+        size += 1 + 1;
+      }
+      if (CallAudioStreams != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CallAudioStreams);
+      }
+      if (SipResponseCode != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(SipResponseCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1769,6 +3133,27 @@ namespace Ondewo.Sip {
       }
       if (other.NluSessionName.Length != 0) {
         NluSessionName = other.NluSessionName;
+      }
+      if (other.amdResult_ != null) {
+        if (amdResult_ == null) {
+          AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+        }
+        AmdResult.MergeFrom(other.AmdResult);
+      }
+      if (other.CallId.Length != 0) {
+        CallId = other.CallId;
+      }
+      if (other.BotMuted != false) {
+        BotMuted = other.BotMuted;
+      }
+      if (other.ListeningPaused != false) {
+        ListeningPaused = other.ListeningPaused;
+      }
+      if (other.CallAudioStreams != 0) {
+        CallAudioStreams = other.CallAudioStreams;
+      }
+      if (other.SipResponseCode != 0) {
+        SipResponseCode = other.SipResponseCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1832,6 +3217,33 @@ namespace Ondewo.Sip {
             NluSessionName = input.ReadString();
             break;
           }
+          case 90: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
+            break;
+          }
+          case 98: {
+            CallId = input.ReadString();
+            break;
+          }
+          case 104: {
+            BotMuted = input.ReadBool();
+            break;
+          }
+          case 112: {
+            ListeningPaused = input.ReadBool();
+            break;
+          }
+          case 120: {
+            CallAudioStreams = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            SipResponseCode = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1892,6 +3304,33 @@ namespace Ondewo.Sip {
           }
           case 82: {
             NluSessionName = input.ReadString();
+            break;
+          }
+          case 90: {
+            if (amdResult_ == null) {
+              AmdResult = new global::Ondewo.Sip.AnsweringMachineDetectionResult();
+            }
+            input.ReadMessage(AmdResult);
+            break;
+          }
+          case 98: {
+            CallId = input.ReadString();
+            break;
+          }
+          case 104: {
+            BotMuted = input.ReadBool();
+            break;
+          }
+          case 112: {
+            ListeningPaused = input.ReadBool();
+            break;
+          }
+          case 120: {
+            CallAudioStreams = input.ReadInt32();
+            break;
+          }
+          case 128: {
+            SipResponseCode = input.ReadInt32();
             break;
           }
         }
@@ -1996,6 +3435,17 @@ namespace Ondewo.Sip {
         /// No ongoing call
         /// </summary>
         [pbr::OriginalName("NO_ONGOING_CALL")] NoOngoingCall = 21,
+        /// <summary>
+        /// Answering machine detection decided the callee of the ongoing outgoing call is not a person to talk to.
+        /// NOT terminal: the call is still up when this status is set. &lt;code>amd_result.verdict&lt;/code> tells an
+        /// answering machine, a fax, a network announcement, ... apart. The call then ends as
+        /// &lt;code>OUTGOING_CALL_FINISHED&lt;/code> carrying &lt;code>amd_result&lt;/code> and exactly one of the descriptions
+        /// &lt;code>Answering machine detected with hang up&lt;/code>,
+        /// &lt;code>Answering machine detected with left voice message and hang up&lt;/code>,
+        /// &lt;code>Answering machine detected, call ended by the answering machine&lt;/code> or
+        /// &lt;code>Answering machine detected, call ended by the answering machine after leaving a voice message&lt;/code>
+        /// </summary>
+        [pbr::OriginalName("OUTGOING_CALL_ANSWERING_MACHINE_DETECTED")] OutgoingCallAnsweringMachineDetected = 22,
       }
 
     }
@@ -2021,7 +3471,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2197,6 +3647,2695 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
+  /// &lt;p>Request of &lt;code>SipSetCallMediaControl&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipSetCallMediaControlRequest : pb::IMessage<SipSetCallMediaControlRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipSetCallMediaControlRequest> _parser = new pb::MessageParser<SipSetCallMediaControlRequest>(() => new SipSetCallMediaControlRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipSetCallMediaControlRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipSetCallMediaControlRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipSetCallMediaControlRequest(SipSetCallMediaControlRequest other) : this() {
+      botVoice_ = other.botVoice_;
+      botListening_ = other.botListening_;
+      owner_ = other.owner_;
+      participantsPresent_ = other.participantsPresent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipSetCallMediaControlRequest Clone() {
+      return new SipSetCallMediaControlRequest(this);
+    }
+
+    /// <summary>Field number for the "bot_voice" field.</summary>
+    public const int BotVoiceFieldNumber = 1;
+    private global::Ondewo.Sip.MediaControlSetting botVoice_ = global::Ondewo.Sip.MediaControlSetting.Unchanged;
+    /// <summary>
+    /// &lt;code>MEDIA_CONTROL_SETTING_ON&lt;/code>: the bot speaks. &lt;code>MEDIA_CONTROL_SETTING_OFF&lt;/code>: the bot is muted
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.MediaControlSetting BotVoice {
+      get { return botVoice_; }
+      set {
+        botVoice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bot_listening" field.</summary>
+    public const int BotListeningFieldNumber = 2;
+    private global::Ondewo.Sip.MediaControlSetting botListening_ = global::Ondewo.Sip.MediaControlSetting.Unchanged;
+    /// <summary>
+    /// &lt;code>MEDIA_CONTROL_SETTING_ON&lt;/code>: caller audio reaches speech-to-text. &lt;code>MEDIA_CONTROL_SETTING_OFF&lt;/code>:
+    /// listening is paused
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.MediaControlSetting BotListening {
+      get { return botListening_; }
+      set {
+        botListening_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "owner" field.</summary>
+    public const int OwnerFieldNumber = 3;
+    private global::Ondewo.Sip.MediaControlOwner owner_ = global::Ondewo.Sip.MediaControlOwner.Unspecified;
+    /// <summary>
+    /// Owner whose hold is set
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.MediaControlOwner Owner {
+      get { return owner_; }
+      set {
+        owner_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "participants_present" field.</summary>
+    public const int ParticipantsPresentFieldNumber = 4;
+    private bool participantsPresent_;
+    /// <summary>
+    /// &lt;p>Only for &lt;code>MEDIA_CONTROL_OWNER_PARTICIPANT&lt;/code>, ignored for every other owner: whether at least one
+    /// invited participant is ringing or joined. Every participant request carries the full value, so the request that
+    /// reports the last participant gone sends &lt;code>false&lt;/code>.&lt;/p>
+    /// &lt;p>While participants are present (this flag, or a mute or pause held by the participant owner)
+    /// &lt;code>SipTransferCall&lt;/code> is refused with &lt;code>exception_name=ParticipantsPresent&lt;/code>, because a REFER
+    /// into a conference bridge transfers every party in it. A request that would mark participants present while a
+    /// transfer of the call is in flight is refused with &lt;code>exception_name=TransferInProgress&lt;/code> and changes
+    /// nothing. Cleared when the call ends&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ParticipantsPresent {
+      get { return participantsPresent_; }
+      set {
+        participantsPresent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipSetCallMediaControlRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipSetCallMediaControlRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BotVoice != other.BotVoice) return false;
+      if (BotListening != other.BotListening) return false;
+      if (Owner != other.Owner) return false;
+      if (ParticipantsPresent != other.ParticipantsPresent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (BotVoice != global::Ondewo.Sip.MediaControlSetting.Unchanged) hash ^= BotVoice.GetHashCode();
+      if (BotListening != global::Ondewo.Sip.MediaControlSetting.Unchanged) hash ^= BotListening.GetHashCode();
+      if (Owner != global::Ondewo.Sip.MediaControlOwner.Unspecified) hash ^= Owner.GetHashCode();
+      if (ParticipantsPresent != false) hash ^= ParticipantsPresent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (BotVoice != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) BotListening);
+      }
+      if (Owner != global::Ondewo.Sip.MediaControlOwner.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Owner);
+      }
+      if (ParticipantsPresent != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ParticipantsPresent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BotVoice != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) BotListening);
+      }
+      if (Owner != global::Ondewo.Sip.MediaControlOwner.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Owner);
+      }
+      if (ParticipantsPresent != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ParticipantsPresent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (BotVoice != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotListening);
+      }
+      if (Owner != global::Ondewo.Sip.MediaControlOwner.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Owner);
+      }
+      if (ParticipantsPresent != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipSetCallMediaControlRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.BotVoice != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        BotVoice = other.BotVoice;
+      }
+      if (other.BotListening != global::Ondewo.Sip.MediaControlSetting.Unchanged) {
+        BotListening = other.BotListening;
+      }
+      if (other.Owner != global::Ondewo.Sip.MediaControlOwner.Unspecified) {
+        Owner = other.Owner;
+      }
+      if (other.ParticipantsPresent != false) {
+        ParticipantsPresent = other.ParticipantsPresent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            BotVoice = (global::Ondewo.Sip.MediaControlSetting) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            BotListening = (global::Ondewo.Sip.MediaControlSetting) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Owner = (global::Ondewo.Sip.MediaControlOwner) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ParticipantsPresent = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            BotVoice = (global::Ondewo.Sip.MediaControlSetting) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            BotListening = (global::Ondewo.Sip.MediaControlSetting) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Owner = (global::Ondewo.Sip.MediaControlOwner) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ParticipantsPresent = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Configuration of a &lt;code>SipStreamCallAudio&lt;/code> stream. Must be the first request of the stream&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioConfig : pb::IMessage<SipCallAudioConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioConfig> _parser = new pb::MessageParser<SipCallAudioConfig>(() => new SipCallAudioConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioConfig(SipCallAudioConfig other) : this() {
+      mode_ = other.mode_;
+      sampleRateHz_ = other.sampleRateHz_;
+      frameMs_ = other.frameMs_;
+      takeOver_ = other.takeOver_;
+      streamId_ = other.streamId_;
+      maxDurationS_ = other.maxDurationS_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioConfig Clone() {
+      return new SipCallAudioConfig(this);
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 1;
+    private global::Ondewo.Sip.SipCallAudioMode mode_ = global::Ondewo.Sip.SipCallAudioMode.Unspecified;
+    /// <summary>
+    /// Mode of the stream. Unspecified means LISTEN
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sample_rate_hz" field.</summary>
+    public const int SampleRateHzFieldNumber = 2;
+    private int sampleRateHz_;
+    /// <summary>
+    /// Sample rate in Hz of the audio in both directions: &lt;code>8000&lt;/code> or &lt;code>16000&lt;/code>. &lt;code>0&lt;/code> means
+    /// &lt;code>16000&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SampleRateHz {
+      get { return sampleRateHz_; }
+      set {
+        sampleRateHz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frame_ms" field.</summary>
+    public const int FrameMsFieldNumber = 3;
+    private int frameMs_;
+    /// <summary>
+    /// Frame length in milliseconds. Only &lt;code>20&lt;/code> is supported; &lt;code>0&lt;/code> means &lt;code>20&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FrameMs {
+      get { return frameMs_; }
+      set {
+        frameMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "take_over" field.</summary>
+    public const int TakeOverFieldNumber = 4;
+    private bool takeOver_;
+    /// <summary>
+    /// REQUIRED for TALK: the bot is muted and does not listen while the stream is connected. Released when the stream
+    /// ends
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TakeOver {
+      get { return takeOver_; }
+      set {
+        takeOver_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "stream_id" field.</summary>
+    public const int StreamIdFieldNumber = 5;
+    private string streamId_ = "";
+    /// <summary>
+    /// Identifier of the stream for logs and audit correlation, minted by the client (a UUID)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StreamId {
+      get { return streamId_; }
+      set {
+        streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "max_duration_s" field.</summary>
+    public const int MaxDurationSFieldNumber = 6;
+    private int maxDurationS_;
+    /// <summary>
+    /// Maximum duration of the stream in seconds. &lt;code>0&lt;/code> means the server default (3600)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxDurationS {
+      get { return maxDurationS_; }
+      set {
+        maxDurationS_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mode != other.Mode) return false;
+      if (SampleRateHz != other.SampleRateHz) return false;
+      if (FrameMs != other.FrameMs) return false;
+      if (TakeOver != other.TakeOver) return false;
+      if (StreamId != other.StreamId) return false;
+      if (MaxDurationS != other.MaxDurationS) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (SampleRateHz != 0) hash ^= SampleRateHz.GetHashCode();
+      if (FrameMs != 0) hash ^= FrameMs.GetHashCode();
+      if (TakeOver != false) hash ^= TakeOver.GetHashCode();
+      if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
+      if (MaxDurationS != 0) hash ^= MaxDurationS.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (TakeOver != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(TakeOver);
+      }
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StreamId);
+      }
+      if (MaxDurationS != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (TakeOver != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(TakeOver);
+      }
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(StreamId);
+      }
+      if (MaxDurationS != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FrameMs);
+      }
+      if (TakeOver != false) {
+        size += 1 + 1;
+      }
+      if (StreamId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
+      }
+      if (MaxDurationS != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.SampleRateHz != 0) {
+        SampleRateHz = other.SampleRateHz;
+      }
+      if (other.FrameMs != 0) {
+        FrameMs = other.FrameMs;
+      }
+      if (other.TakeOver != false) {
+        TakeOver = other.TakeOver;
+      }
+      if (other.StreamId.Length != 0) {
+        StreamId = other.StreamId;
+      }
+      if (other.MaxDurationS != 0) {
+        MaxDurationS = other.MaxDurationS;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Mode = (global::Ondewo.Sip.SipCallAudioMode) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TakeOver = input.ReadBool();
+            break;
+          }
+          case 42: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 48: {
+            MaxDurationS = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Mode = (global::Ondewo.Sip.SipCallAudioMode) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            TakeOver = input.ReadBool();
+            break;
+          }
+          case 42: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 48: {
+            MaxDurationS = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>One frame of call audio&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioFrame : pb::IMessage<SipCallAudioFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioFrame> _parser = new pb::MessageParser<SipCallAudioFrame>(() => new SipCallAudioFrame());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioFrame> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioFrame() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioFrame(SipCallAudioFrame other) : this() {
+      pcmS16Le_ = other.pcmS16Le_;
+      sequence_ = other.sequence_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioFrame Clone() {
+      return new SipCallAudioFrame(this);
+    }
+
+    /// <summary>Field number for the "pcm_s16le" field.</summary>
+    public const int PcmS16LeFieldNumber = 1;
+    private pb::ByteString pcmS16Le_ = pb::ByteString.Empty;
+    /// <summary>
+    /// LINEAR16 little-endian mono samples of one frame, i.e. &lt;code>sample_rate_hz * frame_ms / 1000 * 2&lt;/code> bytes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PcmS16Le {
+      get { return pcmS16Le_; }
+      set {
+        pcmS16Le_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sequence" field.</summary>
+    public const int SequenceFieldNumber = 2;
+    private ulong sequence_;
+    /// <summary>
+    /// Monotonic sequence number of the frame within its direction of the stream
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Sequence {
+      get { return sequence_; }
+      set {
+        sequence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioFrame);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioFrame other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PcmS16Le != other.PcmS16Le) return false;
+      if (Sequence != other.Sequence) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PcmS16Le.Length != 0) hash ^= PcmS16Le.GetHashCode();
+      if (Sequence != 0UL) hash ^= Sequence.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PcmS16Le.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Sequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PcmS16Le.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Sequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PcmS16Le.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Sequence);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioFrame other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PcmS16Le.Length != 0) {
+        PcmS16Le = other.PcmS16Le;
+      }
+      if (other.Sequence != 0UL) {
+        Sequence = other.Sequence;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PcmS16Le = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Sequence = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PcmS16Le = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Sequence = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request of &lt;code>SipStreamCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioRequest : pb::IMessage<SipCallAudioRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioRequest> _parser = new pb::MessageParser<SipCallAudioRequest>(() => new SipCallAudioRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioRequest(SipCallAudioRequest other) : this() {
+      switch (other.RequestCase) {
+        case RequestOneofCase.Config:
+          Config = other.Config.Clone();
+          break;
+        case RequestOneofCase.Audio:
+          Audio = other.Audio.Clone();
+          break;
+        case RequestOneofCase.AgentMuted:
+          AgentMuted = other.AgentMuted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioRequest Clone() {
+      return new SipCallAudioRequest(this);
+    }
+
+    /// <summary>Field number for the "config" field.</summary>
+    public const int ConfigFieldNumber = 1;
+    /// <summary>
+    /// Configuration; must be the first request and is accepted only once
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioConfig Config {
+      get { return requestCase_ == RequestOneofCase.Config ? (global::Ondewo.Sip.SipCallAudioConfig) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Config;
+      }
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 2;
+    /// <summary>
+    /// Agent audio to send to the caller (TALK only)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioFrame Audio {
+      get { return requestCase_ == RequestOneofCase.Audio ? (global::Ondewo.Sip.SipCallAudioFrame) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Audio;
+      }
+    }
+
+    /// <summary>Field number for the "agent_muted" field.</summary>
+    public const int AgentMutedFieldNumber = 3;
+    /// <summary>
+    /// &lt;code>true&lt;/code>: the agent's audio is not sent to the caller (silence instead) until set to &lt;code>false&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AgentMuted {
+      get { return HasAgentMuted ? (bool) request_ : false; }
+      set {
+        request_ = value;
+        requestCase_ = RequestOneofCase.AgentMuted;
+      }
+    }
+    /// <summary>Gets whether the "agent_muted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentMuted {
+      get { return requestCase_ == RequestOneofCase.AgentMuted; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_muted" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentMuted() {
+      if (HasAgentMuted) {
+        ClearRequest();
+      }
+    }
+
+    private object request_;
+    /// <summary>Enum of possible cases for the "request" oneof.</summary>
+    public enum RequestOneofCase {
+      None = 0,
+      Config = 1,
+      Audio = 2,
+      AgentMuted = 3,
+    }
+    private RequestOneofCase requestCase_ = RequestOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOneofCase RequestCase {
+      get { return requestCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequest() {
+      requestCase_ = RequestOneofCase.None;
+      request_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Config, other.Config)) return false;
+      if (!object.Equals(Audio, other.Audio)) return false;
+      if (AgentMuted != other.AgentMuted) return false;
+      if (RequestCase != other.RequestCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (requestCase_ == RequestOneofCase.Config) hash ^= Config.GetHashCode();
+      if (requestCase_ == RequestOneofCase.Audio) hash ^= Audio.GetHashCode();
+      if (HasAgentMuted) hash ^= AgentMuted.GetHashCode();
+      hash ^= (int) requestCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (requestCase_ == RequestOneofCase.Config) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (HasAgentMuted) {
+        output.WriteRawTag(24);
+        output.WriteBool(AgentMuted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (requestCase_ == RequestOneofCase.Config) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (HasAgentMuted) {
+        output.WriteRawTag(24);
+        output.WriteBool(AgentMuted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (requestCase_ == RequestOneofCase.Config) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (HasAgentMuted) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioRequest other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.RequestCase) {
+        case RequestOneofCase.Config:
+          if (Config == null) {
+            Config = new global::Ondewo.Sip.SipCallAudioConfig();
+          }
+          Config.MergeFrom(other.Config);
+          break;
+        case RequestOneofCase.Audio:
+          if (Audio == null) {
+            Audio = new global::Ondewo.Sip.SipCallAudioFrame();
+          }
+          Audio.MergeFrom(other.Audio);
+          break;
+        case RequestOneofCase.AgentMuted:
+          AgentMuted = other.AgentMuted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Ondewo.Sip.SipCallAudioConfig subBuilder = new global::Ondewo.Sip.SipCallAudioConfig();
+            if (requestCase_ == RequestOneofCase.Config) {
+              subBuilder.MergeFrom(Config);
+            }
+            input.ReadMessage(subBuilder);
+            Config = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Sip.SipCallAudioFrame subBuilder = new global::Ondewo.Sip.SipCallAudioFrame();
+            if (requestCase_ == RequestOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 24: {
+            AgentMuted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Ondewo.Sip.SipCallAudioConfig subBuilder = new global::Ondewo.Sip.SipCallAudioConfig();
+            if (requestCase_ == RequestOneofCase.Config) {
+              subBuilder.MergeFrom(Config);
+            }
+            input.ReadMessage(subBuilder);
+            Config = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Sip.SipCallAudioFrame subBuilder = new global::Ondewo.Sip.SipCallAudioFrame();
+            if (requestCase_ == RequestOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 24: {
+            AgentMuted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream is connected&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioStarted : pb::IMessage<SipCallAudioStarted>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioStarted> _parser = new pb::MessageParser<SipCallAudioStarted>(() => new SipCallAudioStarted());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioStarted> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStarted() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStarted(SipCallAudioStarted other) : this() {
+      streamId_ = other.streamId_;
+      sampleRateHz_ = other.sampleRateHz_;
+      frameMs_ = other.frameMs_;
+      mode_ = other.mode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStarted Clone() {
+      return new SipCallAudioStarted(this);
+    }
+
+    /// <summary>Field number for the "stream_id" field.</summary>
+    public const int StreamIdFieldNumber = 1;
+    private string streamId_ = "";
+    /// <summary>
+    /// Identifier of the stream
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StreamId {
+      get { return streamId_; }
+      set {
+        streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sample_rate_hz" field.</summary>
+    public const int SampleRateHzFieldNumber = 2;
+    private int sampleRateHz_;
+    /// <summary>
+    /// Sample rate in Hz of the audio in both directions
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SampleRateHz {
+      get { return sampleRateHz_; }
+      set {
+        sampleRateHz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frame_ms" field.</summary>
+    public const int FrameMsFieldNumber = 3;
+    private int frameMs_;
+    /// <summary>
+    /// Frame length in milliseconds
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FrameMs {
+      get { return frameMs_; }
+      set {
+        frameMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 4;
+    private global::Ondewo.Sip.SipCallAudioMode mode_ = global::Ondewo.Sip.SipCallAudioMode.Unspecified;
+    /// <summary>
+    /// Mode of the stream
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioStarted);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioStarted other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StreamId != other.StreamId) return false;
+      if (SampleRateHz != other.SampleRateHz) return false;
+      if (FrameMs != other.FrameMs) return false;
+      if (Mode != other.Mode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
+      if (SampleRateHz != 0) hash ^= SampleRateHz.GetHashCode();
+      if (FrameMs != 0) hash ^= FrameMs.GetHashCode();
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (StreamId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FrameMs);
+      }
+      if (Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioStarted other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StreamId.Length != 0) {
+        StreamId = other.StreamId;
+      }
+      if (other.SampleRateHz != 0) {
+        SampleRateHz = other.SampleRateHz;
+      }
+      if (other.FrameMs != 0) {
+        FrameMs = other.FrameMs;
+      }
+      if (other.Mode != global::Ondewo.Sip.SipCallAudioMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Sip.SipCallAudioMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Sip.SipCallAudioMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Counters of a &lt;code>SipStreamCallAudio&lt;/code> stream, sent periodically&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioStats : pb::IMessage<SipCallAudioStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioStats> _parser = new pb::MessageParser<SipCallAudioStats>(() => new SipCallAudioStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStats(SipCallAudioStats other) : this() {
+      framesSent_ = other.framesSent_;
+      framesDropped_ = other.framesDropped_;
+      framesReceived_ = other.framesReceived_;
+      underruns_ = other.underruns_;
+      framesDiscarded_ = other.framesDiscarded_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioStats Clone() {
+      return new SipCallAudioStats(this);
+    }
+
+    /// <summary>Field number for the "frames_sent" field.</summary>
+    public const int FramesSentFieldNumber = 1;
+    private ulong framesSent_;
+    /// <summary>
+    /// Frames sent to the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesSent {
+      get { return framesSent_; }
+      set {
+        framesSent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_dropped" field.</summary>
+    public const int FramesDroppedFieldNumber = 2;
+    private ulong framesDropped_;
+    /// <summary>
+    /// Frames to the client dropped because the client read too slowly
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesDropped {
+      get { return framesDropped_; }
+      set {
+        framesDropped_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_received" field.</summary>
+    public const int FramesReceivedFieldNumber = 3;
+    private ulong framesReceived_;
+    /// <summary>
+    /// Frames received from the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesReceived {
+      get { return framesReceived_; }
+      set {
+        framesReceived_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "underruns" field.</summary>
+    public const int UnderrunsFieldNumber = 4;
+    private ulong underruns_;
+    /// <summary>
+    /// Playback underruns of the agent audio (silence was played)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Underruns {
+      get { return underruns_; }
+      set {
+        underruns_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_discarded" field.</summary>
+    public const int FramesDiscardedFieldNumber = 5;
+    private ulong framesDiscarded_;
+    /// <summary>
+    /// Frames from the client discarded because the playback buffer was full
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesDiscarded {
+      get { return framesDiscarded_; }
+      set {
+        framesDiscarded_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FramesSent != other.FramesSent) return false;
+      if (FramesDropped != other.FramesDropped) return false;
+      if (FramesReceived != other.FramesReceived) return false;
+      if (Underruns != other.Underruns) return false;
+      if (FramesDiscarded != other.FramesDiscarded) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FramesSent != 0UL) hash ^= FramesSent.GetHashCode();
+      if (FramesDropped != 0UL) hash ^= FramesDropped.GetHashCode();
+      if (FramesReceived != 0UL) hash ^= FramesReceived.GetHashCode();
+      if (Underruns != 0UL) hash ^= Underruns.GetHashCode();
+      if (FramesDiscarded != 0UL) hash ^= FramesDiscarded.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FramesSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FramesSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FramesSent != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FramesSent != 0UL) {
+        FramesSent = other.FramesSent;
+      }
+      if (other.FramesDropped != 0UL) {
+        FramesDropped = other.FramesDropped;
+      }
+      if (other.FramesReceived != 0UL) {
+        FramesReceived = other.FramesReceived;
+      }
+      if (other.Underruns != 0UL) {
+        Underruns = other.Underruns;
+      }
+      if (other.FramesDiscarded != 0UL) {
+        FramesDiscarded = other.FramesDiscarded;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            FramesSent = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            FramesDropped = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            FramesReceived = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Underruns = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            FramesDiscarded = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FramesSent = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            FramesDropped = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            FramesReceived = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Underruns = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            FramesDiscarded = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream ends normally&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioEnded : pb::IMessage<SipCallAudioEnded>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioEnded> _parser = new pb::MessageParser<SipCallAudioEnded>(() => new SipCallAudioEnded());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioEnded> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioEnded() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioEnded(SipCallAudioEnded other) : this() {
+      reason_ = other.reason_;
+      detail_ = other.detail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioEnded Clone() {
+      return new SipCallAudioEnded(this);
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 1;
+    private global::Ondewo.Sip.SipCallAudioEndReason reason_ = global::Ondewo.Sip.SipCallAudioEndReason.Unspecified;
+    /// <summary>
+    /// Why the stream ended
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioEndReason Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "detail" field.</summary>
+    public const int DetailFieldNumber = 2;
+    private string detail_ = "";
+    /// <summary>
+    /// Optional detail, a stable token
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Detail {
+      get { return detail_; }
+      set {
+        detail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioEnded);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioEnded other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Reason != other.Reason) return false;
+      if (Detail != other.Detail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Reason != global::Ondewo.Sip.SipCallAudioEndReason.Unspecified) hash ^= Reason.GetHashCode();
+      if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Reason != global::Ondewo.Sip.SipCallAudioEndReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Reason != global::Ondewo.Sip.SipCallAudioEndReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Reason != global::Ondewo.Sip.SipCallAudioEndReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioEnded other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Reason != global::Ondewo.Sip.SipCallAudioEndReason.Unspecified) {
+        Reason = other.Reason;
+      }
+      if (other.Detail.Length != 0) {
+        Detail = other.Detail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Reason = (global::Ondewo.Sip.SipCallAudioEndReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Detail = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Reason = (global::Ondewo.Sip.SipCallAudioEndReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Detail = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Response of &lt;code>SipStreamCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipCallAudioResponse : pb::IMessage<SipCallAudioResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipCallAudioResponse> _parser = new pb::MessageParser<SipCallAudioResponse>(() => new SipCallAudioResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipCallAudioResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioResponse(SipCallAudioResponse other) : this() {
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Started:
+          Started = other.Started.Clone();
+          break;
+        case ResponseOneofCase.Audio:
+          Audio = other.Audio.Clone();
+          break;
+        case ResponseOneofCase.Stats:
+          Stats = other.Stats.Clone();
+          break;
+        case ResponseOneofCase.Ended:
+          Ended = other.Ended.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipCallAudioResponse Clone() {
+      return new SipCallAudioResponse(this);
+    }
+
+    /// <summary>Field number for the "started" field.</summary>
+    public const int StartedFieldNumber = 1;
+    /// <summary>
+    /// The stream is connected
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioStarted Started {
+      get { return responseCase_ == ResponseOneofCase.Started ? (global::Ondewo.Sip.SipCallAudioStarted) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Started;
+      }
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 2;
+    /// <summary>
+    /// Call audio
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioFrame Audio {
+      get { return responseCase_ == ResponseOneofCase.Audio ? (global::Ondewo.Sip.SipCallAudioFrame) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Audio;
+      }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 3;
+    /// <summary>
+    /// Stream counters
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioStats Stats {
+      get { return responseCase_ == ResponseOneofCase.Stats ? (global::Ondewo.Sip.SipCallAudioStats) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Stats;
+      }
+    }
+
+    /// <summary>Field number for the "ended" field.</summary>
+    public const int EndedFieldNumber = 4;
+    /// <summary>
+    /// The stream ended
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipCallAudioEnded Ended {
+      get { return responseCase_ == ResponseOneofCase.Ended ? (global::Ondewo.Sip.SipCallAudioEnded) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Ended;
+      }
+    }
+
+    private object response_;
+    /// <summary>Enum of possible cases for the "response" oneof.</summary>
+    public enum ResponseOneofCase {
+      None = 0,
+      Started = 1,
+      Audio = 2,
+      Stats = 3,
+      Ended = 4,
+    }
+    private ResponseOneofCase responseCase_ = ResponseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResponseOneofCase ResponseCase {
+      get { return responseCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResponse() {
+      responseCase_ = ResponseOneofCase.None;
+      response_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipCallAudioResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipCallAudioResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Started, other.Started)) return false;
+      if (!object.Equals(Audio, other.Audio)) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
+      if (!object.Equals(Ended, other.Ended)) return false;
+      if (ResponseCase != other.ResponseCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (responseCase_ == ResponseOneofCase.Started) hash ^= Started.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Audio) hash ^= Audio.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Stats) hash ^= Stats.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Ended) hash ^= Ended.GetHashCode();
+      hash ^= (int) responseCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (responseCase_ == ResponseOneofCase.Started) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ended);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (responseCase_ == ResponseOneofCase.Started) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ended);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (responseCase_ == ResponseOneofCase.Started) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ended);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipCallAudioResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Started:
+          if (Started == null) {
+            Started = new global::Ondewo.Sip.SipCallAudioStarted();
+          }
+          Started.MergeFrom(other.Started);
+          break;
+        case ResponseOneofCase.Audio:
+          if (Audio == null) {
+            Audio = new global::Ondewo.Sip.SipCallAudioFrame();
+          }
+          Audio.MergeFrom(other.Audio);
+          break;
+        case ResponseOneofCase.Stats:
+          if (Stats == null) {
+            Stats = new global::Ondewo.Sip.SipCallAudioStats();
+          }
+          Stats.MergeFrom(other.Stats);
+          break;
+        case ResponseOneofCase.Ended:
+          if (Ended == null) {
+            Ended = new global::Ondewo.Sip.SipCallAudioEnded();
+          }
+          Ended.MergeFrom(other.Ended);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Ondewo.Sip.SipCallAudioStarted subBuilder = new global::Ondewo.Sip.SipCallAudioStarted();
+            if (responseCase_ == ResponseOneofCase.Started) {
+              subBuilder.MergeFrom(Started);
+            }
+            input.ReadMessage(subBuilder);
+            Started = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Sip.SipCallAudioFrame subBuilder = new global::Ondewo.Sip.SipCallAudioFrame();
+            if (responseCase_ == ResponseOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Ondewo.Sip.SipCallAudioStats subBuilder = new global::Ondewo.Sip.SipCallAudioStats();
+            if (responseCase_ == ResponseOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
+            }
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Ondewo.Sip.SipCallAudioEnded subBuilder = new global::Ondewo.Sip.SipCallAudioEnded();
+            if (responseCase_ == ResponseOneofCase.Ended) {
+              subBuilder.MergeFrom(Ended);
+            }
+            input.ReadMessage(subBuilder);
+            Ended = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Ondewo.Sip.SipCallAudioStarted subBuilder = new global::Ondewo.Sip.SipCallAudioStarted();
+            if (responseCase_ == ResponseOneofCase.Started) {
+              subBuilder.MergeFrom(Started);
+            }
+            input.ReadMessage(subBuilder);
+            Started = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Sip.SipCallAudioFrame subBuilder = new global::Ondewo.Sip.SipCallAudioFrame();
+            if (responseCase_ == ResponseOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Ondewo.Sip.SipCallAudioStats subBuilder = new global::Ondewo.Sip.SipCallAudioStats();
+            if (responseCase_ == ResponseOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
+            }
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Ondewo.Sip.SipCallAudioEnded subBuilder = new global::Ondewo.Sip.SipCallAudioEnded();
+            if (responseCase_ == ResponseOneofCase.Ended) {
+              subBuilder.MergeFrom(Ended);
+            }
+            input.ReadMessage(subBuilder);
+            Ended = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// &lt;p>Plays a list of wav files&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2214,7 +6353,7 @@ namespace Ondewo.Sip {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Ondewo.Sip.SipReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

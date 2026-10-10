@@ -27,7 +27,7 @@ namespace Ondewo.Vtsi {
             "ChpvbmRld28vdnRzaS9wcm9qZWN0cy5wcm90bxILb25kZXdvLnZ0c2kaIGdv",
             "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJvdG9i",
             "dWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIvQDCgtWdHNpUHJvamVjdBIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlf",
+            "b3RvIp0ECgtWdHNpUHJvamVjdBIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlf",
             "bmFtZRgCIAEoCRITCgttYXhfY2FsbGVycxgDIAEoBRIVCg1tYXhfbGlzdGVu",
             "ZXJzGAQgASgFEjYKEGFzdGVyaXNrX2NvbmZpZ3MYBSABKAsyHC5vbmRld28u",
             "dnRzaS5Bc3Rlcmlza0NvbmZpZ3MSOwoTdnRzaV9wcm9qZWN0X3N0YXR1cxgG",
@@ -38,86 +38,97 @@ namespace Ondewo.Vtsi {
             "dGl2ZV9jYWxsZXJzGAsgASgFEhgKEGFjdGl2ZV9saXN0ZW5lcnMYDCABKAUS",
             "FQoNYXN0ZXJpc2tfcG9ydBgNIAEoBRIXCg9ubHVfYWdlbnRfbmFtZXMYDiAD",
             "KAkSGAoQZGVwbG95ZWRfY2FsbGVycxgPIAEoBRIaChJkZXBsb3llZF9saXN0",
-            "ZW5lcnMYECABKAUiwQEKGEFzdGVyaXNrQ29uZmlnc1ZhcmlhYmxlcxIaChJz",
-            "aXBfdHJ1bmtfdXNlcm5hbWUYASABKAkSGgoSc2lwX3RydW5rX3Bhc3N3b3Jk",
-            "GAIgASgJEhYKDnNpcF90cnVua19ob3N0GAMgASgJEhcKD3RyYW5zZmVyX251",
-            "bWJlchgEIAEoCRIcChR0cmFuc2Zlcl9udW1iZXJfaG9zdBgFIAEoCRIeChZz",
-            "aXBfdHJ1bmtfcGhvbmVfbnVtYmVyGAYgASgJIpwBChRBc3Rlcmlza0NvbmZp",
-            "Z3NGaWxlcxIcChRzaXBfY29uZl9maWxlX3N0cmluZxgBIAEoCRIjChtleHRl",
-            "bnNpb25zX2NvbmZfZmlsZV9zdHJpbmcYAiABKAkSHwoXcXVldWVzX2NvbmZf",
-            "ZmlsZV9zdHJpbmcYAyABKAkSIAoYbW9kdWxlc19jb25mX2ZpbGVfc3RyaW5n",
-            "GAQgASgJIroCCg9Bc3Rlcmlza0NvbmZpZ3MSSwoaYXN0ZXJpc2tfY29uZmln",
-            "c192YXJpYWJsZXMYASABKAsyJS5vbmRld28udnRzaS5Bc3Rlcmlza0NvbmZp",
-            "Z3NWYXJpYWJsZXNIABJDChZhc3Rlcmlza19jb25maWdzX2ZpbGVzGAIgASgL",
-            "MiEub25kZXdvLnZ0c2kuQXN0ZXJpc2tDb25maWdzRmlsZXNIABIwCiZhc3Rl",
-            "cmlza19jb25maWdzX3RhcmdldF9kaXJlY3RvcnlfbmFtZRgDIAEoCUgAEhUK",
-            "DWFzdGVyaXNrX3BvcnQYBCABKAUSHQoQYXN0ZXJpc2tfdmVyc2lvbhgFIAEo",
-            "CUgBiAEBQhgKFmFzdGVyaXNrX2NvbmZpZ3Nfb25lb2ZCEwoRX2FzdGVyaXNr",
-            "X3ZlcnNpb24iYQoYQ3JlYXRlVnRzaVByb2plY3RSZXF1ZXN0Ei4KDHZ0c2lf",
-            "cHJvamVjdBgBIAEoCzIYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0EhUKDWVy",
-            "cm9yX21lc3NhZ2UYAiABKAkiYgoZQ3JlYXRlVnRzaVByb2plY3RSZXNwb25z",
-            "ZRIuCgx2dHNpX3Byb2plY3QYASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJv",
-            "amVjdBIVCg1lcnJvcl9tZXNzYWdlGAIgASgJIl4KFUdldFZ0c2lQcm9qZWN0",
-            "UmVxdWVzdBIMCgRuYW1lGAEgASgJEjcKEXZ0c2lfcHJvamVjdF92aWV3GAIg",
-            "ASgOMhwub25kZXdvLnZ0c2kuVnRzaVByb2plY3RWaWV3IvABChdMaXN0VnRz",
-            "aVByb2plY3RzUmVxdWVzdBI3ChF2dHNpX3Byb2plY3RfdmlldxgBIAEoDjIc",
-            "Lm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0VmlldxIXCgpwYWdlX3Rva2VuGAIg",
-            "ASgJSACIAQESQgoUdnRzaV9wcm9qZWN0X3NvcnRpbmcYAyABKAsyHy5vbmRl",
-            "d28udnRzaS5WdHNpUHJvamVjdFNvcnRpbmdIAYgBARIXCg9ubHVfYWdlbnRf",
-            "bmFtZXMYBCADKAlCDQoLX3BhZ2VfdG9rZW5CFwoVX3Z0c2lfcHJvamVjdF9z",
-            "b3J0aW5nImQKGExpc3RWdHNpUHJvamVjdHNSZXNwb25zZRIvCg12dHNpX3By",
-            "b2plY3RzGAEgAygLMhgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QSFwoPbmV4",
-            "dF9wYWdlX3Rva2VuGAIgASgJIpsDChJWdHNpUHJvamVjdFNvcnRpbmcSUwoN",
-            "c29ydGluZ19maWVsZBgBIAEoDjI3Lm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
-            "U29ydGluZy5WdHNpUHJvamVjdFNvcnRpbmdGaWVsZEgAiAEBEj4KDHNvcnRp",
-            "bmdfbW9kZRgCIAEoDjIjLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGlu",
-            "Z01vZGVIAYgBASLMAQoXVnRzaVByb2plY3RTb3J0aW5nRmllbGQSGwoXTk9f",
-            "VlRTSV9QUk9KRUNUX1NPUlRJTkcQABIdChlTT1JUX1ZUU0lfUFJPSkVDVF9C",
-            "WV9OQU1FEAESJQohU09SVF9WVFNJX1BST0pFQ1RfQllfRElTUExBWV9OQU1F",
-            "EAISJgoiU09SVF9WVFNJX1BST0pFQ1RfQllfQ1JFQVRJT05fREFURRADEiYK",
-            "IlNPUlRfVlRTSV9QUk9KRUNUX0JZX0xBU1RfTU9ESUZJRUQQBEIQCg5fc29y",
-            "dGluZ19maWVsZEIPCg1fc29ydGluZ19tb2RlInsKGFVwZGF0ZVZ0c2lQcm9q",
-            "ZWN0UmVxdWVzdBIuCgx2dHNpX3Byb2plY3QYASABKAsyGC5vbmRld28udnRz",
-            "aS5WdHNpUHJvamVjdBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2siQAoZVXBkYXRlVnRzaVByb2plY3RSZXNwb25z",
-            "ZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKAoYRGVs",
-            "ZXRlVnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVsZXRl",
+            "ZW5lcnMYECABKAUSJwofdHJhbnNmZXJfcGhvbmVfbnVtYmVyX2FsbG93bGlz",
+            "dBgRIAMoCSLsAwoYQXN0ZXJpc2tDb25maWdzVmFyaWFibGVzEhoKEnNpcF90",
+            "cnVua191c2VybmFtZRgBIAEoCRIaChJzaXBfdHJ1bmtfcGFzc3dvcmQYAiAB",
+            "KAkSFgoOc2lwX3RydW5rX2hvc3QYAyABKAkSFwoPdHJhbnNmZXJfbnVtYmVy",
+            "GAQgASgJEhwKFHRyYW5zZmVyX251bWJlcl9ob3N0GAUgASgJEh4KFnNpcF90",
+            "cnVua19waG9uZV9udW1iZXIYBiABKAkSOwoTc2lwX3RydW5rX3RyYW5zcG9y",
+            "dBgHIAEoDjIeLm9uZGV3by52dHNpLlNpcFRydW5rVHJhbnNwb3J0EiIKFXNp",
+            "cF90cnVua19zb3VyY2VfY2lkchgIIAEoCUgAiAEBEioKHXNpcF90cnVua19j",
+            "YV9jZXJ0aWZpY2F0ZXNfcGVtGAkgASgJSAGIAQESJAoXc2lwX3RydW5rX3Zl",
+            "cmlmeV9zZXJ2ZXIYCiABKAhIAogBARIeChZzb2Z0cGhvbmVfcGVybWl0X2Np",
+            "ZHJzGAsgAygJQhgKFl9zaXBfdHJ1bmtfc291cmNlX2NpZHJCIAoeX3NpcF90",
+            "cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVtQhoKGF9zaXBfdHJ1bmtfdmVyaWZ5",
+            "X3NlcnZlciKeAQoUQXN0ZXJpc2tDb25maWdzRmlsZXMSHgoWcGpzaXBfY29u",
+            "Zl9maWxlX3N0cmluZxgBIAEoCRIjChtleHRlbnNpb25zX2NvbmZfZmlsZV9z",
+            "dHJpbmcYAiABKAkSHwoXcXVldWVzX2NvbmZfZmlsZV9zdHJpbmcYAyABKAkS",
+            "IAoYbW9kdWxlc19jb25mX2ZpbGVfc3RyaW5nGAQgASgJIroCCg9Bc3Rlcmlz",
+            "a0NvbmZpZ3MSSwoaYXN0ZXJpc2tfY29uZmlnc192YXJpYWJsZXMYASABKAsy",
+            "JS5vbmRld28udnRzaS5Bc3Rlcmlza0NvbmZpZ3NWYXJpYWJsZXNIABJDChZh",
+            "c3Rlcmlza19jb25maWdzX2ZpbGVzGAIgASgLMiEub25kZXdvLnZ0c2kuQXN0",
+            "ZXJpc2tDb25maWdzRmlsZXNIABIwCiZhc3Rlcmlza19jb25maWdzX3Rhcmdl",
+            "dF9kaXJlY3RvcnlfbmFtZRgDIAEoCUgAEhUKDWFzdGVyaXNrX3BvcnQYBCAB",
+            "KAUSHQoQYXN0ZXJpc2tfdmVyc2lvbhgFIAEoCUgBiAEBQhgKFmFzdGVyaXNr",
+            "X2NvbmZpZ3Nfb25lb2ZCEwoRX2FzdGVyaXNrX3ZlcnNpb24iYQoYQ3JlYXRl",
+            "VnRzaVByb2plY3RSZXF1ZXN0Ei4KDHZ0c2lfcHJvamVjdBgBIAEoCzIYLm9u",
+            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0EhUKDWVycm9yX21lc3NhZ2UYAiABKAki",
+            "YgoZQ3JlYXRlVnRzaVByb2plY3RSZXNwb25zZRIuCgx2dHNpX3Byb2plY3QY",
+            "ASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIVCg1lcnJvcl9tZXNz",
+            "YWdlGAIgASgJIl4KFUdldFZ0c2lQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEg",
+            "ASgJEjcKEXZ0c2lfcHJvamVjdF92aWV3GAIgASgOMhwub25kZXdvLnZ0c2ku",
+            "VnRzaVByb2plY3RWaWV3IvABChdMaXN0VnRzaVByb2plY3RzUmVxdWVzdBI3",
+            "ChF2dHNpX3Byb2plY3RfdmlldxgBIAEoDjIcLm9uZGV3by52dHNpLlZ0c2lQ",
+            "cm9qZWN0VmlldxIXCgpwYWdlX3Rva2VuGAIgASgJSACIAQESQgoUdnRzaV9w",
+            "cm9qZWN0X3NvcnRpbmcYAyABKAsyHy5vbmRld28udnRzaS5WdHNpUHJvamVj",
+            "dFNvcnRpbmdIAYgBARIXCg9ubHVfYWdlbnRfbmFtZXMYBCADKAlCDQoLX3Bh",
+            "Z2VfdG9rZW5CFwoVX3Z0c2lfcHJvamVjdF9zb3J0aW5nImQKGExpc3RWdHNp",
+            "UHJvamVjdHNSZXNwb25zZRIvCg12dHNpX3Byb2plY3RzGAEgAygLMhgub25k",
+            "ZXdvLnZ0c2kuVnRzaVByb2plY3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
+            "IpsDChJWdHNpUHJvamVjdFNvcnRpbmcSUwoNc29ydGluZ19maWVsZBgBIAEo",
+            "DjI3Lm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGluZy5WdHNpUHJvamVj",
+            "dFNvcnRpbmdGaWVsZEgAiAEBEj4KDHNvcnRpbmdfbW9kZRgCIAEoDjIjLm9u",
+            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGluZ01vZGVIAYgBASLMAQoXVnRz",
+            "aVByb2plY3RTb3J0aW5nRmllbGQSGwoXTk9fVlRTSV9QUk9KRUNUX1NPUlRJ",
+            "TkcQABIdChlTT1JUX1ZUU0lfUFJPSkVDVF9CWV9OQU1FEAESJQohU09SVF9W",
+            "VFNJX1BST0pFQ1RfQllfRElTUExBWV9OQU1FEAISJgoiU09SVF9WVFNJX1BS",
+            "T0pFQ1RfQllfQ1JFQVRJT05fREFURRADEiYKIlNPUlRfVlRTSV9QUk9KRUNU",
+            "X0JZX0xBU1RfTU9ESUZJRUQQBEIQCg5fc29ydGluZ19maWVsZEIPCg1fc29y",
+            "dGluZ19tb2RlInsKGFVwZGF0ZVZ0c2lQcm9qZWN0UmVxdWVzdBIuCgx2dHNp",
+            "X3Byb2plY3QYASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIvCgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
+            "QAoZVXBkYXRlVnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUK",
+            "DWVycm9yX21lc3NhZ2UYAiABKAkiKAoYRGVsZXRlVnRzaVByb2plY3RSZXF1",
+            "ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVsZXRlVnRzaVByb2plY3RSZXNwb25z",
+            "ZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKAoYRGVw",
+            "bG95VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVwbG95",
             "VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21l",
-            "c3NhZ2UYAiABKAkiKAoYRGVwbG95VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkiQAoZRGVwbG95VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1l",
-            "GAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKgoaVW5kZXBsb3lWdHNp",
-            "UHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJCChtVbmRlcGxveVZ0c2lQ",
-            "cm9qZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdl",
-            "GAIgASgJKosBChFWdHNpUHJvamVjdFN0YXR1cxIPCgtVTlNQRUNJRklFRBAA",
-            "Eg4KClVOREVQTE9ZRUQQARIMCghVUERBVElORxACEg0KCURFUExPWUlORxAD",
-            "EgwKCERFUExPWUVEEAQSDwoLVU5ERVBMT1lJTkcQBRIMCghERUxFVElORxAG",
-            "EgsKB0RFTEVURUQQByo3ChZWdHNpUHJvamVjdFNvcnRpbmdNb2RlEg0KCUFT",
-            "Q0VORElORxAAEg4KCkRFU0NFTkRJTkcQASqOAQoPVnRzaVByb2plY3RWaWV3",
-            "EiEKHVZUU0lfUFJPSkVDVF9WSUVXX1VOU1BFQ0lGSUVEEAASGgoWVlRTSV9Q",
-            "Uk9KRUNUX1ZJRVdfRlVMTBABEh0KGVZUU0lfUFJPSkVDVF9WSUVXX1NIQUxM",
-            "T1cQAhIdChlWVFNJX1BST0pFQ1RfVklFV19NSU5JTVVNEAMytQUKCFByb2pl",
-            "Y3RzEmIKEUNyZWF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuQ3JlYXRl",
-            "VnRzaVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuQ3JlYXRlVnRzaVBy",
-            "b2plY3RSZXNwb25zZRJOCg5HZXRWdHNpUHJvamVjdBIiLm9uZGV3by52dHNp",
-            "LkdldFZ0c2lQcm9qZWN0UmVxdWVzdBoYLm9uZGV3by52dHNpLlZ0c2lQcm9q",
-            "ZWN0EmIKEVVwZGF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuVXBkYXRl",
-            "VnRzaVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuVXBkYXRlVnRzaVBy",
-            "b2plY3RSZXNwb25zZRJiChFEZWxldGVWdHNpUHJvamVjdBIlLm9uZGV3by52",
-            "dHNpLkRlbGV0ZVZ0c2lQcm9qZWN0UmVxdWVzdBomLm9uZGV3by52dHNpLkRl",
-            "bGV0ZVZ0c2lQcm9qZWN0UmVzcG9uc2USYgoRRGVwbG95VnRzaVByb2plY3QS",
-            "JS5vbmRld28udnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlcXVlc3QaJi5vbmRl",
-            "d28udnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEmgKE1VuZGVwbG95",
-            "VnRzaVByb2plY3QSJy5vbmRld28udnRzaS5VbmRlcGxveVZ0c2lQcm9qZWN0",
-            "UmVxdWVzdBooLm9uZGV3by52dHNpLlVuZGVwbG95VnRzaVByb2plY3RSZXNw",
-            "b25zZRJfChBMaXN0VnRzaVByb2plY3RzEiQub25kZXdvLnZ0c2kuTGlzdFZ0",
-            "c2lQcm9qZWN0c1JlcXVlc3QaJS5vbmRld28udnRzaS5MaXN0VnRzaVByb2pl",
-            "Y3RzUmVzcG9uc2ViBnByb3RvMw=="));
+            "c3NhZ2UYAiABKAkiKgoaVW5kZXBsb3lWdHNpUHJvamVjdFJlcXVlc3QSDAoE",
+            "bmFtZRgBIAEoCSJCChtVbmRlcGxveVZ0c2lQcm9qZWN0UmVzcG9uc2USDAoE",
+            "bmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAIgASgJKosBChFWdHNpUHJv",
+            "amVjdFN0YXR1cxIPCgtVTlNQRUNJRklFRBAAEg4KClVOREVQTE9ZRUQQARIM",
+            "CghVUERBVElORxACEg0KCURFUExPWUlORxADEgwKCERFUExPWUVEEAQSDwoL",
+            "VU5ERVBMT1lJTkcQBRIMCghERUxFVElORxAGEgsKB0RFTEVURUQQByqPAQoR",
+            "U2lwVHJ1bmtUcmFuc3BvcnQSIwofU0lQX1RSVU5LX1RSQU5TUE9SVF9VTlNQ",
+            "RUNJRklFRBAAEhsKF1NJUF9UUlVOS19UUkFOU1BPUlRfVExTEAESGwoXU0lQ",
+            "X1RSVU5LX1RSQU5TUE9SVF9VRFAQAhIbChdTSVBfVFJVTktfVFJBTlNQT1JU",
+            "X1RDUBADKjcKFlZ0c2lQcm9qZWN0U29ydGluZ01vZGUSDQoJQVNDRU5ESU5H",
+            "EAASDgoKREVTQ0VORElORxABKo4BCg9WdHNpUHJvamVjdFZpZXcSIQodVlRT",
+            "SV9QUk9KRUNUX1ZJRVdfVU5TUEVDSUZJRUQQABIaChZWVFNJX1BST0pFQ1Rf",
+            "VklFV19GVUxMEAESHQoZVlRTSV9QUk9KRUNUX1ZJRVdfU0hBTExPVxACEh0K",
+            "GVZUU0lfUFJPSkVDVF9WSUVXX01JTklNVU0QAzK1BQoIUHJvamVjdHMSYgoR",
+            "Q3JlYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRzaS5DcmVhdGVWdHNpUHJv",
+            "amVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5DcmVhdGVWdHNpUHJvamVjdFJl",
+            "c3BvbnNlEk4KDkdldFZ0c2lQcm9qZWN0EiIub25kZXdvLnZ0c2kuR2V0VnRz",
+            "aVByb2plY3RSZXF1ZXN0Ghgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QSYgoR",
+            "VXBkYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRzaS5VcGRhdGVWdHNpUHJv",
+            "amVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5VcGRhdGVWdHNpUHJvamVjdFJl",
+            "c3BvbnNlEmIKEURlbGV0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuRGVs",
+            "ZXRlVnRzaVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuRGVsZXRlVnRz",
+            "aVByb2plY3RSZXNwb25zZRJiChFEZXBsb3lWdHNpUHJvamVjdBIlLm9uZGV3",
+            "by52dHNpLkRlcGxveVZ0c2lQcm9qZWN0UmVxdWVzdBomLm9uZGV3by52dHNp",
+            "LkRlcGxveVZ0c2lQcm9qZWN0UmVzcG9uc2USaAoTVW5kZXBsb3lWdHNpUHJv",
+            "amVjdBInLm9uZGV3by52dHNpLlVuZGVwbG95VnRzaVByb2plY3RSZXF1ZXN0",
+            "Gigub25kZXdvLnZ0c2kuVW5kZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEl8K",
+            "EExpc3RWdHNpUHJvamVjdHMSJC5vbmRld28udnRzaS5MaXN0VnRzaVByb2pl",
+            "Y3RzUmVxdWVzdBolLm9uZGV3by52dHNpLkxpc3RWdHNpUHJvamVjdHNSZXNw",
+            "b25zZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsVariables), global::Ondewo.Vtsi.AsteriskConfigsVariables.Parser, new[]{ "SipTrunkUsername", "SipTrunkPassword", "SipTrunkHost", "TransferNumber", "TransferNumberHost", "SipTrunkPhoneNumber" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsFiles), global::Ondewo.Vtsi.AsteriskConfigsFiles.Parser, new[]{ "SipConfFileString", "ExtensionsConfFileString", "QueuesConfFileString", "ModulesConfFileString" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.SipTrunkTransport), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners", "TransferPhoneNumberAllowlist" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsVariables), global::Ondewo.Vtsi.AsteriskConfigsVariables.Parser, new[]{ "SipTrunkUsername", "SipTrunkPassword", "SipTrunkHost", "TransferNumber", "TransferNumberHost", "SipTrunkPhoneNumber", "SipTrunkTransport", "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer", "SoftphonePermitCidrs" }, new[]{ "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsFiles), global::Ondewo.Vtsi.AsteriskConfigsFiles.Parser, new[]{ "PjsipConfFileString", "ExtensionsConfFileString", "QueuesConfFileString", "ModulesConfFileString" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigs), global::Ondewo.Vtsi.AsteriskConfigs.Parser, new[]{ "AsteriskConfigsVariables", "AsteriskConfigsFiles", "AsteriskConfigsTargetDirectoryName", "AsteriskPort", "AsteriskVersion" }, new[]{ "AsteriskConfigsOneof", "AsteriskVersion" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiProjectRequest), global::Ondewo.Vtsi.CreateVtsiProjectRequest.Parser, new[]{ "VtsiProject", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiProjectResponse), global::Ondewo.Vtsi.CreateVtsiProjectResponse.Parser, new[]{ "VtsiProject", "ErrorMessage" }, null, null, null, null),
@@ -175,6 +186,29 @@ namespace Ondewo.Vtsi {
     /// Project is deleted
     /// </summary>
     [pbr::OriginalName("DELETED")] Deleted = 7,
+  }
+
+  /// <summary>
+  /// Transport for the SIP trunk of an Asterisk server.
+  /// </summary>
+  public enum SipTrunkTransport {
+    /// <summary>
+    /// Unspecified transport: identical to &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_TLS&lt;/code>&lt;/pre>. Encryption is
+    /// the default, so the zero value is the secure one.
+    /// </summary>
+    [pbr::OriginalName("SIP_TRUNK_TRANSPORT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// TLS transport with SRTP media. The trunk is authenticated by certificate and needs no source CIDR.
+    /// </summary>
+    [pbr::OriginalName("SIP_TRUNK_TRANSPORT_TLS")] Tls = 1,
+    /// <summary>
+    /// Plain UDP transport. Requires &lt;pre>&lt;code>sip_trunk_source_cidr&lt;/code>&lt;/pre>.
+    /// </summary>
+    [pbr::OriginalName("SIP_TRUNK_TRANSPORT_UDP")] Udp = 2,
+    /// <summary>
+    /// Plain TCP transport. Requires &lt;pre>&lt;code>sip_trunk_source_cidr&lt;/code>&lt;/pre>.
+    /// </summary>
+    [pbr::OriginalName("SIP_TRUNK_TRANSPORT_TCP")] Tcp = 3,
   }
 
   /// <summary>
@@ -280,6 +314,7 @@ namespace Ondewo.Vtsi {
       nluAgentNames_ = other.nluAgentNames_.Clone();
       deployedCallers_ = other.deployedCallers_;
       deployedListeners_ = other.deployedListeners_;
+      transferPhoneNumberAllowlist_ = other.transferPhoneNumberAllowlist_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -531,6 +566,26 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "transfer_phone_number_allowlist" field.</summary>
+    public const int TransferPhoneNumberAllowlistFieldNumber = 17;
+    private static readonly pb::FieldCodec<string> _repeated_transferPhoneNumberAllowlist_codec
+        = pb::FieldCodec.ForString(138);
+    private readonly pbc::RepeatedField<string> transferPhoneNumberAllowlist_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// OPTIONAL: Restricts the phone numbers a call of this project may be transferred to with
+    /// &lt;pre>&lt;code>TransferCall&lt;/code>&lt;/pre> and a &lt;pre>&lt;code>CallTarget.phone_number&lt;/code>&lt;/pre>. Each entry is an E.164
+    /// number or number prefix (&lt;pre>&lt;code>^\+[1-9][0-9]{0,14}$&lt;/code>&lt;/pre>), e.g. &lt;pre>&lt;code>+43&lt;/code>&lt;/pre> or
+    /// &lt;pre>&lt;code>+4312345678&lt;/code>&lt;/pre>; a number is allowed when it starts with any entry. Empty: any valid E.164
+    /// number is allowed. A refused number answers &lt;pre>&lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code>&lt;/pre> with
+    /// &lt;pre>&lt;code>error_reason = number-not-allowed&lt;/code>&lt;/pre> and nothing is sent.
+    /// Updatable with the update mask path &lt;pre>&lt;code>transfer_phone_number_allowlist&lt;/code>&lt;/pre>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TransferPhoneNumberAllowlist {
+      get { return transferPhoneNumberAllowlist_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -562,6 +617,7 @@ namespace Ondewo.Vtsi {
       if(!nluAgentNames_.Equals(other.nluAgentNames_)) return false;
       if (DeployedCallers != other.DeployedCallers) return false;
       if (DeployedListeners != other.DeployedListeners) return false;
+      if(!transferPhoneNumberAllowlist_.Equals(other.transferPhoneNumberAllowlist_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -585,6 +641,7 @@ namespace Ondewo.Vtsi {
       hash ^= nluAgentNames_.GetHashCode();
       if (DeployedCallers != 0) hash ^= DeployedCallers.GetHashCode();
       if (DeployedListeners != 0) hash ^= DeployedListeners.GetHashCode();
+      hash ^= transferPhoneNumberAllowlist_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -664,6 +721,7 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(128, 1);
         output.WriteInt32(DeployedListeners);
       }
+      transferPhoneNumberAllowlist_.WriteTo(output, _repeated_transferPhoneNumberAllowlist_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -735,6 +793,7 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(128, 1);
         output.WriteInt32(DeployedListeners);
       }
+      transferPhoneNumberAllowlist_.WriteTo(ref output, _repeated_transferPhoneNumberAllowlist_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -791,6 +850,7 @@ namespace Ondewo.Vtsi {
       if (DeployedListeners != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(DeployedListeners);
       }
+      size += transferPhoneNumberAllowlist_.CalculateSize(_repeated_transferPhoneNumberAllowlist_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -858,6 +918,7 @@ namespace Ondewo.Vtsi {
       if (other.DeployedListeners != 0) {
         DeployedListeners = other.DeployedListeners;
       }
+      transferPhoneNumberAllowlist_.Add(other.transferPhoneNumberAllowlist_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -948,6 +1009,10 @@ namespace Ondewo.Vtsi {
           }
           case 128: {
             DeployedListeners = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            transferPhoneNumberAllowlist_.AddEntriesFrom(input, _repeated_transferPhoneNumberAllowlist_codec);
             break;
           }
         }
@@ -1042,6 +1107,10 @@ namespace Ondewo.Vtsi {
             DeployedListeners = input.ReadInt32();
             break;
           }
+          case 138: {
+            transferPhoneNumberAllowlist_.AddEntriesFrom(ref input, _repeated_transferPhoneNumberAllowlist_codec);
+            break;
+          }
         }
       }
     }
@@ -1060,6 +1129,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<AsteriskConfigsVariables> _parser = new pb::MessageParser<AsteriskConfigsVariables>(() => new AsteriskConfigsVariables());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AsteriskConfigsVariables> Parser { get { return _parser; } }
@@ -1087,12 +1157,18 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AsteriskConfigsVariables(AsteriskConfigsVariables other) : this() {
+      _hasBits0 = other._hasBits0;
       sipTrunkUsername_ = other.sipTrunkUsername_;
       sipTrunkPassword_ = other.sipTrunkPassword_;
       sipTrunkHost_ = other.sipTrunkHost_;
       transferNumber_ = other.transferNumber_;
       transferNumberHost_ = other.transferNumberHost_;
       sipTrunkPhoneNumber_ = other.sipTrunkPhoneNumber_;
+      sipTrunkTransport_ = other.sipTrunkTransport_;
+      sipTrunkSourceCidr_ = other.sipTrunkSourceCidr_;
+      sipTrunkCaCertificatesPem_ = other.sipTrunkCaCertificatesPem_;
+      sipTrunkVerifyServer_ = other.sipTrunkVerifyServer_;
+      softphonePermitCidrs_ = other.softphonePermitCidrs_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1192,6 +1268,165 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "sip_trunk_transport" field.</summary>
+    public const int SipTrunkTransportFieldNumber = 7;
+    private global::Ondewo.Vtsi.SipTrunkTransport sipTrunkTransport_ = global::Ondewo.Vtsi.SipTrunkTransport.Unspecified;
+    /// <summary>
+    /// OPTIONAL: transport for the SIP trunk. Unset == &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_UNSPECIFIED&lt;/code>&lt;/pre>
+    /// == &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_TLS&lt;/code>&lt;/pre>: encryption is the default, so a caller that says
+    /// nothing gets an encrypted trunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.SipTrunkTransport SipTrunkTransport {
+      get { return sipTrunkTransport_; }
+      set {
+        sipTrunkTransport_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_trunk_source_cidr" field.</summary>
+    public const int SipTrunkSourceCidrFieldNumber = 8;
+    private readonly static string SipTrunkSourceCidrDefaultValue = "";
+
+    private string sipTrunkSourceCidr_;
+    /// <summary>
+    /// OPTIONAL: the source address or CIDR the carrier sends from, e.g. &lt;pre>&lt;code>203.0.113.7/32&lt;/code>&lt;/pre>.
+    /// REQUIRED when &lt;pre>&lt;code>sip_trunk_transport&lt;/code>&lt;/pre> is
+    /// &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_UDP&lt;/code>&lt;/pre> or &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_TCP&lt;/code>&lt;/pre>,
+    /// where the trunk is matched by source address rather than authenticated by a TLS certificate; ignored
+    /// otherwise. A hostname is REFUSED with &lt;pre>&lt;code>INVALID_ARGUMENT&lt;/code>&lt;/pre>: Asterisk drops a
+    /// &lt;pre>&lt;code>type=identify&lt;/code>&lt;/pre> section whose &lt;pre>&lt;code>match=&lt;/code>&lt;/pre> does not resolve,
+    /// and it does so silently, so an unresolvable name would read as a working trunk that never matches an
+    /// inbound call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SipTrunkSourceCidr {
+      get { return sipTrunkSourceCidr_ ?? SipTrunkSourceCidrDefaultValue; }
+      set {
+        sipTrunkSourceCidr_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "sip_trunk_source_cidr" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSipTrunkSourceCidr {
+      get { return sipTrunkSourceCidr_ != null; }
+    }
+    /// <summary>Clears the value of the "sip_trunk_source_cidr" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSipTrunkSourceCidr() {
+      sipTrunkSourceCidr_ = null;
+    }
+
+    /// <summary>Field number for the "sip_trunk_ca_certificates_pem" field.</summary>
+    public const int SipTrunkCaCertificatesPemFieldNumber = 9;
+    private readonly static string SipTrunkCaCertificatesPemDefaultValue = "";
+
+    private string sipTrunkCaCertificatesPem_;
+    /// <summary>
+    /// OPTIONAL: the PEM bundle of the CA certificate(s) the carrier's TLS certificate chains to, i.e. one
+    /// or more &lt;pre>&lt;code>-----BEGIN CERTIFICATE-----&lt;/code>&lt;/pre> blocks and nothing else.
+    /// Storing a bundle does NOT by itself turn verification on: Asterisk verifies the carrier's
+    /// certificate chain and host name only when &lt;pre>&lt;code>sip_trunk_verify_server&lt;/code>&lt;/pre> is also
+    /// true. With verification off the bundle is validated and stored, so it can be staged before
+    /// verification is switched on, and the trunk behaves exactly as without it.
+    /// Applies only to the TLS trunk transport: setting it while &lt;pre>&lt;code>sip_trunk_transport&lt;/code>&lt;/pre>
+    /// is &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_UDP&lt;/code>&lt;/pre> or &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_TCP&lt;/code>&lt;/pre>
+    /// is REFUSED with &lt;pre>&lt;code>INVALID_ARGUMENT&lt;/code>&lt;/pre>, as is a bundle that is not PEM, contains a
+    /// private key or any block other than a certificate, contains a certificate that is not a CA
+    /// (basicConstraints CA=true) or has expired, or exceeds the server's count and size limits.
+    /// This is PUBLIC data, not a secret: it is returned by Get and List like every other field here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SipTrunkCaCertificatesPem {
+      get { return sipTrunkCaCertificatesPem_ ?? SipTrunkCaCertificatesPemDefaultValue; }
+      set {
+        sipTrunkCaCertificatesPem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "sip_trunk_ca_certificates_pem" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSipTrunkCaCertificatesPem {
+      get { return sipTrunkCaCertificatesPem_ != null; }
+    }
+    /// <summary>Clears the value of the "sip_trunk_ca_certificates_pem" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSipTrunkCaCertificatesPem() {
+      sipTrunkCaCertificatesPem_ = null;
+    }
+
+    /// <summary>Field number for the "sip_trunk_verify_server" field.</summary>
+    public const int SipTrunkVerifyServerFieldNumber = 10;
+    private readonly static bool SipTrunkVerifyServerDefaultValue = false;
+
+    private bool sipTrunkVerifyServer_;
+    /// <summary>
+    /// OPTIONAL: verify the carrier's TLS certificate. Default false (unset == false).
+    /// When true, Asterisk verifies the carrier's certificate chain against
+    /// &lt;pre>&lt;code>sip_trunk_ca_certificates_pem&lt;/code>&lt;/pre> and its host name against
+    /// &lt;pre>&lt;code>sip_trunk_host&lt;/code>&lt;/pre> (&lt;pre>&lt;code>verify_server=yes&lt;/code>&lt;/pre>), and refuses a
+    /// carrier that fails either check. true WITHOUT a CA bundle is REFUSED with
+    /// &lt;pre>&lt;code>INVALID_ARGUMENT&lt;/code>&lt;/pre>, because the verification it asks for cannot happen.
+    /// false or unset: the carrier's certificate is NOT verified, whether or not a bundle is stored.
+    /// Applies only to the TLS trunk transport: true on a &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_UDP&lt;/code>&lt;/pre> or
+    /// &lt;pre>&lt;code>SIP_TRUNK_TRANSPORT_TCP&lt;/code>&lt;/pre> trunk is REFUSED with
+    /// &lt;pre>&lt;code>INVALID_ARGUMENT&lt;/code>&lt;/pre>; false there is accepted and changes nothing.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SipTrunkVerifyServer {
+      get { if ((_hasBits0 & 1) != 0) { return sipTrunkVerifyServer_; } else { return SipTrunkVerifyServerDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        sipTrunkVerifyServer_ = value;
+      }
+    }
+    /// <summary>Gets whether the "sip_trunk_verify_server" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSipTrunkVerifyServer {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "sip_trunk_verify_server" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSipTrunkVerifyServer() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "softphone_permit_cidrs" field.</summary>
+    public const int SoftphonePermitCidrsFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_softphonePermitCidrs_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> softphonePermitCidrs_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional: Source addresses that may reach this project&amp;apos;s SOFTPHONE accounts, as IPv4/IPv6 CIDR networks
+    /// written in full with an explicit prefix length (e.g. &lt;code>203.0.113.0/24&lt;/code>). Every softphone account gets
+    /// &lt;code>deny&lt;/code> for every IPv4 and IPv6 source plus one &lt;code>permit&lt;/code> per entry. This is the source
+    /// allow-list of the project&amp;apos;s EXTERNAL TLS port for softphones; it applies to every softphone account on
+    /// BOTH TLS ports, because an account&amp;apos;s ACL cannot tell ports apart and its transport restricts nothing
+    /// inbound. Empty: the server&amp;apos;s &lt;code>ONDEWO_VTSI_ASTERISK_SOFTPHONE_PERMIT_CIDRS&lt;/code>, by default the
+    /// private networks (&lt;code>10.0.0.0/8&lt;/code>, &lt;code>172.16.0.0/12&lt;/code>, &lt;code>192.168.0.0/16&lt;/code>,
+    /// &lt;code>fc00::/7&lt;/code>). That server value is a CEILING: every entry here must lie inside it, so a project can
+    /// only narrow the list; only the operator can open the port to every source. Entries outside the ceiling, a
+    /// default route (&lt;code>0.0.0.0/0&lt;/code>), entries that together cover a whole address family and shorthand
+    /// spellings are refused with &lt;code>INVALID_ARGUMENT&lt;/code>. The list is only effective when the port sees the real
+    /// client addresses (no SNAT or proxy in front of it). The carrier trunk is not affected (it is matched by
+    /// &lt;code>sip_trunk_source_cidr&lt;/code> or authenticated by its registration); VTSI&amp;apos;s own call containers are
+    /// scoped separately by the server. Updatable with the rest of &lt;code>asterisk_configs&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> SoftphonePermitCidrs {
+      get { return softphonePermitCidrs_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1213,6 +1448,11 @@ namespace Ondewo.Vtsi {
       if (TransferNumber != other.TransferNumber) return false;
       if (TransferNumberHost != other.TransferNumberHost) return false;
       if (SipTrunkPhoneNumber != other.SipTrunkPhoneNumber) return false;
+      if (SipTrunkTransport != other.SipTrunkTransport) return false;
+      if (SipTrunkSourceCidr != other.SipTrunkSourceCidr) return false;
+      if (SipTrunkCaCertificatesPem != other.SipTrunkCaCertificatesPem) return false;
+      if (SipTrunkVerifyServer != other.SipTrunkVerifyServer) return false;
+      if(!softphonePermitCidrs_.Equals(other.softphonePermitCidrs_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1226,6 +1466,11 @@ namespace Ondewo.Vtsi {
       if (TransferNumber.Length != 0) hash ^= TransferNumber.GetHashCode();
       if (TransferNumberHost.Length != 0) hash ^= TransferNumberHost.GetHashCode();
       if (SipTrunkPhoneNumber.Length != 0) hash ^= SipTrunkPhoneNumber.GetHashCode();
+      if (SipTrunkTransport != global::Ondewo.Vtsi.SipTrunkTransport.Unspecified) hash ^= SipTrunkTransport.GetHashCode();
+      if (HasSipTrunkSourceCidr) hash ^= SipTrunkSourceCidr.GetHashCode();
+      if (HasSipTrunkCaCertificatesPem) hash ^= SipTrunkCaCertificatesPem.GetHashCode();
+      if (HasSipTrunkVerifyServer) hash ^= SipTrunkVerifyServer.GetHashCode();
+      hash ^= softphonePermitCidrs_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1268,6 +1513,23 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteString(SipTrunkPhoneNumber);
       }
+      if (SipTrunkTransport != global::Ondewo.Vtsi.SipTrunkTransport.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SipTrunkTransport);
+      }
+      if (HasSipTrunkSourceCidr) {
+        output.WriteRawTag(66);
+        output.WriteString(SipTrunkSourceCidr);
+      }
+      if (HasSipTrunkCaCertificatesPem) {
+        output.WriteRawTag(74);
+        output.WriteString(SipTrunkCaCertificatesPem);
+      }
+      if (HasSipTrunkVerifyServer) {
+        output.WriteRawTag(80);
+        output.WriteBool(SipTrunkVerifyServer);
+      }
+      softphonePermitCidrs_.WriteTo(output, _repeated_softphonePermitCidrs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1302,6 +1564,23 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteString(SipTrunkPhoneNumber);
       }
+      if (SipTrunkTransport != global::Ondewo.Vtsi.SipTrunkTransport.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) SipTrunkTransport);
+      }
+      if (HasSipTrunkSourceCidr) {
+        output.WriteRawTag(66);
+        output.WriteString(SipTrunkSourceCidr);
+      }
+      if (HasSipTrunkCaCertificatesPem) {
+        output.WriteRawTag(74);
+        output.WriteString(SipTrunkCaCertificatesPem);
+      }
+      if (HasSipTrunkVerifyServer) {
+        output.WriteRawTag(80);
+        output.WriteBool(SipTrunkVerifyServer);
+      }
+      softphonePermitCidrs_.WriteTo(ref output, _repeated_softphonePermitCidrs_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1330,6 +1609,19 @@ namespace Ondewo.Vtsi {
       if (SipTrunkPhoneNumber.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(SipTrunkPhoneNumber);
       }
+      if (SipTrunkTransport != global::Ondewo.Vtsi.SipTrunkTransport.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SipTrunkTransport);
+      }
+      if (HasSipTrunkSourceCidr) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SipTrunkSourceCidr);
+      }
+      if (HasSipTrunkCaCertificatesPem) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SipTrunkCaCertificatesPem);
+      }
+      if (HasSipTrunkVerifyServer) {
+        size += 1 + 1;
+      }
+      size += softphonePermitCidrs_.CalculateSize(_repeated_softphonePermitCidrs_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1360,6 +1652,19 @@ namespace Ondewo.Vtsi {
       if (other.SipTrunkPhoneNumber.Length != 0) {
         SipTrunkPhoneNumber = other.SipTrunkPhoneNumber;
       }
+      if (other.SipTrunkTransport != global::Ondewo.Vtsi.SipTrunkTransport.Unspecified) {
+        SipTrunkTransport = other.SipTrunkTransport;
+      }
+      if (other.HasSipTrunkSourceCidr) {
+        SipTrunkSourceCidr = other.SipTrunkSourceCidr;
+      }
+      if (other.HasSipTrunkCaCertificatesPem) {
+        SipTrunkCaCertificatesPem = other.SipTrunkCaCertificatesPem;
+      }
+      if (other.HasSipTrunkVerifyServer) {
+        SipTrunkVerifyServer = other.SipTrunkVerifyServer;
+      }
+      softphonePermitCidrs_.Add(other.softphonePermitCidrs_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1403,6 +1708,26 @@ namespace Ondewo.Vtsi {
             SipTrunkPhoneNumber = input.ReadString();
             break;
           }
+          case 56: {
+            SipTrunkTransport = (global::Ondewo.Vtsi.SipTrunkTransport) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            SipTrunkSourceCidr = input.ReadString();
+            break;
+          }
+          case 74: {
+            SipTrunkCaCertificatesPem = input.ReadString();
+            break;
+          }
+          case 80: {
+            SipTrunkVerifyServer = input.ReadBool();
+            break;
+          }
+          case 90: {
+            softphonePermitCidrs_.AddEntriesFrom(input, _repeated_softphonePermitCidrs_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1444,6 +1769,26 @@ namespace Ondewo.Vtsi {
           }
           case 50: {
             SipTrunkPhoneNumber = input.ReadString();
+            break;
+          }
+          case 56: {
+            SipTrunkTransport = (global::Ondewo.Vtsi.SipTrunkTransport) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            SipTrunkSourceCidr = input.ReadString();
+            break;
+          }
+          case 74: {
+            SipTrunkCaCertificatesPem = input.ReadString();
+            break;
+          }
+          case 80: {
+            SipTrunkVerifyServer = input.ReadBool();
+            break;
+          }
+          case 90: {
+            softphonePermitCidrs_.AddEntriesFrom(ref input, _repeated_softphonePermitCidrs_codec);
             break;
           }
         }
@@ -1491,7 +1836,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AsteriskConfigsFiles(AsteriskConfigsFiles other) : this() {
-      sipConfFileString_ = other.sipConfFileString_;
+      pjsipConfFileString_ = other.pjsipConfFileString_;
       extensionsConfFileString_ = other.extensionsConfFileString_;
       queuesConfFileString_ = other.queuesConfFileString_;
       modulesConfFileString_ = other.modulesConfFileString_;
@@ -1504,18 +1849,23 @@ namespace Ondewo.Vtsi {
       return new AsteriskConfigsFiles(this);
     }
 
-    /// <summary>Field number for the "sip_conf_file_string" field.</summary>
-    public const int SipConfFileStringFieldNumber = 1;
-    private string sipConfFileString_ = "";
+    /// <summary>Field number for the "pjsip_conf_file_string" field.</summary>
+    public const int PjsipConfFileStringFieldNumber = 1;
+    private string pjsipConfFileString_ = "";
     /// <summary>
-    /// sip.conf file as string
+    /// pjsip.conf file as string.
+    /// Renamed from &lt;pre>&lt;code>sip_conf_file_string&lt;/code>&lt;/pre> in 9.0.0: the chan_sip driver this field
+    /// was named after was removed in Asterisk 21, and the file an Asterisk 22 server reads is
+    /// &lt;pre>&lt;code>pjsip.conf&lt;/code>&lt;/pre>. Field number 1 and type &lt;pre>&lt;code>string&lt;/code>&lt;/pre> are
+    /// unchanged and no &lt;pre>&lt;code>json_name&lt;/code>&lt;/pre> override was added, so the change is binary
+    /// wire-compatible in both directions and source-breaking only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string SipConfFileString {
-      get { return sipConfFileString_; }
+    public string PjsipConfFileString {
+      get { return pjsipConfFileString_; }
       set {
-        sipConfFileString_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        pjsipConfFileString_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1579,7 +1929,7 @@ namespace Ondewo.Vtsi {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (SipConfFileString != other.SipConfFileString) return false;
+      if (PjsipConfFileString != other.PjsipConfFileString) return false;
       if (ExtensionsConfFileString != other.ExtensionsConfFileString) return false;
       if (QueuesConfFileString != other.QueuesConfFileString) return false;
       if (ModulesConfFileString != other.ModulesConfFileString) return false;
@@ -1590,7 +1940,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SipConfFileString.Length != 0) hash ^= SipConfFileString.GetHashCode();
+      if (PjsipConfFileString.Length != 0) hash ^= PjsipConfFileString.GetHashCode();
       if (ExtensionsConfFileString.Length != 0) hash ^= ExtensionsConfFileString.GetHashCode();
       if (QueuesConfFileString.Length != 0) hash ^= QueuesConfFileString.GetHashCode();
       if (ModulesConfFileString.Length != 0) hash ^= ModulesConfFileString.GetHashCode();
@@ -1612,9 +1962,9 @@ namespace Ondewo.Vtsi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SipConfFileString.Length != 0) {
+      if (PjsipConfFileString.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(SipConfFileString);
+        output.WriteString(PjsipConfFileString);
       }
       if (ExtensionsConfFileString.Length != 0) {
         output.WriteRawTag(18);
@@ -1638,9 +1988,9 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SipConfFileString.Length != 0) {
+      if (PjsipConfFileString.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(SipConfFileString);
+        output.WriteString(PjsipConfFileString);
       }
       if (ExtensionsConfFileString.Length != 0) {
         output.WriteRawTag(18);
@@ -1664,8 +2014,8 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SipConfFileString.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(SipConfFileString);
+      if (PjsipConfFileString.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PjsipConfFileString);
       }
       if (ExtensionsConfFileString.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ExtensionsConfFileString);
@@ -1688,8 +2038,8 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
-      if (other.SipConfFileString.Length != 0) {
-        SipConfFileString = other.SipConfFileString;
+      if (other.PjsipConfFileString.Length != 0) {
+        PjsipConfFileString = other.PjsipConfFileString;
       }
       if (other.ExtensionsConfFileString.Length != 0) {
         ExtensionsConfFileString = other.ExtensionsConfFileString;
@@ -1720,7 +2070,7 @@ namespace Ondewo.Vtsi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            SipConfFileString = input.ReadString();
+            PjsipConfFileString = input.ReadString();
             break;
           }
           case 18: {
@@ -1755,7 +2105,7 @@ namespace Ondewo.Vtsi {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            SipConfFileString = input.ReadString();
+            PjsipConfFileString = input.ReadString();
             break;
           }
           case 18: {

@@ -30,356 +30,585 @@ namespace Ondewo.Vtsi {
             "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoYb25kZXdvL25sdS9jb250ZXh0",
             "LnByb3RvGhdvbmRld28vbmx1L2ludGVudC5wcm90bxofb25kZXdvL3MydC9z",
             "cGVlY2gtdG8tdGV4dC5wcm90bxofb25kZXdvL3Qycy90ZXh0LXRvLXNwZWVj",
-            "aC5wcm90bxoUb25kZXdvL3NpcC9zaXAucHJvdG8iQgoRQmFzZVNlcnZpY2VD",
-            "b25maWcSDAoEaG9zdBgBIAEoCRIMCgRwb3J0GAIgASgFEhEKCWdycGNfY2Vy",
-            "dBgDIAEoCSI1CgtDcmVkZW50aWFscxIUCgxhY2NvdW50X25hbWUYASABKAkS",
-            "EAoIcGFzc3dvcmQYAiABKAki8wIKDU5sdVZ0c2lDb25maWcSNwoPbmx1X2Jh",
-            "c2VfY29uZmlnGAEgASgLMh4ub25kZXdvLnZ0c2kuQmFzZVNlcnZpY2VDb25m",
-            "aWcSLwoLY3JlZGVudGlhbHMYAiABKAsyGC5vbmRld28udnRzaS5DcmVkZW50",
-            "aWFsc0gAEhQKCmF1dGhfdG9rZW4YAyABKAlIABISCgphZ2VudF9uYW1lGAQg",
-            "ASgJEhUKDWxhbmd1YWdlX2NvZGUYBSABKAkSFgoOaW5pdGlhbF9pbnRlbnQY",
-            "BiABKAkSJQoIY29udGV4dHMYByADKAsyEy5vbmRld28ubmx1LkNvbnRleHQS",
-            "HQoVaHR0cF9iYXNpY19hdXRoX3Rva2VuGAggASgJEjoKCHBsYXRmb3JtGAkg",
-            "ASgOMiMub25kZXdvLm5sdS5JbnRlbnQuTWVzc2FnZS5QbGF0Zm9ybUgBiAEB",
-            "QhAKDmF1dGhlbnRpY2F0aW9uQgsKCV9wbGF0Zm9ybSJ/Cg1UMnNWdHNpQ29u",
-            "ZmlnEjcKD3Qyc19iYXNlX2NvbmZpZxgBIAEoCzIeLm9uZGV3by52dHNpLkJh",
-            "c2VTZXJ2aWNlQ29uZmlnEjUKEnQyc19yZXF1ZXN0X2NvbmZpZxgCIAEoCzIZ",
-            "Lm9uZGV3by50MnMuUmVxdWVzdENvbmZpZyKUAQoNUzJ0VnRzaUNvbmZpZxI3",
-            "Cg9zMnRfYmFzZV9jb25maWcYASABKAsyHi5vbmRld28udnRzaS5CYXNlU2Vy",
-            "dmljZUNvbmZpZxJKCh1zMnRfdHJhbnNjcmliZV9yZXF1ZXN0X2NvbmZpZxgC",
-            "IAEoCzIjLm9uZGV3by5zMnQuVHJhbnNjcmliZVJlcXVlc3RDb25maWciTgoO",
-            "QXN0ZXJpc2tDb25maWcSPAoUYXN0ZXJpc2tfYmFzZV9jb25maWcYASABKAsy",
-            "Hi5vbmRld28udnRzaS5CYXNlU2VydmljZUNvbmZpZyKxAgoUQ29tbW9uU2Vy",
-            "dmljZXNDb25maWcSMwoPczJ0X3Z0c2lfY29uZmlnGAEgASgLMhoub25kZXdv",
-            "LnZ0c2kuUzJ0VnRzaUNvbmZpZxIzCg9ubHVfdnRzaV9jb25maWcYAiABKAsy",
-            "Gi5vbmRld28udnRzaS5ObHVWdHNpQ29uZmlnEjMKD3Qyc192dHNpX2NvbmZp",
-            "ZxgDIAEoCzIaLm9uZGV3by52dHNpLlQyc1Z0c2lDb25maWcSMwoPY3NpX3Z0",
-            "c2lfY29uZmlnGAQgASgLMhoub25kZXdvLnZ0c2kuQ3NpVnRzaUNvbmZpZxJF",
-            "Chh2b2ljZV9pbnRlcmFjdGlvbl9jb25maWcYBSABKAsyIy5vbmRld28udnRz",
-            "aS5Wb2ljZUludGVyYWN0aW9uQ29uZmlnIusBChZWb2ljZUludGVyYWN0aW9u",
-            "Q29uZmlnEj8KFXR1cm5fZGV0ZWN0aW9uX2NvbmZpZxgBIAEoCzIgLm9uZGV3",
-            "by52dHNpLlR1cm5EZXRlY3Rpb25Db25maWcSTQocaW50ZXJydXB0aW9uX2hh",
-            "bmRsaW5nX2NvbmZpZxgCIAEoCzInLm9uZGV3by52dHNpLkludGVycnVwdGlv",
-            "bkhhbmRsaW5nQ29uZmlnEkEKFnJlc3BvbnNlX3RpbWluZ19jb25maWcYAyAB",
-            "KAsyIS5vbmRld28udnRzaS5SZXNwb25zZVRpbWluZ0NvbmZpZyLCBAoTVHVy",
-            "bkRldGVjdGlvbkNvbmZpZxJACgRtb2RlGAEgASgOMjIub25kZXdvLnZ0c2ku",
-            "VHVybkRldGVjdGlvbkNvbmZpZy5UdXJuRGV0ZWN0aW9uTW9kZRIqCh1taW5f",
-            "ZW5kcG9pbnRpbmdfZGVsYXlfc2Vjb25kcxgCIAEoAkgAiAEBEioKHW1heF9l",
-            "bmRwb2ludGluZ19kZWxheV9zZWNvbmRzGAMgASgCSAGIAQESRgoOdHVybl9l",
-            "YWdlcm5lc3MYBCABKA4yLi5vbmRld28udnRzaS5UdXJuRGV0ZWN0aW9uQ29u",
-            "ZmlnLlR1cm5FYWdlcm5lc3MSJAocdHVybl9kZXRlY3Rpb25fc3lzdGVtX3By",
-            "b21wdBgFIAEoCRIiChp0dXJuX2RldGVjdGlvbl91c2VyX3Byb21wdBgGIAEo",
-            "CSJmChFUdXJuRGV0ZWN0aW9uTW9kZRIjCh9UVVJOX0RFVEVDVElPTl9NT0RF",
-            "X1VOU1BFQ0lGSUVEEAASBwoDVkFEEAESEgoOU0VNQU5USUNfTU9ERUwQAhIP",
-            "CgtBVURJT19NT0RFTBADIlMKDVR1cm5FYWdlcm5lc3MSHgoaVFVSTl9FQUdF",
-            "Uk5FU1NfVU5TUEVDSUZJRUQQABILCgdQQVRJRU5UEAESCgoGTk9STUFMEAIS",
-            "CQoFRUFHRVIQA0IgCh5fbWluX2VuZHBvaW50aW5nX2RlbGF5X3NlY29uZHNC",
-            "IAoeX21heF9lbmRwb2ludGluZ19kZWxheV9zZWNvbmRzIrAEChpJbnRlcnJ1",
-            "cHRpb25IYW5kbGluZ0NvbmZpZxIUCgdlbmFibGVkGAEgASgISACIAQESLgoh",
-            "bWluX2ludGVycnVwdGlvbl9kdXJhdGlvbl9zZWNvbmRzGAIgASgCSAGIAQES",
-            "IwoWbWluX2ludGVycnVwdGlvbl93b3JkcxgDIAEoBUgCiAEBEi8KImZhbHNl",
-            "X2ludGVycnVwdGlvbl90aW1lb3V0X3NlY29uZHMYBCABKAJIA4gBARIsCh9y",
-            "ZXN1bWVfYWZ0ZXJfZmFsc2VfaW50ZXJydXB0aW9uGAUgASgISASIAQESHAoP",
-            "YmFja29mZl9zZWNvbmRzGAYgASgCSAWIAQESLAofZmlyc3RfbWVzc2FnZV9w",
-            "cm90ZWN0ZWRfc2Vjb25kcxgHIAEoAkgGiAEBEiwKJHRyYW5zY3JpYmVfb25f",
-            "ZGlzYWJsZWRfaW50ZXJydXB0aW9ucxgIIAEoCEIKCghfZW5hYmxlZEIkCiJf",
-            "bWluX2ludGVycnVwdGlvbl9kdXJhdGlvbl9zZWNvbmRzQhkKF19taW5faW50",
-            "ZXJydXB0aW9uX3dvcmRzQiUKI19mYWxzZV9pbnRlcnJ1cHRpb25fdGltZW91",
-            "dF9zZWNvbmRzQiIKIF9yZXN1bWVfYWZ0ZXJfZmFsc2VfaW50ZXJydXB0aW9u",
-            "QhIKEF9iYWNrb2ZmX3NlY29uZHNCIgogX2ZpcnN0X21lc3NhZ2VfcHJvdGVj",
-            "dGVkX3NlY29uZHMi/wIKFFJlc3BvbnNlVGltaW5nQ29uZmlnEiEKFHR1cm5f",
-            "dGltZW91dF9zZWNvbmRzGAEgASgCSACIAQESLQogc2lsZW5jZV9lbmRfY2Fs",
-            "bF90aW1lb3V0X3NlY29uZHMYAiABKAJIAYgBARI7ChNzb2Z0X3RpbWVvdXRf",
-            "Y29uZmlnGAMgASgLMh4ub25kZXdvLnZ0c2kuU29mdFRpbWVvdXRDb25maWcS",
-            "KgodcHJlZW1wdGl2ZV9nZW5lcmF0aW9uX2VuYWJsZWQYBCABKAhIAogBARIq",
-            "Ch10MnNfY2h1bmtlZF9zdHJlYW1pbmdfZW5hYmxlZBgFIAEoCEgDiAEBQhcK",
-            "FV90dXJuX3RpbWVvdXRfc2Vjb25kc0IjCiFfc2lsZW5jZV9lbmRfY2FsbF90",
-            "aW1lb3V0X3NlY29uZHNCIAoeX3ByZWVtcHRpdmVfZ2VuZXJhdGlvbl9lbmFi",
-            "bGVkQiAKHl90MnNfY2h1bmtlZF9zdHJlYW1pbmdfZW5hYmxlZCKPAQoRU29m",
-            "dFRpbWVvdXRDb25maWcSHAoPdGltZW91dF9zZWNvbmRzGAEgASgCSACIAQES",
-            "EAoIbWVzc2FnZXMYAiADKAkSHwoSbWF4X3Blcl9nZW5lcmF0aW9uGAMgASgF",
-            "SAGIAQFCEgoQX3RpbWVvdXRfc2Vjb25kc0IVChNfbWF4X3Blcl9nZW5lcmF0",
-            "aW9uIigKDVNpcEJhc2VDb25maWcSFwoPc2lwX3NpbV92ZXJzaW9uGAEgASgJ",
-            "Is8BCg9TaXBDYWxsZXJDb25maWcSMwoPc2lwX2Jhc2VfY29uZmlnGAEgASgL",
-            "Mhoub25kZXdvLnZ0c2kuU2lwQmFzZUNvbmZpZxIRCgljYWxsZWVfaWQYAiAB",
-            "KAkSQQoLc2lwX2hlYWRlcnMYAyADKAsyLC5vbmRld28udnRzaS5TaXBDYWxs",
-            "ZXJDb25maWcuU2lwSGVhZGVyc0VudHJ5GjEKD1NpcEhlYWRlcnNFbnRyeRIL",
-            "CgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpEDCg1Dc2lWdHNpQ29u",
-            "ZmlnEjkKEnMydF92dHNpX2NhbGxiYWNrcxgBIAEoCzIdLm9uZGV3by52dHNp",
-            "LlMydFZ0c2lDYWxsYmFja3MSOQoSbmx1X3Z0c2lfY2FsbGJhY2tzGAIgASgL",
-            "Mh0ub25kZXdvLnZ0c2kuTmx1VnRzaUNhbGxiYWNrcxI5ChJ0MnNfdnRzaV9j",
-            "YWxsYmFja3MYAyABKAsyHS5vbmRld28udnRzaS5UMnNWdHNpQ2FsbGJhY2tz",
-            "EkgKGWF1ZGlvX29iamVjdF9zdG9yZV9jb25maWcYBCABKAsyJS5vbmRld28u",
-            "dnRzaS5BdWRpb09iamVjdFN0b3JhZ2VDb25maWcSPwoVbWVzc2FnZV9icm9r",
-            "ZXJfY29uZmlnGAUgASgLMiAub25kZXdvLnZ0c2kuTWVzc2FnZUJyb2tlckNv",
-            "bmZpZxImChlhY3RpdmF0ZV9jb250cm9sX21lc3NhZ2VzGAYgASgISACIAQFC",
-            "HAoaX2FjdGl2YXRlX2NvbnRyb2xfbWVzc2FnZXMiswEKGEF1ZGlvT2JqZWN0",
-            "U3RvcmFnZUNvbmZpZxIlCh1hY3RpdmF0ZV9hdWRpb19vYmplY3Rfc3RvcmFn",
-            "ZRgBIAEoCBJwCi9hdWRpb19vYmplY3Rfc3RvcmFnZV9zZXJ2aWNlc19hY3Rp",
-            "dmF0aW9uX2NvbmZpZxgCIAEoCzI3Lm9uZGV3by52dHNpLkF1ZGlvT2JqZWN0",
-            "U3RvcmFnZVNlcnZpY2VzQWN0aXZhdGlvbkNvbmZpZyJYCipBdWRpb09iamVj",
-            "dFN0b3JhZ2VTZXJ2aWNlc0FjdGl2YXRpb25Db25maWcSFAoMYWN0aXZhdGVf",
-            "czJ0GAEgASgIEhQKDGFjdGl2YXRlX3QycxgCIAEoCCLvAQoTTWVzc2FnZUJy",
-            "b2tlckNvbmZpZxIfChdhY3RpdmF0ZV9tZXNzYWdlX2Jyb2tlchgBIAEoCBJl",
-            "CiltZXNzYWdlX2Jyb2tlcl9zZXJ2aWNlc19hY3RpdmF0aW9uX2NvbmZpZxgC",
-            "IAEoCzIyLm9uZGV3by52dHNpLk1lc3NhZ2VCcm9rZXJTZXJ2aWNlc0FjdGl2",
-            "YXRpb25Db25maWcSNwoQcmFiYml0X21xX2NvbmZpZxgDIAEoCzIbLm9uZGV3",
-            "by52dHNpLlJhYmJpdE1xQ29uZmlnSABCFwoVbWVzc2FnZV9icm9rZXJfY29u",
-            "ZmlnIn8KJU1lc3NhZ2VCcm9rZXJTZXJ2aWNlc0FjdGl2YXRpb25Db25maWcS",
-            "FAoMYWN0aXZhdGVfczJ0GAEgASgIEhQKDGFjdGl2YXRlX25sdRgCIAEoCBIU",
-            "CgxhY3RpdmF0ZV90MnMYAyABKAgSFAoMYWN0aXZhdGVfc2lwGAQgASgIIlwK",
-            "DlJhYmJpdE1xQ29uZmlnEgwKBGhvc3QYASABKAkSDAoEcG9ydBgCIAEoBRIO",
-            "CgZwb3J0XzIYAyABKAUSDAoEdXNlchgEIAEoCRIQCghwYXNzd29yZBgFIAEo",
-            "CSJJChBTMnRWdHNpQ2FsbGJhY2tzEhkKEXByZV9zMnRfY2FsbGJhY2tzGAEg",
-            "AygJEhoKEnBvc3RfczJ0X2NhbGxiYWNrcxgCIAMoCSJJChBObHVWdHNpQ2Fs",
-            "bGJhY2tzEhkKEXByZV9ubHVfY2FsbGJhY2tzGAEgAygJEhoKEnBvc3Rfbmx1",
-            "X2NhbGxiYWNrcxgCIAMoCSJJChBUMnNWdHNpQ2FsbGJhY2tzEhkKEXByZV90",
-            "MnNfY2FsbGJhY2tzGAEgAygJEhoKEnBvc3RfdDJzX2NhbGxiYWNrcxgCIAMo",
-            "CSKjAQoITGlzdGVuZXISDAoEbmFtZRgBIAEoCRIRCgljYWxsX25hbWUYAiAB",
-            "KAkSMwoPc2lwX2Jhc2VfY29uZmlnGAMgASgLMhoub25kZXdvLnZ0c2kuU2lw",
-            "QmFzZUNvbmZpZxJBChZjb21tb25fc2VydmljZXNfY29uZmlnGAQgASgLMiEu",
-            "b25kZXdvLnZ0c2kuQ29tbW9uU2VydmljZXNDb25maWcipQEKBkNhbGxlchIM",
-            "CgRuYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgCIAEoCRI3ChFzaXBfY2FsbGVy",
-            "X2NvbmZpZxgDIAEoCzIcLm9uZGV3by52dHNpLlNpcENhbGxlckNvbmZpZxJB",
-            "ChZjb21tb25fc2VydmljZXNfY29uZmlnGAQgASgLMiEub25kZXdvLnZ0c2ku",
-            "Q29tbW9uU2VydmljZXNDb25maWciqQEKFFN0YXJ0TGlzdGVuZXJSZXF1ZXN0",
-            "EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEjMKD3NpcF9iYXNlX2NvbmZp",
-            "ZxgCIAEoCzIaLm9uZGV3by52dHNpLlNpcEJhc2VDb25maWcSQQoWY29tbW9u",
-            "X3NlcnZpY2VzX2NvbmZpZxgDIAEoCzIhLm9uZGV3by52dHNpLkNvbW1vblNl",
-            "cnZpY2VzQ29uZmlnInIKFVN0YXJ0TGlzdGVuZXJSZXNwb25zZRIZChF2dHNp",
-            "X3Byb2plY3RfbmFtZRgBIAEoCRInCghsaXN0ZW5lchgCIAEoCzIVLm9uZGV3",
-            "by52dHNpLkxpc3RlbmVyEhUKDWVycm9yX21lc3NhZ2UYAyABKAkicAoVU3Rh",
-            "cnRMaXN0ZW5lcnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJ",
-            "EjwKEWxpc3RlbmVyX3JlcXVlc3RzGAIgAygLMiEub25kZXdvLnZ0c2kuU3Rh",
-            "cnRMaXN0ZW5lclJlcXVlc3QiigEKFlN0YXJ0TGlzdGVuZXJzUmVzcG9uc2US",
-            "GQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSPgoSbGlzdGVuZXJfcmVzcG9u",
-            "c2VzGAIgAygLMiIub25kZXdvLnZ0c2kuU3RhcnRMaXN0ZW5lclJlc3BvbnNl",
-            "EhUKDWVycm9yX21lc3NhZ2UYAyABKAkiqwEKElN0YXJ0Q2FsbGVyUmVxdWVz",
-            "dBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRI3ChFzaXBfY2FsbGVyX2Nv",
-            "bmZpZxgCIAEoCzIcLm9uZGV3by52dHNpLlNpcENhbGxlckNvbmZpZxJBChZj",
-            "b21tb25fc2VydmljZXNfY29uZmlnGAMgASgLMiEub25kZXdvLnZ0c2kuQ29t",
-            "bW9uU2VydmljZXNDb25maWcibAoTU3RhcnRDYWxsZXJSZXNwb25zZRIZChF2",
-            "dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIjCgZjYWxsZXIYAiABKAsyEy5vbmRl",
-            "d28udnRzaS5DYWxsZXISFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSJqChNTdGFy",
-            "dENhbGxlcnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEjgK",
-            "D2NhbGxlcl9yZXF1ZXN0cxgCIAMoCzIfLm9uZGV3by52dHNpLlN0YXJ0Q2Fs",
-            "bGVyUmVxdWVzdCKEAQoUU3RhcnRDYWxsZXJzUmVzcG9uc2USGQoRdnRzaV9w",
-            "cm9qZWN0X25hbWUYASABKAkSOgoQY2FsbGVyX3Jlc3BvbnNlcxgCIAMoCzIg",
-            "Lm9uZGV3by52dHNpLlN0YXJ0Q2FsbGVyUmVzcG9uc2USFQoNZXJyb3JfbWVz",
-            "c2FnZRgDIAEoCSKUAQoSTGlzdENhbGxlcnNSZXF1ZXN0EhkKEXZ0c2lfcHJv",
-            "amVjdF9uYW1lGAEgASgJEhcKCnBhZ2VfdG9rZW4YAiABKAlIAIgBARItCglj",
-            "YWxsX3ZpZXcYAyABKA4yFS5vbmRld28udnRzaS5DYWxsVmlld0gBiAEBQg0K",
-            "C19wYWdlX3Rva2VuQgwKCl9jYWxsX3ZpZXciVAoTTGlzdENhbGxlcnNSZXNw",
-            "b25zZRIkCgdjYWxsZXJzGAEgAygLMhMub25kZXdvLnZ0c2kuQ2FsbGVyEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJ4ChBHZXRDYWxsZXJSZXF1ZXN0EhkK",
-            "EXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEgwKBG5hbWUYAiABKAkSLQoJY2Fs",
-            "bF92aWV3GAMgASgOMhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdIAIgBAUIMCgpf",
-            "Y2FsbF92aWV3IpYBChRMaXN0TGlzdGVuZXJzUmVxdWVzdBIZChF2dHNpX3By",
-            "b2plY3RfbmFtZRgBIAEoCRIXCgpwYWdlX3Rva2VuGAIgASgJSACIAQESLQoJ",
-            "Y2FsbF92aWV3GAMgASgOMhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdIAYgBAUIN",
-            "CgtfcGFnZV90b2tlbkIMCgpfY2FsbF92aWV3IloKFUxpc3RMaXN0ZW5lcnNS",
-            "ZXNwb25zZRIoCglsaXN0ZW5lcnMYASADKAsyFS5vbmRld28udnRzaS5MaXN0",
-            "ZW5lchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiegoSR2V0TGlzdGVuZXJS",
-            "ZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEgwKBG5hbWUYAiAB",
-            "KAkSLQoJY2FsbF92aWV3GAMgASgOMhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdI",
-            "AIgBAUIMCgpfY2FsbF92aWV3IiMKE1N0b3BMaXN0ZW5lclJlcXVlc3QSDAoE",
-            "bmFtZRgBIAEoCSI7ChRTdG9wTGlzdGVuZXJSZXNwb25zZRIMCgRuYW1lGAEg",
-            "ASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiJQoUU3RvcExpc3RlbmVyc1Jl",
-            "cXVlc3QSDQoFbmFtZXMYASADKAkicgoVU3RvcExpc3RlbmVyc1Jlc3BvbnNl",
-            "EkIKF3N0b3BfbGlzdGVuZXJfcmVzcG9uc2VzGAEgAygLMiEub25kZXdvLnZ0",
-            "c2kuU3RvcExpc3RlbmVyUmVzcG9uc2USFQoNZXJyb3JfbWVzc2FnZRgCIAEo",
-            "CSIhChFTdG9wQ2FsbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIjkKElN0b3BD",
-            "YWxsZXJSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UY",
-            "AiABKAkiIwoSU3RvcENhbGxlcnNSZXF1ZXN0Eg0KBW5hbWVzGAEgAygJImwK",
-            "E1N0b3BDYWxsZXJzUmVzcG9uc2USPgoVc3RvcF9jYWxsZXJfcmVzcG9uc2Vz",
-            "GAEgAygLMh8ub25kZXdvLnZ0c2kuU3RvcENhbGxlclJlc3BvbnNlEhUKDWVy",
-            "cm9yX21lc3NhZ2UYAiABKAkiJQoVRGVsZXRlTGlzdGVuZXJSZXF1ZXN0EgwK",
-            "BG5hbWUYASABKAkiPQoWRGVsZXRlTGlzdGVuZXJSZXNwb25zZRIMCgRuYW1l",
-            "GAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiJwoWRGVsZXRlTGlzdGVu",
-            "ZXJzUmVxdWVzdBINCgVuYW1lcxgBIAMoCSJ4ChdEZWxldGVMaXN0ZW5lcnNS",
-            "ZXNwb25zZRJGChlkZWxldGVfbGlzdGVuZXJfcmVzcG9uc2VzGAEgAygLMiMu",
-            "b25kZXdvLnZ0c2kuRGVsZXRlTGlzdGVuZXJSZXNwb25zZRIVCg1lcnJvcl9t",
-            "ZXNzYWdlGAIgASgJIiMKE0RlbGV0ZUNhbGxlclJlcXVlc3QSDAoEbmFtZRgB",
-            "IAEoCSI7ChREZWxldGVDYWxsZXJSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUK",
-            "DWVycm9yX21lc3NhZ2UYAiABKAkiJQoURGVsZXRlQ2FsbGVyc1JlcXVlc3QS",
-            "DQoFbmFtZXMYASADKAkicgoVRGVsZXRlQ2FsbGVyc1Jlc3BvbnNlEkIKF2Rl",
-            "bGV0ZV9jYWxsZXJfcmVzcG9uc2VzGAEgAygLMiEub25kZXdvLnZ0c2kuRGVs",
-            "ZXRlQ2FsbGVyUmVzcG9uc2USFQoNZXJyb3JfbWVzc2FnZRgCIAEoCSKeAQob",
-            "U3RhcnRTY2hlZHVsZWRDYWxsZXJSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9u",
-            "YW1lGAEgASgJEjAKB3JlcXVlc3QYAiABKAsyHy5vbmRld28udnRzaS5TdGFy",
-            "dENhbGxlclJlcXVlc3QSMgoOc2NoZWR1bGVkX3RpbWUYAyABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wIoYBChxTdGFydFNjaGVkdWxlZENhbGxl",
-            "cnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEksKGXNjaGVk",
-            "dWxlZF9jYWxsZXJfcmVxdWVzdHMYAiADKAsyKC5vbmRld28udnRzaS5TdGFy",
-            "dFNjaGVkdWxlZENhbGxlclJlcXVlc3QiiQEKHVN0YXJ0U2NoZWR1bGVkQ2Fs",
-            "bGVyc1Jlc3BvbnNlEhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEk0KGnNj",
-            "aGVkdWxlZF9jYWxsZXJfcmVzcG9uc2VzGAIgAygLMikub25kZXdvLnZ0c2ku",
-            "U3RhcnRTY2hlZHVsZWRDYWxsZXJSZXNwb25zZSKIAQocU3RhcnRTY2hlZHVs",
-            "ZWRDYWxsZXJSZXNwb25zZRIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRI2",
-            "ChBzY2hlZHVsZWRfY2FsbGVyGAIgASgLMhwub25kZXdvLnZ0c2kuU2NoZWR1",
-            "bGVkQ2FsbGVyEhUKDWVycm9yX21lc3NhZ2UYAyABKAki1gMKD1NjaGVkdWxl",
-            "ZENhbGxlchIMCgRuYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgCIAEoCRIuCgpz",
-            "aXBfY29uZmlnGAMgASgLMhoub25kZXdvLnZ0c2kuU2lwQmFzZUNvbmZpZxJB",
-            "ChZjb21tb25fc2VydmljZXNfY29uZmlnGAQgASgLMiEub25kZXdvLnZ0c2ku",
-            "Q29tbW9uU2VydmljZXNDb25maWcSMgoOc2NoZWR1bGVkX3RpbWUYBSABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKEXNpcF9jYWxsZXJfY29u",
-            "ZmlnGAYgASgLMhwub25kZXdvLnZ0c2kuU2lwQ2FsbGVyQ29uZmlnEjIKBnN0",
-            "YXR1cxgHIAEoDjIiLm9uZGV3by52dHNpLlNjaGVkdWxlZENhbGxlclN0YXR1",
-            "cxIZChF2dHNpX3Byb2plY3RfbmFtZRgIIAEoCRIuCgpjcmVhdGVkX2F0GAkg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghmaXJlZF9hdBgK",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFQoNZXJyb3JfbWVz",
-            "c2FnZRgLIAEoCSKBAQoZR2V0U2NoZWR1bGVkQ2FsbGVyUmVxdWVzdBIZChF2",
+            "aC5wcm90bxoUb25kZXdvL3NpcC9zaXAucHJvdG8aG29uZGV3by92dHNpL2Nh",
+            "bXBhaWducy5wcm90byJCChFCYXNlU2VydmljZUNvbmZpZxIMCgRob3N0GAEg",
+            "ASgJEgwKBHBvcnQYAiABKAUSEQoJZ3JwY19jZXJ0GAMgASgJIjUKC0NyZWRl",
+            "bnRpYWxzEhQKDGFjY291bnRfbmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEo",
+            "CSLzAgoNTmx1VnRzaUNvbmZpZxI3Cg9ubHVfYmFzZV9jb25maWcYASABKAsy",
+            "Hi5vbmRld28udnRzaS5CYXNlU2VydmljZUNvbmZpZxIvCgtjcmVkZW50aWFs",
+            "cxgCIAEoCzIYLm9uZGV3by52dHNpLkNyZWRlbnRpYWxzSAASFAoKYXV0aF90",
+            "b2tlbhgDIAEoCUgAEhIKCmFnZW50X25hbWUYBCABKAkSFQoNbGFuZ3VhZ2Vf",
+            "Y29kZRgFIAEoCRIWCg5pbml0aWFsX2ludGVudBgGIAEoCRIlCghjb250ZXh0",
+            "cxgHIAMoCzITLm9uZGV3by5ubHUuQ29udGV4dBIdChVodHRwX2Jhc2ljX2F1",
+            "dGhfdG9rZW4YCCABKAkSOgoIcGxhdGZvcm0YCSABKA4yIy5vbmRld28ubmx1",
+            "LkludGVudC5NZXNzYWdlLlBsYXRmb3JtSAGIAQFCEAoOYXV0aGVudGljYXRp",
+            "b25CCwoJX3BsYXRmb3JtIn8KDVQyc1Z0c2lDb25maWcSNwoPdDJzX2Jhc2Vf",
+            "Y29uZmlnGAEgASgLMh4ub25kZXdvLnZ0c2kuQmFzZVNlcnZpY2VDb25maWcS",
+            "NQoSdDJzX3JlcXVlc3RfY29uZmlnGAIgASgLMhkub25kZXdvLnQycy5SZXF1",
+            "ZXN0Q29uZmlnIpQBCg1TMnRWdHNpQ29uZmlnEjcKD3MydF9iYXNlX2NvbmZp",
+            "ZxgBIAEoCzIeLm9uZGV3by52dHNpLkJhc2VTZXJ2aWNlQ29uZmlnEkoKHXMy",
+            "dF90cmFuc2NyaWJlX3JlcXVlc3RfY29uZmlnGAIgASgLMiMub25kZXdvLnMy",
+            "dC5UcmFuc2NyaWJlUmVxdWVzdENvbmZpZyJOCg5Bc3Rlcmlza0NvbmZpZxI8",
+            "ChRhc3Rlcmlza19iYXNlX2NvbmZpZxgBIAEoCzIeLm9uZGV3by52dHNpLkJh",
+            "c2VTZXJ2aWNlQ29uZmlnIrECChRDb21tb25TZXJ2aWNlc0NvbmZpZxIzCg9z",
+            "MnRfdnRzaV9jb25maWcYASABKAsyGi5vbmRld28udnRzaS5TMnRWdHNpQ29u",
+            "ZmlnEjMKD25sdV92dHNpX2NvbmZpZxgCIAEoCzIaLm9uZGV3by52dHNpLk5s",
+            "dVZ0c2lDb25maWcSMwoPdDJzX3Z0c2lfY29uZmlnGAMgASgLMhoub25kZXdv",
+            "LnZ0c2kuVDJzVnRzaUNvbmZpZxIzCg9jc2lfdnRzaV9jb25maWcYBCABKAsy",
+            "Gi5vbmRld28udnRzaS5Dc2lWdHNpQ29uZmlnEkUKGHZvaWNlX2ludGVyYWN0",
+            "aW9uX2NvbmZpZxgFIAEoCzIjLm9uZGV3by52dHNpLlZvaWNlSW50ZXJhY3Rp",
+            "b25Db25maWcixQIKFlZvaWNlSW50ZXJhY3Rpb25Db25maWcSPwoVdHVybl9k",
+            "ZXRlY3Rpb25fY29uZmlnGAEgASgLMiAub25kZXdvLnZ0c2kuVHVybkRldGVj",
+            "dGlvbkNvbmZpZxJNChxpbnRlcnJ1cHRpb25faGFuZGxpbmdfY29uZmlnGAIg",
+            "ASgLMicub25kZXdvLnZ0c2kuSW50ZXJydXB0aW9uSGFuZGxpbmdDb25maWcS",
+            "QQoWcmVzcG9uc2VfdGltaW5nX2NvbmZpZxgDIAEoCzIhLm9uZGV3by52dHNp",
+            "LlJlc3BvbnNlVGltaW5nQ29uZmlnElgKImFuc3dlcmluZ19tYWNoaW5lX2Rl",
+            "dGVjdGlvbl9jb25maWcYBCABKAsyLC5vbmRld28udnRzaS5BbnN3ZXJpbmdN",
+            "YWNoaW5lRGV0ZWN0aW9uQ29uZmlnIowFChNUdXJuRGV0ZWN0aW9uQ29uZmln",
+            "EkAKBG1vZGUYASABKA4yMi5vbmRld28udnRzaS5UdXJuRGV0ZWN0aW9uQ29u",
+            "ZmlnLlR1cm5EZXRlY3Rpb25Nb2RlEioKHW1pbl9lbmRwb2ludGluZ19kZWxh",
+            "eV9zZWNvbmRzGAIgASgCSACIAQESKgodbWF4X2VuZHBvaW50aW5nX2RlbGF5",
+            "X3NlY29uZHMYAyABKAJIAYgBARJGCg50dXJuX2VhZ2VybmVzcxgEIAEoDjIu",
+            "Lm9uZGV3by52dHNpLlR1cm5EZXRlY3Rpb25Db25maWcuVHVybkVhZ2VybmVz",
+            "cxIpChx0dXJuX2RldGVjdGlvbl9zeXN0ZW1fcHJvbXB0GAUgASgJSAKIAQES",
+            "JwoadHVybl9kZXRlY3Rpb25fdXNlcl9wcm9tcHQYBiABKAlIA4gBASJmChFU",
+            "dXJuRGV0ZWN0aW9uTW9kZRIjCh9UVVJOX0RFVEVDVElPTl9NT0RFX1VOU1BF",
+            "Q0lGSUVEEAASBwoDVkFEEAESEgoOU0VNQU5USUNfTU9ERUwQAhIPCgtBVURJ",
+            "T19NT0RFTBADIlMKDVR1cm5FYWdlcm5lc3MSHgoaVFVSTl9FQUdFUk5FU1Nf",
+            "VU5TUEVDSUZJRUQQABILCgdQQVRJRU5UEAESCgoGTk9STUFMEAISCQoFRUFH",
+            "RVIQA0IgCh5fbWluX2VuZHBvaW50aW5nX2RlbGF5X3NlY29uZHNCIAoeX21h",
+            "eF9lbmRwb2ludGluZ19kZWxheV9zZWNvbmRzQh8KHV90dXJuX2RldGVjdGlv",
+            "bl9zeXN0ZW1fcHJvbXB0Qh0KG190dXJuX2RldGVjdGlvbl91c2VyX3Byb21w",
+            "dCLeBAoaSW50ZXJydXB0aW9uSGFuZGxpbmdDb25maWcSFAoHZW5hYmxlZBgB",
+            "IAEoCEgAiAEBEi4KIW1pbl9pbnRlcnJ1cHRpb25fZHVyYXRpb25fc2Vjb25k",
+            "cxgCIAEoAkgBiAEBEiMKFm1pbl9pbnRlcnJ1cHRpb25fd29yZHMYAyABKAVI",
+            "AogBARIvCiJmYWxzZV9pbnRlcnJ1cHRpb25fdGltZW91dF9zZWNvbmRzGAQg",
+            "ASgCSAOIAQESLAofcmVzdW1lX2FmdGVyX2ZhbHNlX2ludGVycnVwdGlvbhgF",
+            "IAEoCEgEiAEBEhwKD2JhY2tvZmZfc2Vjb25kcxgGIAEoAkgFiAEBEiwKH2Zp",
+            "cnN0X21lc3NhZ2VfcHJvdGVjdGVkX3NlY29uZHMYByABKAJIBogBARIxCiR0",
+            "cmFuc2NyaWJlX29uX2Rpc2FibGVkX2ludGVycnVwdGlvbnMYCCABKAhIB4gB",
+            "AUIKCghfZW5hYmxlZEIkCiJfbWluX2ludGVycnVwdGlvbl9kdXJhdGlvbl9z",
+            "ZWNvbmRzQhkKF19taW5faW50ZXJydXB0aW9uX3dvcmRzQiUKI19mYWxzZV9p",
+            "bnRlcnJ1cHRpb25fdGltZW91dF9zZWNvbmRzQiIKIF9yZXN1bWVfYWZ0ZXJf",
+            "ZmFsc2VfaW50ZXJydXB0aW9uQhIKEF9iYWNrb2ZmX3NlY29uZHNCIgogX2Zp",
+            "cnN0X21lc3NhZ2VfcHJvdGVjdGVkX3NlY29uZHNCJwolX3RyYW5zY3JpYmVf",
+            "b25fZGlzYWJsZWRfaW50ZXJydXB0aW9ucyL/AgoUUmVzcG9uc2VUaW1pbmdD",
+            "b25maWcSIQoUdHVybl90aW1lb3V0X3NlY29uZHMYASABKAJIAIgBARItCiBz",
+            "aWxlbmNlX2VuZF9jYWxsX3RpbWVvdXRfc2Vjb25kcxgCIAEoAkgBiAEBEjsK",
+            "E3NvZnRfdGltZW91dF9jb25maWcYAyABKAsyHi5vbmRld28udnRzaS5Tb2Z0",
+            "VGltZW91dENvbmZpZxIqCh1wcmVlbXB0aXZlX2dlbmVyYXRpb25fZW5hYmxl",
+            "ZBgEIAEoCEgCiAEBEioKHXQyc19jaHVua2VkX3N0cmVhbWluZ19lbmFibGVk",
+            "GAUgASgISAOIAQFCFwoVX3R1cm5fdGltZW91dF9zZWNvbmRzQiMKIV9zaWxl",
+            "bmNlX2VuZF9jYWxsX3RpbWVvdXRfc2Vjb25kc0IgCh5fcHJlZW1wdGl2ZV9n",
+            "ZW5lcmF0aW9uX2VuYWJsZWRCIAoeX3Qyc19jaHVua2VkX3N0cmVhbWluZ19l",
+            "bmFibGVkIo8BChFTb2Z0VGltZW91dENvbmZpZxIcCg90aW1lb3V0X3NlY29u",
+            "ZHMYASABKAJIAIgBARIQCghtZXNzYWdlcxgCIAMoCRIfChJtYXhfcGVyX2dl",
+            "bmVyYXRpb24YAyABKAVIAYgBAUISChBfdGltZW91dF9zZWNvbmRzQhUKE19t",
+            "YXhfcGVyX2dlbmVyYXRpb24i/gsKH0Fuc3dlcmluZ01hY2hpbmVEZXRlY3Rp",
+            "b25Db25maWcSEwoGYWN0aXZlGAEgASgISACIAQESSwoGYWN0aW9uGAIgASgO",
+            "MjYub25kZXdvLnZ0c2kuQW5zd2VyaW5nTWFjaGluZURldGVjdGlvbkNvbmZp",
+            "Zy5BbWRBY3Rpb25IAYgBARJVCgtzZW5zaXRpdml0eRgDIAEoDjI7Lm9uZGV3",
+            "by52dHNpLkFuc3dlcmluZ01hY2hpbmVEZXRlY3Rpb25Db25maWcuQW1kU2Vu",
+            "c2l0aXZpdHlIAogBARIhChRtYXhfZGVjaXNpb25fdGltZV9tcxgEIAEoBUgD",
+            "iAEBEiAKE21heF9tYWNoaW5lX3dhaXRfbXMYBSABKAVIBIgBARIoChtiZWVw",
+            "X3dhaXRfYWZ0ZXJfZ3JlZXRpbmdfbXMYBiABKAVIBYgBARIfChJpbml0aWFs",
+            "X3NpbGVuY2VfbXMYByABKAVIBogBARIiChVtYXhfaHVtYW5fZ3JlZXRpbmdf",
+            "bXMYCCABKAVIB4gBARIkChdncmVldGluZ19lbmRfc2lsZW5jZV9tcxgJIAEo",
+            "BUgIiAEBEiIKFWJlZXBfZGV0ZWN0aW9uX2FjdGl2ZRgKIAEoCEgJiAEBEiIK",
+            "GmFkZGl0aW9uYWxfbWFjaGluZV9waHJhc2VzGAsgAygJEiAKGGFkZGl0aW9u",
+            "YWxfaHVtYW5fcGhyYXNlcxgMIAMoCRIbCg5oYW5nX3VwX29uX2ZheBgNIAEo",
+            "CEgKiAEBEiwKH2hhbmdfdXBfb25fbmV0d29ya19hbm5vdW5jZW1lbnQYDiAB",
+            "KAhIC4gBARIbCg5oYW5nX3VwX29uX2l2chgPIAEoCEgMiAEBEiYKGWhhbmdf",
+            "dXBfb25fY2FsbF9zY3JlZW5pbmcYECABKAhIDYgBARIhChR2b2ljZV9tZXNz",
+            "YWdlX2ludGVudBgRIAEoCUgOiAEBEisKHnZvaWNlX21lc3NhZ2VfbWF4X2Jl",
+            "ZXBfd2FpdF9tcxgSIAEoBUgPiAEBEiUKGHZvaWNlX21lc3NhZ2VfdGltZW91",
+            "dF9tcxgTIAEoBUgQiAEBEiUKGGtleXdvcmRfZGV0ZWN0aW9uX2FjdGl2ZRgU",
+            "IAEoCEgRiAEBEiUKGGNhZGVuY2VfZGV0ZWN0aW9uX2FjdGl2ZRgVIAEoCEgS",
+            "iAEBIl4KCUFtZEFjdGlvbhIaChZBTURfQUNUSU9OX1VOU1BFQ0lGSUVEEAAS",
+            "CwoHSEFOR19VUBABEg8KC0RFVEVDVF9PTkxZEAISFwoTTEVBVkVfVk9JQ0Vf",
+            "TUVTU0FHRRADIlAKDkFtZFNlbnNpdGl2aXR5Eh8KG0FNRF9TRU5TSVRJVklU",
+            "WV9VTlNQRUNJRklFRBAAEgcKA0xPVxABEgoKBk1FRElVTRACEggKBEhJR0gQ",
+            "A0IJCgdfYWN0aXZlQgkKB19hY3Rpb25CDgoMX3NlbnNpdGl2aXR5QhcKFV9t",
+            "YXhfZGVjaXNpb25fdGltZV9tc0IWChRfbWF4X21hY2hpbmVfd2FpdF9tc0Ie",
+            "ChxfYmVlcF93YWl0X2FmdGVyX2dyZWV0aW5nX21zQhUKE19pbml0aWFsX3Np",
+            "bGVuY2VfbXNCGAoWX21heF9odW1hbl9ncmVldGluZ19tc0IaChhfZ3JlZXRp",
+            "bmdfZW5kX3NpbGVuY2VfbXNCGAoWX2JlZXBfZGV0ZWN0aW9uX2FjdGl2ZUIR",
+            "Cg9faGFuZ191cF9vbl9mYXhCIgogX2hhbmdfdXBfb25fbmV0d29ya19hbm5v",
+            "dW5jZW1lbnRCEQoPX2hhbmdfdXBfb25faXZyQhwKGl9oYW5nX3VwX29uX2Nh",
+            "bGxfc2NyZWVuaW5nQhcKFV92b2ljZV9tZXNzYWdlX2ludGVudEIhCh9fdm9p",
+            "Y2VfbWVzc2FnZV9tYXhfYmVlcF93YWl0X21zQhsKGV92b2ljZV9tZXNzYWdl",
+            "X3RpbWVvdXRfbXNCGwoZX2tleXdvcmRfZGV0ZWN0aW9uX2FjdGl2ZUIbChlf",
+            "Y2FkZW5jZV9kZXRlY3Rpb25fYWN0aXZlIigKDVNpcEJhc2VDb25maWcSFwoP",
+            "c2lwX3NpbV92ZXJzaW9uGAEgASgJIs8BCg9TaXBDYWxsZXJDb25maWcSMwoP",
+            "c2lwX2Jhc2VfY29uZmlnGAEgASgLMhoub25kZXdvLnZ0c2kuU2lwQmFzZUNv",
+            "bmZpZxIRCgljYWxsZWVfaWQYAiABKAkSQQoLc2lwX2hlYWRlcnMYAyADKAsy",
+            "LC5vbmRld28udnRzaS5TaXBDYWxsZXJDb25maWcuU2lwSGVhZGVyc0VudHJ5",
+            "GjEKD1NpcEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBIpEDCg1Dc2lWdHNpQ29uZmlnEjkKEnMydF92dHNpX2NhbGxiYWNr",
+            "cxgBIAEoCzIdLm9uZGV3by52dHNpLlMydFZ0c2lDYWxsYmFja3MSOQoSbmx1",
+            "X3Z0c2lfY2FsbGJhY2tzGAIgASgLMh0ub25kZXdvLnZ0c2kuTmx1VnRzaUNh",
+            "bGxiYWNrcxI5ChJ0MnNfdnRzaV9jYWxsYmFja3MYAyABKAsyHS5vbmRld28u",
+            "dnRzaS5UMnNWdHNpQ2FsbGJhY2tzEkgKGWF1ZGlvX29iamVjdF9zdG9yZV9j",
+            "b25maWcYBCABKAsyJS5vbmRld28udnRzaS5BdWRpb09iamVjdFN0b3JhZ2VD",
+            "b25maWcSPwoVbWVzc2FnZV9icm9rZXJfY29uZmlnGAUgASgLMiAub25kZXdv",
+            "LnZ0c2kuTWVzc2FnZUJyb2tlckNvbmZpZxImChlhY3RpdmF0ZV9jb250cm9s",
+            "X21lc3NhZ2VzGAYgASgISACIAQFCHAoaX2FjdGl2YXRlX2NvbnRyb2xfbWVz",
+            "c2FnZXMi2gEKGEF1ZGlvT2JqZWN0U3RvcmFnZUNvbmZpZxIqCh1hY3RpdmF0",
+            "ZV9hdWRpb19vYmplY3Rfc3RvcmFnZRgBIAEoCEgAiAEBEnAKL2F1ZGlvX29i",
+            "amVjdF9zdG9yYWdlX3NlcnZpY2VzX2FjdGl2YXRpb25fY29uZmlnGAIgASgL",
+            "Mjcub25kZXdvLnZ0c2kuQXVkaW9PYmplY3RTdG9yYWdlU2VydmljZXNBY3Rp",
+            "dmF0aW9uQ29uZmlnQiAKHl9hY3RpdmF0ZV9hdWRpb19vYmplY3Rfc3RvcmFn",
+            "ZSKEAQoqQXVkaW9PYmplY3RTdG9yYWdlU2VydmljZXNBY3RpdmF0aW9uQ29u",
+            "ZmlnEhkKDGFjdGl2YXRlX3MydBgBIAEoCEgAiAEBEhkKDGFjdGl2YXRlX3Qy",
+            "cxgCIAEoCEgBiAEBQg8KDV9hY3RpdmF0ZV9zMnRCDwoNX2FjdGl2YXRlX3Qy",
+            "cyKQAgoTTWVzc2FnZUJyb2tlckNvbmZpZxIkChdhY3RpdmF0ZV9tZXNzYWdl",
+            "X2Jyb2tlchgBIAEoCEgBiAEBEmUKKW1lc3NhZ2VfYnJva2VyX3NlcnZpY2Vz",
+            "X2FjdGl2YXRpb25fY29uZmlnGAIgASgLMjIub25kZXdvLnZ0c2kuTWVzc2Fn",
+            "ZUJyb2tlclNlcnZpY2VzQWN0aXZhdGlvbkNvbmZpZxI3ChByYWJiaXRfbXFf",
+            "Y29uZmlnGAMgASgLMhsub25kZXdvLnZ0c2kuUmFiYml0TXFDb25maWdIAEIX",
+            "ChVtZXNzYWdlX2Jyb2tlcl9jb25maWdCGgoYX2FjdGl2YXRlX21lc3NhZ2Vf",
+            "YnJva2VyItcBCiVNZXNzYWdlQnJva2VyU2VydmljZXNBY3RpdmF0aW9uQ29u",
+            "ZmlnEhkKDGFjdGl2YXRlX3MydBgBIAEoCEgAiAEBEhkKDGFjdGl2YXRlX25s",
+            "dRgCIAEoCEgBiAEBEhkKDGFjdGl2YXRlX3QycxgDIAEoCEgCiAEBEhkKDGFj",
+            "dGl2YXRlX3NpcBgEIAEoCEgDiAEBQg8KDV9hY3RpdmF0ZV9zMnRCDwoNX2Fj",
+            "dGl2YXRlX25sdUIPCg1fYWN0aXZhdGVfdDJzQg8KDV9hY3RpdmF0ZV9zaXAi",
+            "XAoOUmFiYml0TXFDb25maWcSDAoEaG9zdBgBIAEoCRIMCgRwb3J0GAIgASgF",
+            "Eg4KBnBvcnRfMhgDIAEoBRIMCgR1c2VyGAQgASgJEhAKCHBhc3N3b3JkGAUg",
+            "ASgJIkkKEFMydFZ0c2lDYWxsYmFja3MSGQoRcHJlX3MydF9jYWxsYmFja3MY",
+            "ASADKAkSGgoScG9zdF9zMnRfY2FsbGJhY2tzGAIgAygJIkkKEE5sdVZ0c2lD",
+            "YWxsYmFja3MSGQoRcHJlX25sdV9jYWxsYmFja3MYASADKAkSGgoScG9zdF9u",
+            "bHVfY2FsbGJhY2tzGAIgAygJIkkKEFQyc1Z0c2lDYWxsYmFja3MSGQoRcHJl",
+            "X3Qyc19jYWxsYmFja3MYASADKAkSGgoScG9zdF90MnNfY2FsbGJhY2tzGAIg",
+            "AygJIqMBCghMaXN0ZW5lchIMCgRuYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgC",
+            "IAEoCRIzCg9zaXBfYmFzZV9jb25maWcYAyABKAsyGi5vbmRld28udnRzaS5T",
+            "aXBCYXNlQ29uZmlnEkEKFmNvbW1vbl9zZXJ2aWNlc19jb25maWcYBCABKAsy",
+            "IS5vbmRld28udnRzaS5Db21tb25TZXJ2aWNlc0NvbmZpZyKlAQoGQ2FsbGVy",
+            "EgwKBG5hbWUYASABKAkSEQoJY2FsbF9uYW1lGAIgASgJEjcKEXNpcF9jYWxs",
+            "ZXJfY29uZmlnGAMgASgLMhwub25kZXdvLnZ0c2kuU2lwQ2FsbGVyQ29uZmln",
+            "EkEKFmNvbW1vbl9zZXJ2aWNlc19jb25maWcYBCABKAsyIS5vbmRld28udnRz",
+            "aS5Db21tb25TZXJ2aWNlc0NvbmZpZyKpAQoUU3RhcnRMaXN0ZW5lclJlcXVl",
+            "c3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSMwoPc2lwX2Jhc2VfY29u",
+            "ZmlnGAIgASgLMhoub25kZXdvLnZ0c2kuU2lwQmFzZUNvbmZpZxJBChZjb21t",
+            "b25fc2VydmljZXNfY29uZmlnGAMgASgLMiEub25kZXdvLnZ0c2kuQ29tbW9u",
+            "U2VydmljZXNDb25maWcicgoVU3RhcnRMaXN0ZW5lclJlc3BvbnNlEhkKEXZ0",
+            "c2lfcHJvamVjdF9uYW1lGAEgASgJEicKCGxpc3RlbmVyGAIgASgLMhUub25k",
+            "ZXdvLnZ0c2kuTGlzdGVuZXISFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSKJAQoV",
+            "U3RhcnRMaXN0ZW5lcnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEg",
+            "ASgJEjwKEWxpc3RlbmVyX3JlcXVlc3RzGAIgAygLMiEub25kZXdvLnZ0c2ku",
+            "U3RhcnRMaXN0ZW5lclJlcXVlc3QSFwoPaWRlbXBvdGVuY3lfa2V5GAMgASgJ",
+            "IooBChZTdGFydExpc3RlbmVyc1Jlc3BvbnNlEhkKEXZ0c2lfcHJvamVjdF9u",
+            "YW1lGAEgASgJEj4KEmxpc3RlbmVyX3Jlc3BvbnNlcxgCIAMoCzIiLm9uZGV3",
+            "by52dHNpLlN0YXJ0TGlzdGVuZXJSZXNwb25zZRIVCg1lcnJvcl9tZXNzYWdl",
+            "GAMgASgJIqsBChJTdGFydENhbGxlclJlcXVlc3QSGQoRdnRzaV9wcm9qZWN0",
+            "X25hbWUYASABKAkSNwoRc2lwX2NhbGxlcl9jb25maWcYAiABKAsyHC5vbmRl",
+            "d28udnRzaS5TaXBDYWxsZXJDb25maWcSQQoWY29tbW9uX3NlcnZpY2VzX2Nv",
+            "bmZpZxgDIAEoCzIhLm9uZGV3by52dHNpLkNvbW1vblNlcnZpY2VzQ29uZmln",
+            "ImwKE1N0YXJ0Q2FsbGVyUmVzcG9uc2USGQoRdnRzaV9wcm9qZWN0X25hbWUY",
+            "ASABKAkSIwoGY2FsbGVyGAIgASgLMhMub25kZXdvLnZ0c2kuQ2FsbGVyEhUK",
+            "DWVycm9yX21lc3NhZ2UYAyABKAkingEKE1N0YXJ0Q2FsbGVyc1JlcXVlc3QS",
+            "GQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSOAoPY2FsbGVyX3JlcXVlc3Rz",
+            "GAIgAygLMh8ub25kZXdvLnZ0c2kuU3RhcnRDYWxsZXJSZXF1ZXN0EhcKD2lk",
+            "ZW1wb3RlbmN5X2tleRgEIAEoCUoECAMQBFITY2FtcGFpZ25fYXNzaWdubWVu",
+            "dCKvAQoUU3RhcnRDYWxsZXJzUmVzcG9uc2USGQoRdnRzaV9wcm9qZWN0X25h",
+            "bWUYASABKAkSOgoQY2FsbGVyX3Jlc3BvbnNlcxgCIAMoCzIgLm9uZGV3by52",
+            "dHNpLlN0YXJ0Q2FsbGVyUmVzcG9uc2USFQoNZXJyb3JfbWVzc2FnZRgDIAEo",
+            "CUoECAQQBUoECAUQBlIIY2FtcGFpZ25SE2NhbXBhaWduX2NhbGxfbmFtZXMi",
+            "lAEKEkxpc3RDYWxsZXJzUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgB",
+            "IAEoCRIXCgpwYWdlX3Rva2VuGAIgASgJSACIAQESLQoJY2FsbF92aWV3GAMg",
+            "ASgOMhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdIAYgBAUINCgtfcGFnZV90b2tl",
+            "bkIMCgpfY2FsbF92aWV3IlQKE0xpc3RDYWxsZXJzUmVzcG9uc2USJAoHY2Fs",
+            "bGVycxgBIAMoCzITLm9uZGV3by52dHNpLkNhbGxlchIXCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAkieAoQR2V0Q2FsbGVyUmVxdWVzdBIZChF2dHNpX3Byb2pl",
+            "Y3RfbmFtZRgBIAEoCRIMCgRuYW1lGAIgASgJEi0KCWNhbGxfdmlldxgDIAEo",
+            "DjIVLm9uZGV3by52dHNpLkNhbGxWaWV3SACIAQFCDAoKX2NhbGxfdmlldyKW",
+            "AQoUTGlzdExpc3RlbmVyc1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUY",
+            "ASABKAkSFwoKcGFnZV90b2tlbhgCIAEoCUgAiAEBEi0KCWNhbGxfdmlldxgD",
+            "IAEoDjIVLm9uZGV3by52dHNpLkNhbGxWaWV3SAGIAQFCDQoLX3BhZ2VfdG9r",
+            "ZW5CDAoKX2NhbGxfdmlldyJaChVMaXN0TGlzdGVuZXJzUmVzcG9uc2USKAoJ",
+            "bGlzdGVuZXJzGAEgAygLMhUub25kZXdvLnZ0c2kuTGlzdGVuZXISFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJInoKEkdldExpc3RlbmVyUmVxdWVzdBIZChF2",
             "dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIMCgRuYW1lGAIgASgJEi0KCWNhbGxf",
             "dmlldxgDIAEoDjIVLm9uZGV3by52dHNpLkNhbGxWaWV3SACIAQFCDAoKX2Nh",
-            "bGxfdmlldyLTAQobTGlzdFNjaGVkdWxlZENhbGxlcnNSZXF1ZXN0EhkKEXZ0",
-            "c2lfcHJvamVjdF9uYW1lGAEgASgJEhcKCnBhZ2VfdG9rZW4YAiABKAlIAIgB",
-            "ARItCgljYWxsX3ZpZXcYAyABKA4yFS5vbmRld28udnRzaS5DYWxsVmlld0gB",
-            "iAEBEjQKCHN0YXR1c2VzGAQgAygOMiIub25kZXdvLnZ0c2kuU2NoZWR1bGVk",
-            "Q2FsbGVyU3RhdHVzQg0KC19wYWdlX3Rva2VuQgwKCl9jYWxsX3ZpZXcicAoc",
-            "TGlzdFNjaGVkdWxlZENhbGxlcnNSZXNwb25zZRI3ChFzY2hlZHVsZWRfY2Fs",
-            "bGVycxgBIAMoCzIcLm9uZGV3by52dHNpLlNjaGVkdWxlZENhbGxlchIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkiRwocQ2FuY2VsU2NoZWR1bGVkQ2FsbGVy",
-            "UmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIMCgRuYW1lGAIg",
-            "ASgJIosBCh1DYW5jZWxTY2hlZHVsZWRDYWxsZXJSZXNwb25zZRIMCgRuYW1l",
-            "GAEgASgJEjIKBnN0YXR1cxgCIAEoDjIiLm9uZGV3by52dHNpLlNjaGVkdWxl",
-            "ZENhbGxlclN0YXR1cxIRCgljYW5jZWxsZWQYAyABKAgSFQoNZXJyb3JfbWVz",
-            "c2FnZRgEIAEoCSI/Cg9TdG9wQ2FsbFJlcXVlc3QSGQoRdnRzaV9wcm9qZWN0",
-            "X25hbWUYASABKAkSEQoJY2FsbF9uYW1lGAIgASgJIlcKEFN0b3BDYWxsUmVz",
-            "cG9uc2USGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSEQoJY2FsbF9uYW1l",
-            "GAIgASgJEhUKDWVycm9yX21lc3NhZ2UYAyABKAkiQQoQU3RvcENhbGxzUmVx",
-            "dWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRISCgpjYWxsX25hbWVz",
-            "GAIgAygJImYKEVN0b3BDYWxsc1Jlc3BvbnNlEjoKE3N0b3BfY2FsbF9yZXNw",
-            "b25zZXMYASADKAsyHS5vbmRld28udnRzaS5TdG9wQ2FsbFJlc3BvbnNlEhUK",
-            "DWVycm9yX21lc3NhZ2UYAiABKAkiMAoTU3RvcEFsbENhbGxzUmVxdWVzdBIZ",
-            "ChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCSJYChNUcmFuc2ZlckNhbGxSZXF1",
-            "ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgC",
-            "IAEoCRITCgt0cmFuc2Zlcl9pZBgDIAEoCSJwChRUcmFuc2ZlckNhbGxSZXNw",
-            "b25zZRIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCgljYWxsX25hbWUY",
-            "AiABKAkSEwoLdHJhbnNmZXJfaWQYAyABKAkSFQoNZXJyb3JfbWVzc2FnZRgE",
-            "IAEoCSJzChRUcmFuc2ZlckNhbGxzUmVxdWVzdBIZChF2dHNpX3Byb2plY3Rf",
-            "bmFtZRgBIAEoCRJAChZ0cmFuc2Zlcl9jYWxsX3JlcXVlc3RzGAIgAygLMiAu",
-            "b25kZXdvLnZ0c2kuVHJhbnNmZXJDYWxsUmVxdWVzdCKNAQoVVHJhbnNmZXJD",
-            "YWxsc1Jlc3BvbnNlEhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEkIKF3Ry",
-            "YW5zZmVyX2NhbGxfcmVzcG9uc2VzGAIgAygLMiEub25kZXdvLnZ0c2kuVHJh",
-            "bnNmZXJDYWxsUmVzcG9uc2USFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSJ7Cg5H",
-            "ZXRDYWxsUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCglj",
-            "YWxsX25hbWUYAiABKAkSLQoJY2FsbF92aWV3GAMgASgOMhUub25kZXdvLnZ0",
-            "c2kuQ2FsbFZpZXdIAIgBAUIMCgpfY2FsbF92aWV3IuQGCgRDYWxsEgwKBG5h",
-            "bWUYASABKAkSEwoLc2lwX2FjY291bnQYAiABKAkSFgoOY29udGFpbmVyX25h",
-            "bWUYAyABKAkSKAoJY2FsbF90eXBlGAQgASgOMhUub25kZXdvLnZ0c2kuQ2Fs",
-            "bFR5cGUSFAoMcGhvbmVfbnVtYmVyGAUgASgJEi4KCnN0YXJ0X3RpbWUYBiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAcg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5Cg9zaXBfc3RhdHVz",
-            "X3R5cGUYCCABKA4yIC5vbmRld28uc2lwLlNpcFN0YXR1cy5TdGF0dXNUeXBl",
-            "Ei4KCnNpcF9zdGF0dXMYCSABKAsyFS5vbmRld28uc2lwLlNpcFN0YXR1c0gA",
-            "iAEBEkUKEnNpcF9zdGF0dXNfaGlzdG9yeRgKIAEoCzIkLm9uZGV3by5zaXAu",
-            "U2lwU3RhdHVzSGlzdG9yeVJlc3BvbnNlSAGIAQESQAoRc2VydmljZXNfc3Rh",
-            "dHVzZXMYCyABKAsyIC5vbmRld28udnRzaS5BbGxTZXJ2aWNlc1N0YXR1c2Vz",
-            "SAKIAQESDgoGYWN0aXZlGAwgASgIEhkKEXZ0c2lfcHJvamVjdF9uYW1lGA0g",
-            "ASgJEkYKFmNvbW1vbl9zZXJ2aWNlc19jb25maWcYDiABKAsyIS5vbmRld28u",
-            "dnRzaS5Db21tb25TZXJ2aWNlc0NvbmZpZ0gDiAEBEhUKCHNpcF9wb3J0GA8g",
-            "ASgFSASIAQESFQoIY3NpX3BvcnQYECABKAVIBYgBARIdChBubHVfc2Vzc2lv",
-            "bl9uYW1lGBEgASgJSAaIAQESOwoJcGxhdGZvcm1zGBIgASgOMiMub25kZXdv",
-            "Lm5sdS5JbnRlbnQuTWVzc2FnZS5QbGF0Zm9ybUgHiAEBQg0KC19zaXBfc3Rh",
-            "dHVzQhUKE19zaXBfc3RhdHVzX2hpc3RvcnlCFAoSX3NlcnZpY2VzX3N0YXR1",
-            "c2VzQhkKF19jb21tb25fc2VydmljZXNfY29uZmlnQgsKCV9zaXBfcG9ydEIL",
-            "CglfY3NpX3BvcnRCEwoRX25sdV9zZXNzaW9uX25hbWVCDAoKX3BsYXRmb3Jt",
-            "cyL5BAoKQ2FsbEZpbHRlchISCgpjYWxsX25hbWVzGAEgAygJEhkKEW5sdV9z",
-            "ZXNzaW9uX25hbWVzGAIgAygJEhQKDHNpcF9hY2NvdW50cxgDIAMoCRIVCg1w",
-            "aG9uZV9udW1iZXJzGAQgAygJEhcKD2NvbnRhaW5lcl9uYW1lcxgFIAMoCRIR",
-            "CglzaXBfcG9ydHMYBiADKAkSEQoJY3NpX3BvcnRzGAcgAygJEikKCmNhbGxf",
-            "dHlwZXMYCCADKA4yFS5vbmRld28udnRzaS5DYWxsVHlwZRI6ChBzaXBfc3Rh",
-            "dHVzX3R5cGVzGAkgAygOMiAub25kZXdvLnNpcC5TaXBTdGF0dXMuU3RhdHVz",
-            "VHlwZRIxCgtjYWxsX3N0YXR1cxgKIAEoDjIXLm9uZGV3by52dHNpLkNhbGxT",
-            "dGF0dXNIAIgBARIzCgpzdGFydF90aW1lGAsgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEgBiAEBEjEKCGVuZF90aW1lGAwgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEgCiAEBEh4KEWR1cmF0aW9uX2luX3NfbWlu",
-            "GA0gASgCSAOIAQESHgoRZHVyYXRpb25faW5fc19tYXgYDiABKAJIBIgBARI2",
-            "CglwbGF0Zm9ybXMYDyADKA4yIy5vbmRld28ubmx1LkludGVudC5NZXNzYWdl",
-            "LlBsYXRmb3JtQg4KDF9jYWxsX3N0YXR1c0INCgtfc3RhcnRfdGltZUILCglf",
-            "ZW5kX3RpbWVCFAoSX2R1cmF0aW9uX2luX3NfbWluQhQKEl9kdXJhdGlvbl9p",
-            "bl9zX21heCLVAQoQTGlzdENhbGxzUmVxdWVzdBIZChF2dHNpX3Byb2plY3Rf",
-            "bmFtZRgBIAEoCRItCgljYWxsX3ZpZXcYAiABKA4yFS5vbmRld28udnRzaS5D",
-            "YWxsVmlld0gAiAEBEjEKC2NhbGxfZmlsdGVyGAMgASgLMhcub25kZXdvLnZ0",
-            "c2kuQ2FsbEZpbHRlckgBiAEBEhcKCnBhZ2VfdG9rZW4YBCABKAlIAogBAUIM",
-            "CgpfY2FsbF92aWV3Qg4KDF9jYWxsX2ZpbHRlckINCgtfcGFnZV90b2tlbiJO",
-            "ChFMaXN0Q2FsbHNSZXNwb25zZRIgCgVjYWxscxgBIAMoCzIRLm9uZGV3by52",
-            "dHNpLkNhbGwSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIooCChNBbGxTZXJ2",
-            "aWNlc1N0YXR1c2VzEi4KCnN0YXR1c19zaXAYASABKAsyGi5vbmRld28udnRz",
-            "aS5TZXJ2aWNlU3RhdHVzEjMKD3N0YXR1c19hc3RlcmlzaxgCIAEoCzIaLm9u",
-            "ZGV3by52dHNpLlNlcnZpY2VTdGF0dXMSLgoKc3RhdHVzX25sdRgDIAEoCzIa",
-            "Lm9uZGV3by52dHNpLlNlcnZpY2VTdGF0dXMSLgoKc3RhdHVzX3N0dBgEIAEo",
-            "CzIaLm9uZGV3by52dHNpLlNlcnZpY2VTdGF0dXMSLgoKc3RhdHVzX3R0cxgF",
-            "IAEoCzIaLm9uZGV3by52dHNpLlNlcnZpY2VTdGF0dXMiNwoNU2VydmljZVN0",
-            "YXR1cxIPCgdoZWFsdGh5GAEgASgIEhUKDWVycm9yX21lc3NhZ2UYAiABKAkq",
-            "9gEKFVNjaGVkdWxlZENhbGxlclN0YXR1cxInCiNTQ0hFRFVMRURfQ0FMTEVS",
-            "X1NUQVRVU19VTlNQRUNJRklFRBAAEiMKH1NDSEVEVUxFRF9DQUxMRVJfU1RB",
-            "VFVTX1BFTkRJTkcQARIiCh5TQ0hFRFVMRURfQ0FMTEVSX1NUQVRVU19GSVJJ",
-            "TkcQAhIgChxTQ0hFRFVMRURfQ0FMTEVSX1NUQVRVU19ET05FEAMSIgoeU0NI",
-            "RURVTEVEX0NBTExFUl9TVEFUVVNfRkFJTEVEEAQSJQohU0NIRURVTEVEX0NB",
-            "TExFUl9TVEFUVVNfQ0FOQ0VMTEVEEAUqLgoIQ2FsbFZpZXcSCwoHTUlOSU1V",
-            "TRAAEgsKB1NIQUxMT1cQARIICgRGVUxMEAIqWwoKQ2FsbFN0YXR1cxIbChdD",
-            "QUxMX1NUQVRVU19VTlNQRUNJRklFRBAAEhYKEkNBTExfU1RBVFVTX0FDVElW",
-            "RRABEhgKFENBTExfU1RBVFVTX0lOQUNUSVZFEAIqRAoIQ2FsbFR5cGUSCAoE",
-            "Qk9USBAAEgwKCExJU1RFTkVSEAESCgoGQ0FMTEVSEAISFAoQU0NIRURVTEVE",
-            "X0NBTExFUhADMvgSCgVDYWxscxJQCgtTdGFydENhbGxlchIfLm9uZGV3by52",
-            "dHNpLlN0YXJ0Q2FsbGVyUmVxdWVzdBogLm9uZGV3by52dHNpLlN0YXJ0Q2Fs",
-            "bGVyUmVzcG9uc2USUwoMU3RhcnRDYWxsZXJzEiAub25kZXdvLnZ0c2kuU3Rh",
-            "cnRDYWxsZXJzUmVxdWVzdBohLm9uZGV3by52dHNpLlN0YXJ0Q2FsbGVyc1Jl",
-            "c3BvbnNlElAKC0xpc3RDYWxsZXJzEh8ub25kZXdvLnZ0c2kuTGlzdENhbGxl",
-            "cnNSZXF1ZXN0GiAub25kZXdvLnZ0c2kuTGlzdENhbGxlcnNSZXNwb25zZRI/",
-            "CglHZXRDYWxsZXISHS5vbmRld28udnRzaS5HZXRDYWxsZXJSZXF1ZXN0GhMu",
-            "b25kZXdvLnZ0c2kuQ2FsbGVyElMKDERlbGV0ZUNhbGxlchIgLm9uZGV3by52",
-            "dHNpLkRlbGV0ZUNhbGxlclJlcXVlc3QaIS5vbmRld28udnRzaS5EZWxldGVD",
-            "YWxsZXJSZXNwb25zZRJWCg1EZWxldGVDYWxsZXJzEiEub25kZXdvLnZ0c2ku",
-            "RGVsZXRlQ2FsbGVyc1JlcXVlc3QaIi5vbmRld28udnRzaS5EZWxldGVDYWxs",
-            "ZXJzUmVzcG9uc2USTQoKU3RvcENhbGxlchIeLm9uZGV3by52dHNpLlN0b3BD",
-            "YWxsZXJSZXF1ZXN0Gh8ub25kZXdvLnZ0c2kuU3RvcENhbGxlclJlc3BvbnNl",
-            "ElAKC1N0b3BDYWxsZXJzEh8ub25kZXdvLnZ0c2kuU3RvcENhbGxlcnNSZXF1",
-            "ZXN0GiAub25kZXdvLnZ0c2kuU3RvcENhbGxlcnNSZXNwb25zZRJWCg1TdGFy",
-            "dExpc3RlbmVyEiEub25kZXdvLnZ0c2kuU3RhcnRMaXN0ZW5lclJlcXVlc3Qa",
-            "Ii5vbmRld28udnRzaS5TdGFydExpc3RlbmVyUmVzcG9uc2USWQoOU3RhcnRM",
-            "aXN0ZW5lcnMSIi5vbmRld28udnRzaS5TdGFydExpc3RlbmVyc1JlcXVlc3Qa",
-            "Iy5vbmRld28udnRzaS5TdGFydExpc3RlbmVyc1Jlc3BvbnNlElMKDFN0b3BM",
-            "aXN0ZW5lchIgLm9uZGV3by52dHNpLlN0b3BMaXN0ZW5lclJlcXVlc3QaIS5v",
-            "bmRld28udnRzaS5TdG9wTGlzdGVuZXJSZXNwb25zZRJWCg1TdG9wTGlzdGVu",
-            "ZXJzEiEub25kZXdvLnZ0c2kuU3RvcExpc3RlbmVyc1JlcXVlc3QaIi5vbmRl",
-            "d28udnRzaS5TdG9wTGlzdGVuZXJzUmVzcG9uc2USVgoNTGlzdExpc3RlbmVy",
-            "cxIhLm9uZGV3by52dHNpLkxpc3RMaXN0ZW5lcnNSZXF1ZXN0GiIub25kZXdv",
-            "LnZ0c2kuTGlzdExpc3RlbmVyc1Jlc3BvbnNlEkUKC0dldExpc3RlbmVyEh8u",
-            "b25kZXdvLnZ0c2kuR2V0TGlzdGVuZXJSZXF1ZXN0GhUub25kZXdvLnZ0c2ku",
-            "TGlzdGVuZXISWQoORGVsZXRlTGlzdGVuZXISIi5vbmRld28udnRzaS5EZWxl",
-            "dGVMaXN0ZW5lclJlcXVlc3QaIy5vbmRld28udnRzaS5EZWxldGVMaXN0ZW5l",
-            "clJlc3BvbnNlElwKD0RlbGV0ZUxpc3RlbmVycxIjLm9uZGV3by52dHNpLkRl",
-            "bGV0ZUxpc3RlbmVyc1JlcXVlc3QaJC5vbmRld28udnRzaS5EZWxldGVMaXN0",
-            "ZW5lcnNSZXNwb25zZRJrChRTdGFydFNjaGVkdWxlZENhbGxlchIoLm9uZGV3",
-            "by52dHNpLlN0YXJ0U2NoZWR1bGVkQ2FsbGVyUmVxdWVzdBopLm9uZGV3by52",
-            "dHNpLlN0YXJ0U2NoZWR1bGVkQ2FsbGVyUmVzcG9uc2USbgoVU3RhcnRTY2hl",
-            "ZHVsZWRDYWxsZXJzEikub25kZXdvLnZ0c2kuU3RhcnRTY2hlZHVsZWRDYWxs",
-            "ZXJzUmVxdWVzdBoqLm9uZGV3by52dHNpLlN0YXJ0U2NoZWR1bGVkQ2FsbGVy",
-            "c1Jlc3BvbnNlEloKEkdldFNjaGVkdWxlZENhbGxlchImLm9uZGV3by52dHNp",
-            "LkdldFNjaGVkdWxlZENhbGxlclJlcXVlc3QaHC5vbmRld28udnRzaS5TY2hl",
-            "ZHVsZWRDYWxsZXISawoUTGlzdFNjaGVkdWxlZENhbGxlcnMSKC5vbmRld28u",
-            "dnRzaS5MaXN0U2NoZWR1bGVkQ2FsbGVyc1JlcXVlc3QaKS5vbmRld28udnRz",
-            "aS5MaXN0U2NoZWR1bGVkQ2FsbGVyc1Jlc3BvbnNlEm4KFUNhbmNlbFNjaGVk",
-            "dWxlZENhbGxlchIpLm9uZGV3by52dHNpLkNhbmNlbFNjaGVkdWxlZENhbGxl",
-            "clJlcXVlc3QaKi5vbmRld28udnRzaS5DYW5jZWxTY2hlZHVsZWRDYWxsZXJS",
-            "ZXNwb25zZRJHCghTdG9wQ2FsbBIcLm9uZGV3by52dHNpLlN0b3BDYWxsUmVx",
-            "dWVzdBodLm9uZGV3by52dHNpLlN0b3BDYWxsUmVzcG9uc2USSgoJU3RvcENh",
-            "bGxzEh0ub25kZXdvLnZ0c2kuU3RvcENhbGxzUmVxdWVzdBoeLm9uZGV3by52",
-            "dHNpLlN0b3BDYWxsc1Jlc3BvbnNlElAKDFN0b3BBbGxDYWxscxIgLm9uZGV3",
-            "by52dHNpLlN0b3BBbGxDYWxsc1JlcXVlc3QaHi5vbmRld28udnRzaS5TdG9w",
-            "Q2FsbHNSZXNwb25zZRJTCgxUcmFuc2ZlckNhbGwSIC5vbmRld28udnRzaS5U",
-            "cmFuc2ZlckNhbGxSZXF1ZXN0GiEub25kZXdvLnZ0c2kuVHJhbnNmZXJDYWxs",
-            "UmVzcG9uc2USVgoNVHJhbnNmZXJDYWxscxIhLm9uZGV3by52dHNpLlRyYW5z",
-            "ZmVyQ2FsbHNSZXF1ZXN0GiIub25kZXdvLnZ0c2kuVHJhbnNmZXJDYWxsc1Jl",
-            "c3BvbnNlEjkKB0dldENhbGwSGy5vbmRld28udnRzaS5HZXRDYWxsUmVxdWVz",
-            "dBoRLm9uZGV3by52dHNpLkNhbGwSSgoJTGlzdENhbGxzEh0ub25kZXdvLnZ0",
-            "c2kuTGlzdENhbGxzUmVxdWVzdBoeLm9uZGV3by52dHNpLkxpc3RDYWxsc1Jl",
-            "c3BvbnNlYgZwcm90bzM="));
+            "bGxfdmlldyIjChNTdG9wTGlzdGVuZXJSZXF1ZXN0EgwKBG5hbWUYASABKAki",
+            "OwoUU3RvcExpc3RlbmVyUmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJv",
+            "cl9tZXNzYWdlGAIgASgJIiUKFFN0b3BMaXN0ZW5lcnNSZXF1ZXN0Eg0KBW5h",
+            "bWVzGAEgAygJInIKFVN0b3BMaXN0ZW5lcnNSZXNwb25zZRJCChdzdG9wX2xp",
+            "c3RlbmVyX3Jlc3BvbnNlcxgBIAMoCzIhLm9uZGV3by52dHNpLlN0b3BMaXN0",
+            "ZW5lclJlc3BvbnNlEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiIQoRU3RvcENh",
+            "bGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSI5ChJTdG9wQ2FsbGVyUmVzcG9u",
+            "c2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAIgASgJIiMKElN0",
+            "b3BDYWxsZXJzUmVxdWVzdBINCgVuYW1lcxgBIAMoCSJsChNTdG9wQ2FsbGVy",
+            "c1Jlc3BvbnNlEj4KFXN0b3BfY2FsbGVyX3Jlc3BvbnNlcxgBIAMoCzIfLm9u",
+            "ZGV3by52dHNpLlN0b3BDYWxsZXJSZXNwb25zZRIVCg1lcnJvcl9tZXNzYWdl",
+            "GAIgASgJIiUKFURlbGV0ZUxpc3RlbmVyUmVxdWVzdBIMCgRuYW1lGAEgASgJ",
+            "Ij0KFkRlbGV0ZUxpc3RlbmVyUmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1l",
+            "cnJvcl9tZXNzYWdlGAIgASgJIicKFkRlbGV0ZUxpc3RlbmVyc1JlcXVlc3QS",
+            "DQoFbmFtZXMYASADKAkieAoXRGVsZXRlTGlzdGVuZXJzUmVzcG9uc2USRgoZ",
+            "ZGVsZXRlX2xpc3RlbmVyX3Jlc3BvbnNlcxgBIAMoCzIjLm9uZGV3by52dHNp",
+            "LkRlbGV0ZUxpc3RlbmVyUmVzcG9uc2USFQoNZXJyb3JfbWVzc2FnZRgCIAEo",
+            "CSIjChNEZWxldGVDYWxsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiOwoURGVs",
+            "ZXRlQ2FsbGVyUmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNz",
+            "YWdlGAIgASgJIiUKFERlbGV0ZUNhbGxlcnNSZXF1ZXN0Eg0KBW5hbWVzGAEg",
+            "AygJInIKFURlbGV0ZUNhbGxlcnNSZXNwb25zZRJCChdkZWxldGVfY2FsbGVy",
+            "X3Jlc3BvbnNlcxgBIAMoCzIhLm9uZGV3by52dHNpLkRlbGV0ZUNhbGxlclJl",
+            "c3BvbnNlEhUKDWVycm9yX21lc3NhZ2UYAiABKAkingEKG1N0YXJ0U2NoZWR1",
+            "bGVkQ2FsbGVyUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIw",
+            "CgdyZXF1ZXN0GAIgASgLMh8ub25kZXdvLnZ0c2kuU3RhcnRDYWxsZXJSZXF1",
+            "ZXN0EjIKDnNjaGVkdWxlZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcCK6AQocU3RhcnRTY2hlZHVsZWRDYWxsZXJzUmVxdWVzdBIZ",
+            "ChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRJLChlzY2hlZHVsZWRfY2FsbGVy",
+            "X3JlcXVlc3RzGAIgAygLMigub25kZXdvLnZ0c2kuU3RhcnRTY2hlZHVsZWRD",
+            "YWxsZXJSZXF1ZXN0EhcKD2lkZW1wb3RlbmN5X2tleRgEIAEoCUoECAMQBFIT",
+            "Y2FtcGFpZ25fYXNzaWdubWVudCK0AQodU3RhcnRTY2hlZHVsZWRDYWxsZXJz",
+            "UmVzcG9uc2USGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSTQoac2NoZWR1",
+            "bGVkX2NhbGxlcl9yZXNwb25zZXMYAiADKAsyKS5vbmRld28udnRzaS5TdGFy",
+            "dFNjaGVkdWxlZENhbGxlclJlc3BvbnNlSgQIAxAESgQIBBAFUghjYW1wYWln",
+            "blITY2FtcGFpZ25fY2FsbF9uYW1lcyLJAQobQWRkQ2FsbGVyc1RvQ2FtcGFp",
+            "Z25SZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEjgKD2NhbGxl",
+            "cl9yZXF1ZXN0cxgCIAMoCzIfLm9uZGV3by52dHNpLlN0YXJ0Q2FsbGVyUmVx",
+            "dWVzdBI8ChNjYW1wYWlnbl9hc3NpZ25tZW50GAMgASgLMh8ub25kZXdvLnZ0",
+            "c2kuQ2FtcGFpZ25Bc3NpZ25tZW50EhcKD2lkZW1wb3RlbmN5X2tleRgEIAEo",
+            "CSJ/ChxBZGRDYWxsZXJzVG9DYW1wYWlnblJlc3BvbnNlEhkKEXZ0c2lfcHJv",
+            "amVjdF9uYW1lGAEgASgJEicKCGNhbXBhaWduGAIgASgLMhUub25kZXdvLnZ0",
+            "c2kuQ2FtcGFpZ24SGwoTY2FtcGFpZ25fY2FsbF9uYW1lcxgDIAMoCSLlAQok",
+            "QWRkU2NoZWR1bGVkQ2FsbGVyc1RvQ2FtcGFpZ25SZXF1ZXN0EhkKEXZ0c2lf",
+            "cHJvamVjdF9uYW1lGAEgASgJEksKGXNjaGVkdWxlZF9jYWxsZXJfcmVxdWVz",
+            "dHMYAiADKAsyKC5vbmRld28udnRzaS5TdGFydFNjaGVkdWxlZENhbGxlclJl",
+            "cXVlc3QSPAoTY2FtcGFpZ25fYXNzaWdubWVudBgDIAEoCzIfLm9uZGV3by52",
+            "dHNpLkNhbXBhaWduQXNzaWdubWVudBIXCg9pZGVtcG90ZW5jeV9rZXkYBCAB",
+            "KAki1wEKJUFkZFNjaGVkdWxlZENhbGxlcnNUb0NhbXBhaWduUmVzcG9uc2US",
+            "GQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSTQoac2NoZWR1bGVkX2NhbGxl",
+            "cl9yZXNwb25zZXMYAiADKAsyKS5vbmRld28udnRzaS5TdGFydFNjaGVkdWxl",
+            "ZENhbGxlclJlc3BvbnNlEicKCGNhbXBhaWduGAMgASgLMhUub25kZXdvLnZ0",
+            "c2kuQ2FtcGFpZ24SGwoTY2FtcGFpZ25fY2FsbF9uYW1lcxgEIAMoCSKIAQoc",
+            "U3RhcnRTY2hlZHVsZWRDYWxsZXJSZXNwb25zZRIZChF2dHNpX3Byb2plY3Rf",
+            "bmFtZRgBIAEoCRI2ChBzY2hlZHVsZWRfY2FsbGVyGAIgASgLMhwub25kZXdv",
+            "LnZ0c2kuU2NoZWR1bGVkQ2FsbGVyEhUKDWVycm9yX21lc3NhZ2UYAyABKAki",
+            "7QMKD1NjaGVkdWxlZENhbGxlchIMCgRuYW1lGAEgASgJEhEKCWNhbGxfbmFt",
+            "ZRgCIAEoCRIuCgpzaXBfY29uZmlnGAMgASgLMhoub25kZXdvLnZ0c2kuU2lw",
+            "QmFzZUNvbmZpZxJBChZjb21tb25fc2VydmljZXNfY29uZmlnGAQgASgLMiEu",
+            "b25kZXdvLnZ0c2kuQ29tbW9uU2VydmljZXNDb25maWcSMgoOc2NoZWR1bGVk",
+            "X3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjcKEXNp",
+            "cF9jYWxsZXJfY29uZmlnGAYgASgLMhwub25kZXdvLnZ0c2kuU2lwQ2FsbGVy",
+            "Q29uZmlnEjIKBnN0YXR1cxgHIAEoDjIiLm9uZGV3by52dHNpLlNjaGVkdWxl",
+            "ZENhbGxlclN0YXR1cxIZChF2dHNpX3Byb2plY3RfbmFtZRgIIAEoCRIuCgpj",
+            "cmVhdGVkX2F0GAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
+            "CghmaXJlZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "FQoNZXJyb3JfbWVzc2FnZRgLIAEoCRIVCg1jYW1wYWlnbl9uYW1lGAwgASgJ",
+            "IoEBChlHZXRTY2hlZHVsZWRDYWxsZXJSZXF1ZXN0EhkKEXZ0c2lfcHJvamVj",
+            "dF9uYW1lGAEgASgJEgwKBG5hbWUYAiABKAkSLQoJY2FsbF92aWV3GAMgASgO",
+            "MhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdIAIgBAUIMCgpfY2FsbF92aWV3ItMB",
+            "ChtMaXN0U2NoZWR1bGVkQ2FsbGVyc1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0",
+            "X25hbWUYASABKAkSFwoKcGFnZV90b2tlbhgCIAEoCUgAiAEBEi0KCWNhbGxf",
+            "dmlldxgDIAEoDjIVLm9uZGV3by52dHNpLkNhbGxWaWV3SAGIAQESNAoIc3Rh",
+            "dHVzZXMYBCADKA4yIi5vbmRld28udnRzaS5TY2hlZHVsZWRDYWxsZXJTdGF0",
+            "dXNCDQoLX3BhZ2VfdG9rZW5CDAoKX2NhbGxfdmlldyJwChxMaXN0U2NoZWR1",
+            "bGVkQ2FsbGVyc1Jlc3BvbnNlEjcKEXNjaGVkdWxlZF9jYWxsZXJzGAEgAygL",
+            "Mhwub25kZXdvLnZ0c2kuU2NoZWR1bGVkQ2FsbGVyEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSJHChxDYW5jZWxTY2hlZHVsZWRDYWxsZXJSZXF1ZXN0EhkK",
+            "EXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEgwKBG5hbWUYAiABKAkiiwEKHUNh",
+            "bmNlbFNjaGVkdWxlZENhbGxlclJlc3BvbnNlEgwKBG5hbWUYASABKAkSMgoG",
+            "c3RhdHVzGAIgASgOMiIub25kZXdvLnZ0c2kuU2NoZWR1bGVkQ2FsbGVyU3Rh",
+            "dHVzEhEKCWNhbmNlbGxlZBgDIAEoCBIVCg1lcnJvcl9tZXNzYWdlGAQgASgJ",
+            "Ij8KD1N0b3BDYWxsUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEo",
+            "CRIRCgljYWxsX25hbWUYAiABKAkiVwoQU3RvcENhbGxSZXNwb25zZRIZChF2",
+            "dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCgljYWxsX25hbWUYAiABKAkSFQoN",
+            "ZXJyb3JfbWVzc2FnZRgDIAEoCSJBChBTdG9wQ2FsbHNSZXF1ZXN0EhkKEXZ0",
+            "c2lfcHJvamVjdF9uYW1lGAEgASgJEhIKCmNhbGxfbmFtZXMYAiADKAkiZgoR",
+            "U3RvcENhbGxzUmVzcG9uc2USOgoTc3RvcF9jYWxsX3Jlc3BvbnNlcxgBIAMo",
+            "CzIdLm9uZGV3by52dHNpLlN0b3BDYWxsUmVzcG9uc2USFQoNZXJyb3JfbWVz",
+            "c2FnZRgCIAEoCSIwChNTdG9wQWxsQ2FsbHNSZXF1ZXN0EhkKEXZ0c2lfcHJv",
+            "amVjdF9uYW1lGAEgASgJIrICChNUcmFuc2ZlckNhbGxSZXF1ZXN0EhkKEXZ0",
+            "c2lfcHJvamVjdF9uYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgCIAEoCRITCgt0",
+            "cmFuc2Zlcl9pZBgDIAEoCRInCgZ0YXJnZXQYBCABKAsyFy5vbmRld28udnRz",
+            "aS5DYWxsVGFyZ2V0EicKBG1vZGUYBSABKA4yGS5vbmRld28udnRzaS5UcmFu",
+            "c2Zlck1vZGUSPgoHaGVhZGVycxgGIAMoCzItLm9uZGV3by52dHNpLlRyYW5z",
+            "ZmVyQ2FsbFJlcXVlc3QuSGVhZGVyc0VudHJ5EhYKDnJpbmdfdGltZW91dF9z",
+            "GAcgASgFGi4KDEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIqUBCgpDYWxsVGFyZ2V0EhYKDHBob25lX251bWJlchgBIAEo",
+            "CUgAEiAKFnNvZnRwaG9uZV9hY2NvdW50X25hbWUYAiABKAlIABIXCg1saXN0",
+            "ZW5lcl9uYW1lGAMgASgJSAASOgoObGlzdGVuZXJfcXVldWUYBCABKAsyIC5v",
+            "bmRld28udnRzaS5MaXN0ZW5lclF1ZXVlVGFyZ2V0SABCCAoGdGFyZ2V0IhUK",
+            "E0xpc3RlbmVyUXVldWVUYXJnZXQi6QEKFFRyYW5zZmVyQ2FsbFJlc3BvbnNl",
+            "EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEhEKCWNhbGxfbmFtZRgCIAEo",
+            "CRITCgt0cmFuc2Zlcl9pZBgDIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAQgASgJ",
+            "Ei0KB291dGNvbWUYBSABKA4yHC5vbmRld28udnRzaS5UcmFuc2Zlck91dGNv",
+            "bWUSFwoPcmVzb2x2ZWRfdGFyZ2V0GAYgASgJEhkKEXNpcF9yZXNwb25zZV9j",
+            "b2RlGAcgASgFEhQKDGVycm9yX3JlYXNvbhgIIAEoCSLzAQoSQ2FsbFRyYW5z",
+            "ZmVyUmVjb3JkEicKBnRhcmdldBgBIAEoCzIXLm9uZGV3by52dHNpLkNhbGxU",
+            "YXJnZXQSFwoPcmVzb2x2ZWRfdGFyZ2V0GAIgASgJEicKBG1vZGUYAyABKA4y",
+            "GS5vbmRld28udnRzaS5UcmFuc2Zlck1vZGUSLQoHb3V0Y29tZRgEIAEoDjIc",
+            "Lm9uZGV3by52dHNpLlRyYW5zZmVyT3V0Y29tZRIZChFzaXBfcmVzcG9uc2Vf",
+            "Y29kZRgFIAEoBRIoCgR0aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcCKCAQoVQ2FsbE1lZGlhQ29udHJvbFN0YXRlEhEKCWJvdF9tdXRl",
+            "ZBgBIAEoCBIYChBsaXN0ZW5pbmdfcGF1c2VkGAIgASgIEh8KF2Nvbm5lY3Rl",
+            "ZF9hdWRpb19zdHJlYW1zGAMgASgFEhsKE2pvaW5lZF9wYXJ0aWNpcGFudHMY",
+            "BCABKAUiiQMKD0NhbGxQYXJ0aWNpcGFudBIWCg5wYXJ0aWNpcGFudF9pZBgB",
+            "IAEoCRIeChZzb2Z0cGhvbmVfYWNjb3VudF9uYW1lGAIgASgJEioKBG1vZGUY",
+            "AyABKA4yHC5vbmRld28udnRzaS5QYXJ0aWNpcGFudE1vZGUSLAoFc3RhdGUY",
+            "BCABKA4yHS5vbmRld28udnRzaS5QYXJ0aWNpcGFudFN0YXRlEi4KCmludml0",
+            "ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi0KCWpv",
+            "aW5lZF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoH",
+            "bGVmdF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoK",
+            "ZW5kX3JlYXNvbhgIIAEoCRISCgppbnZpdGVkX2J5GAkgASgJEjAKCmJvdF9w",
+            "b2xpY3kYCiABKA4yHC5vbmRld28udnRzaS5Cb3RQb2xpY3lPbkpvaW4ijQIK",
+            "E0ludml0ZVRvQ2FsbFJlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASAB",
+            "KAkSEQoJY2FsbF9uYW1lGAIgASgJEh4KFnNvZnRwaG9uZV9hY2NvdW50X25h",
+            "bWUYAyABKAkSKgoEbW9kZRgEIAEoDjIcLm9uZGV3by52dHNpLlBhcnRpY2lw",
+            "YW50TW9kZRIWCg5yaW5nX3RpbWVvdXRfcxgFIAEoBRIwCgpib3RfcG9saWN5",
+            "GAYgASgOMhwub25kZXdvLnZ0c2kuQm90UG9saWN5T25Kb2luEh4KFmNhbGxl",
+            "cl9pZF9kaXNwbGF5X25hbWUYByABKAkSEgoKcmVxdWVzdF9pZBgIIAEoCSKO",
+            "AQoUSW52aXRlVG9DYWxsUmVzcG9uc2USGQoRdnRzaV9wcm9qZWN0X25hbWUY",
+            "ASABKAkSEQoJY2FsbF9uYW1lGAIgASgJEjEKC3BhcnRpY2lwYW50GAMgASgL",
+            "Mhwub25kZXdvLnZ0c2kuQ2FsbFBhcnRpY2lwYW50EhUKDWVycm9yX21lc3Nh",
+            "Z2UYBCABKAkiZAocUmVtb3ZlQ2FsbFBhcnRpY2lwYW50UmVxdWVzdBIZChF2",
+            "dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCgljYWxsX25hbWUYAiABKAkSFgoO",
+            "cGFydGljaXBhbnRfaWQYAyABKAkilwEKHVJlbW92ZUNhbGxQYXJ0aWNpcGFu",
+            "dFJlc3BvbnNlEhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEhEKCWNhbGxf",
+            "bmFtZRgCIAEoCRIxCgtwYXJ0aWNpcGFudBgDIAEoCzIcLm9uZGV3by52dHNp",
+            "LkNhbGxQYXJ0aWNpcGFudBIVCg1lcnJvcl9tZXNzYWdlGAQgASgJIrIBChpT",
+            "ZXRDYWxsTWVkaWFDb250cm9sUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFt",
+            "ZRgBIAEoCRIRCgljYWxsX25hbWUYAiABKAkSMAoJYm90X3ZvaWNlGAMgASgO",
+            "Mh0ub25kZXdvLnZ0c2kuQ2FsbE1lZGlhU2V0dGluZxI0Cg1ib3RfbGlzdGVu",
+            "aW5nGAQgASgOMh0ub25kZXdvLnZ0c2kuQ2FsbE1lZGlhU2V0dGluZyKmAQob",
+            "U2V0Q2FsbE1lZGlhQ29udHJvbFJlc3BvbnNlEhkKEXZ0c2lfcHJvamVjdF9u",
+            "YW1lGAEgASgJEhEKCWNhbGxfbmFtZRgCIAEoCRIxCgVzdGF0ZRgDIAEoCzIi",
+            "Lm9uZGV3by52dHNpLkNhbGxNZWRpYUNvbnRyb2xTdGF0ZRIPCgdjaGFuZ2Vk",
+            "GAQgASgIEhUKDWVycm9yX21lc3NhZ2UYBSABKAkisgEKFVN0cmVhbUNhbGxB",
+            "dWRpb0NvbmZpZxIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCgljYWxs",
+            "X25hbWUYAiABKAkSKAoEbW9kZRgDIAEoDjIaLm9uZGV3by52dHNpLkNhbGxB",
+            "dWRpb01vZGUSFgoOc2FtcGxlX3JhdGVfaHoYBCABKAUSEQoJdGFrZV9vdmVy",
+            "GAUgASgIEhYKDm1heF9kdXJhdGlvbl9zGAYgASgFIjUKDkNhbGxBdWRpb0Zy",
+            "YW1lEhEKCXBjbV9zMTZsZRgBIAEoDBIQCghzZXF1ZW5jZRgCIAEoBCKeAQoW",
+            "U3RyZWFtQ2FsbEF1ZGlvUmVxdWVzdBI0CgZjb25maWcYASABKAsyIi5vbmRl",
+            "d28udnRzaS5TdHJlYW1DYWxsQXVkaW9Db25maWdIABIsCgVhdWRpbxgCIAEo",
+            "CzIbLm9uZGV3by52dHNpLkNhbGxBdWRpb0ZyYW1lSAASFQoLYWdlbnRfbXV0",
+            "ZWQYAyABKAhIAEIJCgdyZXF1ZXN0InkKEENhbGxBdWRpb1N0YXJ0ZWQSEQoJ",
+            "c3RyZWFtX2lkGAEgASgJEhYKDnNhbXBsZV9yYXRlX2h6GAIgASgFEhAKCGZy",
+            "YW1lX21zGAMgASgFEigKBG1vZGUYBCABKA4yGi5vbmRld28udnRzaS5DYWxs",
+            "QXVkaW9Nb2RlIoMBCg5DYWxsQXVkaW9TdGF0cxITCgtmcmFtZXNfc2VudBgB",
+            "IAEoBBIWCg5mcmFtZXNfZHJvcHBlZBgCIAEoBBIXCg9mcmFtZXNfcmVjZWl2",
+            "ZWQYAyABKAQSEQoJdW5kZXJydW5zGAQgASgEEhgKEGZyYW1lc19kaXNjYXJk",
+            "ZWQYBSABKAQiUQoOQ2FsbEF1ZGlvRW5kZWQSLwoGcmVhc29uGAEgASgOMh8u",
+            "b25kZXdvLnZ0c2kuQ2FsbEF1ZGlvRW5kUmVhc29uEg4KBmRldGFpbBgCIAEo",
+            "CSLhAQoXU3RyZWFtQ2FsbEF1ZGlvUmVzcG9uc2USMAoHc3RhcnRlZBgBIAEo",
+            "CzIdLm9uZGV3by52dHNpLkNhbGxBdWRpb1N0YXJ0ZWRIABIsCgVhdWRpbxgC",
+            "IAEoCzIbLm9uZGV3by52dHNpLkNhbGxBdWRpb0ZyYW1lSAASLAoFc3RhdHMY",
+            "AyABKAsyGy5vbmRld28udnRzaS5DYWxsQXVkaW9TdGF0c0gAEiwKBWVuZGVk",
+            "GAQgASgLMhsub25kZXdvLnZ0c2kuQ2FsbEF1ZGlvRW5kZWRIAEIKCghyZXNw",
+            "b25zZSJMChZMaXN0ZW5DYWxsQXVkaW9SZXF1ZXN0EjIKBmNvbmZpZxgBIAEo",
+            "CzIiLm9uZGV3by52dHNpLlN0cmVhbUNhbGxBdWRpb0NvbmZpZyJzChRUcmFu",
+            "c2ZlckNhbGxzUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRJA",
+            "ChZ0cmFuc2Zlcl9jYWxsX3JlcXVlc3RzGAIgAygLMiAub25kZXdvLnZ0c2ku",
+            "VHJhbnNmZXJDYWxsUmVxdWVzdCKNAQoVVHJhbnNmZXJDYWxsc1Jlc3BvbnNl",
+            "EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEkIKF3RyYW5zZmVyX2NhbGxf",
+            "cmVzcG9uc2VzGAIgAygLMiEub25kZXdvLnZ0c2kuVHJhbnNmZXJDYWxsUmVz",
+            "cG9uc2USFQoNZXJyb3JfbWVzc2FnZRgDIAEoCSJ7Cg5HZXRDYWxsUmVxdWVz",
+            "dBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIRCgljYWxsX25hbWUYAiAB",
+            "KAkSLQoJY2FsbF92aWV3GAMgASgOMhUub25kZXdvLnZ0c2kuQ2FsbFZpZXdI",
+            "AIgBAUIMCgpfY2FsbF92aWV3IvAJCgRDYWxsEgwKBG5hbWUYASABKAkSEwoL",
+            "c2lwX2FjY291bnQYAiABKAkSFgoOY29udGFpbmVyX25hbWUYAyABKAkSKAoJ",
+            "Y2FsbF90eXBlGAQgASgOMhUub25kZXdvLnZ0c2kuQ2FsbFR5cGUSFAoMcGhv",
+            "bmVfbnVtYmVyGAUgASgJEi4KCnN0YXJ0X3RpbWUYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAcgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBI5Cg9zaXBfc3RhdHVzX3R5cGUYCCABKA4y",
+            "IC5vbmRld28uc2lwLlNpcFN0YXR1cy5TdGF0dXNUeXBlEi4KCnNpcF9zdGF0",
+            "dXMYCSABKAsyFS5vbmRld28uc2lwLlNpcFN0YXR1c0gAiAEBEkUKEnNpcF9z",
+            "dGF0dXNfaGlzdG9yeRgKIAEoCzIkLm9uZGV3by5zaXAuU2lwU3RhdHVzSGlz",
+            "dG9yeVJlc3BvbnNlSAGIAQESQAoRc2VydmljZXNfc3RhdHVzZXMYCyABKAsy",
+            "IC5vbmRld28udnRzaS5BbGxTZXJ2aWNlc1N0YXR1c2VzSAKIAQESDgoGYWN0",
+            "aXZlGAwgASgIEhkKEXZ0c2lfcHJvamVjdF9uYW1lGA0gASgJEkYKFmNvbW1v",
+            "bl9zZXJ2aWNlc19jb25maWcYDiABKAsyIS5vbmRld28udnRzaS5Db21tb25T",
+            "ZXJ2aWNlc0NvbmZpZ0gDiAEBEhUKCHNpcF9wb3J0GA8gASgFSASIAQESFQoI",
+            "Y3NpX3BvcnQYECABKAVIBYgBARIdChBubHVfc2Vzc2lvbl9uYW1lGBEgASgJ",
+            "SAaIAQESOwoJcGxhdGZvcm1zGBIgASgOMiMub25kZXdvLm5sdS5JbnRlbnQu",
+            "TWVzc2FnZS5QbGF0Zm9ybUgHiAEBEh8KEnJlZGlhbF9yZWNvbW1lbmRlZBgT",
+            "IAEoCEgIiAEBEhoKDXJlZGlhbF9yZWFzb24YFCABKAlICYgBARI4CithbnN3",
+            "ZXJpbmdfbWFjaGluZV9kZXRlY3Rpb25fZW5kX2Rlc2NyaXB0aW9uGBUgASgJ",
+            "SAqIAQESOQoNbWVkaWFfY29udHJvbBgWIAEoCzIiLm9uZGV3by52dHNpLkNh",
+            "bGxNZWRpYUNvbnRyb2xTdGF0ZRIyCgxwYXJ0aWNpcGFudHMYFyADKAsyHC5v",
+            "bmRld28udnRzaS5DYWxsUGFydGljaXBhbnQSNgoNbGFzdF90cmFuc2ZlchgY",
+            "IAEoCzIfLm9uZGV3by52dHNpLkNhbGxUcmFuc2ZlclJlY29yZBITCgtzaXBf",
+            "Y2FsbF9pZBgZIAEoCUINCgtfc2lwX3N0YXR1c0IVChNfc2lwX3N0YXR1c19o",
+            "aXN0b3J5QhQKEl9zZXJ2aWNlc19zdGF0dXNlc0IZChdfY29tbW9uX3NlcnZp",
+            "Y2VzX2NvbmZpZ0ILCglfc2lwX3BvcnRCCwoJX2NzaV9wb3J0QhMKEV9ubHVf",
+            "c2Vzc2lvbl9uYW1lQgwKCl9wbGF0Zm9ybXNCFQoTX3JlZGlhbF9yZWNvbW1l",
+            "bmRlZEIQCg5fcmVkaWFsX3JlYXNvbkIuCixfYW5zd2VyaW5nX21hY2hpbmVf",
+            "ZGV0ZWN0aW9uX2VuZF9kZXNjcmlwdGlvbiL5BAoKQ2FsbEZpbHRlchISCgpj",
+            "YWxsX25hbWVzGAEgAygJEhkKEW5sdV9zZXNzaW9uX25hbWVzGAIgAygJEhQK",
+            "DHNpcF9hY2NvdW50cxgDIAMoCRIVCg1waG9uZV9udW1iZXJzGAQgAygJEhcK",
+            "D2NvbnRhaW5lcl9uYW1lcxgFIAMoCRIRCglzaXBfcG9ydHMYBiADKAkSEQoJ",
+            "Y3NpX3BvcnRzGAcgAygJEikKCmNhbGxfdHlwZXMYCCADKA4yFS5vbmRld28u",
+            "dnRzaS5DYWxsVHlwZRI6ChBzaXBfc3RhdHVzX3R5cGVzGAkgAygOMiAub25k",
+            "ZXdvLnNpcC5TaXBTdGF0dXMuU3RhdHVzVHlwZRIxCgtjYWxsX3N0YXR1cxgK",
+            "IAEoDjIXLm9uZGV3by52dHNpLkNhbGxTdGF0dXNIAIgBARIzCgpzdGFydF90",
+            "aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBiAEBEjEK",
+            "CGVuZF90aW1lGAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgC",
+            "iAEBEh4KEWR1cmF0aW9uX2luX3NfbWluGA0gASgCSAOIAQESHgoRZHVyYXRp",
+            "b25faW5fc19tYXgYDiABKAJIBIgBARI2CglwbGF0Zm9ybXMYDyADKA4yIy5v",
+            "bmRld28ubmx1LkludGVudC5NZXNzYWdlLlBsYXRmb3JtQg4KDF9jYWxsX3N0",
+            "YXR1c0INCgtfc3RhcnRfdGltZUILCglfZW5kX3RpbWVCFAoSX2R1cmF0aW9u",
+            "X2luX3NfbWluQhQKEl9kdXJhdGlvbl9pbl9zX21heCLVAQoQTGlzdENhbGxz",
+            "UmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRItCgljYWxsX3Zp",
+            "ZXcYAiABKA4yFS5vbmRld28udnRzaS5DYWxsVmlld0gAiAEBEjEKC2NhbGxf",
+            "ZmlsdGVyGAMgASgLMhcub25kZXdvLnZ0c2kuQ2FsbEZpbHRlckgBiAEBEhcK",
+            "CnBhZ2VfdG9rZW4YBCABKAlIAogBAUIMCgpfY2FsbF92aWV3Qg4KDF9jYWxs",
+            "X2ZpbHRlckINCgtfcGFnZV90b2tlbiJOChFMaXN0Q2FsbHNSZXNwb25zZRIg",
+            "CgVjYWxscxgBIAMoCzIRLm9uZGV3by52dHNpLkNhbGwSFwoPbmV4dF9wYWdl",
+            "X3Rva2VuGAIgASgJIooCChNBbGxTZXJ2aWNlc1N0YXR1c2VzEi4KCnN0YXR1",
+            "c19zaXAYASABKAsyGi5vbmRld28udnRzaS5TZXJ2aWNlU3RhdHVzEjMKD3N0",
+            "YXR1c19hc3RlcmlzaxgCIAEoCzIaLm9uZGV3by52dHNpLlNlcnZpY2VTdGF0",
+            "dXMSLgoKc3RhdHVzX25sdRgDIAEoCzIaLm9uZGV3by52dHNpLlNlcnZpY2VT",
+            "dGF0dXMSLgoKc3RhdHVzX3N0dBgEIAEoCzIaLm9uZGV3by52dHNpLlNlcnZp",
+            "Y2VTdGF0dXMSLgoKc3RhdHVzX3R0cxgFIAEoCzIaLm9uZGV3by52dHNpLlNl",
+            "cnZpY2VTdGF0dXMiNwoNU2VydmljZVN0YXR1cxIPCgdoZWFsdGh5GAEgASgI",
+            "EhUKDWVycm9yX21lc3NhZ2UYAiABKAki7gMKEkNhbGxSZXNvdXJjZVN0YXR1",
+            "cxIVCg1yZXNvdXJjZV9uYW1lGAEgASgJEigKCWNhbGxfdHlwZRgCIAEoDjIV",
+            "Lm9uZGV3by52dHNpLkNhbGxUeXBlEhEKCWNhbGxfbmFtZRgDIAEoCRIOCgZh",
+            "Y3RpdmUYBCABKAgSOQoPc2lwX3N0YXR1c190eXBlGAUgASgOMiAub25kZXdv",
+            "LnNpcC5TaXBTdGF0dXMuU3RhdHVzVHlwZRIeChZzaXBfc3RhdHVzX2Rlc2Ny",
+            "aXB0aW9uGAYgASgJEi4KCnN0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIUCgxwaG9uZV9udW1iZXIYCSABKAkSQwoXc2No",
+            "ZWR1bGVkX2NhbGxlcl9zdGF0dXMYCiABKA4yIi5vbmRld28udnRzaS5TY2hl",
+            "ZHVsZWRDYWxsZXJTdGF0dXMSMgoOc2NoZWR1bGVkX3RpbWUYCyABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWNhbXBhaWduX25hbWUYDCAB",
+            "KAkSFQoNZXJyb3JfbWVzc2FnZRgNIAEoCSJhChlTdHJlYW1DYWxsZXJTdGF0",
+            "dXNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEhQKDGNhbGxl",
+            "cl9uYW1lcxgCIAMoCRITCgthY3RpdmVfb25seRgDIAEoCCJlChtTdHJlYW1M",
+            "aXN0ZW5lclN0YXR1c1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASAB",
+            "KAkSFgoObGlzdGVuZXJfbmFtZXMYAiADKAkSEwoLYWN0aXZlX29ubHkYAyAB",
+            "KAgirAEKIlN0cmVhbVNjaGVkdWxlZENhbGxlclN0YXR1c1JlcXVlc3QSGQoR",
+            "dnRzaV9wcm9qZWN0X25hbWUYASABKAkSHgoWc2NoZWR1bGVkX2NhbGxlcl9u",
+            "YW1lcxgCIAMoCRI0CghzdGF0dXNlcxgDIAMoDjIiLm9uZGV3by52dHNpLlNj",
+            "aGVkdWxlZENhbGxlclN0YXR1cxIVCg1jYW1wYWlnbl9uYW1lGAQgASgJIrcB",
+            "CiBTdHJlYW1DYWxsUmVzb3VyY2VTdGF0dXNSZXNwb25zZRIxCghzdGF0dXNl",
+            "cxgBIAMoCzIfLm9uZGV3by52dHNpLkNhbGxSZXNvdXJjZVN0YXR1cxIeChZy",
+            "ZW1vdmVkX3Jlc291cmNlX25hbWVzGAIgAygJEhAKCHNuYXBzaG90GAMgASgI",
+            "EhoKEnNuYXBzaG90X3RydW5jYXRlZBgEIAEoCBISCgplbmRfcmVhc29uGAUg",
+            "ASgJKvYBChVTY2hlZHVsZWRDYWxsZXJTdGF0dXMSJwojU0NIRURVTEVEX0NB",
+            "TExFUl9TVEFUVVNfVU5TUEVDSUZJRUQQABIjCh9TQ0hFRFVMRURfQ0FMTEVS",
+            "X1NUQVRVU19QRU5ESU5HEAESIgoeU0NIRURVTEVEX0NBTExFUl9TVEFUVVNf",
+            "RklSSU5HEAISIAocU0NIRURVTEVEX0NBTExFUl9TVEFUVVNfRE9ORRADEiIK",
+            "HlNDSEVEVUxFRF9DQUxMRVJfU1RBVFVTX0ZBSUxFRBAEEiUKIVNDSEVEVUxF",
+            "RF9DQUxMRVJfU1RBVFVTX0NBTkNFTExFRBAFKl4KDFRyYW5zZmVyTW9kZRId",
+            "ChlUUkFOU0ZFUl9NT0RFX1VOU1BFQ0lGSUVEEAASFwoTVFJBTlNGRVJfTU9E",
+            "RV9CTElORBABEhYKElRSQU5TRkVSX01PREVfV0FSTRACKskCCg9UcmFuc2Zl",
+            "ck91dGNvbWUSIAocVFJBTlNGRVJfT1VUQ09NRV9VTlNQRUNJRklFRBAAEh0K",
+            "GVRSQU5TRkVSX09VVENPTUVfQUNDRVBURUQQARIcChhUUkFOU0ZFUl9PVVRD",
+            "T01FX1BFTkRJTkcQAhIjCh9UUkFOU0ZFUl9PVVRDT01FX1RBUkdFVF9JTlZB",
+            "TElEEAMSIwofVFJBTlNGRVJfT1VUQ09NRV9SRUZFUl9SRUpFQ1RFRBAEEhwK",
+            "GFRSQU5TRkVSX09VVENPTUVfVElNRU9VVBAFEh8KG1RSQU5TRkVSX09VVENP",
+            "TUVfQ0FMTF9FTkRFRBAGEigKJFRSQU5TRkVSX09VVENPTUVfQ0FMTF9TQ09Q",
+            "RV9NSVNNQVRDSBAHEiQKIFRSQU5TRkVSX09VVENPTUVfU0lQX1VOUkVBQ0hB",
+            "QkxFEAgqawoQQ2FsbE1lZGlhU2V0dGluZxIgChxDQUxMX01FRElBX1NFVFRJ",
+            "TkdfVU5DSEFOR0VEEAASGQoVQ0FMTF9NRURJQV9TRVRUSU5HX09OEAESGgoW",
+            "Q0FMTF9NRURJQV9TRVRUSU5HX09GRhACKnIKD1BhcnRpY2lwYW50TW9kZRIg",
+            "ChxQQVJUSUNJUEFOVF9NT0RFX1VOU1BFQ0lGSUVEEAASHwobUEFSVElDSVBB",
+            "TlRfTU9ERV9DT05GRVJFTkNFEAESHAoYUEFSVElDSVBBTlRfTU9ERV9NT05J",
+            "VE9SEAIqmAEKD0JvdFBvbGljeU9uSm9pbhIiCh5CT1RfUE9MSUNZX09OX0pP",
+            "SU5fVU5TUEVDSUZJRUQQABIcChhCT1RfUE9MSUNZX09OX0pPSU5fUEFVU0UQ",
+            "ARImCiJCT1RfUE9MSUNZX09OX0pPSU5fUEFVU0VfTElTVEVOSU5HEAISGwoX",
+            "Qk9UX1BPTElDWV9PTl9KT0lOX0tFRVAQAyqsAQoQUGFydGljaXBhbnRTdGF0",
+            "ZRIhCh1QQVJUSUNJUEFOVF9TVEFURV9VTlNQRUNJRklFRBAAEh0KGVBBUlRJ",
+            "Q0lQQU5UX1NUQVRFX1JJTkdJTkcQARIcChhQQVJUSUNJUEFOVF9TVEFURV9K",
+            "T0lORUQQAhIcChhQQVJUSUNJUEFOVF9TVEFURV9GQUlMRUQQAxIaChZQQVJU",
+            "SUNJUEFOVF9TVEFURV9MRUZUEAQqZgoNQ2FsbEF1ZGlvTW9kZRIfChtDQUxM",
+            "X0FVRElPX01PREVfVU5TUEVDSUZJRUQQABIaChZDQUxMX0FVRElPX01PREVf",
+            "TElTVEVOEAESGAoUQ0FMTF9BVURJT19NT0RFX1RBTEsQAiqlAgoSQ2FsbEF1",
+            "ZGlvRW5kUmVhc29uEiUKIUNBTExfQVVESU9fRU5EX1JFQVNPTl9VTlNQRUNJ",
+            "RklFRBAAEicKI0NBTExfQVVESU9fRU5EX1JFQVNPTl9DTElFTlRfQ0xPU0VE",
+            "EAESJAogQ0FMTF9BVURJT19FTkRfUkVBU09OX0NBTExfRU5ERUQQAhIqCiZD",
+            "QUxMX0FVRElPX0VORF9SRUFTT05fQ0FMTF9UUkFOU0ZFUlJFRBADEiYKIkNB",
+            "TExfQVVESU9fRU5EX1JFQVNPTl9NQVhfRFVSQVRJT04QBBIhCh1DQUxMX0FV",
+            "RElPX0VORF9SRUFTT05fU1RBTExFRBAFEiIKHkNBTExfQVVESU9fRU5EX1JF",
+            "QVNPTl9JTlRFUk5BTBAGKi4KCENhbGxWaWV3EgsKB01JTklNVU0QABILCgdT",
+            "SEFMTE9XEAESCAoERlVMTBACKlsKCkNhbGxTdGF0dXMSGwoXQ0FMTF9TVEFU",
+            "VVNfVU5TUEVDSUZJRUQQABIWChJDQUxMX1NUQVRVU19BQ1RJVkUQARIYChRD",
+            "QUxMX1NUQVRVU19JTkFDVElWRRACKkQKCENhbGxUeXBlEggKBEJPVEgQABIM",
+            "CghMSVNURU5FUhABEgoKBkNBTExFUhACEhQKEFNDSEVEVUxFRF9DQUxMRVIQ",
+            "AzLCGwoFQ2FsbHMSUAoLU3RhcnRDYWxsZXISHy5vbmRld28udnRzaS5TdGFy",
+            "dENhbGxlclJlcXVlc3QaIC5vbmRld28udnRzaS5TdGFydENhbGxlclJlc3Bv",
+            "bnNlElMKDFN0YXJ0Q2FsbGVycxIgLm9uZGV3by52dHNpLlN0YXJ0Q2FsbGVy",
+            "c1JlcXVlc3QaIS5vbmRld28udnRzaS5TdGFydENhbGxlcnNSZXNwb25zZRJQ",
+            "CgtMaXN0Q2FsbGVycxIfLm9uZGV3by52dHNpLkxpc3RDYWxsZXJzUmVxdWVz",
+            "dBogLm9uZGV3by52dHNpLkxpc3RDYWxsZXJzUmVzcG9uc2USPwoJR2V0Q2Fs",
+            "bGVyEh0ub25kZXdvLnZ0c2kuR2V0Q2FsbGVyUmVxdWVzdBoTLm9uZGV3by52",
+            "dHNpLkNhbGxlchJTCgxEZWxldGVDYWxsZXISIC5vbmRld28udnRzaS5EZWxl",
+            "dGVDYWxsZXJSZXF1ZXN0GiEub25kZXdvLnZ0c2kuRGVsZXRlQ2FsbGVyUmVz",
+            "cG9uc2USVgoNRGVsZXRlQ2FsbGVycxIhLm9uZGV3by52dHNpLkRlbGV0ZUNh",
+            "bGxlcnNSZXF1ZXN0GiIub25kZXdvLnZ0c2kuRGVsZXRlQ2FsbGVyc1Jlc3Bv",
+            "bnNlEk0KClN0b3BDYWxsZXISHi5vbmRld28udnRzaS5TdG9wQ2FsbGVyUmVx",
+            "dWVzdBofLm9uZGV3by52dHNpLlN0b3BDYWxsZXJSZXNwb25zZRJQCgtTdG9w",
+            "Q2FsbGVycxIfLm9uZGV3by52dHNpLlN0b3BDYWxsZXJzUmVxdWVzdBogLm9u",
+            "ZGV3by52dHNpLlN0b3BDYWxsZXJzUmVzcG9uc2USVgoNU3RhcnRMaXN0ZW5l",
+            "chIhLm9uZGV3by52dHNpLlN0YXJ0TGlzdGVuZXJSZXF1ZXN0GiIub25kZXdv",
+            "LnZ0c2kuU3RhcnRMaXN0ZW5lclJlc3BvbnNlElkKDlN0YXJ0TGlzdGVuZXJz",
+            "EiIub25kZXdvLnZ0c2kuU3RhcnRMaXN0ZW5lcnNSZXF1ZXN0GiMub25kZXdv",
+            "LnZ0c2kuU3RhcnRMaXN0ZW5lcnNSZXNwb25zZRJTCgxTdG9wTGlzdGVuZXIS",
+            "IC5vbmRld28udnRzaS5TdG9wTGlzdGVuZXJSZXF1ZXN0GiEub25kZXdvLnZ0",
+            "c2kuU3RvcExpc3RlbmVyUmVzcG9uc2USVgoNU3RvcExpc3RlbmVycxIhLm9u",
+            "ZGV3by52dHNpLlN0b3BMaXN0ZW5lcnNSZXF1ZXN0GiIub25kZXdvLnZ0c2ku",
+            "U3RvcExpc3RlbmVyc1Jlc3BvbnNlElYKDUxpc3RMaXN0ZW5lcnMSIS5vbmRl",
+            "d28udnRzaS5MaXN0TGlzdGVuZXJzUmVxdWVzdBoiLm9uZGV3by52dHNpLkxp",
+            "c3RMaXN0ZW5lcnNSZXNwb25zZRJFCgtHZXRMaXN0ZW5lchIfLm9uZGV3by52",
+            "dHNpLkdldExpc3RlbmVyUmVxdWVzdBoVLm9uZGV3by52dHNpLkxpc3RlbmVy",
+            "ElkKDkRlbGV0ZUxpc3RlbmVyEiIub25kZXdvLnZ0c2kuRGVsZXRlTGlzdGVu",
+            "ZXJSZXF1ZXN0GiMub25kZXdvLnZ0c2kuRGVsZXRlTGlzdGVuZXJSZXNwb25z",
+            "ZRJcCg9EZWxldGVMaXN0ZW5lcnMSIy5vbmRld28udnRzaS5EZWxldGVMaXN0",
+            "ZW5lcnNSZXF1ZXN0GiQub25kZXdvLnZ0c2kuRGVsZXRlTGlzdGVuZXJzUmVz",
+            "cG9uc2USawoUU3RhcnRTY2hlZHVsZWRDYWxsZXISKC5vbmRld28udnRzaS5T",
+            "dGFydFNjaGVkdWxlZENhbGxlclJlcXVlc3QaKS5vbmRld28udnRzaS5TdGFy",
+            "dFNjaGVkdWxlZENhbGxlclJlc3BvbnNlEm4KFVN0YXJ0U2NoZWR1bGVkQ2Fs",
+            "bGVycxIpLm9uZGV3by52dHNpLlN0YXJ0U2NoZWR1bGVkQ2FsbGVyc1JlcXVl",
+            "c3QaKi5vbmRld28udnRzaS5TdGFydFNjaGVkdWxlZENhbGxlcnNSZXNwb25z",
+            "ZRJrChRBZGRDYWxsZXJzVG9DYW1wYWlnbhIoLm9uZGV3by52dHNpLkFkZENh",
+            "bGxlcnNUb0NhbXBhaWduUmVxdWVzdBopLm9uZGV3by52dHNpLkFkZENhbGxl",
+            "cnNUb0NhbXBhaWduUmVzcG9uc2UShgEKHUFkZFNjaGVkdWxlZENhbGxlcnNU",
+            "b0NhbXBhaWduEjEub25kZXdvLnZ0c2kuQWRkU2NoZWR1bGVkQ2FsbGVyc1Rv",
+            "Q2FtcGFpZ25SZXF1ZXN0GjIub25kZXdvLnZ0c2kuQWRkU2NoZWR1bGVkQ2Fs",
+            "bGVyc1RvQ2FtcGFpZ25SZXNwb25zZRJaChJHZXRTY2hlZHVsZWRDYWxsZXIS",
+            "Ji5vbmRld28udnRzaS5HZXRTY2hlZHVsZWRDYWxsZXJSZXF1ZXN0Ghwub25k",
+            "ZXdvLnZ0c2kuU2NoZWR1bGVkQ2FsbGVyEmsKFExpc3RTY2hlZHVsZWRDYWxs",
+            "ZXJzEigub25kZXdvLnZ0c2kuTGlzdFNjaGVkdWxlZENhbGxlcnNSZXF1ZXN0",
+            "Gikub25kZXdvLnZ0c2kuTGlzdFNjaGVkdWxlZENhbGxlcnNSZXNwb25zZRJu",
+            "ChVDYW5jZWxTY2hlZHVsZWRDYWxsZXISKS5vbmRld28udnRzaS5DYW5jZWxT",
+            "Y2hlZHVsZWRDYWxsZXJSZXF1ZXN0Gioub25kZXdvLnZ0c2kuQ2FuY2VsU2No",
+            "ZWR1bGVkQ2FsbGVyUmVzcG9uc2USRwoIU3RvcENhbGwSHC5vbmRld28udnRz",
+            "aS5TdG9wQ2FsbFJlcXVlc3QaHS5vbmRld28udnRzaS5TdG9wQ2FsbFJlc3Bv",
+            "bnNlEkoKCVN0b3BDYWxscxIdLm9uZGV3by52dHNpLlN0b3BDYWxsc1JlcXVl",
+            "c3QaHi5vbmRld28udnRzaS5TdG9wQ2FsbHNSZXNwb25zZRJQCgxTdG9wQWxs",
+            "Q2FsbHMSIC5vbmRld28udnRzaS5TdG9wQWxsQ2FsbHNSZXF1ZXN0Gh4ub25k",
+            "ZXdvLnZ0c2kuU3RvcENhbGxzUmVzcG9uc2USUwoMVHJhbnNmZXJDYWxsEiAu",
+            "b25kZXdvLnZ0c2kuVHJhbnNmZXJDYWxsUmVxdWVzdBohLm9uZGV3by52dHNp",
+            "LlRyYW5zZmVyQ2FsbFJlc3BvbnNlElYKDVRyYW5zZmVyQ2FsbHMSIS5vbmRl",
+            "d28udnRzaS5UcmFuc2ZlckNhbGxzUmVxdWVzdBoiLm9uZGV3by52dHNpLlRy",
+            "YW5zZmVyQ2FsbHNSZXNwb25zZRI5CgdHZXRDYWxsEhsub25kZXdvLnZ0c2ku",
+            "R2V0Q2FsbFJlcXVlc3QaES5vbmRld28udnRzaS5DYWxsEkoKCUxpc3RDYWxs",
+            "cxIdLm9uZGV3by52dHNpLkxpc3RDYWxsc1JlcXVlc3QaHi5vbmRld28udnRz",
+            "aS5MaXN0Q2FsbHNSZXNwb25zZRJtChJTdHJlYW1DYWxsZXJTdGF0dXMSJi5v",
+            "bmRld28udnRzaS5TdHJlYW1DYWxsZXJTdGF0dXNSZXF1ZXN0Gi0ub25kZXdv",
+            "LnZ0c2kuU3RyZWFtQ2FsbFJlc291cmNlU3RhdHVzUmVzcG9uc2UwARJxChRT",
+            "dHJlYW1MaXN0ZW5lclN0YXR1cxIoLm9uZGV3by52dHNpLlN0cmVhbUxpc3Rl",
+            "bmVyU3RhdHVzUmVxdWVzdBotLm9uZGV3by52dHNpLlN0cmVhbUNhbGxSZXNv",
+            "dXJjZVN0YXR1c1Jlc3BvbnNlMAESfwobU3RyZWFtU2NoZWR1bGVkQ2FsbGVy",
+            "U3RhdHVzEi8ub25kZXdvLnZ0c2kuU3RyZWFtU2NoZWR1bGVkQ2FsbGVyU3Rh",
+            "dHVzUmVxdWVzdBotLm9uZGV3by52dHNpLlN0cmVhbUNhbGxSZXNvdXJjZVN0",
+            "YXR1c1Jlc3BvbnNlMAESUwoMSW52aXRlVG9DYWxsEiAub25kZXdvLnZ0c2ku",
+            "SW52aXRlVG9DYWxsUmVxdWVzdBohLm9uZGV3by52dHNpLkludml0ZVRvQ2Fs",
+            "bFJlc3BvbnNlEm4KFVJlbW92ZUNhbGxQYXJ0aWNpcGFudBIpLm9uZGV3by52",
+            "dHNpLlJlbW92ZUNhbGxQYXJ0aWNpcGFudFJlcXVlc3QaKi5vbmRld28udnRz",
+            "aS5SZW1vdmVDYWxsUGFydGljaXBhbnRSZXNwb25zZRJoChNTZXRDYWxsTWVk",
+            "aWFDb250cm9sEicub25kZXdvLnZ0c2kuU2V0Q2FsbE1lZGlhQ29udHJvbFJl",
+            "cXVlc3QaKC5vbmRld28udnRzaS5TZXRDYWxsTWVkaWFDb250cm9sUmVzcG9u",
+            "c2USYAoPU3RyZWFtQ2FsbEF1ZGlvEiMub25kZXdvLnZ0c2kuU3RyZWFtQ2Fs",
+            "bEF1ZGlvUmVxdWVzdBokLm9uZGV3by52dHNpLlN0cmVhbUNhbGxBdWRpb1Jl",
+            "c3BvbnNlKAEwARJeCg9MaXN0ZW5DYWxsQXVkaW8SIy5vbmRld28udnRzaS5M",
+            "aXN0ZW5DYWxsQXVkaW9SZXF1ZXN0GiQub25kZXdvLnZ0c2kuU3RyZWFtQ2Fs",
+            "bEF1ZGlvUmVzcG9uc2UwAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Ondewo.Nlu.IntentReflection.Descriptor, global::Ondewo.S2T.SpeechToTextReflection.Descriptor, global::Ondewo.T2S.TextToSpeechReflection.Descriptor, global::Ondewo.Sip.SipReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.ScheduledCallerStatus), typeof(global::Ondewo.Vtsi.CallView), typeof(global::Ondewo.Vtsi.CallStatus), typeof(global::Ondewo.Vtsi.CallType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Ondewo.Nlu.IntentReflection.Descriptor, global::Ondewo.S2T.SpeechToTextReflection.Descriptor, global::Ondewo.T2S.TextToSpeechReflection.Descriptor, global::Ondewo.Sip.SipReflection.Descriptor, global::Ondewo.Vtsi.CampaignsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.ScheduledCallerStatus), typeof(global::Ondewo.Vtsi.TransferMode), typeof(global::Ondewo.Vtsi.TransferOutcome), typeof(global::Ondewo.Vtsi.CallMediaSetting), typeof(global::Ondewo.Vtsi.ParticipantMode), typeof(global::Ondewo.Vtsi.BotPolicyOnJoin), typeof(global::Ondewo.Vtsi.ParticipantState), typeof(global::Ondewo.Vtsi.CallAudioMode), typeof(global::Ondewo.Vtsi.CallAudioEndReason), typeof(global::Ondewo.Vtsi.CallView), typeof(global::Ondewo.Vtsi.CallStatus), typeof(global::Ondewo.Vtsi.CallType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.BaseServiceConfig), global::Ondewo.Vtsi.BaseServiceConfig.Parser, new[]{ "Host", "Port", "GrpcCert" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Credentials), global::Ondewo.Vtsi.Credentials.Parser, new[]{ "AccountName", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.NluVtsiConfig), global::Ondewo.Vtsi.NluVtsiConfig.Parser, new[]{ "NluBaseConfig", "Credentials", "AuthToken", "AgentName", "LanguageCode", "InitialIntent", "Contexts", "HttpBasicAuthToken", "Platform" }, new[]{ "Authentication", "Platform" }, null, null, null),
@@ -387,18 +616,19 @@ namespace Ondewo.Vtsi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.S2tVtsiConfig), global::Ondewo.Vtsi.S2tVtsiConfig.Parser, new[]{ "S2TBaseConfig", "S2TTranscribeRequestConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfig), global::Ondewo.Vtsi.AsteriskConfig.Parser, new[]{ "AsteriskBaseConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CommonServicesConfig), global::Ondewo.Vtsi.CommonServicesConfig.Parser, new[]{ "S2TVtsiConfig", "NluVtsiConfig", "T2SVtsiConfig", "CsiVtsiConfig", "VoiceInteractionConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VoiceInteractionConfig), global::Ondewo.Vtsi.VoiceInteractionConfig.Parser, new[]{ "TurnDetectionConfig", "InterruptionHandlingConfig", "ResponseTimingConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig), global::Ondewo.Vtsi.TurnDetectionConfig.Parser, new[]{ "Mode", "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnEagerness", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt" }, new[]{ "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds" }, new[]{ typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode), typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InterruptionHandlingConfig), global::Ondewo.Vtsi.InterruptionHandlingConfig.Parser, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions" }, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VoiceInteractionConfig), global::Ondewo.Vtsi.VoiceInteractionConfig.Parser, new[]{ "TurnDetectionConfig", "InterruptionHandlingConfig", "ResponseTimingConfig", "AnsweringMachineDetectionConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig), global::Ondewo.Vtsi.TurnDetectionConfig.Parser, new[]{ "Mode", "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnEagerness", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt" }, new[]{ "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt" }, new[]{ typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode), typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InterruptionHandlingConfig), global::Ondewo.Vtsi.InterruptionHandlingConfig.Parser, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions" }, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ResponseTimingConfig), global::Ondewo.Vtsi.ResponseTimingConfig.Parser, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "SoftTimeoutConfig", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled" }, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftTimeoutConfig), global::Ondewo.Vtsi.SoftTimeoutConfig.Parser, new[]{ "TimeoutSeconds", "Messages", "MaxPerGeneration" }, new[]{ "TimeoutSeconds", "MaxPerGeneration" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig), global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Parser, new[]{ "Active", "Action", "Sensitivity", "MaxDecisionTimeMs", "MaxMachineWaitMs", "BeepWaitAfterGreetingMs", "InitialSilenceMs", "MaxHumanGreetingMs", "GreetingEndSilenceMs", "BeepDetectionActive", "AdditionalMachinePhrases", "AdditionalHumanPhrases", "HangUpOnFax", "HangUpOnNetworkAnnouncement", "HangUpOnIvr", "HangUpOnCallScreening", "VoiceMessageIntent", "VoiceMessageMaxBeepWaitMs", "VoiceMessageTimeoutMs", "KeywordDetectionActive", "CadenceDetectionActive" }, new[]{ "Active", "Action", "Sensitivity", "MaxDecisionTimeMs", "MaxMachineWaitMs", "BeepWaitAfterGreetingMs", "InitialSilenceMs", "MaxHumanGreetingMs", "GreetingEndSilenceMs", "BeepDetectionActive", "HangUpOnFax", "HangUpOnNetworkAnnouncement", "HangUpOnIvr", "HangUpOnCallScreening", "VoiceMessageIntent", "VoiceMessageMaxBeepWaitMs", "VoiceMessageTimeoutMs", "KeywordDetectionActive", "CadenceDetectionActive" }, new[]{ typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction), typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SipBaseConfig), global::Ondewo.Vtsi.SipBaseConfig.Parser, new[]{ "SipSimVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SipCallerConfig), global::Ondewo.Vtsi.SipCallerConfig.Parser, new[]{ "SipBaseConfig", "CalleeId", "SipHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CsiVtsiConfig), global::Ondewo.Vtsi.CsiVtsiConfig.Parser, new[]{ "S2TVtsiCallbacks", "NluVtsiCallbacks", "T2SVtsiCallbacks", "AudioObjectStoreConfig", "MessageBrokerConfig", "ActivateControlMessages" }, new[]{ "ActivateControlMessages" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AudioObjectStorageConfig), global::Ondewo.Vtsi.AudioObjectStorageConfig.Parser, new[]{ "ActivateAudioObjectStorage", "AudioObjectStorageServicesActivationConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AudioObjectStorageServicesActivationConfig), global::Ondewo.Vtsi.AudioObjectStorageServicesActivationConfig.Parser, new[]{ "ActivateS2T", "ActivateT2S" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.MessageBrokerConfig), global::Ondewo.Vtsi.MessageBrokerConfig.Parser, new[]{ "ActivateMessageBroker", "MessageBrokerServicesActivationConfig", "RabbitMqConfig" }, new[]{ "MessageBrokerConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.MessageBrokerServicesActivationConfig), global::Ondewo.Vtsi.MessageBrokerServicesActivationConfig.Parser, new[]{ "ActivateS2T", "ActivateNlu", "ActivateT2S", "ActivateSip" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AudioObjectStorageConfig), global::Ondewo.Vtsi.AudioObjectStorageConfig.Parser, new[]{ "ActivateAudioObjectStorage", "AudioObjectStorageServicesActivationConfig" }, new[]{ "ActivateAudioObjectStorage" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AudioObjectStorageServicesActivationConfig), global::Ondewo.Vtsi.AudioObjectStorageServicesActivationConfig.Parser, new[]{ "ActivateS2T", "ActivateT2S" }, new[]{ "ActivateS2T", "ActivateT2S" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.MessageBrokerConfig), global::Ondewo.Vtsi.MessageBrokerConfig.Parser, new[]{ "ActivateMessageBroker", "MessageBrokerServicesActivationConfig", "RabbitMqConfig" }, new[]{ "MessageBrokerConfig", "ActivateMessageBroker" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.MessageBrokerServicesActivationConfig), global::Ondewo.Vtsi.MessageBrokerServicesActivationConfig.Parser, new[]{ "ActivateS2T", "ActivateNlu", "ActivateT2S", "ActivateSip" }, new[]{ "ActivateS2T", "ActivateNlu", "ActivateT2S", "ActivateSip" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RabbitMqConfig), global::Ondewo.Vtsi.RabbitMqConfig.Parser, new[]{ "Host", "Port", "Port2", "User", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.S2tVtsiCallbacks), global::Ondewo.Vtsi.S2tVtsiCallbacks.Parser, new[]{ "PreS2TCallbacks", "PostS2TCallbacks" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.NluVtsiCallbacks), global::Ondewo.Vtsi.NluVtsiCallbacks.Parser, new[]{ "PreNluCallbacks", "PostNluCallbacks" }, null, null, null, null),
@@ -407,11 +637,11 @@ namespace Ondewo.Vtsi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Caller), global::Ondewo.Vtsi.Caller.Parser, new[]{ "Name", "CallName", "SipCallerConfig", "CommonServicesConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartListenerRequest), global::Ondewo.Vtsi.StartListenerRequest.Parser, new[]{ "VtsiProjectName", "SipBaseConfig", "CommonServicesConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartListenerResponse), global::Ondewo.Vtsi.StartListenerResponse.Parser, new[]{ "VtsiProjectName", "Listener", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartListenersRequest), global::Ondewo.Vtsi.StartListenersRequest.Parser, new[]{ "VtsiProjectName", "ListenerRequests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartListenersRequest), global::Ondewo.Vtsi.StartListenersRequest.Parser, new[]{ "VtsiProjectName", "ListenerRequests", "IdempotencyKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartListenersResponse), global::Ondewo.Vtsi.StartListenersResponse.Parser, new[]{ "VtsiProjectName", "ListenerResponses", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCallerRequest), global::Ondewo.Vtsi.StartCallerRequest.Parser, new[]{ "VtsiProjectName", "SipCallerConfig", "CommonServicesConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCallerResponse), global::Ondewo.Vtsi.StartCallerResponse.Parser, new[]{ "VtsiProjectName", "Caller", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCallersRequest), global::Ondewo.Vtsi.StartCallersRequest.Parser, new[]{ "VtsiProjectName", "CallerRequests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCallersRequest), global::Ondewo.Vtsi.StartCallersRequest.Parser, new[]{ "VtsiProjectName", "CallerRequests", "IdempotencyKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCallersResponse), global::Ondewo.Vtsi.StartCallersResponse.Parser, new[]{ "VtsiProjectName", "CallerResponses", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallersRequest), global::Ondewo.Vtsi.ListCallersRequest.Parser, new[]{ "VtsiProjectName", "PageToken", "CallView" }, new[]{ "PageToken", "CallView" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallersResponse), global::Ondewo.Vtsi.ListCallersResponse.Parser, new[]{ "Callers", "NextPageToken" }, null, null, null, null),
@@ -436,10 +666,14 @@ namespace Ondewo.Vtsi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallersRequest), global::Ondewo.Vtsi.DeleteCallersRequest.Parser, new[]{ "Names" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallersResponse), global::Ondewo.Vtsi.DeleteCallersResponse.Parser, new[]{ "DeleteCallerResponses", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartScheduledCallerRequest), global::Ondewo.Vtsi.StartScheduledCallerRequest.Parser, new[]{ "VtsiProjectName", "Request", "ScheduledTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartScheduledCallersRequest), global::Ondewo.Vtsi.StartScheduledCallersRequest.Parser, new[]{ "VtsiProjectName", "ScheduledCallerRequests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartScheduledCallersRequest), global::Ondewo.Vtsi.StartScheduledCallersRequest.Parser, new[]{ "VtsiProjectName", "ScheduledCallerRequests", "IdempotencyKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartScheduledCallersResponse), global::Ondewo.Vtsi.StartScheduledCallersResponse.Parser, new[]{ "VtsiProjectName", "ScheduledCallerResponses" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AddCallersToCampaignRequest), global::Ondewo.Vtsi.AddCallersToCampaignRequest.Parser, new[]{ "VtsiProjectName", "CallerRequests", "CampaignAssignment", "IdempotencyKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AddCallersToCampaignResponse), global::Ondewo.Vtsi.AddCallersToCampaignResponse.Parser, new[]{ "VtsiProjectName", "Campaign", "CampaignCallNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest), global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest.Parser, new[]{ "VtsiProjectName", "ScheduledCallerRequests", "CampaignAssignment", "IdempotencyKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse), global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse.Parser, new[]{ "VtsiProjectName", "ScheduledCallerResponses", "Campaign", "CampaignCallNames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartScheduledCallerResponse), global::Ondewo.Vtsi.StartScheduledCallerResponse.Parser, new[]{ "VtsiProjectName", "ScheduledCaller", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ScheduledCaller), global::Ondewo.Vtsi.ScheduledCaller.Parser, new[]{ "Name", "CallName", "SipConfig", "CommonServicesConfig", "ScheduledTime", "SipCallerConfig", "Status", "VtsiProjectName", "CreatedAt", "FiredAt", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ScheduledCaller), global::Ondewo.Vtsi.ScheduledCaller.Parser, new[]{ "Name", "CallName", "SipConfig", "CommonServicesConfig", "ScheduledTime", "SipCallerConfig", "Status", "VtsiProjectName", "CreatedAt", "FiredAt", "ErrorMessage", "CampaignName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetScheduledCallerRequest), global::Ondewo.Vtsi.GetScheduledCallerRequest.Parser, new[]{ "VtsiProjectName", "Name", "CallView" }, new[]{ "CallView" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListScheduledCallersRequest), global::Ondewo.Vtsi.ListScheduledCallersRequest.Parser, new[]{ "VtsiProjectName", "PageToken", "CallView", "Statuses" }, new[]{ "PageToken", "CallView" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListScheduledCallersResponse), global::Ondewo.Vtsi.ListScheduledCallersResponse.Parser, new[]{ "ScheduledCallers", "NextPageToken" }, null, null, null, null),
@@ -450,17 +684,41 @@ namespace Ondewo.Vtsi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StopCallsRequest), global::Ondewo.Vtsi.StopCallsRequest.Parser, new[]{ "VtsiProjectName", "CallNames" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StopCallsResponse), global::Ondewo.Vtsi.StopCallsResponse.Parser, new[]{ "StopCallResponses", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StopAllCallsRequest), global::Ondewo.Vtsi.StopAllCallsRequest.Parser, new[]{ "VtsiProjectName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallRequest), global::Ondewo.Vtsi.TransferCallRequest.Parser, new[]{ "VtsiProjectName", "CallName", "TransferId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallResponse), global::Ondewo.Vtsi.TransferCallResponse.Parser, new[]{ "VtsiProjectName", "CallName", "TransferId", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallRequest), global::Ondewo.Vtsi.TransferCallRequest.Parser, new[]{ "VtsiProjectName", "CallName", "TransferId", "Target", "Mode", "Headers", "RingTimeoutS" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallTarget), global::Ondewo.Vtsi.CallTarget.Parser, new[]{ "PhoneNumber", "SoftphoneAccountName", "ListenerName", "ListenerQueue" }, new[]{ "Target" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListenerQueueTarget), global::Ondewo.Vtsi.ListenerQueueTarget.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallResponse), global::Ondewo.Vtsi.TransferCallResponse.Parser, new[]{ "VtsiProjectName", "CallName", "TransferId", "ErrorMessage", "Outcome", "ResolvedTarget", "SipResponseCode", "ErrorReason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallTransferRecord), global::Ondewo.Vtsi.CallTransferRecord.Parser, new[]{ "Target", "ResolvedTarget", "Mode", "Outcome", "SipResponseCode", "Time" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallMediaControlState), global::Ondewo.Vtsi.CallMediaControlState.Parser, new[]{ "BotMuted", "ListeningPaused", "ConnectedAudioStreams", "JoinedParticipants" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallParticipant), global::Ondewo.Vtsi.CallParticipant.Parser, new[]{ "ParticipantId", "SoftphoneAccountName", "Mode", "State", "InvitedAt", "JoinedAt", "LeftAt", "EndReason", "InvitedBy", "BotPolicy" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InviteToCallRequest), global::Ondewo.Vtsi.InviteToCallRequest.Parser, new[]{ "VtsiProjectName", "CallName", "SoftphoneAccountName", "Mode", "RingTimeoutS", "BotPolicy", "CallerIdDisplayName", "RequestId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InviteToCallResponse), global::Ondewo.Vtsi.InviteToCallResponse.Parser, new[]{ "VtsiProjectName", "CallName", "Participant", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RemoveCallParticipantRequest), global::Ondewo.Vtsi.RemoveCallParticipantRequest.Parser, new[]{ "VtsiProjectName", "CallName", "ParticipantId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RemoveCallParticipantResponse), global::Ondewo.Vtsi.RemoveCallParticipantResponse.Parser, new[]{ "VtsiProjectName", "CallName", "Participant", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SetCallMediaControlRequest), global::Ondewo.Vtsi.SetCallMediaControlRequest.Parser, new[]{ "VtsiProjectName", "CallName", "BotVoice", "BotListening" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SetCallMediaControlResponse), global::Ondewo.Vtsi.SetCallMediaControlResponse.Parser, new[]{ "VtsiProjectName", "CallName", "State", "Changed", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallAudioConfig), global::Ondewo.Vtsi.StreamCallAudioConfig.Parser, new[]{ "VtsiProjectName", "CallName", "Mode", "SampleRateHz", "TakeOver", "MaxDurationS" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallAudioFrame), global::Ondewo.Vtsi.CallAudioFrame.Parser, new[]{ "PcmS16Le", "Sequence" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallAudioRequest), global::Ondewo.Vtsi.StreamCallAudioRequest.Parser, new[]{ "Config", "Audio", "AgentMuted" }, new[]{ "Request" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallAudioStarted), global::Ondewo.Vtsi.CallAudioStarted.Parser, new[]{ "StreamId", "SampleRateHz", "FrameMs", "Mode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallAudioStats), global::Ondewo.Vtsi.CallAudioStats.Parser, new[]{ "FramesSent", "FramesDropped", "FramesReceived", "Underruns", "FramesDiscarded" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallAudioEnded), global::Ondewo.Vtsi.CallAudioEnded.Parser, new[]{ "Reason", "Detail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallAudioResponse), global::Ondewo.Vtsi.StreamCallAudioResponse.Parser, new[]{ "Started", "Audio", "Stats", "Ended" }, new[]{ "Response" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListenCallAudioRequest), global::Ondewo.Vtsi.ListenCallAudioRequest.Parser, new[]{ "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallsRequest), global::Ondewo.Vtsi.TransferCallsRequest.Parser, new[]{ "VtsiProjectName", "TransferCallRequests" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferCallsResponse), global::Ondewo.Vtsi.TransferCallsResponse.Parser, new[]{ "VtsiProjectName", "TransferCallResponses", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCallRequest), global::Ondewo.Vtsi.GetCallRequest.Parser, new[]{ "VtsiProjectName", "CallName", "CallView" }, new[]{ "CallView" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Call), global::Ondewo.Vtsi.Call.Parser, new[]{ "Name", "SipAccount", "ContainerName", "CallType", "PhoneNumber", "StartTime", "EndTime", "SipStatusType", "SipStatus", "SipStatusHistory", "ServicesStatuses", "Active", "VtsiProjectName", "CommonServicesConfig", "SipPort", "CsiPort", "NluSessionName", "Platforms" }, new[]{ "SipStatus", "SipStatusHistory", "ServicesStatuses", "CommonServicesConfig", "SipPort", "CsiPort", "NluSessionName", "Platforms" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Call), global::Ondewo.Vtsi.Call.Parser, new[]{ "Name", "SipAccount", "ContainerName", "CallType", "PhoneNumber", "StartTime", "EndTime", "SipStatusType", "SipStatus", "SipStatusHistory", "ServicesStatuses", "Active", "VtsiProjectName", "CommonServicesConfig", "SipPort", "CsiPort", "NluSessionName", "Platforms", "RedialRecommended", "RedialReason", "AnsweringMachineDetectionEndDescription", "MediaControl", "Participants", "LastTransfer", "SipCallId" }, new[]{ "SipStatus", "SipStatusHistory", "ServicesStatuses", "CommonServicesConfig", "SipPort", "CsiPort", "NluSessionName", "Platforms", "RedialRecommended", "RedialReason", "AnsweringMachineDetectionEndDescription" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallFilter), global::Ondewo.Vtsi.CallFilter.Parser, new[]{ "CallNames", "NluSessionNames", "SipAccounts", "PhoneNumbers", "ContainerNames", "SipPorts", "CsiPorts", "CallTypes", "SipStatusTypes", "CallStatus", "StartTime", "EndTime", "DurationInSMin", "DurationInSMax", "Platforms" }, new[]{ "CallStatus", "StartTime", "EndTime", "DurationInSMin", "DurationInSMax" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallsRequest), global::Ondewo.Vtsi.ListCallsRequest.Parser, new[]{ "VtsiProjectName", "CallView", "CallFilter", "PageToken" }, new[]{ "CallView", "CallFilter", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallsResponse), global::Ondewo.Vtsi.ListCallsResponse.Parser, new[]{ "Calls", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AllServicesStatuses), global::Ondewo.Vtsi.AllServicesStatuses.Parser, new[]{ "StatusSip", "StatusAsterisk", "StatusNlu", "StatusStt", "StatusTts" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ServiceStatus), global::Ondewo.Vtsi.ServiceStatus.Parser, new[]{ "Healthy", "ErrorMessage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ServiceStatus), global::Ondewo.Vtsi.ServiceStatus.Parser, new[]{ "Healthy", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallResourceStatus), global::Ondewo.Vtsi.CallResourceStatus.Parser, new[]{ "ResourceName", "CallType", "CallName", "Active", "SipStatusType", "SipStatusDescription", "StartTime", "EndTime", "PhoneNumber", "ScheduledCallerStatus", "ScheduledTime", "CampaignName", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallerStatusRequest), global::Ondewo.Vtsi.StreamCallerStatusRequest.Parser, new[]{ "VtsiProjectName", "CallerNames", "ActiveOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamListenerStatusRequest), global::Ondewo.Vtsi.StreamListenerStatusRequest.Parser, new[]{ "VtsiProjectName", "ListenerNames", "ActiveOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest), global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest.Parser, new[]{ "VtsiProjectName", "ScheduledCallerNames", "Statuses", "CampaignName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallResourceStatusResponse), global::Ondewo.Vtsi.StreamCallResourceStatusResponse.Parser, new[]{ "Statuses", "RemovedResourceNames", "Snapshot", "SnapshotTruncated", "EndReason" }, null, null, null, null)
           }));
     }
     #endregion
@@ -495,6 +753,209 @@ namespace Ondewo.Vtsi {
     /// Cancelled before it fired
     /// </summary>
     [pbr::OriginalName("SCHEDULED_CALLER_STATUS_CANCELLED")] Cancelled = 5,
+  }
+
+  /// <summary>
+  /// &lt;p>How a call is transferred&lt;/p>
+  /// </summary>
+  public enum TransferMode {
+    /// <summary>
+    /// Same as &lt;code>TRANSFER_MODE_BLIND&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// SIP REFER: the caller is handed to the dialplan, which dials the target. A refused REFER keeps the call with the
+    /// bot; once the REFER is accepted the bot leaves, and a target that is then busy or does not answer loses the
+    /// caller
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_MODE_BLIND")] Blind = 1,
+    /// <summary>
+    /// The target is rung into the call first; the bot leaves only after the target joined, and keeps the call when the
+    /// target is busy or does not answer. Requires an Asterisk 22 project
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_MODE_WARM")] Warm = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>Outcome of a transfer&lt;/p>
+  /// </summary>
+  public enum TransferOutcome {
+    /// <summary>
+    /// No outcome recorded
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// BLIND: the REFER was accepted and the bot left the call. WARM: the target answered and was bridged, and the bot
+    /// left the call
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_ACCEPTED")] Accepted = 1,
+    /// <summary>
+    /// WARM: the target is ringing. Follow &lt;code>VTSI_EVENT_CALL_TRANSFERRED&lt;/code> /
+    /// &lt;code>VTSI_EVENT_CALL_TRANSFER_FAILED&lt;/code> or &lt;code>Call.last_transfer&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_PENDING")] Pending = 2,
+    /// <summary>
+    /// Refused before anything was sent; the call is untouched. &lt;code>error_reason&lt;/code> says why
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_TARGET_INVALID")] TargetInvalid = 3,
+    /// <summary>
+    /// The SIP server refused the REFER (including an unknown target extension); the call is KEPT with the bot.
+    /// &lt;code>sip_response_code&lt;/code> carries the code where known
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_REFER_REJECTED")] ReferRejected = 4,
+    /// <summary>
+    /// No answer to the REFER in time, or (WARM) the target did not answer; the call is KEPT with the bot
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_TIMEOUT")] Timeout = 5,
+    /// <summary>
+    /// The far end left the call during the attempt
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_CALL_ENDED")] CallEnded = 6,
+    /// <summary>
+    /// The call this request names is no longer the call the container is serving (e.g. the next call of a persistent
+    /// listener); nothing was sent
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_CALL_SCOPE_MISMATCH")] CallScopeMismatch = 7,
+    /// <summary>
+    /// The call&amp;apos;s SIP container could not be reached
+    /// </summary>
+    [pbr::OriginalName("TRANSFER_OUTCOME_SIP_UNREACHABLE")] SipUnreachable = 8,
+  }
+
+  /// <summary>
+  /// &lt;p>Desired setting of one media control flag of a call&lt;/p>
+  /// </summary>
+  public enum CallMediaSetting {
+    /// <summary>
+    /// Leave the flag as it is
+    /// </summary>
+    [pbr::OriginalName("CALL_MEDIA_SETTING_UNCHANGED")] Unchanged = 0,
+    /// <summary>
+    /// On: the bot speaks (&lt;code>bot_voice&lt;/code>) or listens (&lt;code>bot_listening&lt;/code>)
+    /// </summary>
+    [pbr::OriginalName("CALL_MEDIA_SETTING_ON")] On = 1,
+    /// <summary>
+    /// Off: the bot is muted (&lt;code>bot_voice&lt;/code>) or does not listen (&lt;code>bot_listening&lt;/code>)
+    /// </summary>
+    [pbr::OriginalName("CALL_MEDIA_SETTING_OFF")] Off = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>How an invited participant takes part in a call&lt;/p>
+  /// </summary>
+  public enum ParticipantMode {
+    /// <summary>
+    /// Same as &lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The participant is joined into the call: Asterisk mixes the caller, the bot and the participant
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_MODE_CONFERENCE")] Conference = 1,
+    /// <summary>
+    /// The participant listens only; the caller and the bot do not hear it
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_MODE_MONITOR")] Monitor = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>What the bot does while a CONFERENCE participant is ringing or joined&lt;/p>
+  /// </summary>
+  public enum BotPolicyOnJoin {
+    /// <summary>
+    /// Same as &lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>: the bot keeps talking
+    /// </summary>
+    [pbr::OriginalName("BOT_POLICY_ON_JOIN_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The bot is muted and does not listen while at least one participant is ringing or joined
+    /// </summary>
+    [pbr::OriginalName("BOT_POLICY_ON_JOIN_PAUSE")] Pause = 1,
+    /// <summary>
+    /// The bot may still speak, but does not hear the participant (nor the caller)
+    /// </summary>
+    [pbr::OriginalName("BOT_POLICY_ON_JOIN_PAUSE_LISTENING")] PauseListening = 2,
+    /// <summary>
+    /// The bot keeps talking and listening, and it WILL answer what the participant says
+    /// </summary>
+    [pbr::OriginalName("BOT_POLICY_ON_JOIN_KEEP")] Keep = 3,
+  }
+
+  /// <summary>
+  /// &lt;p>State of an invited participant&lt;/p>
+  /// </summary>
+  public enum ParticipantState {
+    /// <summary>
+    /// No state recorded
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The participant&amp;apos;s softphone is ringing
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_STATE_RINGING")] Ringing = 1,
+    /// <summary>
+    /// The participant answered and is in the call
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_STATE_JOINED")] Joined = 2,
+    /// <summary>
+    /// The participant never joined; &lt;code>end_reason&lt;/code> says why
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_STATE_FAILED")] Failed = 3,
+    /// <summary>
+    /// The participant left the call; &lt;code>end_reason&lt;/code> says why
+    /// </summary>
+    [pbr::OriginalName("PARTICIPANT_STATE_LEFT")] Left = 4,
+  }
+
+  /// <summary>
+  /// &lt;p>Mode of a call audio stream&lt;/p>
+  /// </summary>
+  public enum CallAudioMode {
+    /// <summary>
+    /// Same as &lt;code>CALL_AUDIO_MODE_LISTEN&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Receive the call audio only
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_MODE_LISTEN")] Listen = 1,
+    /// <summary>
+    /// Receive the caller&amp;apos;s audio and send audio to the caller. Requires &lt;code>take_over&lt;/code>
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_MODE_TALK")] Talk = 2,
+  }
+
+  /// <summary>
+  /// &lt;p>Why a call audio stream ended&lt;/p>
+  /// </summary>
+  public enum CallAudioEndReason {
+    /// <summary>
+    /// No reason recorded
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The client cancelled or half-closed the stream
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_CLIENT_CLOSED")] ClientClosed = 1,
+    /// <summary>
+    /// The call ended
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_CALL_ENDED")] CallEnded = 2,
+    /// <summary>
+    /// The call was transferred
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_CALL_TRANSFERRED")] CallTransferred = 3,
+    /// <summary>
+    /// The maximum duration was reached
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_MAX_DURATION")] MaxDuration = 4,
+    /// <summary>
+    /// The client did not read the audio in time
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_STALLED")] Stalled = 5,
+    /// <summary>
+    /// An internal error ended the stream
+    /// </summary>
+    [pbr::OriginalName("CALL_AUDIO_END_REASON_INTERNAL")] Internal = 6,
   }
 
   /// <summary>
@@ -642,7 +1103,10 @@ namespace Ondewo.Vtsi {
     public const int GrpcCertFieldNumber = 3;
     private string grpcCert_ = "";
     /// <summary>
-    /// Optional: GRPC cert for the given service
+    /// PEM certificate(s) the service&amp;apos;s gRPC server certificate chains to (CA or self-signed leaf), with real or
+    /// escaped newlines; never a private key. Required for the S2T, NLU and T2S configs of a call unless the VTSI
+    /// server runs with ONDEWO_VTSI_ALLOW_INSECURE_UPSTREAM=True (lab and CI only); an empty value is otherwise
+    /// refused with FAILED_PRECONDITION (UPSTREAM_TLS_REQUIRED).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2875,6 +3339,7 @@ namespace Ondewo.Vtsi {
       turnDetectionConfig_ = other.turnDetectionConfig_ != null ? other.turnDetectionConfig_.Clone() : null;
       interruptionHandlingConfig_ = other.interruptionHandlingConfig_ != null ? other.interruptionHandlingConfig_.Clone() : null;
       responseTimingConfig_ = other.responseTimingConfig_ != null ? other.responseTimingConfig_.Clone() : null;
+      answeringMachineDetectionConfig_ = other.answeringMachineDetectionConfig_ != null ? other.answeringMachineDetectionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2929,6 +3394,23 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "answering_machine_detection_config" field.</summary>
+    public const int AnsweringMachineDetectionConfigFieldNumber = 4;
+    private global::Ondewo.Vtsi.AnsweringMachineDetectionConfig answeringMachineDetectionConfig_;
+    /// <summary>
+    /// Configuration of the answering machine detection (AMD) of an outbound call.
+    /// Only accepted for pooled persistent callers: a listener or a one-shot caller that carries it
+    /// is rejected with INVALID_ARGUMENT
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.AnsweringMachineDetectionConfig AnsweringMachineDetectionConfig {
+      get { return answeringMachineDetectionConfig_; }
+      set {
+        answeringMachineDetectionConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2947,6 +3429,7 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(TurnDetectionConfig, other.TurnDetectionConfig)) return false;
       if (!object.Equals(InterruptionHandlingConfig, other.InterruptionHandlingConfig)) return false;
       if (!object.Equals(ResponseTimingConfig, other.ResponseTimingConfig)) return false;
+      if (!object.Equals(AnsweringMachineDetectionConfig, other.AnsweringMachineDetectionConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2957,6 +3440,7 @@ namespace Ondewo.Vtsi {
       if (turnDetectionConfig_ != null) hash ^= TurnDetectionConfig.GetHashCode();
       if (interruptionHandlingConfig_ != null) hash ^= InterruptionHandlingConfig.GetHashCode();
       if (responseTimingConfig_ != null) hash ^= ResponseTimingConfig.GetHashCode();
+      if (answeringMachineDetectionConfig_ != null) hash ^= AnsweringMachineDetectionConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2987,6 +3471,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteMessage(ResponseTimingConfig);
       }
+      if (answeringMachineDetectionConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AnsweringMachineDetectionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3009,6 +3497,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteMessage(ResponseTimingConfig);
       }
+      if (answeringMachineDetectionConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(AnsweringMachineDetectionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3027,6 +3519,9 @@ namespace Ondewo.Vtsi {
       }
       if (responseTimingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResponseTimingConfig);
+      }
+      if (answeringMachineDetectionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AnsweringMachineDetectionConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3057,6 +3552,12 @@ namespace Ondewo.Vtsi {
           ResponseTimingConfig = new global::Ondewo.Vtsi.ResponseTimingConfig();
         }
         ResponseTimingConfig.MergeFrom(other.ResponseTimingConfig);
+      }
+      if (other.answeringMachineDetectionConfig_ != null) {
+        if (answeringMachineDetectionConfig_ == null) {
+          AnsweringMachineDetectionConfig = new global::Ondewo.Vtsi.AnsweringMachineDetectionConfig();
+        }
+        AnsweringMachineDetectionConfig.MergeFrom(other.AnsweringMachineDetectionConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3098,6 +3599,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(ResponseTimingConfig);
             break;
           }
+          case 34: {
+            if (answeringMachineDetectionConfig_ == null) {
+              AnsweringMachineDetectionConfig = new global::Ondewo.Vtsi.AnsweringMachineDetectionConfig();
+            }
+            input.ReadMessage(AnsweringMachineDetectionConfig);
+            break;
+          }
         }
       }
     #endif
@@ -3136,6 +3644,13 @@ namespace Ondewo.Vtsi {
               ResponseTimingConfig = new global::Ondewo.Vtsi.ResponseTimingConfig();
             }
             input.ReadMessage(ResponseTimingConfig);
+            break;
+          }
+          case 34: {
+            if (answeringMachineDetectionConfig_ == null) {
+              AnsweringMachineDetectionConfig = new global::Ondewo.Vtsi.AnsweringMachineDetectionConfig();
+            }
+            input.ReadMessage(AnsweringMachineDetectionConfig);
             break;
           }
         }
@@ -3293,32 +3808,60 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "turn_detection_system_prompt" field.</summary>
     public const int TurnDetectionSystemPromptFieldNumber = 5;
-    private string turnDetectionSystemPrompt_ = "";
+    private readonly static string TurnDetectionSystemPromptDefaultValue = "";
+
+    private string turnDetectionSystemPrompt_;
     /// <summary>
     /// System prompt for the semantic (LLM) turn detection model of the speech-to-text service
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TurnDetectionSystemPrompt {
-      get { return turnDetectionSystemPrompt_; }
+      get { return turnDetectionSystemPrompt_ ?? TurnDetectionSystemPromptDefaultValue; }
       set {
         turnDetectionSystemPrompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
+    /// <summary>Gets whether the "turn_detection_system_prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTurnDetectionSystemPrompt {
+      get { return turnDetectionSystemPrompt_ != null; }
+    }
+    /// <summary>Clears the value of the "turn_detection_system_prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTurnDetectionSystemPrompt() {
+      turnDetectionSystemPrompt_ = null;
+    }
 
     /// <summary>Field number for the "turn_detection_user_prompt" field.</summary>
     public const int TurnDetectionUserPromptFieldNumber = 6;
-    private string turnDetectionUserPrompt_ = "";
+    private readonly static string TurnDetectionUserPromptDefaultValue = "";
+
+    private string turnDetectionUserPrompt_;
     /// <summary>
     /// User prompt for the semantic (LLM) turn detection model of the speech-to-text service
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TurnDetectionUserPrompt {
-      get { return turnDetectionUserPrompt_; }
+      get { return turnDetectionUserPrompt_ ?? TurnDetectionUserPromptDefaultValue; }
       set {
         turnDetectionUserPrompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+    /// <summary>Gets whether the "turn_detection_user_prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTurnDetectionUserPrompt {
+      get { return turnDetectionUserPrompt_ != null; }
+    }
+    /// <summary>Clears the value of the "turn_detection_user_prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTurnDetectionUserPrompt() {
+      turnDetectionUserPrompt_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3353,8 +3896,8 @@ namespace Ondewo.Vtsi {
       if (HasMinEndpointingDelaySeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MinEndpointingDelaySeconds);
       if (HasMaxEndpointingDelaySeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxEndpointingDelaySeconds);
       if (TurnEagerness != global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness.Unspecified) hash ^= TurnEagerness.GetHashCode();
-      if (TurnDetectionSystemPrompt.Length != 0) hash ^= TurnDetectionSystemPrompt.GetHashCode();
-      if (TurnDetectionUserPrompt.Length != 0) hash ^= TurnDetectionUserPrompt.GetHashCode();
+      if (HasTurnDetectionSystemPrompt) hash ^= TurnDetectionSystemPrompt.GetHashCode();
+      if (HasTurnDetectionUserPrompt) hash ^= TurnDetectionUserPrompt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3389,11 +3932,11 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(32);
         output.WriteEnum((int) TurnEagerness);
       }
-      if (TurnDetectionSystemPrompt.Length != 0) {
+      if (HasTurnDetectionSystemPrompt) {
         output.WriteRawTag(42);
         output.WriteString(TurnDetectionSystemPrompt);
       }
-      if (TurnDetectionUserPrompt.Length != 0) {
+      if (HasTurnDetectionUserPrompt) {
         output.WriteRawTag(50);
         output.WriteString(TurnDetectionUserPrompt);
       }
@@ -3423,11 +3966,11 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(32);
         output.WriteEnum((int) TurnEagerness);
       }
-      if (TurnDetectionSystemPrompt.Length != 0) {
+      if (HasTurnDetectionSystemPrompt) {
         output.WriteRawTag(42);
         output.WriteString(TurnDetectionSystemPrompt);
       }
-      if (TurnDetectionUserPrompt.Length != 0) {
+      if (HasTurnDetectionUserPrompt) {
         output.WriteRawTag(50);
         output.WriteString(TurnDetectionUserPrompt);
       }
@@ -3453,10 +3996,10 @@ namespace Ondewo.Vtsi {
       if (TurnEagerness != global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TurnEagerness);
       }
-      if (TurnDetectionSystemPrompt.Length != 0) {
+      if (HasTurnDetectionSystemPrompt) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TurnDetectionSystemPrompt);
       }
-      if (TurnDetectionUserPrompt.Length != 0) {
+      if (HasTurnDetectionUserPrompt) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TurnDetectionUserPrompt);
       }
       if (_unknownFields != null) {
@@ -3483,10 +4026,10 @@ namespace Ondewo.Vtsi {
       if (other.TurnEagerness != global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness.Unspecified) {
         TurnEagerness = other.TurnEagerness;
       }
-      if (other.TurnDetectionSystemPrompt.Length != 0) {
+      if (other.HasTurnDetectionSystemPrompt) {
         TurnDetectionSystemPrompt = other.TurnDetectionSystemPrompt;
       }
-      if (other.TurnDetectionUserPrompt.Length != 0) {
+      if (other.HasTurnDetectionUserPrompt) {
         TurnDetectionUserPrompt = other.TurnDetectionUserPrompt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3908,6 +4451,8 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "transcribe_on_disabled_interruptions" field.</summary>
     public const int TranscribeOnDisabledInterruptionsFieldNumber = 8;
+    private readonly static bool TranscribeOnDisabledInterruptionsDefaultValue = false;
+
     private bool transcribeOnDisabledInterruptions_;
     /// <summary>
     /// Transcribe caller speech while the bot is speaking even if interruptions are disabled
@@ -3915,10 +4460,23 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TranscribeOnDisabledInterruptions {
-      get { return transcribeOnDisabledInterruptions_; }
+      get { if ((_hasBits0 & 128) != 0) { return transcribeOnDisabledInterruptions_; } else { return TranscribeOnDisabledInterruptionsDefaultValue; } }
       set {
+        _hasBits0 |= 128;
         transcribeOnDisabledInterruptions_ = value;
       }
+    }
+    /// <summary>Gets whether the "transcribe_on_disabled_interruptions" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscribeOnDisabledInterruptions {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "transcribe_on_disabled_interruptions" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscribeOnDisabledInterruptions() {
+      _hasBits0 &= ~128;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3958,7 +4516,7 @@ namespace Ondewo.Vtsi {
       if (HasResumeAfterFalseInterruption) hash ^= ResumeAfterFalseInterruption.GetHashCode();
       if (HasBackoffSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BackoffSeconds);
       if (HasFirstMessageProtectedSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FirstMessageProtectedSeconds);
-      if (TranscribeOnDisabledInterruptions != false) hash ^= TranscribeOnDisabledInterruptions.GetHashCode();
+      if (HasTranscribeOnDisabledInterruptions) hash ^= TranscribeOnDisabledInterruptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4005,7 +4563,7 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(61);
         output.WriteFloat(FirstMessageProtectedSeconds);
       }
-      if (TranscribeOnDisabledInterruptions != false) {
+      if (HasTranscribeOnDisabledInterruptions) {
         output.WriteRawTag(64);
         output.WriteBool(TranscribeOnDisabledInterruptions);
       }
@@ -4047,7 +4605,7 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(61);
         output.WriteFloat(FirstMessageProtectedSeconds);
       }
-      if (TranscribeOnDisabledInterruptions != false) {
+      if (HasTranscribeOnDisabledInterruptions) {
         output.WriteRawTag(64);
         output.WriteBool(TranscribeOnDisabledInterruptions);
       }
@@ -4082,7 +4640,7 @@ namespace Ondewo.Vtsi {
       if (HasFirstMessageProtectedSeconds) {
         size += 1 + 4;
       }
-      if (TranscribeOnDisabledInterruptions != false) {
+      if (HasTranscribeOnDisabledInterruptions) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4118,7 +4676,7 @@ namespace Ondewo.Vtsi {
       if (other.HasFirstMessageProtectedSeconds) {
         FirstMessageProtectedSeconds = other.FirstMessageProtectedSeconds;
       }
-      if (other.TranscribeOnDisabledInterruptions != false) {
+      if (other.HasTranscribeOnDisabledInterruptions) {
         TranscribeOnDisabledInterruptions = other.TranscribeOnDisabledInterruptions;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4975,6 +5533,1376 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
+  /// Configuration of the answering machine detection (AMD) of an outbound call, i.e. deciding in the first
+  /// seconds after the callee answered whether a person, an answering machine, a fax, an IVR or a network
+  /// announcement picked up, and hanging up on the non-human ones.
+  /// Detection listens first: the bot stays silent until the verdict is reached or the decision window ends.
+  /// Every field is optional: an unset field takes the default of the CSI container (listed per field below).
+  /// Only accepted for pooled persistent callers; the settings are part of the caller container configuration,
+  /// so callers with different AMD settings are never pooled together.
+  /// The verdict of a call is reported as ondewo.sip.SipStatus.amd_result. Reaching a hang-up-eligible verdict sets
+  /// the non-terminal status ondewo.sip.SipStatus.StatusType.OUTGOING_CALL_ANSWERING_MACHINE_DETECTED (the call is
+  /// still up), and a call ended by AMD reaches the terminal status OUTGOING_CALL_FINISHED with one of these
+  /// descriptions:
+  /// &lt;ul>
+  /// &lt;li>"Answering machine detected with hang up": the caller hung up without leaving a voice message&lt;/li>
+  /// &lt;li>"Answering machine detected with left voice message and hang up": the caller hung up after starting the
+  /// voice message&lt;/li>
+  /// &lt;li>"Answering machine detected, call ended by the answering machine": the far end hung up before a voice
+  /// message was started&lt;/li>
+  /// &lt;li>"Answering machine detected, call ended by the answering machine after leaving a voice message": the far
+  /// end hung up after the voice message was started&lt;/li>
+  /// &lt;/ul>
+  /// The description is also recorded on the call as Call.answering_machine_detection_end_description.
+  /// Compliance: leaving a recorded message on a consumer's mailbox for marketing purposes requires the consent of
+  /// the callee in many jurisdictions (e.g. in Germany § 7 UWG). HANG_UP is therefore the default action.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AnsweringMachineDetectionConfig : pb::IMessage<AnsweringMachineDetectionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnsweringMachineDetectionConfig> _parser = new pb::MessageParser<AnsweringMachineDetectionConfig>(() => new AnsweringMachineDetectionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnsweringMachineDetectionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionConfig(AnsweringMachineDetectionConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      active_ = other.active_;
+      action_ = other.action_;
+      sensitivity_ = other.sensitivity_;
+      maxDecisionTimeMs_ = other.maxDecisionTimeMs_;
+      maxMachineWaitMs_ = other.maxMachineWaitMs_;
+      beepWaitAfterGreetingMs_ = other.beepWaitAfterGreetingMs_;
+      initialSilenceMs_ = other.initialSilenceMs_;
+      maxHumanGreetingMs_ = other.maxHumanGreetingMs_;
+      greetingEndSilenceMs_ = other.greetingEndSilenceMs_;
+      beepDetectionActive_ = other.beepDetectionActive_;
+      additionalMachinePhrases_ = other.additionalMachinePhrases_.Clone();
+      additionalHumanPhrases_ = other.additionalHumanPhrases_.Clone();
+      hangUpOnFax_ = other.hangUpOnFax_;
+      hangUpOnNetworkAnnouncement_ = other.hangUpOnNetworkAnnouncement_;
+      hangUpOnIvr_ = other.hangUpOnIvr_;
+      hangUpOnCallScreening_ = other.hangUpOnCallScreening_;
+      voiceMessageIntent_ = other.voiceMessageIntent_;
+      voiceMessageMaxBeepWaitMs_ = other.voiceMessageMaxBeepWaitMs_;
+      voiceMessageTimeoutMs_ = other.voiceMessageTimeoutMs_;
+      keywordDetectionActive_ = other.keywordDetectionActive_;
+      cadenceDetectionActive_ = other.cadenceDetectionActive_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnsweringMachineDetectionConfig Clone() {
+      return new AnsweringMachineDetectionConfig(this);
+    }
+
+    /// <summary>Field number for the "active" field.</summary>
+    public const int ActiveFieldNumber = 1;
+    private readonly static bool ActiveDefaultValue = false;
+
+    private bool active_;
+    /// <summary>
+    /// Optional: Master switch of the answering machine detection (default: false)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Active {
+      get { if ((_hasBits0 & 1) != 0) { return active_; } else { return ActiveDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        active_ = value;
+      }
+    }
+    /// <summary>Gets whether the "active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActive {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActive() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "action" field.</summary>
+    public const int ActionFieldNumber = 2;
+    private readonly static global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction ActionDefaultValue = global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction.Unspecified;
+
+    private global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction action_;
+    /// <summary>
+    /// Optional: Action on a non-human verdict (default: HANG_UP)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction Action {
+      get { if ((_hasBits0 & 2) != 0) { return action_; } else { return ActionDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        action_ = value;
+      }
+    }
+    /// <summary>Gets whether the "action" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAction {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "action" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAction() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "sensitivity" field.</summary>
+    public const int SensitivityFieldNumber = 3;
+    private readonly static global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity SensitivityDefaultValue = global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity.Unspecified;
+
+    private global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity sensitivity_;
+    /// <summary>
+    /// Optional: Sensitivity of the detection (default: LOW)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity Sensitivity {
+      get { if ((_hasBits0 & 4) != 0) { return sensitivity_; } else { return SensitivityDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        sensitivity_ = value;
+      }
+    }
+    /// <summary>Gets whether the "sensitivity" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSensitivity {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "sensitivity" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSensitivity() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "max_decision_time_ms" field.</summary>
+    public const int MaxDecisionTimeMsFieldNumber = 4;
+    private readonly static int MaxDecisionTimeMsDefaultValue = 0;
+
+    private int maxDecisionTimeMs_;
+    /// <summary>
+    /// Optional: Maximum time in milliseconds after the callee answered to reach a verdict when no
+    /// machine-leaning evidence was seen; the verdict is UNKNOWN when it is reached
+    /// (default: 4000, valid range: 1500 - 10000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxDecisionTimeMs {
+      get { if ((_hasBits0 & 8) != 0) { return maxDecisionTimeMs_; } else { return MaxDecisionTimeMsDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        maxDecisionTimeMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_decision_time_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxDecisionTimeMs {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "max_decision_time_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxDecisionTimeMs() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "max_machine_wait_ms" field.</summary>
+    public const int MaxMachineWaitMsFieldNumber = 5;
+    private readonly static int MaxMachineWaitMsDefaultValue = 0;
+
+    private int maxMachineWaitMs_;
+    /// <summary>
+    /// Optional: Maximum time in milliseconds after the callee answered to reach a verdict once
+    /// machine-leaning evidence extended the decision window (default: 11000, valid range: 4000 - 20000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxMachineWaitMs {
+      get { if ((_hasBits0 & 16) != 0) { return maxMachineWaitMs_; } else { return MaxMachineWaitMsDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        maxMachineWaitMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_machine_wait_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxMachineWaitMs {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "max_machine_wait_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxMachineWaitMs() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "beep_wait_after_greeting_ms" field.</summary>
+    public const int BeepWaitAfterGreetingMsFieldNumber = 6;
+    private readonly static int BeepWaitAfterGreetingMsDefaultValue = 0;
+
+    private int beepWaitAfterGreetingMs_;
+    /// <summary>
+    /// Optional: Time in milliseconds to wait for a beep after a long greeting ended
+    /// (default: 1500, valid range: 0 - 4000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int BeepWaitAfterGreetingMs {
+      get { if ((_hasBits0 & 32) != 0) { return beepWaitAfterGreetingMs_; } else { return BeepWaitAfterGreetingMsDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        beepWaitAfterGreetingMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "beep_wait_after_greeting_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeepWaitAfterGreetingMs {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "beep_wait_after_greeting_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeepWaitAfterGreetingMs() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "initial_silence_ms" field.</summary>
+    public const int InitialSilenceMsFieldNumber = 7;
+    private readonly static int InitialSilenceMsDefaultValue = 0;
+
+    private int initialSilenceMs_;
+    /// <summary>
+    /// Optional: Silence in milliseconds after the callee answered without any speech, after which the verdict
+    /// is NO_SPEECH, which is treated like a person (default: 3500, valid range: 1000 - 10000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int InitialSilenceMs {
+      get { if ((_hasBits0 & 64) != 0) { return initialSilenceMs_; } else { return InitialSilenceMsDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        initialSilenceMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "initial_silence_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInitialSilenceMs {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "initial_silence_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInitialSilenceMs() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "max_human_greeting_ms" field.</summary>
+    public const int MaxHumanGreetingMsFieldNumber = 8;
+    private readonly static int MaxHumanGreetingMsDefaultValue = 0;
+
+    private int maxHumanGreetingMs_;
+    /// <summary>
+    /// Optional: Continuous speech in milliseconds beyond which a greeting is machine-leaning
+    /// (default: 2400, valid range: 1000 - 6000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxHumanGreetingMs {
+      get { if ((_hasBits0 & 128) != 0) { return maxHumanGreetingMs_; } else { return MaxHumanGreetingMsDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        maxHumanGreetingMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_human_greeting_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxHumanGreetingMs {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "max_human_greeting_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxHumanGreetingMs() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "greeting_end_silence_ms" field.</summary>
+    public const int GreetingEndSilenceMsFieldNumber = 9;
+    private readonly static int GreetingEndSilenceMsDefaultValue = 0;
+
+    private int greetingEndSilenceMs_;
+    /// <summary>
+    /// Optional: Silence in milliseconds after the first speech burst that ends a human greeting
+    /// (default: 900, valid range: 300 - 3000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GreetingEndSilenceMs {
+      get { if ((_hasBits0 & 256) != 0) { return greetingEndSilenceMs_; } else { return GreetingEndSilenceMsDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        greetingEndSilenceMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "greeting_end_silence_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGreetingEndSilenceMs {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "greeting_end_silence_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGreetingEndSilenceMs() {
+      _hasBits0 &= ~256;
+    }
+
+    /// <summary>Field number for the "beep_detection_active" field.</summary>
+    public const int BeepDetectionActiveFieldNumber = 10;
+    private readonly static bool BeepDetectionActiveDefaultValue = false;
+
+    private bool beepDetectionActive_;
+    /// <summary>
+    /// Optional: Enable the tone detector for the beep of an answering machine (default: true)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BeepDetectionActive {
+      get { if ((_hasBits0 & 512) != 0) { return beepDetectionActive_; } else { return BeepDetectionActiveDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        beepDetectionActive_ = value;
+      }
+    }
+    /// <summary>Gets whether the "beep_detection_active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeepDetectionActive {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "beep_detection_active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeepDetectionActive() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "additional_machine_phrases" field.</summary>
+    public const int AdditionalMachinePhrasesFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_additionalMachinePhrases_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> additionalMachinePhrases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Additional phrases that indicate an answering machine, added to the built-in de and en phrase lists
+    /// (maximum 50 phrases, each 1 - 80 characters)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AdditionalMachinePhrases {
+      get { return additionalMachinePhrases_; }
+    }
+
+    /// <summary>Field number for the "additional_human_phrases" field.</summary>
+    public const int AdditionalHumanPhrasesFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _repeated_additionalHumanPhrases_codec
+        = pb::FieldCodec.ForString(98);
+    private readonly pbc::RepeatedField<string> additionalHumanPhrases_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Additional phrases that indicate a person, added to the built-in de and en phrase lists
+    /// (maximum 50 phrases, each 1 - 80 characters)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AdditionalHumanPhrases {
+      get { return additionalHumanPhrases_; }
+    }
+
+    /// <summary>Field number for the "hang_up_on_fax" field.</summary>
+    public const int HangUpOnFaxFieldNumber = 13;
+    private readonly static bool HangUpOnFaxDefaultValue = false;
+
+    private bool hangUpOnFax_;
+    /// <summary>
+    /// Optional: Hang up on a FAX verdict when the action is HANG_UP (default: true)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HangUpOnFax {
+      get { if ((_hasBits0 & 1024) != 0) { return hangUpOnFax_; } else { return HangUpOnFaxDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        hangUpOnFax_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hang_up_on_fax" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHangUpOnFax {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "hang_up_on_fax" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHangUpOnFax() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "hang_up_on_network_announcement" field.</summary>
+    public const int HangUpOnNetworkAnnouncementFieldNumber = 14;
+    private readonly static bool HangUpOnNetworkAnnouncementDefaultValue = false;
+
+    private bool hangUpOnNetworkAnnouncement_;
+    /// <summary>
+    /// Optional: Hang up on a NETWORK_ANNOUNCEMENT verdict, e.g. "the number is not reachable",
+    /// when the action is HANG_UP (default: true)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HangUpOnNetworkAnnouncement {
+      get { if ((_hasBits0 & 2048) != 0) { return hangUpOnNetworkAnnouncement_; } else { return HangUpOnNetworkAnnouncementDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        hangUpOnNetworkAnnouncement_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hang_up_on_network_announcement" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHangUpOnNetworkAnnouncement {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "hang_up_on_network_announcement" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHangUpOnNetworkAnnouncement() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "hang_up_on_ivr" field.</summary>
+    public const int HangUpOnIvrFieldNumber = 15;
+    private readonly static bool HangUpOnIvrDefaultValue = false;
+
+    private bool hangUpOnIvr_;
+    /// <summary>
+    /// Optional: Hang up on an IVR verdict, i.e. an automated menu, when the action is HANG_UP (default: false)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HangUpOnIvr {
+      get { if ((_hasBits0 & 4096) != 0) { return hangUpOnIvr_; } else { return HangUpOnIvrDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        hangUpOnIvr_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hang_up_on_ivr" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHangUpOnIvr {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "hang_up_on_ivr" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHangUpOnIvr() {
+      _hasBits0 &= ~4096;
+    }
+
+    /// <summary>Field number for the "hang_up_on_call_screening" field.</summary>
+    public const int HangUpOnCallScreeningFieldNumber = 16;
+    private readonly static bool HangUpOnCallScreeningDefaultValue = false;
+
+    private bool hangUpOnCallScreening_;
+    /// <summary>
+    /// Optional: Hang up on a CALL_SCREENING verdict, i.e. a call screening assistant asking for the reason of
+    /// the call, when the action is HANG_UP (default: false)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HangUpOnCallScreening {
+      get { if ((_hasBits0 & 8192) != 0) { return hangUpOnCallScreening_; } else { return HangUpOnCallScreeningDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        hangUpOnCallScreening_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hang_up_on_call_screening" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHangUpOnCallScreening {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "hang_up_on_call_screening" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHangUpOnCallScreening() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "voice_message_intent" field.</summary>
+    public const int VoiceMessageIntentFieldNumber = 17;
+    private readonly static string VoiceMessageIntentDefaultValue = "";
+
+    private string voiceMessageIntent_;
+    /// <summary>
+    /// Optional: Name of the NLU intent whose fulfillment is the voice message when the action is
+    /// LEAVE_VOICE_MESSAGE; it is triggered once (default: the welcome intent of the NLU project,
+    /// 1 - 200 characters when set)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VoiceMessageIntent {
+      get { return voiceMessageIntent_ ?? VoiceMessageIntentDefaultValue; }
+      set {
+        voiceMessageIntent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "voice_message_intent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVoiceMessageIntent {
+      get { return voiceMessageIntent_ != null; }
+    }
+    /// <summary>Clears the value of the "voice_message_intent" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVoiceMessageIntent() {
+      voiceMessageIntent_ = null;
+    }
+
+    /// <summary>Field number for the "voice_message_max_beep_wait_ms" field.</summary>
+    public const int VoiceMessageMaxBeepWaitMsFieldNumber = 18;
+    private readonly static int VoiceMessageMaxBeepWaitMsDefaultValue = 0;
+
+    private int voiceMessageMaxBeepWaitMs_;
+    /// <summary>
+    /// Optional: Maximum time in milliseconds after the verdict to wait for the beep, or for the end of the
+    /// machine greeting, before the voice message is spoken when the action is LEAVE_VOICE_MESSAGE;
+    /// 0 speaks immediately (default: 10000, valid range: 0 - 30000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VoiceMessageMaxBeepWaitMs {
+      get { if ((_hasBits0 & 16384) != 0) { return voiceMessageMaxBeepWaitMs_; } else { return VoiceMessageMaxBeepWaitMsDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        voiceMessageMaxBeepWaitMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "voice_message_max_beep_wait_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVoiceMessageMaxBeepWaitMs {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "voice_message_max_beep_wait_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVoiceMessageMaxBeepWaitMs() {
+      _hasBits0 &= ~16384;
+    }
+
+    /// <summary>Field number for the "voice_message_timeout_ms" field.</summary>
+    public const int VoiceMessageTimeoutMsFieldNumber = 19;
+    private readonly static int VoiceMessageTimeoutMsDefaultValue = 0;
+
+    private int voiceMessageTimeoutMs_;
+    /// <summary>
+    /// Optional: Maximum time in milliseconds after the verdict until the call is hung up when the action is
+    /// LEAVE_VOICE_MESSAGE, also when the voice message has not finished playing
+    /// (default: 30000, valid range: 5000 - 120000)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VoiceMessageTimeoutMs {
+      get { if ((_hasBits0 & 32768) != 0) { return voiceMessageTimeoutMs_; } else { return VoiceMessageTimeoutMsDefaultValue; } }
+      set {
+        _hasBits0 |= 32768;
+        voiceMessageTimeoutMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "voice_message_timeout_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVoiceMessageTimeoutMs {
+      get { return (_hasBits0 & 32768) != 0; }
+    }
+    /// <summary>Clears the value of the "voice_message_timeout_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVoiceMessageTimeoutMs() {
+      _hasBits0 &= ~32768;
+    }
+
+    /// <summary>Field number for the "keyword_detection_active" field.</summary>
+    public const int KeywordDetectionActiveFieldNumber = 20;
+    private readonly static bool KeywordDetectionActiveDefaultValue = false;
+
+    private bool keywordDetectionActive_;
+    /// <summary>
+    /// Optional: Enable the detection of machine and person phrases in the transcribed greeting, i.e. the
+    /// built-in phrase lists plus additional_machine_phrases and additional_human_phrases; turning it off
+    /// removes this evidence and the detection rules that need it (default: true)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool KeywordDetectionActive {
+      get { if ((_hasBits0 & 65536) != 0) { return keywordDetectionActive_; } else { return KeywordDetectionActiveDefaultValue; } }
+      set {
+        _hasBits0 |= 65536;
+        keywordDetectionActive_ = value;
+      }
+    }
+    /// <summary>Gets whether the "keyword_detection_active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKeywordDetectionActive {
+      get { return (_hasBits0 & 65536) != 0; }
+    }
+    /// <summary>Clears the value of the "keyword_detection_active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKeywordDetectionActive() {
+      _hasBits0 &= ~65536;
+    }
+
+    /// <summary>Field number for the "cadence_detection_active" field.</summary>
+    public const int CadenceDetectionActiveFieldNumber = 21;
+    private readonly static bool CadenceDetectionActiveDefaultValue = false;
+
+    private bool cadenceDetectionActive_;
+    /// <summary>
+    /// Optional: Enable the detection based on the speech and silence cadence of the greeting, e.g. its
+    /// length and the silence after it; turning it off removes this evidence and the detection rules that
+    /// need it (default: true)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CadenceDetectionActive {
+      get { if ((_hasBits0 & 131072) != 0) { return cadenceDetectionActive_; } else { return CadenceDetectionActiveDefaultValue; } }
+      set {
+        _hasBits0 |= 131072;
+        cadenceDetectionActive_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cadence_detection_active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCadenceDetectionActive {
+      get { return (_hasBits0 & 131072) != 0; }
+    }
+    /// <summary>Clears the value of the "cadence_detection_active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCadenceDetectionActive() {
+      _hasBits0 &= ~131072;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnsweringMachineDetectionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnsweringMachineDetectionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Active != other.Active) return false;
+      if (Action != other.Action) return false;
+      if (Sensitivity != other.Sensitivity) return false;
+      if (MaxDecisionTimeMs != other.MaxDecisionTimeMs) return false;
+      if (MaxMachineWaitMs != other.MaxMachineWaitMs) return false;
+      if (BeepWaitAfterGreetingMs != other.BeepWaitAfterGreetingMs) return false;
+      if (InitialSilenceMs != other.InitialSilenceMs) return false;
+      if (MaxHumanGreetingMs != other.MaxHumanGreetingMs) return false;
+      if (GreetingEndSilenceMs != other.GreetingEndSilenceMs) return false;
+      if (BeepDetectionActive != other.BeepDetectionActive) return false;
+      if(!additionalMachinePhrases_.Equals(other.additionalMachinePhrases_)) return false;
+      if(!additionalHumanPhrases_.Equals(other.additionalHumanPhrases_)) return false;
+      if (HangUpOnFax != other.HangUpOnFax) return false;
+      if (HangUpOnNetworkAnnouncement != other.HangUpOnNetworkAnnouncement) return false;
+      if (HangUpOnIvr != other.HangUpOnIvr) return false;
+      if (HangUpOnCallScreening != other.HangUpOnCallScreening) return false;
+      if (VoiceMessageIntent != other.VoiceMessageIntent) return false;
+      if (VoiceMessageMaxBeepWaitMs != other.VoiceMessageMaxBeepWaitMs) return false;
+      if (VoiceMessageTimeoutMs != other.VoiceMessageTimeoutMs) return false;
+      if (KeywordDetectionActive != other.KeywordDetectionActive) return false;
+      if (CadenceDetectionActive != other.CadenceDetectionActive) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasActive) hash ^= Active.GetHashCode();
+      if (HasAction) hash ^= Action.GetHashCode();
+      if (HasSensitivity) hash ^= Sensitivity.GetHashCode();
+      if (HasMaxDecisionTimeMs) hash ^= MaxDecisionTimeMs.GetHashCode();
+      if (HasMaxMachineWaitMs) hash ^= MaxMachineWaitMs.GetHashCode();
+      if (HasBeepWaitAfterGreetingMs) hash ^= BeepWaitAfterGreetingMs.GetHashCode();
+      if (HasInitialSilenceMs) hash ^= InitialSilenceMs.GetHashCode();
+      if (HasMaxHumanGreetingMs) hash ^= MaxHumanGreetingMs.GetHashCode();
+      if (HasGreetingEndSilenceMs) hash ^= GreetingEndSilenceMs.GetHashCode();
+      if (HasBeepDetectionActive) hash ^= BeepDetectionActive.GetHashCode();
+      hash ^= additionalMachinePhrases_.GetHashCode();
+      hash ^= additionalHumanPhrases_.GetHashCode();
+      if (HasHangUpOnFax) hash ^= HangUpOnFax.GetHashCode();
+      if (HasHangUpOnNetworkAnnouncement) hash ^= HangUpOnNetworkAnnouncement.GetHashCode();
+      if (HasHangUpOnIvr) hash ^= HangUpOnIvr.GetHashCode();
+      if (HasHangUpOnCallScreening) hash ^= HangUpOnCallScreening.GetHashCode();
+      if (HasVoiceMessageIntent) hash ^= VoiceMessageIntent.GetHashCode();
+      if (HasVoiceMessageMaxBeepWaitMs) hash ^= VoiceMessageMaxBeepWaitMs.GetHashCode();
+      if (HasVoiceMessageTimeoutMs) hash ^= VoiceMessageTimeoutMs.GetHashCode();
+      if (HasKeywordDetectionActive) hash ^= KeywordDetectionActive.GetHashCode();
+      if (HasCadenceDetectionActive) hash ^= CadenceDetectionActive.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasActive) {
+        output.WriteRawTag(8);
+        output.WriteBool(Active);
+      }
+      if (HasAction) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Action);
+      }
+      if (HasSensitivity) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Sensitivity);
+      }
+      if (HasMaxDecisionTimeMs) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxDecisionTimeMs);
+      }
+      if (HasMaxMachineWaitMs) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxMachineWaitMs);
+      }
+      if (HasBeepWaitAfterGreetingMs) {
+        output.WriteRawTag(48);
+        output.WriteInt32(BeepWaitAfterGreetingMs);
+      }
+      if (HasInitialSilenceMs) {
+        output.WriteRawTag(56);
+        output.WriteInt32(InitialSilenceMs);
+      }
+      if (HasMaxHumanGreetingMs) {
+        output.WriteRawTag(64);
+        output.WriteInt32(MaxHumanGreetingMs);
+      }
+      if (HasGreetingEndSilenceMs) {
+        output.WriteRawTag(72);
+        output.WriteInt32(GreetingEndSilenceMs);
+      }
+      if (HasBeepDetectionActive) {
+        output.WriteRawTag(80);
+        output.WriteBool(BeepDetectionActive);
+      }
+      additionalMachinePhrases_.WriteTo(output, _repeated_additionalMachinePhrases_codec);
+      additionalHumanPhrases_.WriteTo(output, _repeated_additionalHumanPhrases_codec);
+      if (HasHangUpOnFax) {
+        output.WriteRawTag(104);
+        output.WriteBool(HangUpOnFax);
+      }
+      if (HasHangUpOnNetworkAnnouncement) {
+        output.WriteRawTag(112);
+        output.WriteBool(HangUpOnNetworkAnnouncement);
+      }
+      if (HasHangUpOnIvr) {
+        output.WriteRawTag(120);
+        output.WriteBool(HangUpOnIvr);
+      }
+      if (HasHangUpOnCallScreening) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(HangUpOnCallScreening);
+      }
+      if (HasVoiceMessageIntent) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(VoiceMessageIntent);
+      }
+      if (HasVoiceMessageMaxBeepWaitMs) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(VoiceMessageMaxBeepWaitMs);
+      }
+      if (HasVoiceMessageTimeoutMs) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(VoiceMessageTimeoutMs);
+      }
+      if (HasKeywordDetectionActive) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(KeywordDetectionActive);
+      }
+      if (HasCadenceDetectionActive) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(CadenceDetectionActive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasActive) {
+        output.WriteRawTag(8);
+        output.WriteBool(Active);
+      }
+      if (HasAction) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Action);
+      }
+      if (HasSensitivity) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Sensitivity);
+      }
+      if (HasMaxDecisionTimeMs) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxDecisionTimeMs);
+      }
+      if (HasMaxMachineWaitMs) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxMachineWaitMs);
+      }
+      if (HasBeepWaitAfterGreetingMs) {
+        output.WriteRawTag(48);
+        output.WriteInt32(BeepWaitAfterGreetingMs);
+      }
+      if (HasInitialSilenceMs) {
+        output.WriteRawTag(56);
+        output.WriteInt32(InitialSilenceMs);
+      }
+      if (HasMaxHumanGreetingMs) {
+        output.WriteRawTag(64);
+        output.WriteInt32(MaxHumanGreetingMs);
+      }
+      if (HasGreetingEndSilenceMs) {
+        output.WriteRawTag(72);
+        output.WriteInt32(GreetingEndSilenceMs);
+      }
+      if (HasBeepDetectionActive) {
+        output.WriteRawTag(80);
+        output.WriteBool(BeepDetectionActive);
+      }
+      additionalMachinePhrases_.WriteTo(ref output, _repeated_additionalMachinePhrases_codec);
+      additionalHumanPhrases_.WriteTo(ref output, _repeated_additionalHumanPhrases_codec);
+      if (HasHangUpOnFax) {
+        output.WriteRawTag(104);
+        output.WriteBool(HangUpOnFax);
+      }
+      if (HasHangUpOnNetworkAnnouncement) {
+        output.WriteRawTag(112);
+        output.WriteBool(HangUpOnNetworkAnnouncement);
+      }
+      if (HasHangUpOnIvr) {
+        output.WriteRawTag(120);
+        output.WriteBool(HangUpOnIvr);
+      }
+      if (HasHangUpOnCallScreening) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(HangUpOnCallScreening);
+      }
+      if (HasVoiceMessageIntent) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(VoiceMessageIntent);
+      }
+      if (HasVoiceMessageMaxBeepWaitMs) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(VoiceMessageMaxBeepWaitMs);
+      }
+      if (HasVoiceMessageTimeoutMs) {
+        output.WriteRawTag(152, 1);
+        output.WriteInt32(VoiceMessageTimeoutMs);
+      }
+      if (HasKeywordDetectionActive) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(KeywordDetectionActive);
+      }
+      if (HasCadenceDetectionActive) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(CadenceDetectionActive);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasActive) {
+        size += 1 + 1;
+      }
+      if (HasAction) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Action);
+      }
+      if (HasSensitivity) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Sensitivity);
+      }
+      if (HasMaxDecisionTimeMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDecisionTimeMs);
+      }
+      if (HasMaxMachineWaitMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxMachineWaitMs);
+      }
+      if (HasBeepWaitAfterGreetingMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(BeepWaitAfterGreetingMs);
+      }
+      if (HasInitialSilenceMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InitialSilenceMs);
+      }
+      if (HasMaxHumanGreetingMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxHumanGreetingMs);
+      }
+      if (HasGreetingEndSilenceMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GreetingEndSilenceMs);
+      }
+      if (HasBeepDetectionActive) {
+        size += 1 + 1;
+      }
+      size += additionalMachinePhrases_.CalculateSize(_repeated_additionalMachinePhrases_codec);
+      size += additionalHumanPhrases_.CalculateSize(_repeated_additionalHumanPhrases_codec);
+      if (HasHangUpOnFax) {
+        size += 1 + 1;
+      }
+      if (HasHangUpOnNetworkAnnouncement) {
+        size += 1 + 1;
+      }
+      if (HasHangUpOnIvr) {
+        size += 1 + 1;
+      }
+      if (HasHangUpOnCallScreening) {
+        size += 2 + 1;
+      }
+      if (HasVoiceMessageIntent) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VoiceMessageIntent);
+      }
+      if (HasVoiceMessageMaxBeepWaitMs) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(VoiceMessageMaxBeepWaitMs);
+      }
+      if (HasVoiceMessageTimeoutMs) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(VoiceMessageTimeoutMs);
+      }
+      if (HasKeywordDetectionActive) {
+        size += 2 + 1;
+      }
+      if (HasCadenceDetectionActive) {
+        size += 2 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnsweringMachineDetectionConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasActive) {
+        Active = other.Active;
+      }
+      if (other.HasAction) {
+        Action = other.Action;
+      }
+      if (other.HasSensitivity) {
+        Sensitivity = other.Sensitivity;
+      }
+      if (other.HasMaxDecisionTimeMs) {
+        MaxDecisionTimeMs = other.MaxDecisionTimeMs;
+      }
+      if (other.HasMaxMachineWaitMs) {
+        MaxMachineWaitMs = other.MaxMachineWaitMs;
+      }
+      if (other.HasBeepWaitAfterGreetingMs) {
+        BeepWaitAfterGreetingMs = other.BeepWaitAfterGreetingMs;
+      }
+      if (other.HasInitialSilenceMs) {
+        InitialSilenceMs = other.InitialSilenceMs;
+      }
+      if (other.HasMaxHumanGreetingMs) {
+        MaxHumanGreetingMs = other.MaxHumanGreetingMs;
+      }
+      if (other.HasGreetingEndSilenceMs) {
+        GreetingEndSilenceMs = other.GreetingEndSilenceMs;
+      }
+      if (other.HasBeepDetectionActive) {
+        BeepDetectionActive = other.BeepDetectionActive;
+      }
+      additionalMachinePhrases_.Add(other.additionalMachinePhrases_);
+      additionalHumanPhrases_.Add(other.additionalHumanPhrases_);
+      if (other.HasHangUpOnFax) {
+        HangUpOnFax = other.HangUpOnFax;
+      }
+      if (other.HasHangUpOnNetworkAnnouncement) {
+        HangUpOnNetworkAnnouncement = other.HangUpOnNetworkAnnouncement;
+      }
+      if (other.HasHangUpOnIvr) {
+        HangUpOnIvr = other.HangUpOnIvr;
+      }
+      if (other.HasHangUpOnCallScreening) {
+        HangUpOnCallScreening = other.HangUpOnCallScreening;
+      }
+      if (other.HasVoiceMessageIntent) {
+        VoiceMessageIntent = other.VoiceMessageIntent;
+      }
+      if (other.HasVoiceMessageMaxBeepWaitMs) {
+        VoiceMessageMaxBeepWaitMs = other.VoiceMessageMaxBeepWaitMs;
+      }
+      if (other.HasVoiceMessageTimeoutMs) {
+        VoiceMessageTimeoutMs = other.VoiceMessageTimeoutMs;
+      }
+      if (other.HasKeywordDetectionActive) {
+        KeywordDetectionActive = other.KeywordDetectionActive;
+      }
+      if (other.HasCadenceDetectionActive) {
+        CadenceDetectionActive = other.CadenceDetectionActive;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Action = (global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Sensitivity = (global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            MaxDecisionTimeMs = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            MaxMachineWaitMs = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            BeepWaitAfterGreetingMs = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            InitialSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            MaxHumanGreetingMs = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            GreetingEndSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            BeepDetectionActive = input.ReadBool();
+            break;
+          }
+          case 90: {
+            additionalMachinePhrases_.AddEntriesFrom(input, _repeated_additionalMachinePhrases_codec);
+            break;
+          }
+          case 98: {
+            additionalHumanPhrases_.AddEntriesFrom(input, _repeated_additionalHumanPhrases_codec);
+            break;
+          }
+          case 104: {
+            HangUpOnFax = input.ReadBool();
+            break;
+          }
+          case 112: {
+            HangUpOnNetworkAnnouncement = input.ReadBool();
+            break;
+          }
+          case 120: {
+            HangUpOnIvr = input.ReadBool();
+            break;
+          }
+          case 128: {
+            HangUpOnCallScreening = input.ReadBool();
+            break;
+          }
+          case 138: {
+            VoiceMessageIntent = input.ReadString();
+            break;
+          }
+          case 144: {
+            VoiceMessageMaxBeepWaitMs = input.ReadInt32();
+            break;
+          }
+          case 152: {
+            VoiceMessageTimeoutMs = input.ReadInt32();
+            break;
+          }
+          case 160: {
+            KeywordDetectionActive = input.ReadBool();
+            break;
+          }
+          case 168: {
+            CadenceDetectionActive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 16: {
+            Action = (global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Sensitivity = (global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            MaxDecisionTimeMs = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            MaxMachineWaitMs = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            BeepWaitAfterGreetingMs = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            InitialSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            MaxHumanGreetingMs = input.ReadInt32();
+            break;
+          }
+          case 72: {
+            GreetingEndSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            BeepDetectionActive = input.ReadBool();
+            break;
+          }
+          case 90: {
+            additionalMachinePhrases_.AddEntriesFrom(ref input, _repeated_additionalMachinePhrases_codec);
+            break;
+          }
+          case 98: {
+            additionalHumanPhrases_.AddEntriesFrom(ref input, _repeated_additionalHumanPhrases_codec);
+            break;
+          }
+          case 104: {
+            HangUpOnFax = input.ReadBool();
+            break;
+          }
+          case 112: {
+            HangUpOnNetworkAnnouncement = input.ReadBool();
+            break;
+          }
+          case 120: {
+            HangUpOnIvr = input.ReadBool();
+            break;
+          }
+          case 128: {
+            HangUpOnCallScreening = input.ReadBool();
+            break;
+          }
+          case 138: {
+            VoiceMessageIntent = input.ReadString();
+            break;
+          }
+          case 144: {
+            VoiceMessageMaxBeepWaitMs = input.ReadInt32();
+            break;
+          }
+          case 152: {
+            VoiceMessageTimeoutMs = input.ReadInt32();
+            break;
+          }
+          case 160: {
+            KeywordDetectionActive = input.ReadBool();
+            break;
+          }
+          case 168: {
+            CadenceDetectionActive = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnsweringMachineDetectionConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// What to do once a non-human verdict is reached
+      /// </summary>
+      public enum AmdAction {
+        /// <summary>
+        /// Unspecified action defaults to HANG_UP
+        /// </summary>
+        [pbr::OriginalName("AMD_ACTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Hang up at once on a non-human verdict whose per-verdict hang-up switch is on
+        /// (an answering machine is always hung up on) (default)
+        /// </summary>
+        [pbr::OriginalName("HANG_UP")] HangUp = 1,
+        /// <summary>
+        /// Only detect and record the verdict, never hang up: OUTGOING_CALL_ANSWERING_MACHINE_DETECTED is still
+        /// set, then the far end is treated as a person and the call continues with the greeting and ends
+        /// normally (shadow mode to calibrate the detection before enabling HANG_UP)
+        /// </summary>
+        [pbr::OriginalName("DETECT_ONLY")] DetectOnly = 2,
+        /// <summary>
+        /// Leave a voice message on a hang-up-eligible verdict, then hang up: the fulfillment of
+        /// voice_message_intent is spoken once after the beep (or after the end of the machine greeting),
+        /// and the call is hung up when it finished playing or when voice_message_timeout_ms elapsed,
+        /// whichever comes first. A FAX verdict never gets a voice message; it is hung up on when
+        /// hang_up_on_fax is on. See the compliance note above before enabling it
+        /// </summary>
+        [pbr::OriginalName("LEAVE_VOICE_MESSAGE")] LeaveVoiceMessage = 3,
+      }
+
+      /// <summary>
+      /// Sensitivity of the detection: selects the enabled detection rules and their internal thresholds
+      /// </summary>
+      public enum AmdSensitivity {
+        /// <summary>
+        /// Unspecified sensitivity defaults to LOW
+        /// </summary>
+        [pbr::OriginalName("AMD_SENSITIVITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Most conservative towards people: only strong machine evidence leads to a machine verdict (default)
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 1,
+        /// <summary>
+        /// Balanced between missed machines and people classified as machines
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 2,
+        /// <summary>
+        /// Most aggressive: detects more machines at a higher risk of hanging up on a person
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// The base config is for both the listener and caller. If you only provide it you will get a listener
   /// You will need to provide &lt;code>SipCallerConfig&lt;/code> for the caller
   /// </summary>
@@ -4993,7 +6921,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5197,7 +7125,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5480,7 +7408,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5948,6 +7876,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<AudioObjectStorageConfig> _parser = new pb::MessageParser<AudioObjectStorageConfig>(() => new AudioObjectStorageConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AudioObjectStorageConfig> Parser { get { return _parser; } }
@@ -5955,7 +7884,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5975,6 +7904,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioObjectStorageConfig(AudioObjectStorageConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       activateAudioObjectStorage_ = other.activateAudioObjectStorage_;
       audioObjectStorageServicesActivationConfig_ = other.audioObjectStorageServicesActivationConfig_ != null ? other.audioObjectStorageServicesActivationConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5988,6 +7918,8 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "activate_audio_object_storage" field.</summary>
     public const int ActivateAudioObjectStorageFieldNumber = 1;
+    private readonly static bool ActivateAudioObjectStorageDefaultValue = false;
+
     private bool activateAudioObjectStorage_;
     /// <summary>
     /// Audio storage should be activated or not
@@ -5995,10 +7927,23 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateAudioObjectStorage {
-      get { return activateAudioObjectStorage_; }
+      get { if ((_hasBits0 & 1) != 0) { return activateAudioObjectStorage_; } else { return ActivateAudioObjectStorageDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         activateAudioObjectStorage_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_audio_object_storage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateAudioObjectStorage {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_audio_object_storage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateAudioObjectStorage() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "audio_object_storage_services_activation_config" field.</summary>
@@ -6040,7 +7985,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ActivateAudioObjectStorage != false) hash ^= ActivateAudioObjectStorage.GetHashCode();
+      if (HasActivateAudioObjectStorage) hash ^= ActivateAudioObjectStorage.GetHashCode();
       if (audioObjectStorageServicesActivationConfig_ != null) hash ^= AudioObjectStorageServicesActivationConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6060,7 +8005,7 @@ namespace Ondewo.Vtsi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivateAudioObjectStorage != false) {
+      if (HasActivateAudioObjectStorage) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateAudioObjectStorage);
       }
@@ -6078,7 +8023,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivateAudioObjectStorage != false) {
+      if (HasActivateAudioObjectStorage) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateAudioObjectStorage);
       }
@@ -6096,7 +8041,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ActivateAudioObjectStorage != false) {
+      if (HasActivateAudioObjectStorage) {
         size += 1 + 1;
       }
       if (audioObjectStorageServicesActivationConfig_ != null) {
@@ -6114,7 +8059,7 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
-      if (other.ActivateAudioObjectStorage != false) {
+      if (other.HasActivateAudioObjectStorage) {
         ActivateAudioObjectStorage = other.ActivateAudioObjectStorage;
       }
       if (other.audioObjectStorageServicesActivationConfig_ != null) {
@@ -6201,6 +8146,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<AudioObjectStorageServicesActivationConfig> _parser = new pb::MessageParser<AudioObjectStorageServicesActivationConfig>(() => new AudioObjectStorageServicesActivationConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AudioObjectStorageServicesActivationConfig> Parser { get { return _parser; } }
@@ -6208,7 +8154,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6228,6 +8174,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioObjectStorageServicesActivationConfig(AudioObjectStorageServicesActivationConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       activateS2T_ = other.activateS2T_;
       activateT2S_ = other.activateT2S_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -6241,6 +8188,8 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "activate_s2t" field.</summary>
     public const int ActivateS2TFieldNumber = 1;
+    private readonly static bool ActivateS2TDefaultValue = false;
+
     private bool activateS2T_;
     /// <summary>
     /// Should audio object store save audio sent to the Speech-2-Text platform
@@ -6248,14 +8197,29 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateS2T {
-      get { return activateS2T_; }
+      get { if ((_hasBits0 & 1) != 0) { return activateS2T_; } else { return ActivateS2TDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         activateS2T_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_s2t" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateS2T {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_s2t" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateS2T() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "activate_t2s" field.</summary>
     public const int ActivateT2SFieldNumber = 2;
+    private readonly static bool ActivateT2SDefaultValue = false;
+
     private bool activateT2S_;
     /// <summary>
     /// Should audio object store save audio generated from the Text-2-Speech platform
@@ -6263,10 +8227,23 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateT2S {
-      get { return activateT2S_; }
+      get { if ((_hasBits0 & 2) != 0) { return activateT2S_; } else { return ActivateT2SDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         activateT2S_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_t2s" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateT2S {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_t2s" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateT2S() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6293,8 +8270,8 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ActivateS2T != false) hash ^= ActivateS2T.GetHashCode();
-      if (ActivateT2S != false) hash ^= ActivateT2S.GetHashCode();
+      if (HasActivateS2T) hash ^= ActivateS2T.GetHashCode();
+      if (HasActivateT2S) hash ^= ActivateT2S.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6313,11 +8290,11 @@ namespace Ondewo.Vtsi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateS2T);
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         output.WriteRawTag(16);
         output.WriteBool(ActivateT2S);
       }
@@ -6331,11 +8308,11 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateS2T);
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         output.WriteRawTag(16);
         output.WriteBool(ActivateT2S);
       }
@@ -6349,10 +8326,10 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         size += 1 + 1;
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -6367,10 +8344,10 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
-      if (other.ActivateS2T != false) {
+      if (other.HasActivateS2T) {
         ActivateS2T = other.ActivateS2T;
       }
-      if (other.ActivateT2S != false) {
+      if (other.HasActivateT2S) {
         ActivateT2S = other.ActivateT2S;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -6445,6 +8422,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<MessageBrokerConfig> _parser = new pb::MessageParser<MessageBrokerConfig>(() => new MessageBrokerConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MessageBrokerConfig> Parser { get { return _parser; } }
@@ -6452,7 +8430,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6472,6 +8450,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageBrokerConfig(MessageBrokerConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       activateMessageBroker_ = other.activateMessageBroker_;
       messageBrokerServicesActivationConfig_ = other.messageBrokerServicesActivationConfig_ != null ? other.messageBrokerServicesActivationConfig_.Clone() : null;
       switch (other.MessageBrokerConfigCase) {
@@ -6491,6 +8470,8 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "activate_message_broker" field.</summary>
     public const int ActivateMessageBrokerFieldNumber = 1;
+    private readonly static bool ActivateMessageBrokerDefaultValue = false;
+
     private bool activateMessageBroker_;
     /// <summary>
     /// Should the broker be activated or not
@@ -6498,10 +8479,23 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateMessageBroker {
-      get { return activateMessageBroker_; }
+      get { if ((_hasBits0 & 1) != 0) { return activateMessageBroker_; } else { return ActivateMessageBrokerDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         activateMessageBroker_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_message_broker" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateMessageBroker {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_message_broker" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateMessageBroker() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "message_broker_services_activation_config" field.</summary>
@@ -6580,7 +8574,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ActivateMessageBroker != false) hash ^= ActivateMessageBroker.GetHashCode();
+      if (HasActivateMessageBroker) hash ^= ActivateMessageBroker.GetHashCode();
       if (messageBrokerServicesActivationConfig_ != null) hash ^= MessageBrokerServicesActivationConfig.GetHashCode();
       if (messageBrokerConfigCase_ == MessageBrokerConfigOneofCase.RabbitMqConfig) hash ^= RabbitMqConfig.GetHashCode();
       hash ^= (int) messageBrokerConfigCase_;
@@ -6602,7 +8596,7 @@ namespace Ondewo.Vtsi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivateMessageBroker != false) {
+      if (HasActivateMessageBroker) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateMessageBroker);
       }
@@ -6624,7 +8618,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivateMessageBroker != false) {
+      if (HasActivateMessageBroker) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateMessageBroker);
       }
@@ -6646,7 +8640,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ActivateMessageBroker != false) {
+      if (HasActivateMessageBroker) {
         size += 1 + 1;
       }
       if (messageBrokerServicesActivationConfig_ != null) {
@@ -6667,7 +8661,7 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
-      if (other.ActivateMessageBroker != false) {
+      if (other.HasActivateMessageBroker) {
         ActivateMessageBroker = other.ActivateMessageBroker;
       }
       if (other.messageBrokerServicesActivationConfig_ != null) {
@@ -6781,6 +8775,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<MessageBrokerServicesActivationConfig> _parser = new pb::MessageParser<MessageBrokerServicesActivationConfig>(() => new MessageBrokerServicesActivationConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MessageBrokerServicesActivationConfig> Parser { get { return _parser; } }
@@ -6788,7 +8783,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6808,6 +8803,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MessageBrokerServicesActivationConfig(MessageBrokerServicesActivationConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       activateS2T_ = other.activateS2T_;
       activateNlu_ = other.activateNlu_;
       activateT2S_ = other.activateT2S_;
@@ -6823,6 +8819,8 @@ namespace Ondewo.Vtsi {
 
     /// <summary>Field number for the "activate_s2t" field.</summary>
     public const int ActivateS2TFieldNumber = 1;
+    private readonly static bool ActivateS2TDefaultValue = false;
+
     private bool activateS2T_;
     /// <summary>
     /// should RabbitMQ Message Broker be activated for Speech-2-Text platform
@@ -6830,14 +8828,29 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateS2T {
-      get { return activateS2T_; }
+      get { if ((_hasBits0 & 1) != 0) { return activateS2T_; } else { return ActivateS2TDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         activateS2T_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_s2t" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateS2T {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_s2t" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateS2T() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "activate_nlu" field.</summary>
     public const int ActivateNluFieldNumber = 2;
+    private readonly static bool ActivateNluDefaultValue = false;
+
     private bool activateNlu_;
     /// <summary>
     /// should RabbitMQ Message Broker be activated for NLU platform
@@ -6845,14 +8858,29 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateNlu {
-      get { return activateNlu_; }
+      get { if ((_hasBits0 & 2) != 0) { return activateNlu_; } else { return ActivateNluDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         activateNlu_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_nlu" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateNlu {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_nlu" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateNlu() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "activate_t2s" field.</summary>
     public const int ActivateT2SFieldNumber = 3;
+    private readonly static bool ActivateT2SDefaultValue = false;
+
     private bool activateT2S_;
     /// <summary>
     /// should RabbitMQ Message Broker be activated for Text-2-Speech platform
@@ -6860,14 +8888,29 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateT2S {
-      get { return activateT2S_; }
+      get { if ((_hasBits0 & 4) != 0) { return activateT2S_; } else { return ActivateT2SDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         activateT2S_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_t2s" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateT2S {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_t2s" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateT2S() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "activate_sip" field.</summary>
     public const int ActivateSipFieldNumber = 4;
+    private readonly static bool ActivateSipDefaultValue = false;
+
     private bool activateSip_;
     /// <summary>
     /// should RabbitMQ Message Broker be activated for SIP platform
@@ -6875,10 +8918,23 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ActivateSip {
-      get { return activateSip_; }
+      get { if ((_hasBits0 & 8) != 0) { return activateSip_; } else { return ActivateSipDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         activateSip_ = value;
       }
+    }
+    /// <summary>Gets whether the "activate_sip" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActivateSip {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "activate_sip" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActivateSip() {
+      _hasBits0 &= ~8;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6907,10 +8963,10 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (ActivateS2T != false) hash ^= ActivateS2T.GetHashCode();
-      if (ActivateNlu != false) hash ^= ActivateNlu.GetHashCode();
-      if (ActivateT2S != false) hash ^= ActivateT2S.GetHashCode();
-      if (ActivateSip != false) hash ^= ActivateSip.GetHashCode();
+      if (HasActivateS2T) hash ^= ActivateS2T.GetHashCode();
+      if (HasActivateNlu) hash ^= ActivateNlu.GetHashCode();
+      if (HasActivateT2S) hash ^= ActivateT2S.GetHashCode();
+      if (HasActivateSip) hash ^= ActivateSip.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6929,19 +8985,19 @@ namespace Ondewo.Vtsi {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateS2T);
       }
-      if (ActivateNlu != false) {
+      if (HasActivateNlu) {
         output.WriteRawTag(16);
         output.WriteBool(ActivateNlu);
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         output.WriteRawTag(24);
         output.WriteBool(ActivateT2S);
       }
-      if (ActivateSip != false) {
+      if (HasActivateSip) {
         output.WriteRawTag(32);
         output.WriteBool(ActivateSip);
       }
@@ -6955,19 +9011,19 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         output.WriteRawTag(8);
         output.WriteBool(ActivateS2T);
       }
-      if (ActivateNlu != false) {
+      if (HasActivateNlu) {
         output.WriteRawTag(16);
         output.WriteBool(ActivateNlu);
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         output.WriteRawTag(24);
         output.WriteBool(ActivateT2S);
       }
-      if (ActivateSip != false) {
+      if (HasActivateSip) {
         output.WriteRawTag(32);
         output.WriteBool(ActivateSip);
       }
@@ -6981,16 +9037,16 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (ActivateS2T != false) {
+      if (HasActivateS2T) {
         size += 1 + 1;
       }
-      if (ActivateNlu != false) {
+      if (HasActivateNlu) {
         size += 1 + 1;
       }
-      if (ActivateT2S != false) {
+      if (HasActivateT2S) {
         size += 1 + 1;
       }
-      if (ActivateSip != false) {
+      if (HasActivateSip) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -7005,16 +9061,16 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
-      if (other.ActivateS2T != false) {
+      if (other.HasActivateS2T) {
         ActivateS2T = other.ActivateS2T;
       }
-      if (other.ActivateNlu != false) {
+      if (other.HasActivateNlu) {
         ActivateNlu = other.ActivateNlu;
       }
-      if (other.ActivateT2S != false) {
+      if (other.HasActivateT2S) {
         ActivateT2S = other.ActivateT2S;
       }
-      if (other.ActivateSip != false) {
+      if (other.HasActivateSip) {
         ActivateSip = other.ActivateSip;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -7112,7 +9168,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7476,7 +9532,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7698,7 +9754,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7920,7 +9976,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8142,7 +10198,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8486,7 +10542,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8830,7 +10886,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9132,7 +11188,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9425,7 +11481,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9447,6 +11503,7 @@ namespace Ondewo.Vtsi {
     public StartListenersRequest(StartListenersRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       listenerRequests_ = other.listenerRequests_.Clone();
+      idempotencyKey_ = other.idempotencyKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9485,6 +11542,29 @@ namespace Ondewo.Vtsi {
       get { return listenerRequests_; }
     }
 
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 3;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means no
+    /// deduplication. A retry carrying the same key returns the response of the first successful attempt instead
+    /// of running the request a second time, whichever server replica it reaches, for as long as the server
+    /// retains the key (24 hours by default). The key is scoped to the VTSI project and to this RPC. Reusing a
+    /// key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that arrives while the
+    /// first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried later. A first attempt
+    /// that fails stores nothing, so a retry after a failure runs the request again. A replayed response carries
+    /// no &lt;code>common_services_config&lt;/code>: the server keeps no second copy of the credentials it holds. To
+    /// make a single caller or listener idempotent, send it as a batch of one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9502,6 +11582,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if(!listenerRequests_.Equals(other.listenerRequests_)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9511,6 +11592,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       hash ^= listenerRequests_.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9534,6 +11616,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       listenerRequests_.WriteTo(output, _repeated_listenerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9549,6 +11635,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       listenerRequests_.WriteTo(ref output, _repeated_listenerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9563,6 +11653,9 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       size += listenerRequests_.CalculateSize(_repeated_listenerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9579,6 +11672,9 @@ namespace Ondewo.Vtsi {
         VtsiProjectName = other.VtsiProjectName;
       }
       listenerRequests_.Add(other.listenerRequests_);
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9604,6 +11700,10 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             listenerRequests_.AddEntriesFrom(input, _repeated_listenerRequests_codec);
+            break;
+          }
+          case 26: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }
@@ -9633,6 +11733,10 @@ namespace Ondewo.Vtsi {
             listenerRequests_.AddEntriesFrom(ref input, _repeated_listenerRequests_codec);
             break;
           }
+          case 26: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -9658,7 +11762,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9931,7 +12035,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10233,7 +12337,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10526,7 +12630,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10548,6 +12652,7 @@ namespace Ondewo.Vtsi {
     public StartCallersRequest(StartCallersRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       callerRequests_ = other.callerRequests_.Clone();
+      idempotencyKey_ = other.idempotencyKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10586,6 +12691,29 @@ namespace Ondewo.Vtsi {
       get { return callerRequests_; }
     }
 
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 4;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means no
+    /// deduplication. A retry carrying the same key returns the response of the first successful attempt instead
+    /// of running the request a second time, whichever server replica it reaches, for as long as the server
+    /// retains the key (24 hours by default). The key is scoped to the VTSI project and to this RPC. Reusing a
+    /// key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that arrives while the
+    /// first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried later. A first attempt
+    /// that fails stores nothing, so a retry after a failure runs the request again. A replayed response carries
+    /// no &lt;code>common_services_config&lt;/code>: the server keeps no second copy of the credentials it holds. To
+    /// make a single caller or listener idempotent, send it as a batch of one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10603,6 +12731,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if(!callerRequests_.Equals(other.callerRequests_)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10612,6 +12741,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       hash ^= callerRequests_.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10635,6 +12765,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       callerRequests_.WriteTo(output, _repeated_callerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10650,6 +12784,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       callerRequests_.WriteTo(ref output, _repeated_callerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10664,6 +12802,9 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       size += callerRequests_.CalculateSize(_repeated_callerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -10680,6 +12821,9 @@ namespace Ondewo.Vtsi {
         VtsiProjectName = other.VtsiProjectName;
       }
       callerRequests_.Add(other.callerRequests_);
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -10705,6 +12849,10 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             callerRequests_.AddEntriesFrom(input, _repeated_callerRequests_codec);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }
@@ -10734,6 +12882,10 @@ namespace Ondewo.Vtsi {
             callerRequests_.AddEntriesFrom(ref input, _repeated_callerRequests_codec);
             break;
           }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -10759,7 +12911,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11033,7 +13185,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11349,7 +13501,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11585,7 +13737,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11886,7 +14038,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12202,7 +14354,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12438,7 +14590,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12738,7 +14890,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12942,7 +15094,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13186,7 +15338,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13379,7 +15531,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13612,7 +15764,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13816,7 +15968,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14060,7 +16212,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14253,7 +16405,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14486,7 +16638,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14690,7 +16842,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14934,7 +17086,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15127,7 +17279,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15360,7 +17512,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[51]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15564,7 +17716,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[52]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15808,7 +17960,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[53]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16001,7 +18153,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[54]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16234,7 +18386,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[55]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16537,7 +18689,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16559,6 +18711,7 @@ namespace Ondewo.Vtsi {
     public StartScheduledCallersRequest(StartScheduledCallersRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       scheduledCallerRequests_ = other.scheduledCallerRequests_.Clone();
+      idempotencyKey_ = other.idempotencyKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -16597,6 +18750,29 @@ namespace Ondewo.Vtsi {
       get { return scheduledCallerRequests_; }
     }
 
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 4;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means no
+    /// deduplication. A retry carrying the same key returns the response of the first successful attempt instead
+    /// of running the request a second time, whichever server replica it reaches, for as long as the server
+    /// retains the key (24 hours by default). The key is scoped to the VTSI project and to this RPC. Reusing a
+    /// key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that arrives while the
+    /// first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried later. A first attempt
+    /// that fails stores nothing, so a retry after a failure runs the request again. A replayed response carries
+    /// no &lt;code>common_services_config&lt;/code>: the server keeps no second copy of the credentials it holds. To
+    /// make a single caller or listener idempotent, send it as a batch of one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -16614,6 +18790,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if(!scheduledCallerRequests_.Equals(other.scheduledCallerRequests_)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -16623,6 +18800,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       hash ^= scheduledCallerRequests_.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16646,6 +18824,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       scheduledCallerRequests_.WriteTo(output, _repeated_scheduledCallerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16661,6 +18843,10 @@ namespace Ondewo.Vtsi {
         output.WriteString(VtsiProjectName);
       }
       scheduledCallerRequests_.WriteTo(ref output, _repeated_scheduledCallerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16675,6 +18861,9 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       size += scheduledCallerRequests_.CalculateSize(_repeated_scheduledCallerRequests_codec);
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -16691,6 +18880,9 @@ namespace Ondewo.Vtsi {
         VtsiProjectName = other.VtsiProjectName;
       }
       scheduledCallerRequests_.Add(other.scheduledCallerRequests_);
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -16716,6 +18908,10 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             scheduledCallerRequests_.AddEntriesFrom(input, _repeated_scheduledCallerRequests_codec);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }
@@ -16745,6 +18941,10 @@ namespace Ondewo.Vtsi {
             scheduledCallerRequests_.AddEntriesFrom(ref input, _repeated_scheduledCallerRequests_codec);
             break;
           }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -16770,7 +18970,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16986,6 +19186,1266 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Calls.AddCallersToCampaign">Calls.AddCallersToCampaign&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddCallersToCampaignRequest : pb::IMessage<AddCallersToCampaignRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddCallersToCampaignRequest> _parser = new pb::MessageParser<AddCallersToCampaignRequest>(() => new AddCallersToCampaignRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddCallersToCampaignRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[59]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignRequest(AddCallersToCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callerRequests_ = other.callerRequests_.Clone();
+      campaignAssignment_ = other.campaignAssignment_ != null ? other.campaignAssignment_.Clone() : null;
+      idempotencyKey_ = other.idempotencyKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignRequest Clone() {
+      return new AddCallersToCampaignRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the callers and the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "caller_requests" field.</summary>
+    public const int CallerRequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.StartCallerRequest> _repeated_callerRequests_codec
+        = pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.StartCallerRequest.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.StartCallerRequest> callerRequests_ = new pbc::RepeatedField<global::Ondewo.Vtsi.StartCallerRequest>();
+    /// <summary>
+    /// Callers to add, at least one. The project&amp;apos;s caller limit is checked per started call, not for the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.StartCallerRequest> CallerRequests {
+      get { return callerRequests_; }
+    }
+
+    /// <summary>Field number for the "campaign_assignment" field.</summary>
+    public const int CampaignAssignmentFieldNumber = 3;
+    private global::Ondewo.Vtsi.CampaignAssignment campaignAssignment_;
+    /// <summary>
+    /// Required. Which campaign, and whether it starts dialling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignAssignment CampaignAssignment {
+      get { return campaignAssignment_; }
+      set {
+        campaignAssignment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 4;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means no
+    /// deduplication. A retry carrying the same key returns the response of the first successful attempt instead
+    /// of running the request a second time, whichever server replica it reaches, for as long as the server
+    /// retains the key (24 hours by default). The key is scoped to the VTSI project and to this RPC. Reusing a
+    /// key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that arrives while the
+    /// first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried later. A first attempt
+    /// that fails stores nothing, so a retry after a failure runs the request again. A replayed response carries
+    /// no &lt;code>common_services_config&lt;/code>: the server keeps no second copy of the credentials it holds. To
+    /// make a single caller or listener idempotent, send it as a batch of one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddCallersToCampaignRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddCallersToCampaignRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!callerRequests_.Equals(other.callerRequests_)) return false;
+      if (!object.Equals(CampaignAssignment, other.CampaignAssignment)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= callerRequests_.GetHashCode();
+      if (campaignAssignment_ != null) hash ^= CampaignAssignment.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      callerRequests_.WriteTo(output, _repeated_callerRequests_codec);
+      if (campaignAssignment_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      callerRequests_.WriteTo(ref output, _repeated_callerRequests_codec);
+      if (campaignAssignment_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += callerRequests_.CalculateSize(_repeated_callerRequests_codec);
+      if (campaignAssignment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddCallersToCampaignRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      callerRequests_.Add(other.callerRequests_);
+      if (other.campaignAssignment_ != null) {
+        if (campaignAssignment_ == null) {
+          CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+        }
+        CampaignAssignment.MergeFrom(other.CampaignAssignment);
+      }
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            callerRequests_.AddEntriesFrom(input, _repeated_callerRequests_codec);
+            break;
+          }
+          case 26: {
+            if (campaignAssignment_ == null) {
+              CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+            }
+            input.ReadMessage(CampaignAssignment);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            callerRequests_.AddEntriesFrom(ref input, _repeated_callerRequests_codec);
+            break;
+          }
+          case 26: {
+            if (campaignAssignment_ == null) {
+              CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+            }
+            input.ReadMessage(CampaignAssignment);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Calls.AddCallersToCampaign">Calls.AddCallersToCampaign&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddCallersToCampaignResponse : pb::IMessage<AddCallersToCampaignResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddCallersToCampaignResponse> _parser = new pb::MessageParser<AddCallersToCampaignResponse>(() => new AddCallersToCampaignResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddCallersToCampaignResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[60]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignResponse(AddCallersToCampaignResponse other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      campaign_ = other.campaign_ != null ? other.campaign_.Clone() : null;
+      campaignCallNames_ = other.campaignCallNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddCallersToCampaignResponse Clone() {
+      return new AddCallersToCampaignResponse(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the callers and the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "campaign" field.</summary>
+    public const int CampaignFieldNumber = 2;
+    private global::Ondewo.Vtsi.Campaign campaign_;
+    /// <summary>
+    /// The campaign the callers were added to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.Campaign Campaign {
+      get { return campaign_; }
+      set {
+        campaign_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_call_names" field.</summary>
+    public const int CampaignCallNamesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallNames_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> campaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The campaign calls created by this request, in request order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallNames {
+      get { return campaignCallNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddCallersToCampaignResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddCallersToCampaignResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(Campaign, other.Campaign)) return false;
+      if(!campaignCallNames_.Equals(other.campaignCallNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (campaign_ != null) hash ^= Campaign.GetHashCode();
+      hash ^= campaignCallNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (campaign_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Campaign);
+      }
+      campaignCallNames_.WriteTo(output, _repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (campaign_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Campaign);
+      }
+      campaignCallNames_.WriteTo(ref output, _repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (campaign_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Campaign);
+      }
+      size += campaignCallNames_.CalculateSize(_repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddCallersToCampaignResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.campaign_ != null) {
+        if (campaign_ == null) {
+          Campaign = new global::Ondewo.Vtsi.Campaign();
+        }
+        Campaign.MergeFrom(other.Campaign);
+      }
+      campaignCallNames_.Add(other.campaignCallNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (campaign_ == null) {
+              Campaign = new global::Ondewo.Vtsi.Campaign();
+            }
+            input.ReadMessage(Campaign);
+            break;
+          }
+          case 26: {
+            campaignCallNames_.AddEntriesFrom(input, _repeated_campaignCallNames_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (campaign_ == null) {
+              Campaign = new global::Ondewo.Vtsi.Campaign();
+            }
+            input.ReadMessage(Campaign);
+            break;
+          }
+          case 26: {
+            campaignCallNames_.AddEntriesFrom(ref input, _repeated_campaignCallNames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Calls.AddScheduledCallersToCampaign">Calls.AddScheduledCallersToCampaign&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddScheduledCallersToCampaignRequest : pb::IMessage<AddScheduledCallersToCampaignRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddScheduledCallersToCampaignRequest> _parser = new pb::MessageParser<AddScheduledCallersToCampaignRequest>(() => new AddScheduledCallersToCampaignRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddScheduledCallersToCampaignRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[61]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignRequest(AddScheduledCallersToCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      scheduledCallerRequests_ = other.scheduledCallerRequests_.Clone();
+      campaignAssignment_ = other.campaignAssignment_ != null ? other.campaignAssignment_.Clone() : null;
+      idempotencyKey_ = other.idempotencyKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignRequest Clone() {
+      return new AddScheduledCallersToCampaignRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the scheduled callers and the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_caller_requests" field.</summary>
+    public const int ScheduledCallerRequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.StartScheduledCallerRequest> _repeated_scheduledCallerRequests_codec
+        = pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.StartScheduledCallerRequest.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerRequest> scheduledCallerRequests_ = new pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerRequest>();
+    /// <summary>
+    /// Scheduled callers to add, at least one. A scheduled caller of a campaign can be cancelled with
+    /// &lt;code>CancelScheduledCaller&lt;/code> only while its campaign call has no attempt dispatching or in progress.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerRequest> ScheduledCallerRequests {
+      get { return scheduledCallerRequests_; }
+    }
+
+    /// <summary>Field number for the "campaign_assignment" field.</summary>
+    public const int CampaignAssignmentFieldNumber = 3;
+    private global::Ondewo.Vtsi.CampaignAssignment campaignAssignment_;
+    /// <summary>
+    /// Required. Which campaign, and whether it starts dialling.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignAssignment CampaignAssignment {
+      get { return campaignAssignment_; }
+      set {
+        campaignAssignment_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 4;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means no
+    /// deduplication. A retry carrying the same key returns the response of the first successful attempt instead
+    /// of running the request a second time, whichever server replica it reaches, for as long as the server
+    /// retains the key (24 hours by default). The key is scoped to the VTSI project and to this RPC. Reusing a
+    /// key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that arrives while the
+    /// first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried later. A first attempt
+    /// that fails stores nothing, so a retry after a failure runs the request again. A replayed response carries
+    /// no &lt;code>common_services_config&lt;/code>: the server keeps no second copy of the credentials it holds. To
+    /// make a single caller or listener idempotent, send it as a batch of one.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddScheduledCallersToCampaignRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddScheduledCallersToCampaignRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!scheduledCallerRequests_.Equals(other.scheduledCallerRequests_)) return false;
+      if (!object.Equals(CampaignAssignment, other.CampaignAssignment)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= scheduledCallerRequests_.GetHashCode();
+      if (campaignAssignment_ != null) hash ^= CampaignAssignment.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerRequests_.WriteTo(output, _repeated_scheduledCallerRequests_codec);
+      if (campaignAssignment_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerRequests_.WriteTo(ref output, _repeated_scheduledCallerRequests_codec);
+      if (campaignAssignment_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += scheduledCallerRequests_.CalculateSize(_repeated_scheduledCallerRequests_codec);
+      if (campaignAssignment_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CampaignAssignment);
+      }
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddScheduledCallersToCampaignRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      scheduledCallerRequests_.Add(other.scheduledCallerRequests_);
+      if (other.campaignAssignment_ != null) {
+        if (campaignAssignment_ == null) {
+          CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+        }
+        CampaignAssignment.MergeFrom(other.CampaignAssignment);
+      }
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerRequests_.AddEntriesFrom(input, _repeated_scheduledCallerRequests_codec);
+            break;
+          }
+          case 26: {
+            if (campaignAssignment_ == null) {
+              CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+            }
+            input.ReadMessage(CampaignAssignment);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerRequests_.AddEntriesFrom(ref input, _repeated_scheduledCallerRequests_codec);
+            break;
+          }
+          case 26: {
+            if (campaignAssignment_ == null) {
+              CampaignAssignment = new global::Ondewo.Vtsi.CampaignAssignment();
+            }
+            input.ReadMessage(CampaignAssignment);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// &lt;a href="index.html#ondewo.vtsi.Calls.AddScheduledCallersToCampaign">Calls.AddScheduledCallersToCampaign&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AddScheduledCallersToCampaignResponse : pb::IMessage<AddScheduledCallersToCampaignResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AddScheduledCallersToCampaignResponse> _parser = new pb::MessageParser<AddScheduledCallersToCampaignResponse>(() => new AddScheduledCallersToCampaignResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AddScheduledCallersToCampaignResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[62]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignResponse(AddScheduledCallersToCampaignResponse other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      scheduledCallerResponses_ = other.scheduledCallerResponses_.Clone();
+      campaign_ = other.campaign_ != null ? other.campaign_.Clone() : null;
+      campaignCallNames_ = other.campaignCallNames_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AddScheduledCallersToCampaignResponse Clone() {
+      return new AddScheduledCallersToCampaignResponse(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the scheduled callers and the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_caller_responses" field.</summary>
+    public const int ScheduledCallerResponsesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.StartScheduledCallerResponse> _repeated_scheduledCallerResponses_codec
+        = pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.StartScheduledCallerResponse.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerResponse> scheduledCallerResponses_ = new pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerResponse>();
+    /// <summary>
+    /// The scheduled callers created, in request order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.StartScheduledCallerResponse> ScheduledCallerResponses {
+      get { return scheduledCallerResponses_; }
+    }
+
+    /// <summary>Field number for the "campaign" field.</summary>
+    public const int CampaignFieldNumber = 3;
+    private global::Ondewo.Vtsi.Campaign campaign_;
+    /// <summary>
+    /// The campaign the scheduled callers were added to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.Campaign Campaign {
+      get { return campaign_; }
+      set {
+        campaign_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_call_names" field.</summary>
+    public const int CampaignCallNamesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallNames_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> campaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The campaign calls created by this request, in request order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallNames {
+      get { return campaignCallNames_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AddScheduledCallersToCampaignResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AddScheduledCallersToCampaignResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!scheduledCallerResponses_.Equals(other.scheduledCallerResponses_)) return false;
+      if (!object.Equals(Campaign, other.Campaign)) return false;
+      if(!campaignCallNames_.Equals(other.campaignCallNames_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= scheduledCallerResponses_.GetHashCode();
+      if (campaign_ != null) hash ^= Campaign.GetHashCode();
+      hash ^= campaignCallNames_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerResponses_.WriteTo(output, _repeated_scheduledCallerResponses_codec);
+      if (campaign_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Campaign);
+      }
+      campaignCallNames_.WriteTo(output, _repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerResponses_.WriteTo(ref output, _repeated_scheduledCallerResponses_codec);
+      if (campaign_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Campaign);
+      }
+      campaignCallNames_.WriteTo(ref output, _repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += scheduledCallerResponses_.CalculateSize(_repeated_scheduledCallerResponses_codec);
+      if (campaign_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Campaign);
+      }
+      size += campaignCallNames_.CalculateSize(_repeated_campaignCallNames_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AddScheduledCallersToCampaignResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      scheduledCallerResponses_.Add(other.scheduledCallerResponses_);
+      if (other.campaign_ != null) {
+        if (campaign_ == null) {
+          Campaign = new global::Ondewo.Vtsi.Campaign();
+        }
+        Campaign.MergeFrom(other.Campaign);
+      }
+      campaignCallNames_.Add(other.campaignCallNames_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerResponses_.AddEntriesFrom(input, _repeated_scheduledCallerResponses_codec);
+            break;
+          }
+          case 26: {
+            if (campaign_ == null) {
+              Campaign = new global::Ondewo.Vtsi.Campaign();
+            }
+            input.ReadMessage(Campaign);
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(input, _repeated_campaignCallNames_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerResponses_.AddEntriesFrom(ref input, _repeated_scheduledCallerResponses_codec);
+            break;
+          }
+          case 26: {
+            if (campaign_ == null) {
+              Campaign = new global::Ondewo.Vtsi.Campaign();
+            }
+            input.ReadMessage(Campaign);
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(ref input, _repeated_campaignCallNames_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Response to start multiple listeners
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -17003,7 +20463,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17296,7 +20756,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17327,6 +20787,7 @@ namespace Ondewo.Vtsi {
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       firedAt_ = other.firedAt_ != null ? other.firedAt_.Clone() : null;
       errorMessage_ = other.errorMessage_;
+      campaignName_ = other.campaignName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -17356,7 +20817,7 @@ namespace Ondewo.Vtsi {
     public const int CallNameFieldNumber = 2;
     private string callName_ = "";
     /// <summary>
-    /// The asterisk sip call name that was assigned to the call
+    /// The call name that was assigned to the call
     /// For listener this is &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// For callers this is &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
@@ -17510,6 +20971,27 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "campaign_name" field.</summary>
+    public const int CampaignNameFieldNumber = 12;
+    private string campaignName_ = "";
+    /// <summary>
+    /// Resource name of the campaign this scheduled caller belongs to. Empty when it belongs to none.
+    /// A campaign&amp;apos;s scheduled caller mirrors its campaign call: &lt;code>status&lt;/code> is
+    /// &lt;code>PENDING&lt;/code> while the call is not started or waits for a retry,
+    /// &lt;code>FIRING&lt;/code> while an attempt is being started or running, and &lt;code>DONE&lt;/code> /
+    /// &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code> when the call is completed / failed / cancelled;
+    /// &lt;code>call_name&lt;/code> and &lt;code>error_message&lt;/code> are those of the latest attempt. Its
+    /// own retry settings are not used; the campaign&amp;apos;s apply.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignName {
+      get { return campaignName_; }
+      set {
+        campaignName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -17536,6 +21018,7 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (!object.Equals(FiredAt, other.FiredAt)) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (CampaignName != other.CampaignName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -17554,6 +21037,7 @@ namespace Ondewo.Vtsi {
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (firedAt_ != null) hash ^= FiredAt.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (CampaignName.Length != 0) hash ^= CampaignName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -17616,6 +21100,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(90);
         output.WriteString(ErrorMessage);
       }
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CampaignName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -17670,6 +21158,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(90);
         output.WriteString(ErrorMessage);
       }
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CampaignName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -17712,6 +21204,9 @@ namespace Ondewo.Vtsi {
       }
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (CampaignName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -17775,6 +21270,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.CampaignName.Length != 0) {
+        CampaignName = other.CampaignName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -17855,6 +21353,10 @@ namespace Ondewo.Vtsi {
           }
           case 90: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 98: {
+            CampaignName = input.ReadString();
             break;
           }
         }
@@ -17938,6 +21440,10 @@ namespace Ondewo.Vtsi {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 98: {
+            CampaignName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -17964,7 +21470,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18266,7 +21772,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18614,7 +22120,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18849,7 +22355,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19094,7 +22600,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19422,7 +22928,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[70]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19668,7 +23174,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[71]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19954,7 +23460,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[72]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20189,7 +23695,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[73]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20422,7 +23928,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[69]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[74]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20626,7 +24132,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[70]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[75]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20649,6 +24155,10 @@ namespace Ondewo.Vtsi {
       vtsiProjectName_ = other.vtsiProjectName_;
       callName_ = other.callName_;
       transferId_ = other.transferId_;
+      target_ = other.target_ != null ? other.target_.Clone() : null;
+      mode_ = other.mode_;
+      headers_ = other.headers_.Clone();
+      ringTimeoutS_ = other.ringTimeoutS_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -20694,7 +24204,9 @@ namespace Ondewo.Vtsi {
     public const int TransferIdFieldNumber = 3;
     private string transferId_ = "";
     /// <summary>
-    /// transfer_id to transfer the call to, so the number or voip number you want to be transferred too
+    /// LEGACY raw target: the dialplan extension, voip number or phone number to transfer the call to. Validated against
+    /// &lt;code>^\+?[A-Za-z0-9._-]{1,64}$&lt;/code>. Mutually exclusive with &lt;code>target&lt;/code>: setting both is
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -20702,6 +24214,69 @@ namespace Ondewo.Vtsi {
       get { return transferId_; }
       set {
         transferId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 4;
+    private global::Ondewo.Vtsi.CallTarget target_;
+    /// <summary>
+    /// Typed target of the transfer, resolved and validated by the server. Mutually exclusive with &lt;code>transfer_id&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallTarget Target {
+      get { return target_; }
+      set {
+        target_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 5;
+    private global::Ondewo.Vtsi.TransferMode mode_ = global::Ondewo.Vtsi.TransferMode.Unspecified;
+    /// <summary>
+    /// How to transfer. Unspecified means &lt;code>TRANSFER_MODE_BLIND&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.TransferMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "headers" field.</summary>
+    public const int HeadersFieldNumber = 6;
+    private static readonly pbc::MapField<string, string>.Codec _map_headers_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 50);
+    private readonly pbc::MapField<string, string> headers_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional headers handed to the transfer target. Keys must match &lt;code>X-ondewo-[A-Za-z0-9-]{1,64}&lt;/code>, at most 16
+    /// entries, values at most 256 bytes. Merged over the call&amp;apos;s own headers. They are delivered through the
+    /// dialplan, not on the SIP REFER (Asterisk does not forward REFER headers to the target). Not delivered to a phone
+    /// number target
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Headers {
+      get { return headers_; }
+    }
+
+    /// <summary>Field number for the "ring_timeout_s" field.</summary>
+    public const int RingTimeoutSFieldNumber = 7;
+    private int ringTimeoutS_;
+    /// <summary>
+    /// WARM only: how long the target may ring, in seconds, &lt;code>5&lt;/code> to &lt;code>120&lt;/code>. &lt;code>0&lt;/code> means
+    /// &lt;code>30&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RingTimeoutS {
+      get { return ringTimeoutS_; }
+      set {
+        ringTimeoutS_ = value;
       }
     }
 
@@ -20723,6 +24298,10 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (CallName != other.CallName) return false;
       if (TransferId != other.TransferId) return false;
+      if (!object.Equals(Target, other.Target)) return false;
+      if (Mode != other.Mode) return false;
+      if (!Headers.Equals(other.Headers)) return false;
+      if (RingTimeoutS != other.RingTimeoutS) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -20733,6 +24312,10 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (CallName.Length != 0) hash ^= CallName.GetHashCode();
       if (TransferId.Length != 0) hash ^= TransferId.GetHashCode();
+      if (target_ != null) hash ^= Target.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) hash ^= Mode.GetHashCode();
+      hash ^= Headers.GetHashCode();
+      if (RingTimeoutS != 0) hash ^= RingTimeoutS.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -20763,6 +24346,19 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(TransferId);
       }
+      if (target_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Target);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Mode);
+      }
+      headers_.WriteTo(output, _map_headers_codec);
+      if (RingTimeoutS != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RingTimeoutS);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -20785,6 +24381,19 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(TransferId);
       }
+      if (target_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Target);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Mode);
+      }
+      headers_.WriteTo(ref output, _map_headers_codec);
+      if (RingTimeoutS != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(RingTimeoutS);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -20803,6 +24412,16 @@ namespace Ondewo.Vtsi {
       }
       if (TransferId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TransferId);
+      }
+      if (target_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Target);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      size += headers_.CalculateSize(_map_headers_codec);
+      if (RingTimeoutS != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RingTimeoutS);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -20824,6 +24443,19 @@ namespace Ondewo.Vtsi {
       }
       if (other.TransferId.Length != 0) {
         TransferId = other.TransferId;
+      }
+      if (other.target_ != null) {
+        if (target_ == null) {
+          Target = new global::Ondewo.Vtsi.CallTarget();
+        }
+        Target.MergeFrom(other.Target);
+      }
+      if (other.Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      headers_.MergeFrom(other.headers_);
+      if (other.RingTimeoutS != 0) {
+        RingTimeoutS = other.RingTimeoutS;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -20854,6 +24486,25 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             TransferId = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (target_ == null) {
+              Target = new global::Ondewo.Vtsi.CallTarget();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 40: {
+            Mode = (global::Ondewo.Vtsi.TransferMode) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            headers_.AddEntriesFrom(input, _map_headers_codec);
+            break;
+          }
+          case 56: {
+            RingTimeoutS = input.ReadInt32();
             break;
           }
         }
@@ -20887,6 +24538,611 @@ namespace Ondewo.Vtsi {
             TransferId = input.ReadString();
             break;
           }
+          case 34: {
+            if (target_ == null) {
+              Target = new global::Ondewo.Vtsi.CallTarget();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 40: {
+            Mode = (global::Ondewo.Vtsi.TransferMode) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            headers_.AddEntriesFrom(ref input, _map_headers_codec);
+            break;
+          }
+          case 56: {
+            RingTimeoutS = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Target of a transfer&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallTarget : pb::IMessage<CallTarget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallTarget> _parser = new pb::MessageParser<CallTarget>(() => new CallTarget());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallTarget> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[76]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTarget() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTarget(CallTarget other) : this() {
+      switch (other.TargetCase) {
+        case TargetOneofCase.PhoneNumber:
+          PhoneNumber = other.PhoneNumber;
+          break;
+        case TargetOneofCase.SoftphoneAccountName:
+          SoftphoneAccountName = other.SoftphoneAccountName;
+          break;
+        case TargetOneofCase.ListenerName:
+          ListenerName = other.ListenerName;
+          break;
+        case TargetOneofCase.ListenerQueue:
+          ListenerQueue = other.ListenerQueue.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTarget Clone() {
+      return new CallTarget(this);
+    }
+
+    /// <summary>Field number for the "phone_number" field.</summary>
+    public const int PhoneNumberFieldNumber = 1;
+    /// <summary>
+    /// Phone number in E.164 form, e.g. &lt;code>+4312345678&lt;/code> (&lt;code>^\+[1-9][0-9]{6,14}$&lt;/code>). Any E.164 number
+    /// is allowed unless the project configures &lt;code>VtsiProject.transfer_phone_number_allowlist&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PhoneNumber {
+      get { return HasPhoneNumber ? (string) target_ : ""; }
+      set {
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetCase_ = TargetOneofCase.PhoneNumber;
+      }
+    }
+    /// <summary>Gets whether the "phone_number" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPhoneNumber {
+      get { return targetCase_ == TargetOneofCase.PhoneNumber; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "phone_number" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPhoneNumber() {
+      if (HasPhoneNumber) {
+        ClearTarget();
+      }
+    }
+
+    /// <summary>Field number for the "softphone_account_name" field.</summary>
+    public const int SoftphoneAccountNameFieldNumber = 2;
+    /// <summary>
+    /// A softphone account of the same project:
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/softphoneAccounts/&amp;lt;account_uuid&amp;gt;&lt;/code>&lt;/pre>. It must be enabled,
+    /// routed and registered
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SoftphoneAccountName {
+      get { return HasSoftphoneAccountName ? (string) target_ : ""; }
+      set {
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetCase_ = TargetOneofCase.SoftphoneAccountName;
+      }
+    }
+    /// <summary>Gets whether the "softphone_account_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSoftphoneAccountName {
+      get { return targetCase_ == TargetOneofCase.SoftphoneAccountName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "softphone_account_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSoftphoneAccountName() {
+      if (HasSoftphoneAccountName) {
+        ClearTarget();
+      }
+    }
+
+    /// <summary>Field number for the "listener_name" field.</summary>
+    public const int ListenerNameFieldNumber = 3;
+    /// <summary>
+    /// A listener of the same project: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;&lt;/code>&lt;/pre>.
+    /// The call goes to that listener&amp;apos;s idle container; a busy listener is refused (&lt;code>listener-busy&lt;/code>)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ListenerName {
+      get { return HasListenerName ? (string) target_ : ""; }
+      set {
+        target_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        targetCase_ = TargetOneofCase.ListenerName;
+      }
+    }
+    /// <summary>Gets whether the "listener_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasListenerName {
+      get { return targetCase_ == TargetOneofCase.ListenerName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "listener_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearListenerName() {
+      if (HasListenerName) {
+        ClearTarget();
+      }
+    }
+
+    /// <summary>Field number for the "listener_queue" field.</summary>
+    public const int ListenerQueueFieldNumber = 4;
+    /// <summary>
+    /// The project&amp;apos;s listener queue: any idle listener of the project takes the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.ListenerQueueTarget ListenerQueue {
+      get { return targetCase_ == TargetOneofCase.ListenerQueue ? (global::Ondewo.Vtsi.ListenerQueueTarget) target_ : null; }
+      set {
+        target_ = value;
+        targetCase_ = value == null ? TargetOneofCase.None : TargetOneofCase.ListenerQueue;
+      }
+    }
+
+    private object target_;
+    /// <summary>Enum of possible cases for the "target" oneof.</summary>
+    public enum TargetOneofCase {
+      None = 0,
+      PhoneNumber = 1,
+      SoftphoneAccountName = 2,
+      ListenerName = 3,
+      ListenerQueue = 4,
+    }
+    private TargetOneofCase targetCase_ = TargetOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TargetOneofCase TargetCase {
+      get { return targetCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTarget() {
+      targetCase_ = TargetOneofCase.None;
+      target_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallTarget);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallTarget other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PhoneNumber != other.PhoneNumber) return false;
+      if (SoftphoneAccountName != other.SoftphoneAccountName) return false;
+      if (ListenerName != other.ListenerName) return false;
+      if (!object.Equals(ListenerQueue, other.ListenerQueue)) return false;
+      if (TargetCase != other.TargetCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasPhoneNumber) hash ^= PhoneNumber.GetHashCode();
+      if (HasSoftphoneAccountName) hash ^= SoftphoneAccountName.GetHashCode();
+      if (HasListenerName) hash ^= ListenerName.GetHashCode();
+      if (targetCase_ == TargetOneofCase.ListenerQueue) hash ^= ListenerQueue.GetHashCode();
+      hash ^= (int) targetCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasPhoneNumber) {
+        output.WriteRawTag(10);
+        output.WriteString(PhoneNumber);
+      }
+      if (HasSoftphoneAccountName) {
+        output.WriteRawTag(18);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (HasListenerName) {
+        output.WriteRawTag(26);
+        output.WriteString(ListenerName);
+      }
+      if (targetCase_ == TargetOneofCase.ListenerQueue) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ListenerQueue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasPhoneNumber) {
+        output.WriteRawTag(10);
+        output.WriteString(PhoneNumber);
+      }
+      if (HasSoftphoneAccountName) {
+        output.WriteRawTag(18);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (HasListenerName) {
+        output.WriteRawTag(26);
+        output.WriteString(ListenerName);
+      }
+      if (targetCase_ == TargetOneofCase.ListenerQueue) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ListenerQueue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasPhoneNumber) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
+      }
+      if (HasSoftphoneAccountName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SoftphoneAccountName);
+      }
+      if (HasListenerName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ListenerName);
+      }
+      if (targetCase_ == TargetOneofCase.ListenerQueue) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ListenerQueue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallTarget other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.TargetCase) {
+        case TargetOneofCase.PhoneNumber:
+          PhoneNumber = other.PhoneNumber;
+          break;
+        case TargetOneofCase.SoftphoneAccountName:
+          SoftphoneAccountName = other.SoftphoneAccountName;
+          break;
+        case TargetOneofCase.ListenerName:
+          ListenerName = other.ListenerName;
+          break;
+        case TargetOneofCase.ListenerQueue:
+          if (ListenerQueue == null) {
+            ListenerQueue = new global::Ondewo.Vtsi.ListenerQueueTarget();
+          }
+          ListenerQueue.MergeFrom(other.ListenerQueue);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 18: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ListenerName = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Ondewo.Vtsi.ListenerQueueTarget subBuilder = new global::Ondewo.Vtsi.ListenerQueueTarget();
+            if (targetCase_ == TargetOneofCase.ListenerQueue) {
+              subBuilder.MergeFrom(ListenerQueue);
+            }
+            input.ReadMessage(subBuilder);
+            ListenerQueue = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 18: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ListenerName = input.ReadString();
+            break;
+          }
+          case 34: {
+            global::Ondewo.Vtsi.ListenerQueueTarget subBuilder = new global::Ondewo.Vtsi.ListenerQueueTarget();
+            if (targetCase_ == TargetOneofCase.ListenerQueue) {
+              subBuilder.MergeFrom(ListenerQueue);
+            }
+            input.ReadMessage(subBuilder);
+            ListenerQueue = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>The project&amp;apos;s listener queue as a transfer target. Carries no fields&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListenerQueueTarget : pb::IMessage<ListenerQueueTarget>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListenerQueueTarget> _parser = new pb::MessageParser<ListenerQueueTarget>(() => new ListenerQueueTarget());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListenerQueueTarget> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[77]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenerQueueTarget() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenerQueueTarget(ListenerQueueTarget other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenerQueueTarget Clone() {
+      return new ListenerQueueTarget(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListenerQueueTarget);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListenerQueueTarget other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListenerQueueTarget other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }
@@ -20912,7 +25168,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[71]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[78]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20936,6 +25192,10 @@ namespace Ondewo.Vtsi {
       callName_ = other.callName_;
       transferId_ = other.transferId_;
       errorMessage_ = other.errorMessage_;
+      outcome_ = other.outcome_;
+      resolvedTarget_ = other.resolvedTarget_;
+      sipResponseCode_ = other.sipResponseCode_;
+      errorReason_ = other.errorReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -21007,6 +25267,69 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "outcome" field.</summary>
+    public const int OutcomeFieldNumber = 5;
+    private global::Ondewo.Vtsi.TransferOutcome outcome_ = global::Ondewo.Vtsi.TransferOutcome.Unspecified;
+    /// <summary>
+    /// Outcome of the transfer
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.TransferOutcome Outcome {
+      get { return outcome_; }
+      set {
+        outcome_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "resolved_target" field.</summary>
+    public const int ResolvedTargetFieldNumber = 6;
+    private string resolvedTarget_ = "";
+    /// <summary>
+    /// The dialplan extension the target resolved to, e.g. &lt;code>ondewo0007&lt;/code>, a softphone user name,
+    /// &lt;code>ondewoqueue&lt;/code> or the E.164 number
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResolvedTarget {
+      get { return resolvedTarget_; }
+      set {
+        resolvedTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sip_response_code" field.</summary>
+    public const int SipResponseCodeFieldNumber = 7;
+    private int sipResponseCode_;
+    /// <summary>
+    /// SIP response code of the REFER where known (&lt;code>202&lt;/code> accepted, the refusal code otherwise), else
+    /// &lt;code>0&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SipResponseCode {
+      get { return sipResponseCode_; }
+      set {
+        sipResponseCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_reason" field.</summary>
+    public const int ErrorReasonFieldNumber = 8;
+    private string errorReason_ = "";
+    /// <summary>
+    /// Stable reason token of a refusal or failure, e.g. &lt;code>target-not-registered&lt;/code>, &lt;code>listener-busy&lt;/code>,
+    /// &lt;code>queue-empty&lt;/code>, &lt;code>self-transfer&lt;/code>, &lt;code>number-not-allowed&lt;/code>; empty on success
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorReason {
+      get { return errorReason_; }
+      set {
+        errorReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -21026,6 +25349,10 @@ namespace Ondewo.Vtsi {
       if (CallName != other.CallName) return false;
       if (TransferId != other.TransferId) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (Outcome != other.Outcome) return false;
+      if (ResolvedTarget != other.ResolvedTarget) return false;
+      if (SipResponseCode != other.SipResponseCode) return false;
+      if (ErrorReason != other.ErrorReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -21037,6 +25364,10 @@ namespace Ondewo.Vtsi {
       if (CallName.Length != 0) hash ^= CallName.GetHashCode();
       if (TransferId.Length != 0) hash ^= TransferId.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) hash ^= Outcome.GetHashCode();
+      if (ResolvedTarget.Length != 0) hash ^= ResolvedTarget.GetHashCode();
+      if (SipResponseCode != 0) hash ^= SipResponseCode.GetHashCode();
+      if (ErrorReason.Length != 0) hash ^= ErrorReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -21071,6 +25402,22 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(ErrorMessage);
       }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Outcome);
+      }
+      if (ResolvedTarget.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ResolvedTarget);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SipResponseCode);
+      }
+      if (ErrorReason.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ErrorReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -21097,6 +25444,22 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(ErrorMessage);
       }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) Outcome);
+      }
+      if (ResolvedTarget.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ResolvedTarget);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(SipResponseCode);
+      }
+      if (ErrorReason.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ErrorReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -21118,6 +25481,18 @@ namespace Ondewo.Vtsi {
       }
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
+      }
+      if (ResolvedTarget.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResolvedTarget);
+      }
+      if (SipResponseCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SipResponseCode);
+      }
+      if (ErrorReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -21142,6 +25517,18 @@ namespace Ondewo.Vtsi {
       }
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        Outcome = other.Outcome;
+      }
+      if (other.ResolvedTarget.Length != 0) {
+        ResolvedTarget = other.ResolvedTarget;
+      }
+      if (other.SipResponseCode != 0) {
+        SipResponseCode = other.SipResponseCode;
+      }
+      if (other.ErrorReason.Length != 0) {
+        ErrorReason = other.ErrorReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -21176,6 +25563,22 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 40: {
+            Outcome = (global::Ondewo.Vtsi.TransferOutcome) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ResolvedTarget = input.ReadString();
+            break;
+          }
+          case 56: {
+            SipResponseCode = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            ErrorReason = input.ReadString();
             break;
           }
         }
@@ -21213,6 +25616,6068 @@ namespace Ondewo.Vtsi {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 40: {
+            Outcome = (global::Ondewo.Vtsi.TransferOutcome) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            ResolvedTarget = input.ReadString();
+            break;
+          }
+          case 56: {
+            SipResponseCode = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            ErrorReason = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Record of the last transfer attempt of a call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallTransferRecord : pb::IMessage<CallTransferRecord>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallTransferRecord> _parser = new pb::MessageParser<CallTransferRecord>(() => new CallTransferRecord());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallTransferRecord> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[79]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTransferRecord() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTransferRecord(CallTransferRecord other) : this() {
+      target_ = other.target_ != null ? other.target_.Clone() : null;
+      resolvedTarget_ = other.resolvedTarget_;
+      mode_ = other.mode_;
+      outcome_ = other.outcome_;
+      sipResponseCode_ = other.sipResponseCode_;
+      time_ = other.time_ != null ? other.time_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallTransferRecord Clone() {
+      return new CallTransferRecord(this);
+    }
+
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 1;
+    private global::Ondewo.Vtsi.CallTarget target_;
+    /// <summary>
+    /// Requested typed target; unset for a legacy &lt;code>transfer_id&lt;/code> transfer
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallTarget Target {
+      get { return target_; }
+      set {
+        target_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "resolved_target" field.</summary>
+    public const int ResolvedTargetFieldNumber = 2;
+    private string resolvedTarget_ = "";
+    /// <summary>
+    /// The dialplan extension the target resolved to
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResolvedTarget {
+      get { return resolvedTarget_; }
+      set {
+        resolvedTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 3;
+    private global::Ondewo.Vtsi.TransferMode mode_ = global::Ondewo.Vtsi.TransferMode.Unspecified;
+    /// <summary>
+    /// Mode of the transfer
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.TransferMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outcome" field.</summary>
+    public const int OutcomeFieldNumber = 4;
+    private global::Ondewo.Vtsi.TransferOutcome outcome_ = global::Ondewo.Vtsi.TransferOutcome.Unspecified;
+    /// <summary>
+    /// Outcome of the transfer
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.TransferOutcome Outcome {
+      get { return outcome_; }
+      set {
+        outcome_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_response_code" field.</summary>
+    public const int SipResponseCodeFieldNumber = 5;
+    private int sipResponseCode_;
+    /// <summary>
+    /// SIP response code of the REFER where known, else &lt;code>0&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SipResponseCode {
+      get { return sipResponseCode_; }
+      set {
+        sipResponseCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "time" field.</summary>
+    public const int TimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp time_;
+    /// <summary>
+    /// When the outcome was recorded
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp Time {
+      get { return time_; }
+      set {
+        time_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallTransferRecord);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallTransferRecord other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Target, other.Target)) return false;
+      if (ResolvedTarget != other.ResolvedTarget) return false;
+      if (Mode != other.Mode) return false;
+      if (Outcome != other.Outcome) return false;
+      if (SipResponseCode != other.SipResponseCode) return false;
+      if (!object.Equals(Time, other.Time)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (target_ != null) hash ^= Target.GetHashCode();
+      if (ResolvedTarget.Length != 0) hash ^= ResolvedTarget.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) hash ^= Outcome.GetHashCode();
+      if (SipResponseCode != 0) hash ^= SipResponseCode.GetHashCode();
+      if (time_ != null) hash ^= Time.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (target_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Target);
+      }
+      if (ResolvedTarget.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ResolvedTarget);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Outcome);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SipResponseCode);
+      }
+      if (time_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Time);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (target_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Target);
+      }
+      if (ResolvedTarget.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ResolvedTarget);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Outcome);
+      }
+      if (SipResponseCode != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SipResponseCode);
+      }
+      if (time_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Time);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (target_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Target);
+      }
+      if (ResolvedTarget.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResolvedTarget);
+      }
+      if (Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Outcome);
+      }
+      if (SipResponseCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SipResponseCode);
+      }
+      if (time_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Time);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallTransferRecord other) {
+      if (other == null) {
+        return;
+      }
+      if (other.target_ != null) {
+        if (target_ == null) {
+          Target = new global::Ondewo.Vtsi.CallTarget();
+        }
+        Target.MergeFrom(other.Target);
+      }
+      if (other.ResolvedTarget.Length != 0) {
+        ResolvedTarget = other.ResolvedTarget;
+      }
+      if (other.Mode != global::Ondewo.Vtsi.TransferMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.Outcome != global::Ondewo.Vtsi.TransferOutcome.Unspecified) {
+        Outcome = other.Outcome;
+      }
+      if (other.SipResponseCode != 0) {
+        SipResponseCode = other.SipResponseCode;
+      }
+      if (other.time_ != null) {
+        if (time_ == null) {
+          Time = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        Time.MergeFrom(other.Time);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (target_ == null) {
+              Target = new global::Ondewo.Vtsi.CallTarget();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 18: {
+            ResolvedTarget = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.TransferMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            Outcome = (global::Ondewo.Vtsi.TransferOutcome) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            SipResponseCode = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (time_ == null) {
+              Time = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (target_ == null) {
+              Target = new global::Ondewo.Vtsi.CallTarget();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 18: {
+            ResolvedTarget = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.TransferMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            Outcome = (global::Ondewo.Vtsi.TransferOutcome) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            SipResponseCode = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            if (time_ == null) {
+              Time = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(Time);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Effective media control state of a call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallMediaControlState : pb::IMessage<CallMediaControlState>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallMediaControlState> _parser = new pb::MessageParser<CallMediaControlState>(() => new CallMediaControlState());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallMediaControlState> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[80]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallMediaControlState() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallMediaControlState(CallMediaControlState other) : this() {
+      botMuted_ = other.botMuted_;
+      listeningPaused_ = other.listeningPaused_;
+      connectedAudioStreams_ = other.connectedAudioStreams_;
+      joinedParticipants_ = other.joinedParticipants_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallMediaControlState Clone() {
+      return new CallMediaControlState(this);
+    }
+
+    /// <summary>Field number for the "bot_muted" field.</summary>
+    public const int BotMutedFieldNumber = 1;
+    private bool botMuted_;
+    /// <summary>
+    /// The bot is muted (by an operator, a TALK take-over or a participant bot policy)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BotMuted {
+      get { return botMuted_; }
+      set {
+        botMuted_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "listening_paused" field.</summary>
+    public const int ListeningPausedFieldNumber = 2;
+    private bool listeningPaused_;
+    /// <summary>
+    /// The bot does not listen to the caller
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ListeningPaused {
+      get { return listeningPaused_; }
+      set {
+        listeningPaused_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connected_audio_streams" field.</summary>
+    public const int ConnectedAudioStreamsFieldNumber = 3;
+    private int connectedAudioStreams_;
+    /// <summary>
+    /// Number of connected &lt;code>StreamCallAudio&lt;/code> / &lt;code>ListenCallAudio&lt;/code> streams
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ConnectedAudioStreams {
+      get { return connectedAudioStreams_; }
+      set {
+        connectedAudioStreams_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "joined_participants" field.</summary>
+    public const int JoinedParticipantsFieldNumber = 4;
+    private int joinedParticipants_;
+    /// <summary>
+    /// Number of joined participants
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int JoinedParticipants {
+      get { return joinedParticipants_; }
+      set {
+        joinedParticipants_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallMediaControlState);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallMediaControlState other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (BotMuted != other.BotMuted) return false;
+      if (ListeningPaused != other.ListeningPaused) return false;
+      if (ConnectedAudioStreams != other.ConnectedAudioStreams) return false;
+      if (JoinedParticipants != other.JoinedParticipants) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (BotMuted != false) hash ^= BotMuted.GetHashCode();
+      if (ListeningPaused != false) hash ^= ListeningPaused.GetHashCode();
+      if (ConnectedAudioStreams != 0) hash ^= ConnectedAudioStreams.GetHashCode();
+      if (JoinedParticipants != 0) hash ^= JoinedParticipants.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (BotMuted != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(BotMuted);
+      }
+      if (ListeningPaused != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ListeningPaused);
+      }
+      if (ConnectedAudioStreams != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ConnectedAudioStreams);
+      }
+      if (JoinedParticipants != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(JoinedParticipants);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (BotMuted != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(BotMuted);
+      }
+      if (ListeningPaused != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ListeningPaused);
+      }
+      if (ConnectedAudioStreams != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ConnectedAudioStreams);
+      }
+      if (JoinedParticipants != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(JoinedParticipants);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (BotMuted != false) {
+        size += 1 + 1;
+      }
+      if (ListeningPaused != false) {
+        size += 1 + 1;
+      }
+      if (ConnectedAudioStreams != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ConnectedAudioStreams);
+      }
+      if (JoinedParticipants != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(JoinedParticipants);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallMediaControlState other) {
+      if (other == null) {
+        return;
+      }
+      if (other.BotMuted != false) {
+        BotMuted = other.BotMuted;
+      }
+      if (other.ListeningPaused != false) {
+        ListeningPaused = other.ListeningPaused;
+      }
+      if (other.ConnectedAudioStreams != 0) {
+        ConnectedAudioStreams = other.ConnectedAudioStreams;
+      }
+      if (other.JoinedParticipants != 0) {
+        JoinedParticipants = other.JoinedParticipants;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            BotMuted = input.ReadBool();
+            break;
+          }
+          case 16: {
+            ListeningPaused = input.ReadBool();
+            break;
+          }
+          case 24: {
+            ConnectedAudioStreams = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            JoinedParticipants = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            BotMuted = input.ReadBool();
+            break;
+          }
+          case 16: {
+            ListeningPaused = input.ReadBool();
+            break;
+          }
+          case 24: {
+            ConnectedAudioStreams = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            JoinedParticipants = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>A participant invited into a call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallParticipant : pb::IMessage<CallParticipant>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallParticipant> _parser = new pb::MessageParser<CallParticipant>(() => new CallParticipant());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallParticipant> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[81]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallParticipant() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallParticipant(CallParticipant other) : this() {
+      participantId_ = other.participantId_;
+      softphoneAccountName_ = other.softphoneAccountName_;
+      mode_ = other.mode_;
+      state_ = other.state_;
+      invitedAt_ = other.invitedAt_ != null ? other.invitedAt_.Clone() : null;
+      joinedAt_ = other.joinedAt_ != null ? other.joinedAt_.Clone() : null;
+      leftAt_ = other.leftAt_ != null ? other.leftAt_.Clone() : null;
+      endReason_ = other.endReason_;
+      invitedBy_ = other.invitedBy_;
+      botPolicy_ = other.botPolicy_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallParticipant Clone() {
+      return new CallParticipant(this);
+    }
+
+    /// <summary>Field number for the "participant_id" field.</summary>
+    public const int ParticipantIdFieldNumber = 1;
+    private string participantId_ = "";
+    /// <summary>
+    /// Identifier of the participant, 9 digits, unique among the project&amp;apos;s live invites
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParticipantId {
+      get { return participantId_; }
+      set {
+        participantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "softphone_account_name" field.</summary>
+    public const int SoftphoneAccountNameFieldNumber = 2;
+    private string softphoneAccountName_ = "";
+    /// <summary>
+    /// The invited softphone account:
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/softphoneAccounts/&amp;lt;account_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SoftphoneAccountName {
+      get { return softphoneAccountName_; }
+      set {
+        softphoneAccountName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 3;
+    private global::Ondewo.Vtsi.ParticipantMode mode_ = global::Ondewo.Vtsi.ParticipantMode.Unspecified;
+    /// <summary>
+    /// How the participant takes part
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.ParticipantMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 4;
+    private global::Ondewo.Vtsi.ParticipantState state_ = global::Ondewo.Vtsi.ParticipantState.Unspecified;
+    /// <summary>
+    /// State of the participant
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.ParticipantState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "invited_at" field.</summary>
+    public const int InvitedAtFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp invitedAt_;
+    /// <summary>
+    /// When the participant was invited
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InvitedAt {
+      get { return invitedAt_; }
+      set {
+        invitedAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "joined_at" field.</summary>
+    public const int JoinedAtFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp joinedAt_;
+    /// <summary>
+    /// When the participant joined; unset if it never joined
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp JoinedAt {
+      get { return joinedAt_; }
+      set {
+        joinedAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "left_at" field.</summary>
+    public const int LeftAtFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp leftAt_;
+    /// <summary>
+    /// When the participant failed or left; unset while ringing or joined
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LeftAt {
+      get { return leftAt_; }
+      set {
+        leftAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_reason" field.</summary>
+    public const int EndReasonFieldNumber = 8;
+    private string endReason_ = "";
+    /// <summary>
+    /// Why the participant failed or left: &lt;code>NOANSWER&lt;/code>, &lt;code>BUSY&lt;/code>, &lt;code>CHANUNAVAIL&lt;/code>,
+    /// &lt;code>CALL_ENDED&lt;/code>, &lt;code>REMOVED&lt;/code>, &lt;code>HANGUP&lt;/code>, &lt;code>HANDED_OVER&lt;/code>,
+    /// &lt;code>JOIN_FAILED&lt;/code> or &lt;code>TIMEOUT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EndReason {
+      get { return endReason_; }
+      set {
+        endReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "invited_by" field.</summary>
+    public const int InvitedByFieldNumber = 9;
+    private string invitedBy_ = "";
+    /// <summary>
+    /// Identity of who invited the participant (audit)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InvitedBy {
+      get { return invitedBy_; }
+      set {
+        invitedBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bot_policy" field.</summary>
+    public const int BotPolicyFieldNumber = 10;
+    private global::Ondewo.Vtsi.BotPolicyOnJoin botPolicy_ = global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified;
+    /// <summary>
+    /// Bot policy applied while this participant is ringing or joined
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.BotPolicyOnJoin BotPolicy {
+      get { return botPolicy_; }
+      set {
+        botPolicy_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallParticipant);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallParticipant other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ParticipantId != other.ParticipantId) return false;
+      if (SoftphoneAccountName != other.SoftphoneAccountName) return false;
+      if (Mode != other.Mode) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(InvitedAt, other.InvitedAt)) return false;
+      if (!object.Equals(JoinedAt, other.JoinedAt)) return false;
+      if (!object.Equals(LeftAt, other.LeftAt)) return false;
+      if (EndReason != other.EndReason) return false;
+      if (InvitedBy != other.InvitedBy) return false;
+      if (BotPolicy != other.BotPolicy) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ParticipantId.Length != 0) hash ^= ParticipantId.GetHashCode();
+      if (SoftphoneAccountName.Length != 0) hash ^= SoftphoneAccountName.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (State != global::Ondewo.Vtsi.ParticipantState.Unspecified) hash ^= State.GetHashCode();
+      if (invitedAt_ != null) hash ^= InvitedAt.GetHashCode();
+      if (joinedAt_ != null) hash ^= JoinedAt.GetHashCode();
+      if (leftAt_ != null) hash ^= LeftAt.GetHashCode();
+      if (EndReason.Length != 0) hash ^= EndReason.GetHashCode();
+      if (InvitedBy.Length != 0) hash ^= InvitedBy.GetHashCode();
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) hash ^= BotPolicy.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ParticipantId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParticipantId);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (State != global::Ondewo.Vtsi.ParticipantState.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (invitedAt_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InvitedAt);
+      }
+      if (joinedAt_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(JoinedAt);
+      }
+      if (leftAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LeftAt);
+      }
+      if (EndReason.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(EndReason);
+      }
+      if (InvitedBy.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(InvitedBy);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) BotPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ParticipantId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ParticipantId);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (State != global::Ondewo.Vtsi.ParticipantState.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) State);
+      }
+      if (invitedAt_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(InvitedAt);
+      }
+      if (joinedAt_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(JoinedAt);
+      }
+      if (leftAt_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LeftAt);
+      }
+      if (EndReason.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(EndReason);
+      }
+      if (InvitedBy.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(InvitedBy);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) BotPolicy);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ParticipantId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParticipantId);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (State != global::Ondewo.Vtsi.ParticipantState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (invitedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InvitedAt);
+      }
+      if (joinedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoinedAt);
+      }
+      if (leftAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LeftAt);
+      }
+      if (EndReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EndReason);
+      }
+      if (InvitedBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InvitedBy);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotPolicy);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallParticipant other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ParticipantId.Length != 0) {
+        ParticipantId = other.ParticipantId;
+      }
+      if (other.SoftphoneAccountName.Length != 0) {
+        SoftphoneAccountName = other.SoftphoneAccountName;
+      }
+      if (other.Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.State != global::Ondewo.Vtsi.ParticipantState.Unspecified) {
+        State = other.State;
+      }
+      if (other.invitedAt_ != null) {
+        if (invitedAt_ == null) {
+          InvitedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InvitedAt.MergeFrom(other.InvitedAt);
+      }
+      if (other.joinedAt_ != null) {
+        if (joinedAt_ == null) {
+          JoinedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        JoinedAt.MergeFrom(other.JoinedAt);
+      }
+      if (other.leftAt_ != null) {
+        if (leftAt_ == null) {
+          LeftAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LeftAt.MergeFrom(other.LeftAt);
+      }
+      if (other.EndReason.Length != 0) {
+        EndReason = other.EndReason;
+      }
+      if (other.InvitedBy.Length != 0) {
+        InvitedBy = other.InvitedBy;
+      }
+      if (other.BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        BotPolicy = other.BotPolicy;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ParticipantId = input.ReadString();
+            break;
+          }
+          case 18: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.ParticipantMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            State = (global::Ondewo.Vtsi.ParticipantState) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (invitedAt_ == null) {
+              InvitedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InvitedAt);
+            break;
+          }
+          case 50: {
+            if (joinedAt_ == null) {
+              JoinedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(JoinedAt);
+            break;
+          }
+          case 58: {
+            if (leftAt_ == null) {
+              LeftAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LeftAt);
+            break;
+          }
+          case 66: {
+            EndReason = input.ReadString();
+            break;
+          }
+          case 74: {
+            InvitedBy = input.ReadString();
+            break;
+          }
+          case 80: {
+            BotPolicy = (global::Ondewo.Vtsi.BotPolicyOnJoin) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ParticipantId = input.ReadString();
+            break;
+          }
+          case 18: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.ParticipantMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            State = (global::Ondewo.Vtsi.ParticipantState) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (invitedAt_ == null) {
+              InvitedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InvitedAt);
+            break;
+          }
+          case 50: {
+            if (joinedAt_ == null) {
+              JoinedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(JoinedAt);
+            break;
+          }
+          case 58: {
+            if (leftAt_ == null) {
+              LeftAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LeftAt);
+            break;
+          }
+          case 66: {
+            EndReason = input.ReadString();
+            break;
+          }
+          case 74: {
+            InvitedBy = input.ReadString();
+            break;
+          }
+          case 80: {
+            BotPolicy = (global::Ondewo.Vtsi.BotPolicyOnJoin) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request to invite a softphone account into a call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InviteToCallRequest : pb::IMessage<InviteToCallRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InviteToCallRequest> _parser = new pb::MessageParser<InviteToCallRequest>(() => new InviteToCallRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InviteToCallRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[82]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallRequest(InviteToCallRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      softphoneAccountName_ = other.softphoneAccountName_;
+      mode_ = other.mode_;
+      ringTimeoutS_ = other.ringTimeoutS_;
+      botPolicy_ = other.botPolicy_;
+      callerIdDisplayName_ = other.callerIdDisplayName_;
+      requestId_ = other.requestId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallRequest Clone() {
+      return new InviteToCallRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the connected call to invite into
+    /// For listener this is &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// For callers this is &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "softphone_account_name" field.</summary>
+    public const int SoftphoneAccountNameFieldNumber = 3;
+    private string softphoneAccountName_ = "";
+    /// <summary>
+    /// Softphone account of the same project to invite:
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/softphoneAccounts/&amp;lt;account_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SoftphoneAccountName {
+      get { return softphoneAccountName_; }
+      set {
+        softphoneAccountName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 4;
+    private global::Ondewo.Vtsi.ParticipantMode mode_ = global::Ondewo.Vtsi.ParticipantMode.Unspecified;
+    /// <summary>
+    /// How the participant takes part. Unspecified means &lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.ParticipantMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ring_timeout_s" field.</summary>
+    public const int RingTimeoutSFieldNumber = 5;
+    private int ringTimeoutS_;
+    /// <summary>
+    /// How long the softphone may ring, in seconds, &lt;code>5&lt;/code> to &lt;code>120&lt;/code>. &lt;code>0&lt;/code> means &lt;code>30&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RingTimeoutS {
+      get { return ringTimeoutS_; }
+      set {
+        ringTimeoutS_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bot_policy" field.</summary>
+    public const int BotPolicyFieldNumber = 6;
+    private global::Ondewo.Vtsi.BotPolicyOnJoin botPolicy_ = global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified;
+    /// <summary>
+    /// What the bot does while the participant is ringing or joined. Unspecified means &lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>
+    /// (the bot keeps talking)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.BotPolicyOnJoin BotPolicy {
+      get { return botPolicy_; }
+      set {
+        botPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "caller_id_display_name" field.</summary>
+    public const int CallerIdDisplayNameFieldNumber = 7;
+    private string callerIdDisplayName_ = "";
+    /// <summary>
+    /// Caller-ID display name shown on the softphone. Sanitized by the server; default
+    /// &lt;code>ONDEWO &amp;lt;listener or caller name&amp;gt;&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallerIdDisplayName {
+      get { return callerIdDisplayName_; }
+      set {
+        callerIdDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 8;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional idempotency key: a repeated request with the same &lt;code>call_name&lt;/code> and &lt;code>request_id&lt;/code>
+    /// returns the participant of the first request instead of inviting again
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InviteToCallRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InviteToCallRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (SoftphoneAccountName != other.SoftphoneAccountName) return false;
+      if (Mode != other.Mode) return false;
+      if (RingTimeoutS != other.RingTimeoutS) return false;
+      if (BotPolicy != other.BotPolicy) return false;
+      if (CallerIdDisplayName != other.CallerIdDisplayName) return false;
+      if (RequestId != other.RequestId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (SoftphoneAccountName.Length != 0) hash ^= SoftphoneAccountName.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (RingTimeoutS != 0) hash ^= RingTimeoutS.GetHashCode();
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) hash ^= BotPolicy.GetHashCode();
+      if (CallerIdDisplayName.Length != 0) hash ^= CallerIdDisplayName.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (RingTimeoutS != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(RingTimeoutS);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) BotPolicy);
+      }
+      if (CallerIdDisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CallerIdDisplayName);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (RingTimeoutS != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(RingTimeoutS);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) BotPolicy);
+      }
+      if (CallerIdDisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(CallerIdDisplayName);
+      }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(RequestId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (SoftphoneAccountName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SoftphoneAccountName);
+      }
+      if (Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (RingTimeoutS != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RingTimeoutS);
+      }
+      if (BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotPolicy);
+      }
+      if (CallerIdDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallerIdDisplayName);
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InviteToCallRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.SoftphoneAccountName.Length != 0) {
+        SoftphoneAccountName = other.SoftphoneAccountName;
+      }
+      if (other.Mode != global::Ondewo.Vtsi.ParticipantMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.RingTimeoutS != 0) {
+        RingTimeoutS = other.RingTimeoutS;
+      }
+      if (other.BotPolicy != global::Ondewo.Vtsi.BotPolicyOnJoin.Unspecified) {
+        BotPolicy = other.BotPolicy;
+      }
+      if (other.CallerIdDisplayName.Length != 0) {
+        CallerIdDisplayName = other.CallerIdDisplayName;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Vtsi.ParticipantMode) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            RingTimeoutS = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            BotPolicy = (global::Ondewo.Vtsi.BotPolicyOnJoin) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            CallerIdDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Vtsi.ParticipantMode) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            RingTimeoutS = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            BotPolicy = (global::Ondewo.Vtsi.BotPolicyOnJoin) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            CallerIdDisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            RequestId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Response of &lt;code>InviteToCall&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InviteToCallResponse : pb::IMessage<InviteToCallResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InviteToCallResponse> _parser = new pb::MessageParser<InviteToCallResponse>(() => new InviteToCallResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InviteToCallResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[83]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallResponse(InviteToCallResponse other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      participant_ = other.participant_ != null ? other.participant_.Clone() : null;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InviteToCallResponse Clone() {
+      return new InviteToCallResponse(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "participant" field.</summary>
+    public const int ParticipantFieldNumber = 3;
+    private global::Ondewo.Vtsi.CallParticipant participant_;
+    /// <summary>
+    /// The invited participant
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallParticipant Participant {
+      get { return participant_; }
+      set {
+        participant_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 4;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// error message if you have any
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InviteToCallResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InviteToCallResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (!object.Equals(Participant, other.Participant)) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (participant_ != null) hash ^= Participant.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (participant_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (participant_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (participant_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InviteToCallResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.participant_ != null) {
+        if (participant_ == null) {
+          Participant = new global::Ondewo.Vtsi.CallParticipant();
+        }
+        Participant.MergeFrom(other.Participant);
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (participant_ == null) {
+              Participant = new global::Ondewo.Vtsi.CallParticipant();
+            }
+            input.ReadMessage(Participant);
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (participant_ == null) {
+              Participant = new global::Ondewo.Vtsi.CallParticipant();
+            }
+            input.ReadMessage(Participant);
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request to hang up a participant of a call&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveCallParticipantRequest : pb::IMessage<RemoveCallParticipantRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveCallParticipantRequest> _parser = new pb::MessageParser<RemoveCallParticipantRequest>(() => new RemoveCallParticipantRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveCallParticipantRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[84]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantRequest(RemoveCallParticipantRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      participantId_ = other.participantId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantRequest Clone() {
+      return new RemoveCallParticipantRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "participant_id" field.</summary>
+    public const int ParticipantIdFieldNumber = 3;
+    private string participantId_ = "";
+    /// <summary>
+    /// Identifier of the participant (&lt;code>CallParticipant.participant_id&lt;/code>)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ParticipantId {
+      get { return participantId_; }
+      set {
+        participantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveCallParticipantRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveCallParticipantRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (ParticipantId != other.ParticipantId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (ParticipantId.Length != 0) hash ^= ParticipantId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (ParticipantId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ParticipantId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (ParticipantId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ParticipantId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (ParticipantId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ParticipantId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveCallParticipantRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.ParticipantId.Length != 0) {
+        ParticipantId = other.ParticipantId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ParticipantId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            ParticipantId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Response of &lt;code>RemoveCallParticipant&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RemoveCallParticipantResponse : pb::IMessage<RemoveCallParticipantResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RemoveCallParticipantResponse> _parser = new pb::MessageParser<RemoveCallParticipantResponse>(() => new RemoveCallParticipantResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RemoveCallParticipantResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[85]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantResponse(RemoveCallParticipantResponse other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      participant_ = other.participant_ != null ? other.participant_.Clone() : null;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RemoveCallParticipantResponse Clone() {
+      return new RemoveCallParticipantResponse(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "participant" field.</summary>
+    public const int ParticipantFieldNumber = 3;
+    private global::Ondewo.Vtsi.CallParticipant participant_;
+    /// <summary>
+    /// The participant after the request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallParticipant Participant {
+      get { return participant_; }
+      set {
+        participant_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 4;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// error message if you have any
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RemoveCallParticipantResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RemoveCallParticipantResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (!object.Equals(Participant, other.Participant)) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (participant_ != null) hash ^= Participant.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (participant_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (participant_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (participant_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Participant);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RemoveCallParticipantResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.participant_ != null) {
+        if (participant_ == null) {
+          Participant = new global::Ondewo.Vtsi.CallParticipant();
+        }
+        Participant.MergeFrom(other.Participant);
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (participant_ == null) {
+              Participant = new global::Ondewo.Vtsi.CallParticipant();
+            }
+            input.ReadMessage(Participant);
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (participant_ == null) {
+              Participant = new global::Ondewo.Vtsi.CallParticipant();
+            }
+            input.ReadMessage(Participant);
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request to mute the bot of a call and/or stop it listening&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetCallMediaControlRequest : pb::IMessage<SetCallMediaControlRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetCallMediaControlRequest> _parser = new pb::MessageParser<SetCallMediaControlRequest>(() => new SetCallMediaControlRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetCallMediaControlRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[86]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlRequest(SetCallMediaControlRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      botVoice_ = other.botVoice_;
+      botListening_ = other.botListening_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlRequest Clone() {
+      return new SetCallMediaControlRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the connected call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "bot_voice" field.</summary>
+    public const int BotVoiceFieldNumber = 3;
+    private global::Ondewo.Vtsi.CallMediaSetting botVoice_ = global::Ondewo.Vtsi.CallMediaSetting.Unchanged;
+    /// <summary>
+    /// &lt;code>CALL_MEDIA_SETTING_OFF&lt;/code> mutes the bot, &lt;code>CALL_MEDIA_SETTING_ON&lt;/code> lets it speak again
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallMediaSetting BotVoice {
+      get { return botVoice_; }
+      set {
+        botVoice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "bot_listening" field.</summary>
+    public const int BotListeningFieldNumber = 4;
+    private global::Ondewo.Vtsi.CallMediaSetting botListening_ = global::Ondewo.Vtsi.CallMediaSetting.Unchanged;
+    /// <summary>
+    /// &lt;code>CALL_MEDIA_SETTING_OFF&lt;/code> stops the bot listening, &lt;code>CALL_MEDIA_SETTING_ON&lt;/code> resumes it
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallMediaSetting BotListening {
+      get { return botListening_; }
+      set {
+        botListening_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetCallMediaControlRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetCallMediaControlRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (BotVoice != other.BotVoice) return false;
+      if (BotListening != other.BotListening) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (BotVoice != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) hash ^= BotVoice.GetHashCode();
+      if (BotListening != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) hash ^= BotListening.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (BotVoice != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) BotListening);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (BotVoice != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) BotListening);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (BotVoice != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotVoice);
+      }
+      if (BotListening != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BotListening);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetCallMediaControlRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.BotVoice != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        BotVoice = other.BotVoice;
+      }
+      if (other.BotListening != global::Ondewo.Vtsi.CallMediaSetting.Unchanged) {
+        BotListening = other.BotListening;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 24: {
+            BotVoice = (global::Ondewo.Vtsi.CallMediaSetting) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            BotListening = (global::Ondewo.Vtsi.CallMediaSetting) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 24: {
+            BotVoice = (global::Ondewo.Vtsi.CallMediaSetting) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            BotListening = (global::Ondewo.Vtsi.CallMediaSetting) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Response of &lt;code>SetCallMediaControl&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SetCallMediaControlResponse : pb::IMessage<SetCallMediaControlResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SetCallMediaControlResponse> _parser = new pb::MessageParser<SetCallMediaControlResponse>(() => new SetCallMediaControlResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SetCallMediaControlResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[87]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlResponse(SetCallMediaControlResponse other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      state_ = other.state_ != null ? other.state_.Clone() : null;
+      changed_ = other.changed_;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SetCallMediaControlResponse Clone() {
+      return new SetCallMediaControlResponse(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 3;
+    private global::Ondewo.Vtsi.CallMediaControlState state_;
+    /// <summary>
+    /// Effective media control state after the request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallMediaControlState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "changed" field.</summary>
+    public const int ChangedFieldNumber = 4;
+    private bool changed_;
+    /// <summary>
+    /// &lt;code>true&lt;/code> if the effective state changed
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Changed {
+      get { return changed_; }
+      set {
+        changed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 5;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// error message if you have any
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SetCallMediaControlResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SetCallMediaControlResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (!object.Equals(State, other.State)) return false;
+      if (Changed != other.Changed) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (state_ != null) hash ^= State.GetHashCode();
+      if (Changed != false) hash ^= Changed.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (state_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(State);
+      }
+      if (Changed != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Changed);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (state_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(State);
+      }
+      if (Changed != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Changed);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (state_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(State);
+      }
+      if (Changed != false) {
+        size += 1 + 1;
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SetCallMediaControlResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.state_ != null) {
+        if (state_ == null) {
+          State = new global::Ondewo.Vtsi.CallMediaControlState();
+        }
+        State.MergeFrom(other.State);
+      }
+      if (other.Changed != false) {
+        Changed = other.Changed;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (state_ == null) {
+              State = new global::Ondewo.Vtsi.CallMediaControlState();
+            }
+            input.ReadMessage(State);
+            break;
+          }
+          case 32: {
+            Changed = input.ReadBool();
+            break;
+          }
+          case 42: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (state_ == null) {
+              State = new global::Ondewo.Vtsi.CallMediaControlState();
+            }
+            input.ReadMessage(State);
+            break;
+          }
+          case 32: {
+            Changed = input.ReadBool();
+            break;
+          }
+          case 42: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Configuration of a call audio stream. The first request of &lt;code>StreamCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamCallAudioConfig : pb::IMessage<StreamCallAudioConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamCallAudioConfig> _parser = new pb::MessageParser<StreamCallAudioConfig>(() => new StreamCallAudioConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamCallAudioConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[88]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioConfig(StreamCallAudioConfig other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callName_ = other.callName_;
+      mode_ = other.mode_;
+      sampleRateHz_ = other.sampleRateHz_;
+      takeOver_ = other.takeOver_;
+      maxDurationS_ = other.maxDurationS_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioConfig Clone() {
+      return new StreamCallAudioConfig(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project name of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 2;
+    private string callName_ = "";
+    /// <summary>
+    /// Name of the connected call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 3;
+    private global::Ondewo.Vtsi.CallAudioMode mode_ = global::Ondewo.Vtsi.CallAudioMode.Unspecified;
+    /// <summary>
+    /// Mode of the stream. Unspecified means LISTEN
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sample_rate_hz" field.</summary>
+    public const int SampleRateHzFieldNumber = 4;
+    private int sampleRateHz_;
+    /// <summary>
+    /// Sample rate in Hz in both directions: &lt;code>8000&lt;/code> or &lt;code>16000&lt;/code>; &lt;code>0&lt;/code> means &lt;code>16000&lt;/code>.
+    /// Audio is LINEAR16 little-endian mono in 20 ms frames
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SampleRateHz {
+      get { return sampleRateHz_; }
+      set {
+        sampleRateHz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "take_over" field.</summary>
+    public const int TakeOverFieldNumber = 5;
+    private bool takeOver_;
+    /// <summary>
+    /// REQUIRED for TALK: the bot is muted and does not listen while the stream is connected
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool TakeOver {
+      get { return takeOver_; }
+      set {
+        takeOver_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_duration_s" field.</summary>
+    public const int MaxDurationSFieldNumber = 6;
+    private int maxDurationS_;
+    /// <summary>
+    /// Maximum duration of the stream in seconds. &lt;code>0&lt;/code> means the server maximum
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxDurationS {
+      get { return maxDurationS_; }
+      set {
+        maxDurationS_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamCallAudioConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamCallAudioConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (CallName != other.CallName) return false;
+      if (Mode != other.Mode) return false;
+      if (SampleRateHz != other.SampleRateHz) return false;
+      if (TakeOver != other.TakeOver) return false;
+      if (MaxDurationS != other.MaxDurationS) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (SampleRateHz != 0) hash ^= SampleRateHz.GetHashCode();
+      if (TakeOver != false) hash ^= TakeOver.GetHashCode();
+      if (MaxDurationS != 0) hash ^= MaxDurationS.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (TakeOver != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(TakeOver);
+      }
+      if (MaxDurationS != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CallName);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (TakeOver != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(TakeOver);
+      }
+      if (MaxDurationS != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (SampleRateHz != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHz);
+      }
+      if (TakeOver != false) {
+        size += 1 + 1;
+      }
+      if (MaxDurationS != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDurationS);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamCallAudioConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      if (other.SampleRateHz != 0) {
+        SampleRateHz = other.SampleRateHz;
+      }
+      if (other.TakeOver != false) {
+        TakeOver = other.TakeOver;
+      }
+      if (other.MaxDurationS != 0) {
+        MaxDurationS = other.MaxDurationS;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.CallAudioMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            TakeOver = input.ReadBool();
+            break;
+          }
+          case 48: {
+            MaxDurationS = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Ondewo.Vtsi.CallAudioMode) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            TakeOver = input.ReadBool();
+            break;
+          }
+          case 48: {
+            MaxDurationS = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>One 20 ms frame of call audio&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallAudioFrame : pb::IMessage<CallAudioFrame>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallAudioFrame> _parser = new pb::MessageParser<CallAudioFrame>(() => new CallAudioFrame());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallAudioFrame> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[89]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioFrame() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioFrame(CallAudioFrame other) : this() {
+      pcmS16Le_ = other.pcmS16Le_;
+      sequence_ = other.sequence_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioFrame Clone() {
+      return new CallAudioFrame(this);
+    }
+
+    /// <summary>Field number for the "pcm_s16le" field.</summary>
+    public const int PcmS16LeFieldNumber = 1;
+    private pb::ByteString pcmS16Le_ = pb::ByteString.Empty;
+    /// <summary>
+    /// LINEAR16 little-endian mono samples, &lt;code>sample_rate_hz * 0.02 * 2&lt;/code> bytes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString PcmS16Le {
+      get { return pcmS16Le_; }
+      set {
+        pcmS16Le_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sequence" field.</summary>
+    public const int SequenceFieldNumber = 2;
+    private ulong sequence_;
+    /// <summary>
+    /// Monotonic sequence number of the frame within its direction of the stream
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Sequence {
+      get { return sequence_; }
+      set {
+        sequence_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallAudioFrame);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallAudioFrame other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PcmS16Le != other.PcmS16Le) return false;
+      if (Sequence != other.Sequence) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PcmS16Le.Length != 0) hash ^= PcmS16Le.GetHashCode();
+      if (Sequence != 0UL) hash ^= Sequence.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PcmS16Le.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Sequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PcmS16Le.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(Sequence);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PcmS16Le.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(PcmS16Le);
+      }
+      if (Sequence != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Sequence);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallAudioFrame other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PcmS16Le.Length != 0) {
+        PcmS16Le = other.PcmS16Le;
+      }
+      if (other.Sequence != 0UL) {
+        Sequence = other.Sequence;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PcmS16Le = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Sequence = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PcmS16Le = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            Sequence = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request of &lt;code>StreamCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamCallAudioRequest : pb::IMessage<StreamCallAudioRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamCallAudioRequest> _parser = new pb::MessageParser<StreamCallAudioRequest>(() => new StreamCallAudioRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamCallAudioRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[90]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioRequest(StreamCallAudioRequest other) : this() {
+      switch (other.RequestCase) {
+        case RequestOneofCase.Config:
+          Config = other.Config.Clone();
+          break;
+        case RequestOneofCase.Audio:
+          Audio = other.Audio.Clone();
+          break;
+        case RequestOneofCase.AgentMuted:
+          AgentMuted = other.AgentMuted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioRequest Clone() {
+      return new StreamCallAudioRequest(this);
+    }
+
+    /// <summary>Field number for the "config" field.</summary>
+    public const int ConfigFieldNumber = 1;
+    /// <summary>
+    /// Configuration; must be the first request and is accepted only once
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.StreamCallAudioConfig Config {
+      get { return requestCase_ == RequestOneofCase.Config ? (global::Ondewo.Vtsi.StreamCallAudioConfig) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Config;
+      }
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 2;
+    /// <summary>
+    /// Agent audio to send to the caller (TALK only)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioFrame Audio {
+      get { return requestCase_ == RequestOneofCase.Audio ? (global::Ondewo.Vtsi.CallAudioFrame) request_ : null; }
+      set {
+        request_ = value;
+        requestCase_ = value == null ? RequestOneofCase.None : RequestOneofCase.Audio;
+      }
+    }
+
+    /// <summary>Field number for the "agent_muted" field.</summary>
+    public const int AgentMutedFieldNumber = 3;
+    /// <summary>
+    /// &lt;code>true&lt;/code>: the agent&amp;apos;s audio is not sent to the caller until set to &lt;code>false&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AgentMuted {
+      get { return HasAgentMuted ? (bool) request_ : false; }
+      set {
+        request_ = value;
+        requestCase_ = RequestOneofCase.AgentMuted;
+      }
+    }
+    /// <summary>Gets whether the "agent_muted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAgentMuted {
+      get { return requestCase_ == RequestOneofCase.AgentMuted; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "agent_muted" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAgentMuted() {
+      if (HasAgentMuted) {
+        ClearRequest();
+      }
+    }
+
+    private object request_;
+    /// <summary>Enum of possible cases for the "request" oneof.</summary>
+    public enum RequestOneofCase {
+      None = 0,
+      Config = 1,
+      Audio = 2,
+      AgentMuted = 3,
+    }
+    private RequestOneofCase requestCase_ = RequestOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestOneofCase RequestCase {
+      get { return requestCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRequest() {
+      requestCase_ = RequestOneofCase.None;
+      request_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamCallAudioRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamCallAudioRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Config, other.Config)) return false;
+      if (!object.Equals(Audio, other.Audio)) return false;
+      if (AgentMuted != other.AgentMuted) return false;
+      if (RequestCase != other.RequestCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (requestCase_ == RequestOneofCase.Config) hash ^= Config.GetHashCode();
+      if (requestCase_ == RequestOneofCase.Audio) hash ^= Audio.GetHashCode();
+      if (HasAgentMuted) hash ^= AgentMuted.GetHashCode();
+      hash ^= (int) requestCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (requestCase_ == RequestOneofCase.Config) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (HasAgentMuted) {
+        output.WriteRawTag(24);
+        output.WriteBool(AgentMuted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (requestCase_ == RequestOneofCase.Config) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (HasAgentMuted) {
+        output.WriteRawTag(24);
+        output.WriteBool(AgentMuted);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (requestCase_ == RequestOneofCase.Config) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+      }
+      if (requestCase_ == RequestOneofCase.Audio) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (HasAgentMuted) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamCallAudioRequest other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.RequestCase) {
+        case RequestOneofCase.Config:
+          if (Config == null) {
+            Config = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+          }
+          Config.MergeFrom(other.Config);
+          break;
+        case RequestOneofCase.Audio:
+          if (Audio == null) {
+            Audio = new global::Ondewo.Vtsi.CallAudioFrame();
+          }
+          Audio.MergeFrom(other.Audio);
+          break;
+        case RequestOneofCase.AgentMuted:
+          AgentMuted = other.AgentMuted;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Ondewo.Vtsi.StreamCallAudioConfig subBuilder = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+            if (requestCase_ == RequestOneofCase.Config) {
+              subBuilder.MergeFrom(Config);
+            }
+            input.ReadMessage(subBuilder);
+            Config = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Vtsi.CallAudioFrame subBuilder = new global::Ondewo.Vtsi.CallAudioFrame();
+            if (requestCase_ == RequestOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 24: {
+            AgentMuted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Ondewo.Vtsi.StreamCallAudioConfig subBuilder = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+            if (requestCase_ == RequestOneofCase.Config) {
+              subBuilder.MergeFrom(Config);
+            }
+            input.ReadMessage(subBuilder);
+            Config = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Vtsi.CallAudioFrame subBuilder = new global::Ondewo.Vtsi.CallAudioFrame();
+            if (requestCase_ == RequestOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 24: {
+            AgentMuted = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Sent once when a call audio stream is connected&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallAudioStarted : pb::IMessage<CallAudioStarted>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallAudioStarted> _parser = new pb::MessageParser<CallAudioStarted>(() => new CallAudioStarted());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallAudioStarted> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[91]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStarted() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStarted(CallAudioStarted other) : this() {
+      streamId_ = other.streamId_;
+      sampleRateHz_ = other.sampleRateHz_;
+      frameMs_ = other.frameMs_;
+      mode_ = other.mode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStarted Clone() {
+      return new CallAudioStarted(this);
+    }
+
+    /// <summary>Field number for the "stream_id" field.</summary>
+    public const int StreamIdFieldNumber = 1;
+    private string streamId_ = "";
+    /// <summary>
+    /// Identifier of the stream (audit correlation)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StreamId {
+      get { return streamId_; }
+      set {
+        streamId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sample_rate_hz" field.</summary>
+    public const int SampleRateHzFieldNumber = 2;
+    private int sampleRateHz_;
+    /// <summary>
+    /// Sample rate in Hz in both directions
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SampleRateHz {
+      get { return sampleRateHz_; }
+      set {
+        sampleRateHz_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frame_ms" field.</summary>
+    public const int FrameMsFieldNumber = 3;
+    private int frameMs_;
+    /// <summary>
+    /// Frame length in milliseconds
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int FrameMs {
+      get { return frameMs_; }
+      set {
+        frameMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 4;
+    private global::Ondewo.Vtsi.CallAudioMode mode_ = global::Ondewo.Vtsi.CallAudioMode.Unspecified;
+    /// <summary>
+    /// Mode of the stream
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioMode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallAudioStarted);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallAudioStarted other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (StreamId != other.StreamId) return false;
+      if (SampleRateHz != other.SampleRateHz) return false;
+      if (FrameMs != other.FrameMs) return false;
+      if (Mode != other.Mode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (StreamId.Length != 0) hash ^= StreamId.GetHashCode();
+      if (SampleRateHz != 0) hash ^= SampleRateHz.GetHashCode();
+      if (FrameMs != 0) hash ^= FrameMs.GetHashCode();
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) hash ^= Mode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (StreamId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(FrameMs);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Mode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (StreamId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(StreamId);
+      }
+      if (SampleRateHz != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHz);
+      }
+      if (FrameMs != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(FrameMs);
+      }
+      if (Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallAudioStarted other) {
+      if (other == null) {
+        return;
+      }
+      if (other.StreamId.Length != 0) {
+        StreamId = other.StreamId;
+      }
+      if (other.SampleRateHz != 0) {
+        SampleRateHz = other.SampleRateHz;
+      }
+      if (other.FrameMs != 0) {
+        FrameMs = other.FrameMs;
+      }
+      if (other.Mode != global::Ondewo.Vtsi.CallAudioMode.Unspecified) {
+        Mode = other.Mode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Vtsi.CallAudioMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            StreamId = input.ReadString();
+            break;
+          }
+          case 16: {
+            SampleRateHz = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            FrameMs = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            Mode = (global::Ondewo.Vtsi.CallAudioMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Counters of a call audio stream, sent periodically&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallAudioStats : pb::IMessage<CallAudioStats>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallAudioStats> _parser = new pb::MessageParser<CallAudioStats>(() => new CallAudioStats());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallAudioStats> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[92]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStats() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStats(CallAudioStats other) : this() {
+      framesSent_ = other.framesSent_;
+      framesDropped_ = other.framesDropped_;
+      framesReceived_ = other.framesReceived_;
+      underruns_ = other.underruns_;
+      framesDiscarded_ = other.framesDiscarded_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioStats Clone() {
+      return new CallAudioStats(this);
+    }
+
+    /// <summary>Field number for the "frames_sent" field.</summary>
+    public const int FramesSentFieldNumber = 1;
+    private ulong framesSent_;
+    /// <summary>
+    /// Frames sent to the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesSent {
+      get { return framesSent_; }
+      set {
+        framesSent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_dropped" field.</summary>
+    public const int FramesDroppedFieldNumber = 2;
+    private ulong framesDropped_;
+    /// <summary>
+    /// Frames to the client dropped because the client read too slowly
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesDropped {
+      get { return framesDropped_; }
+      set {
+        framesDropped_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_received" field.</summary>
+    public const int FramesReceivedFieldNumber = 3;
+    private ulong framesReceived_;
+    /// <summary>
+    /// Frames received from the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesReceived {
+      get { return framesReceived_; }
+      set {
+        framesReceived_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "underruns" field.</summary>
+    public const int UnderrunsFieldNumber = 4;
+    private ulong underruns_;
+    /// <summary>
+    /// Playback underruns of the agent audio
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong Underruns {
+      get { return underruns_; }
+      set {
+        underruns_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "frames_discarded" field.</summary>
+    public const int FramesDiscardedFieldNumber = 5;
+    private ulong framesDiscarded_;
+    /// <summary>
+    /// Frames from the client discarded because the playback buffer was full
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ulong FramesDiscarded {
+      get { return framesDiscarded_; }
+      set {
+        framesDiscarded_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallAudioStats);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallAudioStats other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (FramesSent != other.FramesSent) return false;
+      if (FramesDropped != other.FramesDropped) return false;
+      if (FramesReceived != other.FramesReceived) return false;
+      if (Underruns != other.Underruns) return false;
+      if (FramesDiscarded != other.FramesDiscarded) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (FramesSent != 0UL) hash ^= FramesSent.GetHashCode();
+      if (FramesDropped != 0UL) hash ^= FramesDropped.GetHashCode();
+      if (FramesReceived != 0UL) hash ^= FramesReceived.GetHashCode();
+      if (Underruns != 0UL) hash ^= Underruns.GetHashCode();
+      if (FramesDiscarded != 0UL) hash ^= FramesDiscarded.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (FramesSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (FramesSent != 0UL) {
+        output.WriteRawTag(8);
+        output.WriteUInt64(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        output.WriteRawTag(16);
+        output.WriteUInt64(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        output.WriteRawTag(24);
+        output.WriteUInt64(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        output.WriteRawTag(32);
+        output.WriteUInt64(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        output.WriteRawTag(40);
+        output.WriteUInt64(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (FramesSent != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesSent);
+      }
+      if (FramesDropped != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesDropped);
+      }
+      if (FramesReceived != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesReceived);
+      }
+      if (Underruns != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(Underruns);
+      }
+      if (FramesDiscarded != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(FramesDiscarded);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallAudioStats other) {
+      if (other == null) {
+        return;
+      }
+      if (other.FramesSent != 0UL) {
+        FramesSent = other.FramesSent;
+      }
+      if (other.FramesDropped != 0UL) {
+        FramesDropped = other.FramesDropped;
+      }
+      if (other.FramesReceived != 0UL) {
+        FramesReceived = other.FramesReceived;
+      }
+      if (other.Underruns != 0UL) {
+        Underruns = other.Underruns;
+      }
+      if (other.FramesDiscarded != 0UL) {
+        FramesDiscarded = other.FramesDiscarded;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            FramesSent = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            FramesDropped = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            FramesReceived = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Underruns = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            FramesDiscarded = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            FramesSent = input.ReadUInt64();
+            break;
+          }
+          case 16: {
+            FramesDropped = input.ReadUInt64();
+            break;
+          }
+          case 24: {
+            FramesReceived = input.ReadUInt64();
+            break;
+          }
+          case 32: {
+            Underruns = input.ReadUInt64();
+            break;
+          }
+          case 40: {
+            FramesDiscarded = input.ReadUInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Sent once when a call audio stream ends normally&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallAudioEnded : pb::IMessage<CallAudioEnded>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallAudioEnded> _parser = new pb::MessageParser<CallAudioEnded>(() => new CallAudioEnded());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallAudioEnded> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[93]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioEnded() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioEnded(CallAudioEnded other) : this() {
+      reason_ = other.reason_;
+      detail_ = other.detail_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallAudioEnded Clone() {
+      return new CallAudioEnded(this);
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 1;
+    private global::Ondewo.Vtsi.CallAudioEndReason reason_ = global::Ondewo.Vtsi.CallAudioEndReason.Unspecified;
+    /// <summary>
+    /// Why the stream ended
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioEndReason Reason {
+      get { return reason_; }
+      set {
+        reason_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "detail" field.</summary>
+    public const int DetailFieldNumber = 2;
+    private string detail_ = "";
+    /// <summary>
+    /// Optional detail, a stable token
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Detail {
+      get { return detail_; }
+      set {
+        detail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallAudioEnded);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallAudioEnded other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Reason != other.Reason) return false;
+      if (Detail != other.Detail) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Reason != global::Ondewo.Vtsi.CallAudioEndReason.Unspecified) hash ^= Reason.GetHashCode();
+      if (Detail.Length != 0) hash ^= Detail.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Reason != global::Ondewo.Vtsi.CallAudioEndReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Reason != global::Ondewo.Vtsi.CallAudioEndReason.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Detail);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Reason != global::Ondewo.Vtsi.CallAudioEndReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      if (Detail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Detail);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallAudioEnded other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Reason != global::Ondewo.Vtsi.CallAudioEndReason.Unspecified) {
+        Reason = other.Reason;
+      }
+      if (other.Detail.Length != 0) {
+        Detail = other.Detail;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Reason = (global::Ondewo.Vtsi.CallAudioEndReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Detail = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Reason = (global::Ondewo.Vtsi.CallAudioEndReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Detail = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Response of &lt;code>StreamCallAudio&lt;/code> and &lt;code>ListenCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamCallAudioResponse : pb::IMessage<StreamCallAudioResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamCallAudioResponse> _parser = new pb::MessageParser<StreamCallAudioResponse>(() => new StreamCallAudioResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamCallAudioResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[94]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioResponse(StreamCallAudioResponse other) : this() {
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Started:
+          Started = other.Started.Clone();
+          break;
+        case ResponseOneofCase.Audio:
+          Audio = other.Audio.Clone();
+          break;
+        case ResponseOneofCase.Stats:
+          Stats = other.Stats.Clone();
+          break;
+        case ResponseOneofCase.Ended:
+          Ended = other.Ended.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallAudioResponse Clone() {
+      return new StreamCallAudioResponse(this);
+    }
+
+    /// <summary>Field number for the "started" field.</summary>
+    public const int StartedFieldNumber = 1;
+    /// <summary>
+    /// The stream is connected
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioStarted Started {
+      get { return responseCase_ == ResponseOneofCase.Started ? (global::Ondewo.Vtsi.CallAudioStarted) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Started;
+      }
+    }
+
+    /// <summary>Field number for the "audio" field.</summary>
+    public const int AudioFieldNumber = 2;
+    /// <summary>
+    /// Call audio
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioFrame Audio {
+      get { return responseCase_ == ResponseOneofCase.Audio ? (global::Ondewo.Vtsi.CallAudioFrame) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Audio;
+      }
+    }
+
+    /// <summary>Field number for the "stats" field.</summary>
+    public const int StatsFieldNumber = 3;
+    /// <summary>
+    /// Stream counters
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioStats Stats {
+      get { return responseCase_ == ResponseOneofCase.Stats ? (global::Ondewo.Vtsi.CallAudioStats) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Stats;
+      }
+    }
+
+    /// <summary>Field number for the "ended" field.</summary>
+    public const int EndedFieldNumber = 4;
+    /// <summary>
+    /// The stream ended
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallAudioEnded Ended {
+      get { return responseCase_ == ResponseOneofCase.Ended ? (global::Ondewo.Vtsi.CallAudioEnded) response_ : null; }
+      set {
+        response_ = value;
+        responseCase_ = value == null ? ResponseOneofCase.None : ResponseOneofCase.Ended;
+      }
+    }
+
+    private object response_;
+    /// <summary>Enum of possible cases for the "response" oneof.</summary>
+    public enum ResponseOneofCase {
+      None = 0,
+      Started = 1,
+      Audio = 2,
+      Stats = 3,
+      Ended = 4,
+    }
+    private ResponseOneofCase responseCase_ = ResponseOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResponseOneofCase ResponseCase {
+      get { return responseCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearResponse() {
+      responseCase_ = ResponseOneofCase.None;
+      response_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamCallAudioResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamCallAudioResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Started, other.Started)) return false;
+      if (!object.Equals(Audio, other.Audio)) return false;
+      if (!object.Equals(Stats, other.Stats)) return false;
+      if (!object.Equals(Ended, other.Ended)) return false;
+      if (ResponseCase != other.ResponseCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (responseCase_ == ResponseOneofCase.Started) hash ^= Started.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Audio) hash ^= Audio.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Stats) hash ^= Stats.GetHashCode();
+      if (responseCase_ == ResponseOneofCase.Ended) hash ^= Ended.GetHashCode();
+      hash ^= (int) responseCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (responseCase_ == ResponseOneofCase.Started) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ended);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (responseCase_ == ResponseOneofCase.Started) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Ended);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (responseCase_ == ResponseOneofCase.Started) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Started);
+      }
+      if (responseCase_ == ResponseOneofCase.Audio) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audio);
+      }
+      if (responseCase_ == ResponseOneofCase.Stats) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Stats);
+      }
+      if (responseCase_ == ResponseOneofCase.Ended) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Ended);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamCallAudioResponse other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResponseCase) {
+        case ResponseOneofCase.Started:
+          if (Started == null) {
+            Started = new global::Ondewo.Vtsi.CallAudioStarted();
+          }
+          Started.MergeFrom(other.Started);
+          break;
+        case ResponseOneofCase.Audio:
+          if (Audio == null) {
+            Audio = new global::Ondewo.Vtsi.CallAudioFrame();
+          }
+          Audio.MergeFrom(other.Audio);
+          break;
+        case ResponseOneofCase.Stats:
+          if (Stats == null) {
+            Stats = new global::Ondewo.Vtsi.CallAudioStats();
+          }
+          Stats.MergeFrom(other.Stats);
+          break;
+        case ResponseOneofCase.Ended:
+          if (Ended == null) {
+            Ended = new global::Ondewo.Vtsi.CallAudioEnded();
+          }
+          Ended.MergeFrom(other.Ended);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Ondewo.Vtsi.CallAudioStarted subBuilder = new global::Ondewo.Vtsi.CallAudioStarted();
+            if (responseCase_ == ResponseOneofCase.Started) {
+              subBuilder.MergeFrom(Started);
+            }
+            input.ReadMessage(subBuilder);
+            Started = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Vtsi.CallAudioFrame subBuilder = new global::Ondewo.Vtsi.CallAudioFrame();
+            if (responseCase_ == ResponseOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Ondewo.Vtsi.CallAudioStats subBuilder = new global::Ondewo.Vtsi.CallAudioStats();
+            if (responseCase_ == ResponseOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
+            }
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Ondewo.Vtsi.CallAudioEnded subBuilder = new global::Ondewo.Vtsi.CallAudioEnded();
+            if (responseCase_ == ResponseOneofCase.Ended) {
+              subBuilder.MergeFrom(Ended);
+            }
+            input.ReadMessage(subBuilder);
+            Ended = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Ondewo.Vtsi.CallAudioStarted subBuilder = new global::Ondewo.Vtsi.CallAudioStarted();
+            if (responseCase_ == ResponseOneofCase.Started) {
+              subBuilder.MergeFrom(Started);
+            }
+            input.ReadMessage(subBuilder);
+            Started = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Ondewo.Vtsi.CallAudioFrame subBuilder = new global::Ondewo.Vtsi.CallAudioFrame();
+            if (responseCase_ == ResponseOneofCase.Audio) {
+              subBuilder.MergeFrom(Audio);
+            }
+            input.ReadMessage(subBuilder);
+            Audio = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Ondewo.Vtsi.CallAudioStats subBuilder = new global::Ondewo.Vtsi.CallAudioStats();
+            if (responseCase_ == ResponseOneofCase.Stats) {
+              subBuilder.MergeFrom(Stats);
+            }
+            input.ReadMessage(subBuilder);
+            Stats = subBuilder;
+            break;
+          }
+          case 34: {
+            global::Ondewo.Vtsi.CallAudioEnded subBuilder = new global::Ondewo.Vtsi.CallAudioEnded();
+            if (responseCase_ == ResponseOneofCase.Ended) {
+              subBuilder.MergeFrom(Ended);
+            }
+            input.ReadMessage(subBuilder);
+            Ended = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Request of &lt;code>ListenCallAudio&lt;/code>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListenCallAudioRequest : pb::IMessage<ListenCallAudioRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListenCallAudioRequest> _parser = new pb::MessageParser<ListenCallAudioRequest>(() => new ListenCallAudioRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListenCallAudioRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[95]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenCallAudioRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenCallAudioRequest(ListenCallAudioRequest other) : this() {
+      config_ = other.config_ != null ? other.config_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListenCallAudioRequest Clone() {
+      return new ListenCallAudioRequest(this);
+    }
+
+    /// <summary>Field number for the "config" field.</summary>
+    public const int ConfigFieldNumber = 1;
+    private global::Ondewo.Vtsi.StreamCallAudioConfig config_;
+    /// <summary>
+    /// Configuration of the stream; &lt;code>mode&lt;/code> must be LISTEN or unspecified and &lt;code>take_over&lt;/code> false
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.StreamCallAudioConfig Config {
+      get { return config_; }
+      set {
+        config_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListenCallAudioRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListenCallAudioRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Config, other.Config)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (config_ != null) hash ^= Config.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (config_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Config);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (config_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListenCallAudioRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.config_ != null) {
+        if (config_ == null) {
+          Config = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+        }
+        Config.MergeFrom(other.Config);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (config_ == null) {
+              Config = new global::Ondewo.Vtsi.StreamCallAudioConfig();
+            }
+            input.ReadMessage(Config);
+            break;
+          }
         }
       }
     }
@@ -21238,7 +31703,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[72]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[96]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21471,7 +31936,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[73]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[97]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21745,7 +32210,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[74]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[98]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22048,7 +32513,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[75]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[99]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22087,6 +32552,13 @@ namespace Ondewo.Vtsi {
       csiPort_ = other.csiPort_;
       nluSessionName_ = other.nluSessionName_;
       platforms_ = other.platforms_;
+      redialRecommended_ = other.redialRecommended_;
+      redialReason_ = other.redialReason_;
+      answeringMachineDetectionEndDescription_ = other.answeringMachineDetectionEndDescription_;
+      mediaControl_ = other.mediaControl_ != null ? other.mediaControl_.Clone() : null;
+      participants_ = other.participants_.Clone();
+      lastTransfer_ = other.lastTransfer_ != null ? other.lastTransfer_.Clone() : null;
+      sipCallId_ = other.sipCallId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -22427,6 +32899,168 @@ namespace Ondewo.Vtsi {
       _hasBits0 &= ~4;
     }
 
+    /// <summary>Field number for the "redial_recommended" field.</summary>
+    public const int RedialRecommendedFieldNumber = 19;
+    private readonly static bool RedialRecommendedDefaultValue = false;
+
+    private bool redialRecommended_;
+    /// <summary>
+    /// Optional: Whether the callee should be called again later, set only when the answering machine
+    /// detection (AMD) ended the call: true for an answering machine or a network announcement hung up
+    /// on without a voice message, false once a voice message was left and false for a fax.
+    /// Unset when AMD did not end the call.
+    /// The AMD verdict, cause and confidence of the call are in sip_status.amd_result.
+    /// No call is redialled automatically; the marker is for the campaign logic of the client
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RedialRecommended {
+      get { if ((_hasBits0 & 8) != 0) { return redialRecommended_; } else { return RedialRecommendedDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        redialRecommended_ = value;
+      }
+    }
+    /// <summary>Gets whether the "redial_recommended" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRedialRecommended {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "redial_recommended" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRedialRecommended() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "redial_reason" field.</summary>
+    public const int RedialReasonFieldNumber = 20;
+    private readonly static string RedialReasonDefaultValue = "";
+
+    private string redialReason_;
+    /// <summary>
+    /// Optional: Reason of redial_recommended, set together with it. One of
+    /// "answering_machine", "network_announcement" or "fax"
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RedialReason {
+      get { return redialReason_ ?? RedialReasonDefaultValue; }
+      set {
+        redialReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "redial_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRedialReason {
+      get { return redialReason_ != null; }
+    }
+    /// <summary>Clears the value of the "redial_reason" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRedialReason() {
+      redialReason_ = null;
+    }
+
+    /// <summary>Field number for the "answering_machine_detection_end_description" field.</summary>
+    public const int AnsweringMachineDetectionEndDescriptionFieldNumber = 21;
+    private readonly static string AnsweringMachineDetectionEndDescriptionDefaultValue = "";
+
+    private string answeringMachineDetectionEndDescription_;
+    /// <summary>
+    /// Optional: Description of how a call ended by the answering machine detection (AMD) ended, i.e. the
+    /// description of its terminal ondewo.sip.SipStatus.StatusType.OUTGOING_CALL_FINISHED status. One of
+    /// "Answering machine detected with hang up",
+    /// "Answering machine detected with left voice message and hang up",
+    /// "Answering machine detected, call ended by the answering machine" or
+    /// "Answering machine detected, call ended by the answering machine after leaving a voice message".
+    /// Unset when AMD did not end the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AnsweringMachineDetectionEndDescription {
+      get { return answeringMachineDetectionEndDescription_ ?? AnsweringMachineDetectionEndDescriptionDefaultValue; }
+      set {
+        answeringMachineDetectionEndDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "answering_machine_detection_end_description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnsweringMachineDetectionEndDescription {
+      get { return answeringMachineDetectionEndDescription_ != null; }
+    }
+    /// <summary>Clears the value of the "answering_machine_detection_end_description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnsweringMachineDetectionEndDescription() {
+      answeringMachineDetectionEndDescription_ = null;
+    }
+
+    /// <summary>Field number for the "media_control" field.</summary>
+    public const int MediaControlFieldNumber = 22;
+    private global::Ondewo.Vtsi.CallMediaControlState mediaControl_;
+    /// <summary>
+    /// Media control state of the call (bot muted, listening paused, connected audio streams, joined participants).
+    /// Set in the SHALLOW and FULL views
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallMediaControlState MediaControl {
+      get { return mediaControl_; }
+      set {
+        mediaControl_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "participants" field.</summary>
+    public const int ParticipantsFieldNumber = 23;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CallParticipant> _repeated_participants_codec
+        = pb::FieldCodec.ForMessage(186, global::Ondewo.Vtsi.CallParticipant.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CallParticipant> participants_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CallParticipant>();
+    /// <summary>
+    /// Participants invited into the call. FULL view: all of them; SHALLOW view: those still ringing or joined
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CallParticipant> Participants {
+      get { return participants_; }
+    }
+
+    /// <summary>Field number for the "last_transfer" field.</summary>
+    public const int LastTransferFieldNumber = 24;
+    private global::Ondewo.Vtsi.CallTransferRecord lastTransfer_;
+    /// <summary>
+    /// The last transfer attempt of the call; unset if there was none. Set in the SHALLOW and FULL views
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallTransferRecord LastTransfer {
+      get { return lastTransfer_; }
+      set {
+        lastTransfer_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_call_id" field.</summary>
+    public const int SipCallIdFieldNumber = 25;
+    private string sipCallId_ = "";
+    /// <summary>
+    /// Identifier the call&amp;apos;s SIP container minted for the call (&lt;code>ondewo.sip.SipStatus.call_id&lt;/code>). Empty until
+    /// the call was identified; call control requests are refused (&lt;code>call-not-yet-identified&lt;/code>) until then.
+    /// Set in the SHALLOW and FULL views
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SipCallId {
+      get { return sipCallId_; }
+      set {
+        sipCallId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -22460,6 +33094,13 @@ namespace Ondewo.Vtsi {
       if (CsiPort != other.CsiPort) return false;
       if (NluSessionName != other.NluSessionName) return false;
       if (Platforms != other.Platforms) return false;
+      if (RedialRecommended != other.RedialRecommended) return false;
+      if (RedialReason != other.RedialReason) return false;
+      if (AnsweringMachineDetectionEndDescription != other.AnsweringMachineDetectionEndDescription) return false;
+      if (!object.Equals(MediaControl, other.MediaControl)) return false;
+      if(!participants_.Equals(other.participants_)) return false;
+      if (!object.Equals(LastTransfer, other.LastTransfer)) return false;
+      if (SipCallId != other.SipCallId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -22485,6 +33126,13 @@ namespace Ondewo.Vtsi {
       if (HasCsiPort) hash ^= CsiPort.GetHashCode();
       if (HasNluSessionName) hash ^= NluSessionName.GetHashCode();
       if (HasPlatforms) hash ^= Platforms.GetHashCode();
+      if (HasRedialRecommended) hash ^= RedialRecommended.GetHashCode();
+      if (HasRedialReason) hash ^= RedialReason.GetHashCode();
+      if (HasAnsweringMachineDetectionEndDescription) hash ^= AnsweringMachineDetectionEndDescription.GetHashCode();
+      if (mediaControl_ != null) hash ^= MediaControl.GetHashCode();
+      hash ^= participants_.GetHashCode();
+      if (lastTransfer_ != null) hash ^= LastTransfer.GetHashCode();
+      if (SipCallId.Length != 0) hash ^= SipCallId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -22575,6 +33223,31 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) Platforms);
       }
+      if (HasRedialRecommended) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(RedialRecommended);
+      }
+      if (HasRedialReason) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(RedialReason);
+      }
+      if (HasAnsweringMachineDetectionEndDescription) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(AnsweringMachineDetectionEndDescription);
+      }
+      if (mediaControl_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(MediaControl);
+      }
+      participants_.WriteTo(output, _repeated_participants_codec);
+      if (lastTransfer_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(LastTransfer);
+      }
+      if (SipCallId.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(SipCallId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -22657,6 +33330,31 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(144, 1);
         output.WriteEnum((int) Platforms);
       }
+      if (HasRedialRecommended) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(RedialRecommended);
+      }
+      if (HasRedialReason) {
+        output.WriteRawTag(162, 1);
+        output.WriteString(RedialReason);
+      }
+      if (HasAnsweringMachineDetectionEndDescription) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(AnsweringMachineDetectionEndDescription);
+      }
+      if (mediaControl_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(MediaControl);
+      }
+      participants_.WriteTo(ref output, _repeated_participants_codec);
+      if (lastTransfer_ != null) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(LastTransfer);
+      }
+      if (SipCallId.Length != 0) {
+        output.WriteRawTag(202, 1);
+        output.WriteString(SipCallId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -22720,6 +33418,25 @@ namespace Ondewo.Vtsi {
       }
       if (HasPlatforms) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Platforms);
+      }
+      if (HasRedialRecommended) {
+        size += 2 + 1;
+      }
+      if (HasRedialReason) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(RedialReason);
+      }
+      if (HasAnsweringMachineDetectionEndDescription) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AnsweringMachineDetectionEndDescription);
+      }
+      if (mediaControl_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MediaControl);
+      }
+      size += participants_.CalculateSize(_repeated_participants_codec);
+      if (lastTransfer_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LastTransfer);
+      }
+      if (SipCallId.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(SipCallId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -22804,6 +33521,31 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasPlatforms) {
         Platforms = other.Platforms;
+      }
+      if (other.HasRedialRecommended) {
+        RedialRecommended = other.RedialRecommended;
+      }
+      if (other.HasRedialReason) {
+        RedialReason = other.RedialReason;
+      }
+      if (other.HasAnsweringMachineDetectionEndDescription) {
+        AnsweringMachineDetectionEndDescription = other.AnsweringMachineDetectionEndDescription;
+      }
+      if (other.mediaControl_ != null) {
+        if (mediaControl_ == null) {
+          MediaControl = new global::Ondewo.Vtsi.CallMediaControlState();
+        }
+        MediaControl.MergeFrom(other.MediaControl);
+      }
+      participants_.Add(other.participants_);
+      if (other.lastTransfer_ != null) {
+        if (lastTransfer_ == null) {
+          LastTransfer = new global::Ondewo.Vtsi.CallTransferRecord();
+        }
+        LastTransfer.MergeFrom(other.LastTransfer);
+      }
+      if (other.SipCallId.Length != 0) {
+        SipCallId = other.SipCallId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -22912,6 +33654,40 @@ namespace Ondewo.Vtsi {
           }
           case 144: {
             Platforms = (global::Ondewo.Nlu.Intent.Types.Message.Types.Platform) input.ReadEnum();
+            break;
+          }
+          case 152: {
+            RedialRecommended = input.ReadBool();
+            break;
+          }
+          case 162: {
+            RedialReason = input.ReadString();
+            break;
+          }
+          case 170: {
+            AnsweringMachineDetectionEndDescription = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (mediaControl_ == null) {
+              MediaControl = new global::Ondewo.Vtsi.CallMediaControlState();
+            }
+            input.ReadMessage(MediaControl);
+            break;
+          }
+          case 186: {
+            participants_.AddEntriesFrom(input, _repeated_participants_codec);
+            break;
+          }
+          case 194: {
+            if (lastTransfer_ == null) {
+              LastTransfer = new global::Ondewo.Vtsi.CallTransferRecord();
+            }
+            input.ReadMessage(LastTransfer);
+            break;
+          }
+          case 202: {
+            SipCallId = input.ReadString();
             break;
           }
         }
@@ -23023,6 +33799,40 @@ namespace Ondewo.Vtsi {
             Platforms = (global::Ondewo.Nlu.Intent.Types.Message.Types.Platform) input.ReadEnum();
             break;
           }
+          case 152: {
+            RedialRecommended = input.ReadBool();
+            break;
+          }
+          case 162: {
+            RedialReason = input.ReadString();
+            break;
+          }
+          case 170: {
+            AnsweringMachineDetectionEndDescription = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (mediaControl_ == null) {
+              MediaControl = new global::Ondewo.Vtsi.CallMediaControlState();
+            }
+            input.ReadMessage(MediaControl);
+            break;
+          }
+          case 186: {
+            participants_.AddEntriesFrom(ref input, _repeated_participants_codec);
+            break;
+          }
+          case 194: {
+            if (lastTransfer_ == null) {
+              LastTransfer = new global::Ondewo.Vtsi.CallTransferRecord();
+            }
+            input.ReadMessage(LastTransfer);
+            break;
+          }
+          case 202: {
+            SipCallId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -23049,7 +33859,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[76]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[100]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23774,7 +34584,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[77]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[101]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24138,7 +34948,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[78]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[102]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24373,7 +35183,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[79]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[103]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24782,7 +35592,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[80]; }
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[104]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24999,6 +35809,1909 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The status of one caller, listener or scheduled caller, as streamed by the status streams.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallResourceStatus : pb::IMessage<CallResourceStatus>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallResourceStatus> _parser = new pb::MessageParser<CallResourceStatus>(() => new CallResourceStatus());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallResourceStatus> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[105]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallResourceStatus() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallResourceStatus(CallResourceStatus other) : this() {
+      resourceName_ = other.resourceName_;
+      callType_ = other.callType_;
+      callName_ = other.callName_;
+      active_ = other.active_;
+      sipStatusType_ = other.sipStatusType_;
+      sipStatusDescription_ = other.sipStatusDescription_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      phoneNumber_ = other.phoneNumber_;
+      scheduledCallerStatus_ = other.scheduledCallerStatus_;
+      scheduledTime_ = other.scheduledTime_ != null ? other.scheduledTime_.Clone() : null;
+      campaignName_ = other.campaignName_;
+      errorMessage_ = other.errorMessage_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallResourceStatus Clone() {
+      return new CallResourceStatus(this);
+    }
+
+    /// <summary>Field number for the "resource_name" field.</summary>
+    public const int ResourceNameFieldNumber = 1;
+    private string resourceName_ = "";
+    /// <summary>
+    /// The caller, listener or scheduled caller.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ResourceName {
+      get { return resourceName_; }
+      set {
+        resourceName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "call_type" field.</summary>
+    public const int CallTypeFieldNumber = 2;
+    private global::Ondewo.Vtsi.CallType callType_ = global::Ondewo.Vtsi.CallType.Both;
+    /// <summary>
+    /// CALLER, LISTENER or SCHEDULED_CALLER.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallType CallType {
+      get { return callType_; }
+      set {
+        callType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "call_name" field.</summary>
+    public const int CallNameFieldNumber = 3;
+    private string callName_ = "";
+    /// <summary>
+    /// Its current or last call. Empty when it has none.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CallName {
+      get { return callName_; }
+      set {
+        callName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "active" field.</summary>
+    public const int ActiveFieldNumber = 4;
+    private bool active_;
+    /// <summary>
+    /// Whether its call is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Active {
+      get { return active_; }
+      set {
+        active_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_status_type" field.</summary>
+    public const int SipStatusTypeFieldNumber = 5;
+    private global::Ondewo.Sip.SipStatus.Types.StatusType sipStatusType_ = global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession;
+    /// <summary>
+    /// SIP status of its current or last call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Sip.SipStatus.Types.StatusType SipStatusType {
+      get { return sipStatusType_; }
+      set {
+        sipStatusType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "sip_status_description" field.</summary>
+    public const int SipStatusDescriptionFieldNumber = 6;
+    private string sipStatusDescription_ = "";
+    /// <summary>
+    /// Description of that SIP status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SipStatusDescription {
+      get { return sipStatusDescription_; }
+      set {
+        sipStatusDescription_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Start of its current or last call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// End of its last call. Unset while a call runs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "phone_number" field.</summary>
+    public const int PhoneNumberFieldNumber = 9;
+    private string phoneNumber_ = "";
+    /// <summary>
+    /// Callee or caller number of its current or last call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PhoneNumber {
+      get { return phoneNumber_; }
+      set {
+        phoneNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_caller_status" field.</summary>
+    public const int ScheduledCallerStatusFieldNumber = 10;
+    private global::Ondewo.Vtsi.ScheduledCallerStatus scheduledCallerStatus_ = global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified;
+    /// <summary>
+    /// For SCHEDULED_CALLER: its lifecycle state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.ScheduledCallerStatus ScheduledCallerStatus {
+      get { return scheduledCallerStatus_; }
+      set {
+        scheduledCallerStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_time" field.</summary>
+    public const int ScheduledTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp scheduledTime_;
+    /// <summary>
+    /// For SCHEDULED_CALLER: its scheduled time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduledTime {
+      get { return scheduledTime_; }
+      set {
+        scheduledTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_name" field.</summary>
+    public const int CampaignNameFieldNumber = 12;
+    private string campaignName_ = "";
+    /// <summary>
+    /// The campaign it belongs to, if any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignName {
+      get { return campaignName_; }
+      set {
+        campaignName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 13;
+    private string errorMessage_ = "";
+    /// <summary>
+    /// For SCHEDULED_CALLER: why it failed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallResourceStatus);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallResourceStatus other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ResourceName != other.ResourceName) return false;
+      if (CallType != other.CallType) return false;
+      if (CallName != other.CallName) return false;
+      if (Active != other.Active) return false;
+      if (SipStatusType != other.SipStatusType) return false;
+      if (SipStatusDescription != other.SipStatusDescription) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (PhoneNumber != other.PhoneNumber) return false;
+      if (ScheduledCallerStatus != other.ScheduledCallerStatus) return false;
+      if (!object.Equals(ScheduledTime, other.ScheduledTime)) return false;
+      if (CampaignName != other.CampaignName) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ResourceName.Length != 0) hash ^= ResourceName.GetHashCode();
+      if (CallType != global::Ondewo.Vtsi.CallType.Both) hash ^= CallType.GetHashCode();
+      if (CallName.Length != 0) hash ^= CallName.GetHashCode();
+      if (Active != false) hash ^= Active.GetHashCode();
+      if (SipStatusType != global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession) hash ^= SipStatusType.GetHashCode();
+      if (SipStatusDescription.Length != 0) hash ^= SipStatusDescription.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
+      if (ScheduledCallerStatus != global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified) hash ^= ScheduledCallerStatus.GetHashCode();
+      if (scheduledTime_ != null) hash ^= ScheduledTime.GetHashCode();
+      if (CampaignName.Length != 0) hash ^= CampaignName.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ResourceName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceName);
+      }
+      if (CallType != global::Ondewo.Vtsi.CallType.Both) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CallType);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CallName);
+      }
+      if (Active != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Active);
+      }
+      if (SipStatusType != global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) SipStatusType);
+      }
+      if (SipStatusDescription.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SipStatusDescription);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndTime);
+      }
+      if (PhoneNumber.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PhoneNumber);
+      }
+      if (ScheduledCallerStatus != global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ScheduledCallerStatus);
+      }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ScheduledTime);
+      }
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CampaignName);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ResourceName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ResourceName);
+      }
+      if (CallType != global::Ondewo.Vtsi.CallType.Both) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CallType);
+      }
+      if (CallName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(CallName);
+      }
+      if (Active != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Active);
+      }
+      if (SipStatusType != global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) SipStatusType);
+      }
+      if (SipStatusDescription.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(SipStatusDescription);
+      }
+      if (startTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(EndTime);
+      }
+      if (PhoneNumber.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PhoneNumber);
+      }
+      if (ScheduledCallerStatus != global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) ScheduledCallerStatus);
+      }
+      if (scheduledTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ScheduledTime);
+      }
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(CampaignName);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ResourceName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceName);
+      }
+      if (CallType != global::Ondewo.Vtsi.CallType.Both) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CallType);
+      }
+      if (CallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CallName);
+      }
+      if (Active != false) {
+        size += 1 + 1;
+      }
+      if (SipStatusType != global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SipStatusType);
+      }
+      if (SipStatusDescription.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SipStatusDescription);
+      }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (PhoneNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
+      }
+      if (ScheduledCallerStatus != global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ScheduledCallerStatus);
+      }
+      if (scheduledTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScheduledTime);
+      }
+      if (CampaignName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallResourceStatus other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ResourceName.Length != 0) {
+        ResourceName = other.ResourceName;
+      }
+      if (other.CallType != global::Ondewo.Vtsi.CallType.Both) {
+        CallType = other.CallType;
+      }
+      if (other.CallName.Length != 0) {
+        CallName = other.CallName;
+      }
+      if (other.Active != false) {
+        Active = other.Active;
+      }
+      if (other.SipStatusType != global::Ondewo.Sip.SipStatus.Types.StatusType.NoSession) {
+        SipStatusType = other.SipStatusType;
+      }
+      if (other.SipStatusDescription.Length != 0) {
+        SipStatusDescription = other.SipStatusDescription;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.PhoneNumber.Length != 0) {
+        PhoneNumber = other.PhoneNumber;
+      }
+      if (other.ScheduledCallerStatus != global::Ondewo.Vtsi.ScheduledCallerStatus.Unspecified) {
+        ScheduledCallerStatus = other.ScheduledCallerStatus;
+      }
+      if (other.scheduledTime_ != null) {
+        if (scheduledTime_ == null) {
+          ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ScheduledTime.MergeFrom(other.ScheduledTime);
+      }
+      if (other.CampaignName.Length != 0) {
+        CampaignName = other.CampaignName;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ResourceName = input.ReadString();
+            break;
+          }
+          case 16: {
+            CallType = (global::Ondewo.Vtsi.CallType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SipStatusType = (global::Ondewo.Sip.SipStatus.Types.StatusType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            SipStatusDescription = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 66: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 74: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 80: {
+            ScheduledCallerStatus = (global::Ondewo.Vtsi.ScheduledCallerStatus) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
+            break;
+          }
+          case 98: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 106: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ResourceName = input.ReadString();
+            break;
+          }
+          case 16: {
+            CallType = (global::Ondewo.Vtsi.CallType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            CallName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 40: {
+            SipStatusType = (global::Ondewo.Sip.SipStatus.Types.StatusType) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            SipStatusDescription = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 66: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 74: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 80: {
+            ScheduledCallerStatus = (global::Ondewo.Vtsi.ScheduledCallerStatus) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (scheduledTime_ == null) {
+              ScheduledTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ScheduledTime);
+            break;
+          }
+          case 98: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 106: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for &lt;code>Calls.StreamCallerStatus&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamCallerStatusRequest : pb::IMessage<StreamCallerStatusRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamCallerStatusRequest> _parser = new pb::MessageParser<StreamCallerStatusRequest>(() => new StreamCallerStatusRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamCallerStatusRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[106]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallerStatusRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallerStatusRequest(StreamCallerStatusRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      callerNames_ = other.callerNames_.Clone();
+      activeOnly_ = other.activeOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallerStatusRequest Clone() {
+      return new StreamCallerStatusRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "caller_names" field.</summary>
+    public const int CallerNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_callerNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> callerNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Only these callers. Empty means every caller of the project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CallerNames {
+      get { return callerNames_; }
+    }
+
+    /// <summary>Field number for the "active_only" field.</summary>
+    public const int ActiveOnlyFieldNumber = 3;
+    private bool activeOnly_;
+    /// <summary>
+    /// Only callers whose call is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ActiveOnly {
+      get { return activeOnly_; }
+      set {
+        activeOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamCallerStatusRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamCallerStatusRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!callerNames_.Equals(other.callerNames_)) return false;
+      if (ActiveOnly != other.ActiveOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= callerNames_.GetHashCode();
+      if (ActiveOnly != false) hash ^= ActiveOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      callerNames_.WriteTo(output, _repeated_callerNames_codec);
+      if (ActiveOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ActiveOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      callerNames_.WriteTo(ref output, _repeated_callerNames_codec);
+      if (ActiveOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ActiveOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += callerNames_.CalculateSize(_repeated_callerNames_codec);
+      if (ActiveOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamCallerStatusRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      callerNames_.Add(other.callerNames_);
+      if (other.ActiveOnly != false) {
+        ActiveOnly = other.ActiveOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            callerNames_.AddEntriesFrom(input, _repeated_callerNames_codec);
+            break;
+          }
+          case 24: {
+            ActiveOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            callerNames_.AddEntriesFrom(ref input, _repeated_callerNames_codec);
+            break;
+          }
+          case 24: {
+            ActiveOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for &lt;code>Calls.StreamListenerStatus&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamListenerStatusRequest : pb::IMessage<StreamListenerStatusRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamListenerStatusRequest> _parser = new pb::MessageParser<StreamListenerStatusRequest>(() => new StreamListenerStatusRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamListenerStatusRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[107]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamListenerStatusRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamListenerStatusRequest(StreamListenerStatusRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      listenerNames_ = other.listenerNames_.Clone();
+      activeOnly_ = other.activeOnly_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamListenerStatusRequest Clone() {
+      return new StreamListenerStatusRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "listener_names" field.</summary>
+    public const int ListenerNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_listenerNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> listenerNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Only these listeners. Empty means every listener of the project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ListenerNames {
+      get { return listenerNames_; }
+    }
+
+    /// <summary>Field number for the "active_only" field.</summary>
+    public const int ActiveOnlyFieldNumber = 3;
+    private bool activeOnly_;
+    /// <summary>
+    /// Only listeners whose call is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ActiveOnly {
+      get { return activeOnly_; }
+      set {
+        activeOnly_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamListenerStatusRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamListenerStatusRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!listenerNames_.Equals(other.listenerNames_)) return false;
+      if (ActiveOnly != other.ActiveOnly) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= listenerNames_.GetHashCode();
+      if (ActiveOnly != false) hash ^= ActiveOnly.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      listenerNames_.WriteTo(output, _repeated_listenerNames_codec);
+      if (ActiveOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ActiveOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      listenerNames_.WriteTo(ref output, _repeated_listenerNames_codec);
+      if (ActiveOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ActiveOnly);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += listenerNames_.CalculateSize(_repeated_listenerNames_codec);
+      if (ActiveOnly != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamListenerStatusRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      listenerNames_.Add(other.listenerNames_);
+      if (other.ActiveOnly != false) {
+        ActiveOnly = other.ActiveOnly;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            listenerNames_.AddEntriesFrom(input, _repeated_listenerNames_codec);
+            break;
+          }
+          case 24: {
+            ActiveOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            listenerNames_.AddEntriesFrom(ref input, _repeated_listenerNames_codec);
+            break;
+          }
+          case 24: {
+            ActiveOnly = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for &lt;code>Calls.StreamScheduledCallerStatus&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamScheduledCallerStatusRequest : pb::IMessage<StreamScheduledCallerStatusRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamScheduledCallerStatusRequest> _parser = new pb::MessageParser<StreamScheduledCallerStatusRequest>(() => new StreamScheduledCallerStatusRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamScheduledCallerStatusRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[108]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamScheduledCallerStatusRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamScheduledCallerStatusRequest(StreamScheduledCallerStatusRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      scheduledCallerNames_ = other.scheduledCallerNames_.Clone();
+      statuses_ = other.statuses_.Clone();
+      campaignName_ = other.campaignName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamScheduledCallerStatusRequest Clone() {
+      return new StreamScheduledCallerStatusRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scheduled_caller_names" field.</summary>
+    public const int ScheduledCallerNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_scheduledCallerNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> scheduledCallerNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Only these scheduled callers. Empty means every scheduled caller of the project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ScheduledCallerNames {
+      get { return scheduledCallerNames_; }
+    }
+
+    /// <summary>Field number for the "statuses" field.</summary>
+    public const int StatusesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.ScheduledCallerStatus> _repeated_statuses_codec
+        = pb::FieldCodec.ForEnum(26, x => (int) x, x => (global::Ondewo.Vtsi.ScheduledCallerStatus) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.ScheduledCallerStatus> statuses_ = new pbc::RepeatedField<global::Ondewo.Vtsi.ScheduledCallerStatus>();
+    /// <summary>
+    /// Only scheduled callers in these states. Empty means every state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.ScheduledCallerStatus> Statuses {
+      get { return statuses_; }
+    }
+
+    /// <summary>Field number for the "campaign_name" field.</summary>
+    public const int CampaignNameFieldNumber = 4;
+    private string campaignName_ = "";
+    /// <summary>
+    /// Only scheduled callers of this campaign. Empty means any.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignName {
+      get { return campaignName_; }
+      set {
+        campaignName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamScheduledCallerStatusRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamScheduledCallerStatusRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!scheduledCallerNames_.Equals(other.scheduledCallerNames_)) return false;
+      if(!statuses_.Equals(other.statuses_)) return false;
+      if (CampaignName != other.CampaignName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= scheduledCallerNames_.GetHashCode();
+      hash ^= statuses_.GetHashCode();
+      if (CampaignName.Length != 0) hash ^= CampaignName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerNames_.WriteTo(output, _repeated_scheduledCallerNames_codec);
+      statuses_.WriteTo(output, _repeated_statuses_codec);
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CampaignName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      scheduledCallerNames_.WriteTo(ref output, _repeated_scheduledCallerNames_codec);
+      statuses_.WriteTo(ref output, _repeated_statuses_codec);
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CampaignName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += scheduledCallerNames_.CalculateSize(_repeated_scheduledCallerNames_codec);
+      size += statuses_.CalculateSize(_repeated_statuses_codec);
+      if (CampaignName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamScheduledCallerStatusRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      scheduledCallerNames_.Add(other.scheduledCallerNames_);
+      statuses_.Add(other.statuses_);
+      if (other.CampaignName.Length != 0) {
+        CampaignName = other.CampaignName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerNames_.AddEntriesFrom(input, _repeated_scheduledCallerNames_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            statuses_.AddEntriesFrom(input, _repeated_statuses_codec);
+            break;
+          }
+          case 34: {
+            CampaignName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            scheduledCallerNames_.AddEntriesFrom(ref input, _repeated_scheduledCallerNames_codec);
+            break;
+          }
+          case 26:
+          case 24: {
+            statuses_.AddEntriesFrom(ref input, _repeated_statuses_codec);
+            break;
+          }
+          case 34: {
+            CampaignName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message of the three status streams.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StreamCallResourceStatusResponse : pb::IMessage<StreamCallResourceStatusResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StreamCallResourceStatusResponse> _parser = new pb::MessageParser<StreamCallResourceStatusResponse>(() => new StreamCallResourceStatusResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StreamCallResourceStatusResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallsReflection.Descriptor.MessageTypes[109]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallResourceStatusResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallResourceStatusResponse(StreamCallResourceStatusResponse other) : this() {
+      statuses_ = other.statuses_.Clone();
+      removedResourceNames_ = other.removedResourceNames_.Clone();
+      snapshot_ = other.snapshot_;
+      snapshotTruncated_ = other.snapshotTruncated_;
+      endReason_ = other.endReason_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StreamCallResourceStatusResponse Clone() {
+      return new StreamCallResourceStatusResponse(this);
+    }
+
+    /// <summary>Field number for the "statuses" field.</summary>
+    public const int StatusesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CallResourceStatus> _repeated_statuses_codec
+        = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.CallResourceStatus.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CallResourceStatus> statuses_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CallResourceStatus>();
+    /// <summary>
+    /// Resources that changed (every matching resource in the snapshot).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CallResourceStatus> Statuses {
+      get { return statuses_; }
+    }
+
+    /// <summary>Field number for the "removed_resource_names" field.</summary>
+    public const int RemovedResourceNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_removedResourceNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> removedResourceNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Resources that no longer exist or no longer match.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RemovedResourceNames {
+      get { return removedResourceNames_; }
+    }
+
+    /// <summary>Field number for the "snapshot" field.</summary>
+    public const int SnapshotFieldNumber = 3;
+    private bool snapshot_;
+    /// <summary>
+    /// True on the first message, which carries every matching resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Snapshot {
+      get { return snapshot_; }
+      set {
+        snapshot_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "snapshot_truncated" field.</summary>
+    public const int SnapshotTruncatedFieldNumber = 4;
+    private bool snapshotTruncated_;
+    /// <summary>
+    /// True when the snapshot was cut at the server limit (5000 resources).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SnapshotTruncated {
+      get { return snapshotTruncated_; }
+      set {
+        snapshotTruncated_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_reason" field.</summary>
+    public const int EndReasonFieldNumber = 5;
+    private string endReason_ = "";
+    /// <summary>
+    /// Set on the last message when the server ended the stream. Empty otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EndReason {
+      get { return endReason_; }
+      set {
+        endReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StreamCallResourceStatusResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StreamCallResourceStatusResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!statuses_.Equals(other.statuses_)) return false;
+      if(!removedResourceNames_.Equals(other.removedResourceNames_)) return false;
+      if (Snapshot != other.Snapshot) return false;
+      if (SnapshotTruncated != other.SnapshotTruncated) return false;
+      if (EndReason != other.EndReason) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= statuses_.GetHashCode();
+      hash ^= removedResourceNames_.GetHashCode();
+      if (Snapshot != false) hash ^= Snapshot.GetHashCode();
+      if (SnapshotTruncated != false) hash ^= SnapshotTruncated.GetHashCode();
+      if (EndReason.Length != 0) hash ^= EndReason.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      statuses_.WriteTo(output, _repeated_statuses_codec);
+      removedResourceNames_.WriteTo(output, _repeated_removedResourceNames_codec);
+      if (Snapshot != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Snapshot);
+      }
+      if (SnapshotTruncated != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SnapshotTruncated);
+      }
+      if (EndReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(EndReason);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      statuses_.WriteTo(ref output, _repeated_statuses_codec);
+      removedResourceNames_.WriteTo(ref output, _repeated_removedResourceNames_codec);
+      if (Snapshot != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Snapshot);
+      }
+      if (SnapshotTruncated != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(SnapshotTruncated);
+      }
+      if (EndReason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(EndReason);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += statuses_.CalculateSize(_repeated_statuses_codec);
+      size += removedResourceNames_.CalculateSize(_repeated_removedResourceNames_codec);
+      if (Snapshot != false) {
+        size += 1 + 1;
+      }
+      if (SnapshotTruncated != false) {
+        size += 1 + 1;
+      }
+      if (EndReason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EndReason);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StreamCallResourceStatusResponse other) {
+      if (other == null) {
+        return;
+      }
+      statuses_.Add(other.statuses_);
+      removedResourceNames_.Add(other.removedResourceNames_);
+      if (other.Snapshot != false) {
+        Snapshot = other.Snapshot;
+      }
+      if (other.SnapshotTruncated != false) {
+        SnapshotTruncated = other.SnapshotTruncated;
+      }
+      if (other.EndReason.Length != 0) {
+        EndReason = other.EndReason;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            statuses_.AddEntriesFrom(input, _repeated_statuses_codec);
+            break;
+          }
+          case 18: {
+            removedResourceNames_.AddEntriesFrom(input, _repeated_removedResourceNames_codec);
+            break;
+          }
+          case 24: {
+            Snapshot = input.ReadBool();
+            break;
+          }
+          case 32: {
+            SnapshotTruncated = input.ReadBool();
+            break;
+          }
+          case 42: {
+            EndReason = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            statuses_.AddEntriesFrom(ref input, _repeated_statuses_codec);
+            break;
+          }
+          case 18: {
+            removedResourceNames_.AddEntriesFrom(ref input, _repeated_removedResourceNames_codec);
+            break;
+          }
+          case 24: {
+            Snapshot = input.ReadBool();
+            break;
+          }
+          case 32: {
+            SnapshotTruncated = input.ReadBool();
+            break;
+          }
+          case 42: {
+            EndReason = input.ReadString();
             break;
           }
         }
