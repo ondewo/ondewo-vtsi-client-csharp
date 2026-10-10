@@ -41,12 +41,12 @@ export
 
 # MUST BE THE SAME AS THE API in Major and Minor Version Number
 # example: API 1.2.0 --> Client 1.2.X
-ONDEWO_VTSI_VERSION=8.7.1
+ONDEWO_VTSI_VERSION=9.0.0
 
 # Submodule pins. Both are checked out by `make checkout_defined_submodule_versions`, so the
 # generated code is always reproducible from this file alone.
-ONDEWO_VTSI_API_GIT_BRANCH=tags/8.7.0
-ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.15.2
+ONDEWO_VTSI_API_GIT_BRANCH=tags/9.0.0
+ONDEWO_PROTO_COMPILER_GIT_BRANCH=tags/5.15.5
 
 # You need to set up an access token at https://github.com/settings/tokens - permissions are important
 GITHUB_GH_TOKEN?=ENTER_YOUR_TOKEN_HERE

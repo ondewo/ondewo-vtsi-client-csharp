@@ -136,6 +136,14 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.StartScheduledCallersResponse> __Marshaller_ondewo_vtsi_StartScheduledCallersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StartScheduledCallersResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.AddCallersToCampaignRequest> __Marshaller_ondewo_vtsi_AddCallersToCampaignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.AddCallersToCampaignRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.AddCallersToCampaignResponse> __Marshaller_ondewo_vtsi_AddCallersToCampaignResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.AddCallersToCampaignResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest> __Marshaller_ondewo_vtsi_AddScheduledCallersToCampaignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse> __Marshaller_ondewo_vtsi_AddScheduledCallersToCampaignResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.GetScheduledCallerRequest> __Marshaller_ondewo_vtsi_GetScheduledCallerRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.GetScheduledCallerRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.ScheduledCaller> __Marshaller_ondewo_vtsi_ScheduledCaller = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ScheduledCaller.Parser));
@@ -173,6 +181,32 @@ namespace Ondewo.Vtsi {
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.ListCallsRequest> __Marshaller_ondewo_vtsi_ListCallsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ListCallsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.ListCallsResponse> __Marshaller_ondewo_vtsi_ListCallsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ListCallsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallerStatusRequest> __Marshaller_ondewo_vtsi_StreamCallerStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallerStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> __Marshaller_ondewo_vtsi_StreamCallResourceStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallResourceStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamListenerStatusRequest> __Marshaller_ondewo_vtsi_StreamListenerStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamListenerStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest> __Marshaller_ondewo_vtsi_StreamScheduledCallerStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.InviteToCallRequest> __Marshaller_ondewo_vtsi_InviteToCallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.InviteToCallRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.InviteToCallResponse> __Marshaller_ondewo_vtsi_InviteToCallResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.InviteToCallResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RemoveCallParticipantRequest> __Marshaller_ondewo_vtsi_RemoveCallParticipantRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RemoveCallParticipantRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RemoveCallParticipantResponse> __Marshaller_ondewo_vtsi_RemoveCallParticipantResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RemoveCallParticipantResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.SetCallMediaControlRequest> __Marshaller_ondewo_vtsi_SetCallMediaControlRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SetCallMediaControlRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.SetCallMediaControlResponse> __Marshaller_ondewo_vtsi_SetCallMediaControlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SetCallMediaControlResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallAudioRequest> __Marshaller_ondewo_vtsi_StreamCallAudioRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallAudioRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallAudioResponse> __Marshaller_ondewo_vtsi_StreamCallAudioResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallAudioResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.ListenCallAudioRequest> __Marshaller_ondewo_vtsi_ListenCallAudioRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ListenCallAudioRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.StartCallerRequest, global::Ondewo.Vtsi.StartCallerResponse> __Method_StartCaller = new grpc::Method<global::Ondewo.Vtsi.StartCallerRequest, global::Ondewo.Vtsi.StartCallerResponse>(
@@ -319,6 +353,22 @@ namespace Ondewo.Vtsi {
         __Marshaller_ondewo_vtsi_StartScheduledCallersResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.AddCallersToCampaignRequest, global::Ondewo.Vtsi.AddCallersToCampaignResponse> __Method_AddCallersToCampaign = new grpc::Method<global::Ondewo.Vtsi.AddCallersToCampaignRequest, global::Ondewo.Vtsi.AddCallersToCampaignResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddCallersToCampaign",
+        __Marshaller_ondewo_vtsi_AddCallersToCampaignRequest,
+        __Marshaller_ondewo_vtsi_AddCallersToCampaignResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest, global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse> __Method_AddScheduledCallersToCampaign = new grpc::Method<global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest, global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddScheduledCallersToCampaign",
+        __Marshaller_ondewo_vtsi_AddScheduledCallersToCampaignRequest,
+        __Marshaller_ondewo_vtsi_AddScheduledCallersToCampaignResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.GetScheduledCallerRequest, global::Ondewo.Vtsi.ScheduledCaller> __Method_GetScheduledCaller = new grpc::Method<global::Ondewo.Vtsi.GetScheduledCallerRequest, global::Ondewo.Vtsi.ScheduledCaller>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -397,6 +447,70 @@ namespace Ondewo.Vtsi {
         "ListCalls",
         __Marshaller_ondewo_vtsi_ListCallsRequest,
         __Marshaller_ondewo_vtsi_ListCallsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.StreamCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse> __Method_StreamCallerStatus = new grpc::Method<global::Ondewo.Vtsi.StreamCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamCallerStatus",
+        __Marshaller_ondewo_vtsi_StreamCallerStatusRequest,
+        __Marshaller_ondewo_vtsi_StreamCallResourceStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.StreamListenerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse> __Method_StreamListenerStatus = new grpc::Method<global::Ondewo.Vtsi.StreamListenerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamListenerStatus",
+        __Marshaller_ondewo_vtsi_StreamListenerStatusRequest,
+        __Marshaller_ondewo_vtsi_StreamCallResourceStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse> __Method_StreamScheduledCallerStatus = new grpc::Method<global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamScheduledCallerStatus",
+        __Marshaller_ondewo_vtsi_StreamScheduledCallerStatusRequest,
+        __Marshaller_ondewo_vtsi_StreamCallResourceStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.InviteToCallRequest, global::Ondewo.Vtsi.InviteToCallResponse> __Method_InviteToCall = new grpc::Method<global::Ondewo.Vtsi.InviteToCallRequest, global::Ondewo.Vtsi.InviteToCallResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InviteToCall",
+        __Marshaller_ondewo_vtsi_InviteToCallRequest,
+        __Marshaller_ondewo_vtsi_InviteToCallResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.RemoveCallParticipantRequest, global::Ondewo.Vtsi.RemoveCallParticipantResponse> __Method_RemoveCallParticipant = new grpc::Method<global::Ondewo.Vtsi.RemoveCallParticipantRequest, global::Ondewo.Vtsi.RemoveCallParticipantResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RemoveCallParticipant",
+        __Marshaller_ondewo_vtsi_RemoveCallParticipantRequest,
+        __Marshaller_ondewo_vtsi_RemoveCallParticipantResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.SetCallMediaControlRequest, global::Ondewo.Vtsi.SetCallMediaControlResponse> __Method_SetCallMediaControl = new grpc::Method<global::Ondewo.Vtsi.SetCallMediaControlRequest, global::Ondewo.Vtsi.SetCallMediaControlResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetCallMediaControl",
+        __Marshaller_ondewo_vtsi_SetCallMediaControlRequest,
+        __Marshaller_ondewo_vtsi_SetCallMediaControlResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse> __Method_StreamCallAudio = new grpc::Method<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(
+        grpc::MethodType.DuplexStreaming,
+        __ServiceName,
+        "StreamCallAudio",
+        __Marshaller_ondewo_vtsi_StreamCallAudioRequest,
+        __Marshaller_ondewo_vtsi_StreamCallAudioResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.ListenCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse> __Method_ListenCallAudio = new grpc::Method<global::Ondewo.Vtsi.ListenCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ListenCallAudio",
+        __Marshaller_ondewo_vtsi_ListenCallAudioRequest,
+        __Marshaller_ondewo_vtsi_StreamCallAudioResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -625,6 +739,36 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
+      /// &lt;p>Adds callers to a campaign instead of starting them. The campaign then starts them, at most
+      /// &lt;code>max_parallel_calls&lt;/code> at a time. The request is atomic: either the campaign (when new), every
+      /// campaign call is stored, or nothing is. Errors are gRPC status codes (see &lt;code>CampaignAssignment&lt;/code>).&lt;/p>
+      /// &lt;p>Rolling updates: a VTSI server that predates this RPC answers &lt;code>UNIMPLEMENTED&lt;/code> and starts
+      /// nothing. Do not fall back to &lt;code>StartCallers&lt;/code> on &lt;code>UNIMPLEMENTED&lt;/code>; retry later.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.AddCallersToCampaignResponse> AddCallersToCampaign(global::Ondewo.Vtsi.AddCallersToCampaignRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Adds scheduled callers to a campaign: each fires at or after its scheduled time AND when the campaign has a
+      /// free slot, and follows the campaign&amp;apos;s retries, stop and hard stop. Same atomicity, errors and rolling-update
+      /// behaviour as &lt;code>AddCallersToCampaign&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse> AddScheduledCallersToCampaign(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// &lt;p>Gets a scheduled caller&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -650,6 +794,11 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Cancels a scheduled caller that has not fired yet&lt;/p>
+      /// &lt;p>A scheduled caller of a campaign can be cancelled while its campaign call is
+      /// &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>;
+      /// the campaign call then becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>. While an attempt is
+      /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code> the request is refused:
+      /// &lt;code>cancelled = false&lt;/code> and the scheduled caller keeps its status.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -699,7 +848,24 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
+      /// resolved and validated before anything is sent; an invalid target is answered with
+      /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
+      /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
+      /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
+      /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
+      /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
+      /// found, including another project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>,
+      /// &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>, &lt;code>participants-present&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>ABORTED&lt;/code>
+      /// (&lt;code>transfer-in-progress&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -711,7 +877,11 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer several calls, each like &lt;code>TransferCall&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -742,6 +912,167 @@ namespace Ondewo.Vtsi {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.ListCallsResponse> ListCalls(global::Ondewo.Vtsi.ListCallsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Streams the status of the callers of a project: a snapshot first
+      /// (&lt;code>snapshot = true&lt;/code>), then every caller whose call or SIP status changed, plus
+      /// keep-alive messages. Ends when the client disconnects or at the server-side maximum stream
+      /// duration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when
+      /// the server has no free stream slot.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamCallerStatus(global::Ondewo.Vtsi.StreamCallerStatusRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Streams the status of the listeners of a project, like &lt;code>StreamCallerStatus&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamListenerStatus(global::Ondewo.Vtsi.StreamListenerStatusRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Streams the status of the scheduled callers of a project, like
+      /// &lt;code>StreamCallerStatus&lt;/code>. The snapshot holds every PENDING and FIRING scheduled caller
+      /// and those that finished in the last hour.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamScheduledCallerStatus(global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Invite a registered softphone account of the project into a connected call. Returns the participant in
+      /// &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>; follow &lt;code>Call.participants&lt;/code> or the events
+      /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_*&lt;/code> for JOINED, FAILED and LEFT.&lt;/p>
+      /// &lt;p>&lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code> (default) joins the softphone into the call: Asterisk mixes the caller,
+      /// the bot and the participant, and by default the bot keeps talking and listening
+      /// (&lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>). &lt;code>PARTICIPANT_MODE_MONITOR&lt;/code> lets the participant listen only.
+      /// When the bot&amp;apos;s leg ends, every participant is hung up; the caller is handed over only by a WARM
+      /// &lt;code>TransferCall&lt;/code>. Idempotent per &lt;code>request_id&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code> (call or softphone account, including another
+      /// project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>softphone-not-registered&lt;/code>, &lt;code>softphone-disabled&lt;/code>, &lt;code>softphone-unrouted&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>bot-channel-ambiguous&lt;/code>, &lt;code>asterisk-not-local&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>), &lt;code>ALREADY_EXISTS&lt;/code> (the softphone is already ringing or joined),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>transfer-in-progress&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (participant cap),
+      /// &lt;code>UNAVAILABLE&lt;/code> (&lt;code>asterisk-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.InviteToCallResponse> InviteToCall(global::Ondewo.Vtsi.InviteToCallRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Hang up a participant of a call (ringing or joined). The participant ends as
+      /// &lt;code>PARTICIPANT_STATE_LEFT&lt;/code> with &lt;code>end_reason = REMOVED&lt;/code>; the call and the bot are not
+      /// affected.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_EXECUTOR&lt;/code> or higher. Audited like &lt;code>InviteToCall&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.RemoveCallParticipantResponse> RemoveCallParticipant(global::Ondewo.Vtsi.RemoveCallParticipantRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Mute the bot of a connected call and/or stop it listening to the caller, or undo either. Every request sets a
+      /// desired level and never toggles: a repeat answers &lt;code>changed = false&lt;/code>. The bot stays muted while
+      /// anything else (a TALK take-over of &lt;code>StreamCallAudio&lt;/code>, a participant bot policy) also holds it muted.&lt;/p>
+      /// &lt;p>Errors as for &lt;code>InviteToCall&lt;/code>, plus &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=sip-image-too-old&lt;/code>,
+      /// &lt;code>ABORTED&lt;/code> &lt;code>reason=call-control-busy&lt;/code> (another call-control request for the call is running)
+      /// and &lt;code>UNAVAILABLE&lt;/code> &lt;code>reason=sip-unreachable&lt;/code> or &lt;code>reason=csi-media-control-failed&lt;/code> (the
+      /// bot did not apply the level: a requested pause is rolled back, a requested mute is kept).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.SetCallMediaControlResponse> SetCallMediaControl(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Live audio of a connected call, both ways. The first request MUST be &lt;code>config&lt;/code> (within 2 seconds).
+      /// LISTEN receives the caller mixed with the bot. TALK sends the agent&amp;apos;s audio to the caller and REQUIRES
+      /// &lt;code>take_over&lt;/code>: the bot is muted and does not listen while the stream is connected, and resumes when it
+      /// ends; in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>Bidirectional streaming: available to native gRPC clients (python, nodejs) only. Browser (grpc-web) clients
+      /// use &lt;code>ListenCallAudio&lt;/code>, plus a softphone (&lt;code>InviteToCall&lt;/code>) to talk.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (no or invalid &lt;code>config&lt;/code>, TALK without
+      /// &lt;code>take_over&lt;/code>, wrong frame size), &lt;code>NOT_FOUND&lt;/code>, &lt;code>FAILED_PRECONDITION&lt;/code>
+      /// (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>,
+      /// &lt;code>bot-still-speaking&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap, a
+      /// second TALK). A normal end sends one &lt;code>ended&lt;/code> message, then OK. A second &lt;code>config&lt;/code> or audio
+      /// sent in LISTEN mode ends the stream with &lt;code>INVALID_ARGUMENT&lt;/code>. A client half-close ends the stream
+      /// (&lt;code>CALL_AUDIO_END_REASON_CLIENT_CLOSED&lt;/code>), so a listening client keeps its request stream open.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="requestStream">Used for reading requests from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamCallAudio(grpc::IAsyncStreamReader<global::Ondewo.Vtsi.StreamCallAudioRequest> requestStream, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCallAudioResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Listen-only live audio of a connected call, like &lt;code>StreamCallAudio&lt;/code> in LISTEN mode, as a server
+      /// stream that grpc-web (browser) clients can consume. &lt;code>config.mode&lt;/code> must be LISTEN or unspecified and
+      /// &lt;code>config.take_over&lt;/code> must be false, otherwise &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=listen-only&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ListenCallAudio(global::Ondewo.Vtsi.ListenCallAudioRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCallAudioResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1640,6 +1971,126 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_StartScheduledCallers, null, options, request);
       }
       /// <summary>
+      /// &lt;p>Adds callers to a campaign instead of starting them. The campaign then starts them, at most
+      /// &lt;code>max_parallel_calls&lt;/code> at a time. The request is atomic: either the campaign (when new), every
+      /// campaign call is stored, or nothing is. Errors are gRPC status codes (see &lt;code>CampaignAssignment&lt;/code>).&lt;/p>
+      /// &lt;p>Rolling updates: a VTSI server that predates this RPC answers &lt;code>UNIMPLEMENTED&lt;/code> and starts
+      /// nothing. Do not fall back to &lt;code>StartCallers&lt;/code> on &lt;code>UNIMPLEMENTED&lt;/code>; retry later.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.AddCallersToCampaignResponse AddCallersToCampaign(global::Ondewo.Vtsi.AddCallersToCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddCallersToCampaign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Adds callers to a campaign instead of starting them. The campaign then starts them, at most
+      /// &lt;code>max_parallel_calls&lt;/code> at a time. The request is atomic: either the campaign (when new), every
+      /// campaign call is stored, or nothing is. Errors are gRPC status codes (see &lt;code>CampaignAssignment&lt;/code>).&lt;/p>
+      /// &lt;p>Rolling updates: a VTSI server that predates this RPC answers &lt;code>UNIMPLEMENTED&lt;/code> and starts
+      /// nothing. Do not fall back to &lt;code>StartCallers&lt;/code> on &lt;code>UNIMPLEMENTED&lt;/code>; retry later.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.AddCallersToCampaignResponse AddCallersToCampaign(global::Ondewo.Vtsi.AddCallersToCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddCallersToCampaign, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Adds callers to a campaign instead of starting them. The campaign then starts them, at most
+      /// &lt;code>max_parallel_calls&lt;/code> at a time. The request is atomic: either the campaign (when new), every
+      /// campaign call is stored, or nothing is. Errors are gRPC status codes (see &lt;code>CampaignAssignment&lt;/code>).&lt;/p>
+      /// &lt;p>Rolling updates: a VTSI server that predates this RPC answers &lt;code>UNIMPLEMENTED&lt;/code> and starts
+      /// nothing. Do not fall back to &lt;code>StartCallers&lt;/code> on &lt;code>UNIMPLEMENTED&lt;/code>; retry later.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.AddCallersToCampaignResponse> AddCallersToCampaignAsync(global::Ondewo.Vtsi.AddCallersToCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddCallersToCampaignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Adds callers to a campaign instead of starting them. The campaign then starts them, at most
+      /// &lt;code>max_parallel_calls&lt;/code> at a time. The request is atomic: either the campaign (when new), every
+      /// campaign call is stored, or nothing is. Errors are gRPC status codes (see &lt;code>CampaignAssignment&lt;/code>).&lt;/p>
+      /// &lt;p>Rolling updates: a VTSI server that predates this RPC answers &lt;code>UNIMPLEMENTED&lt;/code> and starts
+      /// nothing. Do not fall back to &lt;code>StartCallers&lt;/code> on &lt;code>UNIMPLEMENTED&lt;/code>; retry later.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.AddCallersToCampaignResponse> AddCallersToCampaignAsync(global::Ondewo.Vtsi.AddCallersToCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddCallersToCampaign, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Adds scheduled callers to a campaign: each fires at or after its scheduled time AND when the campaign has a
+      /// free slot, and follows the campaign&amp;apos;s retries, stop and hard stop. Same atomicity, errors and rolling-update
+      /// behaviour as &lt;code>AddCallersToCampaign&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse AddScheduledCallersToCampaign(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddScheduledCallersToCampaign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Adds scheduled callers to a campaign: each fires at or after its scheduled time AND when the campaign has a
+      /// free slot, and follows the campaign&amp;apos;s retries, stop and hard stop. Same atomicity, errors and rolling-update
+      /// behaviour as &lt;code>AddCallersToCampaign&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse AddScheduledCallersToCampaign(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddScheduledCallersToCampaign, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Adds scheduled callers to a campaign: each fires at or after its scheduled time AND when the campaign has a
+      /// free slot, and follows the campaign&amp;apos;s retries, stop and hard stop. Same atomicity, errors and rolling-update
+      /// behaviour as &lt;code>AddCallersToCampaign&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse> AddScheduledCallersToCampaignAsync(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddScheduledCallersToCampaignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Adds scheduled callers to a campaign: each fires at or after its scheduled time AND when the campaign has a
+      /// free slot, and follows the campaign&amp;apos;s retries, stop and hard stop. Same atomicity, errors and rolling-update
+      /// behaviour as &lt;code>AddCallersToCampaign&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse> AddScheduledCallersToCampaignAsync(global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddScheduledCallersToCampaign, null, options, request);
+      }
+      /// <summary>
       /// &lt;p>Gets a scheduled caller&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1737,6 +2188,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Cancels a scheduled caller that has not fired yet&lt;/p>
+      /// &lt;p>A scheduled caller of a campaign can be cancelled while its campaign call is
+      /// &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>;
+      /// the campaign call then becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>. While an attempt is
+      /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code> the request is refused:
+      /// &lt;code>cancelled = false&lt;/code> and the scheduled caller keeps its status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1750,6 +2206,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Cancels a scheduled caller that has not fired yet&lt;/p>
+      /// &lt;p>A scheduled caller of a campaign can be cancelled while its campaign call is
+      /// &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>;
+      /// the campaign call then becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>. While an attempt is
+      /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code> the request is refused:
+      /// &lt;code>cancelled = false&lt;/code> and the scheduled caller keeps its status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1761,6 +2222,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Cancels a scheduled caller that has not fired yet&lt;/p>
+      /// &lt;p>A scheduled caller of a campaign can be cancelled while its campaign call is
+      /// &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>;
+      /// the campaign call then becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>. While an attempt is
+      /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code> the request is refused:
+      /// &lt;code>cancelled = false&lt;/code> and the scheduled caller keeps its status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1774,6 +2240,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Cancels a scheduled caller that has not fired yet&lt;/p>
+      /// &lt;p>A scheduled caller of a campaign can be cancelled while its campaign call is
+      /// &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>;
+      /// the campaign call then becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>. While an attempt is
+      /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code> the request is refused:
+      /// &lt;code>cancelled = false&lt;/code> and the scheduled caller keeps its status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1936,7 +2407,24 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_StopAllCalls, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
+      /// resolved and validated before anything is sent; an invalid target is answered with
+      /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
+      /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
+      /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
+      /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
+      /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
+      /// found, including another project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>,
+      /// &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>, &lt;code>participants-present&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>ABORTED&lt;/code>
+      /// (&lt;code>transfer-in-progress&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1949,7 +2437,24 @@ namespace Ondewo.Vtsi {
         return TransferCall(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
+      /// resolved and validated before anything is sent; an invalid target is answered with
+      /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
+      /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
+      /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
+      /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
+      /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
+      /// found, including another project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>,
+      /// &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>, &lt;code>participants-present&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>ABORTED&lt;/code>
+      /// (&lt;code>transfer-in-progress&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1960,7 +2465,24 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_TransferCall, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
+      /// resolved and validated before anything is sent; an invalid target is answered with
+      /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
+      /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
+      /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
+      /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
+      /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
+      /// found, including another project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>,
+      /// &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>, &lt;code>participants-present&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>ABORTED&lt;/code>
+      /// (&lt;code>transfer-in-progress&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1973,7 +2495,24 @@ namespace Ondewo.Vtsi {
         return TransferCallAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
+      /// resolved and validated before anything is sent; an invalid target is answered with
+      /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
+      /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
+      /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
+      /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
+      /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
+      /// found, including another project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>,
+      /// &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>, &lt;code>participants-present&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>ABORTED&lt;/code>
+      /// (&lt;code>transfer-in-progress&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1984,7 +2523,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_TransferCall, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer several calls, each like &lt;code>TransferCall&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1997,7 +2540,11 @@ namespace Ondewo.Vtsi {
         return TransferCalls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer several calls, each like &lt;code>TransferCall&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2008,7 +2555,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_TransferCalls, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer several calls, each like &lt;code>TransferCall&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2021,7 +2572,11 @@ namespace Ondewo.Vtsi {
         return TransferCallsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call from a listener to another&lt;/p>
+      /// &lt;p>Transfer several calls, each like &lt;code>TransferCall&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2127,6 +2682,450 @@ namespace Ondewo.Vtsi {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCalls, null, options, request);
       }
+      /// <summary>
+      /// &lt;p>Streams the status of the callers of a project: a snapshot first
+      /// (&lt;code>snapshot = true&lt;/code>), then every caller whose call or SIP status changed, plus
+      /// keep-alive messages. Ends when the client disconnects or at the server-side maximum stream
+      /// duration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when
+      /// the server has no free stream slot.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamCallerStatus(global::Ondewo.Vtsi.StreamCallerStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamCallerStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Streams the status of the callers of a project: a snapshot first
+      /// (&lt;code>snapshot = true&lt;/code>), then every caller whose call or SIP status changed, plus
+      /// keep-alive messages. Ends when the client disconnects or at the server-side maximum stream
+      /// duration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when
+      /// the server has no free stream slot.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamCallerStatus(global::Ondewo.Vtsi.StreamCallerStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamCallerStatus, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Streams the status of the listeners of a project, like &lt;code>StreamCallerStatus&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamListenerStatus(global::Ondewo.Vtsi.StreamListenerStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamListenerStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Streams the status of the listeners of a project, like &lt;code>StreamCallerStatus&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamListenerStatus(global::Ondewo.Vtsi.StreamListenerStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamListenerStatus, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Streams the status of the scheduled callers of a project, like
+      /// &lt;code>StreamCallerStatus&lt;/code>. The snapshot holds every PENDING and FIRING scheduled caller
+      /// and those that finished in the last hour.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamScheduledCallerStatus(global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamScheduledCallerStatus(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Streams the status of the scheduled callers of a project, like
+      /// &lt;code>StreamCallerStatus&lt;/code>. The snapshot holds every PENDING and FIRING scheduled caller
+      /// and those that finished in the last hour.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallResourceStatusResponse> StreamScheduledCallerStatus(global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamScheduledCallerStatus, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Invite a registered softphone account of the project into a connected call. Returns the participant in
+      /// &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>; follow &lt;code>Call.participants&lt;/code> or the events
+      /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_*&lt;/code> for JOINED, FAILED and LEFT.&lt;/p>
+      /// &lt;p>&lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code> (default) joins the softphone into the call: Asterisk mixes the caller,
+      /// the bot and the participant, and by default the bot keeps talking and listening
+      /// (&lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>). &lt;code>PARTICIPANT_MODE_MONITOR&lt;/code> lets the participant listen only.
+      /// When the bot&amp;apos;s leg ends, every participant is hung up; the caller is handed over only by a WARM
+      /// &lt;code>TransferCall&lt;/code>. Idempotent per &lt;code>request_id&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code> (call or softphone account, including another
+      /// project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>softphone-not-registered&lt;/code>, &lt;code>softphone-disabled&lt;/code>, &lt;code>softphone-unrouted&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>bot-channel-ambiguous&lt;/code>, &lt;code>asterisk-not-local&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>), &lt;code>ALREADY_EXISTS&lt;/code> (the softphone is already ringing or joined),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>transfer-in-progress&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (participant cap),
+      /// &lt;code>UNAVAILABLE&lt;/code> (&lt;code>asterisk-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.InviteToCallResponse InviteToCall(global::Ondewo.Vtsi.InviteToCallRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InviteToCall(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Invite a registered softphone account of the project into a connected call. Returns the participant in
+      /// &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>; follow &lt;code>Call.participants&lt;/code> or the events
+      /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_*&lt;/code> for JOINED, FAILED and LEFT.&lt;/p>
+      /// &lt;p>&lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code> (default) joins the softphone into the call: Asterisk mixes the caller,
+      /// the bot and the participant, and by default the bot keeps talking and listening
+      /// (&lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>). &lt;code>PARTICIPANT_MODE_MONITOR&lt;/code> lets the participant listen only.
+      /// When the bot&amp;apos;s leg ends, every participant is hung up; the caller is handed over only by a WARM
+      /// &lt;code>TransferCall&lt;/code>. Idempotent per &lt;code>request_id&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code> (call or softphone account, including another
+      /// project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>softphone-not-registered&lt;/code>, &lt;code>softphone-disabled&lt;/code>, &lt;code>softphone-unrouted&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>bot-channel-ambiguous&lt;/code>, &lt;code>asterisk-not-local&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>), &lt;code>ALREADY_EXISTS&lt;/code> (the softphone is already ringing or joined),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>transfer-in-progress&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (participant cap),
+      /// &lt;code>UNAVAILABLE&lt;/code> (&lt;code>asterisk-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.InviteToCallResponse InviteToCall(global::Ondewo.Vtsi.InviteToCallRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InviteToCall, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Invite a registered softphone account of the project into a connected call. Returns the participant in
+      /// &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>; follow &lt;code>Call.participants&lt;/code> or the events
+      /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_*&lt;/code> for JOINED, FAILED and LEFT.&lt;/p>
+      /// &lt;p>&lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code> (default) joins the softphone into the call: Asterisk mixes the caller,
+      /// the bot and the participant, and by default the bot keeps talking and listening
+      /// (&lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>). &lt;code>PARTICIPANT_MODE_MONITOR&lt;/code> lets the participant listen only.
+      /// When the bot&amp;apos;s leg ends, every participant is hung up; the caller is handed over only by a WARM
+      /// &lt;code>TransferCall&lt;/code>. Idempotent per &lt;code>request_id&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code> (call or softphone account, including another
+      /// project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>softphone-not-registered&lt;/code>, &lt;code>softphone-disabled&lt;/code>, &lt;code>softphone-unrouted&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>bot-channel-ambiguous&lt;/code>, &lt;code>asterisk-not-local&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>), &lt;code>ALREADY_EXISTS&lt;/code> (the softphone is already ringing or joined),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>transfer-in-progress&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (participant cap),
+      /// &lt;code>UNAVAILABLE&lt;/code> (&lt;code>asterisk-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.InviteToCallResponse> InviteToCallAsync(global::Ondewo.Vtsi.InviteToCallRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InviteToCallAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Invite a registered softphone account of the project into a connected call. Returns the participant in
+      /// &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>; follow &lt;code>Call.participants&lt;/code> or the events
+      /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_*&lt;/code> for JOINED, FAILED and LEFT.&lt;/p>
+      /// &lt;p>&lt;code>PARTICIPANT_MODE_CONFERENCE&lt;/code> (default) joins the softphone into the call: Asterisk mixes the caller,
+      /// the bot and the participant, and by default the bot keeps talking and listening
+      /// (&lt;code>BOT_POLICY_ON_JOIN_KEEP&lt;/code>). &lt;code>PARTICIPANT_MODE_MONITOR&lt;/code> lets the participant listen only.
+      /// When the bot&amp;apos;s leg ends, every participant is hung up; the caller is handed over only by a WARM
+      /// &lt;code>TransferCall&lt;/code>. Idempotent per &lt;code>request_id&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code> (call or softphone account, including another
+      /// project&amp;apos;s), &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>softphone-not-registered&lt;/code>, &lt;code>softphone-disabled&lt;/code>, &lt;code>softphone-unrouted&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>bot-channel-ambiguous&lt;/code>, &lt;code>asterisk-not-local&lt;/code>,
+      /// &lt;code>asterisk-version-unsupported&lt;/code>), &lt;code>ALREADY_EXISTS&lt;/code> (the softphone is already ringing or joined),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>transfer-in-progress&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (participant cap),
+      /// &lt;code>UNAVAILABLE&lt;/code> (&lt;code>asterisk-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.InviteToCallResponse> InviteToCallAsync(global::Ondewo.Vtsi.InviteToCallRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InviteToCall, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Hang up a participant of a call (ringing or joined). The participant ends as
+      /// &lt;code>PARTICIPANT_STATE_LEFT&lt;/code> with &lt;code>end_reason = REMOVED&lt;/code>; the call and the bot are not
+      /// affected.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_EXECUTOR&lt;/code> or higher. Audited like &lt;code>InviteToCall&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RemoveCallParticipantResponse RemoveCallParticipant(global::Ondewo.Vtsi.RemoveCallParticipantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveCallParticipant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Hang up a participant of a call (ringing or joined). The participant ends as
+      /// &lt;code>PARTICIPANT_STATE_LEFT&lt;/code> with &lt;code>end_reason = REMOVED&lt;/code>; the call and the bot are not
+      /// affected.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_EXECUTOR&lt;/code> or higher. Audited like &lt;code>InviteToCall&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RemoveCallParticipantResponse RemoveCallParticipant(global::Ondewo.Vtsi.RemoveCallParticipantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RemoveCallParticipant, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Hang up a participant of a call (ringing or joined). The participant ends as
+      /// &lt;code>PARTICIPANT_STATE_LEFT&lt;/code> with &lt;code>end_reason = REMOVED&lt;/code>; the call and the bot are not
+      /// affected.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_EXECUTOR&lt;/code> or higher. Audited like &lt;code>InviteToCall&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RemoveCallParticipantResponse> RemoveCallParticipantAsync(global::Ondewo.Vtsi.RemoveCallParticipantRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RemoveCallParticipantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Hang up a participant of a call (ringing or joined). The participant ends as
+      /// &lt;code>PARTICIPANT_STATE_LEFT&lt;/code> with &lt;code>end_reason = REMOVED&lt;/code>; the call and the bot are not
+      /// affected.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_EXECUTOR&lt;/code> or higher. Audited like &lt;code>InviteToCall&lt;/code>.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RemoveCallParticipantResponse> RemoveCallParticipantAsync(global::Ondewo.Vtsi.RemoveCallParticipantRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RemoveCallParticipant, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Mute the bot of a connected call and/or stop it listening to the caller, or undo either. Every request sets a
+      /// desired level and never toggles: a repeat answers &lt;code>changed = false&lt;/code>. The bot stays muted while
+      /// anything else (a TALK take-over of &lt;code>StreamCallAudio&lt;/code>, a participant bot policy) also holds it muted.&lt;/p>
+      /// &lt;p>Errors as for &lt;code>InviteToCall&lt;/code>, plus &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=sip-image-too-old&lt;/code>,
+      /// &lt;code>ABORTED&lt;/code> &lt;code>reason=call-control-busy&lt;/code> (another call-control request for the call is running)
+      /// and &lt;code>UNAVAILABLE&lt;/code> &lt;code>reason=sip-unreachable&lt;/code> or &lt;code>reason=csi-media-control-failed&lt;/code> (the
+      /// bot did not apply the level: a requested pause is rolled back, a requested mute is kept).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SetCallMediaControlResponse SetCallMediaControl(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetCallMediaControl(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Mute the bot of a connected call and/or stop it listening to the caller, or undo either. Every request sets a
+      /// desired level and never toggles: a repeat answers &lt;code>changed = false&lt;/code>. The bot stays muted while
+      /// anything else (a TALK take-over of &lt;code>StreamCallAudio&lt;/code>, a participant bot policy) also holds it muted.&lt;/p>
+      /// &lt;p>Errors as for &lt;code>InviteToCall&lt;/code>, plus &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=sip-image-too-old&lt;/code>,
+      /// &lt;code>ABORTED&lt;/code> &lt;code>reason=call-control-busy&lt;/code> (another call-control request for the call is running)
+      /// and &lt;code>UNAVAILABLE&lt;/code> &lt;code>reason=sip-unreachable&lt;/code> or &lt;code>reason=csi-media-control-failed&lt;/code> (the
+      /// bot did not apply the level: a requested pause is rolled back, a requested mute is kept).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SetCallMediaControlResponse SetCallMediaControl(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetCallMediaControl, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Mute the bot of a connected call and/or stop it listening to the caller, or undo either. Every request sets a
+      /// desired level and never toggles: a repeat answers &lt;code>changed = false&lt;/code>. The bot stays muted while
+      /// anything else (a TALK take-over of &lt;code>StreamCallAudio&lt;/code>, a participant bot policy) also holds it muted.&lt;/p>
+      /// &lt;p>Errors as for &lt;code>InviteToCall&lt;/code>, plus &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=sip-image-too-old&lt;/code>,
+      /// &lt;code>ABORTED&lt;/code> &lt;code>reason=call-control-busy&lt;/code> (another call-control request for the call is running)
+      /// and &lt;code>UNAVAILABLE&lt;/code> &lt;code>reason=sip-unreachable&lt;/code> or &lt;code>reason=csi-media-control-failed&lt;/code> (the
+      /// bot did not apply the level: a requested pause is rolled back, a requested mute is kept).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SetCallMediaControlResponse> SetCallMediaControlAsync(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetCallMediaControlAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Mute the bot of a connected call and/or stop it listening to the caller, or undo either. Every request sets a
+      /// desired level and never toggles: a repeat answers &lt;code>changed = false&lt;/code>. The bot stays muted while
+      /// anything else (a TALK take-over of &lt;code>StreamCallAudio&lt;/code>, a participant bot policy) also holds it muted.&lt;/p>
+      /// &lt;p>Errors as for &lt;code>InviteToCall&lt;/code>, plus &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=sip-image-too-old&lt;/code>,
+      /// &lt;code>ABORTED&lt;/code> &lt;code>reason=call-control-busy&lt;/code> (another call-control request for the call is running)
+      /// and &lt;code>UNAVAILABLE&lt;/code> &lt;code>reason=sip-unreachable&lt;/code> or &lt;code>reason=csi-media-control-failed&lt;/code> (the
+      /// bot did not apply the level: a requested pause is rolled back, a requested mute is kept).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SetCallMediaControlResponse> SetCallMediaControlAsync(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetCallMediaControl, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Live audio of a connected call, both ways. The first request MUST be &lt;code>config&lt;/code> (within 2 seconds).
+      /// LISTEN receives the caller mixed with the bot. TALK sends the agent&amp;apos;s audio to the caller and REQUIRES
+      /// &lt;code>take_over&lt;/code>: the bot is muted and does not listen while the stream is connected, and resumes when it
+      /// ends; in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>Bidirectional streaming: available to native gRPC clients (python, nodejs) only. Browser (grpc-web) clients
+      /// use &lt;code>ListenCallAudio&lt;/code>, plus a softphone (&lt;code>InviteToCall&lt;/code>) to talk.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (no or invalid &lt;code>config&lt;/code>, TALK without
+      /// &lt;code>take_over&lt;/code>, wrong frame size), &lt;code>NOT_FOUND&lt;/code>, &lt;code>FAILED_PRECONDITION&lt;/code>
+      /// (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>,
+      /// &lt;code>bot-still-speaking&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap, a
+      /// second TALK). A normal end sends one &lt;code>ended&lt;/code> message, then OK. A second &lt;code>config&lt;/code> or audio
+      /// sent in LISTEN mode ends the stream with &lt;code>INVALID_ARGUMENT&lt;/code>. A client half-close ends the stream
+      /// (&lt;code>CALL_AUDIO_END_REASON_CLIENT_CLOSED&lt;/code>), so a listening client keeps its request stream open.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse> StreamCallAudio(grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamCallAudio(new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Live audio of a connected call, both ways. The first request MUST be &lt;code>config&lt;/code> (within 2 seconds).
+      /// LISTEN receives the caller mixed with the bot. TALK sends the agent&amp;apos;s audio to the caller and REQUIRES
+      /// &lt;code>take_over&lt;/code>: the bot is muted and does not listen while the stream is connected, and resumes when it
+      /// ends; in TALK the agent hears the caller only. Audio is LINEAR16 little-endian mono in 20 ms frames.&lt;/p>
+      /// &lt;p>Bidirectional streaming: available to native gRPC clients (python, nodejs) only. Browser (grpc-web) clients
+      /// use &lt;code>ListenCallAudio&lt;/code>, plus a softphone (&lt;code>InviteToCall&lt;/code>) to talk.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (no or invalid &lt;code>config&lt;/code>, TALK without
+      /// &lt;code>take_over&lt;/code>, wrong frame size), &lt;code>NOT_FOUND&lt;/code>, &lt;code>FAILED_PRECONDITION&lt;/code>
+      /// (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>, &lt;code>call-not-yet-identified&lt;/code>,
+      /// &lt;code>bot-still-speaking&lt;/code>, &lt;code>sip-image-too-old&lt;/code>), &lt;code>RESOURCE_EXHAUSTED&lt;/code> (stream cap, a
+      /// second TALK). A normal end sends one &lt;code>ended&lt;/code> message, then OK. A second &lt;code>config&lt;/code> or audio
+      /// sent in LISTEN mode ends the stream with &lt;code>INVALID_ARGUMENT&lt;/code>. A client half-close ends the stream
+      /// (&lt;code>CALL_AUDIO_END_REASON_CLIENT_CLOSED&lt;/code>), so a listening client keeps its request stream open.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncDuplexStreamingCall<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse> StreamCallAudio(grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncDuplexStreamingCall(__Method_StreamCallAudio, null, options);
+      }
+      /// <summary>
+      /// &lt;p>Listen-only live audio of a connected call, like &lt;code>StreamCallAudio&lt;/code> in LISTEN mode, as a server
+      /// stream that grpc-web (browser) clients can consume. &lt;code>config.mode&lt;/code> must be LISTEN or unspecified and
+      /// &lt;code>config.take_over&lt;/code> must be false, otherwise &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=listen-only&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallAudioResponse> ListenCallAudio(global::Ondewo.Vtsi.ListenCallAudioRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListenCallAudio(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Listen-only live audio of a connected call, like &lt;code>StreamCallAudio&lt;/code> in LISTEN mode, as a server
+      /// stream that grpc-web (browser) clients can consume. &lt;code>config.mode&lt;/code> must be LISTEN or unspecified and
+      /// &lt;code>config.take_over&lt;/code> must be false, otherwise &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=listen-only&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, mode, target). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCallAudioResponse> ListenCallAudio(global::Ondewo.Vtsi.ListenCallAudioRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ListenCallAudio, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CallsClient NewInstance(ClientBaseConfiguration configuration)
@@ -2159,6 +3158,8 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_DeleteListeners, serviceImpl.DeleteListeners)
           .AddMethod(__Method_StartScheduledCaller, serviceImpl.StartScheduledCaller)
           .AddMethod(__Method_StartScheduledCallers, serviceImpl.StartScheduledCallers)
+          .AddMethod(__Method_AddCallersToCampaign, serviceImpl.AddCallersToCampaign)
+          .AddMethod(__Method_AddScheduledCallersToCampaign, serviceImpl.AddScheduledCallersToCampaign)
           .AddMethod(__Method_GetScheduledCaller, serviceImpl.GetScheduledCaller)
           .AddMethod(__Method_ListScheduledCallers, serviceImpl.ListScheduledCallers)
           .AddMethod(__Method_CancelScheduledCaller, serviceImpl.CancelScheduledCaller)
@@ -2168,7 +3169,15 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_TransferCall, serviceImpl.TransferCall)
           .AddMethod(__Method_TransferCalls, serviceImpl.TransferCalls)
           .AddMethod(__Method_GetCall, serviceImpl.GetCall)
-          .AddMethod(__Method_ListCalls, serviceImpl.ListCalls).Build();
+          .AddMethod(__Method_ListCalls, serviceImpl.ListCalls)
+          .AddMethod(__Method_StreamCallerStatus, serviceImpl.StreamCallerStatus)
+          .AddMethod(__Method_StreamListenerStatus, serviceImpl.StreamListenerStatus)
+          .AddMethod(__Method_StreamScheduledCallerStatus, serviceImpl.StreamScheduledCallerStatus)
+          .AddMethod(__Method_InviteToCall, serviceImpl.InviteToCall)
+          .AddMethod(__Method_RemoveCallParticipant, serviceImpl.RemoveCallParticipant)
+          .AddMethod(__Method_SetCallMediaControl, serviceImpl.SetCallMediaControl)
+          .AddMethod(__Method_StreamCallAudio, serviceImpl.StreamCallAudio)
+          .AddMethod(__Method_ListenCallAudio, serviceImpl.ListenCallAudio).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2196,6 +3205,8 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_DeleteListeners, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.DeleteListenersRequest, global::Ondewo.Vtsi.DeleteListenersResponse>(serviceImpl.DeleteListeners));
       serviceBinder.AddMethod(__Method_StartScheduledCaller, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.StartScheduledCallerRequest, global::Ondewo.Vtsi.StartScheduledCallerResponse>(serviceImpl.StartScheduledCaller));
       serviceBinder.AddMethod(__Method_StartScheduledCallers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.StartScheduledCallersRequest, global::Ondewo.Vtsi.StartScheduledCallersResponse>(serviceImpl.StartScheduledCallers));
+      serviceBinder.AddMethod(__Method_AddCallersToCampaign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.AddCallersToCampaignRequest, global::Ondewo.Vtsi.AddCallersToCampaignResponse>(serviceImpl.AddCallersToCampaign));
+      serviceBinder.AddMethod(__Method_AddScheduledCallersToCampaign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.AddScheduledCallersToCampaignRequest, global::Ondewo.Vtsi.AddScheduledCallersToCampaignResponse>(serviceImpl.AddScheduledCallersToCampaign));
       serviceBinder.AddMethod(__Method_GetScheduledCaller, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetScheduledCallerRequest, global::Ondewo.Vtsi.ScheduledCaller>(serviceImpl.GetScheduledCaller));
       serviceBinder.AddMethod(__Method_ListScheduledCallers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.ListScheduledCallersRequest, global::Ondewo.Vtsi.ListScheduledCallersResponse>(serviceImpl.ListScheduledCallers));
       serviceBinder.AddMethod(__Method_CancelScheduledCaller, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.CancelScheduledCallerRequest, global::Ondewo.Vtsi.CancelScheduledCallerResponse>(serviceImpl.CancelScheduledCaller));
@@ -2206,6 +3217,14 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_TransferCalls, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.TransferCallsRequest, global::Ondewo.Vtsi.TransferCallsResponse>(serviceImpl.TransferCalls));
       serviceBinder.AddMethod(__Method_GetCall, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetCallRequest, global::Ondewo.Vtsi.Call>(serviceImpl.GetCall));
       serviceBinder.AddMethod(__Method_ListCalls, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.ListCallsRequest, global::Ondewo.Vtsi.ListCallsResponse>(serviceImpl.ListCalls));
+      serviceBinder.AddMethod(__Method_StreamCallerStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.StreamCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(serviceImpl.StreamCallerStatus));
+      serviceBinder.AddMethod(__Method_StreamListenerStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.StreamListenerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(serviceImpl.StreamListenerStatus));
+      serviceBinder.AddMethod(__Method_StreamScheduledCallerStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.StreamScheduledCallerStatusRequest, global::Ondewo.Vtsi.StreamCallResourceStatusResponse>(serviceImpl.StreamScheduledCallerStatus));
+      serviceBinder.AddMethod(__Method_InviteToCall, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.InviteToCallRequest, global::Ondewo.Vtsi.InviteToCallResponse>(serviceImpl.InviteToCall));
+      serviceBinder.AddMethod(__Method_RemoveCallParticipant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.RemoveCallParticipantRequest, global::Ondewo.Vtsi.RemoveCallParticipantResponse>(serviceImpl.RemoveCallParticipant));
+      serviceBinder.AddMethod(__Method_SetCallMediaControl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.SetCallMediaControlRequest, global::Ondewo.Vtsi.SetCallMediaControlResponse>(serviceImpl.SetCallMediaControl));
+      serviceBinder.AddMethod(__Method_StreamCallAudio, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(serviceImpl.StreamCallAudio));
+      serviceBinder.AddMethod(__Method_ListenCallAudio, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.ListenCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(serviceImpl.ListenCallAudio));
     }
 
   }

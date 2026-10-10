@@ -36,8 +36,42 @@ namespace Ondewo.Vtsi.Client.Tests
             "DeleteCallLogs",
         };
 
-        /// <summary>The one server-streaming RPC in the whole VTSI API.</summary>
+        /// <summary>The one server-streaming RPC of <c>ondewo.vtsi.Logs</c>.</summary>
         private const string StreamingRpc = "StreamCallLogs";
+
+        /// <summary>Every RPC <c>ondewo.vtsi.Softphones</c> declares (9.0.0), in declaration order.</summary>
+        private static readonly string[] SoftphonesRpcs =
+        {
+            "CreateSoftphoneAccount", "GetSoftphoneAccount", "UpdateSoftphoneAccount", "DeleteSoftphoneAccount",
+            "ListSoftphoneAccounts", "RotateSoftphoneCredentials", "ListSoftphoneCertificates",
+            "GetSoftphoneCertificate", "RevokeSoftphoneCertificate", "GetSoftphoneProvisioning",
+        };
+
+        /// <summary>Every RPC <c>ondewo.vtsi.Campaigns</c> declares (9.0.0), in declaration order.</summary>
+        private static readonly string[] CampaignsRpcs =
+        {
+            "CreateCampaign", "GetCampaign", "UpdateCampaign", "DeleteCampaign", "ListCampaigns",
+            "GetCampaignStatistics", "ListCampaignCalls", "StartCampaign", "StopCampaign", "HardStopCampaign",
+            "ResumeCampaign", "StreamCampaignStatus",
+        };
+
+        /// <summary>Every RPC <c>ondewo.vtsi.Events</c> declares (9.0.0), in declaration order.</summary>
+        private static readonly string[] EventsRpcs =
+        {
+            "CreateVtsiEventSubscription", "GetVtsiEventSubscription", "UpdateVtsiEventSubscription",
+            "DeleteVtsiEventSubscription", "ListVtsiEventSubscriptions", "CreateWebhook", "GetWebhook",
+            "UpdateWebhook", "DeleteWebhook", "ListWebhooks", "TestWebhook", "SubscribeVtsiEvents",
+        };
+
+        /// <summary>The streaming RPCs of <c>ondewo.vtsi.Calls</c> (9.0.0) and their method types.</summary>
+        private static readonly (string Rpc, MethodType Type)[] CallsStreamingRpcs =
+        {
+            ("StreamCallerStatus", MethodType.ServerStreaming),
+            ("StreamListenerStatus", MethodType.ServerStreaming),
+            ("StreamScheduledCallerStatus", MethodType.ServerStreaming),
+            ("StreamCallAudio", MethodType.DuplexStreaming),
+            ("ListenCallAudio", MethodType.ServerStreaming),
+        };
 
         [Fact]
         public void CallerRoundTripsItsScalarsAndItsNestedSipConfig()
@@ -203,8 +237,9 @@ namespace Ondewo.Vtsi.Client.Tests
         }
 
         /// <summary>
-        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest: every one
-        /// of its 28 RPCs is unary, so each gets a blocking and an <c>...Async</c> client method.
+        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest: 38 RPCs in
+        /// 9.0.0. Each unary one gets a blocking and an <c>...Async</c> client method; the five
+        /// streaming ones (status streams and live call audio) get exactly one.
         /// </summary>
         [Fact]
         public void CallsClientBindsToAChannelAndExposesEveryDeclaredRpcTwice()
@@ -215,7 +250,7 @@ namespace Ondewo.Vtsi.Client.Tests
 
             Assert.NotNull(client);
             Assert.Equal("ondewo.vtsi.Calls", Calls.Descriptor.FullName);
-            Assert.Equal(28, Calls.Descriptor.Methods.Count);
+            Assert.Equal(38, Calls.Descriptor.Methods.Count);
             Assert.Contains(Calls.Descriptor.Methods, method => method.Name == "StartCaller");
 
             string[] clientMethods = typeof(Calls.CallsClient)
@@ -226,9 +261,27 @@ namespace Ondewo.Vtsi.Client.Tests
 
             foreach (MethodDescriptor rpc in Calls.Descriptor.Methods)
             {
-                Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc.Name));
                 Assert.Contains(rpc.Name, clientMethods);
-                Assert.Contains(rpc.Name + "Async", clientMethods);
+                (string Rpc, MethodType Type) streaming = CallsStreamingRpcs.SingleOrDefault(entry => entry.Rpc == rpc.Name);
+                if (streaming.Rpc == null)
+                {
+                    Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc.Name));
+                    Assert.Contains(rpc.Name + "Async", clientMethods);
+                }
+                else
+                {
+                    Assert.Equal(streaming.Type, MethodTypeOf(typeof(Calls), rpc.Name));
+                    Assert.DoesNotContain(rpc.Name + "Async", clientMethods);
+                }
+            }
+
+            foreach (string rpc in new[]
+                     {
+                         "AddCallersToCampaign", "AddScheduledCallersToCampaign", "InviteToCall",
+                         "RemoveCallParticipant", "SetCallMediaControl",
+                     })
+            {
+                Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc));
             }
         }
 
@@ -249,7 +302,128 @@ namespace Ondewo.Vtsi.Client.Tests
         }
 
         /// <summary>
-        /// <c>StreamCallLogs</c> is the one streaming RPC in the VTSI API. grpc_csharp_plugin gives
+        /// The three services VTSI API 9.0.0 adds - <c>Softphones</c>, <c>Campaigns</c> and
+        /// <c>Events</c> - are generated, bind to a channel and expose every declared RPC: unary ones
+        /// twice, the server streams <c>StreamCampaignStatus</c> and <c>SubscribeVtsiEvents</c> once.
+        /// </summary>
+        [Fact]
+        public void SoftphonesCampaignsAndEventsClientsAreGenerated()
+        {
+            using GrpcChannel channel = GrpcChannel.ForAddress(DummyTarget);
+
+            Assert.NotNull(new Softphones.SoftphonesClient(channel));
+            Assert.NotNull(new Campaigns.CampaignsClient(channel));
+            Assert.NotNull(new Events.EventsClient(channel));
+            Assert.Equal("ondewo.vtsi.Softphones", Softphones.Descriptor.FullName);
+            Assert.Equal("ondewo.vtsi.Campaigns", Campaigns.Descriptor.FullName);
+            Assert.Equal("ondewo.vtsi.Events", Events.Descriptor.FullName);
+            Assert.Equal(SoftphonesRpcs, Softphones.Descriptor.Methods.Select(method => method.Name));
+            Assert.Equal(CampaignsRpcs, Campaigns.Descriptor.Methods.Select(method => method.Name));
+            Assert.Equal(EventsRpcs, Events.Descriptor.Methods.Select(method => method.Name));
+
+            foreach ((Type service, Type client, string[] rpcs, string streamingRpc) in new[]
+                     {
+                         (typeof(Softphones), typeof(Softphones.SoftphonesClient), SoftphonesRpcs, null),
+                         (typeof(Campaigns), typeof(Campaigns.CampaignsClient), CampaignsRpcs, "StreamCampaignStatus"),
+                         (typeof(Events), typeof(Events.EventsClient), EventsRpcs, "SubscribeVtsiEvents"),
+                     })
+            {
+                string[] clientMethods = client.GetMethods().Select(method => method.Name).Distinct().ToArray();
+                foreach (string rpc in rpcs)
+                {
+                    Assert.Contains(rpc, clientMethods);
+                    if (rpc == streamingRpc)
+                    {
+                        Assert.Equal(MethodType.ServerStreaming, MethodTypeOf(service, rpc));
+                        Assert.DoesNotContain(rpc + "Async", clientMethods);
+                    }
+                    else
+                    {
+                        Assert.Equal(MethodType.Unary, MethodTypeOf(service, rpc));
+                        Assert.Contains(rpc + "Async", clientMethods);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Breaking in 9.0.0: <c>AsteriskConfigsFiles.sip_conf_file_string</c> is now
+        /// <c>pjsip_conf_file_string</c> - same field number 1 and type, so the wire bytes do not
+        /// change, but the C# property moved from <c>SipConfFileString</c> to
+        /// <c>PjsipConfFileString</c>.
+        /// </summary>
+        [Fact]
+        public void PjsipConfFileStringReplacesSipConfFileStringOnTheSameFieldNumber()
+        {
+            var files = new AsteriskConfigsFiles { PjsipConfFileString = "[transport-tls]" };
+
+            AsteriskConfigsFiles parsed = AsteriskConfigsFiles.Parser.ParseFrom(files.ToByteArray());
+
+            Assert.Equal("[transport-tls]", parsed.PjsipConfFileString);
+            Assert.Equal(1, AsteriskConfigsFiles.PjsipConfFileStringFieldNumber);
+            Assert.Null(typeof(AsteriskConfigsFiles).GetProperty("SipConfFileString"));
+            Assert.Equal(
+                "pjsip_conf_file_string",
+                AsteriskConfigsFiles.Descriptor.FindFieldByNumber(1).Name);
+        }
+
+        /// <summary>
+        /// Breaking in 9.0.0: eleven singular scalars of <c>calls.proto</c> gained explicit presence,
+        /// so an explicit default is now distinguishable from unset (<c>Has*</c> / <c>Clear*</c>).
+        /// </summary>
+        [Fact]
+        public void TheElevenCallsScalarsGainedExplicitPresence()
+        {
+            foreach ((MessageDescriptor message, string field) in new[]
+                     {
+                         (InterruptionHandlingConfig.Descriptor, "transcribe_on_disabled_interruptions"),
+                         (TurnDetectionConfig.Descriptor, "turn_detection_system_prompt"),
+                         (TurnDetectionConfig.Descriptor, "turn_detection_user_prompt"),
+                         (AudioObjectStorageConfig.Descriptor, "activate_audio_object_storage"),
+                         (AudioObjectStorageServicesActivationConfig.Descriptor, "activate_s2t"),
+                         (AudioObjectStorageServicesActivationConfig.Descriptor, "activate_t2s"),
+                         (MessageBrokerConfig.Descriptor, "activate_message_broker"),
+                         (MessageBrokerServicesActivationConfig.Descriptor, "activate_s2t"),
+                         (MessageBrokerServicesActivationConfig.Descriptor, "activate_nlu"),
+                         (MessageBrokerServicesActivationConfig.Descriptor, "activate_t2s"),
+                         (MessageBrokerServicesActivationConfig.Descriptor, "activate_sip"),
+                     })
+            {
+                FieldDescriptor descriptor = message.FindFieldByName(field);
+                Assert.NotNull(descriptor);
+                Assert.True(descriptor.HasPresence, $"{message.Name}.{field} has no explicit presence");
+            }
+
+            var explicitlyOff = new MessageBrokerServicesActivationConfig { ActivateSip = false };
+            Assert.True(explicitlyOff.HasActivateSip);
+            Assert.NotEmpty(explicitlyOff.ToByteArray());
+            Assert.True(MessageBrokerServicesActivationConfig.Parser.ParseFrom(explicitlyOff.ToByteArray()).HasActivateSip);
+            Assert.False(new MessageBrokerServicesActivationConfig().HasActivateSip);
+        }
+
+        [Fact]
+        public void SipTrunkTransportAndCertificateFieldsRoundTrip()
+        {
+            var variables = new AsteriskConfigsVariables
+            {
+                SipTrunkTransport = SipTrunkTransport.Udp,
+                SipTrunkSourceCidr = "203.0.113.7/32",
+                SipTrunkCaCertificatesPem = "-----BEGIN CERTIFICATE-----",
+                SipTrunkVerifyServer = true,
+            };
+            variables.SoftphonePermitCidrs.Add("10.0.0.0/8");
+
+            AsteriskConfigsVariables parsed = AsteriskConfigsVariables.Parser.ParseFrom(variables.ToByteArray());
+
+            Assert.Equal(variables, parsed);
+            Assert.Equal(0, (int)SipTrunkTransport.Unspecified);
+            Assert.True(parsed.HasSipTrunkSourceCidr);
+            Assert.False(new AsteriskConfigsVariables().HasSipTrunkSourceCidr);
+            Assert.Equal("10.0.0.0/8", Assert.Single(parsed.SoftphonePermitCidrs));
+        }
+
+        /// <summary>
+        /// <c>StreamCallLogs</c> is the one streaming RPC of <c>ondewo.vtsi.Logs</c>. grpc_csharp_plugin gives
         /// a streaming RPC exactly one client method - the async streaming call - and deliberately
         /// no <c>...Async</c> twin, so asserting one here would be asserting a bug.
         /// </summary>
@@ -303,6 +477,7 @@ namespace Ondewo.Vtsi.Client.Tests
             foreach (string service in new[]
                      {
                          "ondewo.vtsi.Calls", "ondewo.vtsi.Projects", "ondewo.vtsi.Logs",
+                         "ondewo.vtsi.Softphones", "ondewo.vtsi.Campaigns", "ondewo.vtsi.Events",
                          "ondewo.nlu.Sessions", "ondewo.qa.QA", "ondewo.s2t.Speech2Text",
                          "ondewo.sip.Sip", "ondewo.t2s.Text2Speech",
                      })
