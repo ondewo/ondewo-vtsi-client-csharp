@@ -378,8 +378,11 @@ release: ## Automate the entire release process
 	git push
 	make create_release_branch
 	make create_release_tag
-	make push_to_gh
+# NuGet first and the GitHub release LAST, so a GitHub release exists only for a version that is on
+# nuget.org too. The tag stays before both: it triggers release.yml, which also pushes to nuget.org;
+# both pushes use --skip-duplicate, so whichever arrives second is a no-op.
 	make publish
+	make push_to_gh
 	@echo "$(GREEN)[SUCCESS]$(NC) Release finished"
 
 create_release_branch: ## Create Release Branch and push it to origin

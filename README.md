@@ -387,8 +387,9 @@ make ondewo_release
 ```
 
 That checks the release branch and tag do not exist yet (`spc`), pulls the credentials from the
-`ondewo-devops-accounts` repository, rebuilds everything, tags it, publishes the GitHub release and publishes the
-package to NuGet. `GITHUB_GH_TOKEN` and `NUGET_API_KEY` are read at runtime only and must never be committed.
+`ondewo-devops-accounts` repository, rebuilds everything, tags it, publishes the package
+to NuGet and only then creates the GitHub release, so a GitHub release only ever exists for a version that is on
+nuget.org. `GITHUB_GH_TOKEN` and `NUGET_API_KEY` are read at runtime only and must never be committed.
 
 ### The NuGet half
 
@@ -398,18 +399,28 @@ package to NuGet. `GITHUB_GH_TOKEN` and `NUGET_API_KEY` are read at runtime only
 | `verify_nupkg_metadata` | reads the nuspec back out of the packed `.nupkg` and fails on missing metadata  |
 | `verify_nupkg_installs` | restores the packed `.nupkg` from a local folder feed into a throwaway consumer  |
 | `publish_dry_run`   | the three above — **needs no credential**, and is what `ci.yml` runs on every push   |
-| `push_to_nuget`     | `dotnet nuget push` to `NUGET_SOURCE` — the only step that needs `NUGET_API_KEY`     |
-| `publish`           | `publish_dry_run` then `push_to_nuget`; this is what `release` calls                 |
+| `push_to_nuget`     | `dotnet nuget push --skip-duplicate` to `NUGET_SOURCE` — the only step that needs `NUGET_API_KEY` |
+| `publish`           | `publish_dry_run` then `push_to_nuget`; `release` calls it before `push_to_gh`         |
 
 `NUGET_API_KEY` comes from `ondewo-devops-accounts/account_nuget.env` (read by `run_release_with_devops`) and
 must be an API key scoped to **Push** for the glob pattern `Ondewo.*`. The recipe that carries it is
 `@`-prefixed and hands the key to `dotnet` through the environment, so it never reaches a build log. Pushing the
 `.nupkg` uploads the `.snupkg` beside it automatically.
 
+Publishing needs **.NET SDK 10.0.400 or newer**: `dotnet nuget push` reads `NUGET_API_KEY` from the environment
+only from that SDK on. `push_to_nuget` checks for it and stops with an error on an older SDK instead of pushing
+without a key. `release.yml` installs `dotnet-version: '10.0.x'`, which resolves to the newest .NET 10 SDK and so
+satisfies it.
+
+If `make publish` fails after the tag is pushed (an expired `NUGET_API_KEY`, say), `spc` refuses to run the
+release again. Fix the key and finish from the same checkout with `make publish push_to_gh`, with both credentials
+exported in the environment.
+
 Pushing a version tag (`8.7.0`, `8.7.0-rc.1` — the shape `make create_release_tag` writes) also triggers
 `.github/workflows/release.yml`, which rebuilds the committed stubs, re-runs the test and dry-run gates and
 publishes with the `NUGET_API_KEY` **repository secret**. Without that secret the run stops on its very first
-step with an explicit error rather than quietly publishing nothing.
+step with an explicit error rather than quietly publishing nothing. Both that workflow and `make release` push
+with `--skip-duplicate`, so whichever reaches nuget.org second is a no-op.
 
 ## Contributing
 
