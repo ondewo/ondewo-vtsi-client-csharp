@@ -153,8 +153,10 @@ TEST: ## Diagnostics - print the resolved build configuration and the current re
 	@echo "Grpc.Net.Client:      ${GrpcDotnetVersion}"
 	@echo "Google.Api.CommonProtos: ${GoogleApiCommonProtosVersion}"
 	@echo "NuGet source:         ${NUGET_SOURCE}"
-	@echo "GITHUB_GH_TOKEN set:  $(if $(filter-out ENTER_YOUR_TOKEN_HERE,$(GITHUB_GH_TOKEN)),yes,no)"
-	@echo "NUGET_API_KEY set:    $(if $(filter-out ENTER_HERE_YOUR_NUGET_API_KEY,$(NUGET_API_KEY)),yes,no)"
+	@if [ -n "$${GITHUB_GH_TOKEN}" ] && [ "$${GITHUB_GH_TOKEN}" != "ENTER_YOUR_TOKEN_HERE" ]; then \
+		echo "GITHUB_GH_TOKEN set:  yes"; else echo "GITHUB_GH_TOKEN set:  no"; fi
+	@if [ -n "$${NUGET_API_KEY}" ] && [ "$${NUGET_API_KEY}" != "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
+		echo "NUGET_API_KEY set:    yes"; else echo "NUGET_API_KEY set:    no"; fi
 	@printf '\n%s\n' "${CURRENT_RELEASE_NOTES}"
 
 ########################################################
@@ -335,11 +337,11 @@ check_release_credentials: ## Assert both release credentials are usable before 
 # existed - so the recovery was to hand-delete both from origin. Both credentials are therefore
 # checked here, while the release is still a no-op.
 	@rc=0 ; \
-	if [ -z "${GITHUB_GH_TOKEN}" ] || [ "${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
+	if [ -z "$${GITHUB_GH_TOKEN}" ] || [ "$${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
 		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is not set - create one at https://github.com/settings/tokens" ; \
 		rc=1 ; \
 	fi ; \
-	if [ -z "${NUGET_API_KEY}" ] || [ "${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
+	if [ -z "$${NUGET_API_KEY}" ] || [ "$${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
 		echo "$(RED)[ERROR]$(NC) NUGET_API_KEY is not set - create one at https://www.nuget.org/account/apikeys" ; \
 		echo "        scoped to Push for the glob pattern 'Ondewo.*', and add it to" ; \
 		echo "        ondewo-devops-accounts/account_nuget.env (make ondewo_release reads it from there)" ; \
@@ -389,11 +391,11 @@ create_release_tag: ## Create Release Tag and push it to origin
 	git push origin ${ONDEWO_VTSI_VERSION}
 
 login_to_gh: ## Login to Github CLI with Access Token
-	@if [ -z "${GITHUB_GH_TOKEN}" ] || [ "${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
+	@if [ -z "$${GITHUB_GH_TOKEN}" ] || [ "$${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
 		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is not set - create one at https://github.com/settings/tokens"; \
 		exit 1; \
 	fi
-	@echo "${GITHUB_GH_TOKEN}" | gh auth login -p ssh --with-token
+	@echo "$${GITHUB_GH_TOKEN}" | gh auth login -p ssh --with-token
 
 check_release_notes: ## Assert RELEASE.md carries an entry for ONDEWO_VTSI_VERSION
 # `gh release create -n ""` succeeds and publishes an EMPTY release, so an entry that was forgotten -
@@ -517,22 +519,20 @@ verify_nupkg_installs: ## Restore the packed package into a throwaway consumer p
 	}
 	@echo "$(GREEN)[SUCCESS]$(NC) a consumer can install ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} and its dependency graph"
 
-# `@`-prefixed so the API key never reaches the build log, and read from the environment rather
-# than written into the recipe (the `export` at the top of this file exports every variable here).
-# It IS still passed to `dotnet nuget push` as an --api-key ARGUMENT, so for the seconds the upload
-# takes it is readable in the machine's process table. That is not an oversight, it is the only
-# thing the tool supports on Linux; both alternatives were measured against a local push endpoint:
-#   * the <apikeys> section of a NuGet.Config is read through EncryptionUtility.DecryptString, which
-#     fails outright with "Encryption is not supported on non-Windows platforms";
-#   * a response file (`dotnet nuget push ... @file`) is expanded by the `dotnet` muxer, which then
-#     re-execs NuGet.CommandLine.XPlat.dll with the key spelled out in the CHILD's argv anyway.
-# Keep the key narrowly scoped instead (Push only, glob Ondewo.*) so it is worth little if it leaks.
-# Pushing the .nupkg also uploads the .snupkg sitting beside it.
+# The API key never reaches an argv. `dotnet nuget push` reads it from the NUGET_API_KEY environment
+# variable when --api-key is not given (the `export` at the top of this file exports it), so neither
+# the shell nor the NuGet.CommandLine.XPlat.dll the `dotnet` muxer re-execs ever carries it on its
+# command line, which /proc/<pid>/cmdline shows to every user of the machine. That fallback exists
+# from .NET SDK 10.0.400 on (`dotnet nuget push --help` documents it); an older SDK would silently
+# push WITHOUT a key, hence the guard below. A NuGet.Config <apikeys> entry is no alternative: on
+# Linux it fails with "Encryption is not supported on non-Windows platforms" (measured, SDK 10.0.401).
+# Keep the key narrowly scoped anyway (Push only, glob Ondewo.*).
+# Pushing the .nupkg also uploads the .snupkg sitting beside it, with the same key.
 push_to_nuget: ## Publish the packed NuGet package to nuget.org
-	@if [ -z "${NUGET_API_KEY}" ] || [ "${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
+	@if [ -z "$${NUGET_API_KEY}" ] || [ "$${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
 		echo "$(RED)[ERROR]$(NC) NUGET_API_KEY is not set - create one at https://www.nuget.org/account/apikeys"; \
-		echo "        and add it to ondewo-devops-accounts/account_nuget.env, or pass it on the"; \
-		echo "        command line: make push_to_nuget NUGET_API_KEY=..."; \
+		echo "        and add it to ondewo-devops-accounts/account_nuget.env, or export it in the"; \
+		echo "        environment (never as a make argument: that is readable in the process table)"; \
 		exit 1; \
 	fi
 	@test -f "${NUPKG}" || { \
@@ -544,8 +544,12 @@ push_to_nuget: ## Publish the packed NuGet package to nuget.org
 		exit 1; \
 	}
 	@echo "$(BLUE)[INFO]$(NC) Pushing ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} (+ symbols) to ${NUGET_SOURCE} ..."
+	@dotnet nuget push --help 2>/dev/null | grep -q NUGET_API_KEY || { \
+		echo "$(RED)[ERROR]$(NC) this .NET SDK's 'dotnet nuget push' cannot read NUGET_API_KEY from the"; \
+		echo "        environment (SDK 10.0.400 and later can) - install a current .NET 10 SDK"; \
+		exit 1; \
+	}
 	@dotnet nuget push "${NUPKG}" \
-		--api-key "$$NUGET_API_KEY" \
 		--source ${NUGET_SOURCE} \
 		--skip-duplicate
 	@echo "$(GREEN)[SUCCESS]$(NC) Released to NuGet"
@@ -561,8 +565,13 @@ clone_devops_accounts: ## Clones devops-accounts repo
 	git clone git@bitbucket.org:ondewo/${DEVOPS_ACCOUNT_GIT}.git
 
 run_release_with_devops: ## Read credentials from the cloned devops-accounts repo and run the full release
-	$(eval info:= $(shell cat ${DEVOPS_ACCOUNT_DIR}/account_github.env | grep GITHUB_GH & cat ${DEVOPS_ACCOUNT_DIR}/account_nuget.env | grep NUGET_API_KEY))
-	@make release $(info)
+# Anchored (`^NAME=`, so a comment mentioning a name cannot match) and handed to the sub-make through
+# its ENVIRONMENT: `make release NAME=value` put every credential on make's argv.
+	@set -a \
+		&& eval "$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' \
+			${DEVOPS_ACCOUNT_DIR}/account_github.env ${DEVOPS_ACCOUNT_DIR}/account_nuget.env)" \
+		&& set +a \
+		&& $(MAKE) release
 
 spc: ## Checks if the Release Branch and Tag already exist
 	$(eval filtered_branches:= $(shell git branch --all | grep -E "(^|[ /])release/$(subst .,\.,${ONDEWO_VTSI_VERSION})$$"))

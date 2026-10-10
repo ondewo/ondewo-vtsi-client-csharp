@@ -98,15 +98,10 @@ jobs:
       - name: Dry-run the NuGet publish
         run: make publish_dry_run
 
-      # The only step that needs the secret. `make push_to_nuget` is `@`-prefixed, so the key never
-      # reaches the LOG - but it is handed to `dotnet nuget push` as an --api-key argument and is
-      # therefore readable in the runner's process table while the upload runs. Neither alternative
-      # works here, both measured against a local push endpoint: NuGet reads the <apikeys> section
-      # of a NuGet.Config through EncryptionUtility.DecryptString, which fails with "Encryption is
-      # not supported on non-Windows platforms", and a response file (`... @file`) is expanded by
-      # the `dotnet` muxer, which re-execs NuGet.CommandLine.XPlat.dll with the key in the child's
-      # argv anyway. The runner is single-use and this job installs nothing third-party while the
-      # upload runs; the containing mitigation is a narrowly scoped key (Push only, glob Ondewo.*).
+      # The only step that needs the secret. It reaches `make push_to_nuget` through env: only:
+      # `dotnet nuget push` reads NUGET_API_KEY from the environment (.NET SDK 10.0.400+, which
+      # setup-dotnet 10.0.x installs; the recipe refuses an SDK that cannot), so the key is on no
+      # process's argv and never in the log.
       # --skip-duplicate makes a re-run of an already-published version a no-op instead of a
       # failure, which is what lets a release that died after the upload be resumed. Pushing the
       # .nupkg uploads the .snupkg symbol package sitting beside it in nupkg/.
