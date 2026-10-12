@@ -409,7 +409,15 @@ login_to_gh: ## Login to Github CLI with Access Token
 		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is not set - create one at https://github.com/settings/tokens"; \
 		exit 1; \
 	fi
-	@echo "$${GITHUB_GH_TOKEN}" | gh auth login -p ssh --with-token
+# gh refuses `auth login` while GH_TOKEN is set in the environment ("The value of the GH_TOKEN
+# environment variable is being used for authentication") and exits 1 - which stopped the 9.1.0
+# release after the NuGet push and before the GitHub release. gh already authenticates with that
+# token then, so there is nothing to log in.
+	@if [ -n "$${GH_TOKEN:-}" ]; then \
+		echo "$(BLUE)[INFO]$(NC) GH_TOKEN is set in the environment - gh authenticates with it, skipping gh auth login"; \
+	else \
+		echo "$${GITHUB_GH_TOKEN}" | gh auth login -p ssh --with-token; \
+	fi
 
 check_release_notes: ## Assert RELEASE.md carries an entry for ONDEWO_VTSI_VERSION
 # `gh release create -n ""` succeeds and publishes an EMPTY release, so an entry that was forgotten -
