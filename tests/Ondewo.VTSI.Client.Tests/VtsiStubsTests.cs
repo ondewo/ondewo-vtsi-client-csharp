@@ -33,37 +33,43 @@ namespace Ondewo.Vtsi.Client.Tests
         private static readonly string[] LogsRpcs =
         {
             "StreamCallLogs", "ListCallLogs", "GetCallLogStream", "ListCallLogStreams",
-            "DeleteCallLogs",
+            "DeleteCallLogs", "ExportCallLogs",
         };
 
-        /// <summary>The one server-streaming RPC of <c>ondewo.vtsi.Logs</c>.</summary>
+        /// <summary>The live server-streaming RPC of <c>ondewo.vtsi.Logs</c>.</summary>
         private const string StreamingRpc = "StreamCallLogs";
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Softphones</c> declares (9.0.0), in declaration order.</summary>
+        /// <summary>Every server-streaming RPC of <c>ondewo.vtsi.Logs</c> (9.1.0 adds <c>ExportCallLogs</c>).</summary>
+        private static readonly string[] LogsStreamingRpcs = { StreamingRpc, "ExportCallLogs" };
+
+        /// <summary>Every RPC <c>ondewo.vtsi.Softphones</c> declares (9.1.0), in declaration order.</summary>
         private static readonly string[] SoftphonesRpcs =
         {
             "CreateSoftphoneAccount", "GetSoftphoneAccount", "UpdateSoftphoneAccount", "DeleteSoftphoneAccount",
             "ListSoftphoneAccounts", "RotateSoftphoneCredentials", "ListSoftphoneCertificates",
             "GetSoftphoneCertificate", "RevokeSoftphoneCertificate", "GetSoftphoneProvisioning",
+            "GetSoftphoneRegistration",
         };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Campaigns</c> declares (9.0.0), in declaration order.</summary>
+        /// <summary>Every RPC <c>ondewo.vtsi.Campaigns</c> declares (9.1.0), in declaration order.</summary>
         private static readonly string[] CampaignsRpcs =
         {
             "CreateCampaign", "GetCampaign", "UpdateCampaign", "DeleteCampaign", "ListCampaigns",
             "GetCampaignStatistics", "ListCampaignCalls", "StartCampaign", "StopCampaign", "HardStopCampaign",
-            "ResumeCampaign", "StreamCampaignStatus",
+            "ResumeCampaign", "StreamCampaignStatus", "GetCampaignCall", "CancelCampaignCalls", "RetryCampaignCalls",
+            "CloneCampaign",
         };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Events</c> declares (9.0.0), in declaration order.</summary>
+        /// <summary>Every RPC <c>ondewo.vtsi.Events</c> declares (9.1.0), in declaration order.</summary>
         private static readonly string[] EventsRpcs =
         {
             "CreateVtsiEventSubscription", "GetVtsiEventSubscription", "UpdateVtsiEventSubscription",
             "DeleteVtsiEventSubscription", "ListVtsiEventSubscriptions", "CreateWebhook", "GetWebhook",
-            "UpdateWebhook", "DeleteWebhook", "ListWebhooks", "TestWebhook", "SubscribeVtsiEvents",
+            "UpdateWebhook", "DeleteWebhook", "ListWebhooks", "TestWebhook", "RedeliverWebhookEvents",
+            "SubscribeVtsiEvents",
         };
 
-        /// <summary>The streaming RPCs of <c>ondewo.vtsi.Calls</c> (9.0.0) and their method types.</summary>
+        /// <summary>The streaming RPCs of <c>ondewo.vtsi.Calls</c> (9.1.0) and their method types.</summary>
         private static readonly (string Rpc, MethodType Type)[] CallsStreamingRpcs =
         {
             ("StreamCallerStatus", MethodType.ServerStreaming),
@@ -237,8 +243,8 @@ namespace Ondewo.Vtsi.Client.Tests
         }
 
         /// <summary>
-        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest: 38 RPCs in
-        /// 9.0.0. Each unary one gets a blocking and an <c>...Async</c> client method; the five
+        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest: 48 RPCs in
+        /// 9.1.0. Each unary one gets a blocking and an <c>...Async</c> client method; the five
         /// streaming ones (status streams and live call audio) get exactly one.
         /// </summary>
         [Fact]
@@ -250,7 +256,7 @@ namespace Ondewo.Vtsi.Client.Tests
 
             Assert.NotNull(client);
             Assert.Equal("ondewo.vtsi.Calls", Calls.Descriptor.FullName);
-            Assert.Equal(38, Calls.Descriptor.Methods.Count);
+            Assert.Equal(48, Calls.Descriptor.Methods.Count);
             Assert.Contains(Calls.Descriptor.Methods, method => method.Name == "StartCaller");
 
             string[] clientMethods = typeof(Calls.CallsClient)
@@ -278,7 +284,9 @@ namespace Ondewo.Vtsi.Client.Tests
             foreach (string rpc in new[]
                      {
                          "AddCallersToCampaign", "AddScheduledCallersToCampaign", "InviteToCall",
-                         "RemoveCallParticipant", "SetCallMediaControl",
+                         "RemoveCallParticipant", "SetCallMediaControl", "UpdateCaller", "UpdateCallers",
+                         "UpdateListener", "UpdateListeners", "UpdateScheduledCaller", "CancelScheduledCallers",
+                         "RetryScheduledCaller", "GetCallStatistics", "UpdateCall", "UpdateCalls",
                      })
             {
                 Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc));
@@ -423,12 +431,12 @@ namespace Ondewo.Vtsi.Client.Tests
         }
 
         /// <summary>
-        /// <c>StreamCallLogs</c> is the one streaming RPC of <c>ondewo.vtsi.Logs</c>. grpc_csharp_plugin gives
-        /// a streaming RPC exactly one client method - the async streaming call - and deliberately
+        /// <c>StreamCallLogs</c> and <c>ExportCallLogs</c> are the streaming RPCs of <c>ondewo.vtsi.Logs</c>.
+        /// grpc_csharp_plugin gives a streaming RPC exactly one client method - the async streaming call - and deliberately
         /// no <c>...Async</c> twin, so asserting one here would be asserting a bug.
         /// </summary>
         [Fact]
-        public void TheOneStreamingRpcIsGeneratedAsAServerStreamingCall()
+        public void TheLogsStreamingRpcsAreGeneratedAsServerStreamingCalls()
         {
             Assert.Equal(MethodType.ServerStreaming, MethodTypeOf(typeof(Logs), StreamingRpc));
 
@@ -452,7 +460,11 @@ namespace Ondewo.Vtsi.Client.Tests
                 new[] { typeof(AsyncServerStreamingCall<StreamCallLogsResponse>) },
                 returnTypes);
 
-            foreach (string rpc in LogsRpcs.Where(name => name != StreamingRpc))
+            Assert.Equal(MethodType.ServerStreaming, MethodTypeOf(typeof(Logs), "ExportCallLogs"));
+            Assert.Contains("ExportCallLogs", clientMethods);
+            Assert.DoesNotContain("ExportCallLogsAsync", clientMethods);
+
+            foreach (string rpc in LogsRpcs.Except(LogsStreamingRpcs))
             {
                 Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Logs), rpc));
                 Assert.Contains(rpc + "Async", clientMethods);

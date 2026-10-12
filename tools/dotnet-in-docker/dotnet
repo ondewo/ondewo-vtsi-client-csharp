@@ -1,0 +1,39 @@
+#!/bin/sh
+# `dotnet` for a machine without a .NET SDK: runs the same command inside a pinned SDK image.
+#
+# The Makefile puts this directory on PATH ONLY when the host has no `dotnet` of its own (CI installs
+# one with setup-dotnet, so CI never comes here). Every `dotnet` recipe line then runs unchanged.
+#   * The working directory is mounted at its OWN path, so the ${CURDIR} paths the recipes pass
+#     (coverage output, the dry-run nuget.config, the local package feed) mean the same inside.
+#   * It runs as the invoking user, so nothing it writes ends up owned by root.
+#   * Credentials and MSBuild properties are passed by NAME (`-e NAME`): docker copies the value out
+#     of its own environment, so no value ever reaches an argv. NUGET_API_KEY is read by
+#     `dotnet nuget push` from the environment (SDK 10.0.400+, which this image is).
+#   * The NuGet package cache persists between runs in DOTNET_DOCKER_HOME, outside the repository,
+#     so the SDK's default Compile glob can never pick up a .cs file shipped inside a package.
+set -eu
+
+image="${DOTNET_SDK_IMAGE:-mcr.microsoft.com/dotnet/sdk:10.0.401-noble}"
+home="${DOTNET_DOCKER_HOME:-${HOME}/.cache/ondewo-dotnet-docker}"
+mkdir -p "${home}"
+workdir="$(pwd)"
+
+exec docker run --rm -i \
+	--user "$(id -u):$(id -g)" \
+	-v "${workdir}:${workdir}" \
+	-v "${home}:${home}" \
+	-w "${workdir}" \
+	-e HOME="${home}" \
+	-e DOTNET_CLI_HOME="${home}" \
+	-e NUGET_PACKAGES="${home}/packages" \
+	-e DOTNET_CLI_TELEMETRY_OPTOUT=1 \
+	-e DOTNET_NOLOGO=1 \
+	-e OndewoPackageId \
+	-e OndewoPackageVersion \
+	-e OndewoTargetFramework \
+	-e OndewoProtosDir \
+	-e GoogleProtobufVersion \
+	-e GrpcDotnetVersion \
+	-e GoogleApiCommonProtosVersion \
+	-e NUGET_API_KEY \
+	"${image}" dotnet "$@"
