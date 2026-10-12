@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
+      # actions/checkout starts with a bare `git init`, and git then prints a multi-line
+      # "Using 'master' as the name for the initial branch" hint into every job log. Naming the
+      # default up front silences it; master is this repository's default branch anyway.
+      - name: Name git's default branch
+        run: git config --global init.defaultBranch master
+
       - uses: actions/checkout@v7
 
       - uses: actions/setup-python@v7
@@ -46,6 +52,12 @@ jobs:
       # under api/; it never builds the compiler image and never runs protoc - regenerating the
       # stubs is a separate, slow, docker-bound concern driven by `make build` on a developer
       # machine, and Directory.Build.props mirrors the pins so a build without it works.
+      # actions/checkout starts with a bare `git init`, and git then prints a multi-line
+      # "Using 'master' as the name for the initial branch" hint into every job log. Naming the
+      # default up front silences it; master is this repository's default branch anyway.
+      - name: Name git's default branch
+        run: git config --global init.defaultBranch master
+
       - uses: actions/checkout@v7
 
       # ...and the compiler submodule IS, on its own. `make check_dotnet_properties` below reads the
