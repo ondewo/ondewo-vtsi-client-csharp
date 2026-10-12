@@ -26,7 +26,7 @@ concurrency:
 jobs:
   publish:
     name: pack + push to nuget.org
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       # FIRST, and before the checkout, so a release cut without the secret configured dies in

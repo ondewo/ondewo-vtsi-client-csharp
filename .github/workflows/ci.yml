@@ -18,7 +18,7 @@ concurrency:
 jobs:
   lint:
     name: pre-commit
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
@@ -29,11 +29,17 @@ jobs:
 
       # markdownlint-cli2 + the hygiene hooks. The commit-msg hooks (conventional-pre-commit,
       # giticket) are not part of `pre-commit run --all-files` and are checked on commit instead.
-      - uses: pre-commit/action@v3.0.1
+      # Run directly rather than through pre-commit/action, whose bundled actions/cache@v4 targets
+      # the deprecated Node.js 20 runtime and put a deprecation warning on every run.
+      - name: Install pre-commit
+        run: python -m pip install --upgrade pre-commit
+
+      - name: Run pre-commit on all files
+        run: pre-commit run --all-files --show-diff-on-failure
 
   build:
     name: dotnet build + test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       # The api submodule is NOT checked out. This job builds and tests the stubs that are COMMITTED

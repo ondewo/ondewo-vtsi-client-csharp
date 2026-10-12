@@ -111,6 +111,14 @@ GoogleProtobufVersion:=$(shell sed -n 's|^ARG GOOGLE_PROTOBUF_VERSION=||p' ${PRO
 GrpcDotnetVersion:=$(shell sed -n 's|^ARG GRPC_DOTNET_VERSION=||p' ${PROTO_COMPILER_DOCKERFILE} 2>/dev/null)
 GoogleApiCommonProtosVersion:=$(shell sed -n 's|^ARG GOOGLE_API_COMMONPROTOS_VERSION=||p' ${PROTO_COMPILER_DOCKERFILE} 2>/dev/null)
 
+# The .NET SDK: the host's own when it has one (CI installs it with setup-dotnet), otherwise the pinned
+# SDK image behind tools/dotnet-in-docker/dotnet, which every `dotnet` recipe line then resolves to.
+# A release machine without an SDK used to get as far as pushing the release tag and then die in
+# `make publish` with "dotnet: No such file or directory".
+ifeq ($(shell command -v dotnet 2>/dev/null),)
+export PATH := $(CURDIR)/tools/dotnet-in-docker:$(PATH)
+endif
+
 # `make` with no target prints the help listing.
 .DEFAULT_GOAL := help
 
@@ -363,6 +371,9 @@ release: ## Automate the entire release process
 	-make precommit_hooks_run_all_files
 	git status
 	make check_build
+# The test suite runs BEFORE anything is committed, branched, tagged or published: a release whose
+# own CI would fail must stop while it is still a no-op.
+	make test
 	git add api
 	git add ${OndewoPackageId}.csproj
 	git add Makefile
