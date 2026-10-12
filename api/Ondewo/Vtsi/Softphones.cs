@@ -27,7 +27,7 @@ namespace Ondewo.Vtsi {
             "ChxvbmRld28vdnRzaS9zb2Z0cGhvbmVzLnByb3RvEgtvbmRld28udnRzaRog",
             "Z29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90",
             "b2J1Zi90aW1lc3RhbXAucHJvdG8aGm9uZGV3by92dHNpL3Byb2plY3RzLnBy",
-            "b3RvIuQFChBTb2Z0cGhvbmVBY2NvdW50EgwKBG5hbWUYASABKAkSHAoUc29m",
+            "b3RvIroGChBTb2Z0cGhvbmVBY2NvdW50EgwKBG5hbWUYASABKAkSHAoUc29m",
             "dHBob25lX2FjY291bnRfaWQYAiABKAkSGQoRdnRzaV9wcm9qZWN0X25hbWUY",
             "AyABKAkSFAoMZGlzcGxheV9uYW1lGAQgASgJEhQKDHNpcF91c2VybmFtZRgF",
             "IAEoCRJDChJ0cmFuc3BvcnRfc2VjdXJpdHkYBiABKA4yJy5vbmRld28udnRz",
@@ -42,155 +42,176 @@ namespace Ondewo.Vtsi {
             "VGltZXN0YW1wEhIKCmNyZWF0ZWRfYnkYDyABKAkSLgoKY3JlYXRlZF9hdBgQ",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLbW9kaWZpZWRf",
             "YnkYESABKAkSLwoLbW9kaWZpZWRfYXQYEiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAFCCgoIX2VuYWJsZWQi2gQKFFNvZnRwaG9uZUNlcnRp",
-            "ZmljYXRlEgwKBG5hbWUYASABKAkSHgoWc29mdHBob25lX2FjY291bnRfbmFt",
-            "ZRgCIAEoCRI3CgZzdGF0dXMYAyABKA4yJy5vbmRld28udnRzaS5Tb2Z0cGhv",
-            "bmVDZXJ0aWZpY2F0ZVN0YXR1cxIXCg9jZXJ0aWZpY2F0ZV9wZW0YBCABKAkS",
-            "IQoZaXNzdWVyX2NhX2NlcnRpZmljYXRlX3BlbRgFIAEoCRIaChJzaGEyNTZf",
-            "ZmluZ2VycHJpbnQYBiABKAkSFQoNc2VyaWFsX251bWJlchgHIAEoCRIPCgdz",
-            "dWJqZWN0GAggASgJEi4KCm5vdF9iZWZvcmUYCSABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEi0KCW5vdF9hZnRlchgKIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASEgoKY3JlYXRlZF9ieRgLIAEoCRIuCgpjcmVh",
-            "dGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIxCg1z",
-            "dXBlcnNlZGVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBImCh5zdXBlcnNlZGVkX2J5X2NlcnRpZmljYXRlX25hbWUYDiABKAkSLgoK",
-            "cmV2b2tlZF9hdBgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "EgoKcmV2b2tlZF9ieRgQIAEoCRIZChFyZXZvY2F0aW9uX3JlYXNvbhgRIAEo",
-            "CSKUAQoUU29mdHBob25lQ3JlZGVudGlhbHMSFAoMc2lwX3Bhc3N3b3JkGAEg",
-            "ASgJEhUKDXBrY3MxMl9idW5kbGUYAiABKAwSFwoPcGtjczEyX3Bhc3N3b3Jk",
-            "GAMgASgJEjYKC2NlcnRpZmljYXRlGAQgASgLMiEub25kZXdvLnZ0c2kuU29m",
-            "dHBob25lQ2VydGlmaWNhdGUirQUKFVNvZnRwaG9uZVByb3Zpc2lvbmluZxIe",
-            "ChZzb2Z0cGhvbmVfYWNjb3VudF9uYW1lGAEgASgJEkMKEnRyYW5zcG9ydF9z",
-            "ZWN1cml0eRgCIAEoDjInLm9uZGV3by52dHNpLlNvZnRwaG9uZVRyYW5zcG9y",
-            "dFNlY3VyaXR5EhIKCnNpcF9kb21haW4YAyABKAkSEwoLc2lwX2FkZHJlc3MY",
-            "BCABKAkSFwoPc2lwX3NlcnZlcl9ob3N0GAUgASgJEhcKD3NpcF9zZXJ2ZXJf",
-            "cG9ydBgGIAEoBRIVCg1zaXBfdHJhbnNwb3J0GAcgASgJEhYKDm91dGJvdW5k",
-            "X3Byb3h5GAggASgJEhAKCHVzZXJuYW1lGAkgASgJEhUKDWF1dGhfdXNlcm5h",
-            "bWUYCiABKAkSDQoFcmVhbG0YCyABKAkSMQoJc3J0cF9tb2RlGAwgASgOMh4u",
-            "b25kZXdvLnZ0c2kuU29mdHBob25lU3J0cE1vZGUSDgoGY29kZWNzGA0gAygJ",
-            "EiEKGXNlcnZlcl9jYV9jZXJ0aWZpY2F0ZV9wZW0YDiABKAkSLQolc2VydmVy",
-            "X2NlcnRpZmljYXRlX3NoYTI1Nl9maW5nZXJwcmludBgPIAEoCRIfChdjbGll",
-            "bnRfY2VydGlmaWNhdGVfbmFtZRgQIAEoCRItCiVjbGllbnRfY2VydGlmaWNh",
-            "dGVfc2hhMjU2X2ZpbmdlcnByaW50GBEgASgJEkIKHmNsaWVudF9jZXJ0aWZp",
-            "Y2F0ZV9leHBpcmVfdGltZRgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASGwoTem9pcGVyX2luc3RydWN0aW9ucxgTIAEoCRInCh9jbGllbnRf",
-            "Y2VydGlmaWNhdGVfc3VwcG9ydF9ub3RlGBQgASgJIq4DChZTb2Z0cGhvbmVB",
-            "Y2NvdW50RmlsdGVyEkUKFHRyYW5zcG9ydF9zZWN1cml0aWVzGAEgAygOMicu",
-            "b25kZXdvLnZ0c2kuU29mdHBob25lVHJhbnNwb3J0U2VjdXJpdHkSFAoHZW5h",
-            "YmxlZBgCIAEoCEgAiAEBEj8KBmxhYmVscxgDIAMoCzIvLm9uZGV3by52dHNp",
-            "LlNvZnRwaG9uZUFjY291bnRGaWx0ZXIuTGFiZWxzRW50cnkSHQoVZGlzcGxh",
-            "eV9uYW1lX2NvbnRhaW5zGAQgASgJEh0KFXNpcF91c2VybmFtZV9jb250YWlu",
-            "cxgFIAEoCRI+ChpjZXJ0aWZpY2F0ZV9leHBpcmVzX2JlZm9yZRgGIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPQoZY2VydGlmaWNhdGVfZXhw",
-            "aXJlc19hZnRlchgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "AUIKCghfZW5hYmxlZCK+AQoaU29mdHBob25lQ2VydGlmaWNhdGVGaWx0ZXIS",
-            "OQoIc3RhdHVzZXMYASADKA4yJy5vbmRld28udnRzaS5Tb2Z0cGhvbmVDZXJ0",
-            "aWZpY2F0ZVN0YXR1cxIyCg5leHBpcmVzX2JlZm9yZRgCIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXASMQoNZXhwaXJlc19hZnRlchgDIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiggQKF1NvZnRwaG9uZUFjY291",
-            "bnRTb3J0aW5nEl0KDXNvcnRpbmdfZmllbGQYASABKA4yQS5vbmRld28udnRz",
-            "aS5Tb2Z0cGhvbmVBY2NvdW50U29ydGluZy5Tb2Z0cGhvbmVBY2NvdW50U29y",
-            "dGluZ0ZpZWxkSACIAQESPgoMc29ydGluZ19tb2RlGAIgASgOMiMub25kZXdv",
-            "LnZ0c2kuVnRzaVByb2plY3RTb3J0aW5nTW9kZUgBiAEBIqQCChxTb2Z0cGhv",
-            "bmVBY2NvdW50U29ydGluZ0ZpZWxkEiAKHE5PX1NPRlRQSE9ORV9BQ0NPVU5U",
-            "X1NPUlRJTkcQABIqCiZTT1JUX1NPRlRQSE9ORV9BQ0NPVU5UX0JZX0RJU1BM",
-            "QVlfTkFNRRABEioKJlNPUlRfU09GVFBIT05FX0FDQ09VTlRfQllfU0lQX1VT",
-            "RVJOQU1FEAISKwonU09SVF9TT0ZUUEhPTkVfQUNDT1VOVF9CWV9DUkVBVElP",
-            "Tl9EQVRFEAMSKwonU09SVF9TT0ZUUEhPTkVfQUNDT1VOVF9CWV9MQVNUX01P",
-            "RElGSUVEEAQSMAosU09SVF9TT0ZUUEhPTkVfQUNDT1VOVF9CWV9DRVJUSUZJ",
-            "Q0FURV9FWFBJUlkQBUIQCg5fc29ydGluZ19maWVsZEIPCg1fc29ydGluZ19t",
-            "b2RlInQKHUNyZWF0ZVNvZnRwaG9uZUFjY291bnRSZXF1ZXN0EhkKEXZ0c2lf",
-            "cHJvamVjdF9uYW1lGAEgASgJEjgKEXNvZnRwaG9uZV9hY2NvdW50GAIgASgL",
-            "Mh0ub25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3VudCKSAQoeQ3JlYXRlU29m",
-            "dHBob25lQWNjb3VudFJlc3BvbnNlEjgKEXNvZnRwaG9uZV9hY2NvdW50GAEg",
-            "ASgLMh0ub25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3VudBI2CgtjcmVkZW50",
-            "aWFscxgCIAEoCzIhLm9uZGV3by52dHNpLlNvZnRwaG9uZUNyZWRlbnRpYWxz",
-            "IloKGkdldFNvZnRwaG9uZUFjY291bnRSZXF1ZXN0EgwKBG5hbWUYASABKAkS",
-            "LgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2siigEKHVVwZGF0ZVNvZnRwaG9uZUFjY291bnRSZXF1ZXN0EjgKEXNvZnRw",
-            "aG9uZV9hY2NvdW50GAEgASgLMh0ub25kZXdvLnZ0c2kuU29mdHBob25lQWNj",
-            "b3VudBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2siLQodRGVsZXRlU29mdHBob25lQWNjb3VudFJlcXVlc3QSDAoE",
-            "bmFtZRgBIAEoCSJRCh5EZWxldGVTb2Z0cGhvbmVBY2NvdW50UmVzcG9uc2US",
-            "DAoEbmFtZRgBIAEoCRIhChlyZXZva2VkX2NlcnRpZmljYXRlX2NvdW50GAIg",
-            "ASgFIqICChxMaXN0U29mdHBob25lQWNjb3VudHNSZXF1ZXN0EhkKEXZ0c2lf",
-            "cHJvamVjdF9uYW1lGAEgASgJEjMKBmZpbHRlchgCIAEoCzIjLm9uZGV3by52",
-            "dHNpLlNvZnRwaG9uZUFjY291bnRGaWx0ZXISLgoKZmllbGRfbWFzaxgDIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEQoJcGFnZV9zaXplGAQg",
-            "ASgFEhcKCnBhZ2VfdG9rZW4YBSABKAlIAIgBARJHChlzb2Z0cGhvbmVfYWNj",
-            "b3VudF9zb3J0aW5nGAYgASgLMiQub25kZXdvLnZ0c2kuU29mdHBob25lQWNj",
-            "b3VudFNvcnRpbmdCDQoLX3BhZ2VfdG9rZW4icwodTGlzdFNvZnRwaG9uZUFj",
-            "Y291bnRzUmVzcG9uc2USOQoSc29mdHBob25lX2FjY291bnRzGAEgAygLMh0u",
-            "b25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3VudBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkiagohUm90YXRlU29mdHBob25lQ3JlZGVudGlhbHNSZXF1ZXN0",
-            "EgwKBG5hbWUYASABKAkSGwoTcm90YXRlX3NpcF9wYXNzd29yZBgCIAEoCBIa",
-            "ChJyb3RhdGVfY2VydGlmaWNhdGUYAyABKAgilgEKIlJvdGF0ZVNvZnRwaG9u",
-            "ZUNyZWRlbnRpYWxzUmVzcG9uc2USOAoRc29mdHBob25lX2FjY291bnQYASAB",
-            "KAsyHS5vbmRld28udnRzaS5Tb2Z0cGhvbmVBY2NvdW50EjYKC2NyZWRlbnRp",
-            "YWxzGAIgASgLMiEub25kZXdvLnZ0c2kuU29mdHBob25lQ3JlZGVudGlhbHMi",
-            "jgIKIExpc3RTb2Z0cGhvbmVDZXJ0aWZpY2F0ZXNSZXF1ZXN0EhsKEXZ0c2lf",
-            "cHJvamVjdF9uYW1lGAEgASgJSAASIAoWc29mdHBob25lX2FjY291bnRfbmFt",
-            "ZRgCIAEoCUgAEjcKBmZpbHRlchgDIAEoCzInLm9uZGV3by52dHNpLlNvZnRw",
-            "aG9uZUNlcnRpZmljYXRlRmlsdGVyEi4KCmZpZWxkX21hc2sYBCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrEhEKCXBhZ2Vfc2l6ZRgFIAEoBRIX",
-            "CgpwYWdlX3Rva2VuGAYgASgJSAGIAQFCBwoFc2NvcGVCDQoLX3BhZ2VfdG9r",
-            "ZW4ifwohTGlzdFNvZnRwaG9uZUNlcnRpZmljYXRlc1Jlc3BvbnNlEkEKFnNv",
-            "ZnRwaG9uZV9jZXJ0aWZpY2F0ZXMYASADKAsyIS5vbmRld28udnRzaS5Tb2Z0",
-            "cGhvbmVDZXJ0aWZpY2F0ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXgoe",
-            "R2V0U29mdHBob25lQ2VydGlmaWNhdGVSZXF1ZXN0EgwKBG5hbWUYASABKAkS",
-            "LgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2siQQohUmV2b2tlU29mdHBob25lQ2VydGlmaWNhdGVSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkSDgoGcmVhc29uGAIgASgJIi8KH0dldFNvZnRwaG9uZVByb3Zp",
-            "c2lvbmluZ1JlcXVlc3QSDAoEbmFtZRgBIAEoCSqxAQoaU29mdHBob25lVHJh",
-            "bnNwb3J0U2VjdXJpdHkSLAooU09GVFBIT05FX1RSQU5TUE9SVF9TRUNVUklU",
-            "WV9VTlNQRUNJRklFRBAAEjMKL1NPRlRQSE9ORV9UUkFOU1BPUlRfU0VDVVJJ",
-            "VFlfQ0xJRU5UX0NFUlRJRklDQVRFEAESMAosU09GVFBIT05FX1RSQU5TUE9S",
-            "VF9TRUNVUklUWV9TRVJWRVJfVExTX09OTFkQAirKAQoaU29mdHBob25lQ2Vy",
-            "dGlmaWNhdGVTdGF0dXMSLAooU09GVFBIT05FX0NFUlRJRklDQVRFX1NUQVRV",
-            "U19VTlNQRUNJRklFRBAAEicKI1NPRlRQSE9ORV9DRVJUSUZJQ0FURV9TVEFU",
-            "VVNfQUNUSVZFEAESKwonU09GVFBIT05FX0NFUlRJRklDQVRFX1NUQVRVU19T",
-            "VVBFUlNFREVEEAISKAokU09GVFBIT05FX0NFUlRJRklDQVRFX1NUQVRVU19S",
-            "RVZPS0VEEAMqYAoRU29mdHBob25lU3J0cE1vZGUSIwofU09GVFBIT05FX1NS",
-            "VFBfTU9ERV9VTlNQRUNJRklFRBAAEiYKIlNPRlRQSE9ORV9TUlRQX01PREVf",
-            "U0RFU19NQU5EQVRPUlkQATLrCAoKU29mdHBob25lcxJxChZDcmVhdGVTb2Z0",
-            "cGhvbmVBY2NvdW50Eioub25kZXdvLnZ0c2kuQ3JlYXRlU29mdHBob25lQWNj",
-            "b3VudFJlcXVlc3QaKy5vbmRld28udnRzaS5DcmVhdGVTb2Z0cGhvbmVBY2Nv",
-            "dW50UmVzcG9uc2USXQoTR2V0U29mdHBob25lQWNjb3VudBInLm9uZGV3by52",
-            "dHNpLkdldFNvZnRwaG9uZUFjY291bnRSZXF1ZXN0Gh0ub25kZXdvLnZ0c2ku",
-            "U29mdHBob25lQWNjb3VudBJjChZVcGRhdGVTb2Z0cGhvbmVBY2NvdW50Eiou",
-            "b25kZXdvLnZ0c2kuVXBkYXRlU29mdHBob25lQWNjb3VudFJlcXVlc3QaHS5v",
-            "bmRld28udnRzaS5Tb2Z0cGhvbmVBY2NvdW50EnEKFkRlbGV0ZVNvZnRwaG9u",
-            "ZUFjY291bnQSKi5vbmRld28udnRzaS5EZWxldGVTb2Z0cGhvbmVBY2NvdW50",
-            "UmVxdWVzdBorLm9uZGV3by52dHNpLkRlbGV0ZVNvZnRwaG9uZUFjY291bnRS",
-            "ZXNwb25zZRJuChVMaXN0U29mdHBob25lQWNjb3VudHMSKS5vbmRld28udnRz",
-            "aS5MaXN0U29mdHBob25lQWNjb3VudHNSZXF1ZXN0Gioub25kZXdvLnZ0c2ku",
-            "TGlzdFNvZnRwaG9uZUFjY291bnRzUmVzcG9uc2USfQoaUm90YXRlU29mdHBo",
-            "b25lQ3JlZGVudGlhbHMSLi5vbmRld28udnRzaS5Sb3RhdGVTb2Z0cGhvbmVD",
-            "cmVkZW50aWFsc1JlcXVlc3QaLy5vbmRld28udnRzaS5Sb3RhdGVTb2Z0cGhv",
-            "bmVDcmVkZW50aWFsc1Jlc3BvbnNlEnoKGUxpc3RTb2Z0cGhvbmVDZXJ0aWZp",
-            "Y2F0ZXMSLS5vbmRld28udnRzaS5MaXN0U29mdHBob25lQ2VydGlmaWNhdGVz",
-            "UmVxdWVzdBouLm9uZGV3by52dHNpLkxpc3RTb2Z0cGhvbmVDZXJ0aWZpY2F0",
-            "ZXNSZXNwb25zZRJpChdHZXRTb2Z0cGhvbmVDZXJ0aWZpY2F0ZRIrLm9uZGV3",
-            "by52dHNpLkdldFNvZnRwaG9uZUNlcnRpZmljYXRlUmVxdWVzdBohLm9uZGV3",
-            "by52dHNpLlNvZnRwaG9uZUNlcnRpZmljYXRlEm8KGlJldm9rZVNvZnRwaG9u",
-            "ZUNlcnRpZmljYXRlEi4ub25kZXdvLnZ0c2kuUmV2b2tlU29mdHBob25lQ2Vy",
+            "dWYuVGltZXN0YW1wEg4KBmxvY2tlZBgTIAEoCBItCglsb2NrZWRfYXQYFCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhUKDWxvY2tlZF9yZWFz",
+            "b24YFSABKAkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgJOgI4AUIKCghfZW5hYmxlZCLaBAoUU29mdHBob25lQ2VydGlmaWNh",
+            "dGUSDAoEbmFtZRgBIAEoCRIeChZzb2Z0cGhvbmVfYWNjb3VudF9uYW1lGAIg",
+            "ASgJEjcKBnN0YXR1cxgDIAEoDjInLm9uZGV3by52dHNpLlNvZnRwaG9uZUNl",
+            "cnRpZmljYXRlU3RhdHVzEhcKD2NlcnRpZmljYXRlX3BlbRgEIAEoCRIhChlp",
+            "c3N1ZXJfY2FfY2VydGlmaWNhdGVfcGVtGAUgASgJEhoKEnNoYTI1Nl9maW5n",
+            "ZXJwcmludBgGIAEoCRIVCg1zZXJpYWxfbnVtYmVyGAcgASgJEg8KB3N1Ympl",
+            "Y3QYCCABKAkSLgoKbm90X2JlZm9yZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASLQoJbm90X2FmdGVyGAogASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBISCgpjcmVhdGVkX2J5GAsgASgJEi4KCmNyZWF0ZWRf",
+            "YXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjEKDXN1cGVy",
+            "c2VkZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiYK",
+            "HnN1cGVyc2VkZWRfYnlfY2VydGlmaWNhdGVfbmFtZRgOIAEoCRIuCgpyZXZv",
+            "a2VkX2F0GA8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBISCgpy",
+            "ZXZva2VkX2J5GBAgASgJEhkKEXJldm9jYXRpb25fcmVhc29uGBEgASgJIpQB",
+            "ChRTb2Z0cGhvbmVDcmVkZW50aWFscxIUCgxzaXBfcGFzc3dvcmQYASABKAkS",
+            "FQoNcGtjczEyX2J1bmRsZRgCIAEoDBIXCg9wa2NzMTJfcGFzc3dvcmQYAyAB",
+            "KAkSNgoLY2VydGlmaWNhdGUYBCABKAsyIS5vbmRld28udnRzaS5Tb2Z0cGhv",
+            "bmVDZXJ0aWZpY2F0ZSKtBQoVU29mdHBob25lUHJvdmlzaW9uaW5nEh4KFnNv",
+            "ZnRwaG9uZV9hY2NvdW50X25hbWUYASABKAkSQwoSdHJhbnNwb3J0X3NlY3Vy",
+            "aXR5GAIgASgOMicub25kZXdvLnZ0c2kuU29mdHBob25lVHJhbnNwb3J0U2Vj",
+            "dXJpdHkSEgoKc2lwX2RvbWFpbhgDIAEoCRITCgtzaXBfYWRkcmVzcxgEIAEo",
+            "CRIXCg9zaXBfc2VydmVyX2hvc3QYBSABKAkSFwoPc2lwX3NlcnZlcl9wb3J0",
+            "GAYgASgFEhUKDXNpcF90cmFuc3BvcnQYByABKAkSFgoOb3V0Ym91bmRfcHJv",
+            "eHkYCCABKAkSEAoIdXNlcm5hbWUYCSABKAkSFQoNYXV0aF91c2VybmFtZRgK",
+            "IAEoCRINCgVyZWFsbRgLIAEoCRIxCglzcnRwX21vZGUYDCABKA4yHi5vbmRl",
+            "d28udnRzaS5Tb2Z0cGhvbmVTcnRwTW9kZRIOCgZjb2RlY3MYDSADKAkSIQoZ",
+            "c2VydmVyX2NhX2NlcnRpZmljYXRlX3BlbRgOIAEoCRItCiVzZXJ2ZXJfY2Vy",
+            "dGlmaWNhdGVfc2hhMjU2X2ZpbmdlcnByaW50GA8gASgJEh8KF2NsaWVudF9j",
+            "ZXJ0aWZpY2F0ZV9uYW1lGBAgASgJEi0KJWNsaWVudF9jZXJ0aWZpY2F0ZV9z",
+            "aGEyNTZfZmluZ2VycHJpbnQYESABKAkSQgoeY2xpZW50X2NlcnRpZmljYXRl",
+            "X2V4cGlyZV90aW1lGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIbChN6b2lwZXJfaW5zdHJ1Y3Rpb25zGBMgASgJEicKH2NsaWVudF9jZXJ0",
+            "aWZpY2F0ZV9zdXBwb3J0X25vdGUYFCABKAkizgMKFlNvZnRwaG9uZUFjY291",
+            "bnRGaWx0ZXISRQoUdHJhbnNwb3J0X3NlY3VyaXRpZXMYASADKA4yJy5vbmRl",
+            "d28udnRzaS5Tb2Z0cGhvbmVUcmFuc3BvcnRTZWN1cml0eRIUCgdlbmFibGVk",
+            "GAIgASgISACIAQESPwoGbGFiZWxzGAMgAygLMi8ub25kZXdvLnZ0c2kuU29m",
+            "dHBob25lQWNjb3VudEZpbHRlci5MYWJlbHNFbnRyeRIdChVkaXNwbGF5X25h",
+            "bWVfY29udGFpbnMYBCABKAkSHQoVc2lwX3VzZXJuYW1lX2NvbnRhaW5zGAUg",
+            "ASgJEj4KGmNlcnRpZmljYXRlX2V4cGlyZXNfYmVmb3JlGAYgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI9ChljZXJ0aWZpY2F0ZV9leHBpcmVz",
+            "X2FmdGVyGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBITCgZs",
+            "b2NrZWQYCCABKAhIAYgBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBQgoKCF9lbmFibGVkQgkKB19sb2NrZWQivgEK",
+            "GlNvZnRwaG9uZUNlcnRpZmljYXRlRmlsdGVyEjkKCHN0YXR1c2VzGAEgAygO",
+            "Micub25kZXdvLnZ0c2kuU29mdHBob25lQ2VydGlmaWNhdGVTdGF0dXMSMgoO",
+            "ZXhwaXJlc19iZWZvcmUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEjEKDWV4cGlyZXNfYWZ0ZXIYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wIoIEChdTb2Z0cGhvbmVBY2NvdW50U29ydGluZxJdCg1zb3J0",
+            "aW5nX2ZpZWxkGAEgASgOMkEub25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3Vu",
+            "dFNvcnRpbmcuU29mdHBob25lQWNjb3VudFNvcnRpbmdGaWVsZEgAiAEBEj4K",
+            "DHNvcnRpbmdfbW9kZRgCIAEoDjIjLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
+            "U29ydGluZ01vZGVIAYgBASKkAgocU29mdHBob25lQWNjb3VudFNvcnRpbmdG",
+            "aWVsZBIgChxOT19TT0ZUUEhPTkVfQUNDT1VOVF9TT1JUSU5HEAASKgomU09S",
+            "VF9TT0ZUUEhPTkVfQUNDT1VOVF9CWV9ESVNQTEFZX05BTUUQARIqCiZTT1JU",
+            "X1NPRlRQSE9ORV9BQ0NPVU5UX0JZX1NJUF9VU0VSTkFNRRACEisKJ1NPUlRf",
+            "U09GVFBIT05FX0FDQ09VTlRfQllfQ1JFQVRJT05fREFURRADEisKJ1NPUlRf",
+            "U09GVFBIT05FX0FDQ09VTlRfQllfTEFTVF9NT0RJRklFRBAEEjAKLFNPUlRf",
+            "U09GVFBIT05FX0FDQ09VTlRfQllfQ0VSVElGSUNBVEVfRVhQSVJZEAVCEAoO",
+            "X3NvcnRpbmdfZmllbGRCDwoNX3NvcnRpbmdfbW9kZSKNAQodQ3JlYXRlU29m",
+            "dHBob25lQWNjb3VudFJlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASAB",
+            "KAkSOAoRc29mdHBob25lX2FjY291bnQYAiABKAsyHS5vbmRld28udnRzaS5T",
+            "b2Z0cGhvbmVBY2NvdW50EhcKD2lkZW1wb3RlbmN5X2tleRgDIAEoCSKSAQoe",
+            "Q3JlYXRlU29mdHBob25lQWNjb3VudFJlc3BvbnNlEjgKEXNvZnRwaG9uZV9h",
+            "Y2NvdW50GAEgASgLMh0ub25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3VudBI2",
+            "CgtjcmVkZW50aWFscxgCIAEoCzIhLm9uZGV3by52dHNpLlNvZnRwaG9uZUNy",
+            "ZWRlbnRpYWxzIloKGkdldFNvZnRwaG9uZUFjY291bnRSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2siigEKHVVwZGF0ZVNvZnRwaG9uZUFjY291bnRSZXF1ZXN0",
+            "EjgKEXNvZnRwaG9uZV9hY2NvdW50GAEgASgLMh0ub25kZXdvLnZ0c2kuU29m",
+            "dHBob25lQWNjb3VudBIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5GaWVsZE1hc2siLQodRGVsZXRlU29mdHBob25lQWNjb3VudFJl",
+            "cXVlc3QSDAoEbmFtZRgBIAEoCSJRCh5EZWxldGVTb2Z0cGhvbmVBY2NvdW50",
+            "UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIhChlyZXZva2VkX2NlcnRpZmljYXRl",
+            "X2NvdW50GAIgASgFIqICChxMaXN0U29mdHBob25lQWNjb3VudHNSZXF1ZXN0",
+            "EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEjMKBmZpbHRlchgCIAEoCzIj",
+            "Lm9uZGV3by52dHNpLlNvZnRwaG9uZUFjY291bnRGaWx0ZXISLgoKZmllbGRf",
+            "bWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSEQoJcGFn",
+            "ZV9zaXplGAQgASgFEhcKCnBhZ2VfdG9rZW4YBSABKAlIAIgBARJHChlzb2Z0",
+            "cGhvbmVfYWNjb3VudF9zb3J0aW5nGAYgASgLMiQub25kZXdvLnZ0c2kuU29m",
+            "dHBob25lQWNjb3VudFNvcnRpbmdCDQoLX3BhZ2VfdG9rZW4icwodTGlzdFNv",
+            "ZnRwaG9uZUFjY291bnRzUmVzcG9uc2USOQoSc29mdHBob25lX2FjY291bnRz",
+            "GAEgAygLMh0ub25kZXdvLnZ0c2kuU29mdHBob25lQWNjb3VudBIXCg9uZXh0",
+            "X3BhZ2VfdG9rZW4YAiABKAkiagohUm90YXRlU29mdHBob25lQ3JlZGVudGlh",
+            "bHNSZXF1ZXN0EgwKBG5hbWUYASABKAkSGwoTcm90YXRlX3NpcF9wYXNzd29y",
+            "ZBgCIAEoCBIaChJyb3RhdGVfY2VydGlmaWNhdGUYAyABKAgilgEKIlJvdGF0",
+            "ZVNvZnRwaG9uZUNyZWRlbnRpYWxzUmVzcG9uc2USOAoRc29mdHBob25lX2Fj",
+            "Y291bnQYASABKAsyHS5vbmRld28udnRzaS5Tb2Z0cGhvbmVBY2NvdW50EjYK",
+            "C2NyZWRlbnRpYWxzGAIgASgLMiEub25kZXdvLnZ0c2kuU29mdHBob25lQ3Jl",
+            "ZGVudGlhbHMijgIKIExpc3RTb2Z0cGhvbmVDZXJ0aWZpY2F0ZXNSZXF1ZXN0",
+            "EhsKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJSAASIAoWc29mdHBob25lX2Fj",
+            "Y291bnRfbmFtZRgCIAEoCUgAEjcKBmZpbHRlchgDIAEoCzInLm9uZGV3by52",
+            "dHNpLlNvZnRwaG9uZUNlcnRpZmljYXRlRmlsdGVyEi4KCmZpZWxkX21hc2sY",
+            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhEKCXBhZ2Vfc2l6",
+            "ZRgFIAEoBRIXCgpwYWdlX3Rva2VuGAYgASgJSAGIAQFCBwoFc2NvcGVCDQoL",
+            "X3BhZ2VfdG9rZW4ifwohTGlzdFNvZnRwaG9uZUNlcnRpZmljYXRlc1Jlc3Bv",
+            "bnNlEkEKFnNvZnRwaG9uZV9jZXJ0aWZpY2F0ZXMYASADKAsyIS5vbmRld28u",
+            "dnRzaS5Tb2Z0cGhvbmVDZXJ0aWZpY2F0ZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
+            "AiABKAkiXgoeR2V0U29mdHBob25lQ2VydGlmaWNhdGVSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2siQQohUmV2b2tlU29mdHBob25lQ2VydGlmaWNhdGVSZXF1",
+            "ZXN0EgwKBG5hbWUYASABKAkSDgoGcmVhc29uGAIgASgJIi8KH0dldFNvZnRw",
+            "aG9uZVByb3Zpc2lvbmluZ1JlcXVlc3QSDAoEbmFtZRgBIAEoCSJfCh9HZXRT",
+            "b2Z0cGhvbmVSZWdpc3RyYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSLgoK",
+            "ZmllbGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
+            "mQEKFVNvZnRwaG9uZVJlZ2lzdHJhdGlvbhIeChZzb2Z0cGhvbmVfYWNjb3Vu",
+            "dF9uYW1lGAEgASgJEi8KCGNvbnRhY3RzGAIgAygLMh0ub25kZXdvLnZ0c2ku",
+            "U29mdHBob25lQ29udGFjdBIvCgtvYnNlcnZlZF9hdBgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAiyAEKEFNvZnRwaG9uZUNvbnRhY3QSCwoD",
+            "dXJpGAEgASgJEhIKCnVzZXJfYWdlbnQYAiABKAkSFgoOc291cmNlX2FkZHJl",
+            "c3MYAyABKAkSLwoLZXhwaXJlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEhUKDXJvdW5kX3RyaXBfbXMYBSABKAESMwoGc3RhdHVz",
+            "GAYgASgOMiMub25kZXdvLnZ0c2kuU29mdHBob25lQ29udGFjdFN0YXR1cyqx",
+            "AQoaU29mdHBob25lVHJhbnNwb3J0U2VjdXJpdHkSLAooU09GVFBIT05FX1RS",
+            "QU5TUE9SVF9TRUNVUklUWV9VTlNQRUNJRklFRBAAEjMKL1NPRlRQSE9ORV9U",
+            "UkFOU1BPUlRfU0VDVVJJVFlfQ0xJRU5UX0NFUlRJRklDQVRFEAESMAosU09G",
+            "VFBIT05FX1RSQU5TUE9SVF9TRUNVUklUWV9TRVJWRVJfVExTX09OTFkQAirK",
+            "AQoaU29mdHBob25lQ2VydGlmaWNhdGVTdGF0dXMSLAooU09GVFBIT05FX0NF",
+            "UlRJRklDQVRFX1NUQVRVU19VTlNQRUNJRklFRBAAEicKI1NPRlRQSE9ORV9D",
+            "RVJUSUZJQ0FURV9TVEFUVVNfQUNUSVZFEAESKwonU09GVFBIT05FX0NFUlRJ",
+            "RklDQVRFX1NUQVRVU19TVVBFUlNFREVEEAISKAokU09GVFBIT05FX0NFUlRJ",
+            "RklDQVRFX1NUQVRVU19SRVZPS0VEEAMq5gEKFlNvZnRwaG9uZUNvbnRhY3RT",
+            "dGF0dXMSKAokU09GVFBIT05FX0NPTlRBQ1RfU1RBVFVTX1VOU1BFQ0lGSUVE",
+            "EAASJgoiU09GVFBIT05FX0NPTlRBQ1RfU1RBVFVTX0FWQUlMQUJMRRABEigK",
+            "JFNPRlRQSE9ORV9DT05UQUNUX1NUQVRVU19VTkFWQUlMQUJMRRACEioKJlNP",
+            "RlRQSE9ORV9DT05UQUNUX1NUQVRVU19OT1RfUVVBTElGSUVEEAMSJAogU09G",
+            "VFBIT05FX0NPTlRBQ1RfU1RBVFVTX1VOS05PV04QBCpgChFTb2Z0cGhvbmVT",
+            "cnRwTW9kZRIjCh9TT0ZUUEhPTkVfU1JUUF9NT0RFX1VOU1BFQ0lGSUVEEAAS",
+            "JgoiU09GVFBIT05FX1NSVFBfTU9ERV9TREVTX01BTkRBVE9SWRABMtkJCgpT",
+            "b2Z0cGhvbmVzEnEKFkNyZWF0ZVNvZnRwaG9uZUFjY291bnQSKi5vbmRld28u",
+            "dnRzaS5DcmVhdGVTb2Z0cGhvbmVBY2NvdW50UmVxdWVzdBorLm9uZGV3by52",
+            "dHNpLkNyZWF0ZVNvZnRwaG9uZUFjY291bnRSZXNwb25zZRJdChNHZXRTb2Z0",
+            "cGhvbmVBY2NvdW50Eicub25kZXdvLnZ0c2kuR2V0U29mdHBob25lQWNjb3Vu",
+            "dFJlcXVlc3QaHS5vbmRld28udnRzaS5Tb2Z0cGhvbmVBY2NvdW50EmMKFlVw",
+            "ZGF0ZVNvZnRwaG9uZUFjY291bnQSKi5vbmRld28udnRzaS5VcGRhdGVTb2Z0",
+            "cGhvbmVBY2NvdW50UmVxdWVzdBodLm9uZGV3by52dHNpLlNvZnRwaG9uZUFj",
+            "Y291bnQScQoWRGVsZXRlU29mdHBob25lQWNjb3VudBIqLm9uZGV3by52dHNp",
+            "LkRlbGV0ZVNvZnRwaG9uZUFjY291bnRSZXF1ZXN0Gisub25kZXdvLnZ0c2ku",
+            "RGVsZXRlU29mdHBob25lQWNjb3VudFJlc3BvbnNlEm4KFUxpc3RTb2Z0cGhv",
+            "bmVBY2NvdW50cxIpLm9uZGV3by52dHNpLkxpc3RTb2Z0cGhvbmVBY2NvdW50",
+            "c1JlcXVlc3QaKi5vbmRld28udnRzaS5MaXN0U29mdHBob25lQWNjb3VudHNS",
+            "ZXNwb25zZRJ9ChpSb3RhdGVTb2Z0cGhvbmVDcmVkZW50aWFscxIuLm9uZGV3",
+            "by52dHNpLlJvdGF0ZVNvZnRwaG9uZUNyZWRlbnRpYWxzUmVxdWVzdBovLm9u",
+            "ZGV3by52dHNpLlJvdGF0ZVNvZnRwaG9uZUNyZWRlbnRpYWxzUmVzcG9uc2US",
+            "egoZTGlzdFNvZnRwaG9uZUNlcnRpZmljYXRlcxItLm9uZGV3by52dHNpLkxp",
+            "c3RTb2Z0cGhvbmVDZXJ0aWZpY2F0ZXNSZXF1ZXN0Gi4ub25kZXdvLnZ0c2ku",
+            "TGlzdFNvZnRwaG9uZUNlcnRpZmljYXRlc1Jlc3BvbnNlEmkKF0dldFNvZnRw",
+            "aG9uZUNlcnRpZmljYXRlEisub25kZXdvLnZ0c2kuR2V0U29mdHBob25lQ2Vy",
             "dGlmaWNhdGVSZXF1ZXN0GiEub25kZXdvLnZ0c2kuU29mdHBob25lQ2VydGlm",
-            "aWNhdGUSbAoYR2V0U29mdHBob25lUHJvdmlzaW9uaW5nEiwub25kZXdvLnZ0",
-            "c2kuR2V0U29mdHBob25lUHJvdmlzaW9uaW5nUmVxdWVzdBoiLm9uZGV3by52",
-            "dHNpLlNvZnRwaG9uZVByb3Zpc2lvbmluZ2IGcHJvdG8z"));
+            "aWNhdGUSbwoaUmV2b2tlU29mdHBob25lQ2VydGlmaWNhdGUSLi5vbmRld28u",
+            "dnRzaS5SZXZva2VTb2Z0cGhvbmVDZXJ0aWZpY2F0ZVJlcXVlc3QaIS5vbmRl",
+            "d28udnRzaS5Tb2Z0cGhvbmVDZXJ0aWZpY2F0ZRJsChhHZXRTb2Z0cGhvbmVQ",
+            "cm92aXNpb25pbmcSLC5vbmRld28udnRzaS5HZXRTb2Z0cGhvbmVQcm92aXNp",
+            "b25pbmdSZXF1ZXN0GiIub25kZXdvLnZ0c2kuU29mdHBob25lUHJvdmlzaW9u",
+            "aW5nEmwKGEdldFNvZnRwaG9uZVJlZ2lzdHJhdGlvbhIsLm9uZGV3by52dHNp",
+            "LkdldFNvZnRwaG9uZVJlZ2lzdHJhdGlvblJlcXVlc3QaIi5vbmRld28udnRz",
+            "aS5Tb2Z0cGhvbmVSZWdpc3RyYXRpb25iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ondewo.Vtsi.ProjectsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.SoftphoneTransportSecurity), typeof(global::Ondewo.Vtsi.SoftphoneCertificateStatus), typeof(global::Ondewo.Vtsi.SoftphoneSrtpMode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneAccount), global::Ondewo.Vtsi.SoftphoneAccount.Parser, new[]{ "Name", "SoftphoneAccountId", "VtsiProjectName", "DisplayName", "SipUsername", "TransportSecurity", "Enabled", "MaxContacts", "Labels", "AllowedDestinations", "CurrentCertificateName", "CurrentCertificateSha256Fingerprint", "CurrentCertificateExpireTime", "SipPasswordSetAt", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt" }, new[]{ "Enabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.SoftphoneTransportSecurity), typeof(global::Ondewo.Vtsi.SoftphoneCertificateStatus), typeof(global::Ondewo.Vtsi.SoftphoneContactStatus), typeof(global::Ondewo.Vtsi.SoftphoneSrtpMode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneAccount), global::Ondewo.Vtsi.SoftphoneAccount.Parser, new[]{ "Name", "SoftphoneAccountId", "VtsiProjectName", "DisplayName", "SipUsername", "TransportSecurity", "Enabled", "MaxContacts", "Labels", "AllowedDestinations", "CurrentCertificateName", "CurrentCertificateSha256Fingerprint", "CurrentCertificateExpireTime", "SipPasswordSetAt", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "Locked", "LockedAt", "LockedReason" }, new[]{ "Enabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneCertificate), global::Ondewo.Vtsi.SoftphoneCertificate.Parser, new[]{ "Name", "SoftphoneAccountName", "Status", "CertificatePem", "IssuerCaCertificatePem", "Sha256Fingerprint", "SerialNumber", "Subject", "NotBefore", "NotAfter", "CreatedBy", "CreatedAt", "SupersededAt", "SupersededByCertificateName", "RevokedAt", "RevokedBy", "RevocationReason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneCredentials), global::Ondewo.Vtsi.SoftphoneCredentials.Parser, new[]{ "SipPassword", "Pkcs12Bundle", "Pkcs12Password", "Certificate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneProvisioning), global::Ondewo.Vtsi.SoftphoneProvisioning.Parser, new[]{ "SoftphoneAccountName", "TransportSecurity", "SipDomain", "SipAddress", "SipServerHost", "SipServerPort", "SipTransport", "OutboundProxy", "Username", "AuthUsername", "Realm", "SrtpMode", "Codecs", "ServerCaCertificatePem", "ServerCertificateSha256Fingerprint", "ClientCertificateName", "ClientCertificateSha256Fingerprint", "ClientCertificateExpireTime", "ZoiperInstructions", "ClientCertificateSupportNote" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneAccountFilter), global::Ondewo.Vtsi.SoftphoneAccountFilter.Parser, new[]{ "TransportSecurities", "Enabled", "Labels", "DisplayNameContains", "SipUsernameContains", "CertificateExpiresBefore", "CertificateExpiresAfter" }, new[]{ "Enabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneAccountFilter), global::Ondewo.Vtsi.SoftphoneAccountFilter.Parser, new[]{ "TransportSecurities", "Enabled", "Labels", "DisplayNameContains", "SipUsernameContains", "CertificateExpiresBefore", "CertificateExpiresAfter", "Locked" }, new[]{ "Enabled", "Locked" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneCertificateFilter), global::Ondewo.Vtsi.SoftphoneCertificateFilter.Parser, new[]{ "Statuses", "ExpiresBefore", "ExpiresAfter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneAccountSorting), global::Ondewo.Vtsi.SoftphoneAccountSorting.Parser, new[]{ "SortingField", "SortingMode" }, new[]{ "SortingField", "SortingMode" }, new[]{ typeof(global::Ondewo.Vtsi.SoftphoneAccountSorting.Types.SoftphoneAccountSortingField) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateSoftphoneAccountRequest), global::Ondewo.Vtsi.CreateSoftphoneAccountRequest.Parser, new[]{ "VtsiProjectName", "SoftphoneAccount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateSoftphoneAccountRequest), global::Ondewo.Vtsi.CreateSoftphoneAccountRequest.Parser, new[]{ "VtsiProjectName", "SoftphoneAccount", "IdempotencyKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateSoftphoneAccountResponse), global::Ondewo.Vtsi.CreateSoftphoneAccountResponse.Parser, new[]{ "SoftphoneAccount", "Credentials" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetSoftphoneAccountRequest), global::Ondewo.Vtsi.GetSoftphoneAccountRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateSoftphoneAccountRequest), global::Ondewo.Vtsi.UpdateSoftphoneAccountRequest.Parser, new[]{ "SoftphoneAccount", "UpdateMask" }, null, null, null, null),
@@ -204,7 +225,10 @@ namespace Ondewo.Vtsi {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListSoftphoneCertificatesResponse), global::Ondewo.Vtsi.ListSoftphoneCertificatesResponse.Parser, new[]{ "SoftphoneCertificates", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetSoftphoneCertificateRequest), global::Ondewo.Vtsi.GetSoftphoneCertificateRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RevokeSoftphoneCertificateRequest), global::Ondewo.Vtsi.RevokeSoftphoneCertificateRequest.Parser, new[]{ "Name", "Reason" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest), global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest), global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest), global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneRegistration), global::Ondewo.Vtsi.SoftphoneRegistration.Parser, new[]{ "SoftphoneAccountName", "Contacts", "ObservedAt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftphoneContact), global::Ondewo.Vtsi.SoftphoneContact.Parser, new[]{ "Uri", "UserAgent", "SourceAddress", "ExpireTime", "RoundTripMs", "Status" }, null, null, null, null)
           }));
     }
     #endregion
@@ -271,6 +295,36 @@ namespace Ondewo.Vtsi {
     /// but no longer gets its holder the account.
     /// </summary>
     [pbr::OriginalName("SOFTPHONE_CERTIFICATE_STATUS_REVOKED")] Revoked = 3,
+  }
+
+  /// <summary>
+  /// Reachability of one registered contact of a softphone account, as the project&amp;apos;s Asterisk
+  /// qualifies it (SIP &lt;code>OPTIONS&lt;/code>).
+  /// </summary>
+  public enum SoftphoneContactStatus {
+    /// <summary>
+    /// Unspecified. Never returned.
+    /// </summary>
+    [pbr::OriginalName("SOFTPHONE_CONTACT_STATUS_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The contact answered the last qualify (&lt;code>Avail&lt;/code>); &lt;code>round_trip_ms&lt;/code> is set.
+    /// </summary>
+    [pbr::OriginalName("SOFTPHONE_CONTACT_STATUS_AVAILABLE")] Available = 1,
+    /// <summary>
+    /// The contact did not answer the last qualify (&lt;code>Unavail&lt;/code>): the device is registered but
+    /// currently unreachable, e.g. offline or behind a NAT that expired. Calls to it fail until it answers
+    /// again or its registration expires.
+    /// </summary>
+    [pbr::OriginalName("SOFTPHONE_CONTACT_STATUS_UNAVAILABLE")] Unavailable = 2,
+    /// <summary>
+    /// The contact is not qualified (&lt;code>NonQual&lt;/code>), so its reachability is not checked.
+    /// </summary>
+    [pbr::OriginalName("SOFTPHONE_CONTACT_STATUS_NOT_QUALIFIED")] NotQualified = 3,
+    /// <summary>
+    /// The Asterisk has not determined the reachability yet (&lt;code>Unknown&lt;/code>, &lt;code>Created&lt;/code>),
+    /// e.g. right after the registration.
+    /// </summary>
+    [pbr::OriginalName("SOFTPHONE_CONTACT_STATUS_UNKNOWN")] Unknown = 4,
   }
 
   /// <summary>
@@ -351,6 +405,9 @@ namespace Ondewo.Vtsi {
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       modifiedBy_ = other.modifiedBy_;
       modifiedAt_ = other.modifiedAt_ != null ? other.modifiedAt_.Clone() : null;
+      locked_ = other.locked_;
+      lockedAt_ = other.lockedAt_ != null ? other.lockedAt_.Clone() : null;
+      lockedReason_ = other.lockedReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -517,6 +574,10 @@ namespace Ondewo.Vtsi {
     /// Free-form labels for organising and filtering accounts, e.g. &lt;code>team: support&lt;/code>. Keys: 1 to
     /// 63 characters of &lt;pre>&lt;code>[a-z0-9_.-]&lt;/code>&lt;/pre>, starting with a letter; values: at most 256
     /// characters; at most 64 entries. Updatable (the whole map is replaced).
+    /// Control characters: a KEY cannot contain one (the key pattern refuses it with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>); a VALUE is checked for its length only, so control characters
+    /// (including line breaks) are accepted and stored and returned verbatim. Clients that display or log
+    /// label values must escape them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -664,6 +725,57 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "locked" field.</summary>
+    public const int LockedFieldNumber = 19;
+    private bool locked_;
+    /// <summary>
+    /// Output only. Whether the account is LOCKED: &lt;code>RevokeSoftphoneCertificate&lt;/code> revoked its
+    /// ACTIVE certificate, so the account is removed from the Asterisk and cannot register or call until
+    /// &lt;code>RotateSoftphoneCredentials&lt;/code> unlocks it. Independent of &lt;code>enabled&lt;/code>: an account
+    /// is usable only when it is enabled AND not locked.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Locked {
+      get { return locked_; }
+      set {
+        locked_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "locked_at" field.</summary>
+    public const int LockedAtFieldNumber = 20;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lockedAt_;
+    /// <summary>
+    /// Output only. When the account was locked. Unset when it is not locked (also for an account locked
+    /// by a server older than 9.1.0 whose lock time is not known).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LockedAt {
+      get { return lockedAt_; }
+      set {
+        lockedAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "locked_reason" field.</summary>
+    public const int LockedReasonFieldNumber = 21;
+    private string lockedReason_ = "";
+    /// <summary>
+    /// Output only. Why the account was locked: the &lt;code>reason&lt;/code> given to the
+    /// &lt;code>RevokeSoftphoneCertificate&lt;/code> that locked it (empty when none was given or the account is
+    /// not locked).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LockedReason {
+      get { return lockedReason_; }
+      set {
+        lockedReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -697,6 +809,9 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (ModifiedBy != other.ModifiedBy) return false;
       if (!object.Equals(ModifiedAt, other.ModifiedAt)) return false;
+      if (Locked != other.Locked) return false;
+      if (!object.Equals(LockedAt, other.LockedAt)) return false;
+      if (LockedReason != other.LockedReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -722,6 +837,9 @@ namespace Ondewo.Vtsi {
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (ModifiedBy.Length != 0) hash ^= ModifiedBy.GetHashCode();
       if (modifiedAt_ != null) hash ^= ModifiedAt.GetHashCode();
+      if (Locked != false) hash ^= Locked.GetHashCode();
+      if (lockedAt_ != null) hash ^= LockedAt.GetHashCode();
+      if (LockedReason.Length != 0) hash ^= LockedReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -806,6 +924,18 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ModifiedAt);
       }
+      if (Locked != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(Locked);
+      }
+      if (lockedAt_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(LockedAt);
+      }
+      if (LockedReason.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(LockedReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -882,6 +1012,18 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ModifiedAt);
       }
+      if (Locked != false) {
+        output.WriteRawTag(152, 1);
+        output.WriteBool(Locked);
+      }
+      if (lockedAt_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(LockedAt);
+      }
+      if (LockedReason.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(LockedReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -941,6 +1083,15 @@ namespace Ondewo.Vtsi {
       }
       if (modifiedAt_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ModifiedAt);
+      }
+      if (Locked != false) {
+        size += 2 + 1;
+      }
+      if (lockedAt_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(LockedAt);
+      }
+      if (LockedReason.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LockedReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1015,6 +1166,18 @@ namespace Ondewo.Vtsi {
           ModifiedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ModifiedAt.MergeFrom(other.ModifiedAt);
+      }
+      if (other.Locked != false) {
+        Locked = other.Locked;
+      }
+      if (other.lockedAt_ != null) {
+        if (lockedAt_ == null) {
+          LockedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LockedAt.MergeFrom(other.LockedAt);
+      }
+      if (other.LockedReason.Length != 0) {
+        LockedReason = other.LockedReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1119,6 +1282,21 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(ModifiedAt);
             break;
           }
+          case 152: {
+            Locked = input.ReadBool();
+            break;
+          }
+          case 162: {
+            if (lockedAt_ == null) {
+              LockedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LockedAt);
+            break;
+          }
+          case 170: {
+            LockedReason = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1220,6 +1398,21 @@ namespace Ondewo.Vtsi {
               ModifiedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ModifiedAt);
+            break;
+          }
+          case 152: {
+            Locked = input.ReadBool();
+            break;
+          }
+          case 162: {
+            if (lockedAt_ == null) {
+              LockedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LockedAt);
+            break;
+          }
+          case 170: {
+            LockedReason = input.ReadString();
             break;
           }
         }
@@ -3502,6 +3695,7 @@ namespace Ondewo.Vtsi {
       sipUsernameContains_ = other.sipUsernameContains_;
       certificateExpiresBefore_ = other.certificateExpiresBefore_ != null ? other.certificateExpiresBefore_.Clone() : null;
       certificateExpiresAfter_ = other.certificateExpiresAfter_ != null ? other.certificateExpiresAfter_.Clone() : null;
+      locked_ = other.locked_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3636,6 +3830,37 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "locked" field.</summary>
+    public const int LockedFieldNumber = 8;
+    private readonly static bool LockedDefaultValue = false;
+
+    private bool locked_;
+    /// <summary>
+    /// Only locked (&lt;code>true&lt;/code>) or only unlocked (&lt;code>false&lt;/code>) accounts, see
+    /// &lt;code>SoftphoneAccount.locked&lt;/code>. Unset matches both.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Locked {
+      get { if ((_hasBits0 & 2) != 0) { return locked_; } else { return LockedDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        locked_ = value;
+      }
+    }
+    /// <summary>Gets whether the "locked" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocked {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "locked" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocked() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3658,6 +3883,7 @@ namespace Ondewo.Vtsi {
       if (SipUsernameContains != other.SipUsernameContains) return false;
       if (!object.Equals(CertificateExpiresBefore, other.CertificateExpiresBefore)) return false;
       if (!object.Equals(CertificateExpiresAfter, other.CertificateExpiresAfter)) return false;
+      if (Locked != other.Locked) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3672,6 +3898,7 @@ namespace Ondewo.Vtsi {
       if (SipUsernameContains.Length != 0) hash ^= SipUsernameContains.GetHashCode();
       if (certificateExpiresBefore_ != null) hash ^= CertificateExpiresBefore.GetHashCode();
       if (certificateExpiresAfter_ != null) hash ^= CertificateExpiresAfter.GetHashCode();
+      if (HasLocked) hash ^= Locked.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3712,6 +3939,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(58);
         output.WriteMessage(CertificateExpiresAfter);
       }
+      if (HasLocked) {
+        output.WriteRawTag(64);
+        output.WriteBool(Locked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3744,6 +3975,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(58);
         output.WriteMessage(CertificateExpiresAfter);
       }
+      if (HasLocked) {
+        output.WriteRawTag(64);
+        output.WriteBool(Locked);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3770,6 +4005,9 @@ namespace Ondewo.Vtsi {
       }
       if (certificateExpiresAfter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CertificateExpiresAfter);
+      }
+      if (HasLocked) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3805,6 +4043,9 @@ namespace Ondewo.Vtsi {
           CertificateExpiresAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CertificateExpiresAfter.MergeFrom(other.CertificateExpiresAfter);
+      }
+      if (other.HasLocked) {
+        Locked = other.Locked;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3860,6 +4101,10 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(CertificateExpiresAfter);
             break;
           }
+          case 64: {
+            Locked = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3912,6 +4157,10 @@ namespace Ondewo.Vtsi {
               CertificateExpiresAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CertificateExpiresAfter);
+            break;
+          }
+          case 64: {
+            Locked = input.ReadBool();
             break;
           }
         }
@@ -4573,6 +4822,7 @@ namespace Ondewo.Vtsi {
     public CreateSoftphoneAccountRequest(CreateSoftphoneAccountRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       softphoneAccount_ = other.softphoneAccount_ != null ? other.softphoneAccount_.Clone() : null;
+      idempotencyKey_ = other.idempotencyKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4614,6 +4864,38 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 3;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key: at most 255 printable ASCII characters, no whitespace; empty means
+    /// no deduplication. The key is scoped to the VTSI project and to this RPC and retained for 24 hours by
+    /// default (the server&amp;apos;s &lt;code>ONDEWO_VTSI_IDEMPOTENCY_KEY_RETENTION_S&lt;/code>), whichever server
+    /// replica a retry reaches.
+    /// &lt;p>A retry carrying the same key and the same request does NOT create a second account. Because the
+    /// server keeps no copy of the one-time secrets it handed out, it cannot replay the first response;
+    /// instead the retry ROTATES the credentials of the account the first attempt created, exactly like
+    /// &lt;code>RotateSoftphoneCredentials&lt;/code> (the SIP password always, and a new certificate for a
+    /// &lt;code>SOFTPHONE_TRANSPORT_SECURITY_CLIENT_CERTIFICATE&lt;/code> account), and returns the account with
+    /// the NEW one-time secrets. The secrets of the first response, if anyone received them, stop working;
+    /// a lost response is therefore always recoverable and never leaves two valid sets of secrets. This
+    /// grants nothing a caller could not do anyway: both RPCs require the same role.&lt;/p>
+    /// &lt;p>Reusing a key with a different request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A retry that
+    /// arrives while the first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be retried
+    /// later. A first attempt that fails stores nothing, so a retry after a failure runs the create again.
+    /// A retry after the account was deleted is &lt;code>NOT_FOUND&lt;/code>; a retry while the account is
+    /// &lt;code>locked&lt;/code> is refused with &lt;code>FAILED_PRECONDITION&lt;/code> (unlock it deliberately with
+    /// &lt;code>RotateSoftphoneCredentials&lt;/code>: a replayed key must not undo a revocation).&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4631,6 +4913,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(SoftphoneAccount, other.SoftphoneAccount)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4640,6 +4923,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (softphoneAccount_ != null) hash ^= SoftphoneAccount.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4666,6 +4950,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(SoftphoneAccount);
       }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4684,6 +4972,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(SoftphoneAccount);
       }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4699,6 +4991,9 @@ namespace Ondewo.Vtsi {
       }
       if (softphoneAccount_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SoftphoneAccount);
+      }
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4720,6 +5015,9 @@ namespace Ondewo.Vtsi {
           SoftphoneAccount = new global::Ondewo.Vtsi.SoftphoneAccount();
         }
         SoftphoneAccount.MergeFrom(other.SoftphoneAccount);
+      }
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4751,6 +5049,10 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(SoftphoneAccount);
             break;
           }
+          case 26: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4779,6 +5081,10 @@ namespace Ondewo.Vtsi {
               SoftphoneAccount = new global::Ondewo.Vtsi.SoftphoneAccount();
             }
             input.ReadMessage(SoftphoneAccount);
+            break;
+          }
+          case 26: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }
@@ -4859,6 +5165,7 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// ONE-TIME secrets: the SIP password and, for
     /// &lt;code>SOFTPHONE_TRANSPORT_SECURITY_CLIENT_CERTIFICATE&lt;/code>, the PKCS#12 bundle and its password.
+    /// For a replayed &lt;code>idempotency_key&lt;/code>: the newly rotated secrets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8715,6 +9022,966 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneRegistration">Softphones.GetSoftphoneRegistration&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetSoftphoneRegistrationRequest : pb::IMessage<GetSoftphoneRegistrationRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetSoftphoneRegistrationRequest> _parser = new pb::MessageParser<GetSoftphoneRegistrationRequest>(() => new GetSoftphoneRegistrationRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetSoftphoneRegistrationRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.SoftphonesReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSoftphoneRegistrationRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSoftphoneRegistrationRequest(GetSoftphoneRegistrationRequest other) : this() {
+      name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSoftphoneRegistrationRequest Clone() {
+      return new GetSoftphoneRegistrationRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Resource name of the account.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/softphoneAccounts/&amp;lt;softphone_account_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>SoftphoneRegistration&lt;/code> field paths to populate, e.g.
+    /// &lt;code>contacts&lt;/code>, &lt;code>observed_at&lt;/code>. &lt;code>softphone_account_name&lt;/code> is always
+    /// populated. Unset or empty returns every field. An unknown path, or a path below
+    /// &lt;code>contacts&lt;/code> (a repeated field), is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetSoftphoneRegistrationRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetSoftphoneRegistrationRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetSoftphoneRegistrationRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The live registrations of one softphone account on its project&amp;apos;s Asterisk. Every field is output
+  /// only. Never carries a secret.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SoftphoneRegistration : pb::IMessage<SoftphoneRegistration>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SoftphoneRegistration> _parser = new pb::MessageParser<SoftphoneRegistration>(() => new SoftphoneRegistration());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SoftphoneRegistration> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.SoftphonesReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneRegistration() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneRegistration(SoftphoneRegistration other) : this() {
+      softphoneAccountName_ = other.softphoneAccountName_;
+      contacts_ = other.contacts_.Clone();
+      observedAt_ = other.observedAt_ != null ? other.observedAt_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneRegistration Clone() {
+      return new SoftphoneRegistration(this);
+    }
+
+    /// <summary>Field number for the "softphone_account_name" field.</summary>
+    public const int SoftphoneAccountNameFieldNumber = 1;
+    private string softphoneAccountName_ = "";
+    /// <summary>
+    /// Resource name of the softphone account.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/softphoneAccounts/&amp;lt;softphone_account_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SoftphoneAccountName {
+      get { return softphoneAccountName_; }
+      set {
+        softphoneAccountName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "contacts" field.</summary>
+    public const int ContactsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.SoftphoneContact> _repeated_contacts_codec
+        = pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.SoftphoneContact.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.SoftphoneContact> contacts_ = new pbc::RepeatedField<global::Ondewo.Vtsi.SoftphoneContact>();
+    /// <summary>
+    /// The currently registered contacts (devices), at most the account&amp;apos;s &lt;code>max_contacts&lt;/code>,
+    /// ordered by &lt;code>expire_time&lt;/code>, latest first. Empty when no device is registered.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.SoftphoneContact> Contacts {
+      get { return contacts_; }
+    }
+
+    /// <summary>Field number for the "observed_at" field.</summary>
+    public const int ObservedAtFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp observedAt_;
+    /// <summary>
+    /// When the server read the registrations from the Asterisk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ObservedAt {
+      get { return observedAt_; }
+      set {
+        observedAt_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SoftphoneRegistration);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SoftphoneRegistration other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SoftphoneAccountName != other.SoftphoneAccountName) return false;
+      if(!contacts_.Equals(other.contacts_)) return false;
+      if (!object.Equals(ObservedAt, other.ObservedAt)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SoftphoneAccountName.Length != 0) hash ^= SoftphoneAccountName.GetHashCode();
+      hash ^= contacts_.GetHashCode();
+      if (observedAt_ != null) hash ^= ObservedAt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SoftphoneAccountName);
+      }
+      contacts_.WriteTo(output, _repeated_contacts_codec);
+      if (observedAt_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObservedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SoftphoneAccountName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SoftphoneAccountName);
+      }
+      contacts_.WriteTo(ref output, _repeated_contacts_codec);
+      if (observedAt_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObservedAt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SoftphoneAccountName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SoftphoneAccountName);
+      }
+      size += contacts_.CalculateSize(_repeated_contacts_codec);
+      if (observedAt_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObservedAt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SoftphoneRegistration other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SoftphoneAccountName.Length != 0) {
+        SoftphoneAccountName = other.SoftphoneAccountName;
+      }
+      contacts_.Add(other.contacts_);
+      if (other.observedAt_ != null) {
+        if (observedAt_ == null) {
+          ObservedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ObservedAt.MergeFrom(other.ObservedAt);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 18: {
+            contacts_.AddEntriesFrom(input, _repeated_contacts_codec);
+            break;
+          }
+          case 26: {
+            if (observedAt_ == null) {
+              ObservedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObservedAt);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SoftphoneAccountName = input.ReadString();
+            break;
+          }
+          case 18: {
+            contacts_.AddEntriesFrom(ref input, _repeated_contacts_codec);
+            break;
+          }
+          case 26: {
+            if (observedAt_ == null) {
+              ObservedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObservedAt);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// One registered contact (device) of a softphone account.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SoftphoneContact : pb::IMessage<SoftphoneContact>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SoftphoneContact> _parser = new pb::MessageParser<SoftphoneContact>(() => new SoftphoneContact());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SoftphoneContact> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.SoftphonesReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneContact() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneContact(SoftphoneContact other) : this() {
+      uri_ = other.uri_;
+      userAgent_ = other.userAgent_;
+      sourceAddress_ = other.sourceAddress_;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      roundTripMs_ = other.roundTripMs_;
+      status_ = other.status_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SoftphoneContact Clone() {
+      return new SoftphoneContact(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 1;
+    private string uri_ = "";
+    /// <summary>
+    /// The contact URI the device registered, e.g.
+    /// &lt;code>sip:alice@198.51.100.7:52114;transport=TLS&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return uri_; }
+      set {
+        uri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "user_agent" field.</summary>
+    public const int UserAgentFieldNumber = 2;
+    private string userAgent_ = "";
+    /// <summary>
+    /// The &lt;code>User-Agent&lt;/code> header of the device&amp;apos;s registration, e.g. &lt;code>Z 5.6.1 v2.10.20.3&lt;/code>.
+    /// Empty when the device sent none.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserAgent {
+      get { return userAgent_; }
+      set {
+        userAgent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_address" field.</summary>
+    public const int SourceAddressFieldNumber = 3;
+    private string sourceAddress_ = "";
+    /// <summary>
+    /// The source address the registration arrived from, as &lt;code>host:port&lt;/code> (an IPv6 host in
+    /// brackets). It can differ from the host of &lt;code>uri&lt;/code> behind a NAT.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceAddress {
+      get { return sourceAddress_; }
+      set {
+        sourceAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// When the registration expires unless the device refreshes it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "round_trip_ms" field.</summary>
+    public const int RoundTripMsFieldNumber = 5;
+    private double roundTripMs_;
+    /// <summary>
+    /// Round-trip time of the last qualify (SIP &lt;code>OPTIONS&lt;/code>) in milliseconds. &lt;code>0&lt;/code> unless
+    /// &lt;code>status&lt;/code> is &lt;code>SOFTPHONE_CONTACT_STATUS_AVAILABLE&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double RoundTripMs {
+      get { return roundTripMs_; }
+      set {
+        roundTripMs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 6;
+    private global::Ondewo.Vtsi.SoftphoneContactStatus status_ = global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified;
+    /// <summary>
+    /// Reachability of the contact.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.SoftphoneContactStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SoftphoneContact);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SoftphoneContact other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      if (UserAgent != other.UserAgent) return false;
+      if (SourceAddress != other.SourceAddress) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(RoundTripMs, other.RoundTripMs)) return false;
+      if (Status != other.Status) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
+      if (SourceAddress.Length != 0) hash ^= SourceAddress.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      if (RoundTripMs != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RoundTripMs);
+      if (Status != global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserAgent);
+      }
+      if (SourceAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceAddress);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExpireTime);
+      }
+      if (RoundTripMs != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(RoundTripMs);
+      }
+      if (Status != global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Uri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Uri);
+      }
+      if (UserAgent.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(UserAgent);
+      }
+      if (SourceAddress.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SourceAddress);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ExpireTime);
+      }
+      if (RoundTripMs != 0D) {
+        output.WriteRawTag(41);
+        output.WriteDouble(RoundTripMs);
+      }
+      if (Status != global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Status);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Uri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (UserAgent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserAgent);
+      }
+      if (SourceAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceAddress);
+      }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      if (RoundTripMs != 0D) {
+        size += 1 + 8;
+      }
+      if (Status != global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SoftphoneContact other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Uri.Length != 0) {
+        Uri = other.Uri;
+      }
+      if (other.UserAgent.Length != 0) {
+        UserAgent = other.UserAgent;
+      }
+      if (other.SourceAddress.Length != 0) {
+        SourceAddress = other.SourceAddress;
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      if (other.RoundTripMs != 0D) {
+        RoundTripMs = other.RoundTripMs;
+      }
+      if (other.Status != global::Ondewo.Vtsi.SoftphoneContactStatus.Unspecified) {
+        Status = other.Status;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserAgent = input.ReadString();
+            break;
+          }
+          case 26: {
+            SourceAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 41: {
+            RoundTripMs = input.ReadDouble();
+            break;
+          }
+          case 48: {
+            Status = (global::Ondewo.Vtsi.SoftphoneContactStatus) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 18: {
+            UserAgent = input.ReadString();
+            break;
+          }
+          case 26: {
+            SourceAddress = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 41: {
+            RoundTripMs = input.ReadDouble();
+            break;
+          }
+          case 48: {
+            Status = (global::Ondewo.Vtsi.SoftphoneContactStatus) input.ReadEnum();
             break;
           }
         }

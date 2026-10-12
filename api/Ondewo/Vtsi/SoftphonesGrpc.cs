@@ -51,6 +51,10 @@ namespace Ondewo.Vtsi {
   /// not be updated, the RPC fails with &lt;code>FAILED_PRECONDITION&lt;/code>; the stored change is applied by
   /// the next successful change or deployment. &lt;code>CreateSoftphoneAccount&lt;/code> and
   /// &lt;code>RotateSoftphoneCredentials&lt;/code> return their one-time secrets even then.&lt;/p>
+  /// &lt;p>Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller
+  /// without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires
+  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the account&amp;apos;s project, otherwise
+  /// &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project.&lt;/p>
   /// </summary>
   public static partial class Softphones
   {
@@ -125,6 +129,10 @@ namespace Ondewo.Vtsi {
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest> __Marshaller_ondewo_vtsi_GetSoftphoneProvisioningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.SoftphoneProvisioning> __Marshaller_ondewo_vtsi_SoftphoneProvisioning = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SoftphoneProvisioning.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest> __Marshaller_ondewo_vtsi_GetSoftphoneRegistrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.SoftphoneRegistration> __Marshaller_ondewo_vtsi_SoftphoneRegistration = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SoftphoneRegistration.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.CreateSoftphoneAccountRequest, global::Ondewo.Vtsi.CreateSoftphoneAccountResponse> __Method_CreateSoftphoneAccount = new grpc::Method<global::Ondewo.Vtsi.CreateSoftphoneAccountRequest, global::Ondewo.Vtsi.CreateSoftphoneAccountResponse>(
@@ -206,6 +214,14 @@ namespace Ondewo.Vtsi {
         __Marshaller_ondewo_vtsi_GetSoftphoneProvisioningRequest,
         __Marshaller_ondewo_vtsi_SoftphoneProvisioning);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest, global::Ondewo.Vtsi.SoftphoneRegistration> __Method_GetSoftphoneRegistration = new grpc::Method<global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest, global::Ondewo.Vtsi.SoftphoneRegistration>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSoftphoneRegistration",
+        __Marshaller_ondewo_vtsi_GetSoftphoneRegistrationRequest,
+        __Marshaller_ondewo_vtsi_SoftphoneRegistration);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -231,6 +247,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>The account is reachable on either TLS port only from the project&amp;apos;s
       /// &lt;code>softphone_permit_cidrs&lt;/code> (default: the server&amp;apos;s list, private networks unless the
       /// operator changed it); see &lt;code>AsteriskConfigsVariables.softphone_permit_cidrs&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: with &lt;code>idempotency_key&lt;/code> a retry after a lost response does not create a
+      /// second account; it ROTATES the credentials of the account the first attempt created and returns
+      /// NEW one-time secrets (see &lt;code>CreateSoftphoneAccountRequest.idempotency_key&lt;/code>). Without a key a
+      /// retry is answered &lt;code>ALREADY_EXISTS&lt;/code> for the same &lt;code>sip_username&lt;/code>; recover the
+      /// lost secrets then with &lt;code>RotateSoftphoneCredentials&lt;/code>.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED&lt;/code> (a replayed key:
+      /// &lt;code>VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED&lt;/code>).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -278,8 +301,19 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Deletes a softphone account. Its endpoint is removed from the Asterisk, its registrations are
-      /// dropped and every certificate it holds is revoked. Deletion is permanent.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist.&lt;/p>
+      /// dropped, its calls in progress are hung up and every certificate it holds is revoked. Deletion is
+      /// permanent.&lt;/p>
+      /// &lt;p>Not idempotent: deleting an account that no longer exists (also a retry of a deletion that
+      /// succeeded) is &lt;code>NOT_FOUND&lt;/code>. Allowed in every project status, also while the project is
+      /// being deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name; &lt;code>FAILED_PRECONDITION&lt;/code> when the deletion was STORED but the running
+      /// Asterisk of a deployed project could not be updated (reload failed, container unreachable, or the
+      /// project&amp;apos;s Asterisk configuration stayed locked by another change for too long): the account is
+      /// gone from the database and its removal from the Asterisk is applied by the next successful change or
+      /// deployment, so a retry is &lt;code>NOT_FOUND&lt;/code>; &lt;code>INTERNAL&lt;/code> when the account was removed
+      /// but one of its calls could not be hung up. Never &lt;code>ABORTED&lt;/code>: a deletion is not compared
+      /// against concurrent changes, it wins over them.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -379,7 +413,14 @@ namespace Ondewo.Vtsi {
       /// Revoking an already revoked certificate is idempotent and keeps the original revocation time and
       /// reason.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the certificate does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a malformed name or an over-long reason.&lt;/p>
+      /// for a malformed name or an over-long reason; &lt;code>FAILED_PRECONDITION&lt;/code> when the revocation
+      /// (and the lock) was STORED but the running Asterisk of a deployed project could not be updated
+      /// (reload failed, container unreachable, or the project&amp;apos;s Asterisk configuration stayed locked by
+      /// another change for too long): it is applied by the next successful change or deployment, and a
+      /// retry is idempotent; &lt;code>ABORTED&lt;/code> when the account was changed concurrently (e.g. a rotation
+      /// or an update committed between the read and the write), in which case nothing was stored and the
+      /// request can be retried.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED&lt;/code> (not for an idempotent repeat).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -406,6 +447,29 @@ namespace Ondewo.Vtsi {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.SoftphoneProvisioning> GetSoftphoneProvisioning(global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Returns the CURRENT registrations (contacts) of a softphone account, read LIVE from the running
+      /// Asterisk of the project at the moment of the request (in the manner of &lt;code>pjsip show
+      /// contacts&lt;/code>). Nothing is stored: two calls may differ, and an empty &lt;code>contacts&lt;/code> list
+      /// means no device is registered right now (a disabled or locked account never has one). Answers
+      /// &amp;quot;is the softphone of this account connected, from where, with which client, and is it
+      /// reachable?&amp;quot;.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>FAILED_PRECONDITION&lt;/code> if the
+      /// project is not &lt;code>DEPLOYED&lt;/code> (there is no running Asterisk to ask);
+      /// &lt;code>UNAVAILABLE&lt;/code> if the project&amp;apos;s Asterisk could not be queried (container not running
+      /// or not answering within the server&amp;apos;s timeout); retry later.&lt;/p>
+      /// &lt;p>Read only, no event. Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.SoftphoneRegistration> GetSoftphoneRegistration(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -454,6 +518,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>The account is reachable on either TLS port only from the project&amp;apos;s
       /// &lt;code>softphone_permit_cidrs&lt;/code> (default: the server&amp;apos;s list, private networks unless the
       /// operator changed it); see &lt;code>AsteriskConfigsVariables.softphone_permit_cidrs&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: with &lt;code>idempotency_key&lt;/code> a retry after a lost response does not create a
+      /// second account; it ROTATES the credentials of the account the first attempt created and returns
+      /// NEW one-time secrets (see &lt;code>CreateSoftphoneAccountRequest.idempotency_key&lt;/code>). Without a key a
+      /// retry is answered &lt;code>ALREADY_EXISTS&lt;/code> for the same &lt;code>sip_username&lt;/code>; recover the
+      /// lost secrets then with &lt;code>RotateSoftphoneCredentials&lt;/code>.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED&lt;/code> (a replayed key:
+      /// &lt;code>VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED&lt;/code>).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -480,6 +551,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>The account is reachable on either TLS port only from the project&amp;apos;s
       /// &lt;code>softphone_permit_cidrs&lt;/code> (default: the server&amp;apos;s list, private networks unless the
       /// operator changed it); see &lt;code>AsteriskConfigsVariables.softphone_permit_cidrs&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: with &lt;code>idempotency_key&lt;/code> a retry after a lost response does not create a
+      /// second account; it ROTATES the credentials of the account the first attempt created and returns
+      /// NEW one-time secrets (see &lt;code>CreateSoftphoneAccountRequest.idempotency_key&lt;/code>). Without a key a
+      /// retry is answered &lt;code>ALREADY_EXISTS&lt;/code> for the same &lt;code>sip_username&lt;/code>; recover the
+      /// lost secrets then with &lt;code>RotateSoftphoneCredentials&lt;/code>.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED&lt;/code> (a replayed key:
+      /// &lt;code>VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED&lt;/code>).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -504,6 +582,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>The account is reachable on either TLS port only from the project&amp;apos;s
       /// &lt;code>softphone_permit_cidrs&lt;/code> (default: the server&amp;apos;s list, private networks unless the
       /// operator changed it); see &lt;code>AsteriskConfigsVariables.softphone_permit_cidrs&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: with &lt;code>idempotency_key&lt;/code> a retry after a lost response does not create a
+      /// second account; it ROTATES the credentials of the account the first attempt created and returns
+      /// NEW one-time secrets (see &lt;code>CreateSoftphoneAccountRequest.idempotency_key&lt;/code>). Without a key a
+      /// retry is answered &lt;code>ALREADY_EXISTS&lt;/code> for the same &lt;code>sip_username&lt;/code>; recover the
+      /// lost secrets then with &lt;code>RotateSoftphoneCredentials&lt;/code>.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED&lt;/code> (a replayed key:
+      /// &lt;code>VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED&lt;/code>).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -530,6 +615,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>The account is reachable on either TLS port only from the project&amp;apos;s
       /// &lt;code>softphone_permit_cidrs&lt;/code> (default: the server&amp;apos;s list, private networks unless the
       /// operator changed it); see &lt;code>AsteriskConfigsVariables.softphone_permit_cidrs&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: with &lt;code>idempotency_key&lt;/code> a retry after a lost response does not create a
+      /// second account; it ROTATES the credentials of the account the first attempt created and returns
+      /// NEW one-time secrets (see &lt;code>CreateSoftphoneAccountRequest.idempotency_key&lt;/code>). Without a key a
+      /// retry is answered &lt;code>ALREADY_EXISTS&lt;/code> for the same &lt;code>sip_username&lt;/code>; recover the
+      /// lost secrets then with &lt;code>RotateSoftphoneCredentials&lt;/code>.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED&lt;/code> (a replayed key:
+      /// &lt;code>VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED&lt;/code>).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -681,8 +773,19 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes a softphone account. Its endpoint is removed from the Asterisk, its registrations are
-      /// dropped and every certificate it holds is revoked. Deletion is permanent.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist.&lt;/p>
+      /// dropped, its calls in progress are hung up and every certificate it holds is revoked. Deletion is
+      /// permanent.&lt;/p>
+      /// &lt;p>Not idempotent: deleting an account that no longer exists (also a retry of a deletion that
+      /// succeeded) is &lt;code>NOT_FOUND&lt;/code>. Allowed in every project status, also while the project is
+      /// being deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name; &lt;code>FAILED_PRECONDITION&lt;/code> when the deletion was STORED but the running
+      /// Asterisk of a deployed project could not be updated (reload failed, container unreachable, or the
+      /// project&amp;apos;s Asterisk configuration stayed locked by another change for too long): the account is
+      /// gone from the database and its removal from the Asterisk is applied by the next successful change or
+      /// deployment, so a retry is &lt;code>NOT_FOUND&lt;/code>; &lt;code>INTERNAL&lt;/code> when the account was removed
+      /// but one of its calls could not be hung up. Never &lt;code>ABORTED&lt;/code>: a deletion is not compared
+      /// against concurrent changes, it wins over them.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -696,8 +799,19 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes a softphone account. Its endpoint is removed from the Asterisk, its registrations are
-      /// dropped and every certificate it holds is revoked. Deletion is permanent.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist.&lt;/p>
+      /// dropped, its calls in progress are hung up and every certificate it holds is revoked. Deletion is
+      /// permanent.&lt;/p>
+      /// &lt;p>Not idempotent: deleting an account that no longer exists (also a retry of a deletion that
+      /// succeeded) is &lt;code>NOT_FOUND&lt;/code>. Allowed in every project status, also while the project is
+      /// being deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name; &lt;code>FAILED_PRECONDITION&lt;/code> when the deletion was STORED but the running
+      /// Asterisk of a deployed project could not be updated (reload failed, container unreachable, or the
+      /// project&amp;apos;s Asterisk configuration stayed locked by another change for too long): the account is
+      /// gone from the database and its removal from the Asterisk is applied by the next successful change or
+      /// deployment, so a retry is &lt;code>NOT_FOUND&lt;/code>; &lt;code>INTERNAL&lt;/code> when the account was removed
+      /// but one of its calls could not be hung up. Never &lt;code>ABORTED&lt;/code>: a deletion is not compared
+      /// against concurrent changes, it wins over them.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -709,8 +823,19 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes a softphone account. Its endpoint is removed from the Asterisk, its registrations are
-      /// dropped and every certificate it holds is revoked. Deletion is permanent.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist.&lt;/p>
+      /// dropped, its calls in progress are hung up and every certificate it holds is revoked. Deletion is
+      /// permanent.&lt;/p>
+      /// &lt;p>Not idempotent: deleting an account that no longer exists (also a retry of a deletion that
+      /// succeeded) is &lt;code>NOT_FOUND&lt;/code>. Allowed in every project status, also while the project is
+      /// being deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name; &lt;code>FAILED_PRECONDITION&lt;/code> when the deletion was STORED but the running
+      /// Asterisk of a deployed project could not be updated (reload failed, container unreachable, or the
+      /// project&amp;apos;s Asterisk configuration stayed locked by another change for too long): the account is
+      /// gone from the database and its removal from the Asterisk is applied by the next successful change or
+      /// deployment, so a retry is &lt;code>NOT_FOUND&lt;/code>; &lt;code>INTERNAL&lt;/code> when the account was removed
+      /// but one of its calls could not be hung up. Never &lt;code>ABORTED&lt;/code>: a deletion is not compared
+      /// against concurrent changes, it wins over them.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -724,8 +849,19 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes a softphone account. Its endpoint is removed from the Asterisk, its registrations are
-      /// dropped and every certificate it holds is revoked. Deletion is permanent.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist.&lt;/p>
+      /// dropped, its calls in progress are hung up and every certificate it holds is revoked. Deletion is
+      /// permanent.&lt;/p>
+      /// &lt;p>Not idempotent: deleting an account that no longer exists (also a retry of a deletion that
+      /// succeeded) is &lt;code>NOT_FOUND&lt;/code>. Allowed in every project status, also while the project is
+      /// being deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name; &lt;code>FAILED_PRECONDITION&lt;/code> when the deletion was STORED but the running
+      /// Asterisk of a deployed project could not be updated (reload failed, container unreachable, or the
+      /// project&amp;apos;s Asterisk configuration stayed locked by another change for too long): the account is
+      /// gone from the database and its removal from the Asterisk is applied by the next successful change or
+      /// deployment, so a retry is &lt;code>NOT_FOUND&lt;/code>; &lt;code>INTERNAL&lt;/code> when the account was removed
+      /// but one of its calls could not be hung up. Never &lt;code>ABORTED&lt;/code>: a deletion is not compared
+      /// against concurrent changes, it wins over them.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1052,7 +1188,14 @@ namespace Ondewo.Vtsi {
       /// Revoking an already revoked certificate is idempotent and keeps the original revocation time and
       /// reason.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the certificate does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a malformed name or an over-long reason.&lt;/p>
+      /// for a malformed name or an over-long reason; &lt;code>FAILED_PRECONDITION&lt;/code> when the revocation
+      /// (and the lock) was STORED but the running Asterisk of a deployed project could not be updated
+      /// (reload failed, container unreachable, or the project&amp;apos;s Asterisk configuration stayed locked by
+      /// another change for too long): it is applied by the next successful change or deployment, and a
+      /// retry is idempotent; &lt;code>ABORTED&lt;/code> when the account was changed concurrently (e.g. a rotation
+      /// or an update committed between the read and the write), in which case nothing was stored and the
+      /// request can be retried.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED&lt;/code> (not for an idempotent repeat).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1077,7 +1220,14 @@ namespace Ondewo.Vtsi {
       /// Revoking an already revoked certificate is idempotent and keeps the original revocation time and
       /// reason.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the certificate does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a malformed name or an over-long reason.&lt;/p>
+      /// for a malformed name or an over-long reason; &lt;code>FAILED_PRECONDITION&lt;/code> when the revocation
+      /// (and the lock) was STORED but the running Asterisk of a deployed project could not be updated
+      /// (reload failed, container unreachable, or the project&amp;apos;s Asterisk configuration stayed locked by
+      /// another change for too long): it is applied by the next successful change or deployment, and a
+      /// retry is idempotent; &lt;code>ABORTED&lt;/code> when the account was changed concurrently (e.g. a rotation
+      /// or an update committed between the read and the write), in which case nothing was stored and the
+      /// request can be retried.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED&lt;/code> (not for an idempotent repeat).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1100,7 +1250,14 @@ namespace Ondewo.Vtsi {
       /// Revoking an already revoked certificate is idempotent and keeps the original revocation time and
       /// reason.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the certificate does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a malformed name or an over-long reason.&lt;/p>
+      /// for a malformed name or an over-long reason; &lt;code>FAILED_PRECONDITION&lt;/code> when the revocation
+      /// (and the lock) was STORED but the running Asterisk of a deployed project could not be updated
+      /// (reload failed, container unreachable, or the project&amp;apos;s Asterisk configuration stayed locked by
+      /// another change for too long): it is applied by the next successful change or deployment, and a
+      /// retry is idempotent; &lt;code>ABORTED&lt;/code> when the account was changed concurrently (e.g. a rotation
+      /// or an update committed between the read and the write), in which case nothing was stored and the
+      /// request can be retried.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED&lt;/code> (not for an idempotent repeat).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1125,7 +1282,14 @@ namespace Ondewo.Vtsi {
       /// Revoking an already revoked certificate is idempotent and keeps the original revocation time and
       /// reason.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the certificate does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a malformed name or an over-long reason.&lt;/p>
+      /// for a malformed name or an over-long reason; &lt;code>FAILED_PRECONDITION&lt;/code> when the revocation
+      /// (and the lock) was STORED but the running Asterisk of a deployed project could not be updated
+      /// (reload failed, container unreachable, or the project&amp;apos;s Asterisk configuration stayed locked by
+      /// another change for too long): it is applied by the next successful change or deployment, and a
+      /// retry is idempotent; &lt;code>ABORTED&lt;/code> when the account was changed concurrently (e.g. a rotation
+      /// or an update committed between the read and the write), in which case nothing was stored and the
+      /// request can be retried.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED&lt;/code> (not for an idempotent repeat).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1215,6 +1379,98 @@ namespace Ondewo.Vtsi {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetSoftphoneProvisioning, null, options, request);
       }
+      /// <summary>
+      /// &lt;p>Returns the CURRENT registrations (contacts) of a softphone account, read LIVE from the running
+      /// Asterisk of the project at the moment of the request (in the manner of &lt;code>pjsip show
+      /// contacts&lt;/code>). Nothing is stored: two calls may differ, and an empty &lt;code>contacts&lt;/code> list
+      /// means no device is registered right now (a disabled or locked account never has one). Answers
+      /// &amp;quot;is the softphone of this account connected, from where, with which client, and is it
+      /// reachable?&amp;quot;.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>FAILED_PRECONDITION&lt;/code> if the
+      /// project is not &lt;code>DEPLOYED&lt;/code> (there is no running Asterisk to ask);
+      /// &lt;code>UNAVAILABLE&lt;/code> if the project&amp;apos;s Asterisk could not be queried (container not running
+      /// or not answering within the server&amp;apos;s timeout); retry later.&lt;/p>
+      /// &lt;p>Read only, no event. Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SoftphoneRegistration GetSoftphoneRegistration(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSoftphoneRegistration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Returns the CURRENT registrations (contacts) of a softphone account, read LIVE from the running
+      /// Asterisk of the project at the moment of the request (in the manner of &lt;code>pjsip show
+      /// contacts&lt;/code>). Nothing is stored: two calls may differ, and an empty &lt;code>contacts&lt;/code> list
+      /// means no device is registered right now (a disabled or locked account never has one). Answers
+      /// &amp;quot;is the softphone of this account connected, from where, with which client, and is it
+      /// reachable?&amp;quot;.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>FAILED_PRECONDITION&lt;/code> if the
+      /// project is not &lt;code>DEPLOYED&lt;/code> (there is no running Asterisk to ask);
+      /// &lt;code>UNAVAILABLE&lt;/code> if the project&amp;apos;s Asterisk could not be queried (container not running
+      /// or not answering within the server&amp;apos;s timeout); retry later.&lt;/p>
+      /// &lt;p>Read only, no event. Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SoftphoneRegistration GetSoftphoneRegistration(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSoftphoneRegistration, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Returns the CURRENT registrations (contacts) of a softphone account, read LIVE from the running
+      /// Asterisk of the project at the moment of the request (in the manner of &lt;code>pjsip show
+      /// contacts&lt;/code>). Nothing is stored: two calls may differ, and an empty &lt;code>contacts&lt;/code> list
+      /// means no device is registered right now (a disabled or locked account never has one). Answers
+      /// &amp;quot;is the softphone of this account connected, from where, with which client, and is it
+      /// reachable?&amp;quot;.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>FAILED_PRECONDITION&lt;/code> if the
+      /// project is not &lt;code>DEPLOYED&lt;/code> (there is no running Asterisk to ask);
+      /// &lt;code>UNAVAILABLE&lt;/code> if the project&amp;apos;s Asterisk could not be queried (container not running
+      /// or not answering within the server&amp;apos;s timeout); retry later.&lt;/p>
+      /// &lt;p>Read only, no event. Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SoftphoneRegistration> GetSoftphoneRegistrationAsync(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSoftphoneRegistrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Returns the CURRENT registrations (contacts) of a softphone account, read LIVE from the running
+      /// Asterisk of the project at the moment of the request (in the manner of &lt;code>pjsip show
+      /// contacts&lt;/code>). Nothing is stored: two calls may differ, and an empty &lt;code>contacts&lt;/code> list
+      /// means no device is registered right now (a disabled or locked account never has one). Answers
+      /// &amp;quot;is the softphone of this account connected, from where, with which client, and is it
+      /// reachable?&amp;quot;.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the account does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed name or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>FAILED_PRECONDITION&lt;/code> if the
+      /// project is not &lt;code>DEPLOYED&lt;/code> (there is no running Asterisk to ask);
+      /// &lt;code>UNAVAILABLE&lt;/code> if the project&amp;apos;s Asterisk could not be queried (container not running
+      /// or not answering within the server&amp;apos;s timeout); retry later.&lt;/p>
+      /// &lt;p>Read only, no event. Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SoftphoneRegistration> GetSoftphoneRegistrationAsync(global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSoftphoneRegistration, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SoftphonesClient NewInstance(ClientBaseConfiguration configuration)
@@ -1238,7 +1494,8 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_ListSoftphoneCertificates, serviceImpl.ListSoftphoneCertificates)
           .AddMethod(__Method_GetSoftphoneCertificate, serviceImpl.GetSoftphoneCertificate)
           .AddMethod(__Method_RevokeSoftphoneCertificate, serviceImpl.RevokeSoftphoneCertificate)
-          .AddMethod(__Method_GetSoftphoneProvisioning, serviceImpl.GetSoftphoneProvisioning).Build();
+          .AddMethod(__Method_GetSoftphoneProvisioning, serviceImpl.GetSoftphoneProvisioning)
+          .AddMethod(__Method_GetSoftphoneRegistration, serviceImpl.GetSoftphoneRegistration).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1258,6 +1515,7 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_GetSoftphoneCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetSoftphoneCertificateRequest, global::Ondewo.Vtsi.SoftphoneCertificate>(serviceImpl.GetSoftphoneCertificate));
       serviceBinder.AddMethod(__Method_RevokeSoftphoneCertificate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.RevokeSoftphoneCertificateRequest, global::Ondewo.Vtsi.SoftphoneCertificate>(serviceImpl.RevokeSoftphoneCertificate));
       serviceBinder.AddMethod(__Method_GetSoftphoneProvisioning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetSoftphoneProvisioningRequest, global::Ondewo.Vtsi.SoftphoneProvisioning>(serviceImpl.GetSoftphoneProvisioning));
+      serviceBinder.AddMethod(__Method_GetSoftphoneRegistration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetSoftphoneRegistrationRequest, global::Ondewo.Vtsi.SoftphoneRegistration>(serviceImpl.GetSoftphoneRegistration));
     }
 
   }

@@ -40,18 +40,73 @@ namespace Ondewo.Vtsi {
   /// down. The same event can arrive more than once (a request whose answer was lost is sent again):
   /// de-duplicate by &lt;code>event_id&lt;/code>. Requests of one webhook can arrive out of order, because
   /// several server replicas send independently: order by &lt;code>resource_sequence&lt;/code> per
-  /// &lt;code>resource_name&lt;/code>, then &lt;code>event_time&lt;/code>.&lt;/p>
+  /// &lt;code>resource_name&lt;/code>, then &lt;code>event_time&lt;/code>. Events a webhook missed can be sent again from
+  /// the journal with &lt;code>RedeliverWebhookEvents&lt;/code>.&lt;/p>
+  /// &lt;p>&lt;b>Webhook requests.&lt;/b> One HTTP request per event, with the webhook&amp;apos;s &lt;code>http_method&lt;/code>
+  /// (POST by default), the &lt;code>VtsiEventMessage&lt;/code> as the body (proto3 JSON, original field names,
+  /// UTF-8) and these headers, set by the server (a custom header can never use these names):&lt;/p>
+  /// &lt;ul>
+  ///   &lt;li>&lt;code>Content-Type: application/json&lt;/code>&lt;/li>
+  ///   &lt;li>&lt;code>User-Agent: ondewo-vtsi/&amp;lt;server version&amp;gt;&lt;/code>&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Event&lt;/code>: the &lt;code>VtsiEvent&lt;/code> name, e.g.
+  ///       &lt;code>VTSI_EVENT_CALL_CONNECTED&lt;/code> (the decimal number for a value the server cannot name)&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Event-Id&lt;/code>: the &lt;code>event_id&lt;/code>&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Delivery-Attempt&lt;/code>: the request&amp;apos;s attempt number for this event, starting
+  ///       at 1 (a redelivery starts at 1 again)&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Webhook&lt;/code>: the webhook&amp;apos;s resource name, so one endpoint can serve
+  ///       several webhooks&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Signature&lt;/code>: only when the webhook has a &lt;code>signing_secret&lt;/code>:
+  ///       &lt;code>t=&amp;lt;unix seconds&amp;gt;,v1=&amp;lt;signature&amp;gt;&lt;/code>, see &lt;code>Webhook.signing_secret&lt;/code>&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>: only on requests sent by
+  ///       &lt;code>RedeliverWebhookEvents&lt;/code>&lt;/li>
+  ///   &lt;li>&lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>: only on requests sent by &lt;code>TestWebhook&lt;/code>&lt;/li>
+  /// &lt;/ul>
+  /// &lt;p>then the webhook&amp;apos;s &lt;code>custom_headers&lt;/code>. A 2xx answer is a delivery; a 408, 425, 429 or 5xx
+  /// answer, a timeout or a connection failure is retried; any other answer (a 3xx included: redirects are
+  /// never followed) fails the event for that webhook at once.&lt;/p>
   /// &lt;p>&lt;b>Streams can be resumed.&lt;/b> While a project has an open &lt;code>SubscribeVtsiEvents&lt;/code>
-  /// stream or an enabled event subscription, its events are also written to a short-lived journal
-  /// (24 h by default). A stream that reconnects with its last &lt;code>resume_token&lt;/code> receives the
-  /// events it missed, provided they are still in the journal; nothing else is persisted for
-  /// redelivery.&lt;/p>
+  /// stream (and for &lt;code>ONDEWO_VTSI_EVENT_STREAM_RESUME_WINDOW_S&lt;/code>, 1 h by default, after the last one
+  /// closed) or an enabled event subscription, its events are also written to a short-lived journal
+  /// (&lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code>, 24 h by default). A stream that reconnects with its last
+  /// &lt;code>resume_token&lt;/code>, or opens with a &lt;code>start_time&lt;/code>, receives the events it missed, provided
+  /// they are still in the journal; &lt;code>RedeliverWebhookEvents&lt;/code> reads the same journal. Nothing else is
+  /// persisted for redelivery, and events of a period in which the project had neither a stream nor an enabled
+  /// subscription were never journaled.&lt;/p>
   /// &lt;p>Use the status RPCs (&lt;code>GetCampaign&lt;/code>, &lt;code>ListCalls&lt;/code>, the status streams) to
   /// reconcile.&lt;/p>
-  /// &lt;p>&lt;b>Custom header values are write-only.&lt;/b> They are returned as &lt;code>********&lt;/code> by every
-  /// RPC and are never logged.&lt;/p>
-  /// &lt;p>Errors are gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code>, &lt;code>NOT_FOUND&lt;/code>,
-  /// &lt;code>FAILED_PRECONDITION&lt;/code>, &lt;code>RESOURCE_EXHAUSTED&lt;/code> (no free stream slot).&lt;/p>
+  /// &lt;p>&lt;b>Custom header values and signing secrets are write-only.&lt;/b> They are returned as
+  /// &lt;code>********&lt;/code> by every RPC and are never logged or put on an event.&lt;/p>
+  /// &lt;p>&lt;b>Names.&lt;/b> Event subscriptions are named
+  /// &lt;code>projects/&amp;lt;project_uuid&amp;gt;/event_subscriptions/&amp;lt;subscription_uuid&amp;gt;&lt;/code>, webhooks
+  /// &lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>, projects
+  /// &lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>. Display names of webhooks and subscriptions are free
+  /// text of at most 128 characters, NOT unique (two webhooks may share one) and may be empty; an empty display
+  /// name stays empty (no default is generated). Resources are always addressed by resource name.&lt;/p>
+  /// &lt;p>&lt;b>Partial responses.&lt;/b> Every RPC returning a &lt;code>VtsiEventSubscription&lt;/code> or a
+  /// &lt;code>Webhook&lt;/code>, the listings and the two &lt;code>Delete*&lt;/code> RPCs (paths of their response) accept a
+  /// &lt;code>field_mask&lt;/code> with the convention of
+  /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>: paths relative to the
+  /// returned message, &lt;code>name&lt;/code> always populated, unset or empty returns every field, an unknown path or
+  /// a path below a repeated or map field is &lt;code>INVALID_ARGUMENT&lt;/code> naming it, applied after the masking
+  /// of secrets so a masked value stays &lt;code>********&lt;/code>. A mask never changes what the RPC does.&lt;/p>
+  /// &lt;p>&lt;b>Authorization&lt;/b> (when enforced): the subscription and webhook RPCs, &lt;code>TestWebhook&lt;/code> and
+  /// &lt;code>RedeliverWebhookEvents&lt;/code> need &lt;code>PROJECT_DEVELOPER&lt;/code> or a higher role
+  /// (&lt;code>PROJECT_ADMIN&lt;/code>) on the project, or &lt;code>SERVER_ADMIN&lt;/code>: a webhook is a standing outbound
+  /// integration, i.e. administration. &lt;code>SubscribeVtsiEvents&lt;/code> reads the project&amp;apos;s events and needs
+  /// &lt;code>PROJECT_EXECUTOR&lt;/code> or higher.&lt;/p>
+  /// &lt;p>Errors are gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed resource name (also one of
+  /// another collection), a request field out of range, a resource of another project than the request&amp;apos;s
+  /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an unknown &lt;code>update_mask&lt;/code> or
+  /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+  /// &lt;code>PERMISSION_DENIED&lt;/code> with authorization enforced for a project on which the caller holds no
+  /// sufficient role (an unknown project included, so it is not answered &lt;code>NOT_FOUND&lt;/code>);
+  /// &lt;code>UNAUTHENTICATED&lt;/code> for a request without a valid credential while authorization is enforced;
+  /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled subscription or webhook where the RPC needs an enabled one;
+  /// &lt;code>ABORTED&lt;/code> when a concurrent change of the same subscription or webhook won (nothing was written;
+  /// retry); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal&amp;apos;s retention;
+  /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server has no free stream slot
+  /// (&lt;code>ONDEWO_VTSI_EVENT_STREAM_MAX_CONCURRENT&lt;/code>, 16 per replica by default);
+  /// &lt;code>UNAVAILABLE&lt;/code> when event streams are not available on the replica reached (retry).&lt;/p>
   /// </summary>
   public static partial class Events
   {
@@ -126,6 +181,10 @@ namespace Ondewo.Vtsi {
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.TestWebhookRequest> __Marshaller_ondewo_vtsi_TestWebhookRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.TestWebhookRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.TestWebhookResponse> __Marshaller_ondewo_vtsi_TestWebhookResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.TestWebhookResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RedeliverWebhookEventsRequest> __Marshaller_ondewo_vtsi_RedeliverWebhookEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RedeliverWebhookEventsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RedeliverWebhookEventsResponse> __Marshaller_ondewo_vtsi_RedeliverWebhookEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RedeliverWebhookEventsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.SubscribeVtsiEventsRequest> __Marshaller_ondewo_vtsi_SubscribeVtsiEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SubscribeVtsiEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -220,6 +279,14 @@ namespace Ondewo.Vtsi {
         __Marshaller_ondewo_vtsi_TestWebhookResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.RedeliverWebhookEventsRequest, global::Ondewo.Vtsi.RedeliverWebhookEventsResponse> __Method_RedeliverWebhookEvents = new grpc::Method<global::Ondewo.Vtsi.RedeliverWebhookEventsRequest, global::Ondewo.Vtsi.RedeliverWebhookEventsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RedeliverWebhookEvents",
+        __Marshaller_ondewo_vtsi_RedeliverWebhookEventsRequest,
+        __Marshaller_ondewo_vtsi_RedeliverWebhookEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.SubscribeVtsiEventsRequest, global::Ondewo.Vtsi.SubscribeVtsiEventsResponse> __Method_SubscribeVtsiEvents = new grpc::Method<global::Ondewo.Vtsi.SubscribeVtsiEventsRequest, global::Ondewo.Vtsi.SubscribeVtsiEventsResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
@@ -239,13 +306,17 @@ namespace Ondewo.Vtsi {
     {
       /// <summary>
       /// &lt;p>Creates an event subscription: which events of the project are delivered to which
-      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>.&lt;/p>
+      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>. Takes effect
+      /// within a few seconds on every server replica. Not idempotent: a repeat creates a second subscription.
+      /// Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for no events and &lt;code>all_events&lt;/code> unset, &lt;code>events&lt;/code> together with
-      /// &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value, a webhook or a
-      /// campaign name of another project, a malformed campaign name, or an output-only field that was
-      /// set. A campaign named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later
-      /// or deleted since).&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, no events and &lt;code>all_events&lt;/code> unset,
+      /// &lt;code>events&lt;/code> together with &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a
+      /// reserved value in &lt;code>events&lt;/code> or &lt;code>excluded_events&lt;/code>, an event both in
+      /// &lt;code>events&lt;/code> and &lt;code>excluded_events&lt;/code>, a webhook or a campaign name of another project, a
+      /// malformed webhook or campaign name, more entries than a list allows, a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path. A campaign
+      /// named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later or deleted since).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -257,7 +328,9 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Returns an event subscription.&lt;/p>
+      /// &lt;p>Returns an event subscription. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -270,9 +343,16 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>,
-      /// &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. Takes effect
-      /// within a few seconds on every server replica.&lt;/p>
+      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>excluded_events&lt;/code>,
+      /// &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>,
+      /// &lt;code>disabled&lt;/code>. Takes effect within a few seconds on every server replica; disabling it ends
+      /// the open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>).
+      /// The result is validated as a whole, as on create. Emits
+      /// &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>event_subscription.name&lt;/code>, an empty
+      /// mask, an unknown or output-only path, a result that would be invalid on create, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -285,7 +365,11 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Deletes an event subscription. Open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it
-      /// end with &lt;code>end_reason&lt;/code> set.&lt;/p>
+      /// end with &lt;code>end_reason&lt;/code> set (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>). Its webhooks
+      /// are not deleted. Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -297,7 +381,10 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Lists the event subscriptions of a project, paged.&lt;/p>
+      /// &lt;p>Lists the event subscriptions of a project, newest first, paged.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -310,12 +397,16 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Creates a webhook: an HTTP(S) endpoint that receives one request per event, with a JSON
-      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names).&lt;/p>
+      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names; see the service
+      /// documentation for the headers). A webhook receives events only once an event subscription names it.
+      /// Not idempotent. Emits &lt;code>VTSI_EVENT_WEBHOOK_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>INVALID_ARGUMENT&lt;/code> for a
-      /// URL that is not http(s), has no host, carries user information (use a custom header for
-      /// credentials) or exceeds 2048 characters; for a reserved or malformed header name, a header
-      /// value with a line break, too many or too long headers; or for a timeout outside
-      /// 1 s to 30 s.&lt;/p>
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a URL that is not http(s), has no host, carries user
+      /// information (use a custom header for credentials) or exceeds 2048 characters; for a reserved or
+      /// malformed header name, a header value with a line break, too many or too long headers; for a timeout
+      /// outside 1 s to 30 s; for a &lt;code>signing_secret&lt;/code> that is not 32 to 256 printable ASCII characters
+      /// without whitespace (or is the mask &lt;code>********&lt;/code>); for a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -327,7 +418,9 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Returns a webhook. Custom header values are masked.&lt;/p>
+      /// &lt;p>Returns a webhook. Custom header values and the signing secret are masked. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -341,15 +434,23 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
       /// &lt;code>url&lt;/code>, &lt;code>http_method&lt;/code>, &lt;code>custom_headers&lt;/code>, &lt;code>disabled&lt;/code>,
-      /// &lt;code>timeout&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a value equal to the
-      /// mask &lt;code>********&lt;/code> keeps the stored value of that header, so a Get-modify-Update
-      /// round trip does not overwrite secrets with the mask.&lt;/p>
+      /// &lt;code>timeout&lt;/code>, &lt;code>signing_secret&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a
+      /// value equal to the mask &lt;code>********&lt;/code> keeps the stored value of that header, so a
+      /// Get-modify-Update round trip does not overwrite secrets with the mask. &lt;code>signing_secret&lt;/code>
+      /// follows the same rule (see &lt;code>Webhook.signing_secret&lt;/code> for rotation).&lt;/p>
       /// &lt;p>Moving the webhook to another origin (scheme, host or port of &lt;code>url&lt;/code>) while custom
       /// headers are stored requires re-sending &lt;code>custom_headers&lt;/code> in the same request, with
       /// their REAL values (or an empty map to drop them): the stored values are never carried to a new
       /// origin, and an update that leaves &lt;code>custom_headers&lt;/code> out of the mask or sends the mask
       /// value &lt;code>********&lt;/code> for any header is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming
-      /// the headers. A new path on the same origin keeps the stored values.&lt;/p>
+      /// the headers. A new path on the same origin keeps the stored values. The signing secret is kept on a
+      /// new origin (it is never sent, only used to sign). Takes effect within a few seconds on every replica.
+      /// Emits &lt;code>VTSI_EVENT_WEBHOOK_UPDATED&lt;/code> (attribute
+      /// &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>webhook.name&lt;/code>, an empty mask, an
+      /// unknown or output-only path, a value invalid on create, the origin rule above, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -361,7 +462,11 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Deletes a webhook and removes it from every event subscription.&lt;/p>
+      /// &lt;p>Deletes a webhook and removes it from every event subscription; requests of it still queued are
+      /// dropped. Emits &lt;code>VTSI_EVENT_WEBHOOK_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -373,7 +478,11 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Lists the webhooks of a project, paged. Custom header values are masked.&lt;/p>
+      /// &lt;p>Lists the webhooks of a project, newest first, paged. Custom header values and signing secrets are
+      /// masked.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -385,10 +494,15 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Sends one &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event to a webhook now, without retries,
-      /// and reports the outcome. Works on a disabled webhook too, and ignores an open circuit.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>. A failed delivery is reported in the response, not as an
-      /// error status.&lt;/p>
+      /// &lt;p>Sends one test event to a webhook now, without retries, and reports the outcome: a
+      /// &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event, or, with &lt;code>sample_event&lt;/code>, an event shaped like that
+      /// real event (see &lt;code>TestWebhookRequest.sample_event&lt;/code>). The request carries every header of a real
+      /// delivery (signature included) plus &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>. Works on a disabled webhook
+      /// too, and ignores an open circuit. The test event is not journaled, not counted in
+      /// &lt;code>delivery_statistics&lt;/code> and not delivered anywhere else.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>, or a
+      /// &lt;code>sample_event&lt;/code> that is reserved or unknown to the server; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or webhook. A failed delivery is reported in the response, not as an error status.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -400,20 +514,71 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
+      /// &lt;p>Sends events from the server&amp;apos;s event journal to a webhook again: the events named by
+      /// &lt;code>event_ids&lt;/code>, or the events of a time window that the webhook&amp;apos;s event subscriptions select
+      /// (optionally narrowed by &lt;code>filter&lt;/code>). Each event is queued for the webhook like a new delivery
+      /// (same body and &lt;code>event_id&lt;/code>, so a receiver de-duplicates as usual, attempt numbers from 1,
+      /// retries and backoff as configured, header &lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>) on the replica
+      /// that serves the request, oldest first. Best effort like every webhook delivery: the RPC answers once the
+      /// events are queued, not delivered; follow &lt;code>delivery_statistics&lt;/code> or the receiver.&lt;/p>
+      /// &lt;p>Only what the journal still holds can be sent: events older than
+      /// &lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code> (24 h by default) and events of a period in which the
+      /// project had neither an open stream nor an enabled event subscription are not available and are counted
+      /// in &lt;code>not_in_journal_count&lt;/code> when named. At most 1000 events are queued per request
+      /// (&lt;code>not_enqueued_count&lt;/code> and &lt;code>next_start_time&lt;/code> say how to continue). Not idempotent: a
+      /// repeat sends the events again. Emits no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>webhook_name&lt;/code>, neither or
+      /// both of &lt;code>event_ids&lt;/code> and &lt;code>start_time&lt;/code>, more than 1000 &lt;code>event_ids&lt;/code>, an
+      /// &lt;code>event_id&lt;/code> that is not a uuid, &lt;code>end_time&lt;/code> without &lt;code>start_time&lt;/code> or not
+      /// after it, a window longer than the journal retention, or an invalid &lt;code>filter&lt;/code> (as on
+      /// &lt;code>SubscribeVtsiEvents&lt;/code>); &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled webhook (enable it first; &lt;code>TestWebhook&lt;/code> works
+      /// on a disabled one); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal
+      /// retention; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server&amp;apos;s webhook queue cannot take a single
+      /// event now (retry later).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.RedeliverWebhookEventsResponse> RedeliverWebhookEvents(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// &lt;p>Streams the events of a project as they happen, selected either by a named event
-      /// subscription or by an inline filter. An empty message is sent as a keep-alive. After a
-      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped;
+      /// subscription or by an inline filter. An empty message is sent as a keep-alive after
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_KEEPALIVE_S&lt;/code> (15 s by default) without an event. After a
+      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped, or open
+      /// with a &lt;code>start_time&lt;/code> to replay from a point in time;
       /// events older than the server&amp;apos;s retention (24 h by default) are no longer available, and
       /// the journal records a project&amp;apos;s events only while it has an open stream (and for 1 h
       /// after the last one closed) or an enabled event subscription. A stream sees events of other
       /// server replicas from at most a few seconds after it opened. A client that stops reading for
-      /// longer than the server&amp;apos;s stall timeout (30 s by default) is disconnected; reconnect with
-      /// the &lt;code>resume_token&lt;/code>. When the project is deleted, the stream delivers
-      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code> and ends.&lt;/p>
+      /// longer than the server&amp;apos;s stall timeout (&lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code>, 30 s by
+      /// default) is disconnected; one that reads so slowly that the stream&amp;apos;s buffer
+      /// (&lt;code>ONDEWO_VTSI_EVENT_STREAM_BUFFER_SIZE&lt;/code>, 1000 events) overflows gets a last message with
+      /// &lt;code>STREAM_END_REASON_CLIENT_TOO_SLOW&lt;/code>; reconnect with the &lt;code>resume_token&lt;/code> in both
+      /// cases.&lt;/p>
+      /// &lt;p>The server ends the stream with a last message carrying &lt;code>end_reason&lt;/code>,
+      /// &lt;code>end_reason_type&lt;/code> and a final &lt;code>resume_token&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default), on server shutdown, when the
+      /// client is too slow, when the named subscription is deleted or disabled, and when the project is deleted
+      /// (after delivering &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>). While authorization is enforced, the
+      /// caller&amp;apos;s role is re-checked periodically; a revoked role ends the RPC with
+      /// &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription;
-      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a malformed or foreign
+      /// &lt;code>event_subscription_name&lt;/code> (of another project), a malformed &lt;code>resume_token&lt;/code> or
+      /// one issued for another project, &lt;code>resume_token&lt;/code> together with &lt;code>start_time&lt;/code>, a
+      /// &lt;code>start_time&lt;/code> in the future, or an invalid &lt;code>filter&lt;/code> (a reserved or unspecified
+      /// event, an event both selected and excluded, &lt;code>all_events&lt;/code> with &lt;code>events&lt;/code>, a malformed
+      /// campaign name or one of another project, more than 50 prefixes or campaign names);
+      /// &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal retention;
       /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled subscription; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// when the server has no free stream slot; &lt;code>UNAVAILABLE&lt;/code> when the replica reached serves no
+      /// event streams (retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -456,13 +621,17 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Creates an event subscription: which events of the project are delivered to which
-      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>.&lt;/p>
+      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>. Takes effect
+      /// within a few seconds on every server replica. Not idempotent: a repeat creates a second subscription.
+      /// Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for no events and &lt;code>all_events&lt;/code> unset, &lt;code>events&lt;/code> together with
-      /// &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value, a webhook or a
-      /// campaign name of another project, a malformed campaign name, or an output-only field that was
-      /// set. A campaign named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later
-      /// or deleted since).&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, no events and &lt;code>all_events&lt;/code> unset,
+      /// &lt;code>events&lt;/code> together with &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a
+      /// reserved value in &lt;code>events&lt;/code> or &lt;code>excluded_events&lt;/code>, an event both in
+      /// &lt;code>events&lt;/code> and &lt;code>excluded_events&lt;/code>, a webhook or a campaign name of another project, a
+      /// malformed webhook or campaign name, more entries than a list allows, a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path. A campaign
+      /// named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later or deleted since).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -476,13 +645,17 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates an event subscription: which events of the project are delivered to which
-      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>.&lt;/p>
+      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>. Takes effect
+      /// within a few seconds on every server replica. Not idempotent: a repeat creates a second subscription.
+      /// Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for no events and &lt;code>all_events&lt;/code> unset, &lt;code>events&lt;/code> together with
-      /// &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value, a webhook or a
-      /// campaign name of another project, a malformed campaign name, or an output-only field that was
-      /// set. A campaign named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later
-      /// or deleted since).&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, no events and &lt;code>all_events&lt;/code> unset,
+      /// &lt;code>events&lt;/code> together with &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a
+      /// reserved value in &lt;code>events&lt;/code> or &lt;code>excluded_events&lt;/code>, an event both in
+      /// &lt;code>events&lt;/code> and &lt;code>excluded_events&lt;/code>, a webhook or a campaign name of another project, a
+      /// malformed webhook or campaign name, more entries than a list allows, a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path. A campaign
+      /// named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later or deleted since).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -494,13 +667,17 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates an event subscription: which events of the project are delivered to which
-      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>.&lt;/p>
+      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>. Takes effect
+      /// within a few seconds on every server replica. Not idempotent: a repeat creates a second subscription.
+      /// Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for no events and &lt;code>all_events&lt;/code> unset, &lt;code>events&lt;/code> together with
-      /// &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value, a webhook or a
-      /// campaign name of another project, a malformed campaign name, or an output-only field that was
-      /// set. A campaign named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later
-      /// or deleted since).&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, no events and &lt;code>all_events&lt;/code> unset,
+      /// &lt;code>events&lt;/code> together with &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a
+      /// reserved value in &lt;code>events&lt;/code> or &lt;code>excluded_events&lt;/code>, an event both in
+      /// &lt;code>events&lt;/code> and &lt;code>excluded_events&lt;/code>, a webhook or a campaign name of another project, a
+      /// malformed webhook or campaign name, more entries than a list allows, a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path. A campaign
+      /// named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later or deleted since).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -514,13 +691,17 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates an event subscription: which events of the project are delivered to which
-      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>.&lt;/p>
+      /// webhooks. A subscription without webhooks is usable by &lt;code>SubscribeVtsiEvents&lt;/code>. Takes effect
+      /// within a few seconds on every server replica. Not idempotent: a repeat creates a second subscription.
+      /// Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for no events and &lt;code>all_events&lt;/code> unset, &lt;code>events&lt;/code> together with
-      /// &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value, a webhook or a
-      /// campaign name of another project, a malformed campaign name, or an output-only field that was
-      /// set. A campaign named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later
-      /// or deleted since).&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, no events and &lt;code>all_events&lt;/code> unset,
+      /// &lt;code>events&lt;/code> together with &lt;code>all_events&lt;/code>, &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a
+      /// reserved value in &lt;code>events&lt;/code> or &lt;code>excluded_events&lt;/code>, an event both in
+      /// &lt;code>events&lt;/code> and &lt;code>excluded_events&lt;/code>, a webhook or a campaign name of another project, a
+      /// malformed webhook or campaign name, more entries than a list allows, a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path. A campaign
+      /// named in &lt;code>campaign_names&lt;/code> need not exist (it may be created later or deleted since).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -531,7 +712,9 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_CreateVtsiEventSubscription, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns an event subscription.&lt;/p>
+      /// &lt;p>Returns an event subscription. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -544,7 +727,9 @@ namespace Ondewo.Vtsi {
         return GetVtsiEventSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns an event subscription.&lt;/p>
+      /// &lt;p>Returns an event subscription. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -555,7 +740,9 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_GetVtsiEventSubscription, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns an event subscription.&lt;/p>
+      /// &lt;p>Returns an event subscription. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -568,7 +755,9 @@ namespace Ondewo.Vtsi {
         return GetVtsiEventSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns an event subscription.&lt;/p>
+      /// &lt;p>Returns an event subscription. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -580,9 +769,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>,
-      /// &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. Takes effect
-      /// within a few seconds on every server replica.&lt;/p>
+      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>excluded_events&lt;/code>,
+      /// &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>,
+      /// &lt;code>disabled&lt;/code>. Takes effect within a few seconds on every server replica; disabling it ends
+      /// the open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>).
+      /// The result is validated as a whole, as on create. Emits
+      /// &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>event_subscription.name&lt;/code>, an empty
+      /// mask, an unknown or output-only path, a result that would be invalid on create, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -596,9 +792,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>,
-      /// &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. Takes effect
-      /// within a few seconds on every server replica.&lt;/p>
+      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>excluded_events&lt;/code>,
+      /// &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>,
+      /// &lt;code>disabled&lt;/code>. Takes effect within a few seconds on every server replica; disabling it ends
+      /// the open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>).
+      /// The result is validated as a whole, as on create. Emits
+      /// &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>event_subscription.name&lt;/code>, an empty
+      /// mask, an unknown or output-only path, a result that would be invalid on create, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -610,9 +813,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>,
-      /// &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. Takes effect
-      /// within a few seconds on every server replica.&lt;/p>
+      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>excluded_events&lt;/code>,
+      /// &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>,
+      /// &lt;code>disabled&lt;/code>. Takes effect within a few seconds on every server replica; disabling it ends
+      /// the open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>).
+      /// The result is validated as a whole, as on create. Emits
+      /// &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>event_subscription.name&lt;/code>, an empty
+      /// mask, an unknown or output-only path, a result that would be invalid on create, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -626,9 +836,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>,
-      /// &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. Takes effect
-      /// within a few seconds on every server replica.&lt;/p>
+      /// &lt;code>events&lt;/code>, &lt;code>all_events&lt;/code>, &lt;code>excluded_events&lt;/code>,
+      /// &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>, &lt;code>webhook_names&lt;/code>,
+      /// &lt;code>disabled&lt;/code>. Takes effect within a few seconds on every server replica; disabling it ends
+      /// the open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>).
+      /// The result is validated as a whole, as on create. Emits
+      /// &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>event_subscription.name&lt;/code>, an empty
+      /// mask, an unknown or output-only path, a result that would be invalid on create, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, subscription or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -640,7 +857,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes an event subscription. Open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it
-      /// end with &lt;code>end_reason&lt;/code> set.&lt;/p>
+      /// end with &lt;code>end_reason&lt;/code> set (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>). Its webhooks
+      /// are not deleted. Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -654,7 +875,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes an event subscription. Open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it
-      /// end with &lt;code>end_reason&lt;/code> set.&lt;/p>
+      /// end with &lt;code>end_reason&lt;/code> set (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>). Its webhooks
+      /// are not deleted. Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -666,7 +891,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes an event subscription. Open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it
-      /// end with &lt;code>end_reason&lt;/code> set.&lt;/p>
+      /// end with &lt;code>end_reason&lt;/code> set (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>). Its webhooks
+      /// are not deleted. Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -680,7 +909,11 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Deletes an event subscription. Open &lt;code>SubscribeVtsiEvents&lt;/code> streams that name it
-      /// end with &lt;code>end_reason&lt;/code> set.&lt;/p>
+      /// end with &lt;code>end_reason&lt;/code> set (&lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>). Its webhooks
+      /// are not deleted. Emits &lt;code>VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -691,7 +924,10 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteVtsiEventSubscription, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the event subscriptions of a project, paged.&lt;/p>
+      /// &lt;p>Lists the event subscriptions of a project, newest first, paged.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -704,7 +940,10 @@ namespace Ondewo.Vtsi {
         return ListVtsiEventSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the event subscriptions of a project, paged.&lt;/p>
+      /// &lt;p>Lists the event subscriptions of a project, newest first, paged.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -715,7 +954,10 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_ListVtsiEventSubscriptions, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the event subscriptions of a project, paged.&lt;/p>
+      /// &lt;p>Lists the event subscriptions of a project, newest first, paged.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -728,7 +970,10 @@ namespace Ondewo.Vtsi {
         return ListVtsiEventSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the event subscriptions of a project, paged.&lt;/p>
+      /// &lt;p>Lists the event subscriptions of a project, newest first, paged.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -740,12 +985,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates a webhook: an HTTP(S) endpoint that receives one request per event, with a JSON
-      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names).&lt;/p>
+      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names; see the service
+      /// documentation for the headers). A webhook receives events only once an event subscription names it.
+      /// Not idempotent. Emits &lt;code>VTSI_EVENT_WEBHOOK_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>INVALID_ARGUMENT&lt;/code> for a
-      /// URL that is not http(s), has no host, carries user information (use a custom header for
-      /// credentials) or exceeds 2048 characters; for a reserved or malformed header name, a header
-      /// value with a line break, too many or too long headers; or for a timeout outside
-      /// 1 s to 30 s.&lt;/p>
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a URL that is not http(s), has no host, carries user
+      /// information (use a custom header for credentials) or exceeds 2048 characters; for a reserved or
+      /// malformed header name, a header value with a line break, too many or too long headers; for a timeout
+      /// outside 1 s to 30 s; for a &lt;code>signing_secret&lt;/code> that is not 32 to 256 printable ASCII characters
+      /// without whitespace (or is the mask &lt;code>********&lt;/code>); for a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -759,12 +1008,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates a webhook: an HTTP(S) endpoint that receives one request per event, with a JSON
-      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names).&lt;/p>
+      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names; see the service
+      /// documentation for the headers). A webhook receives events only once an event subscription names it.
+      /// Not idempotent. Emits &lt;code>VTSI_EVENT_WEBHOOK_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>INVALID_ARGUMENT&lt;/code> for a
-      /// URL that is not http(s), has no host, carries user information (use a custom header for
-      /// credentials) or exceeds 2048 characters; for a reserved or malformed header name, a header
-      /// value with a line break, too many or too long headers; or for a timeout outside
-      /// 1 s to 30 s.&lt;/p>
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a URL that is not http(s), has no host, carries user
+      /// information (use a custom header for credentials) or exceeds 2048 characters; for a reserved or
+      /// malformed header name, a header value with a line break, too many or too long headers; for a timeout
+      /// outside 1 s to 30 s; for a &lt;code>signing_secret&lt;/code> that is not 32 to 256 printable ASCII characters
+      /// without whitespace (or is the mask &lt;code>********&lt;/code>); for a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -776,12 +1029,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates a webhook: an HTTP(S) endpoint that receives one request per event, with a JSON
-      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names).&lt;/p>
+      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names; see the service
+      /// documentation for the headers). A webhook receives events only once an event subscription names it.
+      /// Not idempotent. Emits &lt;code>VTSI_EVENT_WEBHOOK_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>INVALID_ARGUMENT&lt;/code> for a
-      /// URL that is not http(s), has no host, carries user information (use a custom header for
-      /// credentials) or exceeds 2048 characters; for a reserved or malformed header name, a header
-      /// value with a line break, too many or too long headers; or for a timeout outside
-      /// 1 s to 30 s.&lt;/p>
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a URL that is not http(s), has no host, carries user
+      /// information (use a custom header for credentials) or exceeds 2048 characters; for a reserved or
+      /// malformed header name, a header value with a line break, too many or too long headers; for a timeout
+      /// outside 1 s to 30 s; for a &lt;code>signing_secret&lt;/code> that is not 32 to 256 printable ASCII characters
+      /// without whitespace (or is the mask &lt;code>********&lt;/code>); for a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -795,12 +1052,16 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Creates a webhook: an HTTP(S) endpoint that receives one request per event, with a JSON
-      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names).&lt;/p>
+      /// body holding the &lt;code>VtsiEventMessage&lt;/code> (proto3 JSON, original field names; see the service
+      /// documentation for the headers). A webhook receives events only once an event subscription names it.
+      /// Not idempotent. Emits &lt;code>VTSI_EVENT_WEBHOOK_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>INVALID_ARGUMENT&lt;/code> for a
-      /// URL that is not http(s), has no host, carries user information (use a custom header for
-      /// credentials) or exceeds 2048 characters; for a reserved or malformed header name, a header
-      /// value with a line break, too many or too long headers; or for a timeout outside
-      /// 1 s to 30 s.&lt;/p>
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a URL that is not http(s), has no host, carries user
+      /// information (use a custom header for credentials) or exceeds 2048 characters; for a reserved or
+      /// malformed header name, a header value with a line break, too many or too long headers; for a timeout
+      /// outside 1 s to 30 s; for a &lt;code>signing_secret&lt;/code> that is not 32 to 256 printable ASCII characters
+      /// without whitespace (or is the mask &lt;code>********&lt;/code>); for a &lt;code>display_name&lt;/code> over 128
+      /// characters, an output-only field that was set or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -811,7 +1072,9 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_CreateWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns a webhook. Custom header values are masked.&lt;/p>
+      /// &lt;p>Returns a webhook. Custom header values and the signing secret are masked. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -824,7 +1087,9 @@ namespace Ondewo.Vtsi {
         return GetWebhook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns a webhook. Custom header values are masked.&lt;/p>
+      /// &lt;p>Returns a webhook. Custom header values and the signing secret are masked. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -835,7 +1100,9 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_GetWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns a webhook. Custom header values are masked.&lt;/p>
+      /// &lt;p>Returns a webhook. Custom header values and the signing secret are masked. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -848,7 +1115,9 @@ namespace Ondewo.Vtsi {
         return GetWebhookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns a webhook. Custom header values are masked.&lt;/p>
+      /// &lt;p>Returns a webhook. Custom header values and the signing secret are masked. Read-only.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -861,15 +1130,23 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
       /// &lt;code>url&lt;/code>, &lt;code>http_method&lt;/code>, &lt;code>custom_headers&lt;/code>, &lt;code>disabled&lt;/code>,
-      /// &lt;code>timeout&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a value equal to the
-      /// mask &lt;code>********&lt;/code> keeps the stored value of that header, so a Get-modify-Update
-      /// round trip does not overwrite secrets with the mask.&lt;/p>
+      /// &lt;code>timeout&lt;/code>, &lt;code>signing_secret&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a
+      /// value equal to the mask &lt;code>********&lt;/code> keeps the stored value of that header, so a
+      /// Get-modify-Update round trip does not overwrite secrets with the mask. &lt;code>signing_secret&lt;/code>
+      /// follows the same rule (see &lt;code>Webhook.signing_secret&lt;/code> for rotation).&lt;/p>
       /// &lt;p>Moving the webhook to another origin (scheme, host or port of &lt;code>url&lt;/code>) while custom
       /// headers are stored requires re-sending &lt;code>custom_headers&lt;/code> in the same request, with
       /// their REAL values (or an empty map to drop them): the stored values are never carried to a new
       /// origin, and an update that leaves &lt;code>custom_headers&lt;/code> out of the mask or sends the mask
       /// value &lt;code>********&lt;/code> for any header is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming
-      /// the headers. A new path on the same origin keeps the stored values.&lt;/p>
+      /// the headers. A new path on the same origin keeps the stored values. The signing secret is kept on a
+      /// new origin (it is never sent, only used to sign). Takes effect within a few seconds on every replica.
+      /// Emits &lt;code>VTSI_EVENT_WEBHOOK_UPDATED&lt;/code> (attribute
+      /// &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>webhook.name&lt;/code>, an empty mask, an
+      /// unknown or output-only path, a value invalid on create, the origin rule above, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -884,15 +1161,23 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
       /// &lt;code>url&lt;/code>, &lt;code>http_method&lt;/code>, &lt;code>custom_headers&lt;/code>, &lt;code>disabled&lt;/code>,
-      /// &lt;code>timeout&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a value equal to the
-      /// mask &lt;code>********&lt;/code> keeps the stored value of that header, so a Get-modify-Update
-      /// round trip does not overwrite secrets with the mask.&lt;/p>
+      /// &lt;code>timeout&lt;/code>, &lt;code>signing_secret&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a
+      /// value equal to the mask &lt;code>********&lt;/code> keeps the stored value of that header, so a
+      /// Get-modify-Update round trip does not overwrite secrets with the mask. &lt;code>signing_secret&lt;/code>
+      /// follows the same rule (see &lt;code>Webhook.signing_secret&lt;/code> for rotation).&lt;/p>
       /// &lt;p>Moving the webhook to another origin (scheme, host or port of &lt;code>url&lt;/code>) while custom
       /// headers are stored requires re-sending &lt;code>custom_headers&lt;/code> in the same request, with
       /// their REAL values (or an empty map to drop them): the stored values are never carried to a new
       /// origin, and an update that leaves &lt;code>custom_headers&lt;/code> out of the mask or sends the mask
       /// value &lt;code>********&lt;/code> for any header is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming
-      /// the headers. A new path on the same origin keeps the stored values.&lt;/p>
+      /// the headers. A new path on the same origin keeps the stored values. The signing secret is kept on a
+      /// new origin (it is never sent, only used to sign). Takes effect within a few seconds on every replica.
+      /// Emits &lt;code>VTSI_EVENT_WEBHOOK_UPDATED&lt;/code> (attribute
+      /// &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>webhook.name&lt;/code>, an empty mask, an
+      /// unknown or output-only path, a value invalid on create, the origin rule above, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -905,15 +1190,23 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
       /// &lt;code>url&lt;/code>, &lt;code>http_method&lt;/code>, &lt;code>custom_headers&lt;/code>, &lt;code>disabled&lt;/code>,
-      /// &lt;code>timeout&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a value equal to the
-      /// mask &lt;code>********&lt;/code> keeps the stored value of that header, so a Get-modify-Update
-      /// round trip does not overwrite secrets with the mask.&lt;/p>
+      /// &lt;code>timeout&lt;/code>, &lt;code>signing_secret&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a
+      /// value equal to the mask &lt;code>********&lt;/code> keeps the stored value of that header, so a
+      /// Get-modify-Update round trip does not overwrite secrets with the mask. &lt;code>signing_secret&lt;/code>
+      /// follows the same rule (see &lt;code>Webhook.signing_secret&lt;/code> for rotation).&lt;/p>
       /// &lt;p>Moving the webhook to another origin (scheme, host or port of &lt;code>url&lt;/code>) while custom
       /// headers are stored requires re-sending &lt;code>custom_headers&lt;/code> in the same request, with
       /// their REAL values (or an empty map to drop them): the stored values are never carried to a new
       /// origin, and an update that leaves &lt;code>custom_headers&lt;/code> out of the mask or sends the mask
       /// value &lt;code>********&lt;/code> for any header is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming
-      /// the headers. A new path on the same origin keeps the stored values.&lt;/p>
+      /// the headers. A new path on the same origin keeps the stored values. The signing secret is kept on a
+      /// new origin (it is never sent, only used to sign). Takes effect within a few seconds on every replica.
+      /// Emits &lt;code>VTSI_EVENT_WEBHOOK_UPDATED&lt;/code> (attribute
+      /// &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>webhook.name&lt;/code>, an empty mask, an
+      /// unknown or output-only path, a value invalid on create, the origin rule above, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -928,15 +1221,23 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
       /// &lt;code>url&lt;/code>, &lt;code>http_method&lt;/code>, &lt;code>custom_headers&lt;/code>, &lt;code>disabled&lt;/code>,
-      /// &lt;code>timeout&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a value equal to the
-      /// mask &lt;code>********&lt;/code> keeps the stored value of that header, so a Get-modify-Update
-      /// round trip does not overwrite secrets with the mask.&lt;/p>
+      /// &lt;code>timeout&lt;/code>, &lt;code>signing_secret&lt;/code>. &lt;code>custom_headers&lt;/code> replaces the whole map; a
+      /// value equal to the mask &lt;code>********&lt;/code> keeps the stored value of that header, so a
+      /// Get-modify-Update round trip does not overwrite secrets with the mask. &lt;code>signing_secret&lt;/code>
+      /// follows the same rule (see &lt;code>Webhook.signing_secret&lt;/code> for rotation).&lt;/p>
       /// &lt;p>Moving the webhook to another origin (scheme, host or port of &lt;code>url&lt;/code>) while custom
       /// headers are stored requires re-sending &lt;code>custom_headers&lt;/code> in the same request, with
       /// their REAL values (or an empty map to drop them): the stored values are never carried to a new
       /// origin, and an update that leaves &lt;code>custom_headers&lt;/code> out of the mask or sends the mask
       /// value &lt;code>********&lt;/code> for any header is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming
-      /// the headers. A new path on the same origin keeps the stored values.&lt;/p>
+      /// the headers. A new path on the same origin keeps the stored values. The signing secret is kept on a
+      /// new origin (it is never sent, only used to sign). Takes effect within a few seconds on every replica.
+      /// Emits &lt;code>VTSI_EVENT_WEBHOOK_UPDATED&lt;/code> (attribute
+      /// &lt;code>updated_fields&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>webhook.name&lt;/code>, an empty mask, an
+      /// unknown or output-only path, a value invalid on create, the origin rule above, or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>ABORTED&lt;/code> when a concurrent update won.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -947,7 +1248,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Deletes a webhook and removes it from every event subscription.&lt;/p>
+      /// &lt;p>Deletes a webhook and removes it from every event subscription; requests of it still queued are
+      /// dropped. Emits &lt;code>VTSI_EVENT_WEBHOOK_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -960,7 +1265,11 @@ namespace Ondewo.Vtsi {
         return DeleteWebhook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Deletes a webhook and removes it from every event subscription.&lt;/p>
+      /// &lt;p>Deletes a webhook and removes it from every event subscription; requests of it still queued are
+      /// dropped. Emits &lt;code>VTSI_EVENT_WEBHOOK_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -971,7 +1280,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Deletes a webhook and removes it from every event subscription.&lt;/p>
+      /// &lt;p>Deletes a webhook and removes it from every event subscription; requests of it still queued are
+      /// dropped. Emits &lt;code>VTSI_EVENT_WEBHOOK_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -984,7 +1297,11 @@ namespace Ondewo.Vtsi {
         return DeleteWebhookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Deletes a webhook and removes it from every event subscription.&lt;/p>
+      /// &lt;p>Deletes a webhook and removes it from every event subscription; requests of it still queued are
+      /// dropped. Emits &lt;code>VTSI_EVENT_WEBHOOK_DELETED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook (also on a
+      /// repeated delete).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -995,7 +1312,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the webhooks of a project, paged. Custom header values are masked.&lt;/p>
+      /// &lt;p>Lists the webhooks of a project, newest first, paged. Custom header values and signing secrets are
+      /// masked.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1008,7 +1329,11 @@ namespace Ondewo.Vtsi {
         return ListWebhooks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the webhooks of a project, paged. Custom header values are masked.&lt;/p>
+      /// &lt;p>Lists the webhooks of a project, newest first, paged. Custom header values and signing secrets are
+      /// masked.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1019,7 +1344,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_ListWebhooks, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the webhooks of a project, paged. Custom header values are masked.&lt;/p>
+      /// &lt;p>Lists the webhooks of a project, newest first, paged. Custom header values and signing secrets are
+      /// masked.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1032,7 +1361,11 @@ namespace Ondewo.Vtsi {
         return ListWebhooksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the webhooks of a project, paged. Custom header values are masked.&lt;/p>
+      /// &lt;p>Lists the webhooks of a project, newest first, paged. Custom header values and signing secrets are
+      /// masked.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1043,10 +1376,15 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_ListWebhooks, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Sends one &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event to a webhook now, without retries,
-      /// and reports the outcome. Works on a disabled webhook too, and ignores an open circuit.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>. A failed delivery is reported in the response, not as an
-      /// error status.&lt;/p>
+      /// &lt;p>Sends one test event to a webhook now, without retries, and reports the outcome: a
+      /// &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event, or, with &lt;code>sample_event&lt;/code>, an event shaped like that
+      /// real event (see &lt;code>TestWebhookRequest.sample_event&lt;/code>). The request carries every header of a real
+      /// delivery (signature included) plus &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>. Works on a disabled webhook
+      /// too, and ignores an open circuit. The test event is not journaled, not counted in
+      /// &lt;code>delivery_statistics&lt;/code> and not delivered anywhere else.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>, or a
+      /// &lt;code>sample_event&lt;/code> that is reserved or unknown to the server; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or webhook. A failed delivery is reported in the response, not as an error status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1059,10 +1397,15 @@ namespace Ondewo.Vtsi {
         return TestWebhook(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Sends one &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event to a webhook now, without retries,
-      /// and reports the outcome. Works on a disabled webhook too, and ignores an open circuit.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>. A failed delivery is reported in the response, not as an
-      /// error status.&lt;/p>
+      /// &lt;p>Sends one test event to a webhook now, without retries, and reports the outcome: a
+      /// &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event, or, with &lt;code>sample_event&lt;/code>, an event shaped like that
+      /// real event (see &lt;code>TestWebhookRequest.sample_event&lt;/code>). The request carries every header of a real
+      /// delivery (signature included) plus &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>. Works on a disabled webhook
+      /// too, and ignores an open circuit. The test event is not journaled, not counted in
+      /// &lt;code>delivery_statistics&lt;/code> and not delivered anywhere else.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>, or a
+      /// &lt;code>sample_event&lt;/code> that is reserved or unknown to the server; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or webhook. A failed delivery is reported in the response, not as an error status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1073,10 +1416,15 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_TestWebhook, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Sends one &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event to a webhook now, without retries,
-      /// and reports the outcome. Works on a disabled webhook too, and ignores an open circuit.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>. A failed delivery is reported in the response, not as an
-      /// error status.&lt;/p>
+      /// &lt;p>Sends one test event to a webhook now, without retries, and reports the outcome: a
+      /// &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event, or, with &lt;code>sample_event&lt;/code>, an event shaped like that
+      /// real event (see &lt;code>TestWebhookRequest.sample_event&lt;/code>). The request carries every header of a real
+      /// delivery (signature included) plus &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>. Works on a disabled webhook
+      /// too, and ignores an open circuit. The test event is not journaled, not counted in
+      /// &lt;code>delivery_statistics&lt;/code> and not delivered anywhere else.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>, or a
+      /// &lt;code>sample_event&lt;/code> that is reserved or unknown to the server; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or webhook. A failed delivery is reported in the response, not as an error status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1089,10 +1437,15 @@ namespace Ondewo.Vtsi {
         return TestWebhookAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Sends one &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event to a webhook now, without retries,
-      /// and reports the outcome. Works on a disabled webhook too, and ignores an open circuit.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>. A failed delivery is reported in the response, not as an
-      /// error status.&lt;/p>
+      /// &lt;p>Sends one test event to a webhook now, without retries, and reports the outcome: a
+      /// &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> event, or, with &lt;code>sample_event&lt;/code>, an event shaped like that
+      /// real event (see &lt;code>TestWebhookRequest.sample_event&lt;/code>). The request carries every header of a real
+      /// delivery (signature included) plus &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>. Works on a disabled webhook
+      /// too, and ignores an open circuit. The test event is not journaled, not counted in
+      /// &lt;code>delivery_statistics&lt;/code> and not delivered anywhere else.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>, or a
+      /// &lt;code>sample_event&lt;/code> that is reserved or unknown to the server; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or webhook. A failed delivery is reported in the response, not as an error status.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1103,20 +1456,170 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_TestWebhook, null, options, request);
       }
       /// <summary>
+      /// &lt;p>Sends events from the server&amp;apos;s event journal to a webhook again: the events named by
+      /// &lt;code>event_ids&lt;/code>, or the events of a time window that the webhook&amp;apos;s event subscriptions select
+      /// (optionally narrowed by &lt;code>filter&lt;/code>). Each event is queued for the webhook like a new delivery
+      /// (same body and &lt;code>event_id&lt;/code>, so a receiver de-duplicates as usual, attempt numbers from 1,
+      /// retries and backoff as configured, header &lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>) on the replica
+      /// that serves the request, oldest first. Best effort like every webhook delivery: the RPC answers once the
+      /// events are queued, not delivered; follow &lt;code>delivery_statistics&lt;/code> or the receiver.&lt;/p>
+      /// &lt;p>Only what the journal still holds can be sent: events older than
+      /// &lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code> (24 h by default) and events of a period in which the
+      /// project had neither an open stream nor an enabled event subscription are not available and are counted
+      /// in &lt;code>not_in_journal_count&lt;/code> when named. At most 1000 events are queued per request
+      /// (&lt;code>not_enqueued_count&lt;/code> and &lt;code>next_start_time&lt;/code> say how to continue). Not idempotent: a
+      /// repeat sends the events again. Emits no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>webhook_name&lt;/code>, neither or
+      /// both of &lt;code>event_ids&lt;/code> and &lt;code>start_time&lt;/code>, more than 1000 &lt;code>event_ids&lt;/code>, an
+      /// &lt;code>event_id&lt;/code> that is not a uuid, &lt;code>end_time&lt;/code> without &lt;code>start_time&lt;/code> or not
+      /// after it, a window longer than the journal retention, or an invalid &lt;code>filter&lt;/code> (as on
+      /// &lt;code>SubscribeVtsiEvents&lt;/code>); &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled webhook (enable it first; &lt;code>TestWebhook&lt;/code> works
+      /// on a disabled one); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal
+      /// retention; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server&amp;apos;s webhook queue cannot take a single
+      /// event now (retry later).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RedeliverWebhookEventsResponse RedeliverWebhookEvents(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RedeliverWebhookEvents(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Sends events from the server&amp;apos;s event journal to a webhook again: the events named by
+      /// &lt;code>event_ids&lt;/code>, or the events of a time window that the webhook&amp;apos;s event subscriptions select
+      /// (optionally narrowed by &lt;code>filter&lt;/code>). Each event is queued for the webhook like a new delivery
+      /// (same body and &lt;code>event_id&lt;/code>, so a receiver de-duplicates as usual, attempt numbers from 1,
+      /// retries and backoff as configured, header &lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>) on the replica
+      /// that serves the request, oldest first. Best effort like every webhook delivery: the RPC answers once the
+      /// events are queued, not delivered; follow &lt;code>delivery_statistics&lt;/code> or the receiver.&lt;/p>
+      /// &lt;p>Only what the journal still holds can be sent: events older than
+      /// &lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code> (24 h by default) and events of a period in which the
+      /// project had neither an open stream nor an enabled event subscription are not available and are counted
+      /// in &lt;code>not_in_journal_count&lt;/code> when named. At most 1000 events are queued per request
+      /// (&lt;code>not_enqueued_count&lt;/code> and &lt;code>next_start_time&lt;/code> say how to continue). Not idempotent: a
+      /// repeat sends the events again. Emits no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>webhook_name&lt;/code>, neither or
+      /// both of &lt;code>event_ids&lt;/code> and &lt;code>start_time&lt;/code>, more than 1000 &lt;code>event_ids&lt;/code>, an
+      /// &lt;code>event_id&lt;/code> that is not a uuid, &lt;code>end_time&lt;/code> without &lt;code>start_time&lt;/code> or not
+      /// after it, a window longer than the journal retention, or an invalid &lt;code>filter&lt;/code> (as on
+      /// &lt;code>SubscribeVtsiEvents&lt;/code>); &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled webhook (enable it first; &lt;code>TestWebhook&lt;/code> works
+      /// on a disabled one); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal
+      /// retention; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server&amp;apos;s webhook queue cannot take a single
+      /// event now (retry later).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RedeliverWebhookEventsResponse RedeliverWebhookEvents(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RedeliverWebhookEvents, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Sends events from the server&amp;apos;s event journal to a webhook again: the events named by
+      /// &lt;code>event_ids&lt;/code>, or the events of a time window that the webhook&amp;apos;s event subscriptions select
+      /// (optionally narrowed by &lt;code>filter&lt;/code>). Each event is queued for the webhook like a new delivery
+      /// (same body and &lt;code>event_id&lt;/code>, so a receiver de-duplicates as usual, attempt numbers from 1,
+      /// retries and backoff as configured, header &lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>) on the replica
+      /// that serves the request, oldest first. Best effort like every webhook delivery: the RPC answers once the
+      /// events are queued, not delivered; follow &lt;code>delivery_statistics&lt;/code> or the receiver.&lt;/p>
+      /// &lt;p>Only what the journal still holds can be sent: events older than
+      /// &lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code> (24 h by default) and events of a period in which the
+      /// project had neither an open stream nor an enabled event subscription are not available and are counted
+      /// in &lt;code>not_in_journal_count&lt;/code> when named. At most 1000 events are queued per request
+      /// (&lt;code>not_enqueued_count&lt;/code> and &lt;code>next_start_time&lt;/code> say how to continue). Not idempotent: a
+      /// repeat sends the events again. Emits no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>webhook_name&lt;/code>, neither or
+      /// both of &lt;code>event_ids&lt;/code> and &lt;code>start_time&lt;/code>, more than 1000 &lt;code>event_ids&lt;/code>, an
+      /// &lt;code>event_id&lt;/code> that is not a uuid, &lt;code>end_time&lt;/code> without &lt;code>start_time&lt;/code> or not
+      /// after it, a window longer than the journal retention, or an invalid &lt;code>filter&lt;/code> (as on
+      /// &lt;code>SubscribeVtsiEvents&lt;/code>); &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled webhook (enable it first; &lt;code>TestWebhook&lt;/code> works
+      /// on a disabled one); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal
+      /// retention; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server&amp;apos;s webhook queue cannot take a single
+      /// event now (retry later).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RedeliverWebhookEventsResponse> RedeliverWebhookEventsAsync(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RedeliverWebhookEventsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Sends events from the server&amp;apos;s event journal to a webhook again: the events named by
+      /// &lt;code>event_ids&lt;/code>, or the events of a time window that the webhook&amp;apos;s event subscriptions select
+      /// (optionally narrowed by &lt;code>filter&lt;/code>). Each event is queued for the webhook like a new delivery
+      /// (same body and &lt;code>event_id&lt;/code>, so a receiver de-duplicates as usual, attempt numbers from 1,
+      /// retries and backoff as configured, header &lt;code>X-Ondewo-Vtsi-Redelivery: true&lt;/code>) on the replica
+      /// that serves the request, oldest first. Best effort like every webhook delivery: the RPC answers once the
+      /// events are queued, not delivered; follow &lt;code>delivery_statistics&lt;/code> or the receiver.&lt;/p>
+      /// &lt;p>Only what the journal still holds can be sent: events older than
+      /// &lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code> (24 h by default) and events of a period in which the
+      /// project had neither an open stream nor an enabled event subscription are not available and are counted
+      /// in &lt;code>not_in_journal_count&lt;/code> when named. At most 1000 events are queued per request
+      /// (&lt;code>not_enqueued_count&lt;/code> and &lt;code>next_start_time&lt;/code> say how to continue). Not idempotent: a
+      /// repeat sends the events again. Emits no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>webhook_name&lt;/code>, neither or
+      /// both of &lt;code>event_ids&lt;/code> and &lt;code>start_time&lt;/code>, more than 1000 &lt;code>event_ids&lt;/code>, an
+      /// &lt;code>event_id&lt;/code> that is not a uuid, &lt;code>end_time&lt;/code> without &lt;code>start_time&lt;/code> or not
+      /// after it, a window longer than the journal retention, or an invalid &lt;code>filter&lt;/code> (as on
+      /// &lt;code>SubscribeVtsiEvents&lt;/code>); &lt;code>NOT_FOUND&lt;/code> for an unknown project or webhook;
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled webhook (enable it first; &lt;code>TestWebhook&lt;/code> works
+      /// on a disabled one); &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal
+      /// retention; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server&amp;apos;s webhook queue cannot take a single
+      /// event now (retry later).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RedeliverWebhookEventsResponse> RedeliverWebhookEventsAsync(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RedeliverWebhookEvents, null, options, request);
+      }
+      /// <summary>
       /// &lt;p>Streams the events of a project as they happen, selected either by a named event
-      /// subscription or by an inline filter. An empty message is sent as a keep-alive. After a
-      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped;
+      /// subscription or by an inline filter. An empty message is sent as a keep-alive after
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_KEEPALIVE_S&lt;/code> (15 s by default) without an event. After a
+      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped, or open
+      /// with a &lt;code>start_time&lt;/code> to replay from a point in time;
       /// events older than the server&amp;apos;s retention (24 h by default) are no longer available, and
       /// the journal records a project&amp;apos;s events only while it has an open stream (and for 1 h
       /// after the last one closed) or an enabled event subscription. A stream sees events of other
       /// server replicas from at most a few seconds after it opened. A client that stops reading for
-      /// longer than the server&amp;apos;s stall timeout (30 s by default) is disconnected; reconnect with
-      /// the &lt;code>resume_token&lt;/code>. When the project is deleted, the stream delivers
-      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code> and ends.&lt;/p>
+      /// longer than the server&amp;apos;s stall timeout (&lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code>, 30 s by
+      /// default) is disconnected; one that reads so slowly that the stream&amp;apos;s buffer
+      /// (&lt;code>ONDEWO_VTSI_EVENT_STREAM_BUFFER_SIZE&lt;/code>, 1000 events) overflows gets a last message with
+      /// &lt;code>STREAM_END_REASON_CLIENT_TOO_SLOW&lt;/code>; reconnect with the &lt;code>resume_token&lt;/code> in both
+      /// cases.&lt;/p>
+      /// &lt;p>The server ends the stream with a last message carrying &lt;code>end_reason&lt;/code>,
+      /// &lt;code>end_reason_type&lt;/code> and a final &lt;code>resume_token&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default), on server shutdown, when the
+      /// client is too slow, when the named subscription is deleted or disabled, and when the project is deleted
+      /// (after delivering &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>). While authorization is enforced, the
+      /// caller&amp;apos;s role is re-checked periodically; a revoked role ends the RPC with
+      /// &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription;
-      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a malformed or foreign
+      /// &lt;code>event_subscription_name&lt;/code> (of another project), a malformed &lt;code>resume_token&lt;/code> or
+      /// one issued for another project, &lt;code>resume_token&lt;/code> together with &lt;code>start_time&lt;/code>, a
+      /// &lt;code>start_time&lt;/code> in the future, or an invalid &lt;code>filter&lt;/code> (a reserved or unspecified
+      /// event, an event both selected and excluded, &lt;code>all_events&lt;/code> with &lt;code>events&lt;/code>, a malformed
+      /// campaign name or one of another project, more than 50 prefixes or campaign names);
+      /// &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal retention;
       /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled subscription; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// when the server has no free stream slot; &lt;code>UNAVAILABLE&lt;/code> when the replica reached serves no
+      /// event streams (retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1130,19 +1633,37 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Streams the events of a project as they happen, selected either by a named event
-      /// subscription or by an inline filter. An empty message is sent as a keep-alive. After a
-      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped;
+      /// subscription or by an inline filter. An empty message is sent as a keep-alive after
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_KEEPALIVE_S&lt;/code> (15 s by default) without an event. After a
+      /// disconnect, pass the last &lt;code>resume_token&lt;/code> to continue where the stream stopped, or open
+      /// with a &lt;code>start_time&lt;/code> to replay from a point in time;
       /// events older than the server&amp;apos;s retention (24 h by default) are no longer available, and
       /// the journal records a project&amp;apos;s events only while it has an open stream (and for 1 h
       /// after the last one closed) or an enabled event subscription. A stream sees events of other
       /// server replicas from at most a few seconds after it opened. A client that stops reading for
-      /// longer than the server&amp;apos;s stall timeout (30 s by default) is disconnected; reconnect with
-      /// the &lt;code>resume_token&lt;/code>. When the project is deleted, the stream delivers
-      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code> and ends.&lt;/p>
+      /// longer than the server&amp;apos;s stall timeout (&lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code>, 30 s by
+      /// default) is disconnected; one that reads so slowly that the stream&amp;apos;s buffer
+      /// (&lt;code>ONDEWO_VTSI_EVENT_STREAM_BUFFER_SIZE&lt;/code>, 1000 events) overflows gets a last message with
+      /// &lt;code>STREAM_END_REASON_CLIENT_TOO_SLOW&lt;/code>; reconnect with the &lt;code>resume_token&lt;/code> in both
+      /// cases.&lt;/p>
+      /// &lt;p>The server ends the stream with a last message carrying &lt;code>end_reason&lt;/code>,
+      /// &lt;code>end_reason_type&lt;/code> and a final &lt;code>resume_token&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_EVENT_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default), on server shutdown, when the
+      /// client is too slow, when the named subscription is deleted or disabled, and when the project is deleted
+      /// (after delivering &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>). While authorization is enforced, the
+      /// caller&amp;apos;s role is re-checked periodically; a revoked role ends the RPC with
+      /// &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> for an unknown project or subscription;
-      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a malformed or foreign
+      /// &lt;code>event_subscription_name&lt;/code> (of another project), a malformed &lt;code>resume_token&lt;/code> or
+      /// one issued for another project, &lt;code>resume_token&lt;/code> together with &lt;code>start_time&lt;/code>, a
+      /// &lt;code>start_time&lt;/code> in the future, or an invalid &lt;code>filter&lt;/code> (a reserved or unspecified
+      /// event, an event both selected and excluded, &lt;code>all_events&lt;/code> with &lt;code>events&lt;/code>, a malformed
+      /// campaign name or one of another project, more than 50 prefixes or campaign names);
+      /// &lt;code>OUT_OF_RANGE&lt;/code> for a &lt;code>start_time&lt;/code> older than the journal retention;
       /// &lt;code>FAILED_PRECONDITION&lt;/code> for a disabled subscription; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// when the server has no free stream slot; &lt;code>UNAVAILABLE&lt;/code> when the replica reached serves no
+      /// event streams (retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1177,6 +1698,7 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_DeleteWebhook, serviceImpl.DeleteWebhook)
           .AddMethod(__Method_ListWebhooks, serviceImpl.ListWebhooks)
           .AddMethod(__Method_TestWebhook, serviceImpl.TestWebhook)
+          .AddMethod(__Method_RedeliverWebhookEvents, serviceImpl.RedeliverWebhookEvents)
           .AddMethod(__Method_SubscribeVtsiEvents, serviceImpl.SubscribeVtsiEvents).Build();
     }
 
@@ -1198,6 +1720,7 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_DeleteWebhook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.DeleteWebhookRequest, global::Ondewo.Vtsi.DeleteWebhookResponse>(serviceImpl.DeleteWebhook));
       serviceBinder.AddMethod(__Method_ListWebhooks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.ListWebhooksRequest, global::Ondewo.Vtsi.ListWebhooksResponse>(serviceImpl.ListWebhooks));
       serviceBinder.AddMethod(__Method_TestWebhook, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.TestWebhookRequest, global::Ondewo.Vtsi.TestWebhookResponse>(serviceImpl.TestWebhook));
+      serviceBinder.AddMethod(__Method_RedeliverWebhookEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.RedeliverWebhookEventsRequest, global::Ondewo.Vtsi.RedeliverWebhookEventsResponse>(serviceImpl.RedeliverWebhookEvents));
       serviceBinder.AddMethod(__Method_SubscribeVtsiEvents, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.SubscribeVtsiEventsRequest, global::Ondewo.Vtsi.SubscribeVtsiEventsResponse>(serviceImpl.SubscribeVtsiEvents));
     }
 

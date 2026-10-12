@@ -43,15 +43,80 @@ namespace Ondewo.Vtsi {
   /// the ongoing calls finish and starts no new ones; &lt;code>HardStopCampaign&lt;/code> ends the ongoing
   /// calls immediately and starts no new ones; &lt;code>ResumeCampaign&lt;/code> continues a stopped or hard
   /// stopped campaign with the calls that have not finished yet.&lt;/p>
-  /// &lt;p>Every RPC about ONE campaign accepts either its resource name or its display name
-  /// (&lt;a href="index.html#ondewo.vtsi.CampaignDisplayName">CampaignDisplayName&lt;/a>); display names are
-  /// unique within a project.&lt;/p>
+  /// &lt;p>Every RPC about ONE campaign accepts either its resource name or its display name. Display names
+  /// are unique within a project, so a display name is resolved within the project named by the
+  /// request&amp;apos;s top-level &lt;code>vtsi_project_name&lt;/code>, which is REQUIRED with a display name
+  /// (&lt;code>INVALID_ARGUMENT&lt;/code> when it is empty or malformed) and checked against the campaign
+  /// when a resource name is used. (The &lt;code>CampaignDisplayName&lt;/code> message of 9.0.0, which
+  /// carried the project and the display name together, was removed in 9.1.0; its field numbers are
+  /// &lt;code>reserved&lt;/code>.)&lt;/p>
+  /// &lt;p>A malformed selector is &lt;code>INVALID_ARGUMENT&lt;/code> for every authenticated caller, with or
+  /// without authorization enforced (also when authorization could resolve no project from it): neither
+  /// the resource name nor the display name set (also how an old 9.0.0 client&amp;apos;s removed
+  /// &lt;code>CampaignDisplayName&lt;/code> arrives), a malformed resource name, a display name with an empty
+  /// or malformed &lt;code>vtsi_project_name&lt;/code>, and a &lt;code>vtsi_project_name&lt;/code> that is not the
+  /// project of the resource name. With authorization enforced, a well-formed request naming a project
+  /// the caller holds no role on (an unknown project included) is refused with
+  /// &lt;code>PERMISSION_DENIED&lt;/code> before any lookup, so it is not answered &lt;code>NOT_FOUND&lt;/code>, and
+  /// a caller without a credential is &lt;code>UNAUTHENTICATED&lt;/code> whatever it sent.&lt;/p>
+  /// &lt;p>Campaign-level call defaults: &lt;code>campaign_common_services_config&lt;/code> and
+  /// &lt;code>campaign_sip_caller_config&lt;/code> of a &lt;code>Campaign&lt;/code> are the defaults of EVERY call of
+  /// the campaign. They are read LIVE when a campaign call is dispatched (every attempt, retries
+  /// included): the effective configuration of the call is a copy of the campaign&amp;apos;s config with the
+  /// call&amp;apos;s own &lt;code>StartCallerRequest&lt;/code> config merged over it (protobuf
+  /// &lt;code>MergeFrom&lt;/code>), see &lt;a href="index.html#ondewo.vtsi.Campaign">Campaign&lt;/a>. The one exception
+  /// is the callee: &lt;code>campaign_sip_caller_config.callee_id&lt;/code> is resolved and FIXED when a call is
+  /// added (it is that call&amp;apos;s &lt;code>CampaignCall.phone_number&lt;/code>), so every attempt of a call dials the
+  /// number its campaign call reports.&lt;/p>
+  /// &lt;p>Partial responses: &lt;code>ListCampaigns&lt;/code>, &lt;code>ListCampaignCalls&lt;/code>,
+  /// &lt;code>CreateCampaign&lt;/code>, &lt;code>GetCampaign&lt;/code>, &lt;code>UpdateCampaign&lt;/code>,
+  /// &lt;code>DeleteCampaign&lt;/code> (paths of &lt;code>DeleteCampaignResponse&lt;/code>), the four lifecycle RPCs
+  /// &lt;code>StartCampaign&lt;/code>, &lt;code>StopCampaign&lt;/code>, &lt;code>HardStopCampaign&lt;/code> and
+  /// &lt;code>ResumeCampaign&lt;/code>, &lt;code>CloneCampaign&lt;/code> and &lt;code>GetCampaignCall&lt;/code> accept an optional
+  /// &lt;code>field_mask&lt;/code> naming the field paths of the returned resource (for a listing: of each listed
+  /// element) to populate. A mask never changes what the RPC does. Unset or empty returns every
+  /// field (one exception: &lt;code>ListCampaigns&lt;/code> returns &lt;code>campaign_callers&lt;/code> and
+  /// &lt;code>campaign_callers_truncated&lt;/code> only when its mask names them); the identifying &lt;code>name&lt;/code> is always populated; an unknown path is rejected with
+  /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it; nested paths through singular message fields (e.g.
+  /// &lt;code>statistics.completed&lt;/code>) are allowed, a path below a repeated or map field is not. The
+  /// mask is applied after any role-based redaction, so it can only narrow what the caller may see.&lt;/p>
+  /// &lt;p>Callers and calls of a campaign: &lt;code>Campaign.campaign_callers&lt;/code> names the callers that placed
+  /// its calls (bounded); &lt;code>Calls.ListCallers&lt;/code> with &lt;code>ListCallersRequest.campaign_name&lt;/code> /
+  /// &lt;code>campaign_display_name&lt;/code> lists them paginated as &lt;code>Caller&lt;/code> resources, and
+  /// &lt;code>Calls.ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+  /// &lt;code>campaign_display_name&lt;/code> lists the calls they placed as &lt;code>Call&lt;/code> resources.&lt;/p>
+  /// &lt;p>Calling window: a campaign with a &lt;code>calling_window&lt;/code> starts calls (first attempts, retries and
+  /// due scheduled calls alike) only inside one of the window&amp;apos;s weekly slots, in the window&amp;apos;s time zone.
+  /// Outside every slot it stays &lt;code>RUNNING&lt;/code> and reports &lt;code>outside_calling_window = true&lt;/code>; calls
+  /// already running are never ended by a slot ending. See
+  /// &lt;a href="index.html#ondewo.vtsi.CampaignCallingWindow">CampaignCallingWindow&lt;/a>.&lt;/p>
+  /// &lt;p>Limits and defaults of the server (environment variables of ondewo-vtsi, read at start-up): at most
+  /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code> (100000) calls per campaign; &lt;code>max_parallel_calls&lt;/code>
+  /// defaults to &lt;code>ONDEWO_VTSI_CAMPAIGN_DEFAULT_MAX_PARALLEL_CALLS&lt;/code> (1) and is at most
+  /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_PARALLEL_CALLS_LIMIT&lt;/code> (1000); &lt;code>max_attempts&lt;/code> defaults to 1
+  /// and is at most &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10); &lt;code>retry_delay&lt;/code> defaults
+  /// to &lt;code>ONDEWO_VTSI_CAMPAIGN_DEFAULT_RETRY_DELAY_S&lt;/code> (60 s); one &lt;code>AddCallersToCampaign&lt;/code> /
+  /// &lt;code>AddScheduledCallersToCampaign&lt;/code> request carries at most 1000 entries (a fixed server limit,
+  /// &lt;code>INVALID_ARGUMENT&lt;/code> above it); &lt;code>CancelCampaignCalls&lt;/code> and &lt;code>RetryCampaignCalls&lt;/code>
+  /// act on at most 1000 calls per request. The status stream is bounded by
+  /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_DURATION_S&lt;/code> (3600 s), sends a keep-alive after
+  /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_KEEPALIVE_S&lt;/code> (15 s) without a change and at most
+  /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_CONCURRENT&lt;/code> (16) status streams are open per server replica.&lt;/p>
+  /// &lt;p>Authorization (when enforced): every RPC of this service needs &lt;code>PROJECT_EXECUTOR&lt;/code> or a
+  /// higher role (&lt;code>PROJECT_DEVELOPER&lt;/code>, &lt;code>PROJECT_ADMIN&lt;/code>) on the campaign&amp;apos;s project, or
+  /// &lt;code>SERVER_ADMIN&lt;/code>; credential-bearing call defaults are returned only to the roles named at
+  /// &lt;code>Campaign.campaign_common_services_config&lt;/code>.&lt;/p>
   /// &lt;p>Errors are reported as gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name,
   /// filter, field mask or value; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign
-  /// call; &lt;code>ALREADY_EXISTS&lt;/code> for a &lt;code>display_name&lt;/code> already used in the project;
+  /// call (with authorization enforced: &lt;code>PERMISSION_DENIED&lt;/code> for a project the caller holds
+  /// no role on, or a role below &lt;code>PROJECT_EXECUTOR&lt;/code>); &lt;code>UNAUTHENTICATED&lt;/code> for a request
+  /// without a valid credential while authorization is enforced; &lt;code>ALREADY_EXISTS&lt;/code> for a
+  /// &lt;code>display_name&lt;/code> already used in the project;
   /// &lt;code>FAILED_PRECONDITION&lt;/code> for a state that does not allow the operation (each RPC names its
   /// cases); &lt;code>ABORTED&lt;/code> when a concurrent change won, nothing was stored and the request can
-  /// be retried; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server has no free stream slot.&lt;/p>
+  /// be retried; &lt;code>DEADLINE_EXCEEDED&lt;/code> for a forced &lt;code>DeleteCampaign&lt;/code> whose hang-ups were not
+  /// confirmed in time (the hard stop stays in effect, retry the request); &lt;code>RESOURCE_EXHAUSTED&lt;/code> when
+  /// the server has no free stream slot.&lt;/p>
   /// </summary>
   public static partial class Campaigns
   {
@@ -126,6 +191,20 @@ namespace Ondewo.Vtsi {
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCampaignStatusRequest> __Marshaller_ondewo_vtsi_StreamCampaignStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCampaignStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCampaignStatusResponse> __Marshaller_ondewo_vtsi_StreamCampaignStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCampaignStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.GetCampaignCallRequest> __Marshaller_ondewo_vtsi_GetCampaignCallRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.GetCampaignCallRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.CampaignCall> __Marshaller_ondewo_vtsi_CampaignCall = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.CampaignCall.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.CancelCampaignCallsRequest> __Marshaller_ondewo_vtsi_CancelCampaignCallsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.CancelCampaignCallsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.CancelCampaignCallsResponse> __Marshaller_ondewo_vtsi_CancelCampaignCallsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.CancelCampaignCallsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RetryCampaignCallsRequest> __Marshaller_ondewo_vtsi_RetryCampaignCallsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RetryCampaignCallsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.RetryCampaignCallsResponse> __Marshaller_ondewo_vtsi_RetryCampaignCallsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.RetryCampaignCallsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.CloneCampaignRequest> __Marshaller_ondewo_vtsi_CloneCampaignRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.CloneCampaignRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.CreateCampaignRequest, global::Ondewo.Vtsi.Campaign> __Method_CreateCampaign = new grpc::Method<global::Ondewo.Vtsi.CreateCampaignRequest, global::Ondewo.Vtsi.Campaign>(
@@ -223,6 +302,38 @@ namespace Ondewo.Vtsi {
         __Marshaller_ondewo_vtsi_StreamCampaignStatusRequest,
         __Marshaller_ondewo_vtsi_StreamCampaignStatusResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.GetCampaignCallRequest, global::Ondewo.Vtsi.CampaignCall> __Method_GetCampaignCall = new grpc::Method<global::Ondewo.Vtsi.GetCampaignCallRequest, global::Ondewo.Vtsi.CampaignCall>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCampaignCall",
+        __Marshaller_ondewo_vtsi_GetCampaignCallRequest,
+        __Marshaller_ondewo_vtsi_CampaignCall);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.CancelCampaignCallsRequest, global::Ondewo.Vtsi.CancelCampaignCallsResponse> __Method_CancelCampaignCalls = new grpc::Method<global::Ondewo.Vtsi.CancelCampaignCallsRequest, global::Ondewo.Vtsi.CancelCampaignCallsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelCampaignCalls",
+        __Marshaller_ondewo_vtsi_CancelCampaignCallsRequest,
+        __Marshaller_ondewo_vtsi_CancelCampaignCallsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.RetryCampaignCallsRequest, global::Ondewo.Vtsi.RetryCampaignCallsResponse> __Method_RetryCampaignCalls = new grpc::Method<global::Ondewo.Vtsi.RetryCampaignCallsRequest, global::Ondewo.Vtsi.RetryCampaignCallsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RetryCampaignCalls",
+        __Marshaller_ondewo_vtsi_RetryCampaignCallsRequest,
+        __Marshaller_ondewo_vtsi_RetryCampaignCallsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.CloneCampaignRequest, global::Ondewo.Vtsi.Campaign> __Method_CloneCampaign = new grpc::Method<global::Ondewo.Vtsi.CloneCampaignRequest, global::Ondewo.Vtsi.Campaign>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CloneCampaign",
+        __Marshaller_ondewo_vtsi_CloneCampaignRequest,
+        __Marshaller_ondewo_vtsi_Campaign);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -237,9 +348,15 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Creates a campaign in state &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>. Calls are added with
       /// &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>; nothing is dialled before
       /// &lt;code>StartCampaign&lt;/code>.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// campaign instead of creating a second one (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>).
+      /// Emits &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>ALREADY_EXISTS&lt;/code> if
-      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for an
-      /// output-only field that was set or an out-of-range value.&lt;/p>
+      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed
+      /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an out-of-range value, an invalid
+      /// &lt;code>calling_window&lt;/code>, a malformed &lt;code>idempotency_key&lt;/code>, an &lt;code>idempotency_key&lt;/code>
+      /// reused with a different request or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>ABORTED&lt;/code> while
+      /// a first attempt with the same &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -251,8 +368,11 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Returns a campaign including its statistics.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Returns a campaign including its statistics, its call defaults and its callers
+      /// (&lt;code>campaign_callers&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -265,12 +385,23 @@ namespace Ondewo.Vtsi {
 
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>. Allowed in
-      /// every state. Lowering &lt;code>max_parallel_calls&lt;/code> never ends a running call: the campaign
-      /// starts no new call until fewer than the new maximum are running.&lt;/p>
+      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>,
+      /// &lt;code>campaign_common_services_config&lt;/code>, &lt;code>campaign_sip_caller_config&lt;/code> and
+      /// &lt;code>calling_window&lt;/code> (each also by a nested sub-path). Allowed in every state. A changed
+      /// &lt;code>calling_window&lt;/code> applies from the next dispatch decision (within about one second); it never
+      /// ends a running call. Lowering &lt;code>max_parallel_calls&lt;/code>
+      /// never ends a running call: the campaign starts no new call until fewer than the new maximum are
+      /// running. A changed call default applies to every campaign call dispatched after the update,
+      /// retries included; a call already dispatched keeps the configuration it was started with. The
+      /// exception is &lt;code>campaign_sip_caller_config.callee_id&lt;/code>, which is fixed per call when the call
+      /// is added and therefore applies only to calls added after the update.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>) and, when
+      /// &lt;code>max_parallel_calls&lt;/code> changed, &lt;code>VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for an empty mask, an unknown,
-      /// output-only or immutable path, or an out-of-range value; &lt;code>ALREADY_EXISTS&lt;/code> for a
-      /// &lt;code>display_name&lt;/code> used by another campaign of the project.&lt;/p>
+      /// output-only or immutable path, an out-of-range value, an invalid &lt;code>calling_window&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>ALREADY_EXISTS&lt;/code> for a
+      /// &lt;code>display_name&lt;/code> used by another campaign of the project; &lt;code>ABORTED&lt;/code> when a concurrent
+      /// update of the same campaign won (nothing was written; retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -284,10 +415,26 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Deletes a campaign and its campaign calls. Its scheduled callers that have not fired yet are
       /// cancelled. Calls that already ran are not touched and stay visible through
-      /// &lt;code>ListCalls&lt;/code>.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> while the campaign is
-      /// &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard stop it
-      /// first).&lt;/p>
+      /// &lt;code>ListCalls&lt;/code>, but no longer as calls OF the campaign: the attempt history that linked them
+      /// to it is deleted with it, so &lt;code>ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+      /// &lt;code>campaign_display_name&lt;/code> of a deleted campaign answers &lt;code>NOT_FOUND&lt;/code> (list them by
+      /// caller or without the campaign selector), and &lt;code>Calls.ListCallers&lt;/code> with the campaign selector
+      /// likewise.&lt;/p>
+      /// &lt;p>With &lt;code>force&lt;/code>, a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+      /// &lt;code>HARD_STOPPING&lt;/code> is hard stopped first (exactly as by &lt;code>HardStopCampaign&lt;/code>) and deleted
+      /// as soon as the end of each of its calls is confirmed. The RPC waits for that, at most
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default) and never past the client&amp;apos;s
+      /// deadline; when the hang-ups are not confirmed by then it answers &lt;code>DEADLINE_EXCEEDED&lt;/code>, the
+      /// campaign stays &lt;code>HARD_STOPPING&lt;/code> (then &lt;code>HARD_STOPPED&lt;/code>) and is NOT deleted: repeat the
+      /// request. Idempotent: a repeated forced delete of a campaign that is still hard stopping waits again.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_DELETED&lt;/code> (preceded, with &lt;code>force&lt;/code> on a running
+      /// campaign, by &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED&lt;/code> and
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOPPED&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> without &lt;code>force&lt;/code> while
+      /// the campaign is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard
+      /// stop it first, or set &lt;code>force&lt;/code>); &lt;code>DEADLINE_EXCEEDED&lt;/code> with &lt;code>force&lt;/code> as
+      /// described above; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a &lt;code>display_name&lt;/code> without
+      /// &lt;code>vtsi_project_name&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -299,10 +446,16 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Lists the campaigns of a project, newest first, filtered and paged, each with its
-      /// statistics.&lt;/p>
+      /// &lt;p>Lists the campaigns of a project, filtered, ordered by &lt;code>ListCampaignsRequest.order_by&lt;/code>
+      /// (newest first by default) and paged, each with its
+      /// statistics. &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code> are left empty
+      /// unless &lt;code>field_mask&lt;/code> names them, and a page that carries them holds at most 20 campaigns (see
+      /// &lt;code>ListCampaignsRequest.field_mask&lt;/code>).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a negative &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative &lt;code>page_size&lt;/code>, a foreign
+      /// &lt;code>page_token&lt;/code> (also one issued for another filter or &lt;code>order_by&lt;/code>), an unknown
+      /// &lt;code>order_by&lt;/code> or &lt;code>states&lt;/code> value, &lt;code>created_after&lt;/code> not before
+      /// &lt;code>created_before&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -316,7 +469,8 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the progress of a campaign: how many of its calls are not started, in progress,
       /// waiting for a retry, completed, failed and cancelled, and how many attempts were made.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name or a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -330,8 +484,15 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Lists the calls of a campaign in the order they were added, filtered and paged, each with
       /// its current SIP status, the SIP status description and its attempts.&lt;/p>
+      /// &lt;p>The filters of &lt;code>ListCampaignCallsRequest&lt;/code> are combined by AND; the values of one
+      /// repeated filter by OR.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a negative
-      /// &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> (also one issued for another filter), a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>, a malformed campaign call name or one
+      /// of another campaign in &lt;code>campaign_call_names&lt;/code>, more than 1000 &lt;code>phone_numbers&lt;/code> or
+      /// &lt;code>campaign_call_names&lt;/code>, a negative &lt;code>min_attempts&lt;/code>, an unknown enum value in
+      /// &lt;code>states&lt;/code> / &lt;code>sources&lt;/code>, &lt;code>finish_time_min&lt;/code> not before
+      /// &lt;code>finish_time_max&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -345,8 +506,13 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Starts a &lt;code>CAMPAIGN_STATE_CREATED&lt;/code> campaign. Idempotent on a
       /// &lt;code>RUNNING&lt;/code> campaign.&lt;/p>
+      /// &lt;p>A campaign with a &lt;code>calling_window&lt;/code> started outside every slot is &lt;code>RUNNING&lt;/code>
+      /// with &lt;code>outside_calling_window = true&lt;/code> and dials from the next slot on. Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_STARTED&lt;/code> (nothing on the idempotent repeat).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> in any other state (use
-      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign).&lt;/p>
+      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign); &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -364,7 +530,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>, &lt;code>HARD_STOPPING&lt;/code> and
       /// &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -388,7 +556,9 @@ namespace Ondewo.Vtsi {
       /// Returns the campaign in &lt;code>HARD_STOPPING&lt;/code> (or already &lt;code>HARD_STOPPED&lt;/code>).
       /// Idempotent on &lt;code>HARD_STOPPING&lt;/code> and &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -405,7 +575,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>RUNNING&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on &lt;code>CREATED&lt;/code>
       /// (use &lt;code>StartCampaign&lt;/code>), &lt;code>HARD_STOPPING&lt;/code> (wait until it is
-      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>.&lt;/p>
+      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -420,11 +592,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Streams the status and progress of the campaigns of a project. The first message is a
       /// snapshot (&lt;code>snapshot = true&lt;/code>) of every matching campaign; every later message
       /// carries only the campaigns (and, with &lt;code>include_calls&lt;/code>, the campaign calls) that
-      /// changed. An empty message is sent as a keep-alive. The stream ends when the client
-      /// disconnects or the server-side maximum stream duration is reached
-      /// (&lt;code>end_reason&lt;/code> set on the last message).&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// changed. Changes are polled every &lt;code>ONDEWO_VTSI_STATUS_STREAM_POLL_INTERVAL_S&lt;/code> (1 s by
+      /// default). An empty message is sent as a keep-alive when nothing changed for
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_KEEPALIVE_S&lt;/code> (15 s by default).&lt;/p>
+      /// &lt;p>The stream ends when the client disconnects, or the server ends it with a last message carrying
+      /// &lt;code>end_reason&lt;/code> and &lt;code>end_reason_type&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default,
+      /// &lt;code>STREAM_END_REASON_MAX_DURATION&lt;/code>), when the server shuts down
+      /// (&lt;code>STREAM_END_REASON_SERVER_SHUTDOWN&lt;/code>) and when the project is deleted
+      /// (&lt;code>STREAM_END_REASON_PROJECT_DELETED&lt;/code>). Reconnect and treat the new snapshot as authoritative.
+      /// A client that blocks one send for longer than &lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code> (30 s by
+      /// default) is disconnected without a last message (the RPC ends &lt;code>CANCELLED&lt;/code>). While
+      /// authorization is enforced, the caller&amp;apos;s role is re-checked periodically; a revoked role ends the
+      /// RPC with &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a malformed entry of &lt;code>campaign_names&lt;/code>, a campaign
+      /// name of another project, or an unknown value or &lt;code>CAMPAIGN_STATE_UNSPECIFIED&lt;/code> in
+      /// &lt;code>states&lt;/code> (a well-formed campaign name of the project that names no campaign is accepted and
+      /// matches nothing); &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server has no free stream slot
+      /// (&lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_CONCURRENT&lt;/code>, 16 per replica by default).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -432,6 +618,144 @@ namespace Ondewo.Vtsi {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task StreamCampaignStatus(global::Ondewo.Vtsi.StreamCampaignStatusRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.StreamCampaignStatusResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Returns one call of a campaign, with its current SIP status and, with
+      /// &lt;code>include_attempts&lt;/code>, its attempts. Read-only, no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign call
+      /// (also one deleted with its campaign); &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> as
+      /// for every RPC of this service.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.CampaignCall> GetCampaignCall(global::Ondewo.Vtsi.GetCampaignCallRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Cancels calls of a campaign that have not started an attempt that is still running: each selected
+      /// call in &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>
+      /// becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> (its &lt;code>finish_time&lt;/code> set, counted in
+      /// &lt;code>CampaignStatistics.cancelled&lt;/code>); the scheduled caller of a call added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> is cancelled with it. Mirrors
+      /// &lt;code>Calls.CancelScheduledCaller&lt;/code>: a call whose attempt is &lt;code>DISPATCHING&lt;/code> or
+      /// &lt;code>IN_PROGRESS&lt;/code> is NOT cancelled (and its call is not hung up; use
+      /// &lt;code>HardStopCampaign&lt;/code> or &lt;code>Calls.StopCall&lt;/code>) and is reported in &lt;code>refused&lt;/code>,
+      /// like a call that is already finished; a refusal is not an error.&lt;/p>
+      /// &lt;p>Selection: &lt;code>campaign_call_names&lt;/code>, &lt;code>states&lt;/code>, or both (then a named call must
+      /// also be in one of the states). At most 1000 calls are acted on per request: with &lt;code>states&lt;/code>
+      /// the first 1000 matching calls by &lt;code>position&lt;/code>, and &lt;code>remaining_count&lt;/code> says how many
+      /// more match; repeat the request until it is 0. Each call is cancelled atomically on its own (the request
+      /// as a whole is not atomic); a call that a replica starts dispatching while the request runs is refused,
+      /// never cancelled half-way. Allowed in every campaign state. When it leaves a &lt;code>RUNNING&lt;/code>
+      /// campaign without an unfinished call, the campaign becomes &lt;code>COMPLETED&lt;/code> at the next engine
+      /// tick. Idempotent: a repeat refuses the calls it already cancelled with
+      /// &lt;code>reason=already-finished&lt;/code>.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_CANCELLED&lt;/code> per cancelled call,
+      /// &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CANCELLED&lt;/code> per cancelled scheduled caller, and the usual
+      /// throttled &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed selector (as &lt;code>GetCampaign&lt;/code>), neither
+      /// &lt;code>campaign_call_names&lt;/code> nor &lt;code>states&lt;/code> set, more than 1000 names, a malformed campaign
+      /// call name or one of another campaign, a state other than &lt;code>NOT_STARTED&lt;/code> /
+      /// &lt;code>RETRY_PENDING&lt;/code> in &lt;code>states&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign (an unknown but well-formed campaign call name of the campaign is a refusal with
+      /// &lt;code>reason=not-found&lt;/code>, not an error).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.CancelCampaignCallsResponse> CancelCampaignCalls(global::Ondewo.Vtsi.CancelCampaignCallsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Puts FAILED or CANCELLED calls of a campaign back into the queue with a fresh attempt budget: each
+      /// selected call gets &lt;code>additional_attempts&lt;/code> more attempts on top of the attempts it already
+      /// made, and becomes &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> with &lt;code>next_attempt_time&lt;/code> =
+      /// the later of now and &lt;code>not_before&lt;/code> (or &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> when it
+      /// never made an attempt, e.g. a scheduled call cancelled before it fired). &lt;code>finish_time&lt;/code> and
+      /// &lt;code>last_error&lt;/code> are cleared; &lt;code>attempt_history&lt;/code> is kept and continues with the next
+      /// &lt;code>attempt_number&lt;/code>. The call keeps its &lt;code>phone_number&lt;/code> and its own configuration;
+      /// the campaign&amp;apos;s call defaults are read live at the next dispatch as for every attempt.&lt;/p>
+      /// &lt;p>A call added by &lt;code>AddScheduledCallersToCampaign&lt;/code> keeps following its scheduled caller,
+      /// which returns to &lt;code>SCHEDULED&lt;/code> with its scheduled time moved to the call&amp;apos;s
+      /// &lt;code>next_attempt_time&lt;/code> (&lt;code>VTSI_EVENT_SCHEDULED_CALLER_UPDATED&lt;/code>).&lt;/p>
+      /// &lt;p>Effect on the campaign: a &lt;code>COMPLETED&lt;/code> campaign becomes &lt;code>RUNNING&lt;/code> again (as when
+      /// calls are added by a &lt;code>CampaignAssignment&lt;/code>); every other state is kept, so a stopped campaign
+      /// runs the calls after &lt;code>ResumeCampaign&lt;/code> and a &lt;code>CREATED&lt;/code> one after
+      /// &lt;code>StartCampaign&lt;/code>. The calls are dispatched under &lt;code>max_parallel_calls&lt;/code> and the
+      /// &lt;code>calling_window&lt;/code> like any other.&lt;/p>
+      /// &lt;p>Selection exactly as &lt;code>CancelCampaignCalls&lt;/code> (names, states or both; at most 1000 calls per
+      /// request, &lt;code>remaining_count&lt;/code>); a selected call that is not &lt;code>FAILED&lt;/code> or
+      /// &lt;code>CANCELLED&lt;/code> is reported in &lt;code>refused&lt;/code>. A failure that cannot succeed by repetition
+      /// (e.g. a rejected credential) is retried too: fix its cause first, otherwise the campaign may be
+      /// auto-stopped again. Not idempotent: each request adds a new budget to the calls it requeues, but a
+      /// repeat finds them &lt;code>RETRY_PENDING&lt;/code> / &lt;code>NOT_STARTED&lt;/code> and refuses them.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_REQUEUED&lt;/code> per requeued call (attributes
+      /// &lt;code>attempt_limit&lt;/code>, &lt;code>next_attempt_time&lt;/code>), &lt;code>VTSI_EVENT_CAMPAIGN_RESUMED&lt;/code>
+      /// when a &lt;code>COMPLETED&lt;/code> campaign became &lt;code>RUNNING&lt;/code>, and the throttled
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> as &lt;code>CancelCampaignCalls&lt;/code>, except that
+      /// &lt;code>states&lt;/code> may only hold &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code>, plus
+      /// &lt;code>additional_attempts&lt;/code> outside 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10)
+      /// and &lt;code>not_before&lt;/code> more than 7 days ahead; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign; &lt;code>FAILED_PRECONDITION&lt;/code> when the campaign is &lt;code>HARD_STOPPING&lt;/code> (wait until it
+      /// is &lt;code>HARD_STOPPED&lt;/code>).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.RetryCampaignCallsResponse> RetryCampaignCalls(global::Ondewo.Vtsi.RetryCampaignCallsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Creates a new campaign in the same project as a copy of an existing one, server side, so the
+      /// stored credentials of its call defaults are preserved without ever being returned to the client (a
+      /// Get-then-Create round trip would copy the REDACTED defaults). Copied: &lt;code>max_parallel_calls&lt;/code>,
+      /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+      /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code>. Not copied: the state (the
+      /// clone is &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>), statistics, callers and every other output-only
+      /// field.&lt;/p>
+      /// &lt;p>With &lt;code>include_calls&lt;/code>, the source&amp;apos;s calls whose state is in &lt;code>call_states&lt;/code>
+      /// (empty: every state) are copied as new &lt;code>NOT_STARTED&lt;/code> calls in their original order
+      /// (&lt;code>position&lt;/code> renumbered from 1), each with its own stored configuration and its fixed
+      /// &lt;code>phone_number&lt;/code>, no attempt and no history. A copied call that was added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> gets a new scheduled caller with the same scheduled time
+      /// (a time in the past is due as soon as the clone runs). The whole clone is atomic: the campaign and every
+      /// copied call (and scheduled caller) are stored, or nothing is. The source is read in one consistent
+      /// snapshot and is not changed.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// clone (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>). Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code> for the clone with the attributes &lt;code>cloned_from&lt;/code>
+      /// (the source&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>, and, when calls were copied,
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLS_ADDED&lt;/code> and one &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CREATED&lt;/code> per
+      /// new scheduled caller.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed source selector (as &lt;code>GetCampaign&lt;/code>),
+      /// a &lt;code>new_display_name&lt;/code> over 128 characters, &lt;code>call_states&lt;/code> without
+      /// &lt;code>include_calls&lt;/code> or holding an unknown value, a malformed or reused
+      /// &lt;code>idempotency_key&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or source campaign; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>new_display_name&lt;/code> is used
+      /// in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the copied calls would exceed
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code>; &lt;code>ABORTED&lt;/code> while a first attempt with the same
+      /// &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.Campaign> CloneCampaign(global::Ondewo.Vtsi.CloneCampaignRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -469,9 +793,15 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Creates a campaign in state &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>. Calls are added with
       /// &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>; nothing is dialled before
       /// &lt;code>StartCampaign&lt;/code>.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// campaign instead of creating a second one (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>).
+      /// Emits &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>ALREADY_EXISTS&lt;/code> if
-      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for an
-      /// output-only field that was set or an out-of-range value.&lt;/p>
+      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed
+      /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an out-of-range value, an invalid
+      /// &lt;code>calling_window&lt;/code>, a malformed &lt;code>idempotency_key&lt;/code>, an &lt;code>idempotency_key&lt;/code>
+      /// reused with a different request or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>ABORTED&lt;/code> while
+      /// a first attempt with the same &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -487,9 +817,15 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Creates a campaign in state &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>. Calls are added with
       /// &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>; nothing is dialled before
       /// &lt;code>StartCampaign&lt;/code>.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// campaign instead of creating a second one (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>).
+      /// Emits &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>ALREADY_EXISTS&lt;/code> if
-      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for an
-      /// output-only field that was set or an out-of-range value.&lt;/p>
+      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed
+      /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an out-of-range value, an invalid
+      /// &lt;code>calling_window&lt;/code>, a malformed &lt;code>idempotency_key&lt;/code>, an &lt;code>idempotency_key&lt;/code>
+      /// reused with a different request or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>ABORTED&lt;/code> while
+      /// a first attempt with the same &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -503,9 +839,15 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Creates a campaign in state &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>. Calls are added with
       /// &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>; nothing is dialled before
       /// &lt;code>StartCampaign&lt;/code>.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// campaign instead of creating a second one (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>).
+      /// Emits &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>ALREADY_EXISTS&lt;/code> if
-      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for an
-      /// output-only field that was set or an out-of-range value.&lt;/p>
+      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed
+      /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an out-of-range value, an invalid
+      /// &lt;code>calling_window&lt;/code>, a malformed &lt;code>idempotency_key&lt;/code>, an &lt;code>idempotency_key&lt;/code>
+      /// reused with a different request or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>ABORTED&lt;/code> while
+      /// a first attempt with the same &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,9 +863,15 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Creates a campaign in state &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>. Calls are added with
       /// &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>; nothing is dialled before
       /// &lt;code>StartCampaign&lt;/code>.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// campaign instead of creating a second one (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>).
+      /// Emits &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>ALREADY_EXISTS&lt;/code> if
-      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for an
-      /// output-only field that was set or an out-of-range value.&lt;/p>
+      /// the &lt;code>display_name&lt;/code> is used in the project; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed
+      /// &lt;code>vtsi_project_name&lt;/code>, an output-only field that was set, an out-of-range value, an invalid
+      /// &lt;code>calling_window&lt;/code>, a malformed &lt;code>idempotency_key&lt;/code>, an &lt;code>idempotency_key&lt;/code>
+      /// reused with a different request or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>ABORTED&lt;/code> while
+      /// a first attempt with the same &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -534,8 +882,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCampaign, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns a campaign including its statistics.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Returns a campaign including its statistics, its call defaults and its callers
+      /// (&lt;code>campaign_callers&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -548,8 +899,11 @@ namespace Ondewo.Vtsi {
         return GetCampaign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns a campaign including its statistics.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Returns a campaign including its statistics, its call defaults and its callers
+      /// (&lt;code>campaign_callers&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -560,8 +914,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_GetCampaign, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Returns a campaign including its statistics.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Returns a campaign including its statistics, its call defaults and its callers
+      /// (&lt;code>campaign_callers&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -574,8 +931,11 @@ namespace Ondewo.Vtsi {
         return GetCampaignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Returns a campaign including its statistics.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Returns a campaign including its statistics, its call defaults and its callers
+      /// (&lt;code>campaign_callers&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -587,12 +947,23 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>. Allowed in
-      /// every state. Lowering &lt;code>max_parallel_calls&lt;/code> never ends a running call: the campaign
-      /// starts no new call until fewer than the new maximum are running.&lt;/p>
+      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>,
+      /// &lt;code>campaign_common_services_config&lt;/code>, &lt;code>campaign_sip_caller_config&lt;/code> and
+      /// &lt;code>calling_window&lt;/code> (each also by a nested sub-path). Allowed in every state. A changed
+      /// &lt;code>calling_window&lt;/code> applies from the next dispatch decision (within about one second); it never
+      /// ends a running call. Lowering &lt;code>max_parallel_calls&lt;/code>
+      /// never ends a running call: the campaign starts no new call until fewer than the new maximum are
+      /// running. A changed call default applies to every campaign call dispatched after the update,
+      /// retries included; a call already dispatched keeps the configuration it was started with. The
+      /// exception is &lt;code>campaign_sip_caller_config.callee_id&lt;/code>, which is fixed per call when the call
+      /// is added and therefore applies only to calls added after the update.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>) and, when
+      /// &lt;code>max_parallel_calls&lt;/code> changed, &lt;code>VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for an empty mask, an unknown,
-      /// output-only or immutable path, or an out-of-range value; &lt;code>ALREADY_EXISTS&lt;/code> for a
-      /// &lt;code>display_name&lt;/code> used by another campaign of the project.&lt;/p>
+      /// output-only or immutable path, an out-of-range value, an invalid &lt;code>calling_window&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>ALREADY_EXISTS&lt;/code> for a
+      /// &lt;code>display_name&lt;/code> used by another campaign of the project; &lt;code>ABORTED&lt;/code> when a concurrent
+      /// update of the same campaign won (nothing was written; retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -606,12 +977,23 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>. Allowed in
-      /// every state. Lowering &lt;code>max_parallel_calls&lt;/code> never ends a running call: the campaign
-      /// starts no new call until fewer than the new maximum are running.&lt;/p>
+      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>,
+      /// &lt;code>campaign_common_services_config&lt;/code>, &lt;code>campaign_sip_caller_config&lt;/code> and
+      /// &lt;code>calling_window&lt;/code> (each also by a nested sub-path). Allowed in every state. A changed
+      /// &lt;code>calling_window&lt;/code> applies from the next dispatch decision (within about one second); it never
+      /// ends a running call. Lowering &lt;code>max_parallel_calls&lt;/code>
+      /// never ends a running call: the campaign starts no new call until fewer than the new maximum are
+      /// running. A changed call default applies to every campaign call dispatched after the update,
+      /// retries included; a call already dispatched keeps the configuration it was started with. The
+      /// exception is &lt;code>campaign_sip_caller_config.callee_id&lt;/code>, which is fixed per call when the call
+      /// is added and therefore applies only to calls added after the update.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>) and, when
+      /// &lt;code>max_parallel_calls&lt;/code> changed, &lt;code>VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for an empty mask, an unknown,
-      /// output-only or immutable path, or an out-of-range value; &lt;code>ALREADY_EXISTS&lt;/code> for a
-      /// &lt;code>display_name&lt;/code> used by another campaign of the project.&lt;/p>
+      /// output-only or immutable path, an out-of-range value, an invalid &lt;code>calling_window&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>ALREADY_EXISTS&lt;/code> for a
+      /// &lt;code>display_name&lt;/code> used by another campaign of the project; &lt;code>ABORTED&lt;/code> when a concurrent
+      /// update of the same campaign won (nothing was written; retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -623,12 +1005,23 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>. Allowed in
-      /// every state. Lowering &lt;code>max_parallel_calls&lt;/code> never ends a running call: the campaign
-      /// starts no new call until fewer than the new maximum are running.&lt;/p>
+      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>,
+      /// &lt;code>campaign_common_services_config&lt;/code>, &lt;code>campaign_sip_caller_config&lt;/code> and
+      /// &lt;code>calling_window&lt;/code> (each also by a nested sub-path). Allowed in every state. A changed
+      /// &lt;code>calling_window&lt;/code> applies from the next dispatch decision (within about one second); it never
+      /// ends a running call. Lowering &lt;code>max_parallel_calls&lt;/code>
+      /// never ends a running call: the campaign starts no new call until fewer than the new maximum are
+      /// running. A changed call default applies to every campaign call dispatched after the update,
+      /// retries included; a call already dispatched keeps the configuration it was started with. The
+      /// exception is &lt;code>campaign_sip_caller_config.callee_id&lt;/code>, which is fixed per call when the call
+      /// is added and therefore applies only to calls added after the update.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>) and, when
+      /// &lt;code>max_parallel_calls&lt;/code> changed, &lt;code>VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for an empty mask, an unknown,
-      /// output-only or immutable path, or an out-of-range value; &lt;code>ALREADY_EXISTS&lt;/code> for a
-      /// &lt;code>display_name&lt;/code> used by another campaign of the project.&lt;/p>
+      /// output-only or immutable path, an out-of-range value, an invalid &lt;code>calling_window&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>ALREADY_EXISTS&lt;/code> for a
+      /// &lt;code>display_name&lt;/code> used by another campaign of the project; &lt;code>ABORTED&lt;/code> when a concurrent
+      /// update of the same campaign won (nothing was written; retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -642,12 +1035,23 @@ namespace Ondewo.Vtsi {
       }
       /// <summary>
       /// &lt;p>Updates the fields named in &lt;code>update_mask&lt;/code>: &lt;code>display_name&lt;/code>,
-      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>. Allowed in
-      /// every state. Lowering &lt;code>max_parallel_calls&lt;/code> never ends a running call: the campaign
-      /// starts no new call until fewer than the new maximum are running.&lt;/p>
+      /// &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>,
+      /// &lt;code>campaign_common_services_config&lt;/code>, &lt;code>campaign_sip_caller_config&lt;/code> and
+      /// &lt;code>calling_window&lt;/code> (each also by a nested sub-path). Allowed in every state. A changed
+      /// &lt;code>calling_window&lt;/code> applies from the next dispatch decision (within about one second); it never
+      /// ends a running call. Lowering &lt;code>max_parallel_calls&lt;/code>
+      /// never ends a running call: the campaign starts no new call until fewer than the new maximum are
+      /// running. A changed call default applies to every campaign call dispatched after the update,
+      /// retries included; a call already dispatched keeps the configuration it was started with. The
+      /// exception is &lt;code>campaign_sip_caller_config.callee_id&lt;/code>, which is fixed per call when the call
+      /// is added and therefore applies only to calls added after the update.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_UPDATED&lt;/code> (attribute &lt;code>updated_fields&lt;/code>) and, when
+      /// &lt;code>max_parallel_calls&lt;/code> changed, &lt;code>VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for an empty mask, an unknown,
-      /// output-only or immutable path, or an out-of-range value; &lt;code>ALREADY_EXISTS&lt;/code> for a
-      /// &lt;code>display_name&lt;/code> used by another campaign of the project.&lt;/p>
+      /// output-only or immutable path, an out-of-range value, an invalid &lt;code>calling_window&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>ALREADY_EXISTS&lt;/code> for a
+      /// &lt;code>display_name&lt;/code> used by another campaign of the project; &lt;code>ABORTED&lt;/code> when a concurrent
+      /// update of the same campaign won (nothing was written; retry).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -660,10 +1064,26 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Deletes a campaign and its campaign calls. Its scheduled callers that have not fired yet are
       /// cancelled. Calls that already ran are not touched and stay visible through
-      /// &lt;code>ListCalls&lt;/code>.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> while the campaign is
-      /// &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard stop it
-      /// first).&lt;/p>
+      /// &lt;code>ListCalls&lt;/code>, but no longer as calls OF the campaign: the attempt history that linked them
+      /// to it is deleted with it, so &lt;code>ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+      /// &lt;code>campaign_display_name&lt;/code> of a deleted campaign answers &lt;code>NOT_FOUND&lt;/code> (list them by
+      /// caller or without the campaign selector), and &lt;code>Calls.ListCallers&lt;/code> with the campaign selector
+      /// likewise.&lt;/p>
+      /// &lt;p>With &lt;code>force&lt;/code>, a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+      /// &lt;code>HARD_STOPPING&lt;/code> is hard stopped first (exactly as by &lt;code>HardStopCampaign&lt;/code>) and deleted
+      /// as soon as the end of each of its calls is confirmed. The RPC waits for that, at most
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default) and never past the client&amp;apos;s
+      /// deadline; when the hang-ups are not confirmed by then it answers &lt;code>DEADLINE_EXCEEDED&lt;/code>, the
+      /// campaign stays &lt;code>HARD_STOPPING&lt;/code> (then &lt;code>HARD_STOPPED&lt;/code>) and is NOT deleted: repeat the
+      /// request. Idempotent: a repeated forced delete of a campaign that is still hard stopping waits again.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_DELETED&lt;/code> (preceded, with &lt;code>force&lt;/code> on a running
+      /// campaign, by &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED&lt;/code> and
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOPPED&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> without &lt;code>force&lt;/code> while
+      /// the campaign is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard
+      /// stop it first, or set &lt;code>force&lt;/code>); &lt;code>DEADLINE_EXCEEDED&lt;/code> with &lt;code>force&lt;/code> as
+      /// described above; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a &lt;code>display_name&lt;/code> without
+      /// &lt;code>vtsi_project_name&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -678,10 +1098,26 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Deletes a campaign and its campaign calls. Its scheduled callers that have not fired yet are
       /// cancelled. Calls that already ran are not touched and stay visible through
-      /// &lt;code>ListCalls&lt;/code>.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> while the campaign is
-      /// &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard stop it
-      /// first).&lt;/p>
+      /// &lt;code>ListCalls&lt;/code>, but no longer as calls OF the campaign: the attempt history that linked them
+      /// to it is deleted with it, so &lt;code>ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+      /// &lt;code>campaign_display_name&lt;/code> of a deleted campaign answers &lt;code>NOT_FOUND&lt;/code> (list them by
+      /// caller or without the campaign selector), and &lt;code>Calls.ListCallers&lt;/code> with the campaign selector
+      /// likewise.&lt;/p>
+      /// &lt;p>With &lt;code>force&lt;/code>, a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+      /// &lt;code>HARD_STOPPING&lt;/code> is hard stopped first (exactly as by &lt;code>HardStopCampaign&lt;/code>) and deleted
+      /// as soon as the end of each of its calls is confirmed. The RPC waits for that, at most
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default) and never past the client&amp;apos;s
+      /// deadline; when the hang-ups are not confirmed by then it answers &lt;code>DEADLINE_EXCEEDED&lt;/code>, the
+      /// campaign stays &lt;code>HARD_STOPPING&lt;/code> (then &lt;code>HARD_STOPPED&lt;/code>) and is NOT deleted: repeat the
+      /// request. Idempotent: a repeated forced delete of a campaign that is still hard stopping waits again.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_DELETED&lt;/code> (preceded, with &lt;code>force&lt;/code> on a running
+      /// campaign, by &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED&lt;/code> and
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOPPED&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> without &lt;code>force&lt;/code> while
+      /// the campaign is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard
+      /// stop it first, or set &lt;code>force&lt;/code>); &lt;code>DEADLINE_EXCEEDED&lt;/code> with &lt;code>force&lt;/code> as
+      /// described above; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a &lt;code>display_name&lt;/code> without
+      /// &lt;code>vtsi_project_name&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -694,10 +1130,26 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Deletes a campaign and its campaign calls. Its scheduled callers that have not fired yet are
       /// cancelled. Calls that already ran are not touched and stay visible through
-      /// &lt;code>ListCalls&lt;/code>.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> while the campaign is
-      /// &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard stop it
-      /// first).&lt;/p>
+      /// &lt;code>ListCalls&lt;/code>, but no longer as calls OF the campaign: the attempt history that linked them
+      /// to it is deleted with it, so &lt;code>ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+      /// &lt;code>campaign_display_name&lt;/code> of a deleted campaign answers &lt;code>NOT_FOUND&lt;/code> (list them by
+      /// caller or without the campaign selector), and &lt;code>Calls.ListCallers&lt;/code> with the campaign selector
+      /// likewise.&lt;/p>
+      /// &lt;p>With &lt;code>force&lt;/code>, a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+      /// &lt;code>HARD_STOPPING&lt;/code> is hard stopped first (exactly as by &lt;code>HardStopCampaign&lt;/code>) and deleted
+      /// as soon as the end of each of its calls is confirmed. The RPC waits for that, at most
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default) and never past the client&amp;apos;s
+      /// deadline; when the hang-ups are not confirmed by then it answers &lt;code>DEADLINE_EXCEEDED&lt;/code>, the
+      /// campaign stays &lt;code>HARD_STOPPING&lt;/code> (then &lt;code>HARD_STOPPED&lt;/code>) and is NOT deleted: repeat the
+      /// request. Idempotent: a repeated forced delete of a campaign that is still hard stopping waits again.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_DELETED&lt;/code> (preceded, with &lt;code>force&lt;/code> on a running
+      /// campaign, by &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED&lt;/code> and
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOPPED&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> without &lt;code>force&lt;/code> while
+      /// the campaign is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard
+      /// stop it first, or set &lt;code>force&lt;/code>); &lt;code>DEADLINE_EXCEEDED&lt;/code> with &lt;code>force&lt;/code> as
+      /// described above; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a &lt;code>display_name&lt;/code> without
+      /// &lt;code>vtsi_project_name&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -712,10 +1164,26 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Deletes a campaign and its campaign calls. Its scheduled callers that have not fired yet are
       /// cancelled. Calls that already ran are not touched and stay visible through
-      /// &lt;code>ListCalls&lt;/code>.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> while the campaign is
-      /// &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard stop it
-      /// first).&lt;/p>
+      /// &lt;code>ListCalls&lt;/code>, but no longer as calls OF the campaign: the attempt history that linked them
+      /// to it is deleted with it, so &lt;code>ListCalls&lt;/code> with &lt;code>CallFilter.campaign_name&lt;/code> /
+      /// &lt;code>campaign_display_name&lt;/code> of a deleted campaign answers &lt;code>NOT_FOUND&lt;/code> (list them by
+      /// caller or without the campaign selector), and &lt;code>Calls.ListCallers&lt;/code> with the campaign selector
+      /// likewise.&lt;/p>
+      /// &lt;p>With &lt;code>force&lt;/code>, a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+      /// &lt;code>HARD_STOPPING&lt;/code> is hard stopped first (exactly as by &lt;code>HardStopCampaign&lt;/code>) and deleted
+      /// as soon as the end of each of its calls is confirmed. The RPC waits for that, at most
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default) and never past the client&amp;apos;s
+      /// deadline; when the hang-ups are not confirmed by then it answers &lt;code>DEADLINE_EXCEEDED&lt;/code>, the
+      /// campaign stays &lt;code>HARD_STOPPING&lt;/code> (then &lt;code>HARD_STOPPED&lt;/code>) and is NOT deleted: repeat the
+      /// request. Idempotent: a repeated forced delete of a campaign that is still hard stopping waits again.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_DELETED&lt;/code> (preceded, with &lt;code>force&lt;/code> on a running
+      /// campaign, by &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED&lt;/code> and
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_HARD_STOPPED&lt;/code>).&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> without &lt;code>force&lt;/code> while
+      /// the campaign is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or &lt;code>HARD_STOPPING&lt;/code> (stop or hard
+      /// stop it first, or set &lt;code>force&lt;/code>); &lt;code>DEADLINE_EXCEEDED&lt;/code> with &lt;code>force&lt;/code> as
+      /// described above; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, a &lt;code>display_name&lt;/code> without
+      /// &lt;code>vtsi_project_name&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -726,10 +1194,16 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCampaign, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the campaigns of a project, newest first, filtered and paged, each with its
-      /// statistics.&lt;/p>
+      /// &lt;p>Lists the campaigns of a project, filtered, ordered by &lt;code>ListCampaignsRequest.order_by&lt;/code>
+      /// (newest first by default) and paged, each with its
+      /// statistics. &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code> are left empty
+      /// unless &lt;code>field_mask&lt;/code> names them, and a page that carries them holds at most 20 campaigns (see
+      /// &lt;code>ListCampaignsRequest.field_mask&lt;/code>).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a negative &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative &lt;code>page_size&lt;/code>, a foreign
+      /// &lt;code>page_token&lt;/code> (also one issued for another filter or &lt;code>order_by&lt;/code>), an unknown
+      /// &lt;code>order_by&lt;/code> or &lt;code>states&lt;/code> value, &lt;code>created_after&lt;/code> not before
+      /// &lt;code>created_before&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -742,10 +1216,16 @@ namespace Ondewo.Vtsi {
         return ListCampaigns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the campaigns of a project, newest first, filtered and paged, each with its
-      /// statistics.&lt;/p>
+      /// &lt;p>Lists the campaigns of a project, filtered, ordered by &lt;code>ListCampaignsRequest.order_by&lt;/code>
+      /// (newest first by default) and paged, each with its
+      /// statistics. &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code> are left empty
+      /// unless &lt;code>field_mask&lt;/code> names them, and a page that carries them holds at most 20 campaigns (see
+      /// &lt;code>ListCampaignsRequest.field_mask&lt;/code>).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a negative &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative &lt;code>page_size&lt;/code>, a foreign
+      /// &lt;code>page_token&lt;/code> (also one issued for another filter or &lt;code>order_by&lt;/code>), an unknown
+      /// &lt;code>order_by&lt;/code> or &lt;code>states&lt;/code> value, &lt;code>created_after&lt;/code> not before
+      /// &lt;code>created_before&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -756,10 +1236,16 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_ListCampaigns, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Lists the campaigns of a project, newest first, filtered and paged, each with its
-      /// statistics.&lt;/p>
+      /// &lt;p>Lists the campaigns of a project, filtered, ordered by &lt;code>ListCampaignsRequest.order_by&lt;/code>
+      /// (newest first by default) and paged, each with its
+      /// statistics. &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code> are left empty
+      /// unless &lt;code>field_mask&lt;/code> names them, and a page that carries them holds at most 20 campaigns (see
+      /// &lt;code>ListCampaignsRequest.field_mask&lt;/code>).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a negative &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative &lt;code>page_size&lt;/code>, a foreign
+      /// &lt;code>page_token&lt;/code> (also one issued for another filter or &lt;code>order_by&lt;/code>), an unknown
+      /// &lt;code>order_by&lt;/code> or &lt;code>states&lt;/code> value, &lt;code>created_after&lt;/code> not before
+      /// &lt;code>created_before&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -772,10 +1258,16 @@ namespace Ondewo.Vtsi {
         return ListCampaignsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Lists the campaigns of a project, newest first, filtered and paged, each with its
-      /// statistics.&lt;/p>
+      /// &lt;p>Lists the campaigns of a project, filtered, ordered by &lt;code>ListCampaignsRequest.order_by&lt;/code>
+      /// (newest first by default) and paged, each with its
+      /// statistics. &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code> are left empty
+      /// unless &lt;code>field_mask&lt;/code> names them, and a page that carries them holds at most 20 campaigns (see
+      /// &lt;code>ListCampaignsRequest.field_mask&lt;/code>).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code>
-      /// for a negative &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative &lt;code>page_size&lt;/code>, a foreign
+      /// &lt;code>page_token&lt;/code> (also one issued for another filter or &lt;code>order_by&lt;/code>), an unknown
+      /// &lt;code>order_by&lt;/code> or &lt;code>states&lt;/code> value, &lt;code>created_after&lt;/code> not before
+      /// &lt;code>created_before&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -788,7 +1280,8 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the progress of a campaign: how many of its calls are not started, in progress,
       /// waiting for a retry, completed, failed and cancelled, and how many attempts were made.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name or a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -803,7 +1296,8 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the progress of a campaign: how many of its calls are not started, in progress,
       /// waiting for a retry, completed, failed and cancelled, and how many attempts were made.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name or a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -816,7 +1310,8 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the progress of a campaign: how many of its calls are not started, in progress,
       /// waiting for a retry, completed, failed and cancelled, and how many attempts were made.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name or a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -831,7 +1326,8 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the progress of a campaign: how many of its calls are not started, in progress,
       /// waiting for a retry, completed, failed and cancelled, and how many attempts were made.&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name or a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -844,8 +1340,15 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Lists the calls of a campaign in the order they were added, filtered and paged, each with
       /// its current SIP status, the SIP status description and its attempts.&lt;/p>
+      /// &lt;p>The filters of &lt;code>ListCampaignCallsRequest&lt;/code> are combined by AND; the values of one
+      /// repeated filter by OR.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a negative
-      /// &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> (also one issued for another filter), a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>, a malformed campaign call name or one
+      /// of another campaign in &lt;code>campaign_call_names&lt;/code>, more than 1000 &lt;code>phone_numbers&lt;/code> or
+      /// &lt;code>campaign_call_names&lt;/code>, a negative &lt;code>min_attempts&lt;/code>, an unknown enum value in
+      /// &lt;code>states&lt;/code> / &lt;code>sources&lt;/code>, &lt;code>finish_time_min&lt;/code> not before
+      /// &lt;code>finish_time_max&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -860,8 +1363,15 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Lists the calls of a campaign in the order they were added, filtered and paged, each with
       /// its current SIP status, the SIP status description and its attempts.&lt;/p>
+      /// &lt;p>The filters of &lt;code>ListCampaignCallsRequest&lt;/code> are combined by AND; the values of one
+      /// repeated filter by OR.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a negative
-      /// &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> (also one issued for another filter), a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>, a malformed campaign call name or one
+      /// of another campaign in &lt;code>campaign_call_names&lt;/code>, more than 1000 &lt;code>phone_numbers&lt;/code> or
+      /// &lt;code>campaign_call_names&lt;/code>, a negative &lt;code>min_attempts&lt;/code>, an unknown enum value in
+      /// &lt;code>states&lt;/code> / &lt;code>sources&lt;/code>, &lt;code>finish_time_min&lt;/code> not before
+      /// &lt;code>finish_time_max&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -874,8 +1384,15 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Lists the calls of a campaign in the order they were added, filtered and paged, each with
       /// its current SIP status, the SIP status description and its attempts.&lt;/p>
+      /// &lt;p>The filters of &lt;code>ListCampaignCallsRequest&lt;/code> are combined by AND; the values of one
+      /// repeated filter by OR.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a negative
-      /// &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> (also one issued for another filter), a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>, a malformed campaign call name or one
+      /// of another campaign in &lt;code>campaign_call_names&lt;/code>, more than 1000 &lt;code>phone_numbers&lt;/code> or
+      /// &lt;code>campaign_call_names&lt;/code>, a negative &lt;code>min_attempts&lt;/code>, an unknown enum value in
+      /// &lt;code>states&lt;/code> / &lt;code>sources&lt;/code>, &lt;code>finish_time_min&lt;/code> not before
+      /// &lt;code>finish_time_max&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -890,8 +1407,15 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Lists the calls of a campaign in the order they were added, filtered and paged, each with
       /// its current SIP status, the SIP status description and its attempts.&lt;/p>
+      /// &lt;p>The filters of &lt;code>ListCampaignCallsRequest&lt;/code> are combined by AND; the values of one
+      /// repeated filter by OR.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a negative
-      /// &lt;code>page_size&lt;/code> or a foreign &lt;code>page_token&lt;/code>.&lt;/p>
+      /// &lt;code>page_size&lt;/code>, a foreign &lt;code>page_token&lt;/code> (also one issued for another filter), a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code>, a malformed campaign call name or one
+      /// of another campaign in &lt;code>campaign_call_names&lt;/code>, more than 1000 &lt;code>phone_numbers&lt;/code> or
+      /// &lt;code>campaign_call_names&lt;/code>, a negative &lt;code>min_attempts&lt;/code>, an unknown enum value in
+      /// &lt;code>states&lt;/code> / &lt;code>sources&lt;/code>, &lt;code>finish_time_min&lt;/code> not before
+      /// &lt;code>finish_time_max&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -904,8 +1428,13 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Starts a &lt;code>CAMPAIGN_STATE_CREATED&lt;/code> campaign. Idempotent on a
       /// &lt;code>RUNNING&lt;/code> campaign.&lt;/p>
+      /// &lt;p>A campaign with a &lt;code>calling_window&lt;/code> started outside every slot is &lt;code>RUNNING&lt;/code>
+      /// with &lt;code>outside_calling_window = true&lt;/code> and dials from the next slot on. Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_STARTED&lt;/code> (nothing on the idempotent repeat).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> in any other state (use
-      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign).&lt;/p>
+      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign); &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -920,8 +1449,13 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Starts a &lt;code>CAMPAIGN_STATE_CREATED&lt;/code> campaign. Idempotent on a
       /// &lt;code>RUNNING&lt;/code> campaign.&lt;/p>
+      /// &lt;p>A campaign with a &lt;code>calling_window&lt;/code> started outside every slot is &lt;code>RUNNING&lt;/code>
+      /// with &lt;code>outside_calling_window = true&lt;/code> and dials from the next slot on. Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_STARTED&lt;/code> (nothing on the idempotent repeat).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> in any other state (use
-      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign).&lt;/p>
+      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign); &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -934,8 +1468,13 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Starts a &lt;code>CAMPAIGN_STATE_CREATED&lt;/code> campaign. Idempotent on a
       /// &lt;code>RUNNING&lt;/code> campaign.&lt;/p>
+      /// &lt;p>A campaign with a &lt;code>calling_window&lt;/code> started outside every slot is &lt;code>RUNNING&lt;/code>
+      /// with &lt;code>outside_calling_window = true&lt;/code> and dials from the next slot on. Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_STARTED&lt;/code> (nothing on the idempotent repeat).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> in any other state (use
-      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign).&lt;/p>
+      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign); &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -950,8 +1489,13 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Starts a &lt;code>CAMPAIGN_STATE_CREATED&lt;/code> campaign. Idempotent on a
       /// &lt;code>RUNNING&lt;/code> campaign.&lt;/p>
+      /// &lt;p>A campaign with a &lt;code>calling_window&lt;/code> started outside every slot is &lt;code>RUNNING&lt;/code>
+      /// with &lt;code>outside_calling_window = true&lt;/code> and dials from the next slot on. Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_STARTED&lt;/code> (nothing on the idempotent repeat).&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> in any other state (use
-      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign).&lt;/p>
+      /// &lt;code>ResumeCampaign&lt;/code> for a stopped campaign); &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -968,7 +1512,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>, &lt;code>HARD_STOPPING&lt;/code> and
       /// &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -987,7 +1533,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>, &lt;code>HARD_STOPPING&lt;/code> and
       /// &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1004,7 +1552,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>, &lt;code>HARD_STOPPING&lt;/code> and
       /// &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1023,7 +1573,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>STOPPING&lt;/code>, &lt;code>STOPPED&lt;/code>, &lt;code>HARD_STOPPING&lt;/code> and
       /// &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1046,7 +1598,9 @@ namespace Ondewo.Vtsi {
       /// Returns the campaign in &lt;code>HARD_STOPPING&lt;/code> (or already &lt;code>HARD_STOPPED&lt;/code>).
       /// Idempotent on &lt;code>HARD_STOPPING&lt;/code> and &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1071,7 +1625,9 @@ namespace Ondewo.Vtsi {
       /// Returns the campaign in &lt;code>HARD_STOPPING&lt;/code> (or already &lt;code>HARD_STOPPED&lt;/code>).
       /// Idempotent on &lt;code>HARD_STOPPING&lt;/code> and &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1094,7 +1650,9 @@ namespace Ondewo.Vtsi {
       /// Returns the campaign in &lt;code>HARD_STOPPING&lt;/code> (or already &lt;code>HARD_STOPPED&lt;/code>).
       /// Idempotent on &lt;code>HARD_STOPPING&lt;/code> and &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1119,7 +1677,9 @@ namespace Ondewo.Vtsi {
       /// Returns the campaign in &lt;code>HARD_STOPPING&lt;/code> (or already &lt;code>HARD_STOPPED&lt;/code>).
       /// Idempotent on &lt;code>HARD_STOPPING&lt;/code> and &lt;code>HARD_STOPPED&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on a
-      /// &lt;code>COMPLETED&lt;/code> campaign.&lt;/p>
+      /// &lt;code>COMPLETED&lt;/code> campaign; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1135,7 +1695,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>RUNNING&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on &lt;code>CREATED&lt;/code>
       /// (use &lt;code>StartCampaign&lt;/code>), &lt;code>HARD_STOPPING&lt;/code> (wait until it is
-      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>.&lt;/p>
+      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1153,7 +1715,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>RUNNING&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on &lt;code>CREATED&lt;/code>
       /// (use &lt;code>StartCampaign&lt;/code>), &lt;code>HARD_STOPPING&lt;/code> (wait until it is
-      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>.&lt;/p>
+      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1169,7 +1733,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>RUNNING&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on &lt;code>CREATED&lt;/code>
       /// (use &lt;code>StartCampaign&lt;/code>), &lt;code>HARD_STOPPING&lt;/code> (wait until it is
-      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>.&lt;/p>
+      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1187,7 +1753,9 @@ namespace Ondewo.Vtsi {
       /// Idempotent on &lt;code>RUNNING&lt;/code>.&lt;/p>
       /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code>; &lt;code>FAILED_PRECONDITION&lt;/code> on &lt;code>CREATED&lt;/code>
       /// (use &lt;code>StartCampaign&lt;/code>), &lt;code>HARD_STOPPING&lt;/code> (wait until it is
-      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>.&lt;/p>
+      /// &lt;code>HARD_STOPPED&lt;/code>) and &lt;code>COMPLETED&lt;/code>; &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, neither selector set, a
+      /// &lt;code>display_name&lt;/code> without &lt;code>vtsi_project_name&lt;/code> or a &lt;code>vtsi_project_name&lt;/code>
+      /// that is not the campaign&amp;apos;s project, or an unknown &lt;code>field_mask&lt;/code> path.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1201,11 +1769,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Streams the status and progress of the campaigns of a project. The first message is a
       /// snapshot (&lt;code>snapshot = true&lt;/code>) of every matching campaign; every later message
       /// carries only the campaigns (and, with &lt;code>include_calls&lt;/code>, the campaign calls) that
-      /// changed. An empty message is sent as a keep-alive. The stream ends when the client
-      /// disconnects or the server-side maximum stream duration is reached
-      /// (&lt;code>end_reason&lt;/code> set on the last message).&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// changed. Changes are polled every &lt;code>ONDEWO_VTSI_STATUS_STREAM_POLL_INTERVAL_S&lt;/code> (1 s by
+      /// default). An empty message is sent as a keep-alive when nothing changed for
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_KEEPALIVE_S&lt;/code> (15 s by default).&lt;/p>
+      /// &lt;p>The stream ends when the client disconnects, or the server ends it with a last message carrying
+      /// &lt;code>end_reason&lt;/code> and &lt;code>end_reason_type&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default,
+      /// &lt;code>STREAM_END_REASON_MAX_DURATION&lt;/code>), when the server shuts down
+      /// (&lt;code>STREAM_END_REASON_SERVER_SHUTDOWN&lt;/code>) and when the project is deleted
+      /// (&lt;code>STREAM_END_REASON_PROJECT_DELETED&lt;/code>). Reconnect and treat the new snapshot as authoritative.
+      /// A client that blocks one send for longer than &lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code> (30 s by
+      /// default) is disconnected without a last message (the RPC ends &lt;code>CANCELLED&lt;/code>). While
+      /// authorization is enforced, the caller&amp;apos;s role is re-checked periodically; a revoked role ends the
+      /// RPC with &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a malformed entry of &lt;code>campaign_names&lt;/code>, a campaign
+      /// name of another project, or an unknown value or &lt;code>CAMPAIGN_STATE_UNSPECIFIED&lt;/code> in
+      /// &lt;code>states&lt;/code> (a well-formed campaign name of the project that names no campaign is accepted and
+      /// matches nothing); &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server has no free stream slot
+      /// (&lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_CONCURRENT&lt;/code>, 16 per replica by default).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1221,11 +1803,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Streams the status and progress of the campaigns of a project. The first message is a
       /// snapshot (&lt;code>snapshot = true&lt;/code>) of every matching campaign; every later message
       /// carries only the campaigns (and, with &lt;code>include_calls&lt;/code>, the campaign calls) that
-      /// changed. An empty message is sent as a keep-alive. The stream ends when the client
-      /// disconnects or the server-side maximum stream duration is reached
-      /// (&lt;code>end_reason&lt;/code> set on the last message).&lt;/p>
-      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>RESOURCE_EXHAUSTED&lt;/code>
-      /// when the server has no free stream slot.&lt;/p>
+      /// changed. Changes are polled every &lt;code>ONDEWO_VTSI_STATUS_STREAM_POLL_INTERVAL_S&lt;/code> (1 s by
+      /// default). An empty message is sent as a keep-alive when nothing changed for
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_KEEPALIVE_S&lt;/code> (15 s by default).&lt;/p>
+      /// &lt;p>The stream ends when the client disconnects, or the server ends it with a last message carrying
+      /// &lt;code>end_reason&lt;/code> and &lt;code>end_reason_type&lt;/code>: at the maximum stream duration
+      /// &lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_DURATION_S&lt;/code> (3600 s by default,
+      /// &lt;code>STREAM_END_REASON_MAX_DURATION&lt;/code>), when the server shuts down
+      /// (&lt;code>STREAM_END_REASON_SERVER_SHUTDOWN&lt;/code>) and when the project is deleted
+      /// (&lt;code>STREAM_END_REASON_PROJECT_DELETED&lt;/code>). Reconnect and treat the new snapshot as authoritative.
+      /// A client that blocks one send for longer than &lt;code>ONDEWO_VTSI_STREAM_STALL_TIMEOUT_S&lt;/code> (30 s by
+      /// default) is disconnected without a last message (the RPC ends &lt;code>CANCELLED&lt;/code>). While
+      /// authorization is enforced, the caller&amp;apos;s role is re-checked periodically; a revoked role ends the
+      /// RPC with &lt;code>PERMISSION_DENIED&lt;/code>, an expired credential with &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>NOT_FOUND&lt;/code> if the project does not exist; &lt;code>INVALID_ARGUMENT&lt;/code> for a
+      /// malformed &lt;code>vtsi_project_name&lt;/code>, a malformed entry of &lt;code>campaign_names&lt;/code>, a campaign
+      /// name of another project, or an unknown value or &lt;code>CAMPAIGN_STATE_UNSPECIFIED&lt;/code> in
+      /// &lt;code>states&lt;/code> (a well-formed campaign name of the project that names no campaign is accepted and
+      /// matches nothing); &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server has no free stream slot
+      /// (&lt;code>ONDEWO_VTSI_STATUS_STREAM_MAX_CONCURRENT&lt;/code>, 16 per replica by default).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1234,6 +1830,558 @@ namespace Ondewo.Vtsi {
       public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.StreamCampaignStatusResponse> StreamCampaignStatus(global::Ondewo.Vtsi.StreamCampaignStatusRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_StreamCampaignStatus, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Returns one call of a campaign, with its current SIP status and, with
+      /// &lt;code>include_attempts&lt;/code>, its attempts. Read-only, no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign call
+      /// (also one deleted with its campaign); &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> as
+      /// for every RPC of this service.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.CampaignCall GetCampaignCall(global::Ondewo.Vtsi.GetCampaignCallRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCampaignCall(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Returns one call of a campaign, with its current SIP status and, with
+      /// &lt;code>include_attempts&lt;/code>, its attempts. Read-only, no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign call
+      /// (also one deleted with its campaign); &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> as
+      /// for every RPC of this service.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.CampaignCall GetCampaignCall(global::Ondewo.Vtsi.GetCampaignCallRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCampaignCall, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Returns one call of a campaign, with its current SIP status and, with
+      /// &lt;code>include_attempts&lt;/code>, its attempts. Read-only, no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign call
+      /// (also one deleted with its campaign); &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> as
+      /// for every RPC of this service.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.CampaignCall> GetCampaignCallAsync(global::Ondewo.Vtsi.GetCampaignCallRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCampaignCallAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Returns one call of a campaign, with its current SIP status and, with
+      /// &lt;code>include_attempts&lt;/code>, its attempts. Read-only, no event.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project, campaign or campaign call
+      /// (also one deleted with its campaign); &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> as
+      /// for every RPC of this service.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.CampaignCall> GetCampaignCallAsync(global::Ondewo.Vtsi.GetCampaignCallRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCampaignCall, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Cancels calls of a campaign that have not started an attempt that is still running: each selected
+      /// call in &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>
+      /// becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> (its &lt;code>finish_time&lt;/code> set, counted in
+      /// &lt;code>CampaignStatistics.cancelled&lt;/code>); the scheduled caller of a call added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> is cancelled with it. Mirrors
+      /// &lt;code>Calls.CancelScheduledCaller&lt;/code>: a call whose attempt is &lt;code>DISPATCHING&lt;/code> or
+      /// &lt;code>IN_PROGRESS&lt;/code> is NOT cancelled (and its call is not hung up; use
+      /// &lt;code>HardStopCampaign&lt;/code> or &lt;code>Calls.StopCall&lt;/code>) and is reported in &lt;code>refused&lt;/code>,
+      /// like a call that is already finished; a refusal is not an error.&lt;/p>
+      /// &lt;p>Selection: &lt;code>campaign_call_names&lt;/code>, &lt;code>states&lt;/code>, or both (then a named call must
+      /// also be in one of the states). At most 1000 calls are acted on per request: with &lt;code>states&lt;/code>
+      /// the first 1000 matching calls by &lt;code>position&lt;/code>, and &lt;code>remaining_count&lt;/code> says how many
+      /// more match; repeat the request until it is 0. Each call is cancelled atomically on its own (the request
+      /// as a whole is not atomic); a call that a replica starts dispatching while the request runs is refused,
+      /// never cancelled half-way. Allowed in every campaign state. When it leaves a &lt;code>RUNNING&lt;/code>
+      /// campaign without an unfinished call, the campaign becomes &lt;code>COMPLETED&lt;/code> at the next engine
+      /// tick. Idempotent: a repeat refuses the calls it already cancelled with
+      /// &lt;code>reason=already-finished&lt;/code>.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_CANCELLED&lt;/code> per cancelled call,
+      /// &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CANCELLED&lt;/code> per cancelled scheduled caller, and the usual
+      /// throttled &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed selector (as &lt;code>GetCampaign&lt;/code>), neither
+      /// &lt;code>campaign_call_names&lt;/code> nor &lt;code>states&lt;/code> set, more than 1000 names, a malformed campaign
+      /// call name or one of another campaign, a state other than &lt;code>NOT_STARTED&lt;/code> /
+      /// &lt;code>RETRY_PENDING&lt;/code> in &lt;code>states&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign (an unknown but well-formed campaign call name of the campaign is a refusal with
+      /// &lt;code>reason=not-found&lt;/code>, not an error).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.CancelCampaignCallsResponse CancelCampaignCalls(global::Ondewo.Vtsi.CancelCampaignCallsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelCampaignCalls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Cancels calls of a campaign that have not started an attempt that is still running: each selected
+      /// call in &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>
+      /// becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> (its &lt;code>finish_time&lt;/code> set, counted in
+      /// &lt;code>CampaignStatistics.cancelled&lt;/code>); the scheduled caller of a call added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> is cancelled with it. Mirrors
+      /// &lt;code>Calls.CancelScheduledCaller&lt;/code>: a call whose attempt is &lt;code>DISPATCHING&lt;/code> or
+      /// &lt;code>IN_PROGRESS&lt;/code> is NOT cancelled (and its call is not hung up; use
+      /// &lt;code>HardStopCampaign&lt;/code> or &lt;code>Calls.StopCall&lt;/code>) and is reported in &lt;code>refused&lt;/code>,
+      /// like a call that is already finished; a refusal is not an error.&lt;/p>
+      /// &lt;p>Selection: &lt;code>campaign_call_names&lt;/code>, &lt;code>states&lt;/code>, or both (then a named call must
+      /// also be in one of the states). At most 1000 calls are acted on per request: with &lt;code>states&lt;/code>
+      /// the first 1000 matching calls by &lt;code>position&lt;/code>, and &lt;code>remaining_count&lt;/code> says how many
+      /// more match; repeat the request until it is 0. Each call is cancelled atomically on its own (the request
+      /// as a whole is not atomic); a call that a replica starts dispatching while the request runs is refused,
+      /// never cancelled half-way. Allowed in every campaign state. When it leaves a &lt;code>RUNNING&lt;/code>
+      /// campaign without an unfinished call, the campaign becomes &lt;code>COMPLETED&lt;/code> at the next engine
+      /// tick. Idempotent: a repeat refuses the calls it already cancelled with
+      /// &lt;code>reason=already-finished&lt;/code>.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_CANCELLED&lt;/code> per cancelled call,
+      /// &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CANCELLED&lt;/code> per cancelled scheduled caller, and the usual
+      /// throttled &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed selector (as &lt;code>GetCampaign&lt;/code>), neither
+      /// &lt;code>campaign_call_names&lt;/code> nor &lt;code>states&lt;/code> set, more than 1000 names, a malformed campaign
+      /// call name or one of another campaign, a state other than &lt;code>NOT_STARTED&lt;/code> /
+      /// &lt;code>RETRY_PENDING&lt;/code> in &lt;code>states&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign (an unknown but well-formed campaign call name of the campaign is a refusal with
+      /// &lt;code>reason=not-found&lt;/code>, not an error).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.CancelCampaignCallsResponse CancelCampaignCalls(global::Ondewo.Vtsi.CancelCampaignCallsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelCampaignCalls, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Cancels calls of a campaign that have not started an attempt that is still running: each selected
+      /// call in &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>
+      /// becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> (its &lt;code>finish_time&lt;/code> set, counted in
+      /// &lt;code>CampaignStatistics.cancelled&lt;/code>); the scheduled caller of a call added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> is cancelled with it. Mirrors
+      /// &lt;code>Calls.CancelScheduledCaller&lt;/code>: a call whose attempt is &lt;code>DISPATCHING&lt;/code> or
+      /// &lt;code>IN_PROGRESS&lt;/code> is NOT cancelled (and its call is not hung up; use
+      /// &lt;code>HardStopCampaign&lt;/code> or &lt;code>Calls.StopCall&lt;/code>) and is reported in &lt;code>refused&lt;/code>,
+      /// like a call that is already finished; a refusal is not an error.&lt;/p>
+      /// &lt;p>Selection: &lt;code>campaign_call_names&lt;/code>, &lt;code>states&lt;/code>, or both (then a named call must
+      /// also be in one of the states). At most 1000 calls are acted on per request: with &lt;code>states&lt;/code>
+      /// the first 1000 matching calls by &lt;code>position&lt;/code>, and &lt;code>remaining_count&lt;/code> says how many
+      /// more match; repeat the request until it is 0. Each call is cancelled atomically on its own (the request
+      /// as a whole is not atomic); a call that a replica starts dispatching while the request runs is refused,
+      /// never cancelled half-way. Allowed in every campaign state. When it leaves a &lt;code>RUNNING&lt;/code>
+      /// campaign without an unfinished call, the campaign becomes &lt;code>COMPLETED&lt;/code> at the next engine
+      /// tick. Idempotent: a repeat refuses the calls it already cancelled with
+      /// &lt;code>reason=already-finished&lt;/code>.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_CANCELLED&lt;/code> per cancelled call,
+      /// &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CANCELLED&lt;/code> per cancelled scheduled caller, and the usual
+      /// throttled &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed selector (as &lt;code>GetCampaign&lt;/code>), neither
+      /// &lt;code>campaign_call_names&lt;/code> nor &lt;code>states&lt;/code> set, more than 1000 names, a malformed campaign
+      /// call name or one of another campaign, a state other than &lt;code>NOT_STARTED&lt;/code> /
+      /// &lt;code>RETRY_PENDING&lt;/code> in &lt;code>states&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign (an unknown but well-formed campaign call name of the campaign is a refusal with
+      /// &lt;code>reason=not-found&lt;/code>, not an error).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.CancelCampaignCallsResponse> CancelCampaignCallsAsync(global::Ondewo.Vtsi.CancelCampaignCallsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelCampaignCallsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Cancels calls of a campaign that have not started an attempt that is still running: each selected
+      /// call in &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> or &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code>
+      /// becomes &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> (its &lt;code>finish_time&lt;/code> set, counted in
+      /// &lt;code>CampaignStatistics.cancelled&lt;/code>); the scheduled caller of a call added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> is cancelled with it. Mirrors
+      /// &lt;code>Calls.CancelScheduledCaller&lt;/code>: a call whose attempt is &lt;code>DISPATCHING&lt;/code> or
+      /// &lt;code>IN_PROGRESS&lt;/code> is NOT cancelled (and its call is not hung up; use
+      /// &lt;code>HardStopCampaign&lt;/code> or &lt;code>Calls.StopCall&lt;/code>) and is reported in &lt;code>refused&lt;/code>,
+      /// like a call that is already finished; a refusal is not an error.&lt;/p>
+      /// &lt;p>Selection: &lt;code>campaign_call_names&lt;/code>, &lt;code>states&lt;/code>, or both (then a named call must
+      /// also be in one of the states). At most 1000 calls are acted on per request: with &lt;code>states&lt;/code>
+      /// the first 1000 matching calls by &lt;code>position&lt;/code>, and &lt;code>remaining_count&lt;/code> says how many
+      /// more match; repeat the request until it is 0. Each call is cancelled atomically on its own (the request
+      /// as a whole is not atomic); a call that a replica starts dispatching while the request runs is refused,
+      /// never cancelled half-way. Allowed in every campaign state. When it leaves a &lt;code>RUNNING&lt;/code>
+      /// campaign without an unfinished call, the campaign becomes &lt;code>COMPLETED&lt;/code> at the next engine
+      /// tick. Idempotent: a repeat refuses the calls it already cancelled with
+      /// &lt;code>reason=already-finished&lt;/code>.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_CANCELLED&lt;/code> per cancelled call,
+      /// &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CANCELLED&lt;/code> per cancelled scheduled caller, and the usual
+      /// throttled &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed selector (as &lt;code>GetCampaign&lt;/code>), neither
+      /// &lt;code>campaign_call_names&lt;/code> nor &lt;code>states&lt;/code> set, more than 1000 names, a malformed campaign
+      /// call name or one of another campaign, a state other than &lt;code>NOT_STARTED&lt;/code> /
+      /// &lt;code>RETRY_PENDING&lt;/code> in &lt;code>states&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign (an unknown but well-formed campaign call name of the campaign is a refusal with
+      /// &lt;code>reason=not-found&lt;/code>, not an error).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.CancelCampaignCallsResponse> CancelCampaignCallsAsync(global::Ondewo.Vtsi.CancelCampaignCallsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelCampaignCalls, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Puts FAILED or CANCELLED calls of a campaign back into the queue with a fresh attempt budget: each
+      /// selected call gets &lt;code>additional_attempts&lt;/code> more attempts on top of the attempts it already
+      /// made, and becomes &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> with &lt;code>next_attempt_time&lt;/code> =
+      /// the later of now and &lt;code>not_before&lt;/code> (or &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> when it
+      /// never made an attempt, e.g. a scheduled call cancelled before it fired). &lt;code>finish_time&lt;/code> and
+      /// &lt;code>last_error&lt;/code> are cleared; &lt;code>attempt_history&lt;/code> is kept and continues with the next
+      /// &lt;code>attempt_number&lt;/code>. The call keeps its &lt;code>phone_number&lt;/code> and its own configuration;
+      /// the campaign&amp;apos;s call defaults are read live at the next dispatch as for every attempt.&lt;/p>
+      /// &lt;p>A call added by &lt;code>AddScheduledCallersToCampaign&lt;/code> keeps following its scheduled caller,
+      /// which returns to &lt;code>SCHEDULED&lt;/code> with its scheduled time moved to the call&amp;apos;s
+      /// &lt;code>next_attempt_time&lt;/code> (&lt;code>VTSI_EVENT_SCHEDULED_CALLER_UPDATED&lt;/code>).&lt;/p>
+      /// &lt;p>Effect on the campaign: a &lt;code>COMPLETED&lt;/code> campaign becomes &lt;code>RUNNING&lt;/code> again (as when
+      /// calls are added by a &lt;code>CampaignAssignment&lt;/code>); every other state is kept, so a stopped campaign
+      /// runs the calls after &lt;code>ResumeCampaign&lt;/code> and a &lt;code>CREATED&lt;/code> one after
+      /// &lt;code>StartCampaign&lt;/code>. The calls are dispatched under &lt;code>max_parallel_calls&lt;/code> and the
+      /// &lt;code>calling_window&lt;/code> like any other.&lt;/p>
+      /// &lt;p>Selection exactly as &lt;code>CancelCampaignCalls&lt;/code> (names, states or both; at most 1000 calls per
+      /// request, &lt;code>remaining_count&lt;/code>); a selected call that is not &lt;code>FAILED&lt;/code> or
+      /// &lt;code>CANCELLED&lt;/code> is reported in &lt;code>refused&lt;/code>. A failure that cannot succeed by repetition
+      /// (e.g. a rejected credential) is retried too: fix its cause first, otherwise the campaign may be
+      /// auto-stopped again. Not idempotent: each request adds a new budget to the calls it requeues, but a
+      /// repeat finds them &lt;code>RETRY_PENDING&lt;/code> / &lt;code>NOT_STARTED&lt;/code> and refuses them.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_REQUEUED&lt;/code> per requeued call (attributes
+      /// &lt;code>attempt_limit&lt;/code>, &lt;code>next_attempt_time&lt;/code>), &lt;code>VTSI_EVENT_CAMPAIGN_RESUMED&lt;/code>
+      /// when a &lt;code>COMPLETED&lt;/code> campaign became &lt;code>RUNNING&lt;/code>, and the throttled
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> as &lt;code>CancelCampaignCalls&lt;/code>, except that
+      /// &lt;code>states&lt;/code> may only hold &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code>, plus
+      /// &lt;code>additional_attempts&lt;/code> outside 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10)
+      /// and &lt;code>not_before&lt;/code> more than 7 days ahead; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign; &lt;code>FAILED_PRECONDITION&lt;/code> when the campaign is &lt;code>HARD_STOPPING&lt;/code> (wait until it
+      /// is &lt;code>HARD_STOPPED&lt;/code>).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RetryCampaignCallsResponse RetryCampaignCalls(global::Ondewo.Vtsi.RetryCampaignCallsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetryCampaignCalls(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Puts FAILED or CANCELLED calls of a campaign back into the queue with a fresh attempt budget: each
+      /// selected call gets &lt;code>additional_attempts&lt;/code> more attempts on top of the attempts it already
+      /// made, and becomes &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> with &lt;code>next_attempt_time&lt;/code> =
+      /// the later of now and &lt;code>not_before&lt;/code> (or &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> when it
+      /// never made an attempt, e.g. a scheduled call cancelled before it fired). &lt;code>finish_time&lt;/code> and
+      /// &lt;code>last_error&lt;/code> are cleared; &lt;code>attempt_history&lt;/code> is kept and continues with the next
+      /// &lt;code>attempt_number&lt;/code>. The call keeps its &lt;code>phone_number&lt;/code> and its own configuration;
+      /// the campaign&amp;apos;s call defaults are read live at the next dispatch as for every attempt.&lt;/p>
+      /// &lt;p>A call added by &lt;code>AddScheduledCallersToCampaign&lt;/code> keeps following its scheduled caller,
+      /// which returns to &lt;code>SCHEDULED&lt;/code> with its scheduled time moved to the call&amp;apos;s
+      /// &lt;code>next_attempt_time&lt;/code> (&lt;code>VTSI_EVENT_SCHEDULED_CALLER_UPDATED&lt;/code>).&lt;/p>
+      /// &lt;p>Effect on the campaign: a &lt;code>COMPLETED&lt;/code> campaign becomes &lt;code>RUNNING&lt;/code> again (as when
+      /// calls are added by a &lt;code>CampaignAssignment&lt;/code>); every other state is kept, so a stopped campaign
+      /// runs the calls after &lt;code>ResumeCampaign&lt;/code> and a &lt;code>CREATED&lt;/code> one after
+      /// &lt;code>StartCampaign&lt;/code>. The calls are dispatched under &lt;code>max_parallel_calls&lt;/code> and the
+      /// &lt;code>calling_window&lt;/code> like any other.&lt;/p>
+      /// &lt;p>Selection exactly as &lt;code>CancelCampaignCalls&lt;/code> (names, states or both; at most 1000 calls per
+      /// request, &lt;code>remaining_count&lt;/code>); a selected call that is not &lt;code>FAILED&lt;/code> or
+      /// &lt;code>CANCELLED&lt;/code> is reported in &lt;code>refused&lt;/code>. A failure that cannot succeed by repetition
+      /// (e.g. a rejected credential) is retried too: fix its cause first, otherwise the campaign may be
+      /// auto-stopped again. Not idempotent: each request adds a new budget to the calls it requeues, but a
+      /// repeat finds them &lt;code>RETRY_PENDING&lt;/code> / &lt;code>NOT_STARTED&lt;/code> and refuses them.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_REQUEUED&lt;/code> per requeued call (attributes
+      /// &lt;code>attempt_limit&lt;/code>, &lt;code>next_attempt_time&lt;/code>), &lt;code>VTSI_EVENT_CAMPAIGN_RESUMED&lt;/code>
+      /// when a &lt;code>COMPLETED&lt;/code> campaign became &lt;code>RUNNING&lt;/code>, and the throttled
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> as &lt;code>CancelCampaignCalls&lt;/code>, except that
+      /// &lt;code>states&lt;/code> may only hold &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code>, plus
+      /// &lt;code>additional_attempts&lt;/code> outside 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10)
+      /// and &lt;code>not_before&lt;/code> more than 7 days ahead; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign; &lt;code>FAILED_PRECONDITION&lt;/code> when the campaign is &lt;code>HARD_STOPPING&lt;/code> (wait until it
+      /// is &lt;code>HARD_STOPPED&lt;/code>).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.RetryCampaignCallsResponse RetryCampaignCalls(global::Ondewo.Vtsi.RetryCampaignCallsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RetryCampaignCalls, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Puts FAILED or CANCELLED calls of a campaign back into the queue with a fresh attempt budget: each
+      /// selected call gets &lt;code>additional_attempts&lt;/code> more attempts on top of the attempts it already
+      /// made, and becomes &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> with &lt;code>next_attempt_time&lt;/code> =
+      /// the later of now and &lt;code>not_before&lt;/code> (or &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> when it
+      /// never made an attempt, e.g. a scheduled call cancelled before it fired). &lt;code>finish_time&lt;/code> and
+      /// &lt;code>last_error&lt;/code> are cleared; &lt;code>attempt_history&lt;/code> is kept and continues with the next
+      /// &lt;code>attempt_number&lt;/code>. The call keeps its &lt;code>phone_number&lt;/code> and its own configuration;
+      /// the campaign&amp;apos;s call defaults are read live at the next dispatch as for every attempt.&lt;/p>
+      /// &lt;p>A call added by &lt;code>AddScheduledCallersToCampaign&lt;/code> keeps following its scheduled caller,
+      /// which returns to &lt;code>SCHEDULED&lt;/code> with its scheduled time moved to the call&amp;apos;s
+      /// &lt;code>next_attempt_time&lt;/code> (&lt;code>VTSI_EVENT_SCHEDULED_CALLER_UPDATED&lt;/code>).&lt;/p>
+      /// &lt;p>Effect on the campaign: a &lt;code>COMPLETED&lt;/code> campaign becomes &lt;code>RUNNING&lt;/code> again (as when
+      /// calls are added by a &lt;code>CampaignAssignment&lt;/code>); every other state is kept, so a stopped campaign
+      /// runs the calls after &lt;code>ResumeCampaign&lt;/code> and a &lt;code>CREATED&lt;/code> one after
+      /// &lt;code>StartCampaign&lt;/code>. The calls are dispatched under &lt;code>max_parallel_calls&lt;/code> and the
+      /// &lt;code>calling_window&lt;/code> like any other.&lt;/p>
+      /// &lt;p>Selection exactly as &lt;code>CancelCampaignCalls&lt;/code> (names, states or both; at most 1000 calls per
+      /// request, &lt;code>remaining_count&lt;/code>); a selected call that is not &lt;code>FAILED&lt;/code> or
+      /// &lt;code>CANCELLED&lt;/code> is reported in &lt;code>refused&lt;/code>. A failure that cannot succeed by repetition
+      /// (e.g. a rejected credential) is retried too: fix its cause first, otherwise the campaign may be
+      /// auto-stopped again. Not idempotent: each request adds a new budget to the calls it requeues, but a
+      /// repeat finds them &lt;code>RETRY_PENDING&lt;/code> / &lt;code>NOT_STARTED&lt;/code> and refuses them.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_REQUEUED&lt;/code> per requeued call (attributes
+      /// &lt;code>attempt_limit&lt;/code>, &lt;code>next_attempt_time&lt;/code>), &lt;code>VTSI_EVENT_CAMPAIGN_RESUMED&lt;/code>
+      /// when a &lt;code>COMPLETED&lt;/code> campaign became &lt;code>RUNNING&lt;/code>, and the throttled
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> as &lt;code>CancelCampaignCalls&lt;/code>, except that
+      /// &lt;code>states&lt;/code> may only hold &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code>, plus
+      /// &lt;code>additional_attempts&lt;/code> outside 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10)
+      /// and &lt;code>not_before&lt;/code> more than 7 days ahead; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign; &lt;code>FAILED_PRECONDITION&lt;/code> when the campaign is &lt;code>HARD_STOPPING&lt;/code> (wait until it
+      /// is &lt;code>HARD_STOPPED&lt;/code>).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RetryCampaignCallsResponse> RetryCampaignCallsAsync(global::Ondewo.Vtsi.RetryCampaignCallsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RetryCampaignCallsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Puts FAILED or CANCELLED calls of a campaign back into the queue with a fresh attempt budget: each
+      /// selected call gets &lt;code>additional_attempts&lt;/code> more attempts on top of the attempts it already
+      /// made, and becomes &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> with &lt;code>next_attempt_time&lt;/code> =
+      /// the later of now and &lt;code>not_before&lt;/code> (or &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> when it
+      /// never made an attempt, e.g. a scheduled call cancelled before it fired). &lt;code>finish_time&lt;/code> and
+      /// &lt;code>last_error&lt;/code> are cleared; &lt;code>attempt_history&lt;/code> is kept and continues with the next
+      /// &lt;code>attempt_number&lt;/code>. The call keeps its &lt;code>phone_number&lt;/code> and its own configuration;
+      /// the campaign&amp;apos;s call defaults are read live at the next dispatch as for every attempt.&lt;/p>
+      /// &lt;p>A call added by &lt;code>AddScheduledCallersToCampaign&lt;/code> keeps following its scheduled caller,
+      /// which returns to &lt;code>SCHEDULED&lt;/code> with its scheduled time moved to the call&amp;apos;s
+      /// &lt;code>next_attempt_time&lt;/code> (&lt;code>VTSI_EVENT_SCHEDULED_CALLER_UPDATED&lt;/code>).&lt;/p>
+      /// &lt;p>Effect on the campaign: a &lt;code>COMPLETED&lt;/code> campaign becomes &lt;code>RUNNING&lt;/code> again (as when
+      /// calls are added by a &lt;code>CampaignAssignment&lt;/code>); every other state is kept, so a stopped campaign
+      /// runs the calls after &lt;code>ResumeCampaign&lt;/code> and a &lt;code>CREATED&lt;/code> one after
+      /// &lt;code>StartCampaign&lt;/code>. The calls are dispatched under &lt;code>max_parallel_calls&lt;/code> and the
+      /// &lt;code>calling_window&lt;/code> like any other.&lt;/p>
+      /// &lt;p>Selection exactly as &lt;code>CancelCampaignCalls&lt;/code> (names, states or both; at most 1000 calls per
+      /// request, &lt;code>remaining_count&lt;/code>); a selected call that is not &lt;code>FAILED&lt;/code> or
+      /// &lt;code>CANCELLED&lt;/code> is reported in &lt;code>refused&lt;/code>. A failure that cannot succeed by repetition
+      /// (e.g. a rejected credential) is retried too: fix its cause first, otherwise the campaign may be
+      /// auto-stopped again. Not idempotent: each request adds a new budget to the calls it requeues, but a
+      /// repeat finds them &lt;code>RETRY_PENDING&lt;/code> / &lt;code>NOT_STARTED&lt;/code> and refuses them.&lt;/p>
+      /// &lt;p>Emits &lt;code>VTSI_EVENT_CAMPAIGN_CALL_REQUEUED&lt;/code> per requeued call (attributes
+      /// &lt;code>attempt_limit&lt;/code>, &lt;code>next_attempt_time&lt;/code>), &lt;code>VTSI_EVENT_CAMPAIGN_RESUMED&lt;/code>
+      /// when a &lt;code>COMPLETED&lt;/code> campaign became &lt;code>RUNNING&lt;/code>, and the throttled
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> as &lt;code>CancelCampaignCalls&lt;/code>, except that
+      /// &lt;code>states&lt;/code> may only hold &lt;code>FAILED&lt;/code> / &lt;code>CANCELLED&lt;/code>, plus
+      /// &lt;code>additional_attempts&lt;/code> outside 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10)
+      /// and &lt;code>not_before&lt;/code> more than 7 days ahead; &lt;code>NOT_FOUND&lt;/code> for an unknown project or
+      /// campaign; &lt;code>FAILED_PRECONDITION&lt;/code> when the campaign is &lt;code>HARD_STOPPING&lt;/code> (wait until it
+      /// is &lt;code>HARD_STOPPED&lt;/code>).&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.RetryCampaignCallsResponse> RetryCampaignCallsAsync(global::Ondewo.Vtsi.RetryCampaignCallsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RetryCampaignCalls, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Creates a new campaign in the same project as a copy of an existing one, server side, so the
+      /// stored credentials of its call defaults are preserved without ever being returned to the client (a
+      /// Get-then-Create round trip would copy the REDACTED defaults). Copied: &lt;code>max_parallel_calls&lt;/code>,
+      /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+      /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code>. Not copied: the state (the
+      /// clone is &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>), statistics, callers and every other output-only
+      /// field.&lt;/p>
+      /// &lt;p>With &lt;code>include_calls&lt;/code>, the source&amp;apos;s calls whose state is in &lt;code>call_states&lt;/code>
+      /// (empty: every state) are copied as new &lt;code>NOT_STARTED&lt;/code> calls in their original order
+      /// (&lt;code>position&lt;/code> renumbered from 1), each with its own stored configuration and its fixed
+      /// &lt;code>phone_number&lt;/code>, no attempt and no history. A copied call that was added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> gets a new scheduled caller with the same scheduled time
+      /// (a time in the past is due as soon as the clone runs). The whole clone is atomic: the campaign and every
+      /// copied call (and scheduled caller) are stored, or nothing is. The source is read in one consistent
+      /// snapshot and is not changed.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// clone (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>). Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code> for the clone with the attributes &lt;code>cloned_from&lt;/code>
+      /// (the source&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>, and, when calls were copied,
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLS_ADDED&lt;/code> and one &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CREATED&lt;/code> per
+      /// new scheduled caller.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed source selector (as &lt;code>GetCampaign&lt;/code>),
+      /// a &lt;code>new_display_name&lt;/code> over 128 characters, &lt;code>call_states&lt;/code> without
+      /// &lt;code>include_calls&lt;/code> or holding an unknown value, a malformed or reused
+      /// &lt;code>idempotency_key&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or source campaign; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>new_display_name&lt;/code> is used
+      /// in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the copied calls would exceed
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code>; &lt;code>ABORTED&lt;/code> while a first attempt with the same
+      /// &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.Campaign CloneCampaign(global::Ondewo.Vtsi.CloneCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloneCampaign(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Creates a new campaign in the same project as a copy of an existing one, server side, so the
+      /// stored credentials of its call defaults are preserved without ever being returned to the client (a
+      /// Get-then-Create round trip would copy the REDACTED defaults). Copied: &lt;code>max_parallel_calls&lt;/code>,
+      /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+      /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code>. Not copied: the state (the
+      /// clone is &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>), statistics, callers and every other output-only
+      /// field.&lt;/p>
+      /// &lt;p>With &lt;code>include_calls&lt;/code>, the source&amp;apos;s calls whose state is in &lt;code>call_states&lt;/code>
+      /// (empty: every state) are copied as new &lt;code>NOT_STARTED&lt;/code> calls in their original order
+      /// (&lt;code>position&lt;/code> renumbered from 1), each with its own stored configuration and its fixed
+      /// &lt;code>phone_number&lt;/code>, no attempt and no history. A copied call that was added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> gets a new scheduled caller with the same scheduled time
+      /// (a time in the past is due as soon as the clone runs). The whole clone is atomic: the campaign and every
+      /// copied call (and scheduled caller) are stored, or nothing is. The source is read in one consistent
+      /// snapshot and is not changed.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// clone (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>). Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code> for the clone with the attributes &lt;code>cloned_from&lt;/code>
+      /// (the source&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>, and, when calls were copied,
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLS_ADDED&lt;/code> and one &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CREATED&lt;/code> per
+      /// new scheduled caller.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed source selector (as &lt;code>GetCampaign&lt;/code>),
+      /// a &lt;code>new_display_name&lt;/code> over 128 characters, &lt;code>call_states&lt;/code> without
+      /// &lt;code>include_calls&lt;/code> or holding an unknown value, a malformed or reused
+      /// &lt;code>idempotency_key&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or source campaign; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>new_display_name&lt;/code> is used
+      /// in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the copied calls would exceed
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code>; &lt;code>ABORTED&lt;/code> while a first attempt with the same
+      /// &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.Campaign CloneCampaign(global::Ondewo.Vtsi.CloneCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CloneCampaign, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Creates a new campaign in the same project as a copy of an existing one, server side, so the
+      /// stored credentials of its call defaults are preserved without ever being returned to the client (a
+      /// Get-then-Create round trip would copy the REDACTED defaults). Copied: &lt;code>max_parallel_calls&lt;/code>,
+      /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+      /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code>. Not copied: the state (the
+      /// clone is &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>), statistics, callers and every other output-only
+      /// field.&lt;/p>
+      /// &lt;p>With &lt;code>include_calls&lt;/code>, the source&amp;apos;s calls whose state is in &lt;code>call_states&lt;/code>
+      /// (empty: every state) are copied as new &lt;code>NOT_STARTED&lt;/code> calls in their original order
+      /// (&lt;code>position&lt;/code> renumbered from 1), each with its own stored configuration and its fixed
+      /// &lt;code>phone_number&lt;/code>, no attempt and no history. A copied call that was added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> gets a new scheduled caller with the same scheduled time
+      /// (a time in the past is due as soon as the clone runs). The whole clone is atomic: the campaign and every
+      /// copied call (and scheduled caller) are stored, or nothing is. The source is read in one consistent
+      /// snapshot and is not changed.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// clone (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>). Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code> for the clone with the attributes &lt;code>cloned_from&lt;/code>
+      /// (the source&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>, and, when calls were copied,
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLS_ADDED&lt;/code> and one &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CREATED&lt;/code> per
+      /// new scheduled caller.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed source selector (as &lt;code>GetCampaign&lt;/code>),
+      /// a &lt;code>new_display_name&lt;/code> over 128 characters, &lt;code>call_states&lt;/code> without
+      /// &lt;code>include_calls&lt;/code> or holding an unknown value, a malformed or reused
+      /// &lt;code>idempotency_key&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or source campaign; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>new_display_name&lt;/code> is used
+      /// in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the copied calls would exceed
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code>; &lt;code>ABORTED&lt;/code> while a first attempt with the same
+      /// &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.Campaign> CloneCampaignAsync(global::Ondewo.Vtsi.CloneCampaignRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CloneCampaignAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Creates a new campaign in the same project as a copy of an existing one, server side, so the
+      /// stored credentials of its call defaults are preserved without ever being returned to the client (a
+      /// Get-then-Create round trip would copy the REDACTED defaults). Copied: &lt;code>max_parallel_calls&lt;/code>,
+      /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+      /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code>. Not copied: the state (the
+      /// clone is &lt;code>CAMPAIGN_STATE_CREATED&lt;/code>), statistics, callers and every other output-only
+      /// field.&lt;/p>
+      /// &lt;p>With &lt;code>include_calls&lt;/code>, the source&amp;apos;s calls whose state is in &lt;code>call_states&lt;/code>
+      /// (empty: every state) are copied as new &lt;code>NOT_STARTED&lt;/code> calls in their original order
+      /// (&lt;code>position&lt;/code> renumbered from 1), each with its own stored configuration and its fixed
+      /// &lt;code>phone_number&lt;/code>, no attempt and no history. A copied call that was added by
+      /// &lt;code>AddScheduledCallersToCampaign&lt;/code> gets a new scheduled caller with the same scheduled time
+      /// (a time in the past is due as soon as the clone runs). The whole clone is atomic: the campaign and every
+      /// copied call (and scheduled caller) are stored, or nothing is. The source is read in one consistent
+      /// snapshot and is not changed.&lt;/p>
+      /// &lt;p>With an &lt;code>idempotency_key&lt;/code>, a retry of the same request returns the first attempt&amp;apos;s
+      /// clone (see &lt;code>CreateCampaignRequest.idempotency_key&lt;/code>). Emits
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CREATED&lt;/code> for the clone with the attributes &lt;code>cloned_from&lt;/code>
+      /// (the source&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>, and, when calls were copied,
+      /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLS_ADDED&lt;/code> and one &lt;code>VTSI_EVENT_SCHEDULED_CALLER_CREATED&lt;/code> per
+      /// new scheduled caller.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed source selector (as &lt;code>GetCampaign&lt;/code>),
+      /// a &lt;code>new_display_name&lt;/code> over 128 characters, &lt;code>call_states&lt;/code> without
+      /// &lt;code>include_calls&lt;/code> or holding an unknown value, a malformed or reused
+      /// &lt;code>idempotency_key&lt;/code> or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project or source campaign; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>new_display_name&lt;/code> is used
+      /// in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the copied calls would exceed
+      /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code>; &lt;code>ABORTED&lt;/code> while a first attempt with the same
+      /// &lt;code>idempotency_key&lt;/code> is still running.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.Campaign> CloneCampaignAsync(global::Ondewo.Vtsi.CloneCampaignRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CloneCampaign, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1260,7 +2408,11 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_StopCampaign, serviceImpl.StopCampaign)
           .AddMethod(__Method_HardStopCampaign, serviceImpl.HardStopCampaign)
           .AddMethod(__Method_ResumeCampaign, serviceImpl.ResumeCampaign)
-          .AddMethod(__Method_StreamCampaignStatus, serviceImpl.StreamCampaignStatus).Build();
+          .AddMethod(__Method_StreamCampaignStatus, serviceImpl.StreamCampaignStatus)
+          .AddMethod(__Method_GetCampaignCall, serviceImpl.GetCampaignCall)
+          .AddMethod(__Method_CancelCampaignCalls, serviceImpl.CancelCampaignCalls)
+          .AddMethod(__Method_RetryCampaignCalls, serviceImpl.RetryCampaignCalls)
+          .AddMethod(__Method_CloneCampaign, serviceImpl.CloneCampaign).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1282,6 +2434,10 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_HardStopCampaign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.HardStopCampaignRequest, global::Ondewo.Vtsi.Campaign>(serviceImpl.HardStopCampaign));
       serviceBinder.AddMethod(__Method_ResumeCampaign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.ResumeCampaignRequest, global::Ondewo.Vtsi.Campaign>(serviceImpl.ResumeCampaign));
       serviceBinder.AddMethod(__Method_StreamCampaignStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.StreamCampaignStatusRequest, global::Ondewo.Vtsi.StreamCampaignStatusResponse>(serviceImpl.StreamCampaignStatus));
+      serviceBinder.AddMethod(__Method_GetCampaignCall, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetCampaignCallRequest, global::Ondewo.Vtsi.CampaignCall>(serviceImpl.GetCampaignCall));
+      serviceBinder.AddMethod(__Method_CancelCampaignCalls, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.CancelCampaignCallsRequest, global::Ondewo.Vtsi.CancelCampaignCallsResponse>(serviceImpl.CancelCampaignCalls));
+      serviceBinder.AddMethod(__Method_RetryCampaignCalls, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.RetryCampaignCallsRequest, global::Ondewo.Vtsi.RetryCampaignCallsResponse>(serviceImpl.RetryCampaignCalls));
+      serviceBinder.AddMethod(__Method_CloneCampaign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.CloneCampaignRequest, global::Ondewo.Vtsi.Campaign>(serviceImpl.CloneCampaign));
     }
 
   }

@@ -24,135 +24,169 @@ namespace Ondewo.Vtsi {
     static LogsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZvbmRld28vdnRzaS9sb2dzLnByb3RvEgtvbmRld28udnRzaRofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXb25kZXdvL25sdS9jb21tb24u",
-            "cHJvdG8aF29uZGV3by92dHNpL2NhbGxzLnByb3RvIqgDCgxDYWxsTG9nRW50",
-            "cnkSCwoDc2VxGAEgASgDEi0KCXRpbWVzdGFtcBgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASGgoSdGltZXN0YW1wX2lzX2V4YWN0GAMgASgI",
-            "EiYKBWxldmVsGAQgASgOMhcub25kZXdvLm5sdS5Mb2dTZXZlcml0eRIPCgdt",
-            "ZXNzYWdlGAUgASgJEhQKDGNvbnRhaW5lcl9pZBgGIAEoCRIWCg5jb250YWlu",
-            "ZXJfbmFtZRgHIAEoCRIqCgpsb2dfc291cmNlGAggASgOMhYub25kZXdvLnZ0",
-            "c2kuTG9nU291cmNlEi4KB2NoYW5uZWwYCSABKA4yHS5vbmRld28udnRzaS5M",
-            "b2dTdHJlYW1DaGFubmVsEg8KB2VtaXR0ZXIYCiABKAkSEwoLdGhyZWFkX25h",
-            "bWUYCyABKAkSEgoKbG9nX3N0cmVhbRgMIAEoCRIMCgRjYWxsGA0gASgJEhgK",
-            "EG5sdV9zZXNzaW9uX25hbWUYDiABKAkSGwoTcGh5c2ljYWxfbGluZV9jb3Vu",
-            "dBgPIAEoBSItCg9TaXBIZWFkZXJGaWx0ZXISCwoDa2V5GAEgASgJEg0KBXZh",
-            "bHVlGAIgASgJIvAHCg1DYWxsTG9nRmlsdGVyEhIKCmNhbGxfbmFtZXMYASAD",
-            "KAkSFAoMY2FsbGVyX25hbWVzGAIgAygJEhYKDmxpc3RlbmVyX25hbWVzGAMg",
-            "AygJEhIKCmNhbGxlcl9pZHMYBCADKAkSFAoMbGlzdGVuZXJfaWRzGAUgAygJ",
-            "EhAKCGNhbGxfaWRzGAYgAygJEhcKD2NvbnRhaW5lcl9uYW1lcxgHIAMoCRIV",
-            "Cg1jb250YWluZXJfaWRzGAggAygJEhgKEGxvZ19zdHJlYW1fbmFtZXMYCSAD",
-            "KAkSFAoMc2lwX2FjY291bnRzGAogAygJEhEKCXNpcF9wb3J0cxgLIAMoCRIR",
-            "Cgljc2lfcG9ydHMYDCADKAkSFgoOYXN0ZXJpc2tfcG9ydHMYDSADKAkSFQoN",
-            "cGhvbmVfbnVtYmVycxgOIAMoCRISCgpjYWxsZWVfaWRzGA8gAygJEhkKEW5s",
-            "dV9zZXNzaW9uX25hbWVzGBAgAygJEhkKEW5sdV9zZXNzaW9uX3V1aWRzGBEg",
-            "AygJEhkKEW5sdV9wcm9qZWN0X3V1aWRzGBIgAygJEikKCmNhbGxfdHlwZXMY",
-            "EyADKA4yFS5vbmRld28udnRzaS5DYWxsVHlwZRIxCgtzaXBfaGVhZGVycxgU",
-            "IAMoCzIcLm9uZGV3by52dHNpLlNpcEhlYWRlckZpbHRlchIrCgtsb2dfc291",
-            "cmNlcxgVIAMoDjIWLm9uZGV3by52dHNpLkxvZ1NvdXJjZRIvCghjaGFubmVs",
-            "cxgWIAMoDjIdLm9uZGV3by52dHNpLkxvZ1N0cmVhbUNoYW5uZWwSLgoNbWlu",
-            "X2xvZ19sZXZlbBgXIAEoDjIXLm9uZGV3by5ubHUuTG9nU2V2ZXJpdHkSKwoK",
-            "bG9nX2xldmVscxgYIAMoDjIXLm9uZGV3by5ubHUuTG9nU2V2ZXJpdHkSJAoX",
-            "aW5jbHVkZV91bmxldmVsZWRfbGluZXMYGSABKAhIAIgBARIRCgR0ZXh0GBog",
-            "ASgJSAGIAQESEgoFcmVnZXgYGyABKAlIAogBARIYChBlbWl0dGVyX3ByZWZp",
-            "eGVzGBwgAygJEhQKDHRocmVhZF9uYW1lcxgdIAMoCRIzCgpzdGFydF90aW1l",
-            "GB4gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgDiAEBEjEKCGVu",
-            "ZF90aW1lGB8gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgEiAEB",
-            "QhoKGF9pbmNsdWRlX3VubGV2ZWxlZF9saW5lc0IHCgVfdGV4dEIICgZfcmVn",
-            "ZXhCDQoLX3N0YXJ0X3RpbWVCCwoJX2VuZF90aW1lIuwECg1DYWxsTG9nU3Ry",
-            "ZWFtEgwKBG5hbWUYASABKAkSFgoOY29udGFpbmVyX25hbWUYAiABKAkSFAoM",
-            "Y29udGFpbmVyX2lkGAMgASgJEi4KB2NoYW5uZWwYBCABKA4yHS5vbmRld28u",
-            "dnRzaS5Mb2dTdHJlYW1DaGFubmVsEhIKCnByb2plY3RfaWQYBSABKAkSFgoO",
-            "dm9pcF9jYWxsX25hbWUYBiABKAkSKAoJY2FsbF90eXBlGAcgASgOMhUub25k",
-            "ZXdvLnZ0c2kuQ2FsbFR5cGUSEwoLc2lwX2FjY291bnQYCCABKAkSEAoIc2lw",
-            "X3BvcnQYCSABKAUSEAoIY3NpX3BvcnQYCiABKAUSFQoNYXN0ZXJpc2tfcG9y",
-            "dBgLIAEoBRINCgVpbWFnZRgMIAEoCRIzCg1jYXB0dXJlX3N0YXRlGA0gASgO",
-            "Mhwub25kZXdvLnZ0c2kuTG9nQ2FwdHVyZVN0YXRlEhUKDWNhcHR1cmVfZXJy",
-            "b3IYDiABKAkSNgoSY2FwdHVyZV9zdGFydGVkX2F0GA8gASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBI3ChNjYXB0dXJlX2ZpbmlzaGVkX2F0GBAg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIXCg9wYXJ0aWFsX2Nh",
-            "cHR1cmUYESABKAgSGQoRbWluX2F2YWlsYWJsZV9zZXEYEiABKAMSGQoRbWF4",
-            "X2F2YWlsYWJsZV9zZXEYEyABKAMSEgoKbGluZV9jb3VudBgUIAEoAxIaChJk",
-            "cm9wcGVkX2xpbmVfY291bnQYFSABKAMi6AEKFVN0cmVhbUNhbGxMb2dzUmVx",
-            "dWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIvCgZmaWx0ZXIYAiAB",
-            "KAsyGi5vbmRld28udnRzaS5DYWxsTG9nRmlsdGVySACIAQESFwoKdGFpbF9s",
-            "aW5lcxgDIAEoBUgBiAEBEhkKDHJlc3VtZV90b2tlbhgEIAEoCUgCiAEBEhYK",
-            "CWFmdGVyX3NlcRgFIAEoA0gDiAEBQgkKB19maWx0ZXJCDQoLX3RhaWxfbGlu",
-            "ZXNCDwoNX3Jlc3VtZV90b2tlbkIMCgpfYWZ0ZXJfc2VxItoBChZTdHJlYW1D",
-            "YWxsTG9nc1Jlc3BvbnNlEi4KC2xvZ19lbnRyaWVzGAEgAygLMhkub25kZXdv",
-            "LnZ0c2kuQ2FsbExvZ0VudHJ5EjMKDWNhcHR1cmVfc3RhdGUYAiABKA4yHC5v",
-            "bmRld28udnRzaS5Mb2dDYXB0dXJlU3RhdGUSFQoNY2FwdHVyZV9lcnJvchgD",
-            "IAEoCRIaChJkcm9wcGVkX2xpbmVfY291bnQYBCABKAMSFAoMcmVzdW1lX3Rv",
-            "a2VuGAUgASgJEhIKCmVuZF9yZWFzb24YBiABKAkiuAIKE0xpc3RDYWxsTG9n",
-            "c1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSLwoGZmlsdGVy",
-            "GAIgASgLMhoub25kZXdvLnZ0c2kuQ2FsbExvZ0ZpbHRlckgAiAEBEhYKCW1h",
-            "eF9saW5lcxgDIAEoBUgBiAEBEhcKCmJlZm9yZV9zZXEYBCABKANIAogBARIW",
-            "CglhZnRlcl9zZXEYBSABKANIA4gBARIZCgxyZXN1bWVfdG9rZW4YBiABKAlI",
-            "BIgBARIZCgxvbGRlc3RfZmlyc3QYByABKAhIBYgBAUIJCgdfZmlsdGVyQgwK",
-            "Cl9tYXhfbGluZXNCDQoLX2JlZm9yZV9zZXFCDAoKX2FmdGVyX3NlcUIPCg1f",
-            "cmVzdW1lX3Rva2VuQg8KDV9vbGRlc3RfZmlyc3QimgIKFExpc3RDYWxsTG9n",
-            "c1Jlc3BvbnNlEi4KC2xvZ19lbnRyaWVzGAEgAygLMhkub25kZXdvLnZ0c2ku",
-            "Q2FsbExvZ0VudHJ5EhEKCXRydW5jYXRlZBgCIAEoCBIZChFtaW5fYXZhaWxh",
-            "YmxlX3NlcRgDIAEoAxIZChFtYXhfYXZhaWxhYmxlX3NlcRgEIAEoAxIWCg5o",
-            "YXNfbW9yZV9vbGRlchgFIAEoCBIWCg5oYXNfbW9yZV9uZXdlchgGIAEoCBIZ",
-            "ChFuZXh0X3Jlc3VtZV90b2tlbhgHIAEoCRI+ChVzY29wZV9saW1pdGVkX2Zp",
-            "bHRlcnMYCCADKA4yHy5vbmRld28udnRzaS5DYWxsTG9nRmlsdGVyRmllbGQi",
-            "QgoXR2V0Q2FsbExvZ1N0cmVhbVJlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25h",
-            "bWUYASABKAkSDAoEbmFtZRgCIAEoCSKaAQoZTGlzdENhbGxMb2dTdHJlYW1z",
-            "UmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIvCgZmaWx0ZXIY",
-            "AiABKAsyGi5vbmRld28udnRzaS5DYWxsTG9nRmlsdGVySACIAQESFwoKcGFn",
-            "ZV90b2tlbhgDIAEoCUgBiAEBQgkKB19maWx0ZXJCDQoLX3BhZ2VfdG9rZW4i",
-            "ZgoaTGlzdENhbGxMb2dTdHJlYW1zUmVzcG9uc2USLwoLbG9nX3N0cmVhbXMY",
-            "ASADKAsyGi5vbmRld28udnRzaS5DYWxsTG9nU3RyZWFtEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSJeChVEZWxldGVDYWxsTG9nc1JlcXVlc3QSGQoRdnRz",
-            "aV9wcm9qZWN0X25hbWUYASABKAkSKgoGZmlsdGVyGAIgASgLMhoub25kZXdv",
-            "LnZ0c2kuQ2FsbExvZ0ZpbHRlciJbChZEZWxldGVDYWxsTG9nc1Jlc3BvbnNl",
-            "Eh8KF2RlbGV0ZWRfbG9nX2VudHJ5X2NvdW50GAEgASgDEiAKGGRlbGV0ZWRf",
-            "bG9nX3N0cmVhbV9jb3VudBgCIAEoAyqaAQoJTG9nU291cmNlEhoKFkxPR19T",
-            "T1VSQ0VfVU5TUEVDSUZJRUQQABISCg5MT0dfU09VUkNFX1NJUBABEhIKDkxP",
-            "R19TT1VSQ0VfQ1NJEAISFwoTTE9HX1NPVVJDRV9BU1RFUklTSxADEhkKFUxP",
-            "R19TT1VSQ0VfUFVMU0VBVURJTxAEEhUKEUxPR19TT1VSQ0VfU1lTVEVNEAUq",
-            "dAoQTG9nU3RyZWFtQ2hhbm5lbBIiCh5MT0dfU1RSRUFNX0NIQU5ORUxfVU5T",
-            "UEVDSUZJRUQQABIdChlMT0dfU1RSRUFNX0NIQU5ORUxfU1RET1VUEAESHQoZ",
-            "TE9HX1NUUkVBTV9DSEFOTkVMX1NUREVSUhACKrIBCg9Mb2dDYXB0dXJlU3Rh",
-            "dGUSIQodTE9HX0NBUFRVUkVfU1RBVEVfVU5TUEVDSUZJRUQQABIfChtMT0df",
-            "Q0FQVFVSRV9TVEFURV9DQVBUVVJJTkcQARIdChlMT0dfQ0FQVFVSRV9TVEFU",
-            "RV9TVE9QUEVEEAISHAoYTE9HX0NBUFRVUkVfU1RBVEVfRkFJTEVEEAMSHgoa",
-            "TE9HX0NBUFRVUkVfU1RBVEVfREVUQUNIRUQQBCrCAgoSQ2FsbExvZ0ZpbHRl",
-            "ckZpZWxkEiUKIUNBTExfTE9HX0ZJTFRFUl9GSUVMRF9VTlNQRUNJRklFRBAA",
-            "Eh4KGkNBTExfTE9HX0ZJTFRFUl9GSUVMRF9URVhUEAESHwobQ0FMTF9MT0df",
-            "RklMVEVSX0ZJRUxEX1JFR0VYEAISJQohQ0FMTF9MT0dfRklMVEVSX0ZJRUxE",
-            "X0xPR19TT1VSQ0VTEAMSIgoeQ0FMTF9MT0dfRklMVEVSX0ZJRUxEX0NIQU5O",
-            "RUxTEAQSKgomQ0FMTF9MT0dfRklMVEVSX0ZJRUxEX0VNSVRURVJfUFJFRklY",
-            "RVMQBRImCiJDQUxMX0xPR19GSUxURVJfRklFTERfVEhSRUFEX05BTUVTEAYS",
-            "JQohQ0FMTF9MT0dfRklMVEVSX0ZJRUxEX1NJUF9IRUFERVJTEAcy0AMKBExv",
-            "Z3MSWwoOU3RyZWFtQ2FsbExvZ3MSIi5vbmRld28udnRzaS5TdHJlYW1DYWxs",
-            "TG9nc1JlcXVlc3QaIy5vbmRld28udnRzaS5TdHJlYW1DYWxsTG9nc1Jlc3Bv",
-            "bnNlMAESUwoMTGlzdENhbGxMb2dzEiAub25kZXdvLnZ0c2kuTGlzdENhbGxM",
-            "b2dzUmVxdWVzdBohLm9uZGV3by52dHNpLkxpc3RDYWxsTG9nc1Jlc3BvbnNl",
-            "ElQKEEdldENhbGxMb2dTdHJlYW0SJC5vbmRld28udnRzaS5HZXRDYWxsTG9n",
-            "U3RyZWFtUmVxdWVzdBoaLm9uZGV3by52dHNpLkNhbGxMb2dTdHJlYW0SZQoS",
-            "TGlzdENhbGxMb2dTdHJlYW1zEiYub25kZXdvLnZ0c2kuTGlzdENhbGxMb2dT",
-            "dHJlYW1zUmVxdWVzdBonLm9uZGV3by52dHNpLkxpc3RDYWxsTG9nU3RyZWFt",
-            "c1Jlc3BvbnNlElkKDkRlbGV0ZUNhbGxMb2dzEiIub25kZXdvLnZ0c2kuRGVs",
-            "ZXRlQ2FsbExvZ3NSZXF1ZXN0GiMub25kZXdvLnZ0c2kuRGVsZXRlQ2FsbExv",
-            "Z3NSZXNwb25zZWIGcHJvdG8z"));
+            "ChZvbmRld28vdnRzaS9sb2dzLnByb3RvEgtvbmRld28udnRzaRogZ29vZ2xl",
+            "L3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8aF29uZGV3by9ubHUvY29tbW9uLnByb3RvGhdvbmRl",
+            "d28vdnRzaS9jYWxscy5wcm90byKoAwoMQ2FsbExvZ0VudHJ5EgsKA3NlcRgB",
+            "IAEoAxItCgl0aW1lc3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEhoKEnRpbWVzdGFtcF9pc19leGFjdBgDIAEoCBImCgVsZXZlbBgE",
+            "IAEoDjIXLm9uZGV3by5ubHUuTG9nU2V2ZXJpdHkSDwoHbWVzc2FnZRgFIAEo",
+            "CRIUCgxjb250YWluZXJfaWQYBiABKAkSFgoOY29udGFpbmVyX25hbWUYByAB",
+            "KAkSKgoKbG9nX3NvdXJjZRgIIAEoDjIWLm9uZGV3by52dHNpLkxvZ1NvdXJj",
+            "ZRIuCgdjaGFubmVsGAkgASgOMh0ub25kZXdvLnZ0c2kuTG9nU3RyZWFtQ2hh",
+            "bm5lbBIPCgdlbWl0dGVyGAogASgJEhMKC3RocmVhZF9uYW1lGAsgASgJEhIK",
+            "CmxvZ19zdHJlYW0YDCABKAkSDAoEY2FsbBgNIAEoCRIYChBubHVfc2Vzc2lv",
+            "bl9uYW1lGA4gASgJEhsKE3BoeXNpY2FsX2xpbmVfY291bnQYDyABKAUiLQoP",
+            "U2lwSGVhZGVyRmlsdGVyEgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCSLP",
+            "CAoNQ2FsbExvZ0ZpbHRlchISCgpjYWxsX25hbWVzGAEgAygJEhQKDGNhbGxl",
+            "cl9uYW1lcxgCIAMoCRIWCg5saXN0ZW5lcl9uYW1lcxgDIAMoCRISCgpjYWxs",
+            "ZXJfaWRzGAQgAygJEhQKDGxpc3RlbmVyX2lkcxgFIAMoCRIQCghjYWxsX2lk",
+            "cxgGIAMoCRIXCg9jb250YWluZXJfbmFtZXMYByADKAkSFQoNY29udGFpbmVy",
+            "X2lkcxgIIAMoCRIYChBsb2dfc3RyZWFtX25hbWVzGAkgAygJEhQKDHNpcF9h",
+            "Y2NvdW50cxgKIAMoCRIVCglzaXBfcG9ydHMYCyADKAlCAhgBEhUKCWNzaV9w",
+            "b3J0cxgMIAMoCUICGAESGgoOYXN0ZXJpc2tfcG9ydHMYDSADKAlCAhgBEhUK",
+            "DXBob25lX251bWJlcnMYDiADKAkSEgoKY2FsbGVlX2lkcxgPIAMoCRIZChFu",
+            "bHVfc2Vzc2lvbl9uYW1lcxgQIAMoCRIZChFubHVfc2Vzc2lvbl91dWlkcxgR",
+            "IAMoCRIZChFubHVfcHJvamVjdF91dWlkcxgSIAMoCRIpCgpjYWxsX3R5cGVz",
+            "GBMgAygOMhUub25kZXdvLnZ0c2kuQ2FsbFR5cGUSMQoLc2lwX2hlYWRlcnMY",
+            "FCADKAsyHC5vbmRld28udnRzaS5TaXBIZWFkZXJGaWx0ZXISKwoLbG9nX3Nv",
+            "dXJjZXMYFSADKA4yFi5vbmRld28udnRzaS5Mb2dTb3VyY2USLwoIY2hhbm5l",
+            "bHMYFiADKA4yHS5vbmRld28udnRzaS5Mb2dTdHJlYW1DaGFubmVsEi4KDW1p",
+            "bl9sb2dfbGV2ZWwYFyABKA4yFy5vbmRld28ubmx1LkxvZ1NldmVyaXR5EisK",
+            "CmxvZ19sZXZlbHMYGCADKA4yFy5vbmRld28ubmx1LkxvZ1NldmVyaXR5EiQK",
+            "F2luY2x1ZGVfdW5sZXZlbGVkX2xpbmVzGBkgASgISACIAQESEQoEdGV4dBga",
+            "IAEoCUgBiAEBEhIKBXJlZ2V4GBsgASgJSAKIAQESGAoQZW1pdHRlcl9wcmVm",
+            "aXhlcxgcIAMoCRIUCgx0aHJlYWRfbmFtZXMYHSADKAkSMwoKc3RhcnRfdGlt",
+            "ZRgeIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIA4gBARIxCghl",
+            "bmRfdGltZRgfIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIBIgB",
+            "ARIYChBzaXBfcG9ydF9udW1iZXJzGCAgAygFEhgKEGNzaV9wb3J0X251bWJl",
+            "cnMYISADKAUSHQoVYXN0ZXJpc2tfcG9ydF9udW1iZXJzGCIgAygFQhoKGF9p",
+            "bmNsdWRlX3VubGV2ZWxlZF9saW5lc0IHCgVfdGV4dEIICgZfcmVnZXhCDQoL",
+            "X3N0YXJ0X3RpbWVCCwoJX2VuZF90aW1lIocFCg1DYWxsTG9nU3RyZWFtEgwK",
+            "BG5hbWUYASABKAkSFgoOY29udGFpbmVyX25hbWUYAiABKAkSFAoMY29udGFp",
+            "bmVyX2lkGAMgASgJEi4KB2NoYW5uZWwYBCABKA4yHS5vbmRld28udnRzaS5M",
+            "b2dTdHJlYW1DaGFubmVsEhIKCnByb2plY3RfaWQYBSABKAkSFgoOdm9pcF9j",
+            "YWxsX25hbWUYBiABKAkSKAoJY2FsbF90eXBlGAcgASgOMhUub25kZXdvLnZ0",
+            "c2kuQ2FsbFR5cGUSEwoLc2lwX2FjY291bnQYCCABKAkSEAoIc2lwX3BvcnQY",
+            "CSABKAUSEAoIY3NpX3BvcnQYCiABKAUSFQoNYXN0ZXJpc2tfcG9ydBgLIAEo",
+            "BRINCgVpbWFnZRgMIAEoCRIzCg1jYXB0dXJlX3N0YXRlGA0gASgOMhwub25k",
+            "ZXdvLnZ0c2kuTG9nQ2FwdHVyZVN0YXRlEhUKDWNhcHR1cmVfZXJyb3IYDiAB",
+            "KAkSNgoSY2FwdHVyZV9zdGFydGVkX2F0GA8gASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBI3ChNjYXB0dXJlX2ZpbmlzaGVkX2F0GBAgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIXCg9wYXJ0aWFsX2NhcHR1cmUY",
+            "ESABKAgSGQoRbWluX2F2YWlsYWJsZV9zZXEYEiABKAMSGQoRbWF4X2F2YWls",
+            "YWJsZV9zZXEYEyABKAMSEgoKbGluZV9jb3VudBgUIAEoAxIaChJkcm9wcGVk",
+            "X2xpbmVfY291bnQYFSABKAMSGQoRdnRzaV9wcm9qZWN0X25hbWUYFiABKAki",
+            "6AEKFVN0cmVhbUNhbGxMb2dzUmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFt",
+            "ZRgBIAEoCRIvCgZmaWx0ZXIYAiABKAsyGi5vbmRld28udnRzaS5DYWxsTG9n",
+            "RmlsdGVySACIAQESFwoKdGFpbF9saW5lcxgDIAEoBUgBiAEBEhkKDHJlc3Vt",
+            "ZV90b2tlbhgEIAEoCUgCiAEBEhYKCWFmdGVyX3NlcRgFIAEoA0gDiAEBQgkK",
+            "B19maWx0ZXJCDQoLX3RhaWxfbGluZXNCDwoNX3Jlc3VtZV90b2tlbkIMCgpf",
+            "YWZ0ZXJfc2VxIpQCChZTdHJlYW1DYWxsTG9nc1Jlc3BvbnNlEi4KC2xvZ19l",
+            "bnRyaWVzGAEgAygLMhkub25kZXdvLnZ0c2kuQ2FsbExvZ0VudHJ5EjMKDWNh",
+            "cHR1cmVfc3RhdGUYAiABKA4yHC5vbmRld28udnRzaS5Mb2dDYXB0dXJlU3Rh",
+            "dGUSFQoNY2FwdHVyZV9lcnJvchgDIAEoCRIaChJkcm9wcGVkX2xpbmVfY291",
+            "bnQYBCABKAMSFAoMcmVzdW1lX3Rva2VuGAUgASgJEhIKCmVuZF9yZWFzb24Y",
+            "BiABKAkSOAoPZW5kX3JlYXNvbl9jb2RlGAcgASgOMh8ub25kZXdvLnZ0c2ku",
+            "TG9nU3RyZWFtRW5kUmVhc29uIoADChNMaXN0Q2FsbExvZ3NSZXF1ZXN0EhkK",
+            "EXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEi8KBmZpbHRlchgCIAEoCzIaLm9u",
+            "ZGV3by52dHNpLkNhbGxMb2dGaWx0ZXJIAIgBARIWCgltYXhfbGluZXMYAyAB",
+            "KAVIAYgBARIXCgpiZWZvcmVfc2VxGAQgASgDSAKIAQESFgoJYWZ0ZXJfc2Vx",
+            "GAUgASgDSAOIAQESGQoMcmVzdW1lX3Rva2VuGAYgASgJSASIAQESGQoMb2xk",
+            "ZXN0X2ZpcnN0GAcgASgISAWIAQESLgoKZmllbGRfbWFzaxgIIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSFgoOaW5jbHVkZV9jb3VudHMYCSAB",
+            "KAhCCQoHX2ZpbHRlckIMCgpfbWF4X2xpbmVzQg0KC19iZWZvcmVfc2VxQgwK",
+            "Cl9hZnRlcl9zZXFCDwoNX3Jlc3VtZV90b2tlbkIPCg1fb2xkZXN0X2ZpcnN0",
+            "ItgDChRMaXN0Q2FsbExvZ3NSZXNwb25zZRIuCgtsb2dfZW50cmllcxgBIAMo",
+            "CzIZLm9uZGV3by52dHNpLkNhbGxMb2dFbnRyeRIRCgl0cnVuY2F0ZWQYAiAB",
+            "KAgSGQoRbWluX2F2YWlsYWJsZV9zZXEYAyABKAMSGQoRbWF4X2F2YWlsYWJs",
+            "ZV9zZXEYBCABKAMSFgoOaGFzX21vcmVfb2xkZXIYBSABKAgSFgoOaGFzX21v",
+            "cmVfbmV3ZXIYBiABKAgSGQoRbmV4dF9yZXN1bWVfdG9rZW4YByABKAkSPgoV",
+            "c2NvcGVfbGltaXRlZF9maWx0ZXJzGAggAygOMh8ub25kZXdvLnZ0c2kuQ2Fs",
+            "bExvZ0ZpbHRlckZpZWxkEiEKFHRvdGFsX21hdGNoaW5nX2NvdW50GAkgASgD",
+            "SACIAQESSwoOY291bnRfYnlfbGV2ZWwYCiADKAsyMy5vbmRld28udnRzaS5M",
+            "aXN0Q2FsbExvZ3NSZXNwb25zZS5Db3VudEJ5TGV2ZWxFbnRyeRozChFDb3Vu",
+            "dEJ5TGV2ZWxFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAM6AjgB",
+            "QhcKFV90b3RhbF9tYXRjaGluZ19jb3VudCJyChdHZXRDYWxsTG9nU3RyZWFt",
+            "UmVxdWVzdBIZChF2dHNpX3Byb2plY3RfbmFtZRgBIAEoCRIMCgRuYW1lGAIg",
+            "ASgJEi4KCmZpZWxkX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrIpMCChlMaXN0Q2FsbExvZ1N0cmVhbXNSZXF1ZXN0EhkKEXZ0c2lf",
+            "cHJvamVjdF9uYW1lGAEgASgJEi8KBmZpbHRlchgCIAEoCzIaLm9uZGV3by52",
+            "dHNpLkNhbGxMb2dGaWx0ZXJIAIgBARIXCgpwYWdlX3Rva2VuGAMgASgJSAGI",
+            "AQESLgoKZmllbGRfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2sSEQoJcGFnZV9zaXplGAUgASgFEjQKDmNhcHR1cmVfc3RhdGVzGAYg",
+            "AygOMhwub25kZXdvLnZ0c2kuTG9nQ2FwdHVyZVN0YXRlQgkKB19maWx0ZXJC",
+            "DQoLX3BhZ2VfdG9rZW4iZgoaTGlzdENhbGxMb2dTdHJlYW1zUmVzcG9uc2US",
+            "LwoLbG9nX3N0cmVhbXMYASADKAsyGi5vbmRld28udnRzaS5DYWxsTG9nU3Ry",
+            "ZWFtEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ1ChVEZWxldGVDYWxsTG9n",
+            "c1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSKgoGZmlsdGVy",
+            "GAIgASgLMhoub25kZXdvLnZ0c2kuQ2FsbExvZ0ZpbHRlchIVCg12YWxpZGF0",
+            "ZV9vbmx5GAMgASgIIlsKFkRlbGV0ZUNhbGxMb2dzUmVzcG9uc2USHwoXZGVs",
+            "ZXRlZF9sb2dfZW50cnlfY291bnQYASABKAMSIAoYZGVsZXRlZF9sb2dfc3Ry",
+            "ZWFtX2NvdW50GAIgASgDIqYBChVFeHBvcnRDYWxsTG9nc1JlcXVlc3QSGQoR",
+            "dnRzaV9wcm9qZWN0X25hbWUYASABKAkSKgoGZmlsdGVyGAIgASgLMhoub25k",
+            "ZXdvLnZ0c2kuQ2FsbExvZ0ZpbHRlchIsCgZmb3JtYXQYAyABKA4yHC5vbmRl",
+            "d28udnRzaS5Mb2dFeHBvcnRGb3JtYXQSGAoQaW5jbHVkZV9tZXRhZGF0YRgE",
+            "IAEoCCJdChZFeHBvcnRDYWxsTG9nc1Jlc3BvbnNlEg0KBWNodW5rGAEgASgM",
+            "EhMKC2VudHJ5X2NvdW50GAIgASgDEgwKBGxhc3QYAyABKAgSEQoJdHJ1bmNh",
+            "dGVkGAQgASgIKpoBCglMb2dTb3VyY2USGgoWTE9HX1NPVVJDRV9VTlNQRUNJ",
+            "RklFRBAAEhIKDkxPR19TT1VSQ0VfU0lQEAESEgoOTE9HX1NPVVJDRV9DU0kQ",
+            "AhIXChNMT0dfU09VUkNFX0FTVEVSSVNLEAMSGQoVTE9HX1NPVVJDRV9QVUxT",
+            "RUFVRElPEAQSFQoRTE9HX1NPVVJDRV9TWVNURU0QBSp0ChBMb2dTdHJlYW1D",
+            "aGFubmVsEiIKHkxPR19TVFJFQU1fQ0hBTk5FTF9VTlNQRUNJRklFRBAAEh0K",
+            "GUxPR19TVFJFQU1fQ0hBTk5FTF9TVERPVVQQARIdChlMT0dfU1RSRUFNX0NI",
+            "QU5ORUxfU1RERVJSEAIqsgEKD0xvZ0NhcHR1cmVTdGF0ZRIhCh1MT0dfQ0FQ",
+            "VFVSRV9TVEFURV9VTlNQRUNJRklFRBAAEh8KG0xPR19DQVBUVVJFX1NUQVRF",
+            "X0NBUFRVUklORxABEh0KGUxPR19DQVBUVVJFX1NUQVRFX1NUT1BQRUQQAhIc",
+            "ChhMT0dfQ0FQVFVSRV9TVEFURV9GQUlMRUQQAxIeChpMT0dfQ0FQVFVSRV9T",
+            "VEFURV9ERVRBQ0hFRBAEKsICChJDYWxsTG9nRmlsdGVyRmllbGQSJQohQ0FM",
+            "TF9MT0dfRklMVEVSX0ZJRUxEX1VOU1BFQ0lGSUVEEAASHgoaQ0FMTF9MT0df",
+            "RklMVEVSX0ZJRUxEX1RFWFQQARIfChtDQUxMX0xPR19GSUxURVJfRklFTERf",
+            "UkVHRVgQAhIlCiFDQUxMX0xPR19GSUxURVJfRklFTERfTE9HX1NPVVJDRVMQ",
+            "AxIiCh5DQUxMX0xPR19GSUxURVJfRklFTERfQ0hBTk5FTFMQBBIqCiZDQUxM",
+            "X0xPR19GSUxURVJfRklFTERfRU1JVFRFUl9QUkVGSVhFUxAFEiYKIkNBTExf",
+            "TE9HX0ZJTFRFUl9GSUVMRF9USFJFQURfTkFNRVMQBhIlCiFDQUxMX0xPR19G",
+            "SUxURVJfRklFTERfU0lQX0hFQURFUlMQByqeAgoSTG9nU3RyZWFtRW5kUmVh",
+            "c29uEiUKIUxPR19TVFJFQU1fRU5EX1JFQVNPTl9VTlNQRUNJRklFRBAAEjEK",
+            "LUxPR19TVFJFQU1fRU5EX1JFQVNPTl9BTExfQ0FQVFVSRVNfVEVSTUlOQVRF",
+            "RBABEiYKIkxPR19TVFJFQU1fRU5EX1JFQVNPTl9NQVhfRFVSQVRJT04QAhIp",
+            "CiVMT0dfU1RSRUFNX0VORF9SRUFTT05fU0VSVkVSX1NIVVRET1dOEAMSLAoo",
+            "TE9HX1NUUkVBTV9FTkRfUkVBU09OX1BFUk1JU1NJT05fUkVWT0tFRBAEEi0K",
+            "KUxPR19TVFJFQU1fRU5EX1JFQVNPTl9DUkVERU5USUFMU19FWFBJUkVEEAUq",
+            "iQEKD0xvZ0V4cG9ydEZvcm1hdBIhCh1MT0dfRVhQT1JUX0ZPUk1BVF9VTlNQ",
+            "RUNJRklFRBAAEhoKFkxPR19FWFBPUlRfRk9STUFUX1RFWFQQARIcChhMT0df",
+            "RVhQT1JUX0ZPUk1BVF9OREpTT04QAhIZChVMT0dfRVhQT1JUX0ZPUk1BVF9D",
+            "U1YQAzKtBAoETG9ncxJbCg5TdHJlYW1DYWxsTG9ncxIiLm9uZGV3by52dHNp",
+            "LlN0cmVhbUNhbGxMb2dzUmVxdWVzdBojLm9uZGV3by52dHNpLlN0cmVhbUNh",
+            "bGxMb2dzUmVzcG9uc2UwARJTCgxMaXN0Q2FsbExvZ3MSIC5vbmRld28udnRz",
+            "aS5MaXN0Q2FsbExvZ3NSZXF1ZXN0GiEub25kZXdvLnZ0c2kuTGlzdENhbGxM",
+            "b2dzUmVzcG9uc2USVAoQR2V0Q2FsbExvZ1N0cmVhbRIkLm9uZGV3by52dHNp",
+            "LkdldENhbGxMb2dTdHJlYW1SZXF1ZXN0Ghoub25kZXdvLnZ0c2kuQ2FsbExv",
+            "Z1N0cmVhbRJlChJMaXN0Q2FsbExvZ1N0cmVhbXMSJi5vbmRld28udnRzaS5M",
+            "aXN0Q2FsbExvZ1N0cmVhbXNSZXF1ZXN0Gicub25kZXdvLnZ0c2kuTGlzdENh",
+            "bGxMb2dTdHJlYW1zUmVzcG9uc2USWQoORGVsZXRlQ2FsbExvZ3MSIi5vbmRl",
+            "d28udnRzaS5EZWxldGVDYWxsTG9nc1JlcXVlc3QaIy5vbmRld28udnRzaS5E",
+            "ZWxldGVDYWxsTG9nc1Jlc3BvbnNlElsKDkV4cG9ydENhbGxMb2dzEiIub25k",
+            "ZXdvLnZ0c2kuRXhwb3J0Q2FsbExvZ3NSZXF1ZXN0GiMub25kZXdvLnZ0c2ku",
+            "RXhwb3J0Q2FsbExvZ3NSZXNwb25zZTABYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.CommonReflection.Descriptor, global::Ondewo.Vtsi.CallsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.LogSource), typeof(global::Ondewo.Vtsi.LogStreamChannel), typeof(global::Ondewo.Vtsi.LogCaptureState), typeof(global::Ondewo.Vtsi.CallLogFilterField), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.CommonReflection.Descriptor, global::Ondewo.Vtsi.CallsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.LogSource), typeof(global::Ondewo.Vtsi.LogStreamChannel), typeof(global::Ondewo.Vtsi.LogCaptureState), typeof(global::Ondewo.Vtsi.CallLogFilterField), typeof(global::Ondewo.Vtsi.LogStreamEndReason), typeof(global::Ondewo.Vtsi.LogExportFormat), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallLogEntry), global::Ondewo.Vtsi.CallLogEntry.Parser, new[]{ "Seq", "Timestamp", "TimestampIsExact", "Level", "Message", "ContainerId", "ContainerName", "LogSource", "Channel", "Emitter", "ThreadName", "LogStream", "Call", "NluSessionName", "PhysicalLineCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SipHeaderFilter), global::Ondewo.Vtsi.SipHeaderFilter.Parser, new[]{ "Key", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallLogFilter), global::Ondewo.Vtsi.CallLogFilter.Parser, new[]{ "CallNames", "CallerNames", "ListenerNames", "CallerIds", "ListenerIds", "CallIds", "ContainerNames", "ContainerIds", "LogStreamNames", "SipAccounts", "SipPorts", "CsiPorts", "AsteriskPorts", "PhoneNumbers", "CalleeIds", "NluSessionNames", "NluSessionUuids", "NluProjectUuids", "CallTypes", "SipHeaders", "LogSources", "Channels", "MinLogLevel", "LogLevels", "IncludeUnleveledLines", "Text", "Regex", "EmitterPrefixes", "ThreadNames", "StartTime", "EndTime" }, new[]{ "IncludeUnleveledLines", "Text", "Regex", "StartTime", "EndTime" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallLogStream), global::Ondewo.Vtsi.CallLogStream.Parser, new[]{ "Name", "ContainerName", "ContainerId", "Channel", "ProjectId", "VoipCallName", "CallType", "SipAccount", "SipPort", "CsiPort", "AsteriskPort", "Image", "CaptureState", "CaptureError", "CaptureStartedAt", "CaptureFinishedAt", "PartialCapture", "MinAvailableSeq", "MaxAvailableSeq", "LineCount", "DroppedLineCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallLogFilter), global::Ondewo.Vtsi.CallLogFilter.Parser, new[]{ "CallNames", "CallerNames", "ListenerNames", "CallerIds", "ListenerIds", "CallIds", "ContainerNames", "ContainerIds", "LogStreamNames", "SipAccounts", "SipPorts", "CsiPorts", "AsteriskPorts", "PhoneNumbers", "CalleeIds", "NluSessionNames", "NluSessionUuids", "NluProjectUuids", "CallTypes", "SipHeaders", "LogSources", "Channels", "MinLogLevel", "LogLevels", "IncludeUnleveledLines", "Text", "Regex", "EmitterPrefixes", "ThreadNames", "StartTime", "EndTime", "SipPortNumbers", "CsiPortNumbers", "AsteriskPortNumbers" }, new[]{ "IncludeUnleveledLines", "Text", "Regex", "StartTime", "EndTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallLogStream), global::Ondewo.Vtsi.CallLogStream.Parser, new[]{ "Name", "ContainerName", "ContainerId", "Channel", "ProjectId", "VoipCallName", "CallType", "SipAccount", "SipPort", "CsiPort", "AsteriskPort", "Image", "CaptureState", "CaptureError", "CaptureStartedAt", "CaptureFinishedAt", "PartialCapture", "MinAvailableSeq", "MaxAvailableSeq", "LineCount", "DroppedLineCount", "VtsiProjectName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallLogsRequest), global::Ondewo.Vtsi.StreamCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "TailLines", "ResumeToken", "AfterSeq" }, new[]{ "Filter", "TailLines", "ResumeToken", "AfterSeq" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallLogsResponse), global::Ondewo.Vtsi.StreamCallLogsResponse.Parser, new[]{ "LogEntries", "CaptureState", "CaptureError", "DroppedLineCount", "ResumeToken", "EndReason" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogsRequest), global::Ondewo.Vtsi.ListCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "MaxLines", "BeforeSeq", "AfterSeq", "ResumeToken", "OldestFirst" }, new[]{ "Filter", "MaxLines", "BeforeSeq", "AfterSeq", "ResumeToken", "OldestFirst" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogsResponse), global::Ondewo.Vtsi.ListCallLogsResponse.Parser, new[]{ "LogEntries", "Truncated", "MinAvailableSeq", "MaxAvailableSeq", "HasMoreOlder", "HasMoreNewer", "NextResumeToken", "ScopeLimitedFilters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCallLogStreamRequest), global::Ondewo.Vtsi.GetCallLogStreamRequest.Parser, new[]{ "VtsiProjectName", "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogStreamsRequest), global::Ondewo.Vtsi.ListCallLogStreamsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "PageToken" }, new[]{ "Filter", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCallLogsResponse), global::Ondewo.Vtsi.StreamCallLogsResponse.Parser, new[]{ "LogEntries", "CaptureState", "CaptureError", "DroppedLineCount", "ResumeToken", "EndReason", "EndReasonCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogsRequest), global::Ondewo.Vtsi.ListCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "MaxLines", "BeforeSeq", "AfterSeq", "ResumeToken", "OldestFirst", "FieldMask", "IncludeCounts" }, new[]{ "Filter", "MaxLines", "BeforeSeq", "AfterSeq", "ResumeToken", "OldestFirst" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogsResponse), global::Ondewo.Vtsi.ListCallLogsResponse.Parser, new[]{ "LogEntries", "Truncated", "MinAvailableSeq", "MaxAvailableSeq", "HasMoreOlder", "HasMoreNewer", "NextResumeToken", "ScopeLimitedFilters", "TotalMatchingCount", "CountByLevel" }, new[]{ "TotalMatchingCount" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCallLogStreamRequest), global::Ondewo.Vtsi.GetCallLogStreamRequest.Parser, new[]{ "VtsiProjectName", "Name", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogStreamsRequest), global::Ondewo.Vtsi.ListCallLogStreamsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "PageToken", "FieldMask", "PageSize", "CaptureStates" }, new[]{ "Filter", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCallLogStreamsResponse), global::Ondewo.Vtsi.ListCallLogStreamsResponse.Parser, new[]{ "LogStreams", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallLogsRequest), global::Ondewo.Vtsi.DeleteCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallLogsResponse), global::Ondewo.Vtsi.DeleteCallLogsResponse.Parser, new[]{ "DeletedLogEntryCount", "DeletedLogStreamCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallLogsRequest), global::Ondewo.Vtsi.DeleteCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCallLogsResponse), global::Ondewo.Vtsi.DeleteCallLogsResponse.Parser, new[]{ "DeletedLogEntryCount", "DeletedLogStreamCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ExportCallLogsRequest), global::Ondewo.Vtsi.ExportCallLogsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "Format", "IncludeMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ExportCallLogsResponse), global::Ondewo.Vtsi.ExportCallLogsResponse.Parser, new[]{ "Chunk", "EntryCount", "Last", "Truncated" }, null, null, null, null)
           }));
     }
     #endregion
@@ -276,6 +310,79 @@ namespace Ondewo.Vtsi {
     /// &lt;code>CallLogFilter.sip_headers&lt;/code>.
     /// </summary>
     [pbr::OriginalName("CALL_LOG_FILTER_FIELD_SIP_HEADERS")] SipHeaders = 7,
+  }
+
+  /// <summary>
+  /// Why the SERVER ended a &lt;code>StreamCallLogs&lt;/code> stream. Carried by the final
+  /// &lt;a href="index.html#ondewo.vtsi.StreamCallLogsResponse">StreamCallLogsResponse&lt;/a> beside the
+  /// human-readable &lt;code>end_reason&lt;/code>. A stream ended by the client has no final message.
+  /// </summary>
+  public enum LogStreamEndReason {
+    /// <summary>
+    /// Not ended by the server: every message except the final one, and the final message of a 9.0.0
+    /// server (read &lt;code>end_reason&lt;/code> there).
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The capture of every followed log stream has terminated (&lt;code>STOPPED&lt;/code> or
+    /// &lt;code>FAILED&lt;/code>) and every stored entry was sent. Nothing more will arrive for this filter.
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_ALL_CAPTURES_TERMINATED")] AllCapturesTerminated = 1,
+    /// <summary>
+    /// The server-side maximum stream duration (&lt;code>ONDEWO_VTSI_LOG_STREAM_MAX_DURATION_S&lt;/code>) was
+    /// reached. Reconnect with the &lt;code>resume_token&lt;/code> of the final message to continue seamlessly.
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_MAX_DURATION")] MaxDuration = 2,
+    /// <summary>
+    /// The VTSI server is shutting down. Reconnect, to another replica if there is one, with the
+    /// &lt;code>resume_token&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_SERVER_SHUTDOWN")] ServerShutdown = 3,
+    /// <summary>
+    /// The caller lost the role the stream requires. The stream then ends with
+    /// &lt;code>PERMISSION_DENIED&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_PERMISSION_REVOKED")] PermissionRevoked = 4,
+    /// <summary>
+    /// The caller&amp;apos;s credential expired. The stream then ends with &lt;code>UNAUTHENTICATED&lt;/code>;
+    /// reconnect with a fresh credential and the &lt;code>resume_token&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("LOG_STREAM_END_REASON_CREDENTIALS_EXPIRED")] CredentialsExpired = 5,
+  }
+
+  /// <summary>
+  /// File format of an &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">ExportCallLogs&lt;/a> export. Every
+  /// format is UTF-8 with &lt;code>\n&lt;/code> line endings and one entry per record; a multi-line entry stays one
+  /// record.
+  /// </summary>
+  public enum LogExportFormat {
+    /// <summary>
+    /// Unspecified: identical to &lt;code>LOG_EXPORT_FORMAT_TEXT&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("LOG_EXPORT_FORMAT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Plain text in the manner of &lt;code>docker logs --timestamps&lt;/code>: one line per entry,
+    /// &lt;code>&amp;lt;RFC 3339 UTC timestamp&amp;gt; &amp;lt;message&amp;gt;&lt;/code>; continuation lines of a multi-line entry
+    /// are indented by one tab. With &lt;code>include_metadata&lt;/code> the timestamp is followed by the
+    /// severity, the container name and the call resource name (&lt;code>-&lt;/code> when none), separated by
+    /// single spaces.
+    /// </summary>
+    [pbr::OriginalName("LOG_EXPORT_FORMAT_TEXT")] Text = 1,
+    /// <summary>
+    /// Newline-delimited JSON: one JSON object per line, the proto3 JSON form of a
+    /// &lt;a href="index.html#ondewo.vtsi.CallLogEntry">CallLogEntry&lt;/a> (lowerCamelCase keys). Without
+    /// &lt;code>include_metadata&lt;/code> only &lt;code>seq&lt;/code>, &lt;code>logStream&lt;/code>, &lt;code>timestamp&lt;/code>,
+    /// &lt;code>level&lt;/code> and &lt;code>message&lt;/code> are written; with it every field.
+    /// </summary>
+    [pbr::OriginalName("LOG_EXPORT_FORMAT_NDJSON")] Ndjson = 2,
+    /// <summary>
+    /// Comma-separated values (RFC 4180, every field quoted, embedded quotes doubled, embedded line breaks
+    /// kept inside the quotes), with a header row. Columns without &lt;code>include_metadata&lt;/code>:
+    /// &lt;code>timestamp,level,message&lt;/code>; with it: &lt;code>seq,timestamp,timestamp_is_exact,level,
+    /// log_source,channel,container_name,container_id,emitter,thread_name,log_stream,call,
+    /// nlu_session_name,physical_line_count,message&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("LOG_EXPORT_FORMAT_CSV")] Csv = 3,
   }
 
   #endregion
@@ -544,7 +651,10 @@ namespace Ondewo.Vtsi {
     /// Resource name of the call this entry was attributed to. Empty when the entry falls outside any
     /// call, which is normal and useful: a persistent listener&amp;apos;s container start-up and its idle
     /// time between calls belong to no call.
-    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// The format is the &lt;code>Call.name&lt;/code> of the call, for a listener&amp;apos;s call
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// and for a caller&amp;apos;s call
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;/calls/&amp;lt;call_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1393,6 +1503,9 @@ namespace Ondewo.Vtsi {
       threadNames_ = other.threadNames_.Clone();
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      sipPortNumbers_ = other.sipPortNumbers_.Clone();
+      csiPortNumbers_ = other.csiPortNumbers_.Clone();
+      asteriskPortNumbers_ = other.asteriskPortNumbers_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1550,8 +1663,11 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> sipPorts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// SIP ports of the per-call container.
+    /// Deprecated: use &lt;code>sip_port_numbers&lt;/code>. SIP ports of the per-call container, as decimal
+    /// strings. A value that is not a decimal integer is ignored (logged by the server); when no value
+    /// parses the filter matches nothing. Combined with &lt;code>sip_port_numbers&lt;/code> by OR.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> SipPorts {
@@ -1564,8 +1680,10 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(98);
     private readonly pbc::RepeatedField<string> csiPorts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// ONDEWO CSI ports of the per-call container.
+    /// Deprecated: use &lt;code>csi_port_numbers&lt;/code>. ONDEWO CSI ports of the per-call container, as
+    /// decimal strings, parsed like &lt;code>sip_ports&lt;/code>.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CsiPorts {
@@ -1578,8 +1696,10 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(106);
     private readonly pbc::RepeatedField<string> asteriskPorts_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Asterisk ports of the project.
+    /// Deprecated: use &lt;code>asterisk_port_numbers&lt;/code>. Asterisk ports of the project, as decimal
+    /// strings, parsed like &lt;code>sip_ports&lt;/code>.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AsteriskPorts {
@@ -1869,7 +1989,7 @@ namespace Ondewo.Vtsi {
     public const int StartTimeFieldNumber = 30;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Only return entries at or after this instant.
+    /// Only return entries at or after this instant. A zero timestamp counts as unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1884,7 +2004,9 @@ namespace Ondewo.Vtsi {
     public const int EndTimeFieldNumber = 31;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Only return entries at or before this instant.
+    /// Only return entries at or before this instant. A zero timestamp counts as unset. A
+    /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code> is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// (equal instants select the entries of exactly that instant).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1893,6 +2015,52 @@ namespace Ondewo.Vtsi {
       set {
         endTime_ = value;
       }
+    }
+
+    /// <summary>Field number for the "sip_port_numbers" field.</summary>
+    public const int SipPortNumbersFieldNumber = 32;
+    private static readonly pb::FieldCodec<int> _repeated_sipPortNumbers_codec
+        = pb::FieldCodec.ForInt32(258);
+    private readonly pbc::RepeatedField<int> sipPortNumbers_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// SIP ports of the per-call container (1..65535). Identity filter; replaces the deprecated string
+    /// &lt;code>sip_ports&lt;/code>, with which it is combined by OR. A value outside 1..65535 is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> SipPortNumbers {
+      get { return sipPortNumbers_; }
+    }
+
+    /// <summary>Field number for the "csi_port_numbers" field.</summary>
+    public const int CsiPortNumbersFieldNumber = 33;
+    private static readonly pb::FieldCodec<int> _repeated_csiPortNumbers_codec
+        = pb::FieldCodec.ForInt32(266);
+    private readonly pbc::RepeatedField<int> csiPortNumbers_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// ONDEWO CSI ports of the per-call container (1..65535). Identity filter, like
+    /// &lt;code>sip_port_numbers&lt;/code>; combined with the deprecated &lt;code>csi_ports&lt;/code> by OR.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> CsiPortNumbers {
+      get { return csiPortNumbers_; }
+    }
+
+    /// <summary>Field number for the "asterisk_port_numbers" field.</summary>
+    public const int AsteriskPortNumbersFieldNumber = 34;
+    private static readonly pb::FieldCodec<int> _repeated_asteriskPortNumbers_codec
+        = pb::FieldCodec.ForInt32(274);
+    private readonly pbc::RepeatedField<int> asteriskPortNumbers_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// Asterisk ports of the project (1..65535). Identity filter, like &lt;code>sip_port_numbers&lt;/code>;
+    /// combined with the deprecated &lt;code>asterisk_ports&lt;/code> by OR.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> AsteriskPortNumbers {
+      get { return asteriskPortNumbers_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1941,6 +2109,9 @@ namespace Ondewo.Vtsi {
       if(!threadNames_.Equals(other.threadNames_)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if(!sipPortNumbers_.Equals(other.sipPortNumbers_)) return false;
+      if(!csiPortNumbers_.Equals(other.csiPortNumbers_)) return false;
+      if(!asteriskPortNumbers_.Equals(other.asteriskPortNumbers_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1979,6 +2150,9 @@ namespace Ondewo.Vtsi {
       hash ^= threadNames_.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= sipPortNumbers_.GetHashCode();
+      hash ^= csiPortNumbers_.GetHashCode();
+      hash ^= asteriskPortNumbers_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2046,6 +2220,9 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(250, 1);
         output.WriteMessage(EndTime);
       }
+      sipPortNumbers_.WriteTo(output, _repeated_sipPortNumbers_codec);
+      csiPortNumbers_.WriteTo(output, _repeated_csiPortNumbers_codec);
+      asteriskPortNumbers_.WriteTo(output, _repeated_asteriskPortNumbers_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2105,6 +2282,9 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(250, 1);
         output.WriteMessage(EndTime);
       }
+      sipPortNumbers_.WriteTo(ref output, _repeated_sipPortNumbers_codec);
+      csiPortNumbers_.WriteTo(ref output, _repeated_csiPortNumbers_codec);
+      asteriskPortNumbers_.WriteTo(ref output, _repeated_asteriskPortNumbers_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2158,6 +2338,9 @@ namespace Ondewo.Vtsi {
       if (endTime_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
+      size += sipPortNumbers_.CalculateSize(_repeated_sipPortNumbers_codec);
+      size += csiPortNumbers_.CalculateSize(_repeated_csiPortNumbers_codec);
+      size += asteriskPortNumbers_.CalculateSize(_repeated_asteriskPortNumbers_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2219,6 +2402,9 @@ namespace Ondewo.Vtsi {
         }
         EndTime.MergeFrom(other.EndTime);
       }
+      sipPortNumbers_.Add(other.sipPortNumbers_);
+      csiPortNumbers_.Add(other.csiPortNumbers_);
+      asteriskPortNumbers_.Add(other.asteriskPortNumbers_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2370,6 +2556,21 @@ namespace Ondewo.Vtsi {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 258:
+          case 256: {
+            sipPortNumbers_.AddEntriesFrom(input, _repeated_sipPortNumbers_codec);
+            break;
+          }
+          case 266:
+          case 264: {
+            csiPortNumbers_.AddEntriesFrom(input, _repeated_csiPortNumbers_codec);
+            break;
+          }
+          case 274:
+          case 272: {
+            asteriskPortNumbers_.AddEntriesFrom(input, _repeated_asteriskPortNumbers_codec);
             break;
           }
         }
@@ -2525,6 +2726,21 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(EndTime);
             break;
           }
+          case 258:
+          case 256: {
+            sipPortNumbers_.AddEntriesFrom(ref input, _repeated_sipPortNumbers_codec);
+            break;
+          }
+          case 266:
+          case 264: {
+            csiPortNumbers_.AddEntriesFrom(ref input, _repeated_csiPortNumbers_codec);
+            break;
+          }
+          case 274:
+          case 272: {
+            asteriskPortNumbers_.AddEntriesFrom(ref input, _repeated_asteriskPortNumbers_codec);
+            break;
+          }
         }
       }
     }
@@ -2593,6 +2809,7 @@ namespace Ondewo.Vtsi {
       maxAvailableSeq_ = other.maxAvailableSeq_;
       lineCount_ = other.lineCount_;
       droppedLineCount_ = other.droppedLineCount_;
+      vtsiProjectName_ = other.vtsiProjectName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2667,7 +2884,7 @@ namespace Ondewo.Vtsi {
     public const int ProjectIdFieldNumber = 5;
     private string projectId_ = "";
     /// <summary>
-    /// Uuid of the VTSI project owning the container.
+    /// Uuid of the VTSI project owning the container. See also &lt;code>vtsi_project_name&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2682,7 +2899,11 @@ namespace Ondewo.Vtsi {
     public const int VoipCallNameFieldNumber = 6;
     private string voipCallName_ = "";
     /// <summary>
-    /// Resource name of the caller or listener the container serves.
+    /// Resource name of the caller, listener or scheduled caller the container serves:
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;&lt;/code>&lt;/pre>,
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;&lt;/code>&lt;/pre> or
+    /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/scheduled_callers/&amp;lt;scheduled_caller_uuid&amp;gt;&lt;/code>&lt;/pre>.
+    /// Empty for a container that serves none (e.g. the project&amp;apos;s Asterisk).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2923,6 +3144,23 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 22;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// Resource name of the VTSI project owning the container, the resource-name form of
+    /// &lt;code>project_id&lt;/code>.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2959,6 +3197,7 @@ namespace Ondewo.Vtsi {
       if (MaxAvailableSeq != other.MaxAvailableSeq) return false;
       if (LineCount != other.LineCount) return false;
       if (DroppedLineCount != other.DroppedLineCount) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2987,6 +3226,7 @@ namespace Ondewo.Vtsi {
       if (MaxAvailableSeq != 0L) hash ^= MaxAvailableSeq.GetHashCode();
       if (LineCount != 0L) hash ^= LineCount.GetHashCode();
       if (DroppedLineCount != 0L) hash ^= DroppedLineCount.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3089,6 +3329,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(168, 1);
         output.WriteInt64(DroppedLineCount);
       }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VtsiProjectName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3183,6 +3427,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(168, 1);
         output.WriteInt64(DroppedLineCount);
       }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(178, 1);
+        output.WriteString(VtsiProjectName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3255,6 +3503,9 @@ namespace Ondewo.Vtsi {
       }
       if (DroppedLineCount != 0L) {
         size += 2 + pb::CodedOutputStream.ComputeInt64Size(DroppedLineCount);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3336,6 +3587,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.DroppedLineCount != 0L) {
         DroppedLineCount = other.DroppedLineCount;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3444,6 +3698,10 @@ namespace Ondewo.Vtsi {
           }
           case 168: {
             DroppedLineCount = input.ReadInt64();
+            break;
+          }
+          case 178: {
+            VtsiProjectName = input.ReadString();
             break;
           }
         }
@@ -3555,6 +3813,10 @@ namespace Ondewo.Vtsi {
             DroppedLineCount = input.ReadInt64();
             break;
           }
+          case 178: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3657,7 +3919,9 @@ namespace Ondewo.Vtsi {
     private int tailLines_;
     /// <summary>
     /// Replay at most this many of the most recent stored entries before switching to live follow.
-    /// &lt;code>0&lt;/code> (the default) starts the follow with no historical replay. Applied to the
+    /// &lt;code>0&lt;/code> (the default) starts the follow with no historical replay; a negative value is
+    /// treated as &lt;code>0&lt;/code>; values above the server hard cap
+    /// (&lt;code>ONDEWO_VTSI_LOG_HARD_MAX_LINES&lt;/code>, default 50000) are clamped to it. Applied to the
     /// FILTERED result, so &lt;code>tail_lines = 100&lt;/code> with a severity floor returns up to 100
     /// matching entries rather than the matches within the last 100 entries.
     /// </summary>
@@ -4040,6 +4304,7 @@ namespace Ondewo.Vtsi {
       droppedLineCount_ = other.droppedLineCount_;
       resumeToken_ = other.resumeToken_;
       endReason_ = other.endReason_;
+      endReasonCode_ = other.endReasonCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4055,7 +4320,9 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.CallLogEntry.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CallLogEntry> logEntries_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CallLogEntry>();
     /// <summary>
-    /// The entries in this batch, oldest first. May be empty on a keep-alive message.
+    /// The entries in this batch, oldest first. May be empty, e.g. on the final message that carries
+    /// &lt;code>end_reason&lt;/code>. (No keep-alive messages are sent; see
+    /// &lt;a href="index.html#ondewo.vtsi.Logs.StreamCallLogs">Logs.StreamCallLogs&lt;/a>.)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4132,7 +4399,8 @@ namespace Ondewo.Vtsi {
     private string endReason_ = "";
     /// <summary>
     /// Set on the final message when the stream was ended by the server rather than by the client,
-    /// for example because the maximum stream duration was reached. Empty otherwise.
+    /// for example because the maximum stream duration was reached. Empty otherwise. Human-readable
+    /// text, not a contract: match on &lt;code>end_reason_code&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4140,6 +4408,22 @@ namespace Ondewo.Vtsi {
       get { return endReason_; }
       set {
         endReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "end_reason_code" field.</summary>
+    public const int EndReasonCodeFieldNumber = 7;
+    private global::Ondewo.Vtsi.LogStreamEndReason endReasonCode_ = global::Ondewo.Vtsi.LogStreamEndReason.Unspecified;
+    /// <summary>
+    /// Set on the final message when the stream was ended by the server, together with
+    /// &lt;code>end_reason&lt;/code>; &lt;code>LOG_STREAM_END_REASON_UNSPECIFIED&lt;/code> on every other message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.LogStreamEndReason EndReasonCode {
+      get { return endReasonCode_; }
+      set {
+        endReasonCode_ = value;
       }
     }
 
@@ -4164,6 +4448,7 @@ namespace Ondewo.Vtsi {
       if (DroppedLineCount != other.DroppedLineCount) return false;
       if (ResumeToken != other.ResumeToken) return false;
       if (EndReason != other.EndReason) return false;
+      if (EndReasonCode != other.EndReasonCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4177,6 +4462,7 @@ namespace Ondewo.Vtsi {
       if (DroppedLineCount != 0L) hash ^= DroppedLineCount.GetHashCode();
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (EndReason.Length != 0) hash ^= EndReason.GetHashCode();
+      if (EndReasonCode != global::Ondewo.Vtsi.LogStreamEndReason.Unspecified) hash ^= EndReasonCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4216,6 +4502,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteString(EndReason);
       }
+      if (EndReasonCode != global::Ondewo.Vtsi.LogStreamEndReason.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) EndReasonCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4247,6 +4537,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteString(EndReason);
       }
+      if (EndReasonCode != global::Ondewo.Vtsi.LogStreamEndReason.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) EndReasonCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4272,6 +4566,9 @@ namespace Ondewo.Vtsi {
       }
       if (EndReason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EndReason);
+      }
+      if (EndReasonCode != global::Ondewo.Vtsi.LogStreamEndReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndReasonCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4300,6 +4597,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.EndReason.Length != 0) {
         EndReason = other.EndReason;
+      }
+      if (other.EndReasonCode != global::Ondewo.Vtsi.LogStreamEndReason.Unspecified) {
+        EndReasonCode = other.EndReasonCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4344,6 +4644,10 @@ namespace Ondewo.Vtsi {
             EndReason = input.ReadString();
             break;
           }
+          case 56: {
+            EndReasonCode = (global::Ondewo.Vtsi.LogStreamEndReason) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -4385,6 +4689,10 @@ namespace Ondewo.Vtsi {
           }
           case 50: {
             EndReason = input.ReadString();
+            break;
+          }
+          case 56: {
+            EndReasonCode = (global::Ondewo.Vtsi.LogStreamEndReason) input.ReadEnum();
             break;
           }
         }
@@ -4442,6 +4750,8 @@ namespace Ondewo.Vtsi {
       afterSeq_ = other.afterSeq_;
       resumeToken_ = other.resumeToken_;
       oldestFirst_ = other.oldestFirst_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      includeCounts_ = other.includeCounts_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4488,8 +4798,9 @@ namespace Ondewo.Vtsi {
 
     private int maxLines_;
     /// <summary>
-    /// Return at most this many entries. &lt;code>0&lt;/code> (the default) applies the server default;
-    /// values above the server hard cap are clamped to it.
+    /// Return at most this many entries. &lt;code>0&lt;/code> (the default) and negative values apply the
+    /// server default (&lt;code>ONDEWO_VTSI_LOG_DEFAULT_MAX_LINES&lt;/code>, default 5000); values above the
+    /// server hard cap (&lt;code>ONDEWO_VTSI_LOG_HARD_MAX_LINES&lt;/code>, default 50000) are clamped to it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4637,6 +4948,48 @@ namespace Ondewo.Vtsi {
       _hasBits0 &= ~8;
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 8;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned &lt;code>CallLogEntry&lt;/code>,
+    /// relative to the &lt;code>CallLogEntry&lt;/code> message (no &lt;code>log_entries.&lt;/code> prefix), e.g.
+    /// &lt;code>timestamp&lt;/code>, &lt;code>level&lt;/code>, &lt;code>message&lt;/code>. Nested paths through singular
+    /// message fields are allowed; a path below a repeated or map field is not. &lt;code>log_stream&lt;/code> and
+    /// &lt;code>seq&lt;/code>, which together identify an entry, are always populated. Unset or empty returns
+    /// every field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Applied after
+    /// the server&amp;apos;s secret redaction of the log text, so it can only narrow the response and never
+    /// populates a field that was left empty. It shapes only the entries: the window and cursor fields of
+    /// the response (&lt;code>truncated&lt;/code>, the &lt;code>seq&lt;/code> bounds, &lt;code>next_resume_token&lt;/code>)
+    /// are computed exactly as without a mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_counts" field.</summary>
+    public const int IncludeCountsFieldNumber = 9;
+    private bool includeCounts_;
+    /// <summary>
+    /// Optional. Also count the matching entries: fills &lt;code>ListCallLogsResponse.total_matching_count&lt;/code>
+    /// and &lt;code>count_by_level&lt;/code> over the WHOLE filtered history (not only the returned window, and
+    /// ignoring the cursors). Counting reads every matching entry and can be slow on a large project, so it
+    /// is off by default; set it on the first page only.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeCounts {
+      get { return includeCounts_; }
+      set {
+        includeCounts_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4659,6 +5012,8 @@ namespace Ondewo.Vtsi {
       if (AfterSeq != other.AfterSeq) return false;
       if (ResumeToken != other.ResumeToken) return false;
       if (OldestFirst != other.OldestFirst) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (IncludeCounts != other.IncludeCounts) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4673,6 +5028,8 @@ namespace Ondewo.Vtsi {
       if (HasAfterSeq) hash ^= AfterSeq.GetHashCode();
       if (HasResumeToken) hash ^= ResumeToken.GetHashCode();
       if (HasOldestFirst) hash ^= OldestFirst.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (IncludeCounts != false) hash ^= IncludeCounts.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4719,6 +5076,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(56);
         output.WriteBool(OldestFirst);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FieldMask);
+      }
+      if (IncludeCounts != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IncludeCounts);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4757,6 +5122,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(56);
         output.WriteBool(OldestFirst);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(FieldMask);
+      }
+      if (IncludeCounts != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(IncludeCounts);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4786,6 +5159,12 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeToken);
       }
       if (HasOldestFirst) {
+        size += 1 + 1;
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (IncludeCounts != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -4823,6 +5202,15 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasOldestFirst) {
         OldestFirst = other.OldestFirst;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.IncludeCounts != false) {
+        IncludeCounts = other.IncludeCounts;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4872,6 +5260,17 @@ namespace Ondewo.Vtsi {
           }
           case 56: {
             OldestFirst = input.ReadBool();
+            break;
+          }
+          case 66: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 72: {
+            IncludeCounts = input.ReadBool();
             break;
           }
         }
@@ -4924,6 +5323,17 @@ namespace Ondewo.Vtsi {
             OldestFirst = input.ReadBool();
             break;
           }
+          case 66: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 72: {
+            IncludeCounts = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -4943,6 +5353,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<ListCallLogsResponse> _parser = new pb::MessageParser<ListCallLogsResponse>(() => new ListCallLogsResponse());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListCallLogsResponse> Parser { get { return _parser; } }
@@ -4970,6 +5381,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListCallLogsResponse(ListCallLogsResponse other) : this() {
+      _hasBits0 = other._hasBits0;
       logEntries_ = other.logEntries_.Clone();
       truncated_ = other.truncated_;
       minAvailableSeq_ = other.minAvailableSeq_;
@@ -4978,6 +5390,8 @@ namespace Ondewo.Vtsi {
       hasMoreNewer_ = other.hasMoreNewer_;
       nextResumeToken_ = other.nextResumeToken_;
       scopeLimitedFilters_ = other.scopeLimitedFilters_.Clone();
+      totalMatchingCount_ = other.totalMatchingCount_;
+      countByLevel_ = other.countByLevel_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5109,6 +5523,57 @@ namespace Ondewo.Vtsi {
       get { return scopeLimitedFilters_; }
     }
 
+    /// <summary>Field number for the "total_matching_count" field.</summary>
+    public const int TotalMatchingCountFieldNumber = 9;
+    private readonly static long TotalMatchingCountDefaultValue = 0L;
+
+    private long totalMatchingCount_;
+    /// <summary>
+    /// The number of entries matching the filter over the whole stored history, regardless of the window
+    /// and the cursors. Set only when &lt;code>include_counts&lt;/code> was requested (unset otherwise, and by a
+    /// 9.0.0 server). APPROXIMATE when &lt;code>scope_limited_filters&lt;/code> is non-empty: the filters listed
+    /// there are not applied to the count, so it is then an UPPER BOUND.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TotalMatchingCount {
+      get { if ((_hasBits0 & 1) != 0) { return totalMatchingCount_; } else { return TotalMatchingCountDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        totalMatchingCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "total_matching_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTotalMatchingCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "total_matching_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTotalMatchingCount() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "count_by_level" field.</summary>
+    public const int CountByLevelFieldNumber = 10;
+    private static readonly pbc::MapField<string, long>.Codec _map_countByLevel_codec
+        = new pbc::MapField<string, long>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForInt64(16, 0L), 82);
+    private readonly pbc::MapField<string, long> countByLevel_ = new pbc::MapField<string, long>();
+    /// <summary>
+    /// The matching entries counted per severity, keyed by the &lt;code>ondewo.nlu.LogSeverity&lt;/code> value
+    /// NAME (e.g. &lt;code>LOG_SEVERITY_ERROR&lt;/code>; entries without a recognised severity under
+    /// &lt;code>LOG_SEVERITY_UNSPECIFIED&lt;/code>). Severities with no entry are omitted; the values sum to
+    /// &lt;code>total_matching_count&lt;/code>. Filled only with &lt;code>include_counts&lt;/code>; approximate (upper
+    /// bounds) under the same condition as &lt;code>total_matching_count&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, long> CountByLevel {
+      get { return countByLevel_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5132,6 +5597,8 @@ namespace Ondewo.Vtsi {
       if (HasMoreNewer != other.HasMoreNewer) return false;
       if (NextResumeToken != other.NextResumeToken) return false;
       if(!scopeLimitedFilters_.Equals(other.scopeLimitedFilters_)) return false;
+      if (TotalMatchingCount != other.TotalMatchingCount) return false;
+      if (!CountByLevel.Equals(other.CountByLevel)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5147,6 +5614,8 @@ namespace Ondewo.Vtsi {
       if (HasMoreNewer != false) hash ^= HasMoreNewer.GetHashCode();
       if (NextResumeToken.Length != 0) hash ^= NextResumeToken.GetHashCode();
       hash ^= scopeLimitedFilters_.GetHashCode();
+      if (HasTotalMatchingCount) hash ^= TotalMatchingCount.GetHashCode();
+      hash ^= CountByLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5191,6 +5660,11 @@ namespace Ondewo.Vtsi {
         output.WriteString(NextResumeToken);
       }
       scopeLimitedFilters_.WriteTo(output, _repeated_scopeLimitedFilters_codec);
+      if (HasTotalMatchingCount) {
+        output.WriteRawTag(72);
+        output.WriteInt64(TotalMatchingCount);
+      }
+      countByLevel_.WriteTo(output, _map_countByLevel_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5227,6 +5701,11 @@ namespace Ondewo.Vtsi {
         output.WriteString(NextResumeToken);
       }
       scopeLimitedFilters_.WriteTo(ref output, _repeated_scopeLimitedFilters_codec);
+      if (HasTotalMatchingCount) {
+        output.WriteRawTag(72);
+        output.WriteInt64(TotalMatchingCount);
+      }
+      countByLevel_.WriteTo(ref output, _map_countByLevel_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5257,6 +5736,10 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextResumeToken);
       }
       size += scopeLimitedFilters_.CalculateSize(_repeated_scopeLimitedFilters_codec);
+      if (HasTotalMatchingCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalMatchingCount);
+      }
+      size += countByLevel_.CalculateSize(_map_countByLevel_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5289,6 +5772,10 @@ namespace Ondewo.Vtsi {
         NextResumeToken = other.NextResumeToken;
       }
       scopeLimitedFilters_.Add(other.scopeLimitedFilters_);
+      if (other.HasTotalMatchingCount) {
+        TotalMatchingCount = other.TotalMatchingCount;
+      }
+      countByLevel_.MergeFrom(other.countByLevel_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5339,6 +5826,14 @@ namespace Ondewo.Vtsi {
           case 66:
           case 64: {
             scopeLimitedFilters_.AddEntriesFrom(input, _repeated_scopeLimitedFilters_codec);
+            break;
+          }
+          case 72: {
+            TotalMatchingCount = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            countByLevel_.AddEntriesFrom(input, _map_countByLevel_codec);
             break;
           }
         }
@@ -5393,6 +5888,14 @@ namespace Ondewo.Vtsi {
             scopeLimitedFilters_.AddEntriesFrom(ref input, _repeated_scopeLimitedFilters_codec);
             break;
           }
+          case 72: {
+            TotalMatchingCount = input.ReadInt64();
+            break;
+          }
+          case 82: {
+            countByLevel_.AddEntriesFrom(ref input, _map_countByLevel_codec);
+            break;
+          }
         }
       }
     }
@@ -5441,6 +5944,7 @@ namespace Ondewo.Vtsi {
     public GetCallLogStreamRequest(GetCallLogStreamRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5471,6 +5975,8 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// The name of the log stream to retrieve of the form
     /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/logStreams/&amp;lt;log_stream_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Its project must be the one of &lt;code>vtsi_project_name&lt;/code>: a log stream of another project is
+    /// refused with &lt;code>INVALID_ARGUMENT&lt;/code>, also when it exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5478,6 +5984,25 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>CallLogStream&lt;/code> field paths to populate, e.g.
+    /// &lt;code>capture_state&lt;/code>, &lt;code>line_count&lt;/code>. Same convention as
+    /// &lt;a href="index.html#ondewo.vtsi.ListCallLogStreamsRequest">ListCallLogStreamsRequest.field_mask&lt;/a>:
+    /// &lt;code>name&lt;/code> is always populated, unset or empty returns every field, an unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -5498,6 +6023,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5507,6 +6033,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5533,6 +6060,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5551,6 +6082,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5566,6 +6101,9 @@ namespace Ondewo.Vtsi {
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5584,6 +6122,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5612,6 +6156,13 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -5637,6 +6188,13 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5688,6 +6246,9 @@ namespace Ondewo.Vtsi {
       vtsiProjectName_ = other.vtsiProjectName_;
       filter_ = other.filter_ != null ? other.filter_.Clone() : null;
       pageToken_ = other.pageToken_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      pageSize_ = other.pageSize_;
+      captureStates_ = other.captureStates_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5718,7 +6279,9 @@ namespace Ondewo.Vtsi {
     private global::Ondewo.Vtsi.CallLogFilter filter_;
     /// <summary>
     /// Optional. A filter to narrow the response down to the log streams of interest. Only the
-    /// identity fields of the filter apply here; content fields are ignored.
+    /// identity fields of the filter apply here; content fields and the time window are ignored. A filter
+    /// on calls, NLU sessions or other per-call identities lists the streams holding at least one entry of
+    /// them, and an empty list when none does.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5735,8 +6298,10 @@ namespace Ondewo.Vtsi {
 
     private string pageToken_;
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous list request.
-    /// Example: "current_index-1--page_size-20"
+    /// Optional. The &lt;code>next_page_token&lt;/code> of a previous response. OPAQUE: never construct or parse
+    /// it (its format is internal and may change). Keep every other request field unchanged while paging:
+    /// a token sent with another filter is not guaranteed to be rejected and then returns that position of
+    /// the other listing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5759,6 +6324,61 @@ namespace Ondewo.Vtsi {
       pageToken_ = null;
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned &lt;code>CallLogStream&lt;/code>,
+    /// relative to the &lt;code>CallLogStream&lt;/code> message (no &lt;code>log_streams.&lt;/code> prefix), e.g.
+    /// &lt;code>container_name&lt;/code>, &lt;code>capture_state&lt;/code>. Nested paths through singular message fields are
+    /// allowed; a path below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or
+    /// empty returns every field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it.
+    /// Applied after the server&amp;apos;s redaction, so it can only narrow the response and never populates a
+    /// field that was left empty. Not part of the paging contract: a &lt;code>page_token&lt;/code> stays valid
+    /// with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 5;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Maximum number of log streams per page. &lt;code>0&lt;/code> means the server default of 25;
+    /// values above 1000 are clamped to 1000; negative values are rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "capture_states" field.</summary>
+    public const int CaptureStatesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.LogCaptureState> _repeated_captureStates_codec
+        = pb::FieldCodec.ForEnum(50, x => (int) x, x => (global::Ondewo.Vtsi.LogCaptureState) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.LogCaptureState> captureStates_ = new pbc::RepeatedField<global::Ondewo.Vtsi.LogCaptureState>();
+    /// <summary>
+    /// Optional. Only log streams in one of these capture states, e.g.
+    /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code> for the containers being captured now. Empty matches every
+    /// state. &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.LogCaptureState> CaptureStates {
+      get { return captureStates_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5777,6 +6397,9 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
       if (PageToken != other.PageToken) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (PageSize != other.PageSize) return false;
+      if(!captureStates_.Equals(other.captureStates_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5787,6 +6410,9 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (filter_ != null) hash ^= Filter.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      hash ^= captureStates_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5817,6 +6443,15 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageSize);
+      }
+      captureStates_.WriteTo(output, _repeated_captureStates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5839,6 +6474,15 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PageSize);
+      }
+      captureStates_.WriteTo(ref output, _repeated_captureStates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5858,6 +6502,13 @@ namespace Ondewo.Vtsi {
       if (HasPageToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
       }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      size += captureStates_.CalculateSize(_repeated_captureStates_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5882,6 +6533,16 @@ namespace Ondewo.Vtsi {
       if (other.HasPageToken) {
         PageToken = other.PageToken;
       }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      captureStates_.Add(other.captureStates_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5916,6 +6577,22 @@ namespace Ondewo.Vtsi {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 40: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            captureStates_.AddEntriesFrom(input, _repeated_captureStates_codec);
+            break;
+          }
         }
       }
     #endif
@@ -5948,6 +6625,22 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 40: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 50:
+          case 48: {
+            captureStates_.AddEntriesFrom(ref input, _repeated_captureStates_codec);
             break;
           }
         }
@@ -6013,7 +6706,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.CallLogStream.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CallLogStream> logStreams_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CallLogStream>();
     /// <summary>
-    /// The list of log streams returned in the response.
+    /// The log streams of this page, newest &lt;code>capture_started_at&lt;/code> first.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6025,9 +6718,8 @@ namespace Ondewo.Vtsi {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results.
-    /// This field is a string that holds a token for fetching the next page of results.
-    /// If there are no more results in the list, this field will be empty.
+    /// Token to retrieve the next page of results. Opaque (see
+    /// &lt;code>ListCallLogStreamsRequest.page_token&lt;/code>). Empty when there are no more results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6234,6 +6926,7 @@ namespace Ondewo.Vtsi {
     public DeleteCallLogsRequest(DeleteCallLogsRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6266,7 +6959,7 @@ namespace Ondewo.Vtsi {
     /// The entries to delete. Only the identity fields and the time window apply; content filters are
     /// rejected, because deleting by message content is not an auditable operation. At least one
     /// field must be set: an empty filter is rejected rather than treated as &amp;quot;delete
-    /// everything&amp;quot;.
+    /// everything&amp;quot;. The time window alone counts as a set field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6274,6 +6967,23 @@ namespace Ondewo.Vtsi {
       get { return filter_; }
       set {
         filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 3;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Validate only: run every check of a real deletion and report in the response how many
+    /// entries and log streams WOULD be deleted now, but delete nothing. The counts are a snapshot; a later
+    /// deletion may count differently (live capture, retention). Default &lt;code>false&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -6294,6 +7004,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6303,6 +7014,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6329,6 +7041,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Filter);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6347,6 +7063,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Filter);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6362,6 +7082,9 @@ namespace Ondewo.Vtsi {
       }
       if (filter_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6383,6 +7106,9 @@ namespace Ondewo.Vtsi {
           Filter = new global::Ondewo.Vtsi.CallLogFilter();
         }
         Filter.MergeFrom(other.Filter);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6414,6 +7140,10 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(Filter);
             break;
           }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -6442,6 +7172,10 @@ namespace Ondewo.Vtsi {
               Filter = new global::Ondewo.Vtsi.CallLogFilter();
             }
             input.ReadMessage(Filter);
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -6505,7 +7239,7 @@ namespace Ondewo.Vtsi {
     public const int DeletedLogEntryCountFieldNumber = 1;
     private long deletedLogEntryCount_;
     /// <summary>
-    /// How many log entries were deleted.
+    /// How many log entries were deleted (with &lt;code>validate_only&lt;/code>: would be deleted).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6520,7 +7254,8 @@ namespace Ondewo.Vtsi {
     public const int DeletedLogStreamCountFieldNumber = 2;
     private long deletedLogStreamCount_;
     /// <summary>
-    /// How many log streams were deleted because no entries remained.
+    /// How many log streams were deleted because no entries remained (with &lt;code>validate_only&lt;/code>:
+    /// would be deleted).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6687,6 +7422,677 @@ namespace Ondewo.Vtsi {
           }
           case 16: {
             DeletedLogStreamCount = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">Logs.ExportCallLogs&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExportCallLogsRequest : pb::IMessage<ExportCallLogsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportCallLogsRequest> _parser = new pb::MessageParser<ExportCallLogsRequest>(() => new ExportCallLogsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExportCallLogsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.LogsReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsRequest(ExportCallLogsRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      format_ = other.format_;
+      includeMetadata_ = other.includeMetadata_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsRequest Clone() {
+      return new ExportCallLogsRequest(this);
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 1;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project whose logs to export.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private global::Ondewo.Vtsi.CallLogFilter filter_;
+    /// <summary>
+    /// The entries to export. Every field of
+    /// &lt;a href="index.html#ondewo.vtsi.CallLogFilter">CallLogFilter&lt;/a> applies, identity and content
+    /// filters alike, with the semantics of &lt;code>ListCallLogs&lt;/code>. REQUIRED, with both
+    /// &lt;code>start_time&lt;/code> and &lt;code>end_time&lt;/code> set and &lt;code>start_time&lt;/code> before
+    /// &lt;code>end_time&lt;/code>; otherwise &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallLogFilter Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "format" field.</summary>
+    public const int FormatFieldNumber = 3;
+    private global::Ondewo.Vtsi.LogExportFormat format_ = global::Ondewo.Vtsi.LogExportFormat.Unspecified;
+    /// <summary>
+    /// The file format. Unset means &lt;code>LOG_EXPORT_FORMAT_TEXT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.LogExportFormat Format {
+      get { return format_; }
+      set {
+        format_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "include_metadata" field.</summary>
+    public const int IncludeMetadataFieldNumber = 4;
+    private bool includeMetadata_;
+    /// <summary>
+    /// Include every field of each entry rather than only the timestamp, the severity and the message
+    /// (see &lt;a href="index.html#ondewo.vtsi.LogExportFormat">LogExportFormat&lt;/a> for what each format
+    /// adds). Default &lt;code>false&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeMetadata {
+      get { return includeMetadata_; }
+      set {
+        includeMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExportCallLogsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExportCallLogsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(Filter, other.Filter)) return false;
+      if (Format != other.Format) return false;
+      if (IncludeMetadata != other.IncludeMetadata) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (Format != global::Ondewo.Vtsi.LogExportFormat.Unspecified) hash ^= Format.GetHashCode();
+      if (IncludeMetadata != false) hash ^= IncludeMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Filter);
+      }
+      if (Format != global::Ondewo.Vtsi.LogExportFormat.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Format);
+      }
+      if (IncludeMetadata != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VtsiProjectName);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Filter);
+      }
+      if (Format != global::Ondewo.Vtsi.LogExportFormat.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Format);
+      }
+      if (IncludeMetadata != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IncludeMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (filter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (Format != global::Ondewo.Vtsi.LogExportFormat.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Format);
+      }
+      if (IncludeMetadata != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExportCallLogsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          Filter = new global::Ondewo.Vtsi.CallLogFilter();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      if (other.Format != global::Ondewo.Vtsi.LogExportFormat.Unspecified) {
+        Format = other.Format;
+      }
+      if (other.IncludeMetadata != false) {
+        IncludeMetadata = other.IncludeMetadata;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (filter_ == null) {
+              Filter = new global::Ondewo.Vtsi.CallLogFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 24: {
+            Format = (global::Ondewo.Vtsi.LogExportFormat) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            IncludeMetadata = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (filter_ == null) {
+              Filter = new global::Ondewo.Vtsi.CallLogFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+          case 24: {
+            Format = (global::Ondewo.Vtsi.LogExportFormat) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            IncludeMetadata = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// One message of an &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">ExportCallLogs&lt;/a> stream.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExportCallLogsResponse : pb::IMessage<ExportCallLogsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExportCallLogsResponse> _parser = new pb::MessageParser<ExportCallLogsResponse>(() => new ExportCallLogsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExportCallLogsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.LogsReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsResponse(ExportCallLogsResponse other) : this() {
+      chunk_ = other.chunk_;
+      entryCount_ = other.entryCount_;
+      last_ = other.last_;
+      truncated_ = other.truncated_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExportCallLogsResponse Clone() {
+      return new ExportCallLogsResponse(this);
+    }
+
+    /// <summary>Field number for the "chunk" field.</summary>
+    public const int ChunkFieldNumber = 1;
+    private pb::ByteString chunk_ = pb::ByteString.Empty;
+    /// <summary>
+    /// The next bytes of the exported file, at most 1 MiB. Chunk boundaries carry no meaning: an entry,
+    /// a line or a multi-byte UTF-8 character may span two chunks. The last message may carry an empty
+    /// chunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Chunk {
+      get { return chunk_; }
+      set {
+        chunk_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "entry_count" field.</summary>
+    public const int EntryCountFieldNumber = 2;
+    private long entryCount_;
+    /// <summary>
+    /// The number of entries exported so far, including those of this chunk (an entry that spans two
+    /// chunks is counted in the chunk where it ends).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long EntryCount {
+      get { return entryCount_; }
+      set {
+        entryCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last" field.</summary>
+    public const int LastFieldNumber = 3;
+    private bool last_;
+    /// <summary>
+    /// True on the last message of a complete export. A stream that ends without a message carrying
+    /// &lt;code>last = true&lt;/code> was cut off (error status, disconnect) and its file is incomplete.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Last {
+      get { return last_; }
+      set {
+        last_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "truncated" field.</summary>
+    public const int TruncatedFieldNumber = 4;
+    private bool truncated_;
+    /// <summary>
+    /// True on the last message when the export stopped early because it reached
+    /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_ENTRIES&lt;/code> or &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_BYTES&lt;/code>:
+    /// matching entries after the last exported one were left out.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Truncated {
+      get { return truncated_; }
+      set {
+        truncated_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExportCallLogsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExportCallLogsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Chunk != other.Chunk) return false;
+      if (EntryCount != other.EntryCount) return false;
+      if (Last != other.Last) return false;
+      if (Truncated != other.Truncated) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Chunk.Length != 0) hash ^= Chunk.GetHashCode();
+      if (EntryCount != 0L) hash ^= EntryCount.GetHashCode();
+      if (Last != false) hash ^= Last.GetHashCode();
+      if (Truncated != false) hash ^= Truncated.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Chunk.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Chunk);
+      }
+      if (EntryCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EntryCount);
+      }
+      if (Last != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Last);
+      }
+      if (Truncated != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Truncated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Chunk.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Chunk);
+      }
+      if (EntryCount != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(EntryCount);
+      }
+      if (Last != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Last);
+      }
+      if (Truncated != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(Truncated);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Chunk.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Chunk);
+      }
+      if (EntryCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EntryCount);
+      }
+      if (Last != false) {
+        size += 1 + 1;
+      }
+      if (Truncated != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExportCallLogsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Chunk.Length != 0) {
+        Chunk = other.Chunk;
+      }
+      if (other.EntryCount != 0L) {
+        EntryCount = other.EntryCount;
+      }
+      if (other.Last != false) {
+        Last = other.Last;
+      }
+      if (other.Truncated != false) {
+        Truncated = other.Truncated;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Chunk = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            EntryCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Last = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Truncated = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Chunk = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            EntryCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Last = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Truncated = input.ReadBool();
             break;
           }
         }

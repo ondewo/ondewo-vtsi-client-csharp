@@ -27,182 +27,286 @@ namespace Ondewo.Vtsi {
             "ChtvbmRld28vdnRzaS9jYW1wYWlnbnMucHJvdG8SC29uZGV3by52dHNpGh5n",
             "b29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aIGdvb2dsZS9wcm90b2J1",
             "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhRvbmRld28vc2lwL3NpcC5wcm90byLSBAoIQ2FtcGFpZ24SDAoE",
-            "bmFtZRgBIAEoCRITCgtjYW1wYWlnbl9pZBgCIAEoCRIZChF2dHNpX3Byb2pl",
-            "Y3RfbmFtZRgDIAEoCRIUCgxkaXNwbGF5X25hbWUYBCABKAkSGgoSbWF4X3Bh",
-            "cmFsbGVsX2NhbGxzGAUgASgFEhQKDG1heF9hdHRlbXB0cxgGIAEoBRIuCgty",
-            "ZXRyeV9kZWxheRgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIp",
-            "CgVzdGF0ZRgIIAEoDjIaLm9uZGV3by52dHNpLkNhbXBhaWduU3RhdGUSFAoM",
-            "c3RhdGVfcmVhc29uGAkgASgJEjMKCnN0YXRpc3RpY3MYCiABKAsyHy5vbmRl",
-            "d28udnRzaS5DYW1wYWlnblN0YXRpc3RpY3MSEgoKY3JlYXRlZF9ieRgLIAEo",
-            "CRIuCgpjcmVhdGVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBITCgttb2RpZmllZF9ieRgNIAEoCRIvCgttb2RpZmllZF9hdBgOIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKc3RhcnRlZF9hdBgP",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKc3RvcHBlZF9h",
-            "dBgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASMAoMY29tcGxl",
-            "dGVkX2F0GBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKVAgoS",
-            "Q2FtcGFpZ25TdGF0aXN0aWNzEhUKDWNhbXBhaWduX25hbWUYASABKAkSDQoF",
-            "dG90YWwYAiABKAUSEwoLbm90X3N0YXJ0ZWQYAyABKAUSEwoLaW5fcHJvZ3Jl",
-            "c3MYBCABKAUSFQoNcmV0cnlfcGVuZGluZxgFIAEoBRIRCgljb21wbGV0ZWQY",
-            "BiABKAUSDgoGZmFpbGVkGAcgASgFEhEKCWNhbmNlbGxlZBgIIAEoBRIWCg50",
-            "b3RhbF9hdHRlbXB0cxgJIAEoBRIYChBwcm9ncmVzc19wZXJjZW50GAogASgC",
-            "EhkKEXNjaGVkdWxlZF9ub3RfZHVlGAsgASgFEhUKDWNhbGxzX3JldHJpZWQY",
-            "DCABKAUi3wIKE0NhbXBhaWduQ2FsbEF0dGVtcHQSFgoOYXR0ZW1wdF9udW1i",
-            "ZXIYASABKAUSEwoLY2FsbGVyX25hbWUYAiABKAkSEQoJY2FsbF9uYW1lGAMg",
-            "ASgJEi4KCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEiwKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBI4CgdvdXRjb21lGAYgASgOMicub25kZXdvLnZ0c2kuQ2FtcGFp",
-            "Z25DYWxsQXR0ZW1wdE91dGNvbWUSOQoPc2lwX3N0YXR1c190eXBlGAcgASgO",
-            "MiAub25kZXdvLnNpcC5TaXBTdGF0dXMuU3RhdHVzVHlwZRIeChZzaXBfc3Rh",
-            "dHVzX2Rlc2NyaXB0aW9uGAggASgJEhUKDWVycm9yX21lc3NhZ2UYCSABKAki",
-            "wAYKDENhbXBhaWduQ2FsbBIMCgRuYW1lGAEgASgJEhUKDWNhbXBhaWduX25h",
-            "bWUYAiABKAkSEAoIcG9zaXRpb24YAyABKAUSLQoFc3RhdGUYBCABKA4yHi5v",
-            "bmRld28udnRzaS5DYW1wYWlnbkNhbGxTdGF0ZRIUCgxwaG9uZV9udW1iZXIY",
-            "BSABKAkSLwoGc291cmNlGAYgASgOMh8ub25kZXdvLnZ0c2kuQ2FtcGFpZ25D",
-            "YWxsU291cmNlEh0KFXNjaGVkdWxlZF9jYWxsZXJfbmFtZRgHIAEoCRIyCg5z",
-            "Y2hlZHVsZWRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASEAoIYXR0ZW1wdHMYCSABKAUSFAoMbWF4X2F0dGVtcHRzGAogASgFEhMK",
-            "C2NhbGxlcl9uYW1lGAsgASgJEhEKCWNhbGxfbmFtZRgMIAEoCRI5Cg9zaXBf",
-            "c3RhdHVzX3R5cGUYDSABKA4yIC5vbmRld28uc2lwLlNpcFN0YXR1cy5TdGF0",
-            "dXNUeXBlEh4KFnNpcF9zdGF0dXNfZGVzY3JpcHRpb24YDiABKAkSEgoKbGFz",
-            "dF9lcnJvchgPIAEoCRI1ChFuZXh0X2F0dGVtcHRfdGltZRgQIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASNgoSZmlyc3RfYXR0ZW1wdF90aW1l",
-            "GBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI1ChFsYXN0X2F0",
-            "dGVtcHRfdGltZRgSIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
-            "LwoLZmluaXNoX3RpbWUYEyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEi4KCmNyZWF0ZWRfYXQYFCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wEi8KC21vZGlmaWVkX2F0GBUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBI5Cg9hdHRlbXB0X2hpc3RvcnkYFiADKAsyIC5vbmRld28u",
-            "dnRzaS5DYW1wYWlnbkNhbGxBdHRlbXB0IkYKE0NhbXBhaWduRGlzcGxheU5h",
-            "bWUSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSFAoMZGlzcGxheV9uYW1l",
-            "GAIgASgJIugBChJDYW1wYWlnbkFzc2lnbm1lbnQSFwoNY2FtcGFpZ25fbmFt",
-            "ZRgBIAEoCUgAEi0KDG5ld19jYW1wYWlnbhgCIAEoCzIVLm9uZGV3by52dHNp",
-            "LkNhbXBhaWduSAASQQoVY2FtcGFpZ25fZGlzcGxheV9uYW1lGAQgASgLMiAu",
-            "b25kZXdvLnZ0c2kuQ2FtcGFpZ25EaXNwbGF5TmFtZUgAEjIKCnN0YXJ0X21v",
-            "ZGUYAyABKA4yHi5vbmRld28udnRzaS5DYW1wYWlnblN0YXJ0TW9kZUITChFj",
-            "YW1wYWlnbl9zZWxlY3RvciJbChVDcmVhdGVDYW1wYWlnblJlcXVlc3QSGQoR",
-            "dnRzaV9wcm9qZWN0X25hbWUYASABKAkSJwoIY2FtcGFpZ24YAiABKAsyFS5v",
-            "bmRld28udnRzaS5DYW1wYWlnbiJqChJHZXRDYW1wYWlnblJlcXVlc3QSDgoE",
-            "bmFtZRgBIAEoCUgAEjgKDGRpc3BsYXlfbmFtZRgCIAEoCzIgLm9uZGV3by52",
-            "dHNpLkNhbXBhaWduRGlzcGxheU5hbWVIAEIKCghjYW1wYWlnbiJxChVVcGRh",
-            "dGVDYW1wYWlnblJlcXVlc3QSJwoIY2FtcGFpZ24YASABKAsyFS5vbmRld28u",
-            "dnRzaS5DYW1wYWlnbhIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5GaWVsZE1hc2sibQoVRGVsZXRlQ2FtcGFpZ25SZXF1ZXN0Eg4K",
-            "BG5hbWUYASABKAlIABI4CgxkaXNwbGF5X25hbWUYAiABKAsyIC5vbmRld28u",
-            "dnRzaS5DYW1wYWlnbkRpc3BsYXlOYW1lSABCCgoIY2FtcGFpZ24idQoWRGVs",
-            "ZXRlQ2FtcGFpZ25SZXNwb25zZRIMCgRuYW1lGAEgASgJEiMKG2RlbGV0ZWRf",
-            "Y2FtcGFpZ25fY2FsbF9jb3VudBgCIAEoBRIoCiBjYW5jZWxsZWRfc2NoZWR1",
-            "bGVkX2NhbGxlcl9jb3VudBgDIAEoBSJxCg5DYW1wYWlnbkZpbHRlchIqCgZz",
-            "dGF0ZXMYASADKA4yGi5vbmRld28udnRzaS5DYW1wYWlnblN0YXRlEh0KFWRp",
-            "c3BsYXlfbmFtZV9jb250YWlucxgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyAB",
-            "KAkimQEKFExpc3RDYW1wYWlnbnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9u",
-            "YW1lGAEgASgJEisKBmZpbHRlchgCIAEoCzIbLm9uZGV3by52dHNpLkNhbXBh",
-            "aWduRmlsdGVyEhEKCXBhZ2Vfc2l6ZRgDIAEoBRIXCgpwYWdlX3Rva2VuGAQg",
-            "ASgJSACIAQFCDQoLX3BhZ2VfdG9rZW4iWgoVTGlzdENhbXBhaWduc1Jlc3Bv",
-            "bnNlEigKCWNhbXBhaWducxgBIAMoCzIVLm9uZGV3by52dHNpLkNhbXBhaWdu",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ0ChxHZXRDYW1wYWlnblN0YXRp",
-            "c3RpY3NSZXF1ZXN0Eg4KBG5hbWUYASABKAlIABI4CgxkaXNwbGF5X25hbWUY",
-            "AiABKAsyIC5vbmRld28udnRzaS5DYW1wYWlnbkRpc3BsYXlOYW1lSABCCgoI",
-            "Y2FtcGFpZ24inQIKGExpc3RDYW1wYWlnbkNhbGxzUmVxdWVzdBIXCg1jYW1w",
-            "YWlnbl9uYW1lGAEgASgJSAASQQoVY2FtcGFpZ25fZGlzcGxheV9uYW1lGAcg",
-            "ASgLMiAub25kZXdvLnZ0c2kuQ2FtcGFpZ25EaXNwbGF5TmFtZUgAEi4KBnN0",
-            "YXRlcxgCIAMoDjIeLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbFN0YXRlEhQK",
-            "DHBob25lX251bWJlchgDIAEoCRIRCglwYWdlX3NpemUYBCABKAUSFwoKcGFn",
-            "ZV90b2tlbhgFIAEoCUgBiAEBEhgKEGluY2x1ZGVfYXR0ZW1wdHMYBiABKAhC",
-            "CgoIY2FtcGFpZ25CDQoLX3BhZ2VfdG9rZW4iZwoZTGlzdENhbXBhaWduQ2Fs",
-            "bHNSZXNwb25zZRIxCg5jYW1wYWlnbl9jYWxscxgBIAMoCzIZLm9uZGV3by52",
-            "dHNpLkNhbXBhaWduQ2FsbBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkibAoU",
-            "U3RhcnRDYW1wYWlnblJlcXVlc3QSDgoEbmFtZRgBIAEoCUgAEjgKDGRpc3Bs",
-            "YXlfbmFtZRgCIAEoCzIgLm9uZGV3by52dHNpLkNhbXBhaWduRGlzcGxheU5h",
-            "bWVIAEIKCghjYW1wYWlnbiJrChNTdG9wQ2FtcGFpZ25SZXF1ZXN0Eg4KBG5h",
-            "bWUYASABKAlIABI4CgxkaXNwbGF5X25hbWUYAiABKAsyIC5vbmRld28udnRz",
-            "aS5DYW1wYWlnbkRpc3BsYXlOYW1lSABCCgoIY2FtcGFpZ24ibwoXSGFyZFN0",
-            "b3BDYW1wYWlnblJlcXVlc3QSDgoEbmFtZRgBIAEoCUgAEjgKDGRpc3BsYXlf",
-            "bmFtZRgCIAEoCzIgLm9uZGV3by52dHNpLkNhbXBhaWduRGlzcGxheU5hbWVI",
-            "AEIKCghjYW1wYWlnbiJtChVSZXN1bWVDYW1wYWlnblJlcXVlc3QSDgoEbmFt",
-            "ZRgBIAEoCUgAEjgKDGRpc3BsYXlfbmFtZRgCIAEoCzIgLm9uZGV3by52dHNp",
-            "LkNhbXBhaWduRGlzcGxheU5hbWVIAEIKCghjYW1wYWlnbiKHAQobU3RyZWFt",
-            "Q2FtcGFpZ25TdGF0dXNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEg",
-            "ASgJEhYKDmNhbXBhaWduX25hbWVzGAIgAygJEh4KFmNhbXBhaWduX2Rpc3Bs",
-            "YXlfbmFtZXMYBCADKAkSFQoNaW5jbHVkZV9jYWxscxgDIAEoCCLBAQocU3Ry",
-            "ZWFtQ2FtcGFpZ25TdGF0dXNSZXNwb25zZRIoCgljYW1wYWlnbnMYASADKAsy",
-            "FS5vbmRld28udnRzaS5DYW1wYWlnbhIxCg5jYW1wYWlnbl9jYWxscxgCIAMo",
-            "CzIZLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbBIeChZkZWxldGVkX2NhbXBh",
-            "aWduX25hbWVzGAMgAygJEhAKCHNuYXBzaG90GAQgASgIEhIKCmVuZF9yZWFz",
-            "b24YBSABKAkqgQIKDUNhbXBhaWduU3RhdGUSHgoaQ0FNUEFJR05fU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIaChZDQU1QQUlHTl9TVEFURV9DUkVBVEVEEAESGgoW",
-            "Q0FNUEFJR05fU1RBVEVfUlVOTklORxACEhsKF0NBTVBBSUdOX1NUQVRFX1NU",
-            "T1BQSU5HEAMSGgoWQ0FNUEFJR05fU1RBVEVfU1RPUFBFRBAEEiAKHENBTVBB",
-            "SUdOX1NUQVRFX0hBUkRfU1RPUFBJTkcQBRIfChtDQU1QQUlHTl9TVEFURV9I",
-            "QVJEX1NUT1BQRUQQBhIcChhDQU1QQUlHTl9TVEFURV9DT01QTEVURUQQByq0",
-            "AgoRQ2FtcGFpZ25DYWxsU3RhdGUSIwofQ0FNUEFJR05fQ0FMTF9TVEFURV9V",
-            "TlNQRUNJRklFRBAAEiMKH0NBTVBBSUdOX0NBTExfU1RBVEVfTk9UX1NUQVJU",
-            "RUQQARIjCh9DQU1QQUlHTl9DQUxMX1NUQVRFX0RJU1BBVENISU5HEAISIwof",
-            "Q0FNUEFJR05fQ0FMTF9TVEFURV9JTl9QUk9HUkVTUxADEiUKIUNBTVBBSUdO",
-            "X0NBTExfU1RBVEVfUkVUUllfUEVORElORxAEEiEKHUNBTVBBSUdOX0NBTExf",
-            "U1RBVEVfQ09NUExFVEVEEAUSHgoaQ0FNUEFJR05fQ0FMTF9TVEFURV9GQUlM",
-            "RUQQBhIhCh1DQU1QQUlHTl9DQUxMX1NUQVRFX0NBTkNFTExFRBAHKn0KEUNh",
-            "bXBhaWduU3RhcnRNb2RlEiMKH0NBTVBBSUdOX1NUQVJUX01PREVfVU5TUEVD",
-            "SUZJRUQQABIdChlDQU1QQUlHTl9TVEFSVF9NT0RFX1NUQVJUEAESJAogQ0FN",
-            "UEFJR05fU1RBUlRfTU9ERV9ET19OT1RfU1RBUlQQAiqGAQoSQ2FtcGFpZ25D",
-            "YWxsU291cmNlEiQKIENBTVBBSUdOX0NBTExfU09VUkNFX1VOU1BFQ0lGSUVE",
-            "EAASHwobQ0FNUEFJR05fQ0FMTF9TT1VSQ0VfQ0FMTEVSEAESKQolQ0FNUEFJ",
-            "R05fQ0FMTF9TT1VSQ0VfU0NIRURVTEVEX0NBTExFUhACKv4BChpDYW1wYWln",
-            "bkNhbGxBdHRlbXB0T3V0Y29tZRItCilDQU1QQUlHTl9DQUxMX0FUVEVNUFRf",
-            "T1VUQ09NRV9VTlNQRUNJRklFRBAAEi0KKUNBTVBBSUdOX0NBTExfQVRURU1Q",
-            "VF9PVVRDT01FX0lOX1BST0dSRVNTEAESKwonQ0FNUEFJR05fQ0FMTF9BVFRF",
-            "TVBUX09VVENPTUVfQ09NUExFVEVEEAISKAokQ0FNUEFJR05fQ0FMTF9BVFRF",
-            "TVBUX09VVENPTUVfRkFJTEVEEAMSKwonQ0FNUEFJR05fQ0FMTF9BVFRFTVBU",
-            "X09VVENPTUVfQ0FOQ0VMTEVEEAQyiQgKCUNhbXBhaWducxJLCg5DcmVhdGVD",
-            "YW1wYWlnbhIiLm9uZGV3by52dHNpLkNyZWF0ZUNhbXBhaWduUmVxdWVzdBoV",
-            "Lm9uZGV3by52dHNpLkNhbXBhaWduEkUKC0dldENhbXBhaWduEh8ub25kZXdv",
-            "LnZ0c2kuR2V0Q2FtcGFpZ25SZXF1ZXN0GhUub25kZXdvLnZ0c2kuQ2FtcGFp",
-            "Z24SSwoOVXBkYXRlQ2FtcGFpZ24SIi5vbmRld28udnRzaS5VcGRhdGVDYW1w",
-            "YWlnblJlcXVlc3QaFS5vbmRld28udnRzaS5DYW1wYWlnbhJZCg5EZWxldGVD",
-            "YW1wYWlnbhIiLm9uZGV3by52dHNpLkRlbGV0ZUNhbXBhaWduUmVxdWVzdBoj",
-            "Lm9uZGV3by52dHNpLkRlbGV0ZUNhbXBhaWduUmVzcG9uc2USVgoNTGlzdENh",
-            "bXBhaWducxIhLm9uZGV3by52dHNpLkxpc3RDYW1wYWlnbnNSZXF1ZXN0GiIu",
-            "b25kZXdvLnZ0c2kuTGlzdENhbXBhaWduc1Jlc3BvbnNlEmMKFUdldENhbXBh",
-            "aWduU3RhdGlzdGljcxIpLm9uZGV3by52dHNpLkdldENhbXBhaWduU3RhdGlz",
-            "dGljc1JlcXVlc3QaHy5vbmRld28udnRzaS5DYW1wYWlnblN0YXRpc3RpY3MS",
-            "YgoRTGlzdENhbXBhaWduQ2FsbHMSJS5vbmRld28udnRzaS5MaXN0Q2FtcGFp",
-            "Z25DYWxsc1JlcXVlc3QaJi5vbmRld28udnRzaS5MaXN0Q2FtcGFpZ25DYWxs",
-            "c1Jlc3BvbnNlEkkKDVN0YXJ0Q2FtcGFpZ24SIS5vbmRld28udnRzaS5TdGFy",
-            "dENhbXBhaWduUmVxdWVzdBoVLm9uZGV3by52dHNpLkNhbXBhaWduEkcKDFN0",
-            "b3BDYW1wYWlnbhIgLm9uZGV3by52dHNpLlN0b3BDYW1wYWlnblJlcXVlc3Qa",
-            "FS5vbmRld28udnRzaS5DYW1wYWlnbhJPChBIYXJkU3RvcENhbXBhaWduEiQu",
-            "b25kZXdvLnZ0c2kuSGFyZFN0b3BDYW1wYWlnblJlcXVlc3QaFS5vbmRld28u",
-            "dnRzaS5DYW1wYWlnbhJLCg5SZXN1bWVDYW1wYWlnbhIiLm9uZGV3by52dHNp",
-            "LlJlc3VtZUNhbXBhaWduUmVxdWVzdBoVLm9uZGV3by52dHNpLkNhbXBhaWdu",
-            "Em0KFFN0cmVhbUNhbXBhaWduU3RhdHVzEigub25kZXdvLnZ0c2kuU3RyZWFt",
-            "Q2FtcGFpZ25TdGF0dXNSZXF1ZXN0Gikub25kZXdvLnZ0c2kuU3RyZWFtQ2Ft",
-            "cGFpZ25TdGF0dXNSZXNwb25zZTABYgZwcm90bzM="));
+            "LnByb3RvGhRvbmRld28vc2lwL3NpcC5wcm90bxoeb25kZXdvL3Z0c2kvY2Fs",
+            "bF9jb25maWdzLnByb3RvIvoGCghDYW1wYWlnbhIMCgRuYW1lGAEgASgJEhMK",
+            "C2NhbXBhaWduX2lkGAIgASgJEhkKEXZ0c2lfcHJvamVjdF9uYW1lGAMgASgJ",
+            "EhQKDGRpc3BsYXlfbmFtZRgEIAEoCRIaChJtYXhfcGFyYWxsZWxfY2FsbHMY",
+            "BSABKAUSFAoMbWF4X2F0dGVtcHRzGAYgASgFEi4KC3JldHJ5X2RlbGF5GAcg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEikKBXN0YXRlGAggASgO",
+            "Mhoub25kZXdvLnZ0c2kuQ2FtcGFpZ25TdGF0ZRIUCgxzdGF0ZV9yZWFzb24Y",
+            "CSABKAkSMwoKc3RhdGlzdGljcxgKIAEoCzIfLm9uZGV3by52dHNpLkNhbXBh",
+            "aWduU3RhdGlzdGljcxISCgpjcmVhdGVkX2J5GAsgASgJEi4KCmNyZWF0ZWRf",
+            "YXQYDCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhMKC21vZGlm",
+            "aWVkX2J5GA0gASgJEi8KC21vZGlmaWVkX2F0GA4gASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBIuCgpzdGFydGVkX2F0GA8gASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIuCgpzdG9wcGVkX2F0GBAgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIwCgxjb21wbGV0ZWRfYXQYESABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkoKH2NhbXBhaWduX2NvbW1v",
+            "bl9zZXJ2aWNlc19jb25maWcYEiABKAsyIS5vbmRld28udnRzaS5Db21tb25T",
+            "ZXJ2aWNlc0NvbmZpZxJAChpjYW1wYWlnbl9zaXBfY2FsbGVyX2NvbmZpZxgT",
+            "IAEoCzIcLm9uZGV3by52dHNpLlNpcENhbGxlckNvbmZpZxIYChBjYW1wYWln",
+            "bl9jYWxsZXJzGBQgAygJEiIKGmNhbXBhaWduX2NhbGxlcnNfdHJ1bmNhdGVk",
+            "GBUgASgIEjoKDmNhbGxpbmdfd2luZG93GBYgASgLMiIub25kZXdvLnZ0c2ku",
+            "Q2FtcGFpZ25DYWxsaW5nV2luZG93Eh4KFm91dHNpZGVfY2FsbGluZ193aW5k",
+            "b3cYFyABKAgikAEKFUNhbXBhaWduQ2FsbGluZ1dpbmRvdxIRCgl0aW1lX3pv",
+            "bmUYASABKAkSLQoFc2xvdHMYAiADKAsyHi5vbmRld28udnRzaS5DYWxsaW5n",
+            "V2luZG93U2xvdBI1ChFuZXh0X3dpbmRvd19zdGFydBgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXAidwoRQ2FsbGluZ1dpbmRvd1Nsb3QSOAoL",
+            "ZGF5X29mX3dlZWsYASABKA4yIy5vbmRld28udnRzaS5DYWxsaW5nV2luZG93",
+            "RGF5T2ZXZWVrEhQKDHN0YXJ0X21pbnV0ZRgCIAEoBRISCgplbmRfbWludXRl",
+            "GAMgASgFIvgCChJDYW1wYWlnblN0YXRpc3RpY3MSFQoNY2FtcGFpZ25fbmFt",
+            "ZRgBIAEoCRINCgV0b3RhbBgCIAEoBRITCgtub3Rfc3RhcnRlZBgDIAEoBRIT",
+            "Cgtpbl9wcm9ncmVzcxgEIAEoBRIVCg1yZXRyeV9wZW5kaW5nGAUgASgFEhEK",
+            "CWNvbXBsZXRlZBgGIAEoBRIOCgZmYWlsZWQYByABKAUSEQoJY2FuY2VsbGVk",
+            "GAggASgFEhYKDnRvdGFsX2F0dGVtcHRzGAkgASgFEhgKEHByb2dyZXNzX3Bl",
+            "cmNlbnQYCiABKAISGQoRc2NoZWR1bGVkX25vdF9kdWUYCyABKAUSFQoNY2Fs",
+            "bHNfcmV0cmllZBgMIAEoBRI9ChphdmVyYWdlX2Nvbm5lY3RlZF9kdXJhdGlv",
+            "bhgNIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIiChphbnN3ZXJp",
+            "bmdfbWFjaGluZV9kZXRlY3RlZBgOIAEoBSLfAgoTQ2FtcGFpZ25DYWxsQXR0",
+            "ZW1wdBIWCg5hdHRlbXB0X251bWJlchgBIAEoBRITCgtjYWxsZXJfbmFtZRgC",
+            "IAEoCRIRCgljYWxsX25hbWUYAyABKAkSLgoKc3RhcnRfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBSABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjgKB291dGNvbWUYBiABKA4y",
+            "Jy5vbmRld28udnRzaS5DYW1wYWlnbkNhbGxBdHRlbXB0T3V0Y29tZRI5Cg9z",
+            "aXBfc3RhdHVzX3R5cGUYByABKA4yIC5vbmRld28uc2lwLlNpcFN0YXR1cy5T",
+            "dGF0dXNUeXBlEh4KFnNpcF9zdGF0dXNfZGVzY3JpcHRpb24YCCABKAkSFQoN",
+            "ZXJyb3JfbWVzc2FnZRgJIAEoCSLABgoMQ2FtcGFpZ25DYWxsEgwKBG5hbWUY",
+            "ASABKAkSFQoNY2FtcGFpZ25fbmFtZRgCIAEoCRIQCghwb3NpdGlvbhgDIAEo",
+            "BRItCgVzdGF0ZRgEIAEoDjIeLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbFN0",
+            "YXRlEhQKDHBob25lX251bWJlchgFIAEoCRIvCgZzb3VyY2UYBiABKA4yHy5v",
+            "bmRld28udnRzaS5DYW1wYWlnbkNhbGxTb3VyY2USHQoVc2NoZWR1bGVkX2Nh",
+            "bGxlcl9uYW1lGAcgASgJEjIKDnNjaGVkdWxlZF90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBIQCghhdHRlbXB0cxgJIAEoBRIUCgxt",
+            "YXhfYXR0ZW1wdHMYCiABKAUSEwoLY2FsbGVyX25hbWUYCyABKAkSEQoJY2Fs",
+            "bF9uYW1lGAwgASgJEjkKD3NpcF9zdGF0dXNfdHlwZRgNIAEoDjIgLm9uZGV3",
+            "by5zaXAuU2lwU3RhdHVzLlN0YXR1c1R5cGUSHgoWc2lwX3N0YXR1c19kZXNj",
+            "cmlwdGlvbhgOIAEoCRISCgpsYXN0X2Vycm9yGA8gASgJEjUKEW5leHRfYXR0",
+            "ZW1wdF90aW1lGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI2",
+            "ChJmaXJzdF9hdHRlbXB0X3RpbWUYESABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEjUKEWxhc3RfYXR0ZW1wdF90aW1lGBIgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIvCgtmaW5pc2hfdGltZRgTIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKY3JlYXRlZF9hdBgUIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoLbW9kaWZpZWRfYXQYFSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjkKD2F0dGVtcHRfaGlz",
+            "dG9yeRgWIAMoCzIgLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbEF0dGVtcHQi",
+            "2gEKEkNhbXBhaWduQXNzaWdubWVudBIXCg1jYW1wYWlnbl9uYW1lGAEgASgJ",
+            "SAASLQoMbmV3X2NhbXBhaWduGAIgASgLMhUub25kZXdvLnZ0c2kuQ2FtcGFp",
+            "Z25IABIWCgxkaXNwbGF5X25hbWUYBSABKAlIABIyCgpzdGFydF9tb2RlGAMg",
+            "ASgOMh4ub25kZXdvLnZ0c2kuQ2FtcGFpZ25TdGFydE1vZGVCEwoRY2FtcGFp",
+            "Z25fc2VsZWN0b3JKBAgEEAVSFWNhbXBhaWduX2Rpc3BsYXlfbmFtZSKkAQoV",
+            "Q3JlYXRlQ2FtcGFpZ25SZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEg",
+            "ASgJEicKCGNhbXBhaWduGAIgASgLMhUub25kZXdvLnZ0c2kuQ2FtcGFpZ24S",
+            "LgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
+            "c2sSFwoPaWRlbXBvdGVuY3lfa2V5GAQgASgJIpkBChJHZXRDYW1wYWlnblJl",
+            "cXVlc3QSDgoEbmFtZRgBIAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgDIAEoCUgA",
+            "EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAQgASgJEi4KCmZpZWxkX21hc2sYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgoKCGNhbXBhaWduSgQI",
+            "AhADIqEBChVVcGRhdGVDYW1wYWlnblJlcXVlc3QSJwoIY2FtcGFpZ24YASAB",
+            "KAsyFS5vbmRld28udnRzaS5DYW1wYWlnbhIvCgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSLgoKZmllbGRfbWFzaxgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siqwEKFURlbGV0ZUNh",
+            "bXBhaWduUmVxdWVzdBIOCgRuYW1lGAEgASgJSAASFgoMZGlzcGxheV9uYW1l",
+            "GAMgASgJSAASGQoRdnRzaV9wcm9qZWN0X25hbWUYBCABKAkSLgoKZmllbGRf",
+            "bWFzaxgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSDQoFZm9y",
+            "Y2UYBiABKAhCCgoIY2FtcGFpZ25KBAgCEAMidQoWRGVsZXRlQ2FtcGFpZ25S",
+            "ZXNwb25zZRIMCgRuYW1lGAEgASgJEiMKG2RlbGV0ZWRfY2FtcGFpZ25fY2Fs",
+            "bF9jb3VudBgCIAEoBRIoCiBjYW5jZWxsZWRfc2NoZWR1bGVkX2NhbGxlcl9j",
+            "b3VudBgDIAEoBSKgAgoOQ2FtcGFpZ25GaWx0ZXISKgoGc3RhdGVzGAEgAygO",
+            "Mhoub25kZXdvLnZ0c2kuQ2FtcGFpZ25TdGF0ZRIdChVkaXNwbGF5X25hbWVf",
+            "Y29udGFpbnMYAiABKAkSFAoMZGlzcGxheV9uYW1lGAMgASgJEjEKDWNyZWF0",
+            "ZWRfYWZ0ZXIYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjIK",
+            "DmNyZWF0ZWRfYmVmb3JlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBISCgpjcmVhdGVkX2J5GAYgASgJEjIKDm1vZGlmaWVkX3NpbmNlGAcg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCL5AQoUTGlzdENhbXBh",
+            "aWduc1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSKwoGZmls",
+            "dGVyGAIgASgLMhsub25kZXdvLnZ0c2kuQ2FtcGFpZ25GaWx0ZXISEQoJcGFn",
+            "ZV9zaXplGAMgASgFEhcKCnBhZ2VfdG9rZW4YBCABKAlIAIgBARIuCgpmaWVs",
+            "ZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIuCghv",
+            "cmRlcl9ieRgGIAEoDjIcLm9uZGV3by52dHNpLkNhbXBhaWduT3JkZXJCeUIN",
+            "CgtfcGFnZV90b2tlbiJaChVMaXN0Q2FtcGFpZ25zUmVzcG9uc2USKAoJY2Ft",
+            "cGFpZ25zGAEgAygLMhUub25kZXdvLnZ0c2kuQ2FtcGFpZ24SFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJInMKHEdldENhbXBhaWduU3RhdGlzdGljc1JlcXVl",
+            "c3QSDgoEbmFtZRgBIAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgDIAEoCUgAEhkK",
+            "EXZ0c2lfcHJvamVjdF9uYW1lGAQgASgJQgoKCGNhbXBhaWduSgQIAhADIvQE",
+            "ChhMaXN0Q2FtcGFpZ25DYWxsc1JlcXVlc3QSFwoNY2FtcGFpZ25fbmFtZRgB",
+            "IAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgIIAEoCUgAEhkKEXZ0c2lfcHJvamVj",
+            "dF9uYW1lGAkgASgJEi4KBnN0YXRlcxgCIAMoDjIeLm9uZGV3by52dHNpLkNh",
+            "bXBhaWduQ2FsbFN0YXRlEhQKDHBob25lX251bWJlchgDIAEoCRIRCglwYWdl",
+            "X3NpemUYBCABKAUSFwoKcGFnZV90b2tlbhgFIAEoCUgBiAEBEhgKEGluY2x1",
+            "ZGVfYXR0ZW1wdHMYBiABKAgSLgoKZmllbGRfbWFzaxgKIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2sSFQoNcGhvbmVfbnVtYmVycxgLIAMoCRIw",
+            "Cgdzb3VyY2VzGAwgAygOMh8ub25kZXdvLnZ0c2kuQ2FtcGFpZ25DYWxsU291",
+            "cmNlEjMKD2ZpbmlzaF90aW1lX21pbhgNIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASMwoPZmluaXNoX3RpbWVfbWF4GA4gASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIyCg5tb2RpZmllZF9zaW5jZRgPIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFAoMbWluX2F0dGVtcHRzGBAg",
+            "ASgFEhsKE2NhbXBhaWduX2NhbGxfbmFtZXMYESADKAlCCgoIY2FtcGFpZ25C",
+            "DQoLX3BhZ2VfdG9rZW5KBAgHEAhSFWNhbXBhaWduX2Rpc3BsYXlfbmFtZSJn",
+            "ChlMaXN0Q2FtcGFpZ25DYWxsc1Jlc3BvbnNlEjEKDmNhbXBhaWduX2NhbGxz",
+            "GAEgAygLMhkub25kZXdvLnZ0c2kuQ2FtcGFpZ25DYWxsEhcKD25leHRfcGFn",
+            "ZV90b2tlbhgCIAEoCSKbAQoUU3RhcnRDYW1wYWlnblJlcXVlc3QSDgoEbmFt",
+            "ZRgBIAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgDIAEoCUgAEhkKEXZ0c2lfcHJv",
+            "amVjdF9uYW1lGAQgASgJEi4KCmZpZWxkX21hc2sYBSABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuRmllbGRNYXNrQgoKCGNhbXBhaWduSgQIAhADIpoBChNTdG9w",
+            "Q2FtcGFpZ25SZXF1ZXN0Eg4KBG5hbWUYASABKAlIABIWCgxkaXNwbGF5X25h",
+            "bWUYAyABKAlIABIZChF2dHNpX3Byb2plY3RfbmFtZRgEIAEoCRIuCgpmaWVs",
+            "ZF9tYXNrGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0IKCghj",
+            "YW1wYWlnbkoECAIQAyKeAQoXSGFyZFN0b3BDYW1wYWlnblJlcXVlc3QSDgoE",
+            "bmFtZRgBIAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgDIAEoCUgAEhkKEXZ0c2lf",
+            "cHJvamVjdF9uYW1lGAQgASgJEi4KCmZpZWxkX21hc2sYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgoKCGNhbXBhaWduSgQIAhADIpwBChVS",
+            "ZXN1bWVDYW1wYWlnblJlcXVlc3QSDgoEbmFtZRgBIAEoCUgAEhYKDGRpc3Bs",
+            "YXlfbmFtZRgDIAEoCUgAEhkKEXZ0c2lfcHJvamVjdF9uYW1lGAQgASgJEi4K",
+            "CmZpZWxkX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNr",
+            "QgoKCGNhbXBhaWduSgQIAhADIrMBChtTdHJlYW1DYW1wYWlnblN0YXR1c1Jl",
+            "cXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSFgoOY2FtcGFpZ25f",
+            "bmFtZXMYAiADKAkSHgoWY2FtcGFpZ25fZGlzcGxheV9uYW1lcxgEIAMoCRIV",
+            "Cg1pbmNsdWRlX2NhbGxzGAMgASgIEioKBnN0YXRlcxgFIAMoDjIaLm9uZGV3",
+            "by52dHNpLkNhbXBhaWduU3RhdGUi+AEKHFN0cmVhbUNhbXBhaWduU3RhdHVz",
+            "UmVzcG9uc2USKAoJY2FtcGFpZ25zGAEgAygLMhUub25kZXdvLnZ0c2kuQ2Ft",
+            "cGFpZ24SMQoOY2FtcGFpZ25fY2FsbHMYAiADKAsyGS5vbmRld28udnRzaS5D",
+            "YW1wYWlnbkNhbGwSHgoWZGVsZXRlZF9jYW1wYWlnbl9uYW1lcxgDIAMoCRIQ",
+            "CghzbmFwc2hvdBgEIAEoCBISCgplbmRfcmVhc29uGAUgASgJEjUKD2VuZF9y",
+            "ZWFzb25fdHlwZRgGIAEoDjIcLm9uZGV3by52dHNpLlN0cmVhbUVuZFJlYXNv",
+            "biJwChZHZXRDYW1wYWlnbkNhbGxSZXF1ZXN0EgwKBG5hbWUYASABKAkSGAoQ",
+            "aW5jbHVkZV9hdHRlbXB0cxgCIAEoCBIuCgpmaWVsZF9tYXNrGAMgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJwChNDYW1wYWlnbkNhbGxSZWZ1",
+            "c2FsEhoKEmNhbXBhaWduX2NhbGxfbmFtZRgBIAEoCRItCgVzdGF0ZRgCIAEo",
+            "DjIeLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbFN0YXRlEg4KBnJlYXNvbhgD",
+            "IAEoCSK4AQoaQ2FuY2VsQ2FtcGFpZ25DYWxsc1JlcXVlc3QSDgoEbmFtZRgB",
+            "IAEoCUgAEhYKDGRpc3BsYXlfbmFtZRgCIAEoCUgAEhkKEXZ0c2lfcHJvamVj",
+            "dF9uYW1lGAMgASgJEhsKE2NhbXBhaWduX2NhbGxfbmFtZXMYBCADKAkSLgoG",
+            "c3RhdGVzGAUgAygOMh4ub25kZXdvLnZ0c2kuQ2FtcGFpZ25DYWxsU3RhdGVC",
+            "CgoIY2FtcGFpZ24ipwEKG0NhbmNlbENhbXBhaWduQ2FsbHNSZXNwb25zZRIV",
+            "Cg1jYW1wYWlnbl9uYW1lGAEgASgJEiUKHWNhbmNlbGxlZF9jYW1wYWlnbl9j",
+            "YWxsX25hbWVzGAIgAygJEjEKB3JlZnVzZWQYAyADKAsyIC5vbmRld28udnRz",
+            "aS5DYW1wYWlnbkNhbGxSZWZ1c2FsEhcKD3JlbWFpbmluZ19jb3VudBgEIAEo",
+            "BSKEAgoZUmV0cnlDYW1wYWlnbkNhbGxzUmVxdWVzdBIOCgRuYW1lGAEgASgJ",
+            "SAASFgoMZGlzcGxheV9uYW1lGAIgASgJSAASGQoRdnRzaV9wcm9qZWN0X25h",
+            "bWUYAyABKAkSGwoTY2FtcGFpZ25fY2FsbF9uYW1lcxgEIAMoCRIuCgZzdGF0",
+            "ZXMYBSADKA4yHi5vbmRld28udnRzaS5DYW1wYWlnbkNhbGxTdGF0ZRIbChNh",
+            "ZGRpdGlvbmFsX2F0dGVtcHRzGAYgASgFEi4KCm5vdF9iZWZvcmUYByABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgoKCGNhbXBhaWduItkBChpS",
+            "ZXRyeUNhbXBhaWduQ2FsbHNSZXNwb25zZRIVCg1jYW1wYWlnbl9uYW1lGAEg",
+            "ASgJEiQKHHJlcXVldWVkX2NhbXBhaWduX2NhbGxfbmFtZXMYAiADKAkSMQoH",
+            "cmVmdXNlZBgDIAMoCzIgLm9uZGV3by52dHNpLkNhbXBhaWduQ2FsbFJlZnVz",
+            "YWwSFwoPcmVtYWluaW5nX2NvdW50GAQgASgFEjIKDmNhbXBhaWduX3N0YXRl",
+            "GAUgASgOMhoub25kZXdvLnZ0c2kuQ2FtcGFpZ25TdGF0ZSKgAgoUQ2xvbmVD",
+            "YW1wYWlnblJlcXVlc3QSFQoLc291cmNlX25hbWUYASABKAlIABIdChNzb3Vy",
+            "Y2VfZGlzcGxheV9uYW1lGAIgASgJSAASGQoRdnRzaV9wcm9qZWN0X25hbWUY",
+            "AyABKAkSGAoQbmV3X2Rpc3BsYXlfbmFtZRgEIAEoCRIVCg1pbmNsdWRlX2Nh",
+            "bGxzGAUgASgIEjMKC2NhbGxfc3RhdGVzGAYgAygOMh4ub25kZXdvLnZ0c2ku",
+            "Q2FtcGFpZ25DYWxsU3RhdGUSLgoKZmllbGRfbWFzaxgHIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5GaWVsZE1hc2sSFwoPaWRlbXBvdGVuY3lfa2V5GAggASgJ",
+            "QggKBnNvdXJjZSqBAgoNQ2FtcGFpZ25TdGF0ZRIeChpDQU1QQUlHTl9TVEFU",
+            "RV9VTlNQRUNJRklFRBAAEhoKFkNBTVBBSUdOX1NUQVRFX0NSRUFURUQQARIa",
+            "ChZDQU1QQUlHTl9TVEFURV9SVU5OSU5HEAISGwoXQ0FNUEFJR05fU1RBVEVf",
+            "U1RPUFBJTkcQAxIaChZDQU1QQUlHTl9TVEFURV9TVE9QUEVEEAQSIAocQ0FN",
+            "UEFJR05fU1RBVEVfSEFSRF9TVE9QUElORxAFEh8KG0NBTVBBSUdOX1NUQVRF",
+            "X0hBUkRfU1RPUFBFRBAGEhwKGENBTVBBSUdOX1NUQVRFX0NPTVBMRVRFRBAH",
+            "KrQCChFDYW1wYWlnbkNhbGxTdGF0ZRIjCh9DQU1QQUlHTl9DQUxMX1NUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASIwofQ0FNUEFJR05fQ0FMTF9TVEFURV9OT1RfU1RB",
+            "UlRFRBABEiMKH0NBTVBBSUdOX0NBTExfU1RBVEVfRElTUEFUQ0hJTkcQAhIj",
+            "Ch9DQU1QQUlHTl9DQUxMX1NUQVRFX0lOX1BST0dSRVNTEAMSJQohQ0FNUEFJ",
+            "R05fQ0FMTF9TVEFURV9SRVRSWV9QRU5ESU5HEAQSIQodQ0FNUEFJR05fQ0FM",
+            "TF9TVEFURV9DT01QTEVURUQQBRIeChpDQU1QQUlHTl9DQUxMX1NUQVRFX0ZB",
+            "SUxFRBAGEiEKHUNBTVBBSUdOX0NBTExfU1RBVEVfQ0FOQ0VMTEVEEAcqfQoR",
+            "Q2FtcGFpZ25TdGFydE1vZGUSIwofQ0FNUEFJR05fU1RBUlRfTU9ERV9VTlNQ",
+            "RUNJRklFRBAAEh0KGUNBTVBBSUdOX1NUQVJUX01PREVfU1RBUlQQARIkCiBD",
+            "QU1QQUlHTl9TVEFSVF9NT0RFX0RPX05PVF9TVEFSVBACKoYBChJDYW1wYWln",
+            "bkNhbGxTb3VyY2USJAogQ0FNUEFJR05fQ0FMTF9TT1VSQ0VfVU5TUEVDSUZJ",
+            "RUQQABIfChtDQU1QQUlHTl9DQUxMX1NPVVJDRV9DQUxMRVIQARIpCiVDQU1Q",
+            "QUlHTl9DQUxMX1NPVVJDRV9TQ0hFRFVMRURfQ0FMTEVSEAIq/gEKGkNhbXBh",
+            "aWduQ2FsbEF0dGVtcHRPdXRjb21lEi0KKUNBTVBBSUdOX0NBTExfQVRURU1Q",
+            "VF9PVVRDT01FX1VOU1BFQ0lGSUVEEAASLQopQ0FNUEFJR05fQ0FMTF9BVFRF",
+            "TVBUX09VVENPTUVfSU5fUFJPR1JFU1MQARIrCidDQU1QQUlHTl9DQUxMX0FU",
+            "VEVNUFRfT1VUQ09NRV9DT01QTEVURUQQAhIoCiRDQU1QQUlHTl9DQUxMX0FU",
+            "VEVNUFRfT1VUQ09NRV9GQUlMRUQQAxIrCidDQU1QQUlHTl9DQUxMX0FUVEVN",
+            "UFRfT1VUQ09NRV9DQU5DRUxMRUQQBCrdAgoWQ2FsbGluZ1dpbmRvd0RheU9m",
+            "V2VlaxIqCiZDQUxMSU5HX1dJTkRPV19EQVlfT0ZfV0VFS19VTlNQRUNJRklF",
+            "RBAAEiUKIUNBTExJTkdfV0lORE9XX0RBWV9PRl9XRUVLX01PTkRBWRABEiYK",
+            "IkNBTExJTkdfV0lORE9XX0RBWV9PRl9XRUVLX1RVRVNEQVkQAhIoCiRDQUxM",
+            "SU5HX1dJTkRPV19EQVlfT0ZfV0VFS19XRURORVNEQVkQAxInCiNDQUxMSU5H",
+            "X1dJTkRPV19EQVlfT0ZfV0VFS19USFVSU0RBWRAEEiUKIUNBTExJTkdfV0lO",
+            "RE9XX0RBWV9PRl9XRUVLX0ZSSURBWRAFEicKI0NBTExJTkdfV0lORE9XX0RB",
+            "WV9PRl9XRUVLX1NBVFVSREFZEAYSJQohQ0FMTElOR19XSU5ET1dfREFZX09G",
+            "X1dFRUtfU1VOREFZEAcqqwEKD0NhbXBhaWduT3JkZXJCeRIhCh1DQU1QQUlH",
+            "Tl9PUkRFUl9CWV9VTlNQRUNJRklFRBAAEiUKIUNBTVBBSUdOX09SREVSX0JZ",
+            "X0NSRUFURURfQVRfREVTQxABEiYKIkNBTVBBSUdOX09SREVSX0JZX01PRElG",
+            "SUVEX0FUX0RFU0MQAhImCiJDQU1QQUlHTl9PUkRFUl9CWV9ESVNQTEFZX05B",
+            "TUVfQVNDEAMqpgIKD1N0cmVhbUVuZFJlYXNvbhIhCh1TVFJFQU1fRU5EX1JF",
+            "QVNPTl9VTlNQRUNJRklFRBAAEiIKHlNUUkVBTV9FTkRfUkVBU09OX01BWF9E",
+            "VVJBVElPThABEiUKIVNUUkVBTV9FTkRfUkVBU09OX0NMSUVOVF9UT09fU0xP",
+            "VxACEioKJlNUUkVBTV9FTkRfUkVBU09OX1NVQlNDUklQVElPTl9ERUxFVEVE",
+            "EAMSKwonU1RSRUFNX0VORF9SRUFTT05fU1VCU0NSSVBUSU9OX0RJU0FCTEVE",
+            "EAQSJQohU1RSRUFNX0VORF9SRUFTT05fUFJPSkVDVF9ERUxFVEVEEAUSJQoh",
+            "U1RSRUFNX0VORF9SRUFTT05fU0VSVkVSX1NIVVRET1dOEAYy+AoKCUNhbXBh",
+            "aWducxJLCg5DcmVhdGVDYW1wYWlnbhIiLm9uZGV3by52dHNpLkNyZWF0ZUNh",
+            "bXBhaWduUmVxdWVzdBoVLm9uZGV3by52dHNpLkNhbXBhaWduEkUKC0dldENh",
+            "bXBhaWduEh8ub25kZXdvLnZ0c2kuR2V0Q2FtcGFpZ25SZXF1ZXN0GhUub25k",
+            "ZXdvLnZ0c2kuQ2FtcGFpZ24SSwoOVXBkYXRlQ2FtcGFpZ24SIi5vbmRld28u",
+            "dnRzaS5VcGRhdGVDYW1wYWlnblJlcXVlc3QaFS5vbmRld28udnRzaS5DYW1w",
+            "YWlnbhJZCg5EZWxldGVDYW1wYWlnbhIiLm9uZGV3by52dHNpLkRlbGV0ZUNh",
+            "bXBhaWduUmVxdWVzdBojLm9uZGV3by52dHNpLkRlbGV0ZUNhbXBhaWduUmVz",
+            "cG9uc2USVgoNTGlzdENhbXBhaWducxIhLm9uZGV3by52dHNpLkxpc3RDYW1w",
+            "YWlnbnNSZXF1ZXN0GiIub25kZXdvLnZ0c2kuTGlzdENhbXBhaWduc1Jlc3Bv",
+            "bnNlEmMKFUdldENhbXBhaWduU3RhdGlzdGljcxIpLm9uZGV3by52dHNpLkdl",
+            "dENhbXBhaWduU3RhdGlzdGljc1JlcXVlc3QaHy5vbmRld28udnRzaS5DYW1w",
+            "YWlnblN0YXRpc3RpY3MSYgoRTGlzdENhbXBhaWduQ2FsbHMSJS5vbmRld28u",
+            "dnRzaS5MaXN0Q2FtcGFpZ25DYWxsc1JlcXVlc3QaJi5vbmRld28udnRzaS5M",
+            "aXN0Q2FtcGFpZ25DYWxsc1Jlc3BvbnNlEkkKDVN0YXJ0Q2FtcGFpZ24SIS5v",
+            "bmRld28udnRzaS5TdGFydENhbXBhaWduUmVxdWVzdBoVLm9uZGV3by52dHNp",
+            "LkNhbXBhaWduEkcKDFN0b3BDYW1wYWlnbhIgLm9uZGV3by52dHNpLlN0b3BD",
+            "YW1wYWlnblJlcXVlc3QaFS5vbmRld28udnRzaS5DYW1wYWlnbhJPChBIYXJk",
+            "U3RvcENhbXBhaWduEiQub25kZXdvLnZ0c2kuSGFyZFN0b3BDYW1wYWlnblJl",
+            "cXVlc3QaFS5vbmRld28udnRzaS5DYW1wYWlnbhJLCg5SZXN1bWVDYW1wYWln",
+            "bhIiLm9uZGV3by52dHNpLlJlc3VtZUNhbXBhaWduUmVxdWVzdBoVLm9uZGV3",
+            "by52dHNpLkNhbXBhaWduEm0KFFN0cmVhbUNhbXBhaWduU3RhdHVzEigub25k",
+            "ZXdvLnZ0c2kuU3RyZWFtQ2FtcGFpZ25TdGF0dXNSZXF1ZXN0Gikub25kZXdv",
+            "LnZ0c2kuU3RyZWFtQ2FtcGFpZ25TdGF0dXNSZXNwb25zZTABElEKD0dldENh",
+            "bXBhaWduQ2FsbBIjLm9uZGV3by52dHNpLkdldENhbXBhaWduQ2FsbFJlcXVl",
+            "c3QaGS5vbmRld28udnRzaS5DYW1wYWlnbkNhbGwSaAoTQ2FuY2VsQ2FtcGFp",
+            "Z25DYWxscxInLm9uZGV3by52dHNpLkNhbmNlbENhbXBhaWduQ2FsbHNSZXF1",
+            "ZXN0Gigub25kZXdvLnZ0c2kuQ2FuY2VsQ2FtcGFpZ25DYWxsc1Jlc3BvbnNl",
+            "EmUKElJldHJ5Q2FtcGFpZ25DYWxscxImLm9uZGV3by52dHNpLlJldHJ5Q2Ft",
+            "cGFpZ25DYWxsc1JlcXVlc3QaJy5vbmRld28udnRzaS5SZXRyeUNhbXBhaWdu",
+            "Q2FsbHNSZXNwb25zZRJJCg1DbG9uZUNhbXBhaWduEiEub25kZXdvLnZ0c2ku",
+            "Q2xvbmVDYW1wYWlnblJlcXVlc3QaFS5vbmRld28udnRzaS5DYW1wYWlnbmIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ondewo.Sip.SipReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.CampaignState), typeof(global::Ondewo.Vtsi.CampaignCallState), typeof(global::Ondewo.Vtsi.CampaignStartMode), typeof(global::Ondewo.Vtsi.CampaignCallSource), typeof(global::Ondewo.Vtsi.CampaignCallAttemptOutcome), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Campaign), global::Ondewo.Vtsi.Campaign.Parser, new[]{ "Name", "CampaignId", "VtsiProjectName", "DisplayName", "MaxParallelCalls", "MaxAttempts", "RetryDelay", "State", "StateReason", "Statistics", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "StartedAt", "StoppedAt", "CompletedAt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignStatistics), global::Ondewo.Vtsi.CampaignStatistics.Parser, new[]{ "CampaignName", "Total", "NotStarted", "InProgress", "RetryPending", "Completed", "Failed", "Cancelled", "TotalAttempts", "ProgressPercent", "ScheduledNotDue", "CallsRetried" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ondewo.Sip.SipReflection.Descriptor, global::Ondewo.Vtsi.CallConfigsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.CampaignState), typeof(global::Ondewo.Vtsi.CampaignCallState), typeof(global::Ondewo.Vtsi.CampaignStartMode), typeof(global::Ondewo.Vtsi.CampaignCallSource), typeof(global::Ondewo.Vtsi.CampaignCallAttemptOutcome), typeof(global::Ondewo.Vtsi.CallingWindowDayOfWeek), typeof(global::Ondewo.Vtsi.CampaignOrderBy), typeof(global::Ondewo.Vtsi.StreamEndReason), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Campaign), global::Ondewo.Vtsi.Campaign.Parser, new[]{ "Name", "CampaignId", "VtsiProjectName", "DisplayName", "MaxParallelCalls", "MaxAttempts", "RetryDelay", "State", "StateReason", "Statistics", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "StartedAt", "StoppedAt", "CompletedAt", "CampaignCommonServicesConfig", "CampaignSipCallerConfig", "CampaignCallers", "CampaignCallersTruncated", "CallingWindow", "OutsideCallingWindow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignCallingWindow), global::Ondewo.Vtsi.CampaignCallingWindow.Parser, new[]{ "TimeZone", "Slots", "NextWindowStart" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CallingWindowSlot), global::Ondewo.Vtsi.CallingWindowSlot.Parser, new[]{ "DayOfWeek", "StartMinute", "EndMinute" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignStatistics), global::Ondewo.Vtsi.CampaignStatistics.Parser, new[]{ "CampaignName", "Total", "NotStarted", "InProgress", "RetryPending", "Completed", "Failed", "Cancelled", "TotalAttempts", "ProgressPercent", "ScheduledNotDue", "CallsRetried", "AverageConnectedDuration", "AnsweringMachineDetected" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignCallAttempt), global::Ondewo.Vtsi.CampaignCallAttempt.Parser, new[]{ "AttemptNumber", "CallerName", "CallName", "StartTime", "EndTime", "Outcome", "SipStatusType", "SipStatusDescription", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignCall), global::Ondewo.Vtsi.CampaignCall.Parser, new[]{ "Name", "CampaignName", "Position", "State", "PhoneNumber", "Source", "ScheduledCallerName", "ScheduledTime", "Attempts", "MaxAttempts", "CallerName", "CallName", "SipStatusType", "SipStatusDescription", "LastError", "NextAttemptTime", "FirstAttemptTime", "LastAttemptTime", "FinishTime", "CreatedAt", "ModifiedAt", "AttemptHistory" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignDisplayName), global::Ondewo.Vtsi.CampaignDisplayName.Parser, new[]{ "VtsiProjectName", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignAssignment), global::Ondewo.Vtsi.CampaignAssignment.Parser, new[]{ "CampaignName", "NewCampaign", "CampaignDisplayName", "StartMode" }, new[]{ "CampaignSelector" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateCampaignRequest), global::Ondewo.Vtsi.CreateCampaignRequest.Parser, new[]{ "VtsiProjectName", "Campaign" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCampaignRequest), global::Ondewo.Vtsi.GetCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateCampaignRequest), global::Ondewo.Vtsi.UpdateCampaignRequest.Parser, new[]{ "Campaign", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCampaignRequest), global::Ondewo.Vtsi.DeleteCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignAssignment), global::Ondewo.Vtsi.CampaignAssignment.Parser, new[]{ "CampaignName", "NewCampaign", "DisplayName", "StartMode" }, new[]{ "CampaignSelector" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateCampaignRequest), global::Ondewo.Vtsi.CreateCampaignRequest.Parser, new[]{ "VtsiProjectName", "Campaign", "FieldMask", "IdempotencyKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCampaignRequest), global::Ondewo.Vtsi.GetCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateCampaignRequest), global::Ondewo.Vtsi.UpdateCampaignRequest.Parser, new[]{ "Campaign", "UpdateMask", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCampaignRequest), global::Ondewo.Vtsi.DeleteCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask", "Force" }, new[]{ "Campaign" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteCampaignResponse), global::Ondewo.Vtsi.DeleteCampaignResponse.Parser, new[]{ "Name", "DeletedCampaignCallCount", "CancelledScheduledCallerCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignFilter), global::Ondewo.Vtsi.CampaignFilter.Parser, new[]{ "States", "DisplayNameContains", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignsRequest), global::Ondewo.Vtsi.ListCampaignsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "PageSize", "PageToken" }, new[]{ "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignFilter), global::Ondewo.Vtsi.CampaignFilter.Parser, new[]{ "States", "DisplayNameContains", "DisplayName", "CreatedAfter", "CreatedBefore", "CreatedBy", "ModifiedSince" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignsRequest), global::Ondewo.Vtsi.ListCampaignsRequest.Parser, new[]{ "VtsiProjectName", "Filter", "PageSize", "PageToken", "FieldMask", "OrderBy" }, new[]{ "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignsResponse), global::Ondewo.Vtsi.ListCampaignsResponse.Parser, new[]{ "Campaigns", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCampaignStatisticsRequest), global::Ondewo.Vtsi.GetCampaignStatisticsRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignCallsRequest), global::Ondewo.Vtsi.ListCampaignCallsRequest.Parser, new[]{ "CampaignName", "CampaignDisplayName", "States", "PhoneNumber", "PageSize", "PageToken", "IncludeAttempts" }, new[]{ "Campaign", "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCampaignStatisticsRequest), global::Ondewo.Vtsi.GetCampaignStatisticsRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignCallsRequest), global::Ondewo.Vtsi.ListCampaignCallsRequest.Parser, new[]{ "CampaignName", "DisplayName", "VtsiProjectName", "States", "PhoneNumber", "PageSize", "PageToken", "IncludeAttempts", "FieldMask", "PhoneNumbers", "Sources", "FinishTimeMin", "FinishTimeMax", "ModifiedSince", "MinAttempts", "CampaignCallNames" }, new[]{ "Campaign", "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListCampaignCallsResponse), global::Ondewo.Vtsi.ListCampaignCallsResponse.Parser, new[]{ "CampaignCalls", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCampaignRequest), global::Ondewo.Vtsi.StartCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StopCampaignRequest), global::Ondewo.Vtsi.StopCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.HardStopCampaignRequest), global::Ondewo.Vtsi.HardStopCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ResumeCampaignRequest), global::Ondewo.Vtsi.ResumeCampaignRequest.Parser, new[]{ "Name", "DisplayName" }, new[]{ "Campaign" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCampaignStatusRequest), global::Ondewo.Vtsi.StreamCampaignStatusRequest.Parser, new[]{ "VtsiProjectName", "CampaignNames", "CampaignDisplayNames", "IncludeCalls" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCampaignStatusResponse), global::Ondewo.Vtsi.StreamCampaignStatusResponse.Parser, new[]{ "Campaigns", "CampaignCalls", "DeletedCampaignNames", "Snapshot", "EndReason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StartCampaignRequest), global::Ondewo.Vtsi.StartCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StopCampaignRequest), global::Ondewo.Vtsi.StopCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.HardStopCampaignRequest), global::Ondewo.Vtsi.HardStopCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ResumeCampaignRequest), global::Ondewo.Vtsi.ResumeCampaignRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "FieldMask" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCampaignStatusRequest), global::Ondewo.Vtsi.StreamCampaignStatusRequest.Parser, new[]{ "VtsiProjectName", "CampaignNames", "CampaignDisplayNames", "IncludeCalls", "States" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.StreamCampaignStatusResponse), global::Ondewo.Vtsi.StreamCampaignStatusResponse.Parser, new[]{ "Campaigns", "CampaignCalls", "DeletedCampaignNames", "Snapshot", "EndReason", "EndReasonType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetCampaignCallRequest), global::Ondewo.Vtsi.GetCampaignCallRequest.Parser, new[]{ "Name", "IncludeAttempts", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CampaignCallRefusal), global::Ondewo.Vtsi.CampaignCallRefusal.Parser, new[]{ "CampaignCallName", "State", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CancelCampaignCallsRequest), global::Ondewo.Vtsi.CancelCampaignCallsRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "CampaignCallNames", "States" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CancelCampaignCallsResponse), global::Ondewo.Vtsi.CancelCampaignCallsResponse.Parser, new[]{ "CampaignName", "CancelledCampaignCallNames", "Refused", "RemainingCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RetryCampaignCallsRequest), global::Ondewo.Vtsi.RetryCampaignCallsRequest.Parser, new[]{ "Name", "DisplayName", "VtsiProjectName", "CampaignCallNames", "States", "AdditionalAttempts", "NotBefore" }, new[]{ "Campaign" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RetryCampaignCallsResponse), global::Ondewo.Vtsi.RetryCampaignCallsResponse.Parser, new[]{ "CampaignName", "RequeuedCampaignCallNames", "Refused", "RemainingCount", "CampaignState" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CloneCampaignRequest), global::Ondewo.Vtsi.CloneCampaignRequest.Parser, new[]{ "SourceName", "SourceDisplayName", "VtsiProjectName", "NewDisplayName", "IncludeCalls", "CallStates", "FieldMask", "IdempotencyKey" }, new[]{ "Source" }, null, null, null)
           }));
     }
     #endregion
@@ -222,7 +326,9 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("CAMPAIGN_STATE_CREATED")] Created = 1,
     /// <summary>
-    /// Calls are being started, at most &lt;code>max_parallel_calls&lt;/code> at a time.
+    /// Calls are being started, at most &lt;code>max_parallel_calls&lt;/code> at a time. A campaign with a
+    /// &lt;code>calling_window&lt;/code> stays in this state outside its slots and starts no call there; see
+    /// &lt;code>Campaign.outside_calling_window&lt;/code>.
     /// </summary>
     [pbr::OriginalName("CAMPAIGN_STATE_RUNNING")] Running = 2,
     /// <summary>
@@ -292,11 +398,16 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Whether adding calls to a campaign also starts it.
+  /// &lt;p>Note: unlike most enums of this API, the zero value &lt;code>CAMPAIGN_START_MODE_UNSPECIFIED&lt;/code> is not
+  /// "no value" but a behaviour of its own (the default described below), which differs from both named
+  /// values for an existing &lt;code>CREATED&lt;/code> campaign. It keeps its released name for wire and source
+  /// compatibility; send it (or leave the field unset) to get that default.&lt;/p>
   /// </summary>
   public enum CampaignStartMode {
     /// <summary>
     /// The default: a NEW campaign is created &lt;code>RUNNING&lt;/code>; an EXISTING campaign keeps its
-    /// state (except that a &lt;code>COMPLETED&lt;/code> one becomes &lt;code>RUNNING&lt;/code> again).
+    /// state (except that a &lt;code>COMPLETED&lt;/code> one becomes &lt;code>RUNNING&lt;/code> again). An existing
+    /// &lt;code>CREATED&lt;/code> campaign therefore stays &lt;code>CREATED&lt;/code>.
     /// </summary>
     [pbr::OriginalName("CAMPAIGN_START_MODE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -357,6 +468,119 @@ namespace Ondewo.Vtsi {
     [pbr::OriginalName("CAMPAIGN_CALL_ATTEMPT_OUTCOME_CANCELLED")] Cancelled = 4,
   }
 
+  /// <summary>
+  /// Day of the week of a &lt;code>CallingWindowSlot&lt;/code>, in the window&amp;apos;s time zone. Defined here rather
+  /// than reusing &lt;code>google.type.DayOfWeek&lt;/code> so that this file needs no further import in any
+  /// generated client; the numbering is the same (ISO 8601, Monday = 1).
+  /// </summary>
+  public enum CallingWindowDayOfWeek {
+    /// <summary>
+    /// Unspecified. Refused in a slot with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Monday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_MONDAY")] Monday = 1,
+    /// <summary>
+    /// Tuesday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_TUESDAY")] Tuesday = 2,
+    /// <summary>
+    /// Wednesday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_WEDNESDAY")] Wednesday = 3,
+    /// <summary>
+    /// Thursday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_THURSDAY")] Thursday = 4,
+    /// <summary>
+    /// Friday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_FRIDAY")] Friday = 5,
+    /// <summary>
+    /// Saturday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_SATURDAY")] Saturday = 6,
+    /// <summary>
+    /// Sunday.
+    /// </summary>
+    [pbr::OriginalName("CALLING_WINDOW_DAY_OF_WEEK_SUNDAY")] Sunday = 7,
+  }
+
+  /// <summary>
+  /// Order of a &lt;code>ListCampaigns&lt;/code> listing. Every order breaks ties by the campaign&amp;apos;s resource
+  /// &lt;code>name&lt;/code>, ascending, so paging is stable.
+  /// </summary>
+  public enum CampaignOrderBy {
+    /// <summary>
+    /// The default: &lt;code>created_at&lt;/code>, newest first (the order of every release before this value
+    /// existed); identical to &lt;code>CAMPAIGN_ORDER_BY_CREATED_AT_DESC&lt;/code>.
+    /// </summary>
+    [pbr::OriginalName("CAMPAIGN_ORDER_BY_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// &lt;code>created_at&lt;/code>, newest first.
+    /// </summary>
+    [pbr::OriginalName("CAMPAIGN_ORDER_BY_CREATED_AT_DESC")] CreatedAtDesc = 1,
+    /// <summary>
+    /// &lt;code>modified_at&lt;/code>, most recently modified first (state changes by the server included). A
+    /// campaign modified while a client pages can move between pages; page with
+    /// &lt;code>CREATED_AT_DESC&lt;/code> when a complete, duplicate-free walk is required.
+    /// </summary>
+    [pbr::OriginalName("CAMPAIGN_ORDER_BY_MODIFIED_AT_DESC")] ModifiedAtDesc = 2,
+    /// <summary>
+    /// &lt;code>display_name&lt;/code>, ascending, compared byte-wise (case-sensitive, &lt;code>B&lt;/code> before
+    /// &lt;code>a&lt;/code>).
+    /// </summary>
+    [pbr::OriginalName("CAMPAIGN_ORDER_BY_DISPLAY_NAME_ASC")] DisplayNameAsc = 3,
+  }
+
+  /// <summary>
+  /// Why the SERVER ended a stream. Carried, next to the free-text &lt;code>end_reason&lt;/code>, on the last
+  /// message of &lt;code>Campaigns.StreamCampaignStatus&lt;/code>
+  /// (&lt;code>StreamCampaignStatusResponse.end_reason_type&lt;/code>) and of &lt;code>Events.SubscribeVtsiEvents&lt;/code>
+  /// (&lt;code>SubscribeVtsiEventsResponse.end_reason_type&lt;/code>). A stream ended by the client, by a gRPC status
+  /// or by a broken connection carries no last message at all. Defined in this file because
+  /// &lt;code>events.proto&lt;/code> imports it and not the other way round. New values may be added: treat an
+  /// unknown value like &lt;code>STREAM_END_REASON_UNSPECIFIED&lt;/code> (reconnect).
+  /// </summary>
+  public enum StreamEndReason {
+    /// <summary>
+    /// Not ended by the server (every message but the last one), or a server that predates this field
+    /// (then only &lt;code>end_reason&lt;/code> is set): reconnect.
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The server&amp;apos;s maximum stream duration was reached. Reconnect (with the
+    /// &lt;code>resume_token&lt;/code> where the stream has one).
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_MAX_DURATION")] MaxDuration = 1,
+    /// <summary>
+    /// The client read too slowly and the server&amp;apos;s buffer for the stream overflowed; events were
+    /// skipped (&lt;code>SubscribeVtsiEventsResponse.dropped_event_count&lt;/code>). Reconnect with the
+    /// &lt;code>resume_token&lt;/code>; the skipped events are replayed from the journal while it still holds
+    /// them.
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_CLIENT_TOO_SLOW")] ClientTooSlow = 2,
+    /// <summary>
+    /// The event subscription the stream was opened with was deleted. Do not reconnect with it.
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_SUBSCRIPTION_DELETED")] SubscriptionDeleted = 3,
+    /// <summary>
+    /// The event subscription the stream was opened with was disabled. Reconnecting with it is refused
+    /// with &lt;code>FAILED_PRECONDITION&lt;/code> until it is enabled again.
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_SUBSCRIPTION_DISABLED")] SubscriptionDisabled = 4,
+    /// <summary>
+    /// The project of the stream was deleted. Do not reconnect.
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_PROJECT_DELETED")] ProjectDeleted = 5,
+    /// <summary>
+    /// The server replica serving the stream is shutting down. Reconnect (another replica serves it).
+    /// </summary>
+    [pbr::OriginalName("STREAM_END_REASON_SERVER_SHUTDOWN")] ServerShutdown = 6,
+  }
+
   #endregion
 
   #region Messages
@@ -415,6 +639,12 @@ namespace Ondewo.Vtsi {
       startedAt_ = other.startedAt_ != null ? other.startedAt_.Clone() : null;
       stoppedAt_ = other.stoppedAt_ != null ? other.stoppedAt_.Clone() : null;
       completedAt_ = other.completedAt_ != null ? other.completedAt_.Clone() : null;
+      campaignCommonServicesConfig_ = other.campaignCommonServicesConfig_ != null ? other.campaignCommonServicesConfig_.Clone() : null;
+      campaignSipCallerConfig_ = other.campaignSipCallerConfig_ != null ? other.campaignSipCallerConfig_.Clone() : null;
+      campaignCallers_ = other.campaignCallers_.Clone();
+      campaignCallersTruncated_ = other.campaignCallersTruncated_;
+      callingWindow_ = other.callingWindow_ != null ? other.callingWindow_.Clone() : null;
+      outsideCallingWindow_ = other.outsideCallingWindow_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -493,8 +723,10 @@ namespace Ondewo.Vtsi {
     private int maxParallelCalls_;
     /// <summary>
     /// Maximum number of calls of this campaign that are being started or are running at the same
-    /// time. &lt;code>0&lt;/code> on create means the server default (1); the allowed range is 1 to the
-    /// server limit (1000 by default). The project&amp;apos;s &lt;code>max_callers&lt;/code> still bounds the
+    /// time. &lt;code>0&lt;/code> on create means the server default
+    /// (&lt;code>ONDEWO_VTSI_CAMPAIGN_DEFAULT_MAX_PARALLEL_CALLS&lt;/code>, 1 by default); the allowed range is 1 to the
+    /// server limit (&lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_PARALLEL_CALLS_LIMIT&lt;/code>, 1000 by default). The
+    /// project&amp;apos;s &lt;code>max_callers&lt;/code> still bounds the
     /// number of callers that exist at all. Updatable; lowering it never ends a running call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -511,11 +743,14 @@ namespace Ondewo.Vtsi {
     private int maxAttempts_;
     /// <summary>
     /// Maximum number of attempts per call, the first one included. &lt;code>0&lt;/code> on create means
-    /// the server default of 1, i.e. no retry; the allowed range is 1 to 10. Updatable. It is read
+    /// the server default of 1, i.e. no retry; the allowed range is 1 to
+    /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10 by default). Updatable. It is read
     /// LIVE, never snapshotted per call: every decision after an attempt fails uses the value current
     /// at that moment, and a call waiting in &lt;code>RETRY_PENDING&lt;/code> whose &lt;code>attempts&lt;/code>
     /// is no longer below a lowered value becomes &lt;code>FAILED&lt;/code> at the next check (its last
-    /// error stays). Raising it never revives a &lt;code>FAILED&lt;/code> call.
+    /// error stays). Raising it never revives a &lt;code>FAILED&lt;/code> call; &lt;code>RetryCampaignCalls&lt;/code>
+    /// does. A call requeued by &lt;code>RetryCampaignCalls&lt;/code> may exceed it (see
+    /// &lt;code>CampaignCall.max_attempts&lt;/code>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -531,7 +766,9 @@ namespace Ondewo.Vtsi {
     private global::Google.Protobuf.WellKnownTypes.Duration retryDelay_;
     /// <summary>
     /// Time to wait after a failed attempt before the next one is started. Unset on create means the
-    /// server default (60 s); allowed range 0 s to 7 days. Updatable.
+    /// server default (&lt;code>ONDEWO_VTSI_CAMPAIGN_DEFAULT_RETRY_DELAY_S&lt;/code>, 60 s by default); allowed range
+    /// 0 s to 7 days. Updatable. With a &lt;code>calling_window&lt;/code>, a retry that falls due outside every slot
+    /// waits for the next slot.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -694,6 +931,218 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "campaign_common_services_config" field.</summary>
+    public const int CampaignCommonServicesConfigFieldNumber = 18;
+    private global::Ondewo.Vtsi.CommonServicesConfig campaignCommonServicesConfig_;
+    /// <summary>
+    /// Optional. Default &lt;code>CommonServicesConfig&lt;/code> of EVERY call of the campaign (speech-to-text,
+    /// NLU, text-to-speech, CSI and voice interaction). Settable on &lt;code>CreateCampaign&lt;/code> and on
+    /// &lt;code>CampaignAssignment.new_campaign&lt;/code>; updatable with the &lt;code>update_mask&lt;/code> path
+    /// &lt;code>campaign_common_services_config&lt;/code> or a nested sub-path of it (e.g.
+    /// &lt;code>campaign_common_services_config.nlu_vtsi_config.agent_name&lt;/code>). Unset (the default)
+    /// changes nothing: every call runs exactly with its own &lt;code>StartCallerRequest&lt;/code> config, as
+    /// before 9.1.0.
+    /// &lt;p>Read LIVE, never snapshotted per call: whenever a campaign call is dispatched (its first
+    /// attempt and every retry) the server reads the campaign&amp;apos;s CURRENT value. The effective
+    /// &lt;code>common_services_config&lt;/code> of that call is:&lt;/p>
+    /// &lt;pre>&lt;code>effective = copy(campaign.campaign_common_services_config)
+    /// effective.MergeFrom(caller_request.common_services_config)&lt;/code>&lt;/pre>
+    /// &lt;p>i.e. protobuf &lt;code>MergeFrom&lt;/code> semantics, the call&amp;apos;s own value WINNING:&lt;/p>
+    /// &lt;ul>
+    ///   &lt;li>a singular scalar, enum or string the call sets to a non-default value (or, for an
+    ///       &lt;code>optional&lt;/code> field, sets at all) replaces the campaign&amp;apos;s value; one the call
+    ///       leaves at its default keeps the campaign&amp;apos;s value. A plain (non-&lt;code>optional&lt;/code>)
+    ///       scalar therefore cannot be reset to its zero value by the call;&lt;/li>
+    ///   &lt;li>a message field is merged recursively by the same rules;&lt;/li>
+    ///   &lt;li>a repeated field is CONCATENATED, the campaign&amp;apos;s entries first (e.g.
+    ///       &lt;code>nlu_vtsi_config.contexts&lt;/code>, the lists of the &lt;code>csi_vtsi_config&lt;/code>
+    ///       callbacks, &lt;code>voice_interaction_config.response_timing_config.soft_timeout_config.messages&lt;/code>);&lt;/li>
+    ///   &lt;li>a map field is merged by key, the call&amp;apos;s entry winning on a shared key;&lt;/li>
+    ///   &lt;li>a oneof member the call sets replaces whichever member the campaign set (e.g.
+    ///       &lt;code>nlu_vtsi_config.credentials&lt;/code> versus &lt;code>nlu_vtsi_config.auth_token&lt;/code>).&lt;/li>
+    /// &lt;/ul>
+    /// &lt;p>The effective configuration is validated exactly as a &lt;code>StartCallerRequest&lt;/code> carrying it,
+    /// so an entry of &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code> may leave
+    /// out what the campaign supplies. Because the default is read live, an update that makes the effective
+    /// configuration of a not yet dispatched call invalid fails that call at dispatch as a failure that
+    /// cannot succeed by repetition (it is not retried).&lt;/p>
+    /// &lt;p>Returned by &lt;code>CreateCampaign&lt;/code>, &lt;code>GetCampaign&lt;/code>, &lt;code>UpdateCampaign&lt;/code>,
+    /// &lt;code>ListCampaigns&lt;/code>, &lt;code>StartCampaign&lt;/code>, &lt;code>StopCampaign&lt;/code>,
+    /// &lt;code>HardStopCampaign&lt;/code> and &lt;code>ResumeCampaign&lt;/code>. Left UNSET (whatever is stored) in
+    /// &lt;code>StreamCampaignStatusResponse.campaigns&lt;/code> and in the &lt;code>campaign&lt;/code> of
+    /// &lt;code>AddCallersToCampaignResponse&lt;/code> / &lt;code>AddScheduledCallersToCampaignResponse&lt;/code>; read
+    /// it with &lt;code>GetCampaign&lt;/code>.&lt;/p>
+    /// &lt;p>Credentials: the credential-bearing fields (NLU credentials and tokens, gRPC certificates,
+    /// message broker and object store settings, callbacks, transcribe and synthesize request configs)
+    /// are stored like the &lt;code>common_services_config&lt;/code> of a started caller; the server never logs
+    /// them. They are RETURNED only to a caller whose role on the project was resolved with authorization
+    /// enforced and who may see the whole project (&lt;code>SERVER_ADMIN&lt;/code>, &lt;code>PROJECT_ADMIN&lt;/code>,
+    /// &lt;code>PROJECT_DEVELOPER&lt;/code>). Every other caller receives only the identity and routing fields
+    /// (agent, language, initial intent, platform, service hosts and ports, CSI control messages, voice
+    /// interaction config): a &lt;code>PROJECT_EXECUTOR&lt;/code>, and also every caller when authorization is
+    /// disabled or only monitored, because a &lt;code>Campaign&lt;/code> has no view that could leave the config
+    /// out by default. A client that reads such a campaign and writes the whole config back with
+    /// &lt;code>update_mask&lt;/code> path &lt;code>campaign_common_services_config&lt;/code> overwrites the stored
+    /// credentials with the withheld (empty) ones; update a sub-path instead.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CommonServicesConfig CampaignCommonServicesConfig {
+      get { return campaignCommonServicesConfig_; }
+      set {
+        campaignCommonServicesConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_sip_caller_config" field.</summary>
+    public const int CampaignSipCallerConfigFieldNumber = 19;
+    private global::Ondewo.Vtsi.SipCallerConfig campaignSipCallerConfig_;
+    /// <summary>
+    /// Optional. Default &lt;code>SipCallerConfig&lt;/code> of EVERY call of the campaign (SIP image version,
+    /// callee and SIP headers). Settable on &lt;code>CreateCampaign&lt;/code> and on
+    /// &lt;code>CampaignAssignment.new_campaign&lt;/code>; updatable with the &lt;code>update_mask&lt;/code> path
+    /// &lt;code>campaign_sip_caller_config&lt;/code> or a nested sub-path of it (e.g.
+    /// &lt;code>campaign_sip_caller_config.sip_headers&lt;/code>). Unset (the default) changes nothing.
+    /// &lt;p>Read LIVE at every dispatch and merged exactly like
+    /// &lt;code>campaign_common_services_config&lt;/code>: the effective &lt;code>sip_caller_config&lt;/code> of a call
+    /// is a copy of this value with the call&amp;apos;s own &lt;code>StartCallerRequest.sip_caller_config&lt;/code>
+    /// merged over it (&lt;code>MergeFrom&lt;/code>, the call winning); &lt;code>sip_headers&lt;/code> are merged by
+    /// key with the call&amp;apos;s header winning on a shared name.&lt;/p>
+    /// &lt;p>EXCEPT &lt;code>callee_id&lt;/code>, which is resolved ONCE, when the call is added to the campaign: the
+    /// call&amp;apos;s own &lt;code>callee_id&lt;/code> or, when that is empty, this value&amp;apos;s
+    /// &lt;code>callee_id&lt;/code> at that moment. The result is stored as &lt;code>CampaignCall.phone_number&lt;/code>
+    /// and is the &lt;code>callee_id&lt;/code> of every attempt of that call, retries included. A later update of
+    /// &lt;code>campaign_sip_caller_config.callee_id&lt;/code> (or of the whole config) therefore changes the callee
+    /// only of calls added after it, never of calls already in the campaign, so the number a campaign call
+    /// reports (and that &lt;code>ListCampaignCallsRequest.phone_number&lt;/code> filters on) is always the number
+    /// it dials. An &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code> request of
+    /// which an entry takes the default callee is refused with &lt;code>ABORTED&lt;/code> (nothing is added; retry
+    /// it) when an update of the default callee commits while the request runs, so no call added after an
+    /// update dials the previous default.&lt;/p>
+    /// &lt;p>Returned by the same RPCs as &lt;code>campaign_common_services_config&lt;/code> and left unset in the
+    /// same responses.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.SipCallerConfig CampaignSipCallerConfig {
+      get { return campaignSipCallerConfig_; }
+      set {
+        campaignSipCallerConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_callers" field.</summary>
+    public const int CampaignCallersFieldNumber = 20;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallers_codec
+        = pb::FieldCodec.ForString(162);
+    private readonly pbc::RepeatedField<string> campaignCallers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. Resource names
+    /// (&lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;&lt;/code>&lt;/pre>) of the callers of the
+    /// campaign: the callers that placed at least one attempt of one of its campaign calls
+    /// (&lt;code>CampaignCallAttempt.caller_name&lt;/code>), whichever way the call was added. A scheduled campaign
+    /// call is placed by a caller too and counts; its &lt;code>ScheduledCaller&lt;/code> is not a
+    /// &lt;code>Caller&lt;/code> and is in &lt;code>CampaignCall.scheduled_caller_name&lt;/code> instead. A caller that was
+    /// deleted is not listed (its name stays in the attempt history), and a caller that placed attempts of
+    /// several campaigns (a pooled caller can) is listed in each of them. Exactly the set
+    /// &lt;code>Calls.ListCallers&lt;/code> returns with &lt;code>ListCallersRequest.campaign_name&lt;/code>.
+    /// &lt;p>Order: by the start of the first attempt each caller placed for the campaign, oldest first, each name
+    /// once. Bounded: at most the first 1000 names; &lt;code>campaign_callers_truncated&lt;/code> says whether there are
+    /// more. Bounded in work too: the server reads only the campaign&amp;apos;s earliest 10000 attempts, by start, to
+    /// compute it, so a campaign with 10000 or more attempts reports &lt;code>campaign_callers_truncated&lt;/code>, also
+    /// with fewer than 1000 names. The complete, paginated list is &lt;code>Calls.ListCallers&lt;/code> with the
+    /// campaign selector, and the calls they placed are &lt;code>Calls.ListCalls&lt;/code> with
+    /// &lt;code>CallFilter.campaign_name&lt;/code>.&lt;/p>
+    /// &lt;p>On &lt;code>UpdateCampaign&lt;/code> and the four lifecycle RPCs the change has already been applied when the
+    /// callers are read; when that read fails, the RPC still succeeds and returns the campaign with
+    /// &lt;code>campaign_callers&lt;/code> empty and &lt;code>campaign_callers_truncated&lt;/code> true (read them with
+    /// &lt;code>GetCampaign&lt;/code>).&lt;/p>
+    /// &lt;p>Populated by &lt;code>CreateCampaign&lt;/code> (always empty: a new campaign has placed no call),
+    /// &lt;code>GetCampaign&lt;/code>, &lt;code>UpdateCampaign&lt;/code>, &lt;code>StartCampaign&lt;/code>,
+    /// &lt;code>StopCampaign&lt;/code>, &lt;code>HardStopCampaign&lt;/code> and &lt;code>ResumeCampaign&lt;/code>; subject to their
+    /// &lt;code>field_mask&lt;/code> like any other path (path &lt;code>campaign_callers&lt;/code>; a path below it is
+    /// rejected). &lt;code>ListCampaigns&lt;/code> populates it ONLY when its &lt;code>field_mask&lt;/code> names it
+    /// explicitly, and an unset or empty mask, which returns every other field, leaves it empty: at up to 1000
+    /// names (~90 bytes each) per campaign, a default page would otherwise exceed gRPC&amp;apos;s default 4 MiB
+    /// message limit. Left empty in
+    /// &lt;code>StreamCampaignStatusResponse.campaigns&lt;/code> and in the &lt;code>campaign&lt;/code> of
+    /// &lt;code>AddCallersToCampaignResponse&lt;/code> / &lt;code>AddScheduledCallersToCampaignResponse&lt;/code>. Setting it
+    /// on create is an output-only field set (&lt;code>INVALID_ARGUMENT&lt;/code>), naming it in an
+    /// &lt;code>update_mask&lt;/code> is rejected as output only.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallers {
+      get { return campaignCallers_; }
+    }
+
+    /// <summary>Field number for the "campaign_callers_truncated" field.</summary>
+    public const int CampaignCallersTruncatedFieldNumber = 21;
+    private bool campaignCallersTruncated_;
+    /// <summary>
+    /// Output only. True when &lt;code>campaign_callers&lt;/code> may be incomplete: it was cut at its bound of 1000
+    /// names and the campaign has more callers, the campaign has 10000 or more attempts (the most the server
+    /// reads for it), or (on &lt;code>UpdateCampaign&lt;/code> and the lifecycle RPCs only) the callers could not be
+    /// read after the change was applied. Read them all with &lt;code>Calls.ListCallers&lt;/code> and the campaign
+    /// selector. Populated
+    /// and left unset by the same RPCs as &lt;code>campaign_callers&lt;/code>, and in &lt;code>ListCampaigns&lt;/code> also
+    /// only when the &lt;code>field_mask&lt;/code> names it explicitly; a &lt;code>field_mask&lt;/code> names it like any
+    /// other path (name both to read the names and whether they are complete).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CampaignCallersTruncated {
+      get { return campaignCallersTruncated_; }
+      set {
+        campaignCallersTruncated_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "calling_window" field.</summary>
+    public const int CallingWindowFieldNumber = 22;
+    private global::Ondewo.Vtsi.CampaignCallingWindow callingWindow_;
+    /// <summary>
+    /// Optional. When calls of the campaign may be started: weekly slots in an IANA time zone, see
+    /// &lt;a href="index.html#ondewo.vtsi.CampaignCallingWindow">CampaignCallingWindow&lt;/a>. Unset (the default)
+    /// means at any time, as before this field existed. Settable on &lt;code>CreateCampaign&lt;/code>,
+    /// &lt;code>CampaignAssignment.new_campaign&lt;/code> and copied by &lt;code>CloneCampaign&lt;/code>; updatable with the
+    /// &lt;code>update_mask&lt;/code> path &lt;code>calling_window&lt;/code> (replaces the whole window; unset removes it)
+    /// or the sub-paths &lt;code>calling_window.time_zone&lt;/code> and &lt;code>calling_window.slots&lt;/code> (the
+    /// repeated field is replaced whole). Its output-only fields must be unset on create and are rejected in
+    /// an &lt;code>update_mask&lt;/code>. An invalid window is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming the
+    /// problem (see &lt;code>CampaignCallingWindow&lt;/code>). Returned by every RPC that returns a
+    /// &lt;code>Campaign&lt;/code>, &lt;code>StreamCampaignStatusResponse.campaigns&lt;/code> and the &lt;code>campaign&lt;/code>
+    /// of the &lt;code>Add*ToCampaign&lt;/code> responses included.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignCallingWindow CallingWindow {
+      get { return callingWindow_; }
+      set {
+        callingWindow_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "outside_calling_window" field.</summary>
+    public const int OutsideCallingWindowFieldNumber = 23;
+    private bool outsideCallingWindow_;
+    /// <summary>
+    /// Output only. True while the campaign is &lt;code>RUNNING&lt;/code>, has a &lt;code>calling_window&lt;/code> and the
+    /// current time is outside every slot of it, i.e. it starts no call until
+    /// &lt;code>calling_window.next_window_start&lt;/code>. False in every other case (no window, inside a slot, or
+    /// another state). Evaluated when the campaign is read, so it is exact for the moment of the response;
+    /// &lt;code>VTSI_EVENT_CAMPAIGN_CALLING_WINDOW_OPENED&lt;/code> / &lt;code>..._CLOSED&lt;/code> report the edges of a
+    /// running campaign. Returned like &lt;code>calling_window&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool OutsideCallingWindow {
+      get { return outsideCallingWindow_; }
+      set {
+        outsideCallingWindow_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -726,6 +1175,12 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(StartedAt, other.StartedAt)) return false;
       if (!object.Equals(StoppedAt, other.StoppedAt)) return false;
       if (!object.Equals(CompletedAt, other.CompletedAt)) return false;
+      if (!object.Equals(CampaignCommonServicesConfig, other.CampaignCommonServicesConfig)) return false;
+      if (!object.Equals(CampaignSipCallerConfig, other.CampaignSipCallerConfig)) return false;
+      if(!campaignCallers_.Equals(other.campaignCallers_)) return false;
+      if (CampaignCallersTruncated != other.CampaignCallersTruncated) return false;
+      if (!object.Equals(CallingWindow, other.CallingWindow)) return false;
+      if (OutsideCallingWindow != other.OutsideCallingWindow) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -750,6 +1205,12 @@ namespace Ondewo.Vtsi {
       if (startedAt_ != null) hash ^= StartedAt.GetHashCode();
       if (stoppedAt_ != null) hash ^= StoppedAt.GetHashCode();
       if (completedAt_ != null) hash ^= CompletedAt.GetHashCode();
+      if (campaignCommonServicesConfig_ != null) hash ^= CampaignCommonServicesConfig.GetHashCode();
+      if (campaignSipCallerConfig_ != null) hash ^= CampaignSipCallerConfig.GetHashCode();
+      hash ^= campaignCallers_.GetHashCode();
+      if (CampaignCallersTruncated != false) hash ^= CampaignCallersTruncated.GetHashCode();
+      if (callingWindow_ != null) hash ^= CallingWindow.GetHashCode();
+      if (OutsideCallingWindow != false) hash ^= OutsideCallingWindow.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -836,6 +1297,27 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(138, 1);
         output.WriteMessage(CompletedAt);
       }
+      if (campaignCommonServicesConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CampaignCommonServicesConfig);
+      }
+      if (campaignSipCallerConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(CampaignSipCallerConfig);
+      }
+      campaignCallers_.WriteTo(output, _repeated_campaignCallers_codec);
+      if (CampaignCallersTruncated != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(CampaignCallersTruncated);
+      }
+      if (callingWindow_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(CallingWindow);
+      }
+      if (OutsideCallingWindow != false) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(OutsideCallingWindow);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -914,6 +1396,27 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(138, 1);
         output.WriteMessage(CompletedAt);
       }
+      if (campaignCommonServicesConfig_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(CampaignCommonServicesConfig);
+      }
+      if (campaignSipCallerConfig_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(CampaignSipCallerConfig);
+      }
+      campaignCallers_.WriteTo(ref output, _repeated_campaignCallers_codec);
+      if (CampaignCallersTruncated != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(CampaignCallersTruncated);
+      }
+      if (callingWindow_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(CallingWindow);
+      }
+      if (OutsideCallingWindow != false) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(OutsideCallingWindow);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -974,6 +1477,22 @@ namespace Ondewo.Vtsi {
       }
       if (completedAt_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(CompletedAt);
+      }
+      if (campaignCommonServicesConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CampaignCommonServicesConfig);
+      }
+      if (campaignSipCallerConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CampaignSipCallerConfig);
+      }
+      size += campaignCallers_.CalculateSize(_repeated_campaignCallers_codec);
+      if (CampaignCallersTruncated != false) {
+        size += 2 + 1;
+      }
+      if (callingWindow_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CallingWindow);
+      }
+      if (OutsideCallingWindow != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1058,6 +1577,31 @@ namespace Ondewo.Vtsi {
           CompletedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CompletedAt.MergeFrom(other.CompletedAt);
+      }
+      if (other.campaignCommonServicesConfig_ != null) {
+        if (campaignCommonServicesConfig_ == null) {
+          CampaignCommonServicesConfig = new global::Ondewo.Vtsi.CommonServicesConfig();
+        }
+        CampaignCommonServicesConfig.MergeFrom(other.CampaignCommonServicesConfig);
+      }
+      if (other.campaignSipCallerConfig_ != null) {
+        if (campaignSipCallerConfig_ == null) {
+          CampaignSipCallerConfig = new global::Ondewo.Vtsi.SipCallerConfig();
+        }
+        CampaignSipCallerConfig.MergeFrom(other.CampaignSipCallerConfig);
+      }
+      campaignCallers_.Add(other.campaignCallers_);
+      if (other.CampaignCallersTruncated != false) {
+        CampaignCallersTruncated = other.CampaignCallersTruncated;
+      }
+      if (other.callingWindow_ != null) {
+        if (callingWindow_ == null) {
+          CallingWindow = new global::Ondewo.Vtsi.CampaignCallingWindow();
+        }
+        CallingWindow.MergeFrom(other.CallingWindow);
+      }
+      if (other.OutsideCallingWindow != false) {
+        OutsideCallingWindow = other.OutsideCallingWindow;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1165,6 +1709,39 @@ namespace Ondewo.Vtsi {
               CompletedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(CompletedAt);
+            break;
+          }
+          case 146: {
+            if (campaignCommonServicesConfig_ == null) {
+              CampaignCommonServicesConfig = new global::Ondewo.Vtsi.CommonServicesConfig();
+            }
+            input.ReadMessage(CampaignCommonServicesConfig);
+            break;
+          }
+          case 154: {
+            if (campaignSipCallerConfig_ == null) {
+              CampaignSipCallerConfig = new global::Ondewo.Vtsi.SipCallerConfig();
+            }
+            input.ReadMessage(CampaignSipCallerConfig);
+            break;
+          }
+          case 162: {
+            campaignCallers_.AddEntriesFrom(input, _repeated_campaignCallers_codec);
+            break;
+          }
+          case 168: {
+            CampaignCallersTruncated = input.ReadBool();
+            break;
+          }
+          case 178: {
+            if (callingWindow_ == null) {
+              CallingWindow = new global::Ondewo.Vtsi.CampaignCallingWindow();
+            }
+            input.ReadMessage(CallingWindow);
+            break;
+          }
+          case 184: {
+            OutsideCallingWindow = input.ReadBool();
             break;
           }
         }
@@ -1275,6 +1852,634 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(CompletedAt);
             break;
           }
+          case 146: {
+            if (campaignCommonServicesConfig_ == null) {
+              CampaignCommonServicesConfig = new global::Ondewo.Vtsi.CommonServicesConfig();
+            }
+            input.ReadMessage(CampaignCommonServicesConfig);
+            break;
+          }
+          case 154: {
+            if (campaignSipCallerConfig_ == null) {
+              CampaignSipCallerConfig = new global::Ondewo.Vtsi.SipCallerConfig();
+            }
+            input.ReadMessage(CampaignSipCallerConfig);
+            break;
+          }
+          case 162: {
+            campaignCallers_.AddEntriesFrom(ref input, _repeated_campaignCallers_codec);
+            break;
+          }
+          case 168: {
+            CampaignCallersTruncated = input.ReadBool();
+            break;
+          }
+          case 178: {
+            if (callingWindow_ == null) {
+              CallingWindow = new global::Ondewo.Vtsi.CampaignCallingWindow();
+            }
+            input.ReadMessage(CallingWindow);
+            break;
+          }
+          case 184: {
+            OutsideCallingWindow = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// When the calls of a campaign may be started: a set of weekly slots, each a day of the week and a range
+  /// of minutes of that day, in one time zone.
+  /// &lt;p>Effect: the campaign engine starts an attempt (a first attempt, a retry, or a due scheduled call) only
+  /// while the current time, converted to &lt;code>time_zone&lt;/code>, lies inside a slot. Outside every slot a
+  /// &lt;code>RUNNING&lt;/code> campaign stays &lt;code>RUNNING&lt;/code>, reports
+  /// &lt;code>Campaign.outside_calling_window = true&lt;/code> and starts nothing; calls keep their state
+  /// (&lt;code>NOT_STARTED&lt;/code> / &lt;code>RETRY_PENDING&lt;/code>) and are started from the next slot on, under
+  /// &lt;code>max_parallel_calls&lt;/code>, in their usual order. A call already started when a slot ends is NEVER
+  /// ended by it and may run past the slot; its retry, if any, waits for the next slot. Statistics and the
+  /// campaign&amp;apos;s state machine are otherwise unaffected; stop, hard stop and resume work as without a
+  /// window.&lt;/p>
+  /// &lt;p>Validation (&lt;code>INVALID_ARGUMENT&lt;/code> naming the problem, on &lt;code>CreateCampaign&lt;/code>,
+  /// &lt;code>UpdateCampaign&lt;/code>, &lt;code>CampaignAssignment.new_campaign&lt;/code>): &lt;code>time_zone&lt;/code> must be a
+  /// name of the IANA time zone database known to the server (e.g. &lt;code>Europe/Vienna&lt;/code>, &lt;code>UTC&lt;/code>;
+  /// not an offset such as &lt;code>+02:00&lt;/code>); at least one and at most 50 slots; each slot with a day other
+  /// than &lt;code>CALLING_WINDOW_DAY_OF_WEEK_UNSPECIFIED&lt;/code>, &lt;code>0 &amp;lt;= start_minute &amp;lt; end_minute
+  /// &amp;lt;= 1440&lt;/code>. A slot cannot span midnight: split it into two slots on consecutive days. Slots may overlap
+  /// or touch; the window is their union.&lt;/p>
+  /// &lt;p>Local time: slot boundaries are wall-clock times in &lt;code>time_zone&lt;/code>, so they follow daylight saving
+  /// changes. A boundary that does not exist on a given day (the hour skipped when clocks go forward) takes effect
+  /// at the first instant after it that exists; a boundary that occurs twice (the hour repeated when clocks go
+  /// back) takes effect at its first occurrence.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CampaignCallingWindow : pb::IMessage<CampaignCallingWindow>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CampaignCallingWindow> _parser = new pb::MessageParser<CampaignCallingWindow>(() => new CampaignCallingWindow());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CampaignCallingWindow> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallingWindow() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallingWindow(CampaignCallingWindow other) : this() {
+      timeZone_ = other.timeZone_;
+      slots_ = other.slots_.Clone();
+      nextWindowStart_ = other.nextWindowStart_ != null ? other.nextWindowStart_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallingWindow Clone() {
+      return new CampaignCallingWindow(this);
+    }
+
+    /// <summary>Field number for the "time_zone" field.</summary>
+    public const int TimeZoneFieldNumber = 1;
+    private string timeZone_ = "";
+    /// <summary>
+    /// Required. IANA time zone name in which the slots are read, e.g. &lt;code>Europe/Vienna&lt;/code>. At most
+    /// 64 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TimeZone {
+      get { return timeZone_; }
+      set {
+        timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "slots" field.</summary>
+    public const int SlotsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CallingWindowSlot> _repeated_slots_codec
+        = pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.CallingWindowSlot.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CallingWindowSlot> slots_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CallingWindowSlot>();
+    /// <summary>
+    /// Required. The weekly slots, 1 to 50. Order is irrelevant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CallingWindowSlot> Slots {
+      get { return slots_; }
+    }
+
+    /// <summary>Field number for the "next_window_start" field.</summary>
+    public const int NextWindowStartFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp nextWindowStart_;
+    /// <summary>
+    /// Output only. The start of the next slot strictly after the moment the campaign was read, as an
+    /// absolute time (UTC); while inside a slot, the start of the slot after the current one ends (the end of
+    /// a run of overlapping or touching slots). Unset when the window has no future slot (cannot happen for a
+    /// valid window) and in requests. Computed when read, also when the campaign is not &lt;code>RUNNING&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp NextWindowStart {
+      get { return nextWindowStart_; }
+      set {
+        nextWindowStart_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CampaignCallingWindow);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CampaignCallingWindow other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TimeZone != other.TimeZone) return false;
+      if(!slots_.Equals(other.slots_)) return false;
+      if (!object.Equals(NextWindowStart, other.NextWindowStart)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TimeZone.Length != 0) hash ^= TimeZone.GetHashCode();
+      hash ^= slots_.GetHashCode();
+      if (nextWindowStart_ != null) hash ^= NextWindowStart.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TimeZone);
+      }
+      slots_.WriteTo(output, _repeated_slots_codec);
+      if (nextWindowStart_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NextWindowStart);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TimeZone.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TimeZone);
+      }
+      slots_.WriteTo(ref output, _repeated_slots_codec);
+      if (nextWindowStart_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(NextWindowStart);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TimeZone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TimeZone);
+      }
+      size += slots_.CalculateSize(_repeated_slots_codec);
+      if (nextWindowStart_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextWindowStart);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CampaignCallingWindow other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TimeZone.Length != 0) {
+        TimeZone = other.TimeZone;
+      }
+      slots_.Add(other.slots_);
+      if (other.nextWindowStart_ != null) {
+        if (nextWindowStart_ == null) {
+          NextWindowStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        NextWindowStart.MergeFrom(other.NextWindowStart);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 18: {
+            slots_.AddEntriesFrom(input, _repeated_slots_codec);
+            break;
+          }
+          case 26: {
+            if (nextWindowStart_ == null) {
+              NextWindowStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextWindowStart);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 18: {
+            slots_.AddEntriesFrom(ref input, _repeated_slots_codec);
+            break;
+          }
+          case 26: {
+            if (nextWindowStart_ == null) {
+              NextWindowStart = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextWindowStart);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// One weekly slot of a &lt;code>CampaignCallingWindow&lt;/code>: on &lt;code>day_of_week&lt;/code>, from
+  /// &lt;code>start_minute&lt;/code> (inclusive) to &lt;code>end_minute&lt;/code> (exclusive), counted in minutes after local
+  /// midnight of &lt;code>CampaignCallingWindow.time_zone&lt;/code>. Example: Monday 09:00 to 17:30 is
+  /// &lt;code>{day_of_week: CALLING_WINDOW_DAY_OF_WEEK_MONDAY, start_minute: 540, end_minute: 1050}&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CallingWindowSlot : pb::IMessage<CallingWindowSlot>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CallingWindowSlot> _parser = new pb::MessageParser<CallingWindowSlot>(() => new CallingWindowSlot());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CallingWindowSlot> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallingWindowSlot() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallingWindowSlot(CallingWindowSlot other) : this() {
+      dayOfWeek_ = other.dayOfWeek_;
+      startMinute_ = other.startMinute_;
+      endMinute_ = other.endMinute_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CallingWindowSlot Clone() {
+      return new CallingWindowSlot(this);
+    }
+
+    /// <summary>Field number for the "day_of_week" field.</summary>
+    public const int DayOfWeekFieldNumber = 1;
+    private global::Ondewo.Vtsi.CallingWindowDayOfWeek dayOfWeek_ = global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified;
+    /// <summary>
+    /// Required. The day, in the window&amp;apos;s time zone.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CallingWindowDayOfWeek DayOfWeek {
+      get { return dayOfWeek_; }
+      set {
+        dayOfWeek_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "start_minute" field.</summary>
+    public const int StartMinuteFieldNumber = 2;
+    private int startMinute_;
+    /// <summary>
+    /// Start of the slot in minutes after local midnight, inclusive: 0 to 1439.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StartMinute {
+      get { return startMinute_; }
+      set {
+        startMinute_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_minute" field.</summary>
+    public const int EndMinuteFieldNumber = 3;
+    private int endMinute_;
+    /// <summary>
+    /// End of the slot in minutes after local midnight, exclusive: 1 to 1440 (1440 = the end of the day),
+    /// greater than &lt;code>start_minute&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int EndMinute {
+      get { return endMinute_; }
+      set {
+        endMinute_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CallingWindowSlot);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CallingWindowSlot other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DayOfWeek != other.DayOfWeek) return false;
+      if (StartMinute != other.StartMinute) return false;
+      if (EndMinute != other.EndMinute) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DayOfWeek != global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified) hash ^= DayOfWeek.GetHashCode();
+      if (StartMinute != 0) hash ^= StartMinute.GetHashCode();
+      if (EndMinute != 0) hash ^= EndMinute.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DayOfWeek != global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DayOfWeek);
+      }
+      if (StartMinute != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(StartMinute);
+      }
+      if (EndMinute != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(EndMinute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DayOfWeek != global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DayOfWeek);
+      }
+      if (StartMinute != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(StartMinute);
+      }
+      if (EndMinute != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(EndMinute);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DayOfWeek != global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DayOfWeek);
+      }
+      if (StartMinute != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StartMinute);
+      }
+      if (EndMinute != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EndMinute);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CallingWindowSlot other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DayOfWeek != global::Ondewo.Vtsi.CallingWindowDayOfWeek.Unspecified) {
+        DayOfWeek = other.DayOfWeek;
+      }
+      if (other.StartMinute != 0) {
+        StartMinute = other.StartMinute;
+      }
+      if (other.EndMinute != 0) {
+        EndMinute = other.EndMinute;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DayOfWeek = (global::Ondewo.Vtsi.CallingWindowDayOfWeek) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            StartMinute = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            EndMinute = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DayOfWeek = (global::Ondewo.Vtsi.CallingWindowDayOfWeek) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            StartMinute = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            EndMinute = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1297,6 +2502,14 @@ namespace Ondewo.Vtsi {
   /// not finished: a call waiting for its next attempt is still being worked on)&lt;/li>
   /// &lt;li>not started = &lt;code>not_started&lt;/code>&lt;/li>
   /// &lt;/ul>
+  /// &lt;p>Bounds: every call counter is at most the campaign&amp;apos;s number of calls, itself at most
+  /// &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_CALLS&lt;/code> (100000 by default); &lt;code>total_attempts&lt;/code> and
+  /// &lt;code>answering_machine_detected&lt;/code> are at most that times the attempt limit (10 by default, plus the
+  /// budgets added by &lt;code>RetryCampaignCalls&lt;/code>), far below the &lt;code>int32&lt;/code> range.
+  /// &lt;code>total_attempts&lt;/code>, &lt;code>calls_retried&lt;/code> and &lt;code>answering_machine_detected&lt;/code> never
+  /// decrease; the state buckets move as calls change state (&lt;code>RetryCampaignCalls&lt;/code> moves calls out of
+  /// &lt;code>failed&lt;/code> / &lt;code>cancelled&lt;/code>). The statistics are computed when read, from one consistent
+  /// snapshot.&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CampaignStatistics : pb::IMessage<CampaignStatistics>
@@ -1313,7 +2526,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1345,6 +2558,8 @@ namespace Ondewo.Vtsi {
       progressPercent_ = other.progressPercent_;
       scheduledNotDue_ = other.scheduledNotDue_;
       callsRetried_ = other.callsRetried_;
+      averageConnectedDuration_ = other.averageConnectedDuration_ != null ? other.averageConnectedDuration_.Clone() : null;
+      answeringMachineDetected_ = other.answeringMachineDetected_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1534,6 +2749,41 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "average_connected_duration" field.</summary>
+    public const int AverageConnectedDurationFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Duration averageConnectedDuration_;
+    /// <summary>
+    /// Mean connected time of the campaign&amp;apos;s FINISHED attempts that were connected: from the moment the
+    /// attempt&amp;apos;s call reached &lt;code>OUTGOING_CALL_CONNECTED&lt;/code> to the moment it ended, averaged over
+    /// those attempts (a running call is not counted until it ended). Unset when no attempt has connected and
+    /// ended yet. Millisecond precision.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration AverageConnectedDuration {
+      get { return averageConnectedDuration_; }
+      set {
+        averageConnectedDuration_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "answering_machine_detected" field.</summary>
+    public const int AnsweringMachineDetectedFieldNumber = 14;
+    private int answeringMachineDetected_;
+    /// <summary>
+    /// Attempts whose call reported &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> (answering machine
+    /// detection), whatever the call did next; each attempt counts once. &lt;code>0&lt;/code> also when answering
+    /// machine detection is not configured for the campaign&amp;apos;s calls.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AnsweringMachineDetected {
+      get { return answeringMachineDetected_; }
+      set {
+        answeringMachineDetected_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1561,6 +2811,8 @@ namespace Ondewo.Vtsi {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ProgressPercent, other.ProgressPercent)) return false;
       if (ScheduledNotDue != other.ScheduledNotDue) return false;
       if (CallsRetried != other.CallsRetried) return false;
+      if (!object.Equals(AverageConnectedDuration, other.AverageConnectedDuration)) return false;
+      if (AnsweringMachineDetected != other.AnsweringMachineDetected) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1580,6 +2832,8 @@ namespace Ondewo.Vtsi {
       if (ProgressPercent != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ProgressPercent);
       if (ScheduledNotDue != 0) hash ^= ScheduledNotDue.GetHashCode();
       if (CallsRetried != 0) hash ^= CallsRetried.GetHashCode();
+      if (averageConnectedDuration_ != null) hash ^= AverageConnectedDuration.GetHashCode();
+      if (AnsweringMachineDetected != 0) hash ^= AnsweringMachineDetected.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1646,6 +2900,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(96);
         output.WriteInt32(CallsRetried);
       }
+      if (averageConnectedDuration_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AverageConnectedDuration);
+      }
+      if (AnsweringMachineDetected != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(AnsweringMachineDetected);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1704,6 +2966,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(96);
         output.WriteInt32(CallsRetried);
       }
+      if (averageConnectedDuration_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(AverageConnectedDuration);
+      }
+      if (AnsweringMachineDetected != 0) {
+        output.WriteRawTag(112);
+        output.WriteInt32(AnsweringMachineDetected);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1749,6 +3019,12 @@ namespace Ondewo.Vtsi {
       }
       if (CallsRetried != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CallsRetried);
+      }
+      if (averageConnectedDuration_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AverageConnectedDuration);
+      }
+      if (AnsweringMachineDetected != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AnsweringMachineDetected);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1797,6 +3073,15 @@ namespace Ondewo.Vtsi {
       }
       if (other.CallsRetried != 0) {
         CallsRetried = other.CallsRetried;
+      }
+      if (other.averageConnectedDuration_ != null) {
+        if (averageConnectedDuration_ == null) {
+          AverageConnectedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        AverageConnectedDuration.MergeFrom(other.AverageConnectedDuration);
+      }
+      if (other.AnsweringMachineDetected != 0) {
+        AnsweringMachineDetected = other.AnsweringMachineDetected;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1863,6 +3148,17 @@ namespace Ondewo.Vtsi {
           }
           case 96: {
             CallsRetried = input.ReadInt32();
+            break;
+          }
+          case 106: {
+            if (averageConnectedDuration_ == null) {
+              AverageConnectedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(AverageConnectedDuration);
+            break;
+          }
+          case 112: {
+            AnsweringMachineDetected = input.ReadInt32();
             break;
           }
         }
@@ -1932,6 +3228,17 @@ namespace Ondewo.Vtsi {
             CallsRetried = input.ReadInt32();
             break;
           }
+          case 106: {
+            if (averageConnectedDuration_ == null) {
+              AverageConnectedDuration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(AverageConnectedDuration);
+            break;
+          }
+          case 112: {
+            AnsweringMachineDetected = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1957,7 +3264,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2500,7 +3807,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2616,7 +3923,10 @@ namespace Ondewo.Vtsi {
     public const int PhoneNumberFieldNumber = 5;
     private string phoneNumber_ = "";
     /// <summary>
-    /// The callee: &lt;code>SipCallerConfig.callee_id&lt;/code> of the call&amp;apos;s request.
+    /// The callee: &lt;code>SipCallerConfig.callee_id&lt;/code> of the call&amp;apos;s request or, when the request
+    /// leaves it empty, of &lt;code>Campaign.campaign_sip_caller_config&lt;/code> at the time the call was added.
+    /// Fixed from then on: every attempt of the call dials exactly this number, whatever later updates of
+    /// the campaign&amp;apos;s &lt;code>campaign_sip_caller_config&lt;/code> say.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2691,8 +4001,10 @@ namespace Ondewo.Vtsi {
     public const int MaxAttemptsFieldNumber = 10;
     private int maxAttempts_;
     /// <summary>
-    /// The campaign&amp;apos;s CURRENT &lt;code>max_attempts&lt;/code> (read live, see
-    /// &lt;code>Campaign.max_attempts&lt;/code>); repeated here so a page of calls is readable alone.
+    /// The attempt limit of this call: the campaign&amp;apos;s CURRENT &lt;code>max_attempts&lt;/code> (read live, see
+    /// &lt;code>Campaign.max_attempts&lt;/code>), repeated here so a page of calls is readable alone. For a call
+    /// requeued by &lt;code>RetryCampaignCalls&lt;/code> it is the larger of that value and the call&amp;apos;s own
+    /// limit set by the requeue (its attempts at the time plus &lt;code>additional_attempts&lt;/code>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3582,251 +4894,6 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Identifies a campaign by its display name, which is unique within a project.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class CampaignDisplayName : pb::IMessage<CampaignDisplayName>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<CampaignDisplayName> _parser = new pb::MessageParser<CampaignDisplayName>(() => new CampaignDisplayName());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CampaignDisplayName> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CampaignDisplayName() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CampaignDisplayName(CampaignDisplayName other) : this() {
-      vtsiProjectName_ = other.vtsiProjectName_;
-      displayName_ = other.displayName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CampaignDisplayName Clone() {
-      return new CampaignDisplayName(this);
-    }
-
-    /// <summary>Field number for the "vtsi_project_name" field.</summary>
-    public const int VtsiProjectNameFieldNumber = 1;
-    private string vtsiProjectName_ = "";
-    /// <summary>
-    /// VTSI project of the campaign.
-    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string VtsiProjectName {
-      get { return vtsiProjectName_; }
-      set {
-        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
-    private string displayName_ = "";
-    /// <summary>
-    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string DisplayName {
-      get { return displayName_; }
-      set {
-        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as CampaignDisplayName);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CampaignDisplayName other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (VtsiProjectName != other.VtsiProjectName) return false;
-      if (DisplayName != other.DisplayName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
-      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (VtsiProjectName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(VtsiProjectName);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (VtsiProjectName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(VtsiProjectName);
-      }
-      if (DisplayName.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(DisplayName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (VtsiProjectName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
-      }
-      if (DisplayName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CampaignDisplayName other) {
-      if (other == null) {
-        return;
-      }
-      if (other.VtsiProjectName.Length != 0) {
-        VtsiProjectName = other.VtsiProjectName;
-      }
-      if (other.DisplayName.Length != 0) {
-        DisplayName = other.DisplayName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            VtsiProjectName = input.ReadString();
-            break;
-          }
-          case 18: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            VtsiProjectName = input.ReadString();
-            break;
-          }
-          case 18: {
-            DisplayName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// Assigns the callers of an &lt;code>AddCallersToCampaign&lt;/code> / &lt;code>AddScheduledCallersToCampaign&lt;/code>
   /// request to a campaign. The calls are NOT started by the request itself but added to the
   /// campaign, which starts them under its &lt;code>max_parallel_calls&lt;/code> limit.
@@ -3839,12 +4906,22 @@ namespace Ondewo.Vtsi {
   /// &lt;code>CREATED&lt;/code>); &lt;code>COMPLETED&lt;/code> accepts them and becomes &lt;code>RUNNING&lt;/code>.&lt;/p>
   /// &lt;p>Errors, as gRPC status codes of the &lt;code>AddCallersToCampaign&lt;/code> /
   /// &lt;code>AddScheduledCallersToCampaign&lt;/code> RPC: &lt;code>NOT_FOUND&lt;/code> for an unknown
-  /// &lt;code>campaign_name&lt;/code> / &lt;code>campaign_display_name&lt;/code>
+  /// &lt;code>campaign_name&lt;/code> / &lt;code>display_name&lt;/code>
   /// or a campaign deleted while the request ran; &lt;code>INVALID_ARGUMENT&lt;/code> for a campaign of
   /// another project, an invalid &lt;code>new_campaign&lt;/code> (an output-only field set, a value out of
   /// range) or an invalid caller entry (the message names its index); &lt;code>ALREADY_EXISTS&lt;/code> for a
   /// &lt;code>new_campaign.display_name&lt;/code> used in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when
   /// the campaign would exceed the server&amp;apos;s maximum number of calls per campaign.&lt;/p>
+  /// &lt;p>The project of the campaign is the project of the enclosing request:
+  /// &lt;code>AddCallersToCampaignRequest.vtsi_project_name&lt;/code> /
+  /// &lt;code>AddScheduledCallersToCampaignRequest.vtsi_project_name&lt;/code>. It is where a new campaign is
+  /// created, where &lt;code>display_name&lt;/code> is resolved, and the project a &lt;code>campaign_name&lt;/code>
+  /// must belong to.&lt;/p>
+  /// &lt;p>Every caller entry of the request is validated against its EFFECTIVE configuration, i.e. the
+  /// campaign&amp;apos;s &lt;code>campaign_common_services_config&lt;/code> / &lt;code>campaign_sip_caller_config&lt;/code>
+  /// with the entry&amp;apos;s own config merged over it (see
+  /// &lt;a href="index.html#ondewo.vtsi.Campaign">Campaign&lt;/a>), so an entry may leave out what the campaign
+  /// supplies.&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CampaignAssignment : pb::IMessage<CampaignAssignment>
@@ -3861,7 +4938,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3889,8 +4966,8 @@ namespace Ondewo.Vtsi {
         case CampaignSelectorOneofCase.NewCampaign:
           NewCampaign = other.NewCampaign.Clone();
           break;
-        case CampaignSelectorOneofCase.CampaignDisplayName:
-          CampaignDisplayName = other.CampaignDisplayName.Clone();
+        case CampaignSelectorOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -3936,9 +5013,11 @@ namespace Ondewo.Vtsi {
     /// <summary>Field number for the "new_campaign" field.</summary>
     public const int NewCampaignFieldNumber = 2;
     /// <summary>
-    /// Create a new campaign with these settings and add the calls to it. Only
-    /// &lt;code>display_name&lt;/code>, &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code> and
-    /// &lt;code>retry_delay&lt;/code> are read; output-only fields must be unset.
+    /// Create a new campaign with these settings, in the enclosing request&amp;apos;s project, and add the
+    /// calls to it. Only &lt;code>display_name&lt;/code>, &lt;code>max_parallel_calls&lt;/code>,
+    /// &lt;code>max_attempts&lt;/code>, &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code>,
+    /// &lt;code>campaign_sip_caller_config&lt;/code> and &lt;code>calling_window&lt;/code> are read; output-only fields
+    /// (&lt;code>calling_window.next_window_start&lt;/code> included) must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3950,19 +5029,36 @@ namespace Ondewo.Vtsi {
       }
     }
 
-    /// <summary>Field number for the "campaign_display_name" field.</summary>
-    public const int CampaignDisplayNameFieldNumber = 4;
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 5;
     /// <summary>
-    /// Add the calls to the existing campaign with this display name. Its
-    /// &lt;code>vtsi_project_name&lt;/code> must be the request&amp;apos;s project.
+    /// Add the calls to the existing campaign with this exact, case-sensitive display name, resolved
+    /// within the enclosing request&amp;apos;s project
+    /// (&lt;code>AddCallersToCampaignRequest.vtsi_project_name&lt;/code> /
+    /// &lt;code>AddScheduledCallersToCampaignRequest.vtsi_project_name&lt;/code>). Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName campaign_display_name = 4&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName CampaignDisplayName {
-      get { return campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaignSelector_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaignSelector_ : ""; }
       set {
-        campaignSelector_ = value;
-        campaignSelectorCase_ = value == null ? CampaignSelectorOneofCase.None : CampaignSelectorOneofCase.CampaignDisplayName;
+        campaignSelector_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignSelectorCase_ = CampaignSelectorOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignSelectorCase_ == CampaignSelectorOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaignSelector();
       }
     }
 
@@ -3988,7 +5084,7 @@ namespace Ondewo.Vtsi {
       None = 0,
       CampaignName = 1,
       NewCampaign = 2,
-      CampaignDisplayName = 4,
+      DisplayName = 5,
     }
     private CampaignSelectorOneofCase campaignSelectorCase_ = CampaignSelectorOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4021,7 +5117,7 @@ namespace Ondewo.Vtsi {
       }
       if (CampaignName != other.CampaignName) return false;
       if (!object.Equals(NewCampaign, other.NewCampaign)) return false;
-      if (!object.Equals(CampaignDisplayName, other.CampaignDisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
       if (StartMode != other.StartMode) return false;
       if (CampaignSelectorCase != other.CampaignSelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4033,7 +5129,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (HasCampaignName) hash ^= CampaignName.GetHashCode();
       if (campaignSelectorCase_ == CampaignSelectorOneofCase.NewCampaign) hash ^= NewCampaign.GetHashCode();
-      if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) hash ^= CampaignDisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
       if (StartMode != global::Ondewo.Vtsi.CampaignStartMode.Unspecified) hash ^= StartMode.GetHashCode();
       hash ^= (int) campaignSelectorCase_;
       if (_unknownFields != null) {
@@ -4066,9 +5162,9 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(24);
         output.WriteEnum((int) StartMode);
       }
-      if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CampaignDisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4092,9 +5188,9 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(24);
         output.WriteEnum((int) StartMode);
       }
-      if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) {
-        output.WriteRawTag(34);
-        output.WriteMessage(CampaignDisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(42);
+        output.WriteString(DisplayName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4112,8 +5208,8 @@ namespace Ondewo.Vtsi {
       if (campaignSelectorCase_ == CampaignSelectorOneofCase.NewCampaign) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewCampaign);
       }
-      if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CampaignDisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
       }
       if (StartMode != global::Ondewo.Vtsi.CampaignStartMode.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) StartMode);
@@ -4143,11 +5239,8 @@ namespace Ondewo.Vtsi {
           }
           NewCampaign.MergeFrom(other.NewCampaign);
           break;
-        case CampaignSelectorOneofCase.CampaignDisplayName:
-          if (CampaignDisplayName == null) {
-            CampaignDisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          CampaignDisplayName.MergeFrom(other.CampaignDisplayName);
+        case CampaignSelectorOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -4187,13 +5280,8 @@ namespace Ondewo.Vtsi {
             StartMode = (global::Ondewo.Vtsi.CampaignStartMode) input.ReadEnum();
             break;
           }
-          case 34: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) {
-              subBuilder.MergeFrom(CampaignDisplayName);
-            }
-            input.ReadMessage(subBuilder);
-            CampaignDisplayName = subBuilder;
+          case 42: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -4232,13 +5320,8 @@ namespace Ondewo.Vtsi {
             StartMode = (global::Ondewo.Vtsi.CampaignStartMode) input.ReadEnum();
             break;
           }
-          case 34: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignSelectorCase_ == CampaignSelectorOneofCase.CampaignDisplayName) {
-              subBuilder.MergeFrom(CampaignDisplayName);
-            }
-            input.ReadMessage(subBuilder);
-            CampaignDisplayName = subBuilder;
+          case 42: {
+            DisplayName = input.ReadString();
             break;
           }
         }
@@ -4267,7 +5350,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4289,6 +5372,8 @@ namespace Ondewo.Vtsi {
     public CreateCampaignRequest(CreateCampaignRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       campaign_ = other.campaign_ != null ? other.campaign_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      idempotencyKey_ = other.idempotencyKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4318,7 +5403,9 @@ namespace Ondewo.Vtsi {
     public const int CampaignFieldNumber = 2;
     private global::Ondewo.Vtsi.Campaign campaign_;
     /// <summary>
-    /// The campaign to create. Output-only fields must be unset.
+    /// The campaign to create. Output-only fields must be unset. &lt;code>campaign_common_services_config&lt;/code>
+    /// and &lt;code>campaign_sip_caller_config&lt;/code> may be set: they become the defaults of every call of
+    /// the campaign (see &lt;a href="index.html#ondewo.vtsi.Campaign">Campaign&lt;/a>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4326,6 +5413,56 @@ namespace Ondewo.Vtsi {
       get { return campaign_; }
       set {
         campaign_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code> and WITHOUT a &lt;code>campaign.&lt;/code> prefix, e.g. &lt;code>state&lt;/code>,
+    /// &lt;code>statistics.completed&lt;/code>,
+    /// &lt;code>campaign_common_services_config.nlu_vtsi_config.agent_name&lt;/code>. Nested paths through
+    /// singular message fields are allowed; a path below a repeated or map field is not.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. The mask is applied after the server&amp;apos;s
+    /// role-based redaction, so it never reveals a redacted value. It shapes only the response: the
+    /// whole campaign is created regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 4;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key, with the semantics of
+    /// &lt;code>AddCallersToCampaignRequest.idempotency_key&lt;/code>: at most 255 printable ASCII characters, no
+    /// whitespace; empty means no deduplication. A retry carrying the same key returns the response of the
+    /// first successful attempt (the same campaign, as it was returned then) instead of creating a second
+    /// campaign, whichever server replica it reaches, for as long as the server retains the key (24 hours by
+    /// default). The key is scoped to the VTSI project and to this RPC. Reusing a key with a different request
+    /// is refused with &lt;code>INVALID_ARGUMENT&lt;/code>; &lt;code>field_mask&lt;/code> is not part of that comparison (a
+    /// retry with another mask is the same request and its response is shaped by the retry&amp;apos;s mask). A
+    /// retry that arrives while the first attempt is still running is answered &lt;code>ABORTED&lt;/code> and may be
+    /// retried later. A first attempt that fails stores nothing, so a retry after a failure runs the request
+    /// again. A replayed response carries no &lt;code>campaign_common_services_config&lt;/code> and no
+    /// &lt;code>campaign_sip_caller_config&lt;/code>: the server keeps no second copy of the credentials it holds;
+    /// read them with &lt;code>GetCampaign&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4346,6 +5483,8 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(Campaign, other.Campaign)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4355,6 +5494,8 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (campaign_ != null) hash ^= Campaign.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4381,6 +5522,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Campaign);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4399,6 +5548,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Campaign);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(IdempotencyKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4414,6 +5571,12 @@ namespace Ondewo.Vtsi {
       }
       if (campaign_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Campaign);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4435,6 +5598,15 @@ namespace Ondewo.Vtsi {
           Campaign = new global::Ondewo.Vtsi.Campaign();
         }
         Campaign.MergeFrom(other.Campaign);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4464,6 +5636,17 @@ namespace Ondewo.Vtsi {
               Campaign = new global::Ondewo.Vtsi.Campaign();
             }
             input.ReadMessage(Campaign);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }
@@ -4496,6 +5679,17 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(Campaign);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 34: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4522,7 +5716,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4542,12 +5736,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCampaignRequest(GetCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -4564,6 +5760,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4590,17 +5787,75 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code> and WITHOUT a &lt;code>campaign.&lt;/code> prefix, e.g. &lt;code>state&lt;/code>,
+    /// &lt;code>statistics.completed&lt;/code>,
+    /// &lt;code>campaign_common_services_config.nlu_vtsi_config.agent_name&lt;/code>. Nested paths through
+    /// singular message fields are allowed; a path below a repeated or map field is not.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. The mask is applied after the server&amp;apos;s
+    /// role-based redaction, so it never reveals a redacted value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -4609,7 +5864,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4641,7 +5896,9 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4651,7 +5908,9 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4675,9 +5934,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4693,9 +5960,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4710,8 +5985,14 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4725,15 +6006,21 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -4760,13 +6047,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -4792,13 +6085,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -4827,7 +6126,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4849,6 +6148,7 @@ namespace Ondewo.Vtsi {
     public UpdateCampaignRequest(UpdateCampaignRequest other) : this() {
       campaign_ = other.campaign_ != null ? other.campaign_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4880,10 +6180,38 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// Required. Paths WITHOUT a &lt;code>campaign.&lt;/code> prefix. Updatable paths:
     /// &lt;code>display_name&lt;/code>, &lt;code>max_parallel_calls&lt;/code>, &lt;code>max_attempts&lt;/code>,
-    /// &lt;code>retry_delay&lt;/code>. An empty mask, or an unknown, output-only or immutable path, is
-    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming the path. A path in the mask with an unset
-    /// value writes the create default (&lt;code>display_name&lt;/code> empty writes
+    /// &lt;code>retry_delay&lt;/code>, &lt;code>campaign_common_services_config&lt;/code> and
+    /// &lt;code>campaign_sip_caller_config&lt;/code>, the last two also as any nested sub-path (e.g.
+    /// &lt;code>campaign_common_services_config.nlu_vtsi_config.agent_name&lt;/code>,
+    /// &lt;code>campaign_sip_caller_config.sip_headers&lt;/code>). An empty mask, or an unknown, output-only
+    /// or immutable path (a nested path is checked against the message type it names), is rejected
+    /// with &lt;code>INVALID_ARGUMENT&lt;/code> naming the path. A path in the mask with an unset value
+    /// writes the create default (&lt;code>display_name&lt;/code> empty writes
     /// &lt;code>campaign-&amp;lt;campaign_uuid&amp;gt;&lt;/code>).
+    /// &lt;p>The two call-default configs follow &lt;code>FieldMask&lt;/code> semantics:&lt;/p>
+    /// &lt;ul>
+    ///   &lt;li>a path naming a message field (&lt;code>campaign_common_services_config&lt;/code>, or a
+    ///       submessage below it such as &lt;code>campaign_common_services_config.nlu_vtsi_config&lt;/code>)
+    ///       REPLACES that whole message with the one sent; an unset one clears it (clearing
+    ///       &lt;code>campaign_common_services_config&lt;/code> or &lt;code>campaign_sip_caller_config&lt;/code>
+    ///       removes the campaign default);&lt;/li>
+    ///   &lt;li>a path naming a scalar, repeated or map field below them replaces exactly that field; a
+    ///       repeated or map field is replaced as a whole, never appended to;&lt;/li>
+    ///   &lt;li>a field below them that no path names is left untouched, and is not validated either: only
+    ///       what the paths write must be valid;&lt;/li>
+    ///   &lt;li>clearing, by sub-paths, every field of a stored default removes the default (it then reads
+    ///       back unset, exactly as after clearing the whole config);&lt;/li>
+    ///   &lt;li>a path naming a member of a &lt;code>oneof&lt;/code> (e.g.
+    ///       &lt;code>campaign_common_services_config.nlu_vtsi_config.auth_token&lt;/code> in the
+    ///       &lt;code>authentication&lt;/code> oneof) SETS that member, clearing the other members, when the
+    ///       request&amp;apos;s &lt;code>campaign&lt;/code> has that member set; when it does not, the path CLEARS the
+    ///       member if it is the stored active one and changes nothing otherwise (another active member
+    ///       is kept);&lt;/li>
+    ///   &lt;li>a path BELOW a repeated or map field (e.g.
+    ///       &lt;code>campaign_sip_caller_config.sip_headers.X-Foo&lt;/code>) is rejected with
+    ///       &lt;code>INVALID_ARGUMENT&lt;/code> naming it: name the repeated or map field itself;&lt;/li>
+    ///   &lt;li>a path and a sub-path of it in the same mask act as the shorter path alone.&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4891,6 +6219,28 @@ namespace Ondewo.Vtsi {
       get { return updateMask_; }
       set {
         updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code> and WITHOUT a &lt;code>campaign.&lt;/code> prefix, e.g. &lt;code>state&lt;/code>,
+    /// &lt;code>statistics.completed&lt;/code>,
+    /// &lt;code>campaign_common_services_config.nlu_vtsi_config.agent_name&lt;/code>. Nested paths through
+    /// singular message fields are allowed; a path below a repeated or map field is not.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. The mask is applied after the server&amp;apos;s
+    /// role-based redaction, so it never reveals a redacted value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -4911,6 +6261,7 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(Campaign, other.Campaign)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4920,6 +6271,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (campaign_ != null) hash ^= Campaign.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4946,6 +6298,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4964,6 +6320,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4979,6 +6339,9 @@ namespace Ondewo.Vtsi {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5003,6 +6366,12 @@ namespace Ondewo.Vtsi {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5035,6 +6404,13 @@ namespace Ondewo.Vtsi {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5070,6 +6446,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     }
@@ -5096,7 +6479,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5116,12 +6499,15 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteCampaignRequest(DeleteCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      force_ = other.force_;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -5138,6 +6524,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5164,17 +6551,92 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>DeleteCampaignResponse&lt;/code> field paths to populate, e.g.
+    /// &lt;code>deleted_campaign_call_count&lt;/code>. &lt;code>name&lt;/code> is always populated. Unset or empty
+    /// returns every field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. It
+    /// shapes only the response: the campaign is deleted regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "force" field.</summary>
+    public const int ForceFieldNumber = 6;
+    private bool force_;
+    /// <summary>
+    /// Optional. Delete also a campaign that is &lt;code>RUNNING&lt;/code>, &lt;code>STOPPING&lt;/code> or
+    /// &lt;code>HARD_STOPPING&lt;/code>: the server hard stops it (every running call is hung up, see
+    /// &lt;code>HardStopCampaign&lt;/code>) and deletes it once the end of each call is confirmed, waiting at most
+    /// &lt;code>ONDEWO_VTSI_CAMPAIGN_FORCE_DELETE_WAIT_S&lt;/code> (30 s by default, bounded by the client&amp;apos;s
+    /// deadline); otherwise &lt;code>DEADLINE_EXCEEDED&lt;/code>, and the campaign stays hard stopped and undeleted
+    /// (repeat the request). &lt;code>false&lt;/code> (the default): such a campaign is refused with
+    /// &lt;code>FAILED_PRECONDITION&lt;/code>, as before. No effect on a campaign in any other state.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Force {
+      get { return force_; }
+      set {
+        force_ = value;
       }
     }
 
@@ -5183,7 +6645,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5215,7 +6677,10 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (Force != other.Force) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5225,7 +6690,10 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (Force != false) hash ^= Force.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5249,9 +6717,21 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (Force != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Force);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5267,9 +6747,21 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (Force != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Force);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5284,8 +6776,17 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (Force != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5299,15 +6800,24 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.Force != false) {
+        Force = other.Force;
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -5334,13 +6844,23 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            Force = input.ReadBool();
             break;
           }
         }
@@ -5366,13 +6886,23 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            Force = input.ReadBool();
             break;
           }
         }
@@ -5401,7 +6931,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5685,7 +7215,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5708,6 +7238,10 @@ namespace Ondewo.Vtsi {
       states_ = other.states_.Clone();
       displayNameContains_ = other.displayNameContains_;
       displayName_ = other.displayName_;
+      createdAfter_ = other.createdAfter_ != null ? other.createdAfter_.Clone() : null;
+      createdBefore_ = other.createdBefore_ != null ? other.createdBefore_.Clone() : null;
+      createdBy_ = other.createdBy_;
+      modifiedSince_ = other.modifiedSince_ != null ? other.modifiedSince_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5762,6 +7296,72 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "created_after" field.</summary>
+    public const int CreatedAfterFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAfter_;
+    /// <summary>
+    /// Only campaigns created at or after this time (&lt;code>created_at &amp;gt;= created_after&lt;/code>). Unset means
+    /// no lower bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAfter {
+      get { return createdAfter_; }
+      set {
+        createdAfter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "created_before" field.</summary>
+    public const int CreatedBeforeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdBefore_;
+    /// <summary>
+    /// Only campaigns created strictly before this time (&lt;code>created_at &amp;lt; created_before&lt;/code>). Unset
+    /// means no upper bound. When both are set, &lt;code>created_after&lt;/code> must be before
+    /// &lt;code>created_before&lt;/code> (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedBefore {
+      get { return createdBefore_; }
+      set {
+        createdBefore_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "created_by" field.</summary>
+    public const int CreatedByFieldNumber = 6;
+    private string createdBy_ = "";
+    /// <summary>
+    /// Only campaigns whose &lt;code>created_by&lt;/code> is exactly this user (case-sensitive, the value the server
+    /// returns in &lt;code>Campaign.created_by&lt;/code>). Empty means no constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CreatedBy {
+      get { return createdBy_; }
+      set {
+        createdBy_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "modified_since" field.</summary>
+    public const int ModifiedSinceFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp modifiedSince_;
+    /// <summary>
+    /// Only campaigns modified at or after this time (&lt;code>modified_at &amp;gt;= modified_since&lt;/code>; state
+    /// changes made by the server count as modifications). Unset means no constraint. Useful for incremental
+    /// polling with &lt;code>CAMPAIGN_ORDER_BY_MODIFIED_AT_DESC&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ModifiedSince {
+      get { return modifiedSince_; }
+      set {
+        modifiedSince_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5780,6 +7380,10 @@ namespace Ondewo.Vtsi {
       if(!states_.Equals(other.states_)) return false;
       if (DisplayNameContains != other.DisplayNameContains) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (!object.Equals(CreatedAfter, other.CreatedAfter)) return false;
+      if (!object.Equals(CreatedBefore, other.CreatedBefore)) return false;
+      if (CreatedBy != other.CreatedBy) return false;
+      if (!object.Equals(ModifiedSince, other.ModifiedSince)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5790,6 +7394,10 @@ namespace Ondewo.Vtsi {
       hash ^= states_.GetHashCode();
       if (DisplayNameContains.Length != 0) hash ^= DisplayNameContains.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (createdAfter_ != null) hash ^= CreatedAfter.GetHashCode();
+      if (createdBefore_ != null) hash ^= CreatedBefore.GetHashCode();
+      if (CreatedBy.Length != 0) hash ^= CreatedBy.GetHashCode();
+      if (modifiedSince_ != null) hash ^= ModifiedSince.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5817,6 +7425,22 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (createdAfter_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreatedBefore);
+      }
+      if (CreatedBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CreatedBy);
+      }
+      if (modifiedSince_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModifiedSince);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5836,6 +7460,22 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (createdAfter_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreatedBefore);
+      }
+      if (CreatedBy.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(CreatedBy);
+      }
+      if (modifiedSince_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModifiedSince);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5852,6 +7492,18 @@ namespace Ondewo.Vtsi {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (createdAfter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedBefore);
+      }
+      if (CreatedBy.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedBy);
+      }
+      if (modifiedSince_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifiedSince);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5871,6 +7523,27 @@ namespace Ondewo.Vtsi {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.createdAfter_ != null) {
+        if (createdAfter_ == null) {
+          CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAfter.MergeFrom(other.CreatedAfter);
+      }
+      if (other.createdBefore_ != null) {
+        if (createdBefore_ == null) {
+          CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedBefore.MergeFrom(other.CreatedBefore);
+      }
+      if (other.CreatedBy.Length != 0) {
+        CreatedBy = other.CreatedBy;
+      }
+      if (other.modifiedSince_ != null) {
+        if (modifiedSince_ == null) {
+          ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ModifiedSince.MergeFrom(other.ModifiedSince);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5902,6 +7575,31 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (createdAfter_ == null) {
+              CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAfter);
+            break;
+          }
+          case 42: {
+            if (createdBefore_ == null) {
+              CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedBefore);
+            break;
+          }
+          case 50: {
+            CreatedBy = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (modifiedSince_ == null) {
+              ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifiedSince);
             break;
           }
         }
@@ -5936,6 +7634,31 @@ namespace Ondewo.Vtsi {
             DisplayName = input.ReadString();
             break;
           }
+          case 34: {
+            if (createdAfter_ == null) {
+              CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAfter);
+            break;
+          }
+          case 42: {
+            if (createdBefore_ == null) {
+              CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedBefore);
+            break;
+          }
+          case 50: {
+            CreatedBy = input.ReadString();
+            break;
+          }
+          case 58: {
+            if (modifiedSince_ == null) {
+              ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifiedSince);
+            break;
+          }
         }
       }
     }
@@ -5962,7 +7685,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5986,6 +7709,8 @@ namespace Ondewo.Vtsi {
       filter_ = other.filter_ != null ? other.filter_.Clone() : null;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      orderBy_ = other.orderBy_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6031,7 +7756,9 @@ namespace Ondewo.Vtsi {
     private int pageSize_;
     /// <summary>
     /// Optional. Maximum campaigns per page. &lt;code>0&lt;/code> means 20; values above 1000 are clamped
-    /// to 1000; negative values are rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// to 1000 (to 20 when &lt;code>field_mask&lt;/code> names &lt;code>campaign_callers&lt;/code> or
+    /// &lt;code>campaign_callers_truncated&lt;/code>); negative values are rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6072,6 +7799,49 @@ namespace Ondewo.Vtsi {
       pageToken_ = null;
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned &lt;code>Campaign&lt;/code>,
+    /// relative to the &lt;code>Campaign&lt;/code> message (no &lt;code>campaigns.&lt;/code> prefix), as in
+    /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field EXCEPT
+    /// &lt;code>campaign_callers&lt;/code> and &lt;code>campaign_callers_truncated&lt;/code>, which are populated only when
+    /// the mask names them explicitly (a page of full caller lists could exceed gRPC&amp;apos;s default 4 MiB message
+    /// limit). When the mask names either of them, the page holds at most 20 campaigns: a larger
+    /// &lt;code>page_size&lt;/code> is clamped to 20 (not rejected). For the complete, paginated callers of one
+    /// campaign use &lt;code>Calls.ListCallers&lt;/code> with the campaign selector. An unknown path is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Not part of the paging contract: a &lt;code>page_token&lt;/code> stays
+    /// valid with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "order_by" field.</summary>
+    public const int OrderByFieldNumber = 6;
+    private global::Ondewo.Vtsi.CampaignOrderBy orderBy_ = global::Ondewo.Vtsi.CampaignOrderBy.Unspecified;
+    /// <summary>
+    /// Optional. Order of the listing; unset means newest first (&lt;code>CAMPAIGN_ORDER_BY_CREATED_AT_DESC&lt;/code>),
+    /// as before this field existed. Part of the paging contract: a &lt;code>page_token&lt;/code> is valid only with
+    /// the &lt;code>order_by&lt;/code> it was issued for (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise). An unknown value
+    /// is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignOrderBy OrderBy {
+      get { return orderBy_; }
+      set {
+        orderBy_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6091,6 +7861,8 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(Filter, other.Filter)) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (OrderBy != other.OrderBy) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6102,6 +7874,8 @@ namespace Ondewo.Vtsi {
       if (filter_ != null) hash ^= Filter.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (OrderBy != global::Ondewo.Vtsi.CampaignOrderBy.Unspecified) hash ^= OrderBy.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6136,6 +7910,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (OrderBy != global::Ondewo.Vtsi.CampaignOrderBy.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6162,6 +7944,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (OrderBy != global::Ondewo.Vtsi.CampaignOrderBy.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) OrderBy);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6183,6 +7973,12 @@ namespace Ondewo.Vtsi {
       }
       if (HasPageToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (OrderBy != global::Ondewo.Vtsi.CampaignOrderBy.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OrderBy);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6210,6 +8006,15 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasPageToken) {
         PageToken = other.PageToken;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.OrderBy != global::Ondewo.Vtsi.CampaignOrderBy.Unspecified) {
+        OrderBy = other.OrderBy;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6247,6 +8052,17 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            OrderBy = (global::Ondewo.Vtsi.CampaignOrderBy) input.ReadEnum();
             break;
           }
         }
@@ -6287,6 +8103,17 @@ namespace Ondewo.Vtsi {
             PageToken = input.ReadString();
             break;
           }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            OrderBy = (global::Ondewo.Vtsi.CampaignOrderBy) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -6313,7 +8140,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6350,7 +8177,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.Campaign.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.Campaign> campaigns_ = new pbc::RepeatedField<global::Ondewo.Vtsi.Campaign>();
     /// <summary>
-    /// The campaigns of this page, newest first.
+    /// The campaigns of this page, in the request&amp;apos;s &lt;code>order_by&lt;/code> (newest first by default).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6547,7 +8374,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6567,12 +8394,13 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetCampaignStatisticsRequest(GetCampaignStatisticsRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -6589,6 +8417,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6615,17 +8444,53 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6634,7 +8499,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6666,7 +8531,8 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6676,7 +8542,8 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6700,9 +8567,13 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -6718,9 +8589,13 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -6735,8 +8610,11 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6750,15 +8628,15 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -6785,13 +8663,12 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
-            }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
             break;
           }
         }
@@ -6817,13 +8694,12 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
-            }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
             break;
           }
         }
@@ -6852,7 +8728,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6872,17 +8748,26 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListCampaignCallsRequest(ListCampaignCallsRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
       states_ = other.states_.Clone();
       phoneNumber_ = other.phoneNumber_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
       includeAttempts_ = other.includeAttempts_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      phoneNumbers_ = other.phoneNumbers_.Clone();
+      sources_ = other.sources_.Clone();
+      finishTimeMin_ = other.finishTimeMin_ != null ? other.finishTimeMin_.Clone() : null;
+      finishTimeMax_ = other.finishTimeMax_ != null ? other.finishTimeMax_.Clone() : null;
+      modifiedSince_ = other.modifiedSince_ != null ? other.modifiedSince_.Clone() : null;
+      minAttempts_ = other.minAttempts_;
+      campaignCallNames_ = other.campaignCallNames_.Clone();
       switch (other.CampaignCase) {
         case CampaignOneofCase.CampaignName:
           CampaignName = other.CampaignName;
           break;
-        case CampaignOneofCase.CampaignDisplayName:
-          CampaignDisplayName = other.CampaignDisplayName.Clone();
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -6899,6 +8784,7 @@ namespace Ondewo.Vtsi {
     public const int CampaignNameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6924,18 +8810,54 @@ namespace Ondewo.Vtsi {
       }
     }
 
-    /// <summary>Field number for the "campaign_display_name" field.</summary>
-    public const int CampaignDisplayNameFieldNumber = 7;
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 8;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName campaign_display_name = 7&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName CampaignDisplayName {
-      get { return campaignCase_ == CampaignOneofCase.CampaignDisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.CampaignDisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 9;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>campaign_name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -6991,7 +8913,7 @@ namespace Ondewo.Vtsi {
     private string pageToken_;
     /// <summary>
     /// Optional. The &lt;code>next_page_token&lt;/code> of a previous response; valid only with the same
-    /// campaign and filter.
+    /// campaign and filter (every filter field above and below, the 9.1.0 ones included).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7029,12 +8951,150 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned
+    /// &lt;code>CampaignCall&lt;/code>, relative to the &lt;code>CampaignCall&lt;/code> message (no
+    /// &lt;code>campaign_calls.&lt;/code> prefix), e.g. &lt;code>state&lt;/code>, &lt;code>phone_number&lt;/code>,
+    /// &lt;code>attempt_history&lt;/code>. Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field (e.g. &lt;code>attempt_history.outcome&lt;/code>) is not. &lt;code>name&lt;/code>
+    /// is always populated. Unset or empty returns every field. An unknown path is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it. &lt;code>attempt_history&lt;/code> is still populated only with
+    /// &lt;code>include_attempts&lt;/code>: a mask naming it without &lt;code>include_attempts&lt;/code> returns it
+    /// empty. Not part of the paging contract: a &lt;code>page_token&lt;/code> stays valid with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "phone_numbers" field.</summary>
+    public const int PhoneNumbersFieldNumber = 11;
+    private static readonly pb::FieldCodec<string> _repeated_phoneNumbers_codec
+        = pb::FieldCodec.ForString(90);
+    private readonly pbc::RepeatedField<string> phoneNumbers_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Only calls to one of these callees (exact match on &lt;code>phone_number&lt;/code>), at most 1000 entries.
+    /// Combined with &lt;code>phone_number&lt;/code> by OR (a call matches when its number is
+    /// &lt;code>phone_number&lt;/code> or one of these); both empty means every callee.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PhoneNumbers {
+      get { return phoneNumbers_; }
+    }
+
+    /// <summary>Field number for the "sources" field.</summary>
+    public const int SourcesFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallSource> _repeated_sources_codec
+        = pb::FieldCodec.ForEnum(98, x => (int) x, x => (global::Ondewo.Vtsi.CampaignCallSource) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallSource> sources_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallSource>();
+    /// <summary>
+    /// Only calls added in one of these ways. Empty means every source. An unknown value or
+    /// &lt;code>CAMPAIGN_CALL_SOURCE_UNSPECIFIED&lt;/code> is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallSource> Sources {
+      get { return sources_; }
+    }
+
+    /// <summary>Field number for the "finish_time_min" field.</summary>
+    public const int FinishTimeMinFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finishTimeMin_;
+    /// <summary>
+    /// Only calls that finished (&lt;code>finish_time&lt;/code> set: &lt;code>COMPLETED&lt;/code>, &lt;code>FAILED&lt;/code>,
+    /// &lt;code>CANCELLED&lt;/code>) at or after this time. A call without &lt;code>finish_time&lt;/code> never matches
+    /// when this or &lt;code>finish_time_max&lt;/code> is set. Unset means no lower bound.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTimeMin {
+      get { return finishTimeMin_; }
+      set {
+        finishTimeMin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "finish_time_max" field.</summary>
+    public const int FinishTimeMaxFieldNumber = 14;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finishTimeMax_;
+    /// <summary>
+    /// Only calls that finished strictly before this time. Unset means no upper bound. When both are set,
+    /// &lt;code>finish_time_min&lt;/code> must be before &lt;code>finish_time_max&lt;/code> (&lt;code>INVALID_ARGUMENT&lt;/code>
+    /// otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTimeMax {
+      get { return finishTimeMax_; }
+      set {
+        finishTimeMax_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "modified_since" field.</summary>
+    public const int ModifiedSinceFieldNumber = 15;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp modifiedSince_;
+    /// <summary>
+    /// Only calls whose &lt;code>modified_at&lt;/code> is at or after this time, i.e. that changed since then
+    /// (incremental reads). Unset means no constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ModifiedSince {
+      get { return modifiedSince_; }
+      set {
+        modifiedSince_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "min_attempts" field.</summary>
+    public const int MinAttemptsFieldNumber = 16;
+    private int minAttempts_;
+    /// <summary>
+    /// Only calls with at least this many attempts started (&lt;code>attempts &amp;gt;= min_attempts&lt;/code>).
+    /// &lt;code>0&lt;/code> means no constraint; negative is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinAttempts {
+      get { return minAttempts_; }
+      set {
+        minAttempts_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_call_names" field.</summary>
+    public const int CampaignCallNamesFieldNumber = 17;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallNames_codec
+        = pb::FieldCodec.ForString(138);
+    private readonly pbc::RepeatedField<string> campaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Only these calls, by resource name
+    /// (&lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;/campaign_calls/&amp;lt;campaign_call_uuid&amp;gt;&lt;/code>&lt;/pre>),
+    /// at most 1000. Each must be a call name of the request&amp;apos;s campaign: a malformed name or one of
+    /// another campaign is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>; a well-formed name of the campaign
+    /// that names no call matches nothing. Empty means no constraint.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallNames {
+      get { return campaignCallNames_; }
+    }
+
     private object campaign_;
     /// <summary>Enum of possible cases for the "campaign" oneof.</summary>
     public enum CampaignOneofCase {
       None = 0,
       CampaignName = 1,
-      CampaignDisplayName = 7,
+      DisplayName = 8,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7066,12 +9126,21 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (CampaignName != other.CampaignName) return false;
-      if (!object.Equals(CampaignDisplayName, other.CampaignDisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
       if(!states_.Equals(other.states_)) return false;
       if (PhoneNumber != other.PhoneNumber) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (IncludeAttempts != other.IncludeAttempts) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if(!phoneNumbers_.Equals(other.phoneNumbers_)) return false;
+      if(!sources_.Equals(other.sources_)) return false;
+      if (!object.Equals(FinishTimeMin, other.FinishTimeMin)) return false;
+      if (!object.Equals(FinishTimeMax, other.FinishTimeMax)) return false;
+      if (!object.Equals(ModifiedSince, other.ModifiedSince)) return false;
+      if (MinAttempts != other.MinAttempts) return false;
+      if(!campaignCallNames_.Equals(other.campaignCallNames_)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7081,12 +9150,21 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasCampaignName) hash ^= CampaignName.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) hash ^= CampaignDisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       hash ^= states_.GetHashCode();
       if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
       if (IncludeAttempts != false) hash ^= IncludeAttempts.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      hash ^= phoneNumbers_.GetHashCode();
+      hash ^= sources_.GetHashCode();
+      if (finishTimeMin_ != null) hash ^= FinishTimeMin.GetHashCode();
+      if (finishTimeMax_ != null) hash ^= FinishTimeMax.GetHashCode();
+      if (modifiedSince_ != null) hash ^= ModifiedSince.GetHashCode();
+      if (MinAttempts != 0) hash ^= MinAttempts.GetHashCode();
+      hash ^= campaignCallNames_.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7127,10 +9205,37 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(48);
         output.WriteBool(IncludeAttempts);
       }
-      if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) {
-        output.WriteRawTag(58);
-        output.WriteMessage(CampaignDisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
       }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(FieldMask);
+      }
+      phoneNumbers_.WriteTo(output, _repeated_phoneNumbers_codec);
+      sources_.WriteTo(output, _repeated_sources_codec);
+      if (finishTimeMin_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FinishTimeMin);
+      }
+      if (finishTimeMax_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(FinishTimeMax);
+      }
+      if (modifiedSince_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ModifiedSince);
+      }
+      if (MinAttempts != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MinAttempts);
+      }
+      campaignCallNames_.WriteTo(output, _repeated_campaignCallNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7162,10 +9267,37 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(48);
         output.WriteBool(IncludeAttempts);
       }
-      if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) {
-        output.WriteRawTag(58);
-        output.WriteMessage(CampaignDisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
       }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(FieldMask);
+      }
+      phoneNumbers_.WriteTo(ref output, _repeated_phoneNumbers_codec);
+      sources_.WriteTo(ref output, _repeated_sources_codec);
+      if (finishTimeMin_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(FinishTimeMin);
+      }
+      if (finishTimeMax_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(FinishTimeMax);
+      }
+      if (modifiedSince_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(ModifiedSince);
+      }
+      if (MinAttempts != 0) {
+        output.WriteRawTag(128, 1);
+        output.WriteInt32(MinAttempts);
+      }
+      campaignCallNames_.WriteTo(ref output, _repeated_campaignCallNames_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7179,8 +9311,11 @@ namespace Ondewo.Vtsi {
       if (HasCampaignName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
       }
-      if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CampaignDisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
       }
       size += states_.CalculateSize(_repeated_states_codec);
       if (PhoneNumber.Length != 0) {
@@ -7195,6 +9330,24 @@ namespace Ondewo.Vtsi {
       if (IncludeAttempts != false) {
         size += 1 + 1;
       }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      size += phoneNumbers_.CalculateSize(_repeated_phoneNumbers_codec);
+      size += sources_.CalculateSize(_repeated_sources_codec);
+      if (finishTimeMin_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTimeMin);
+      }
+      if (finishTimeMax_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FinishTimeMax);
+      }
+      if (modifiedSince_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifiedSince);
+      }
+      if (MinAttempts != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(MinAttempts);
+      }
+      size += campaignCallNames_.CalculateSize(_repeated_campaignCallNames_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7206,6 +9359,9 @@ namespace Ondewo.Vtsi {
     public void MergeFrom(ListCampaignCallsRequest other) {
       if (other == null) {
         return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
       }
       states_.Add(other.states_);
       if (other.PhoneNumber.Length != 0) {
@@ -7220,15 +9376,42 @@ namespace Ondewo.Vtsi {
       if (other.IncludeAttempts != false) {
         IncludeAttempts = other.IncludeAttempts;
       }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      phoneNumbers_.Add(other.phoneNumbers_);
+      sources_.Add(other.sources_);
+      if (other.finishTimeMin_ != null) {
+        if (finishTimeMin_ == null) {
+          FinishTimeMin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinishTimeMin.MergeFrom(other.FinishTimeMin);
+      }
+      if (other.finishTimeMax_ != null) {
+        if (finishTimeMax_ == null) {
+          FinishTimeMax = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinishTimeMax.MergeFrom(other.FinishTimeMax);
+      }
+      if (other.modifiedSince_ != null) {
+        if (modifiedSince_ == null) {
+          ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ModifiedSince.MergeFrom(other.ModifiedSince);
+      }
+      if (other.MinAttempts != 0) {
+        MinAttempts = other.MinAttempts;
+      }
+      campaignCallNames_.Add(other.campaignCallNames_);
       switch (other.CampaignCase) {
         case CampaignOneofCase.CampaignName:
           CampaignName = other.CampaignName;
           break;
-        case CampaignOneofCase.CampaignDisplayName:
-          if (CampaignDisplayName == null) {
-            CampaignDisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          CampaignDisplayName.MergeFrom(other.CampaignDisplayName);
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -7276,13 +9459,57 @@ namespace Ondewo.Vtsi {
             IncludeAttempts = input.ReadBool();
             break;
           }
-          case 58: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) {
-              subBuilder.MergeFrom(CampaignDisplayName);
+          case 66: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 74: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            CampaignDisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 90: {
+            phoneNumbers_.AddEntriesFrom(input, _repeated_phoneNumbers_codec);
+            break;
+          }
+          case 98:
+          case 96: {
+            sources_.AddEntriesFrom(input, _repeated_sources_codec);
+            break;
+          }
+          case 106: {
+            if (finishTimeMin_ == null) {
+              FinishTimeMin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTimeMin);
+            break;
+          }
+          case 114: {
+            if (finishTimeMax_ == null) {
+              FinishTimeMax = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTimeMax);
+            break;
+          }
+          case 122: {
+            if (modifiedSince_ == null) {
+              ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifiedSince);
+            break;
+          }
+          case 128: {
+            MinAttempts = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            campaignCallNames_.AddEntriesFrom(input, _repeated_campaignCallNames_codec);
             break;
           }
         }
@@ -7329,13 +9556,57 @@ namespace Ondewo.Vtsi {
             IncludeAttempts = input.ReadBool();
             break;
           }
-          case 58: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.CampaignDisplayName) {
-              subBuilder.MergeFrom(CampaignDisplayName);
+          case 66: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 74: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            CampaignDisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 90: {
+            phoneNumbers_.AddEntriesFrom(ref input, _repeated_phoneNumbers_codec);
+            break;
+          }
+          case 98:
+          case 96: {
+            sources_.AddEntriesFrom(ref input, _repeated_sources_codec);
+            break;
+          }
+          case 106: {
+            if (finishTimeMin_ == null) {
+              FinishTimeMin = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTimeMin);
+            break;
+          }
+          case 114: {
+            if (finishTimeMax_ == null) {
+              FinishTimeMax = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinishTimeMax);
+            break;
+          }
+          case 122: {
+            if (modifiedSince_ == null) {
+              ModifiedSince = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModifiedSince);
+            break;
+          }
+          case 128: {
+            MinAttempts = input.ReadInt32();
+            break;
+          }
+          case 138: {
+            campaignCallNames_.AddEntriesFrom(ref input, _repeated_campaignCallNames_codec);
             break;
           }
         }
@@ -7364,7 +9635,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7598,7 +9869,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7618,12 +9889,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartCampaignRequest(StartCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -7640,6 +9913,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7666,17 +9940,73 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code>, exactly as
+    /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before the state is changed. It shapes only the
+    /// response: the state change is applied regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -7685,7 +10015,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7717,7 +10047,9 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7727,7 +10059,9 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7751,9 +10085,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -7769,9 +10111,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7786,8 +10136,14 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7801,15 +10157,21 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -7836,13 +10198,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -7868,13 +10236,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -7903,7 +10277,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7923,12 +10297,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StopCampaignRequest(StopCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -7945,6 +10321,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7971,17 +10348,73 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code>, exactly as
+    /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before the state is changed. It shapes only the
+    /// response: the state change is applied regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -7990,7 +10423,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8022,7 +10455,9 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8032,7 +10467,9 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8056,9 +10493,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8074,9 +10519,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8091,8 +10544,14 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8106,15 +10565,21 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -8141,13 +10606,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8173,13 +10644,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8208,7 +10685,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8228,12 +10705,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HardStopCampaignRequest(HardStopCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -8250,6 +10729,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8276,17 +10756,73 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code>, exactly as
+    /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before the state is changed. It shapes only the
+    /// response: the state change is applied regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -8295,7 +10831,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8327,7 +10863,9 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8337,7 +10875,9 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8361,9 +10901,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8379,9 +10927,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8396,8 +10952,14 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8411,15 +10973,21 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -8446,13 +11014,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8478,13 +11052,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8513,7 +11093,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8533,12 +11113,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResumeCampaignRequest(ResumeCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          DisplayName = other.DisplayName.Clone();
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -8555,6 +11137,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     /// <summary>
     /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8581,17 +11164,73 @@ namespace Ondewo.Vtsi {
     }
 
     /// <summary>Field number for the "display_name" field.</summary>
-    public const int DisplayNameFieldNumber = 2;
+    public const int DisplayNameFieldNumber = 3;
     /// <summary>
-    /// The campaign with this display name.
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required. Replaces the 9.0.0
+    /// &lt;code>CampaignDisplayName display_name = 2&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ondewo.Vtsi.CampaignDisplayName DisplayName {
-      get { return campaignCase_ == CampaignOneofCase.DisplayName ? (global::Ondewo.Vtsi.CampaignDisplayName) campaign_ : null; }
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
       set {
-        campaign_ = value;
-        campaignCase_ = value == null ? CampaignOneofCase.None : CampaignOneofCase.DisplayName;
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 4;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Campaign&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>Campaign&lt;/code>, exactly as
+    /// &lt;a href="index.html#ondewo.vtsi.GetCampaignRequest">GetCampaignRequest.field_mask&lt;/a>.
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before the state is changed. It shapes only the
+    /// response: the state change is applied regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -8600,7 +11239,7 @@ namespace Ondewo.Vtsi {
     public enum CampaignOneofCase {
       None = 0,
       Name = 1,
-      DisplayName = 2,
+      DisplayName = 3,
     }
     private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8632,7 +11271,9 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
-      if (!object.Equals(DisplayName, other.DisplayName)) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       if (CampaignCase != other.CampaignCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8642,7 +11283,9 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (HasName) hash ^= Name.GetHashCode();
-      if (campaignCase_ == CampaignOneofCase.DisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       hash ^= (int) campaignCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8666,9 +11309,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -8684,9 +11335,17 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        output.WriteRawTag(18);
-        output.WriteMessage(DisplayName);
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -8701,8 +11360,14 @@ namespace Ondewo.Vtsi {
       if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (campaignCase_ == CampaignOneofCase.DisplayName) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DisplayName);
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8716,15 +11381,21 @@ namespace Ondewo.Vtsi {
       if (other == null) {
         return;
       }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
       switch (other.CampaignCase) {
         case CampaignOneofCase.Name:
           Name = other.Name;
           break;
         case CampaignOneofCase.DisplayName:
-          if (DisplayName == null) {
-            DisplayName = new global::Ondewo.Vtsi.CampaignDisplayName();
-          }
-          DisplayName.MergeFrom(other.DisplayName);
+          DisplayName = other.DisplayName;
           break;
       }
 
@@ -8751,13 +11422,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8783,13 +11460,19 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
-          case 18: {
-            global::Ondewo.Vtsi.CampaignDisplayName subBuilder = new global::Ondewo.Vtsi.CampaignDisplayName();
-            if (campaignCase_ == CampaignOneofCase.DisplayName) {
-              subBuilder.MergeFrom(DisplayName);
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
-            input.ReadMessage(subBuilder);
-            DisplayName = subBuilder;
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -8818,7 +11501,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8842,6 +11525,7 @@ namespace Ondewo.Vtsi {
       campaignNames_ = other.campaignNames_.Clone();
       campaignDisplayNames_ = other.campaignDisplayNames_.Clone();
       includeCalls_ = other.includeCalls_;
+      states_ = other.states_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8915,6 +11599,27 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "states" field.</summary>
+    public const int StatesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignState> _repeated_states_codec
+        = pb::FieldCodec.ForEnum(42, x => (int) x, x => (global::Ondewo.Vtsi.CampaignState) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignState> states_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignState>();
+    /// <summary>
+    /// Only campaigns in one of these states. Empty means every state. Combined with
+    /// &lt;code>campaign_names&lt;/code> / &lt;code>campaign_display_names&lt;/code> by AND. The snapshot carries the
+    /// matching campaigns in a selected state. Later, a campaign that ENTERS a selected state is sent (with
+    /// every field, as in a snapshot), and a campaign that LEAVES the selection is sent once more with its new
+    /// state and then no longer (so a client sees why it left); a campaign deleted while selected is reported
+    /// in &lt;code>deleted_campaign_names&lt;/code>. With &lt;code>include_calls&lt;/code>, only calls of campaigns that are
+    /// selected at the moment are sent. &lt;code>CAMPAIGN_STATE_UNSPECIFIED&lt;/code> or an unknown value is rejected
+    /// with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignState> States {
+      get { return states_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8934,6 +11639,7 @@ namespace Ondewo.Vtsi {
       if(!campaignNames_.Equals(other.campaignNames_)) return false;
       if(!campaignDisplayNames_.Equals(other.campaignDisplayNames_)) return false;
       if (IncludeCalls != other.IncludeCalls) return false;
+      if(!states_.Equals(other.states_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8945,6 +11651,7 @@ namespace Ondewo.Vtsi {
       hash ^= campaignNames_.GetHashCode();
       hash ^= campaignDisplayNames_.GetHashCode();
       if (IncludeCalls != false) hash ^= IncludeCalls.GetHashCode();
+      hash ^= states_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8973,6 +11680,7 @@ namespace Ondewo.Vtsi {
         output.WriteBool(IncludeCalls);
       }
       campaignDisplayNames_.WriteTo(output, _repeated_campaignDisplayNames_codec);
+      states_.WriteTo(output, _repeated_states_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8993,6 +11701,7 @@ namespace Ondewo.Vtsi {
         output.WriteBool(IncludeCalls);
       }
       campaignDisplayNames_.WriteTo(ref output, _repeated_campaignDisplayNames_codec);
+      states_.WriteTo(ref output, _repeated_states_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9011,6 +11720,7 @@ namespace Ondewo.Vtsi {
       if (IncludeCalls != false) {
         size += 1 + 1;
       }
+      size += states_.CalculateSize(_repeated_states_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -9031,6 +11741,7 @@ namespace Ondewo.Vtsi {
       if (other.IncludeCalls != false) {
         IncludeCalls = other.IncludeCalls;
       }
+      states_.Add(other.states_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9064,6 +11775,11 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             campaignDisplayNames_.AddEntriesFrom(input, _repeated_campaignDisplayNames_codec);
+            break;
+          }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(input, _repeated_states_codec);
             break;
           }
         }
@@ -9101,6 +11817,11 @@ namespace Ondewo.Vtsi {
             campaignDisplayNames_.AddEntriesFrom(ref input, _repeated_campaignDisplayNames_codec);
             break;
           }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(ref input, _repeated_states_codec);
+            break;
+          }
         }
       }
     }
@@ -9127,7 +11848,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9152,6 +11873,7 @@ namespace Ondewo.Vtsi {
       deletedCampaignNames_ = other.deletedCampaignNames_.Clone();
       snapshot_ = other.snapshot_;
       endReason_ = other.endReason_;
+      endReasonType_ = other.endReasonType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9167,7 +11889,9 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.Campaign.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.Campaign> campaigns_ = new pbc::RepeatedField<global::Ondewo.Vtsi.Campaign>();
     /// <summary>
-    /// Campaigns that changed (every matching campaign in the snapshot), with their statistics.
+    /// Campaigns that changed (every matching campaign in the snapshot), with their statistics. The call
+    /// defaults &lt;code>campaign_common_services_config&lt;/code> and &lt;code>campaign_sip_caller_config&lt;/code>
+    /// are always left unset here; read them with &lt;code>GetCampaign&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9223,7 +11947,7 @@ namespace Ondewo.Vtsi {
     private string endReason_ = "";
     /// <summary>
     /// Set on the last message when the server ended the stream, e.g. at the maximum stream
-    /// duration. Empty otherwise.
+    /// duration. Empty otherwise. Human-readable; branch on &lt;code>end_reason_type&lt;/code> instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9231,6 +11955,24 @@ namespace Ondewo.Vtsi {
       get { return endReason_; }
       set {
         endReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "end_reason_type" field.</summary>
+    public const int EndReasonTypeFieldNumber = 6;
+    private global::Ondewo.Vtsi.StreamEndReason endReasonType_ = global::Ondewo.Vtsi.StreamEndReason.Unspecified;
+    /// <summary>
+    /// Set on the last message when the server ended the stream, next to &lt;code>end_reason&lt;/code>:
+    /// &lt;code>STREAM_END_REASON_MAX_DURATION&lt;/code>, &lt;code>STREAM_END_REASON_SERVER_SHUTDOWN&lt;/code> or
+    /// &lt;code>STREAM_END_REASON_PROJECT_DELETED&lt;/code>. &lt;code>STREAM_END_REASON_UNSPECIFIED&lt;/code> on every other
+    /// message (and on the last message of a server that predates this field).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.StreamEndReason EndReasonType {
+      get { return endReasonType_; }
+      set {
+        endReasonType_ = value;
       }
     }
 
@@ -9254,6 +11996,7 @@ namespace Ondewo.Vtsi {
       if(!deletedCampaignNames_.Equals(other.deletedCampaignNames_)) return false;
       if (Snapshot != other.Snapshot) return false;
       if (EndReason != other.EndReason) return false;
+      if (EndReasonType != other.EndReasonType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9266,6 +12009,7 @@ namespace Ondewo.Vtsi {
       hash ^= deletedCampaignNames_.GetHashCode();
       if (Snapshot != false) hash ^= Snapshot.GetHashCode();
       if (EndReason.Length != 0) hash ^= EndReason.GetHashCode();
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) hash ^= EndReasonType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9295,6 +12039,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(42);
         output.WriteString(EndReason);
       }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) EndReasonType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9316,6 +12064,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(42);
         output.WriteString(EndReason);
       }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) EndReasonType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9334,6 +12086,9 @@ namespace Ondewo.Vtsi {
       }
       if (EndReason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EndReason);
+      }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndReasonType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9355,6 +12110,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.EndReason.Length != 0) {
         EndReason = other.EndReason;
+      }
+      if (other.EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        EndReasonType = other.EndReasonType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9395,6 +12153,10 @@ namespace Ondewo.Vtsi {
             EndReason = input.ReadString();
             break;
           }
+          case 48: {
+            EndReasonType = (global::Ondewo.Vtsi.StreamEndReason) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -9432,6 +12194,2751 @@ namespace Ondewo.Vtsi {
           }
           case 42: {
             EndReason = input.ReadString();
+            break;
+          }
+          case 48: {
+            EndReasonType = (global::Ondewo.Vtsi.StreamEndReason) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.GetCampaignCall">Campaigns.GetCampaignCall&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetCampaignCallRequest : pb::IMessage<GetCampaignCallRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetCampaignCallRequest> _parser = new pb::MessageParser<GetCampaignCallRequest>(() => new GetCampaignCallRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetCampaignCallRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCampaignCallRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCampaignCallRequest(GetCampaignCallRequest other) : this() {
+      name_ = other.name_;
+      includeAttempts_ = other.includeAttempts_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetCampaignCallRequest Clone() {
+      return new GetCampaignCallRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Resource name of the campaign call.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;/campaign_calls/&amp;lt;campaign_call_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>; authorization is checked on its
+    /// project segment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "include_attempts" field.</summary>
+    public const int IncludeAttemptsFieldNumber = 2;
+    private bool includeAttempts_;
+    /// <summary>
+    /// Populate &lt;code>CampaignCall.attempt_history&lt;/code> (every attempt, oldest first). &lt;code>false&lt;/code>
+    /// (the default) leaves it empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeAttempts {
+      get { return includeAttempts_; }
+      set {
+        includeAttempts_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>CampaignCall&lt;/code> field paths to populate, relative to the
+    /// returned &lt;code>CampaignCall&lt;/code>, e.g. &lt;code>state&lt;/code>, &lt;code>attempts&lt;/code>,
+    /// &lt;code>attempt_history&lt;/code>. A path below a repeated field (e.g. &lt;code>attempt_history.outcome&lt;/code>)
+    /// is rejected. &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path
+    /// is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. &lt;code>attempt_history&lt;/code> is still populated
+    /// only with &lt;code>include_attempts&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetCampaignCallRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetCampaignCallRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (IncludeAttempts != other.IncludeAttempts) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (IncludeAttempts != false) hash ^= IncludeAttempts.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (IncludeAttempts != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludeAttempts);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (IncludeAttempts != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IncludeAttempts);
+      }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (IncludeAttempts != false) {
+        size += 1 + 1;
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetCampaignCallRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.IncludeAttempts != false) {
+        IncludeAttempts = other.IncludeAttempts;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            IncludeAttempts = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            IncludeAttempts = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// One campaign call a &lt;code>CancelCampaignCalls&lt;/code> / &lt;code>RetryCampaignCalls&lt;/code> request did not act on,
+  /// and why. A refusal is a result, not an error.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CampaignCallRefusal : pb::IMessage<CampaignCallRefusal>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CampaignCallRefusal> _parser = new pb::MessageParser<CampaignCallRefusal>(() => new CampaignCallRefusal());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CampaignCallRefusal> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallRefusal() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallRefusal(CampaignCallRefusal other) : this() {
+      campaignCallName_ = other.campaignCallName_;
+      state_ = other.state_;
+      reason_ = other.reason_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignCallRefusal Clone() {
+      return new CampaignCallRefusal(this);
+    }
+
+    /// <summary>Field number for the "campaign_call_name" field.</summary>
+    public const int CampaignCallNameFieldNumber = 1;
+    private string campaignCallName_ = "";
+    /// <summary>
+    /// Resource name of the campaign call, as named in the request or as matched by its states.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignCallName {
+      get { return campaignCallName_; }
+      set {
+        campaignCallName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 2;
+    private global::Ondewo.Vtsi.CampaignCallState state_ = global::Ondewo.Vtsi.CampaignCallState.Unspecified;
+    /// <summary>
+    /// State of the call when it was refused; &lt;code>CAMPAIGN_CALL_STATE_UNSPECIFIED&lt;/code> for
+    /// &lt;code>reason=not-found&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignCallState State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 3;
+    private string reason_ = "";
+    /// <summary>
+    /// Why, a stable kebab-case token: &lt;code>attempt-in-progress&lt;/code> (the call is
+    /// &lt;code>DISPATCHING&lt;/code> or &lt;code>IN_PROGRESS&lt;/code>), &lt;code>already-finished&lt;/code> (cancel: the call is
+    /// &lt;code>COMPLETED&lt;/code>, &lt;code>FAILED&lt;/code> or &lt;code>CANCELLED&lt;/code>), &lt;code>not-finished&lt;/code> (retry:
+    /// the call is not &lt;code>FAILED&lt;/code> or &lt;code>CANCELLED&lt;/code>), &lt;code>completed&lt;/code> (retry: a
+    /// &lt;code>COMPLETED&lt;/code> call is never retried), &lt;code>state-not-selected&lt;/code> (the named call is not in
+    /// one of the request&amp;apos;s &lt;code>states&lt;/code>), &lt;code>not-found&lt;/code> (no such call in the campaign).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reason {
+      get { return reason_; }
+      set {
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CampaignCallRefusal);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CampaignCallRefusal other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CampaignCallName != other.CampaignCallName) return false;
+      if (State != other.State) return false;
+      if (Reason != other.Reason) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CampaignCallName.Length != 0) hash ^= CampaignCallName.GetHashCode();
+      if (State != global::Ondewo.Vtsi.CampaignCallState.Unspecified) hash ^= State.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CampaignCallName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignCallName);
+      }
+      if (State != global::Ondewo.Vtsi.CampaignCallState.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Reason);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CampaignCallName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignCallName);
+      }
+      if (State != global::Ondewo.Vtsi.CampaignCallState.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) State);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Reason);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CampaignCallName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignCallName);
+      }
+      if (State != global::Ondewo.Vtsi.CampaignCallState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (Reason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CampaignCallRefusal other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CampaignCallName.Length != 0) {
+        CampaignCallName = other.CampaignCallName;
+      }
+      if (other.State != global::Ondewo.Vtsi.CampaignCallState.Unspecified) {
+        State = other.State;
+      }
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CampaignCallName = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Ondewo.Vtsi.CampaignCallState) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Reason = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CampaignCallName = input.ReadString();
+            break;
+          }
+          case 16: {
+            State = (global::Ondewo.Vtsi.CampaignCallState) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Reason = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.CancelCampaignCalls">Campaigns.CancelCampaignCalls&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelCampaignCallsRequest : pb::IMessage<CancelCampaignCallsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelCampaignCallsRequest> _parser = new pb::MessageParser<CancelCampaignCallsRequest>(() => new CancelCampaignCallsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelCampaignCallsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsRequest(CancelCampaignCallsRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      campaignCallNames_ = other.campaignCallNames_.Clone();
+      states_ = other.states_.Clone();
+      switch (other.CampaignCase) {
+        case CampaignOneofCase.Name:
+          Name = other.Name;
+          break;
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsRequest Clone() {
+      return new CancelCampaignCallsRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    /// <summary>
+    /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return HasName ? (string) campaign_ : ""; }
+      set {
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.Name;
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return campaignCase_ == CampaignOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    /// <summary>
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
+      set {
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 3;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "campaign_call_names" field.</summary>
+    public const int CampaignCallNamesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallNames_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> campaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The calls to cancel, by resource name
+    /// (&lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;/campaign_calls/&amp;lt;campaign_call_uuid&amp;gt;&lt;/code>&lt;/pre>),
+    /// at most 1000, duplicates ignored. Each must be a call name of this campaign (a malformed name or one
+    /// of another campaign is &lt;code>INVALID_ARGUMENT&lt;/code>). Empty with non-empty &lt;code>states&lt;/code> means
+    /// every call in those states.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallNames {
+      get { return campaignCallNames_; }
+    }
+
+    /// <summary>Field number for the "states" field.</summary>
+    public const int StatesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallState> _repeated_states_codec
+        = pb::FieldCodec.ForEnum(42, x => (int) x, x => (global::Ondewo.Vtsi.CampaignCallState) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> states_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState>();
+    /// <summary>
+    /// Cancel the calls in one of these states: only &lt;code>CAMPAIGN_CALL_STATE_NOT_STARTED&lt;/code> and
+    /// &lt;code>CAMPAIGN_CALL_STATE_RETRY_PENDING&lt;/code> are allowed (&lt;code>INVALID_ARGUMENT&lt;/code> for any other
+    /// value). With &lt;code>campaign_call_names&lt;/code>, narrows the named calls (a named call in another state is
+    /// refused with &lt;code>reason=state-not-selected&lt;/code>). At least one of the two fields must be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> States {
+      get { return states_; }
+    }
+
+    private object campaign_;
+    /// <summary>Enum of possible cases for the "campaign" oneof.</summary>
+    public enum CampaignOneofCase {
+      None = 0,
+      Name = 1,
+      DisplayName = 2,
+    }
+    private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignOneofCase CampaignCase {
+      get { return campaignCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCampaign() {
+      campaignCase_ = CampaignOneofCase.None;
+      campaign_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelCampaignCallsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelCampaignCallsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!campaignCallNames_.Equals(other.campaignCallNames_)) return false;
+      if(!states_.Equals(other.states_)) return false;
+      if (CampaignCase != other.CampaignCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasName) hash ^= Name.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= campaignCallNames_.GetHashCode();
+      hash ^= states_.GetHashCode();
+      hash ^= (int) campaignCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      campaignCallNames_.WriteTo(output, _repeated_campaignCallNames_codec);
+      states_.WriteTo(output, _repeated_states_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      campaignCallNames_.WriteTo(ref output, _repeated_campaignCallNames_codec);
+      states_.WriteTo(ref output, _repeated_states_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += campaignCallNames_.CalculateSize(_repeated_campaignCallNames_codec);
+      size += states_.CalculateSize(_repeated_states_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelCampaignCallsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      campaignCallNames_.Add(other.campaignCallNames_);
+      states_.Add(other.states_);
+      switch (other.CampaignCase) {
+        case CampaignOneofCase.Name:
+          Name = other.Name;
+          break;
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(input, _repeated_campaignCallNames_codec);
+            break;
+          }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(input, _repeated_states_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(ref input, _repeated_campaignCallNames_codec);
+            break;
+          }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(ref input, _repeated_states_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.CancelCampaignCalls">Campaigns.CancelCampaignCalls&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelCampaignCallsResponse : pb::IMessage<CancelCampaignCallsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelCampaignCallsResponse> _parser = new pb::MessageParser<CancelCampaignCallsResponse>(() => new CancelCampaignCallsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelCampaignCallsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsResponse(CancelCampaignCallsResponse other) : this() {
+      campaignName_ = other.campaignName_;
+      cancelledCampaignCallNames_ = other.cancelledCampaignCallNames_.Clone();
+      refused_ = other.refused_.Clone();
+      remainingCount_ = other.remainingCount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelCampaignCallsResponse Clone() {
+      return new CancelCampaignCallsResponse(this);
+    }
+
+    /// <summary>Field number for the "campaign_name" field.</summary>
+    public const int CampaignNameFieldNumber = 1;
+    private string campaignName_ = "";
+    /// <summary>
+    /// Resource name of the campaign.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignName {
+      get { return campaignName_; }
+      set {
+        campaignName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cancelled_campaign_call_names" field.</summary>
+    public const int CancelledCampaignCallNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_cancelledCampaignCallNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> cancelledCampaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The calls this request cancelled (now &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code>), by
+    /// &lt;code>position&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CancelledCampaignCallNames {
+      get { return cancelledCampaignCallNames_; }
+    }
+
+    /// <summary>Field number for the "refused" field.</summary>
+    public const int RefusedFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallRefusal> _repeated_refused_codec
+        = pb::FieldCodec.ForMessage(26, global::Ondewo.Vtsi.CampaignCallRefusal.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal> refused_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal>();
+    /// <summary>
+    /// The selected calls this request did not cancel, with the reason, by &lt;code>position&lt;/code> (refusals of
+    /// unknown names last, in request order).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal> Refused {
+      get { return refused_; }
+    }
+
+    /// <summary>Field number for the "remaining_count" field.</summary>
+    public const int RemainingCountFieldNumber = 4;
+    private int remainingCount_;
+    /// <summary>
+    /// With &lt;code>states&lt;/code> only (no names): how many further calls matched after the first 1000 that
+    /// this request acted on. Repeat the request while it is above 0. &lt;code>0&lt;/code> otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RemainingCount {
+      get { return remainingCount_; }
+      set {
+        remainingCount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelCampaignCallsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelCampaignCallsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CampaignName != other.CampaignName) return false;
+      if(!cancelledCampaignCallNames_.Equals(other.cancelledCampaignCallNames_)) return false;
+      if(!refused_.Equals(other.refused_)) return false;
+      if (RemainingCount != other.RemainingCount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CampaignName.Length != 0) hash ^= CampaignName.GetHashCode();
+      hash ^= cancelledCampaignCallNames_.GetHashCode();
+      hash ^= refused_.GetHashCode();
+      if (RemainingCount != 0) hash ^= RemainingCount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignName);
+      }
+      cancelledCampaignCallNames_.WriteTo(output, _repeated_cancelledCampaignCallNames_codec);
+      refused_.WriteTo(output, _repeated_refused_codec);
+      if (RemainingCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RemainingCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignName);
+      }
+      cancelledCampaignCallNames_.WriteTo(ref output, _repeated_cancelledCampaignCallNames_codec);
+      refused_.WriteTo(ref output, _repeated_refused_codec);
+      if (RemainingCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RemainingCount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CampaignName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
+      }
+      size += cancelledCampaignCallNames_.CalculateSize(_repeated_cancelledCampaignCallNames_codec);
+      size += refused_.CalculateSize(_repeated_refused_codec);
+      if (RemainingCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RemainingCount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelCampaignCallsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CampaignName.Length != 0) {
+        CampaignName = other.CampaignName;
+      }
+      cancelledCampaignCallNames_.Add(other.cancelledCampaignCallNames_);
+      refused_.Add(other.refused_);
+      if (other.RemainingCount != 0) {
+        RemainingCount = other.RemainingCount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 18: {
+            cancelledCampaignCallNames_.AddEntriesFrom(input, _repeated_cancelledCampaignCallNames_codec);
+            break;
+          }
+          case 26: {
+            refused_.AddEntriesFrom(input, _repeated_refused_codec);
+            break;
+          }
+          case 32: {
+            RemainingCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 18: {
+            cancelledCampaignCallNames_.AddEntriesFrom(ref input, _repeated_cancelledCampaignCallNames_codec);
+            break;
+          }
+          case 26: {
+            refused_.AddEntriesFrom(ref input, _repeated_refused_codec);
+            break;
+          }
+          case 32: {
+            RemainingCount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.RetryCampaignCalls">Campaigns.RetryCampaignCalls&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RetryCampaignCallsRequest : pb::IMessage<RetryCampaignCallsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetryCampaignCallsRequest> _parser = new pb::MessageParser<RetryCampaignCallsRequest>(() => new RetryCampaignCallsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RetryCampaignCallsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsRequest(RetryCampaignCallsRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      campaignCallNames_ = other.campaignCallNames_.Clone();
+      states_ = other.states_.Clone();
+      additionalAttempts_ = other.additionalAttempts_;
+      notBefore_ = other.notBefore_ != null ? other.notBefore_.Clone() : null;
+      switch (other.CampaignCase) {
+        case CampaignOneofCase.Name:
+          Name = other.Name;
+          break;
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsRequest Clone() {
+      return new RetryCampaignCallsRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    /// <summary>
+    /// Resource name of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return HasName ? (string) campaign_ : ""; }
+      set {
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.Name;
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return campaignCase_ == CampaignOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    /// <summary>
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return HasDisplayName ? (string) campaign_ : ""; }
+      set {
+        campaign_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        campaignCase_ = CampaignOneofCase.DisplayName;
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return campaignCase_ == CampaignOneofCase.DisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      if (HasDisplayName) {
+        ClearCampaign();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 3;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>name&lt;/code>: when set, it must be the project of the campaign
+    /// (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "campaign_call_names" field.</summary>
+    public const int CampaignCallNamesFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_campaignCallNames_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> campaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The calls to requeue, by resource name, at most 1000, duplicates ignored; same rules as
+    /// &lt;code>CancelCampaignCallsRequest.campaign_call_names&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CampaignCallNames {
+      get { return campaignCallNames_; }
+    }
+
+    /// <summary>Field number for the "states" field.</summary>
+    public const int StatesFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallState> _repeated_states_codec
+        = pb::FieldCodec.ForEnum(42, x => (int) x, x => (global::Ondewo.Vtsi.CampaignCallState) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> states_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState>();
+    /// <summary>
+    /// Requeue the calls in one of these states: only &lt;code>CAMPAIGN_CALL_STATE_FAILED&lt;/code> and
+    /// &lt;code>CAMPAIGN_CALL_STATE_CANCELLED&lt;/code> are allowed (&lt;code>INVALID_ARGUMENT&lt;/code> for any other
+    /// value). With &lt;code>campaign_call_names&lt;/code>, narrows the named calls. At least one of the two fields
+    /// must be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> States {
+      get { return states_; }
+    }
+
+    /// <summary>Field number for the "additional_attempts" field.</summary>
+    public const int AdditionalAttemptsFieldNumber = 6;
+    private int additionalAttempts_;
+    /// <summary>
+    /// Attempts each requeued call may make from now on, on top of the attempts it already made: its attempt
+    /// limit becomes &lt;code>attempts + additional_attempts&lt;/code> (never below the campaign&amp;apos;s live
+    /// &lt;code>max_attempts&lt;/code>), reported as &lt;code>CampaignCall.max_attempts&lt;/code>. &lt;code>0&lt;/code> means 1;
+    /// allowed 0 to &lt;code>ONDEWO_VTSI_CAMPAIGN_MAX_ATTEMPTS_LIMIT&lt;/code> (10 by default). Between the new
+    /// attempts the campaign&amp;apos;s &lt;code>retry_delay&lt;/code> applies as usual.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AdditionalAttempts {
+      get { return additionalAttempts_; }
+      set {
+        additionalAttempts_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "not_before" field.</summary>
+    public const int NotBeforeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp notBefore_;
+    /// <summary>
+    /// Optional. The first new attempt starts no earlier than this time (and, with a
+    /// &lt;code>calling_window&lt;/code>, inside a slot). Unset or in the past means as soon as the campaign has a
+    /// free slot. At most 7 days ahead (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp NotBefore {
+      get { return notBefore_; }
+      set {
+        notBefore_ = value;
+      }
+    }
+
+    private object campaign_;
+    /// <summary>Enum of possible cases for the "campaign" oneof.</summary>
+    public enum CampaignOneofCase {
+      None = 0,
+      Name = 1,
+      DisplayName = 2,
+    }
+    private CampaignOneofCase campaignCase_ = CampaignOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CampaignOneofCase CampaignCase {
+      get { return campaignCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCampaign() {
+      campaignCase_ = CampaignOneofCase.None;
+      campaign_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RetryCampaignCallsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RetryCampaignCallsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if(!campaignCallNames_.Equals(other.campaignCallNames_)) return false;
+      if(!states_.Equals(other.states_)) return false;
+      if (AdditionalAttempts != other.AdditionalAttempts) return false;
+      if (!object.Equals(NotBefore, other.NotBefore)) return false;
+      if (CampaignCase != other.CampaignCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasName) hash ^= Name.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      hash ^= campaignCallNames_.GetHashCode();
+      hash ^= states_.GetHashCode();
+      if (AdditionalAttempts != 0) hash ^= AdditionalAttempts.GetHashCode();
+      if (notBefore_ != null) hash ^= NotBefore.GetHashCode();
+      hash ^= (int) campaignCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      campaignCallNames_.WriteTo(output, _repeated_campaignCallNames_codec);
+      states_.WriteTo(output, _repeated_states_codec);
+      if (AdditionalAttempts != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(AdditionalAttempts);
+      }
+      if (notBefore_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(NotBefore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasName) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      campaignCallNames_.WriteTo(ref output, _repeated_campaignCallNames_codec);
+      states_.WriteTo(ref output, _repeated_states_codec);
+      if (AdditionalAttempts != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(AdditionalAttempts);
+      }
+      if (notBefore_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(NotBefore);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      size += campaignCallNames_.CalculateSize(_repeated_campaignCallNames_codec);
+      size += states_.CalculateSize(_repeated_states_codec);
+      if (AdditionalAttempts != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AdditionalAttempts);
+      }
+      if (notBefore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotBefore);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RetryCampaignCallsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      campaignCallNames_.Add(other.campaignCallNames_);
+      states_.Add(other.states_);
+      if (other.AdditionalAttempts != 0) {
+        AdditionalAttempts = other.AdditionalAttempts;
+      }
+      if (other.notBefore_ != null) {
+        if (notBefore_ == null) {
+          NotBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        NotBefore.MergeFrom(other.NotBefore);
+      }
+      switch (other.CampaignCase) {
+        case CampaignOneofCase.Name:
+          Name = other.Name;
+          break;
+        case CampaignOneofCase.DisplayName:
+          DisplayName = other.DisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(input, _repeated_campaignCallNames_codec);
+            break;
+          }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(input, _repeated_states_codec);
+            break;
+          }
+          case 48: {
+            AdditionalAttempts = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            if (notBefore_ == null) {
+              NotBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NotBefore);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            campaignCallNames_.AddEntriesFrom(ref input, _repeated_campaignCallNames_codec);
+            break;
+          }
+          case 42:
+          case 40: {
+            states_.AddEntriesFrom(ref input, _repeated_states_codec);
+            break;
+          }
+          case 48: {
+            AdditionalAttempts = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            if (notBefore_ == null) {
+              NotBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NotBefore);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.RetryCampaignCalls">Campaigns.RetryCampaignCalls&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RetryCampaignCallsResponse : pb::IMessage<RetryCampaignCallsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RetryCampaignCallsResponse> _parser = new pb::MessageParser<RetryCampaignCallsResponse>(() => new RetryCampaignCallsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RetryCampaignCallsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsResponse(RetryCampaignCallsResponse other) : this() {
+      campaignName_ = other.campaignName_;
+      requeuedCampaignCallNames_ = other.requeuedCampaignCallNames_.Clone();
+      refused_ = other.refused_.Clone();
+      remainingCount_ = other.remainingCount_;
+      campaignState_ = other.campaignState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RetryCampaignCallsResponse Clone() {
+      return new RetryCampaignCallsResponse(this);
+    }
+
+    /// <summary>Field number for the "campaign_name" field.</summary>
+    public const int CampaignNameFieldNumber = 1;
+    private string campaignName_ = "";
+    /// <summary>
+    /// Resource name of the campaign.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CampaignName {
+      get { return campaignName_; }
+      set {
+        campaignName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requeued_campaign_call_names" field.</summary>
+    public const int RequeuedCampaignCallNamesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_requeuedCampaignCallNames_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> requeuedCampaignCallNames_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The calls this request requeued (now &lt;code>RETRY_PENDING&lt;/code> or &lt;code>NOT_STARTED&lt;/code>), by
+    /// &lt;code>position&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RequeuedCampaignCallNames {
+      get { return requeuedCampaignCallNames_; }
+    }
+
+    /// <summary>Field number for the "refused" field.</summary>
+    public const int RefusedFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallRefusal> _repeated_refused_codec
+        = pb::FieldCodec.ForMessage(26, global::Ondewo.Vtsi.CampaignCallRefusal.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal> refused_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal>();
+    /// <summary>
+    /// The selected calls this request did not requeue, with the reason (see
+    /// &lt;code>CancelCampaignCallsResponse.refused&lt;/code>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallRefusal> Refused {
+      get { return refused_; }
+    }
+
+    /// <summary>Field number for the "remaining_count" field.</summary>
+    public const int RemainingCountFieldNumber = 4;
+    private int remainingCount_;
+    /// <summary>
+    /// With &lt;code>states&lt;/code> only: how many further calls matched after the first 1000. Repeat the request
+    /// while it is above 0. &lt;code>0&lt;/code> otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RemainingCount {
+      get { return remainingCount_; }
+      set {
+        remainingCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "campaign_state" field.</summary>
+    public const int CampaignStateFieldNumber = 5;
+    private global::Ondewo.Vtsi.CampaignState campaignState_ = global::Ondewo.Vtsi.CampaignState.Unspecified;
+    /// <summary>
+    /// State of the campaign after the request (a &lt;code>COMPLETED&lt;/code> campaign that got a call back is
+    /// &lt;code>CAMPAIGN_STATE_RUNNING&lt;/code>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.CampaignState CampaignState {
+      get { return campaignState_; }
+      set {
+        campaignState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RetryCampaignCallsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RetryCampaignCallsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CampaignName != other.CampaignName) return false;
+      if(!requeuedCampaignCallNames_.Equals(other.requeuedCampaignCallNames_)) return false;
+      if(!refused_.Equals(other.refused_)) return false;
+      if (RemainingCount != other.RemainingCount) return false;
+      if (CampaignState != other.CampaignState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CampaignName.Length != 0) hash ^= CampaignName.GetHashCode();
+      hash ^= requeuedCampaignCallNames_.GetHashCode();
+      hash ^= refused_.GetHashCode();
+      if (RemainingCount != 0) hash ^= RemainingCount.GetHashCode();
+      if (CampaignState != global::Ondewo.Vtsi.CampaignState.Unspecified) hash ^= CampaignState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignName);
+      }
+      requeuedCampaignCallNames_.WriteTo(output, _repeated_requeuedCampaignCallNames_codec);
+      refused_.WriteTo(output, _repeated_refused_codec);
+      if (RemainingCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RemainingCount);
+      }
+      if (CampaignState != global::Ondewo.Vtsi.CampaignState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) CampaignState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CampaignName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(CampaignName);
+      }
+      requeuedCampaignCallNames_.WriteTo(ref output, _repeated_requeuedCampaignCallNames_codec);
+      refused_.WriteTo(ref output, _repeated_refused_codec);
+      if (RemainingCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(RemainingCount);
+      }
+      if (CampaignState != global::Ondewo.Vtsi.CampaignState.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) CampaignState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CampaignName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CampaignName);
+      }
+      size += requeuedCampaignCallNames_.CalculateSize(_repeated_requeuedCampaignCallNames_codec);
+      size += refused_.CalculateSize(_repeated_refused_codec);
+      if (RemainingCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RemainingCount);
+      }
+      if (CampaignState != global::Ondewo.Vtsi.CampaignState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CampaignState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RetryCampaignCallsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CampaignName.Length != 0) {
+        CampaignName = other.CampaignName;
+      }
+      requeuedCampaignCallNames_.Add(other.requeuedCampaignCallNames_);
+      refused_.Add(other.refused_);
+      if (other.RemainingCount != 0) {
+        RemainingCount = other.RemainingCount;
+      }
+      if (other.CampaignState != global::Ondewo.Vtsi.CampaignState.Unspecified) {
+        CampaignState = other.CampaignState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 18: {
+            requeuedCampaignCallNames_.AddEntriesFrom(input, _repeated_requeuedCampaignCallNames_codec);
+            break;
+          }
+          case 26: {
+            refused_.AddEntriesFrom(input, _repeated_refused_codec);
+            break;
+          }
+          case 32: {
+            RemainingCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            CampaignState = (global::Ondewo.Vtsi.CampaignState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            CampaignName = input.ReadString();
+            break;
+          }
+          case 18: {
+            requeuedCampaignCallNames_.AddEntriesFrom(ref input, _repeated_requeuedCampaignCallNames_codec);
+            break;
+          }
+          case 26: {
+            refused_.AddEntriesFrom(ref input, _repeated_refused_codec);
+            break;
+          }
+          case 32: {
+            RemainingCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            CampaignState = (global::Ondewo.Vtsi.CampaignState) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for
+  /// &lt;a href="index.html#ondewo.vtsi.Campaigns.CloneCampaign">Campaigns.CloneCampaign&lt;/a>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CloneCampaignRequest : pb::IMessage<CloneCampaignRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CloneCampaignRequest> _parser = new pb::MessageParser<CloneCampaignRequest>(() => new CloneCampaignRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CloneCampaignRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CampaignsReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneCampaignRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneCampaignRequest(CloneCampaignRequest other) : this() {
+      vtsiProjectName_ = other.vtsiProjectName_;
+      newDisplayName_ = other.newDisplayName_;
+      includeCalls_ = other.includeCalls_;
+      callStates_ = other.callStates_.Clone();
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      idempotencyKey_ = other.idempotencyKey_;
+      switch (other.SourceCase) {
+        case SourceOneofCase.SourceName:
+          SourceName = other.SourceName;
+          break;
+        case SourceOneofCase.SourceDisplayName:
+          SourceDisplayName = other.SourceDisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CloneCampaignRequest Clone() {
+      return new CloneCampaignRequest(this);
+    }
+
+    /// <summary>Field number for the "source_name" field.</summary>
+    public const int SourceNameFieldNumber = 1;
+    /// <summary>
+    /// Resource name of the source campaign.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/campaigns/&amp;lt;campaign_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceName {
+      get { return HasSourceName ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.SourceName;
+      }
+    }
+    /// <summary>Gets whether the "source_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceName {
+      get { return sourceCase_ == SourceOneofCase.SourceName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceName() {
+      if (HasSourceName) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "source_display_name" field.</summary>
+    public const int SourceDisplayNameFieldNumber = 2;
+    /// <summary>
+    /// Exact, case-sensitive &lt;code>display_name&lt;/code> of the source campaign, resolved within
+    /// &lt;code>vtsi_project_name&lt;/code>, which is then required.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceDisplayName {
+      get { return HasSourceDisplayName ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.SourceDisplayName;
+      }
+    }
+    /// <summary>Gets whether the "source_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSourceDisplayName {
+      get { return sourceCase_ == SourceOneofCase.SourceDisplayName; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "source_display_name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSourceDisplayName() {
+      if (HasSourceDisplayName) {
+        ClearSource();
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project_name" field.</summary>
+    public const int VtsiProjectNameFieldNumber = 3;
+    private string vtsiProjectName_ = "";
+    /// <summary>
+    /// VTSI project of the source AND of the clone: a campaign is only cloned within its project (its stored
+    /// credentials never move to another project).
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// REQUIRED with &lt;code>source_display_name&lt;/code>: empty or malformed is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with &lt;code>NOT_FOUND&lt;/code>. Optional with
+    /// &lt;code>source_name&lt;/code>: when set, it must be the project of the source (&lt;code>INVALID_ARGUMENT&lt;/code>
+    /// otherwise).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VtsiProjectName {
+      get { return vtsiProjectName_; }
+      set {
+        vtsiProjectName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "new_display_name" field.</summary>
+    public const int NewDisplayNameFieldNumber = 4;
+    private string newDisplayName_ = "";
+    /// <summary>
+    /// Display name of the clone, unique within the project, at most 128 characters. Empty means
+    /// &lt;code>campaign-&amp;lt;campaign_uuid&amp;gt;&lt;/code> of the clone, as on &lt;code>CreateCampaign&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NewDisplayName {
+      get { return newDisplayName_; }
+      set {
+        newDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "include_calls" field.</summary>
+    public const int IncludeCallsFieldNumber = 5;
+    private bool includeCalls_;
+    /// <summary>
+    /// Also copy the source&amp;apos;s calls (see &lt;code>Campaigns.CloneCampaign&lt;/code>). &lt;code>false&lt;/code> (the
+    /// default): the clone has no call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IncludeCalls {
+      get { return includeCalls_; }
+      set {
+        includeCalls_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "call_states" field.</summary>
+    public const int CallStatesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.CampaignCallState> _repeated_callStates_codec
+        = pb::FieldCodec.ForEnum(50, x => (int) x, x => (global::Ondewo.Vtsi.CampaignCallState) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> callStates_ = new pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState>();
+    /// <summary>
+    /// With &lt;code>include_calls&lt;/code>: copy only the calls in one of these states (e.g.
+    /// &lt;code>CAMPAIGN_CALL_STATE_FAILED&lt;/code> to call the failed numbers again in a new campaign). Empty means
+    /// every state. Set without &lt;code>include_calls&lt;/code>, or holding &lt;code>CAMPAIGN_CALL_STATE_UNSPECIFIED&lt;/code>
+    /// or an unknown value, is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.CampaignCallState> CallStates {
+      get { return callStates_; }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths of the returned clone to populate, exactly as
+    /// &lt;a href="index.html#ondewo.vtsi.CreateCampaignRequest">CreateCampaignRequest.field_mask&lt;/a>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "idempotency_key" field.</summary>
+    public const int IdempotencyKeyFieldNumber = 8;
+    private string idempotencyKey_ = "";
+    /// <summary>
+    /// Optional client idempotency key with the semantics of
+    /// &lt;a href="index.html#ondewo.vtsi.CreateCampaignRequest">CreateCampaignRequest.idempotency_key&lt;/a>
+    /// (scoped to the project and to this RPC; a replayed clone carries no call defaults).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IdempotencyKey {
+      get { return idempotencyKey_; }
+      set {
+        idempotencyKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    private object source_;
+    /// <summary>Enum of possible cases for the "source" oneof.</summary>
+    public enum SourceOneofCase {
+      None = 0,
+      SourceName = 1,
+      SourceDisplayName = 2,
+    }
+    private SourceOneofCase sourceCase_ = SourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SourceOneofCase SourceCase {
+      get { return sourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSource() {
+      sourceCase_ = SourceOneofCase.None;
+      source_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CloneCampaignRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CloneCampaignRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SourceName != other.SourceName) return false;
+      if (SourceDisplayName != other.SourceDisplayName) return false;
+      if (VtsiProjectName != other.VtsiProjectName) return false;
+      if (NewDisplayName != other.NewDisplayName) return false;
+      if (IncludeCalls != other.IncludeCalls) return false;
+      if(!callStates_.Equals(other.callStates_)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (IdempotencyKey != other.IdempotencyKey) return false;
+      if (SourceCase != other.SourceCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasSourceName) hash ^= SourceName.GetHashCode();
+      if (HasSourceDisplayName) hash ^= SourceDisplayName.GetHashCode();
+      if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
+      if (NewDisplayName.Length != 0) hash ^= NewDisplayName.GetHashCode();
+      if (IncludeCalls != false) hash ^= IncludeCalls.GetHashCode();
+      hash ^= callStates_.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (IdempotencyKey.Length != 0) hash ^= IdempotencyKey.GetHashCode();
+      hash ^= (int) sourceCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasSourceName) {
+        output.WriteRawTag(10);
+        output.WriteString(SourceName);
+      }
+      if (HasSourceDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceDisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      if (NewDisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NewDisplayName);
+      }
+      if (IncludeCalls != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeCalls);
+      }
+      callStates_.WriteTo(output, _repeated_callStates_codec);
+      if (fieldMask_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasSourceName) {
+        output.WriteRawTag(10);
+        output.WriteString(SourceName);
+      }
+      if (HasSourceDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceDisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(VtsiProjectName);
+      }
+      if (NewDisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(NewDisplayName);
+      }
+      if (IncludeCalls != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IncludeCalls);
+      }
+      callStates_.WriteTo(ref output, _repeated_callStates_codec);
+      if (fieldMask_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasSourceName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceName);
+      }
+      if (HasSourceDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceDisplayName);
+      }
+      if (VtsiProjectName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VtsiProjectName);
+      }
+      if (NewDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NewDisplayName);
+      }
+      if (IncludeCalls != false) {
+        size += 1 + 1;
+      }
+      size += callStates_.CalculateSize(_repeated_callStates_codec);
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (IdempotencyKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IdempotencyKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CloneCampaignRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VtsiProjectName.Length != 0) {
+        VtsiProjectName = other.VtsiProjectName;
+      }
+      if (other.NewDisplayName.Length != 0) {
+        NewDisplayName = other.NewDisplayName;
+      }
+      if (other.IncludeCalls != false) {
+        IncludeCalls = other.IncludeCalls;
+      }
+      callStates_.Add(other.callStates_);
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.IdempotencyKey.Length != 0) {
+        IdempotencyKey = other.IdempotencyKey;
+      }
+      switch (other.SourceCase) {
+        case SourceOneofCase.SourceName:
+          SourceName = other.SourceName;
+          break;
+        case SourceOneofCase.SourceDisplayName:
+          SourceDisplayName = other.SourceDisplayName;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            SourceName = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceDisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            NewDisplayName = input.ReadString();
+            break;
+          }
+          case 40: {
+            IncludeCalls = input.ReadBool();
+            break;
+          }
+          case 50:
+          case 48: {
+            callStates_.AddEntriesFrom(input, _repeated_callStates_codec);
+            break;
+          }
+          case 58: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 66: {
+            IdempotencyKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SourceName = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceDisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            VtsiProjectName = input.ReadString();
+            break;
+          }
+          case 34: {
+            NewDisplayName = input.ReadString();
+            break;
+          }
+          case 40: {
+            IncludeCalls = input.ReadBool();
+            break;
+          }
+          case 50:
+          case 48: {
+            callStates_.AddEntriesFrom(ref input, _repeated_callStates_codec);
+            break;
+          }
+          case 58: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 66: {
+            IdempotencyKey = input.ReadString();
             break;
           }
         }

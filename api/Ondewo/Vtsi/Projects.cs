@@ -25,119 +25,138 @@ namespace Ondewo.Vtsi {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpvbmRld28vdnRzaS9wcm9qZWN0cy5wcm90bxILb25kZXdvLnZ0c2kaIGdv",
-            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJvdG9i",
-            "dWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIp0ECgtWdHNpUHJvamVjdBIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlf",
-            "bmFtZRgCIAEoCRITCgttYXhfY2FsbGVycxgDIAEoBRIVCg1tYXhfbGlzdGVu",
-            "ZXJzGAQgASgFEjYKEGFzdGVyaXNrX2NvbmZpZ3MYBSABKAsyHC5vbmRld28u",
-            "dnRzaS5Bc3Rlcmlza0NvbmZpZ3MSOwoTdnRzaV9wcm9qZWN0X3N0YXR1cxgG",
-            "IAEoDjIeLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0U3RhdHVzEhIKCmNyZWF0",
-            "ZWRfYnkYByABKAkSLgoKY3JlYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASEwoLbW9kaWZpZWRfYnkYCSABKAkSLwoLbW9kaWZp",
-            "ZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhYKDmFj",
-            "dGl2ZV9jYWxsZXJzGAsgASgFEhgKEGFjdGl2ZV9saXN0ZW5lcnMYDCABKAUS",
-            "FQoNYXN0ZXJpc2tfcG9ydBgNIAEoBRIXCg9ubHVfYWdlbnRfbmFtZXMYDiAD",
-            "KAkSGAoQZGVwbG95ZWRfY2FsbGVycxgPIAEoBRIaChJkZXBsb3llZF9saXN0",
-            "ZW5lcnMYECABKAUSJwofdHJhbnNmZXJfcGhvbmVfbnVtYmVyX2FsbG93bGlz",
-            "dBgRIAMoCSLsAwoYQXN0ZXJpc2tDb25maWdzVmFyaWFibGVzEhoKEnNpcF90",
-            "cnVua191c2VybmFtZRgBIAEoCRIaChJzaXBfdHJ1bmtfcGFzc3dvcmQYAiAB",
-            "KAkSFgoOc2lwX3RydW5rX2hvc3QYAyABKAkSFwoPdHJhbnNmZXJfbnVtYmVy",
-            "GAQgASgJEhwKFHRyYW5zZmVyX251bWJlcl9ob3N0GAUgASgJEh4KFnNpcF90",
-            "cnVua19waG9uZV9udW1iZXIYBiABKAkSOwoTc2lwX3RydW5rX3RyYW5zcG9y",
-            "dBgHIAEoDjIeLm9uZGV3by52dHNpLlNpcFRydW5rVHJhbnNwb3J0EiIKFXNp",
-            "cF90cnVua19zb3VyY2VfY2lkchgIIAEoCUgAiAEBEioKHXNpcF90cnVua19j",
-            "YV9jZXJ0aWZpY2F0ZXNfcGVtGAkgASgJSAGIAQESJAoXc2lwX3RydW5rX3Zl",
-            "cmlmeV9zZXJ2ZXIYCiABKAhIAogBARIeChZzb2Z0cGhvbmVfcGVybWl0X2Np",
-            "ZHJzGAsgAygJQhgKFl9zaXBfdHJ1bmtfc291cmNlX2NpZHJCIAoeX3NpcF90",
-            "cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVtQhoKGF9zaXBfdHJ1bmtfdmVyaWZ5",
-            "X3NlcnZlciKeAQoUQXN0ZXJpc2tDb25maWdzRmlsZXMSHgoWcGpzaXBfY29u",
-            "Zl9maWxlX3N0cmluZxgBIAEoCRIjChtleHRlbnNpb25zX2NvbmZfZmlsZV9z",
-            "dHJpbmcYAiABKAkSHwoXcXVldWVzX2NvbmZfZmlsZV9zdHJpbmcYAyABKAkS",
-            "IAoYbW9kdWxlc19jb25mX2ZpbGVfc3RyaW5nGAQgASgJIroCCg9Bc3Rlcmlz",
-            "a0NvbmZpZ3MSSwoaYXN0ZXJpc2tfY29uZmlnc192YXJpYWJsZXMYASABKAsy",
-            "JS5vbmRld28udnRzaS5Bc3Rlcmlza0NvbmZpZ3NWYXJpYWJsZXNIABJDChZh",
-            "c3Rlcmlza19jb25maWdzX2ZpbGVzGAIgASgLMiEub25kZXdvLnZ0c2kuQXN0",
-            "ZXJpc2tDb25maWdzRmlsZXNIABIwCiZhc3Rlcmlza19jb25maWdzX3Rhcmdl",
-            "dF9kaXJlY3RvcnlfbmFtZRgDIAEoCUgAEhUKDWFzdGVyaXNrX3BvcnQYBCAB",
-            "KAUSHQoQYXN0ZXJpc2tfdmVyc2lvbhgFIAEoCUgBiAEBQhgKFmFzdGVyaXNr",
-            "X2NvbmZpZ3Nfb25lb2ZCEwoRX2FzdGVyaXNrX3ZlcnNpb24iYQoYQ3JlYXRl",
-            "VnRzaVByb2plY3RSZXF1ZXN0Ei4KDHZ0c2lfcHJvamVjdBgBIAEoCzIYLm9u",
-            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0EhUKDWVycm9yX21lc3NhZ2UYAiABKAki",
-            "YgoZQ3JlYXRlVnRzaVByb2plY3RSZXNwb25zZRIuCgx2dHNpX3Byb2plY3QY",
-            "ASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIVCg1lcnJvcl9tZXNz",
-            "YWdlGAIgASgJIl4KFUdldFZ0c2lQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEg",
-            "ASgJEjcKEXZ0c2lfcHJvamVjdF92aWV3GAIgASgOMhwub25kZXdvLnZ0c2ku",
-            "VnRzaVByb2plY3RWaWV3IvABChdMaXN0VnRzaVByb2plY3RzUmVxdWVzdBI3",
-            "ChF2dHNpX3Byb2plY3RfdmlldxgBIAEoDjIcLm9uZGV3by52dHNpLlZ0c2lQ",
-            "cm9qZWN0VmlldxIXCgpwYWdlX3Rva2VuGAIgASgJSACIAQESQgoUdnRzaV9w",
-            "cm9qZWN0X3NvcnRpbmcYAyABKAsyHy5vbmRld28udnRzaS5WdHNpUHJvamVj",
-            "dFNvcnRpbmdIAYgBARIXCg9ubHVfYWdlbnRfbmFtZXMYBCADKAlCDQoLX3Bh",
-            "Z2VfdG9rZW5CFwoVX3Z0c2lfcHJvamVjdF9zb3J0aW5nImQKGExpc3RWdHNp",
-            "UHJvamVjdHNSZXNwb25zZRIvCg12dHNpX3Byb2plY3RzGAEgAygLMhgub25k",
-            "ZXdvLnZ0c2kuVnRzaVByb2plY3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "IpsDChJWdHNpUHJvamVjdFNvcnRpbmcSUwoNc29ydGluZ19maWVsZBgBIAEo",
-            "DjI3Lm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGluZy5WdHNpUHJvamVj",
-            "dFNvcnRpbmdGaWVsZEgAiAEBEj4KDHNvcnRpbmdfbW9kZRgCIAEoDjIjLm9u",
-            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGluZ01vZGVIAYgBASLMAQoXVnRz",
-            "aVByb2plY3RTb3J0aW5nRmllbGQSGwoXTk9fVlRTSV9QUk9KRUNUX1NPUlRJ",
-            "TkcQABIdChlTT1JUX1ZUU0lfUFJPSkVDVF9CWV9OQU1FEAESJQohU09SVF9W",
-            "VFNJX1BST0pFQ1RfQllfRElTUExBWV9OQU1FEAISJgoiU09SVF9WVFNJX1BS",
-            "T0pFQ1RfQllfQ1JFQVRJT05fREFURRADEiYKIlNPUlRfVlRTSV9QUk9KRUNU",
-            "X0JZX0xBU1RfTU9ESUZJRUQQBEIQCg5fc29ydGluZ19maWVsZEIPCg1fc29y",
-            "dGluZ19tb2RlInsKGFVwZGF0ZVZ0c2lQcm9qZWN0UmVxdWVzdBIuCgx2dHNp",
-            "X3Byb2plY3QYASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIvCgt1",
-            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2si",
-            "QAoZVXBkYXRlVnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUK",
-            "DWVycm9yX21lc3NhZ2UYAiABKAkiKAoYRGVsZXRlVnRzaVByb2plY3RSZXF1",
-            "ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVsZXRlVnRzaVByb2plY3RSZXNwb25z",
-            "ZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKAoYRGVw",
-            "bG95VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVwbG95",
+            "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvItcFCgtWdHNpUHJvamVjdBIMCgRuYW1lGAEg",
+            "ASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgttYXhfY2FsbGVycxgDIAEo",
+            "BRIVCg1tYXhfbGlzdGVuZXJzGAQgASgFEjYKEGFzdGVyaXNrX2NvbmZpZ3MY",
+            "BSABKAsyHC5vbmRld28udnRzaS5Bc3Rlcmlza0NvbmZpZ3MSOwoTdnRzaV9w",
+            "cm9qZWN0X3N0YXR1cxgGIAEoDjIeLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
+            "U3RhdHVzEhIKCmNyZWF0ZWRfYnkYByABKAkSLgoKY3JlYXRlZF9hdBgIIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLbW9kaWZpZWRfYnkY",
+            "CSABKAkSLwoLbW9kaWZpZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wEhYKDmFjdGl2ZV9jYWxsZXJzGAsgASgFEhgKEGFjdGl2ZV9s",
+            "aXN0ZW5lcnMYDCABKAUSFQoNYXN0ZXJpc2tfcG9ydBgNIAEoBRIXCg9ubHVf",
+            "YWdlbnRfbmFtZXMYDiADKAkSGAoQZGVwbG95ZWRfY2FsbGVycxgPIAEoBRIa",
+            "ChJkZXBsb3llZF9saXN0ZW5lcnMYECABKAUSJwofdHJhbnNmZXJfcGhvbmVf",
+            "bnVtYmVyX2FsbG93bGlzdBgRIAMoCRIWCg5zdGF0dXNfbWVzc2FnZRgSIAEo",
+            "CRI1ChFzdGF0dXNfY2hhbmdlZF9hdBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASRQoYdHJ1bmtfcmVnaXN0cmF0aW9uX3N0YXRlGBQgASgO",
+            "MiMub25kZXdvLnZ0c2kuVHJ1bmtSZWdpc3RyYXRpb25TdGF0ZRIiChphc3Rl",
+            "cmlza192ZXJzaW9uX2VmZmVjdGl2ZRgVIAEoCSLsAwoYQXN0ZXJpc2tDb25m",
+            "aWdzVmFyaWFibGVzEhoKEnNpcF90cnVua191c2VybmFtZRgBIAEoCRIaChJz",
+            "aXBfdHJ1bmtfcGFzc3dvcmQYAiABKAkSFgoOc2lwX3RydW5rX2hvc3QYAyAB",
+            "KAkSFwoPdHJhbnNmZXJfbnVtYmVyGAQgASgJEhwKFHRyYW5zZmVyX251bWJl",
+            "cl9ob3N0GAUgASgJEh4KFnNpcF90cnVua19waG9uZV9udW1iZXIYBiABKAkS",
+            "OwoTc2lwX3RydW5rX3RyYW5zcG9ydBgHIAEoDjIeLm9uZGV3by52dHNpLlNp",
+            "cFRydW5rVHJhbnNwb3J0EiIKFXNpcF90cnVua19zb3VyY2VfY2lkchgIIAEo",
+            "CUgAiAEBEioKHXNpcF90cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVtGAkgASgJ",
+            "SAGIAQESJAoXc2lwX3RydW5rX3ZlcmlmeV9zZXJ2ZXIYCiABKAhIAogBARIe",
+            "ChZzb2Z0cGhvbmVfcGVybWl0X2NpZHJzGAsgAygJQhgKFl9zaXBfdHJ1bmtf",
+            "c291cmNlX2NpZHJCIAoeX3NpcF90cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVt",
+            "QhoKGF9zaXBfdHJ1bmtfdmVyaWZ5X3NlcnZlciKeAQoUQXN0ZXJpc2tDb25m",
+            "aWdzRmlsZXMSHgoWcGpzaXBfY29uZl9maWxlX3N0cmluZxgBIAEoCRIjChtl",
+            "eHRlbnNpb25zX2NvbmZfZmlsZV9zdHJpbmcYAiABKAkSHwoXcXVldWVzX2Nv",
+            "bmZfZmlsZV9zdHJpbmcYAyABKAkSIAoYbW9kdWxlc19jb25mX2ZpbGVfc3Ry",
+            "aW5nGAQgASgJIroCCg9Bc3Rlcmlza0NvbmZpZ3MSSwoaYXN0ZXJpc2tfY29u",
+            "Zmlnc192YXJpYWJsZXMYASABKAsyJS5vbmRld28udnRzaS5Bc3Rlcmlza0Nv",
+            "bmZpZ3NWYXJpYWJsZXNIABJDChZhc3Rlcmlza19jb25maWdzX2ZpbGVzGAIg",
+            "ASgLMiEub25kZXdvLnZ0c2kuQXN0ZXJpc2tDb25maWdzRmlsZXNIABIwCiZh",
+            "c3Rlcmlza19jb25maWdzX3RhcmdldF9kaXJlY3RvcnlfbmFtZRgDIAEoCUgA",
+            "EhUKDWFzdGVyaXNrX3BvcnQYBCABKAUSHQoQYXN0ZXJpc2tfdmVyc2lvbhgF",
+            "IAEoCUgBiAEBQhgKFmFzdGVyaXNrX2NvbmZpZ3Nfb25lb2ZCEwoRX2FzdGVy",
+            "aXNrX3ZlcnNpb24ifAoYQ3JlYXRlVnRzaVByb2plY3RSZXF1ZXN0Ei4KDHZ0",
+            "c2lfcHJvamVjdBgBIAEoCzIYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0EhkK",
+            "DWVycm9yX21lc3NhZ2UYAiABKAlCAhgBEhUKDXZhbGlkYXRlX29ubHkYAyAB",
+            "KAgiYgoZQ3JlYXRlVnRzaVByb2plY3RSZXNwb25zZRIuCgx2dHNpX3Byb2pl",
+            "Y3QYASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIVCg1lcnJvcl9t",
+            "ZXNzYWdlGAIgASgJIo4BChVHZXRWdHNpUHJvamVjdFJlcXVlc3QSDAoEbmFt",
+            "ZRgBIAEoCRI3ChF2dHNpX3Byb2plY3RfdmlldxgCIAEoDjIcLm9uZGV3by52",
+            "dHNpLlZ0c2lQcm9qZWN0VmlldxIuCgpmaWVsZF9tYXNrGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayLrAwoXTGlzdFZ0c2lQcm9qZWN0c1Jl",
+            "cXVlc3QSNwoRdnRzaV9wcm9qZWN0X3ZpZXcYASABKA4yHC5vbmRld28udnRz",
+            "aS5WdHNpUHJvamVjdFZpZXcSFwoKcGFnZV90b2tlbhgCIAEoCUgAiAEBEkIK",
+            "FHZ0c2lfcHJvamVjdF9zb3J0aW5nGAMgASgLMh8ub25kZXdvLnZ0c2kuVnRz",
+            "aVByb2plY3RTb3J0aW5nSAGIAQESFwoPbmx1X2FnZW50X25hbWVzGAQgAygJ",
+            "Ei4KCmZpZWxkX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrEhEKCXBhZ2Vfc2l6ZRgGIAEoBRIwCghzdGF0dXNlcxgHIAMoDjIeLm9u",
+            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0U3RhdHVzEh0KFWRpc3BsYXlfbmFtZV9j",
+            "b250YWlucxgIIAEoCRIxCg1jcmVhdGVkX2FmdGVyGAkgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcBIyCg5jcmVhdGVkX2JlZm9yZRgKIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDQoLX3BhZ2VfdG9rZW5CFwoV",
+            "X3Z0c2lfcHJvamVjdF9zb3J0aW5nImQKGExpc3RWdHNpUHJvamVjdHNSZXNw",
+            "b25zZRIvCg12dHNpX3Byb2plY3RzGAEgAygLMhgub25kZXdvLnZ0c2kuVnRz",
+            "aVByb2plY3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpsDChJWdHNpUHJv",
+            "amVjdFNvcnRpbmcSUwoNc29ydGluZ19maWVsZBgBIAEoDjI3Lm9uZGV3by52",
+            "dHNpLlZ0c2lQcm9qZWN0U29ydGluZy5WdHNpUHJvamVjdFNvcnRpbmdGaWVs",
+            "ZEgAiAEBEj4KDHNvcnRpbmdfbW9kZRgCIAEoDjIjLm9uZGV3by52dHNpLlZ0",
+            "c2lQcm9qZWN0U29ydGluZ01vZGVIAYgBASLMAQoXVnRzaVByb2plY3RTb3J0",
+            "aW5nRmllbGQSGwoXTk9fVlRTSV9QUk9KRUNUX1NPUlRJTkcQABIdChlTT1JU",
+            "X1ZUU0lfUFJPSkVDVF9CWV9OQU1FEAESJQohU09SVF9WVFNJX1BST0pFQ1Rf",
+            "QllfRElTUExBWV9OQU1FEAISJgoiU09SVF9WVFNJX1BST0pFQ1RfQllfQ1JF",
+            "QVRJT05fREFURRADEiYKIlNPUlRfVlRTSV9QUk9KRUNUX0JZX0xBU1RfTU9E",
+            "SUZJRUQQBEIQCg5fc29ydGluZ19maWVsZEIPCg1fc29ydGluZ19tb2RlIsIB",
+            "ChhVcGRhdGVWdHNpUHJvamVjdFJlcXVlc3QSLgoMdnRzaV9wcm9qZWN0GAEg",
+            "ASgLMhgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QSLwoLdXBkYXRlX21hc2sY",
+            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEi4KCmZpZWxkX21h",
+            "c2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhUKDXZhbGlk",
+            "YXRlX29ubHkYBCABKAgicAoZVXBkYXRlVnRzaVByb2plY3RSZXNwb25zZRIM",
+            "CgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkSLgoMdnRzaV9w",
+            "cm9qZWN0GAMgASgLMhgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QiKAoYRGVs",
+            "ZXRlVnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVsZXRl",
             "VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21l",
-            "c3NhZ2UYAiABKAkiKgoaVW5kZXBsb3lWdHNpUHJvamVjdFJlcXVlc3QSDAoE",
-            "bmFtZRgBIAEoCSJCChtVbmRlcGxveVZ0c2lQcm9qZWN0UmVzcG9uc2USDAoE",
-            "bmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAIgASgJKosBChFWdHNpUHJv",
-            "amVjdFN0YXR1cxIPCgtVTlNQRUNJRklFRBAAEg4KClVOREVQTE9ZRUQQARIM",
-            "CghVUERBVElORxACEg0KCURFUExPWUlORxADEgwKCERFUExPWUVEEAQSDwoL",
-            "VU5ERVBMT1lJTkcQBRIMCghERUxFVElORxAGEgsKB0RFTEVURUQQByqPAQoR",
-            "U2lwVHJ1bmtUcmFuc3BvcnQSIwofU0lQX1RSVU5LX1RSQU5TUE9SVF9VTlNQ",
-            "RUNJRklFRBAAEhsKF1NJUF9UUlVOS19UUkFOU1BPUlRfVExTEAESGwoXU0lQ",
-            "X1RSVU5LX1RSQU5TUE9SVF9VRFAQAhIbChdTSVBfVFJVTktfVFJBTlNQT1JU",
-            "X1RDUBADKjcKFlZ0c2lQcm9qZWN0U29ydGluZ01vZGUSDQoJQVNDRU5ESU5H",
-            "EAASDgoKREVTQ0VORElORxABKo4BCg9WdHNpUHJvamVjdFZpZXcSIQodVlRT",
-            "SV9QUk9KRUNUX1ZJRVdfVU5TUEVDSUZJRUQQABIaChZWVFNJX1BST0pFQ1Rf",
-            "VklFV19GVUxMEAESHQoZVlRTSV9QUk9KRUNUX1ZJRVdfU0hBTExPVxACEh0K",
-            "GVZUU0lfUFJPSkVDVF9WSUVXX01JTklNVU0QAzK1BQoIUHJvamVjdHMSYgoR",
-            "Q3JlYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRzaS5DcmVhdGVWdHNpUHJv",
-            "amVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5DcmVhdGVWdHNpUHJvamVjdFJl",
-            "c3BvbnNlEk4KDkdldFZ0c2lQcm9qZWN0EiIub25kZXdvLnZ0c2kuR2V0VnRz",
-            "aVByb2plY3RSZXF1ZXN0Ghgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QSYgoR",
-            "VXBkYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRzaS5VcGRhdGVWdHNpUHJv",
-            "amVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5VcGRhdGVWdHNpUHJvamVjdFJl",
-            "c3BvbnNlEmIKEURlbGV0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuRGVs",
-            "ZXRlVnRzaVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuRGVsZXRlVnRz",
-            "aVByb2plY3RSZXNwb25zZRJiChFEZXBsb3lWdHNpUHJvamVjdBIlLm9uZGV3",
-            "by52dHNpLkRlcGxveVZ0c2lQcm9qZWN0UmVxdWVzdBomLm9uZGV3by52dHNp",
-            "LkRlcGxveVZ0c2lQcm9qZWN0UmVzcG9uc2USaAoTVW5kZXBsb3lWdHNpUHJv",
-            "amVjdBInLm9uZGV3by52dHNpLlVuZGVwbG95VnRzaVByb2plY3RSZXF1ZXN0",
-            "Gigub25kZXdvLnZ0c2kuVW5kZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEl8K",
-            "EExpc3RWdHNpUHJvamVjdHMSJC5vbmRld28udnRzaS5MaXN0VnRzaVByb2pl",
-            "Y3RzUmVxdWVzdBolLm9uZGV3by52dHNpLkxpc3RWdHNpUHJvamVjdHNSZXNw",
-            "b25zZWIGcHJvdG8z"));
+            "c3NhZ2UYAiABKAkiKAoYRGVwbG95VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5h",
+            "bWUYASABKAkiQAoZRGVwbG95VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1l",
+            "GAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKgoaVW5kZXBsb3lWdHNp",
+            "UHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJCChtVbmRlcGxveVZ0c2lQ",
+            "cm9qZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdl",
+            "GAIgASgJKuoBChZUcnVua1JlZ2lzdHJhdGlvblN0YXRlEigKJFRSVU5LX1JF",
+            "R0lTVFJBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEicKI1RSVU5LX1JFR0lT",
+            "VFJBVElPTl9TVEFURV9SRUdJU1RFUkVEEAESKQolVFJVTktfUkVHSVNUUkFU",
+            "SU9OX1NUQVRFX1VOUkVHSVNURVJFRBACEiUKIVRSVU5LX1JFR0lTVFJBVElP",
+            "Tl9TVEFURV9SRUpFQ1RFRBADEisKJ1RSVU5LX1JFR0lTVFJBVElPTl9TVEFU",
+            "RV9OT1RfQ09ORklHVVJFRBAEKp4BChFWdHNpUHJvamVjdFN0YXR1cxIPCgtV",
+            "TlNQRUNJRklFRBAAEg4KClVOREVQTE9ZRUQQARIMCghVUERBVElORxACEg0K",
+            "CURFUExPWUlORxADEgwKCERFUExPWUVEEAQSDwoLVU5ERVBMT1lJTkcQBRIM",
+            "CghERUxFVElORxAGEgsKB0RFTEVURUQQBxIRCg1ERVBMT1lfRkFJTEVEEAgq",
+            "jwEKEVNpcFRydW5rVHJhbnNwb3J0EiMKH1NJUF9UUlVOS19UUkFOU1BPUlRf",
+            "VU5TUEVDSUZJRUQQABIbChdTSVBfVFJVTktfVFJBTlNQT1JUX1RMUxABEhsK",
+            "F1NJUF9UUlVOS19UUkFOU1BPUlRfVURQEAISGwoXU0lQX1RSVU5LX1RSQU5T",
+            "UE9SVF9UQ1AQAyo3ChZWdHNpUHJvamVjdFNvcnRpbmdNb2RlEg0KCUFTQ0VO",
+            "RElORxAAEg4KCkRFU0NFTkRJTkcQASqOAQoPVnRzaVByb2plY3RWaWV3EiEK",
+            "HVZUU0lfUFJPSkVDVF9WSUVXX1VOU1BFQ0lGSUVEEAASGgoWVlRTSV9QUk9K",
+            "RUNUX1ZJRVdfRlVMTBABEh0KGVZUU0lfUFJPSkVDVF9WSUVXX1NIQUxMT1cQ",
+            "AhIdChlWVFNJX1BST0pFQ1RfVklFV19NSU5JTVVNEAMytQUKCFByb2plY3Rz",
+            "EmIKEUNyZWF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuQ3JlYXRlVnRz",
+            "aVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuQ3JlYXRlVnRzaVByb2pl",
+            "Y3RSZXNwb25zZRJOCg5HZXRWdHNpUHJvamVjdBIiLm9uZGV3by52dHNpLkdl",
+            "dFZ0c2lQcm9qZWN0UmVxdWVzdBoYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
+            "EmIKEVVwZGF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuVXBkYXRlVnRz",
+            "aVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuVXBkYXRlVnRzaVByb2pl",
+            "Y3RSZXNwb25zZRJiChFEZWxldGVWdHNpUHJvamVjdBIlLm9uZGV3by52dHNp",
+            "LkRlbGV0ZVZ0c2lQcm9qZWN0UmVxdWVzdBomLm9uZGV3by52dHNpLkRlbGV0",
+            "ZVZ0c2lQcm9qZWN0UmVzcG9uc2USYgoRRGVwbG95VnRzaVByb2plY3QSJS5v",
+            "bmRld28udnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlcXVlc3QaJi5vbmRld28u",
+            "dnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEmgKE1VuZGVwbG95VnRz",
+            "aVByb2plY3QSJy5vbmRld28udnRzaS5VbmRlcGxveVZ0c2lQcm9qZWN0UmVx",
+            "dWVzdBooLm9uZGV3by52dHNpLlVuZGVwbG95VnRzaVByb2plY3RSZXNwb25z",
+            "ZRJfChBMaXN0VnRzaVByb2plY3RzEiQub25kZXdvLnZ0c2kuTGlzdFZ0c2lQ",
+            "cm9qZWN0c1JlcXVlc3QaJS5vbmRld28udnRzaS5MaXN0VnRzaVByb2plY3Rz",
+            "UmVzcG9uc2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.SipTrunkTransport), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners", "TransferPhoneNumberAllowlist" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.TrunkRegistrationState), typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.SipTrunkTransport), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners", "TransferPhoneNumberAllowlist", "StatusMessage", "StatusChangedAt", "TrunkRegistrationState", "AsteriskVersionEffective" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsVariables), global::Ondewo.Vtsi.AsteriskConfigsVariables.Parser, new[]{ "SipTrunkUsername", "SipTrunkPassword", "SipTrunkHost", "TransferNumber", "TransferNumberHost", "SipTrunkPhoneNumber", "SipTrunkTransport", "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer", "SoftphonePermitCidrs" }, new[]{ "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsFiles), global::Ondewo.Vtsi.AsteriskConfigsFiles.Parser, new[]{ "PjsipConfFileString", "ExtensionsConfFileString", "QueuesConfFileString", "ModulesConfFileString" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigs), global::Ondewo.Vtsi.AsteriskConfigs.Parser, new[]{ "AsteriskConfigsVariables", "AsteriskConfigsFiles", "AsteriskConfigsTargetDirectoryName", "AsteriskPort", "AsteriskVersion" }, new[]{ "AsteriskConfigsOneof", "AsteriskVersion" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiProjectRequest), global::Ondewo.Vtsi.CreateVtsiProjectRequest.Parser, new[]{ "VtsiProject", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiProjectRequest), global::Ondewo.Vtsi.CreateVtsiProjectRequest.Parser, new[]{ "VtsiProject", "ErrorMessage", "ValidateOnly" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiProjectResponse), global::Ondewo.Vtsi.CreateVtsiProjectResponse.Parser, new[]{ "VtsiProject", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetVtsiProjectRequest), global::Ondewo.Vtsi.GetVtsiProjectRequest.Parser, new[]{ "Name", "VtsiProjectView" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiProjectsRequest), global::Ondewo.Vtsi.ListVtsiProjectsRequest.Parser, new[]{ "VtsiProjectView", "PageToken", "VtsiProjectSorting", "NluAgentNames" }, new[]{ "PageToken", "VtsiProjectSorting" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetVtsiProjectRequest), global::Ondewo.Vtsi.GetVtsiProjectRequest.Parser, new[]{ "Name", "VtsiProjectView", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiProjectsRequest), global::Ondewo.Vtsi.ListVtsiProjectsRequest.Parser, new[]{ "VtsiProjectView", "PageToken", "VtsiProjectSorting", "NluAgentNames", "FieldMask", "PageSize", "Statuses", "DisplayNameContains", "CreatedAfter", "CreatedBefore" }, new[]{ "PageToken", "VtsiProjectSorting" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiProjectsResponse), global::Ondewo.Vtsi.ListVtsiProjectsResponse.Parser, new[]{ "VtsiProjects", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProjectSorting), global::Ondewo.Vtsi.VtsiProjectSorting.Parser, new[]{ "SortingField", "SortingMode" }, new[]{ "SortingField", "SortingMode" }, new[]{ typeof(global::Ondewo.Vtsi.VtsiProjectSorting.Types.VtsiProjectSortingField) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiProjectRequest), global::Ondewo.Vtsi.UpdateVtsiProjectRequest.Parser, new[]{ "VtsiProject", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiProjectResponse), global::Ondewo.Vtsi.UpdateVtsiProjectResponse.Parser, new[]{ "Name", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiProjectRequest), global::Ondewo.Vtsi.UpdateVtsiProjectRequest.Parser, new[]{ "VtsiProject", "UpdateMask", "FieldMask", "ValidateOnly" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiProjectResponse), global::Ondewo.Vtsi.UpdateVtsiProjectResponse.Parser, new[]{ "Name", "ErrorMessage", "VtsiProject" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteVtsiProjectRequest), global::Ondewo.Vtsi.DeleteVtsiProjectRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteVtsiProjectResponse), global::Ondewo.Vtsi.DeleteVtsiProjectResponse.Parser, new[]{ "Name", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeployVtsiProjectRequest), global::Ondewo.Vtsi.DeployVtsiProjectRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -151,11 +170,45 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
+  /// Registration state of a VTSI project&amp;apos;s SIP trunk with the carrier.
+  /// </summary>
+  public enum TrunkRegistrationState {
+    /// <summary>
+    /// Not known: the project is not &lt;code>DEPLOYED&lt;/code>, or its Asterisk has not been observed yet.
+    /// </summary>
+    [pbr::OriginalName("TRUNK_REGISTRATION_STATE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// The carrier accepted the trunk&amp;apos;s registration (&lt;code>Registered&lt;/code>).
+    /// </summary>
+    [pbr::OriginalName("TRUNK_REGISTRATION_STATE_REGISTERED")] Registered = 1,
+    /// <summary>
+    /// The trunk is configured to register but is not registered: the registration has not completed
+    /// yet, was stopped, or failed without a refusal by the carrier (&lt;code>Unregistered&lt;/code>,
+    /// &lt;code>Stopped&lt;/code>, timeouts and any other state).
+    /// </summary>
+    [pbr::OriginalName("TRUNK_REGISTRATION_STATE_UNREGISTERED")] Unregistered = 2,
+    /// <summary>
+    /// The carrier refused the registration (&lt;code>Rejected&lt;/code>), typically wrong
+    /// &lt;code>sip_trunk_username&lt;/code> / &lt;code>sip_trunk_password&lt;/code>. The Asterisk retries on its own.
+    /// </summary>
+    [pbr::OriginalName("TRUNK_REGISTRATION_STATE_REJECTED")] Rejected = 3,
+    /// <summary>
+    /// The project&amp;apos;s running Asterisk has no outbound trunk registration to observe (no
+    /// &lt;code>trunk-registration&lt;/code> in &lt;code>pjsip show registrations&lt;/code>), e.g. no SIP trunk is
+    /// configured, or &lt;code>asterisk_configs_files&lt;/code> / a target directory define none.
+    /// </summary>
+    [pbr::OriginalName("TRUNK_REGISTRATION_STATE_NOT_CONFIGURED")] NotConfigured = 4,
+  }
+
+  /// <summary>
   /// Status of a VtsiProject.
+  /// Released with unprefixed value names, which are package scoped in proto3 (so no other enum of
+  /// &lt;code>ondewo.vtsi&lt;/code> can declare e.g. &lt;code>UNSPECIFIED&lt;/code>); kept for wire and source
+  /// compatibility.
   /// </summary>
   public enum VtsiProjectStatus {
     /// <summary>
-    /// No status specified
+    /// No status specified. Never returned for a stored project.
     /// </summary>
     [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
     /// <summary>
@@ -183,9 +236,18 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("DELETING")] Deleting = 6,
     /// <summary>
-    /// Project is deleted
+    /// Project is deleted. Never returned: a deleted project no longer exists and is
+    /// &lt;code>NOT_FOUND&lt;/code>. Kept for wire compatibility.
     /// </summary>
     [pbr::OriginalName("DELETED")] Deleted = 7,
+    /// <summary>
+    /// The last deployment failed: its half-started container was removed and
+    /// &lt;code>VtsiProject.status_message&lt;/code> says why. Behaves like &lt;code>UNDEPLOYED&lt;/code>: the project
+    /// can be deployed again, updated or deleted, and undeploying it makes it &lt;code>UNDEPLOYED&lt;/code>.
+    /// Since 9.1.0; a 9.0.0 server reports a failed deployment as &lt;code>UNDEPLOYED&lt;/code>, and a client
+    /// built against 9.0.0 sees the unknown value 8.
+    /// </summary>
+    [pbr::OriginalName("DEPLOY_FAILED")] DeployFailed = 8,
   }
 
   /// <summary>
@@ -212,7 +274,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Sorting mode
+  /// Sorting mode.
+  /// Note: unlike most enums of this API the zero value is a real mode, &lt;code>ASCENDING&lt;/code>, not an
+  /// &lt;code>..._UNSPECIFIED&lt;/code> placeholder, so an unset mode means ascending. Released this way and kept
+  /// for wire and source compatibility (it is also reused by
+  /// &lt;a href="index.html#ondewo.vtsi.SoftphoneAccountSorting">SoftphoneAccountSorting&lt;/a>).
   /// </summary>
   public enum VtsiProjectSortingMode {
     /// <summary>
@@ -315,6 +381,10 @@ namespace Ondewo.Vtsi {
       deployedCallers_ = other.deployedCallers_;
       deployedListeners_ = other.deployedListeners_;
       transferPhoneNumberAllowlist_ = other.transferPhoneNumberAllowlist_.Clone();
+      statusMessage_ = other.statusMessage_;
+      statusChangedAt_ = other.statusChangedAt_ != null ? other.statusChangedAt_.Clone() : null;
+      trunkRegistrationState_ = other.trunkRegistrationState_;
+      asteriskVersionEffective_ = other.asteriskVersionEffective_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -360,7 +430,13 @@ namespace Ondewo.Vtsi {
     public const int MaxCallersFieldNumber = 3;
     private int maxCallers_;
     /// <summary>
-    /// The maximum number of callers that this project can have.
+    /// The maximum number of callers that this project can have, i.e. the number of caller SIP accounts
+    /// provisioned on its Asterisk. &lt;code>0&lt;/code> means NO caller can be started (it is not
+    /// &amp;quot;unlimited&amp;quot;); negative values are refused with &lt;code>INVALID_ARGUMENT&lt;/code>. A
+    /// &lt;code>StartCaller&lt;/code> / &lt;code>StartCallers&lt;/code> beyond the free capacity is refused with
+    /// &lt;code>RESOURCE_EXHAUSTED&lt;/code>; an idle pooled (persistent) caller does not count. Changing it on a
+    /// &lt;code>DEPLOYED&lt;/code> project REDEPLOYS the project, which ends every running call (see
+    /// &lt;code>UpdateVtsiProject&lt;/code>); lowering it below the number of running callers is not refused.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -375,7 +451,11 @@ namespace Ondewo.Vtsi {
     public const int MaxListenersFieldNumber = 4;
     private int maxListeners_;
     /// <summary>
-    /// The maximum number of listeners that this project can have.
+    /// The maximum number of listeners that this project can have, i.e. the number of listener SIP
+    /// accounts provisioned on its Asterisk. Same semantics as &lt;code>max_callers&lt;/code>:
+    /// &lt;code>0&lt;/code> means no listener can be started, a &lt;code>StartListener&lt;/code> /
+    /// &lt;code>StartListeners&lt;/code> beyond the free capacity is &lt;code>RESOURCE_EXHAUSTED&lt;/code>, and a change
+    /// on a &lt;code>DEPLOYED&lt;/code> project redeploys it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -510,7 +590,13 @@ namespace Ondewo.Vtsi {
     public const int AsteriskPortFieldNumber = 13;
     private int asteriskPort_;
     /// <summary>
-    /// The port of the asterisk server
+    /// The port of the asterisk server. The same value as &lt;code>asterisk_configs.asterisk_port&lt;/code>, of
+    /// which it is a convenience copy: &lt;code>asterisk_configs.asterisk_port&lt;/code> is authoritative, and
+    /// every response carries the project&amp;apos;s port in both. On create and update, &lt;code>0&lt;/code> means
+    /// &amp;quot;not stated&amp;quot; (on create: assign a free port); a value set here is copied into
+    /// &lt;code>asterisk_configs.asterisk_port&lt;/code>; both set and different is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. Changing the port of a &lt;code>DEPLOYED&lt;/code> project redeploys it and
+    /// voids every softphone client certificate (the certificate authorities belong to the port).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -586,6 +672,79 @@ namespace Ondewo.Vtsi {
       get { return transferPhoneNumberAllowlist_; }
     }
 
+    /// <summary>Field number for the "status_message" field.</summary>
+    public const int StatusMessageFieldNumber = 18;
+    private string statusMessage_ = "";
+    /// <summary>
+    /// Output only. Human-readable detail of the current &lt;code>vtsi_project_status&lt;/code>: the reason of a
+    /// &lt;code>DEPLOY_FAILED&lt;/code> project (the same text as the &lt;code>description&lt;/code> of the
+    /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code> event), or the reason the last undeploy or update
+    /// of the project failed. Empty when there is nothing to report; cleared by the next successful status
+    /// change. Secrets are redacted. Ignored on create and update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string StatusMessage {
+      get { return statusMessage_; }
+      set {
+        statusMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "status_changed_at" field.</summary>
+    public const int StatusChangedAtFieldNumber = 19;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp statusChangedAt_;
+    /// <summary>
+    /// Output only. When &lt;code>vtsi_project_status&lt;/code> last changed. Unset for a project whose status
+    /// has not changed since an older server created it. Ignored on create and update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StatusChangedAt {
+      get { return statusChangedAt_; }
+      set {
+        statusChangedAt_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "trunk_registration_state" field.</summary>
+    public const int TrunkRegistrationStateFieldNumber = 20;
+    private global::Ondewo.Vtsi.TrunkRegistrationState trunkRegistrationState_ = global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified;
+    /// <summary>
+    /// Output only. Registration state of the project&amp;apos;s SIP trunk with the carrier, as last observed
+    /// on the running Asterisk (&lt;code>pjsip show registrations&lt;/code>), refreshed every
+    /// &lt;code>ONDEWO_VTSI_ASTERISK_OBSERVER_INTERVAL_S&lt;/code> seconds (default 30), so it may lag by that
+    /// much. &lt;code>TRUNK_REGISTRATION_STATE_UNSPECIFIED&lt;/code> when the project is not
+    /// &lt;code>DEPLOYED&lt;/code> or has not been observed yet. Ignored on create and update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.TrunkRegistrationState TrunkRegistrationState {
+      get { return trunkRegistrationState_; }
+      set {
+        trunkRegistrationState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "asterisk_version_effective" field.</summary>
+    public const int AsteriskVersionEffectiveFieldNumber = 21;
+    private string asteriskVersionEffective_ = "";
+    /// <summary>
+    /// Output only. The Asterisk version the project&amp;apos;s container RUNS, i.e. the docker image tag of the
+    /// ONDEWO Asterisk image it was deployed from: &lt;code>asterisk_configs.asterisk_version&lt;/code> when
+    /// pinned, otherwise the server default (&lt;code>ONDEWO_VTSI_ASTERISK_IMAGE_TAG&lt;/code>) at the moment
+    /// of the deployment. Empty when the project is not deployed. It can differ from what a new deployment
+    /// would start, e.g. after the server default changed. Ignored on create and update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AsteriskVersionEffective {
+      get { return asteriskVersionEffective_; }
+      set {
+        asteriskVersionEffective_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -618,6 +777,10 @@ namespace Ondewo.Vtsi {
       if (DeployedCallers != other.DeployedCallers) return false;
       if (DeployedListeners != other.DeployedListeners) return false;
       if(!transferPhoneNumberAllowlist_.Equals(other.transferPhoneNumberAllowlist_)) return false;
+      if (StatusMessage != other.StatusMessage) return false;
+      if (!object.Equals(StatusChangedAt, other.StatusChangedAt)) return false;
+      if (TrunkRegistrationState != other.TrunkRegistrationState) return false;
+      if (AsteriskVersionEffective != other.AsteriskVersionEffective) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -642,6 +805,10 @@ namespace Ondewo.Vtsi {
       if (DeployedCallers != 0) hash ^= DeployedCallers.GetHashCode();
       if (DeployedListeners != 0) hash ^= DeployedListeners.GetHashCode();
       hash ^= transferPhoneNumberAllowlist_.GetHashCode();
+      if (StatusMessage.Length != 0) hash ^= StatusMessage.GetHashCode();
+      if (statusChangedAt_ != null) hash ^= StatusChangedAt.GetHashCode();
+      if (TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) hash ^= TrunkRegistrationState.GetHashCode();
+      if (AsteriskVersionEffective.Length != 0) hash ^= AsteriskVersionEffective.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -722,6 +889,22 @@ namespace Ondewo.Vtsi {
         output.WriteInt32(DeployedListeners);
       }
       transferPhoneNumberAllowlist_.WriteTo(output, _repeated_transferPhoneNumberAllowlist_codec);
+      if (StatusMessage.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(StatusMessage);
+      }
+      if (statusChangedAt_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(StatusChangedAt);
+      }
+      if (TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) TrunkRegistrationState);
+      }
+      if (AsteriskVersionEffective.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(AsteriskVersionEffective);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -794,6 +977,22 @@ namespace Ondewo.Vtsi {
         output.WriteInt32(DeployedListeners);
       }
       transferPhoneNumberAllowlist_.WriteTo(ref output, _repeated_transferPhoneNumberAllowlist_codec);
+      if (StatusMessage.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(StatusMessage);
+      }
+      if (statusChangedAt_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(StatusChangedAt);
+      }
+      if (TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) {
+        output.WriteRawTag(160, 1);
+        output.WriteEnum((int) TrunkRegistrationState);
+      }
+      if (AsteriskVersionEffective.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(AsteriskVersionEffective);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -851,6 +1050,18 @@ namespace Ondewo.Vtsi {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(DeployedListeners);
       }
       size += transferPhoneNumberAllowlist_.CalculateSize(_repeated_transferPhoneNumberAllowlist_codec);
+      if (StatusMessage.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(StatusMessage);
+      }
+      if (statusChangedAt_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(StatusChangedAt);
+      }
+      if (TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) TrunkRegistrationState);
+      }
+      if (AsteriskVersionEffective.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AsteriskVersionEffective);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -919,6 +1130,21 @@ namespace Ondewo.Vtsi {
         DeployedListeners = other.DeployedListeners;
       }
       transferPhoneNumberAllowlist_.Add(other.transferPhoneNumberAllowlist_);
+      if (other.StatusMessage.Length != 0) {
+        StatusMessage = other.StatusMessage;
+      }
+      if (other.statusChangedAt_ != null) {
+        if (statusChangedAt_ == null) {
+          StatusChangedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StatusChangedAt.MergeFrom(other.StatusChangedAt);
+      }
+      if (other.TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) {
+        TrunkRegistrationState = other.TrunkRegistrationState;
+      }
+      if (other.AsteriskVersionEffective.Length != 0) {
+        AsteriskVersionEffective = other.AsteriskVersionEffective;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1013,6 +1239,25 @@ namespace Ondewo.Vtsi {
           }
           case 138: {
             transferPhoneNumberAllowlist_.AddEntriesFrom(input, _repeated_transferPhoneNumberAllowlist_codec);
+            break;
+          }
+          case 146: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 154: {
+            if (statusChangedAt_ == null) {
+              StatusChangedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StatusChangedAt);
+            break;
+          }
+          case 160: {
+            TrunkRegistrationState = (global::Ondewo.Vtsi.TrunkRegistrationState) input.ReadEnum();
+            break;
+          }
+          case 170: {
+            AsteriskVersionEffective = input.ReadString();
             break;
           }
         }
@@ -1111,6 +1356,25 @@ namespace Ondewo.Vtsi {
             transferPhoneNumberAllowlist_.AddEntriesFrom(ref input, _repeated_transferPhoneNumberAllowlist_codec);
             break;
           }
+          case 146: {
+            StatusMessage = input.ReadString();
+            break;
+          }
+          case 154: {
+            if (statusChangedAt_ == null) {
+              StatusChangedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StatusChangedAt);
+            break;
+          }
+          case 160: {
+            TrunkRegistrationState = (global::Ondewo.Vtsi.TrunkRegistrationState) input.ReadEnum();
+            break;
+          }
+          case 170: {
+            AsteriskVersionEffective = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1197,7 +1461,14 @@ namespace Ondewo.Vtsi {
     public const int SipTrunkPasswordFieldNumber = 2;
     private string sipTrunkPassword_ = "";
     /// <summary>
-    /// SIP trunk password.
+    /// SIP trunk password. A credential, but NOT write-only: it is stored as sent and returned in clear
+    /// to every caller allowed to read &lt;code>asterisk_configs&lt;/code> (see the &lt;code>Projects&lt;/code> service
+    /// description for who that is). Server logs and &lt;code>status_message&lt;/code> redact it.
+    /// On &lt;code>UpdateVtsiProject&lt;/code> WITHOUT an &lt;code>update_mask&lt;/code> an empty value KEEPS the stored
+    /// password (an empty string cannot be told from &amp;quot;not sent&amp;quot;); WITH an
+    /// &lt;code>update_mask&lt;/code> naming this field, or a parent of it such as
+    /// &lt;code>asterisk_configs&lt;/code> or &lt;code>asterisk_configs.asterisk_configs_variables&lt;/code>, an empty
+    /// value CLEARS it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2251,7 +2522,8 @@ namespace Ondewo.Vtsi {
     public const int AsteriskPortFieldNumber = 4;
     private int asteriskPort_;
     /// <summary>
-    /// OPTIONAL: The port where Asterisk should start.
+    /// OPTIONAL: The port where Asterisk should start. Authoritative copy of
+    /// &lt;code>VtsiProject.asterisk_port&lt;/code> (see there). &lt;code>0&lt;/code> on create assigns a free port.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2274,6 +2546,7 @@ namespace Ondewo.Vtsi {
     /// &lt;pre>&lt;code>[A-Za-z0-9_][A-Za-z0-9._-]{0,127}&lt;/code>&lt;/pre>.
     /// Explicitly optional: when the field is not set, the server keeps using its configured
     /// default (the &lt;pre>&lt;code>ONDEWO_VTSI_ASTERISK_IMAGE_TAG&lt;/code>&lt;/pre> environment variable).
+    /// The version a deployed project actually runs is &lt;code>VtsiProject.asterisk_version_effective&lt;/code>.
     /// Sending an empty string is NOT the same as leaving it unset and is rejected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2627,6 +2900,7 @@ namespace Ondewo.Vtsi {
     public CreateVtsiProjectRequest(CreateVtsiProjectRequest other) : this() {
       vtsiProject_ = other.vtsiProject_ != null ? other.vtsiProject_.Clone() : null;
       errorMessage_ = other.errorMessage_;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2658,14 +2932,37 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Deprecated: a request carries no error. Ignored by the server; leave it empty. Kept for wire
+    /// compatibility.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorMessage {
       get { return errorMessage_; }
       set {
         errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 3;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Validate only: run every check of a real create (validation, authorization) and return
+    /// the would-be project in &lt;code>CreateVtsiProjectResponse.vtsi_project&lt;/code>, but write, reserve and
+    /// emit nothing. The fields the server assigns at creation are left empty in that answer because
+    /// nothing is reserved: &lt;code>name&lt;/code> when the request gave none, the ports when the request gave
+    /// &lt;code>0&lt;/code>, &lt;code>vtsi_project_status&lt;/code> and the audit fields. A successful validation does
+    /// not guarantee that a later create succeeds (e.g. a name or port taken meanwhile). Default
+    /// &lt;code>false&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
       }
     }
 
@@ -2686,6 +2983,7 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(VtsiProject, other.VtsiProject)) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2695,6 +2993,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (vtsiProject_ != null) hash ^= VtsiProject.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2721,6 +3020,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(ErrorMessage);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2739,6 +3042,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(ErrorMessage);
       }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2754,6 +3061,9 @@ namespace Ondewo.Vtsi {
       }
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2775,6 +3085,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2806,6 +3119,10 @@ namespace Ondewo.Vtsi {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 24: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2834,6 +3151,10 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 24: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -2896,7 +3217,8 @@ namespace Ondewo.Vtsi {
     public const int VtsiProjectFieldNumber = 1;
     private global::Ondewo.Vtsi.VtsiProject vtsiProject_;
     /// <summary>
-    /// Vtsi project
+    /// The created project, &lt;code>UNDEPLOYED&lt;/code>, with its assigned name and port (with
+    /// &lt;code>validate_only&lt;/code>: the would-be project).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2911,7 +3233,8 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Never set: errors are reported as gRPC status codes (see the &lt;code>Projects&lt;/code> service
+    /// description). Kept for wire compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3136,6 +3459,7 @@ namespace Ondewo.Vtsi {
     public GetVtsiProjectRequest(GetVtsiProjectRequest other) : this() {
       name_ = other.name_;
       vtsiProjectView_ = other.vtsiProjectView_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3175,6 +3499,27 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>VtsiProject&lt;/code> field paths to populate, e.g.
+    /// &lt;code>display_name&lt;/code>, &lt;code>vtsi_project_status&lt;/code>, &lt;code>status_message&lt;/code>,
+    /// &lt;code>asterisk_configs.asterisk_version&lt;/code>. Same convention as
+    /// &lt;a href="index.html#ondewo.vtsi.ListVtsiProjectsRequest">ListVtsiProjectsRequest.field_mask&lt;/a>:
+    /// &lt;code>name&lt;/code> is always populated, unset or empty returns every field the
+    /// &lt;code>vtsi_project_view&lt;/code> populates, an unknown path is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it, and the mask is applied after the view and any redaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3192,6 +3537,7 @@ namespace Ondewo.Vtsi {
       }
       if (Name != other.Name) return false;
       if (VtsiProjectView != other.VtsiProjectView) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3201,6 +3547,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (VtsiProjectView != global::Ondewo.Vtsi.VtsiProjectView.Unspecified) hash ^= VtsiProjectView.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3227,6 +3574,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(16);
         output.WriteEnum((int) VtsiProjectView);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3245,6 +3596,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(16);
         output.WriteEnum((int) VtsiProjectView);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3260,6 +3615,9 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectView != global::Ondewo.Vtsi.VtsiProjectView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) VtsiProjectView);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3278,6 +3636,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.VtsiProjectView != global::Ondewo.Vtsi.VtsiProjectView.Unspecified) {
         VtsiProjectView = other.VtsiProjectView;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3304,6 +3668,13 @@ namespace Ondewo.Vtsi {
           }
           case 16: {
             VtsiProjectView = (global::Ondewo.Vtsi.VtsiProjectView) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -3333,6 +3704,13 @@ namespace Ondewo.Vtsi {
             VtsiProjectView = (global::Ondewo.Vtsi.VtsiProjectView) input.ReadEnum();
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     }
@@ -3341,7 +3719,8 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to get the list of agents
+  /// Request to list VTSI projects. The filters are combined with AND; the values within one repeated
+  /// field are combined with OR; an unset field or an empty repeated field does not filter.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVtsiProjectsRequest : pb::IMessage<ListVtsiProjectsRequest>
@@ -3382,6 +3761,12 @@ namespace Ondewo.Vtsi {
       pageToken_ = other.pageToken_;
       vtsiProjectSorting_ = other.vtsiProjectSorting_ != null ? other.vtsiProjectSorting_.Clone() : null;
       nluAgentNames_ = other.nluAgentNames_.Clone();
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      pageSize_ = other.pageSize_;
+      statuses_ = other.statuses_.Clone();
+      displayNameContains_ = other.displayNameContains_;
+      createdAfter_ = other.createdAfter_ != null ? other.createdAfter_.Clone() : null;
+      createdBefore_ = other.createdBefore_ != null ? other.createdBefore_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3412,8 +3797,10 @@ namespace Ondewo.Vtsi {
 
     private string pageToken_;
     /// <summary>
-    /// Optional. The next_page_token value returned from a previous list request.
-    /// Example: "current_index-1--page_size-20"
+    /// Optional. The &lt;code>next_page_token&lt;/code> of a previous response. OPAQUE: never construct or parse
+    /// it (its format is internal and may change). Keep every other request field (filters, sorting,
+    /// &lt;code>page_size&lt;/code>) unchanged while paging: a token sent with other filters or sorting is not
+    /// guaranteed to be rejected and then returns that position of the other listing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3441,7 +3828,8 @@ namespace Ondewo.Vtsi {
     private global::Ondewo.Vtsi.VtsiProjectSorting vtsiProjectSorting_;
     /// <summary>
     /// Optional. Field to define the sorting of the list of VTSI projects in the response.
-    /// If not specified, the default behavior is to have no sorting.
+    /// Unset or &lt;code>NO_VTSI_PROJECT_SORTING&lt;/code>: by &lt;code>display_name&lt;/code>, ascending (ties by the
+    /// project&amp;apos;s internal id), which is a stable order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3458,13 +3846,117 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(34);
     private readonly pbc::RepeatedField<string> nluAgentNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. Filter based on associated NLU agents.
+    /// Optional. Only projects associated with at least one of these NLU agents.
     /// Format: &lt;pre>&lt;code>projects/&amp;lt;Project ID&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> NluAgentNames {
       get { return nluAgentNames_; }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned &lt;code>VtsiProject&lt;/code>,
+    /// relative to the &lt;code>VtsiProject&lt;/code> message (no &lt;code>vtsi_projects.&lt;/code> prefix), e.g.
+    /// &lt;code>display_name&lt;/code>, &lt;code>vtsi_project_status&lt;/code>,
+    /// &lt;code>asterisk_configs.asterisk_configs_variables&lt;/code>. Nested paths through singular message
+    /// fields are allowed; a path below a repeated or map field is not. &lt;code>name&lt;/code> is always
+    /// populated. Unset or empty returns every field the &lt;code>vtsi_project_view&lt;/code> populates. An
+    /// unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Applied after the
+    /// &lt;code>vtsi_project_view&lt;/code> and the server&amp;apos;s role-based redaction, so it can only narrow the
+    /// response and never populates a field that was left empty. Not part of the paging contract: a
+    /// &lt;code>page_token&lt;/code> stays valid with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 6;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. Maximum number of projects per page. &lt;code>0&lt;/code> means the server default of 25;
+    /// values above 1000 are clamped to 1000; negative values are rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. Fewer projects than &lt;code>page_size&lt;/code> may be returned (e.g. after
+    /// the authorization filter), and only an empty &lt;code>next_page_token&lt;/code> means the end of the list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "statuses" field.</summary>
+    public const int StatusesFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.VtsiProjectStatus> _repeated_statuses_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Ondewo.Vtsi.VtsiProjectStatus) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiProjectStatus> statuses_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiProjectStatus>();
+    /// <summary>
+    /// Optional. Only projects in one of these statuses. &lt;code>UNSPECIFIED&lt;/code> is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.VtsiProjectStatus> Statuses {
+      get { return statuses_; }
+    }
+
+    /// <summary>Field number for the "display_name_contains" field.</summary>
+    public const int DisplayNameContainsFieldNumber = 8;
+    private string displayNameContains_ = "";
+    /// <summary>
+    /// Optional. Case-insensitive substring match against &lt;code>display_name&lt;/code>. Empty does not
+    /// filter. At most 256 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayNameContains {
+      get { return displayNameContains_; }
+      set {
+        displayNameContains_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "created_after" field.</summary>
+    public const int CreatedAfterFieldNumber = 9;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdAfter_;
+    /// <summary>
+    /// Optional. Only projects created at or after this instant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedAfter {
+      get { return createdAfter_; }
+      set {
+        createdAfter_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "created_before" field.</summary>
+    public const int CreatedBeforeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createdBefore_;
+    /// <summary>
+    /// Optional. Only projects created strictly before this instant. A window whose start
+    /// (&lt;code>created_after&lt;/code>) is not before its end is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreatedBefore {
+      get { return createdBefore_; }
+      set {
+        createdBefore_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3486,6 +3978,12 @@ namespace Ondewo.Vtsi {
       if (PageToken != other.PageToken) return false;
       if (!object.Equals(VtsiProjectSorting, other.VtsiProjectSorting)) return false;
       if(!nluAgentNames_.Equals(other.nluAgentNames_)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (PageSize != other.PageSize) return false;
+      if(!statuses_.Equals(other.statuses_)) return false;
+      if (DisplayNameContains != other.DisplayNameContains) return false;
+      if (!object.Equals(CreatedAfter, other.CreatedAfter)) return false;
+      if (!object.Equals(CreatedBefore, other.CreatedBefore)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3497,6 +3995,12 @@ namespace Ondewo.Vtsi {
       if (HasPageToken) hash ^= PageToken.GetHashCode();
       if (vtsiProjectSorting_ != null) hash ^= VtsiProjectSorting.GetHashCode();
       hash ^= nluAgentNames_.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      hash ^= statuses_.GetHashCode();
+      if (DisplayNameContains.Length != 0) hash ^= DisplayNameContains.GetHashCode();
+      if (createdAfter_ != null) hash ^= CreatedAfter.GetHashCode();
+      if (createdBefore_ != null) hash ^= CreatedBefore.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3528,6 +4032,27 @@ namespace Ondewo.Vtsi {
         output.WriteMessage(VtsiProjectSorting);
       }
       nluAgentNames_.WriteTo(output, _repeated_nluAgentNames_codec);
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PageSize);
+      }
+      statuses_.WriteTo(output, _repeated_statuses_codec);
+      if (DisplayNameContains.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayNameContains);
+      }
+      if (createdAfter_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreatedBefore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3551,6 +4076,27 @@ namespace Ondewo.Vtsi {
         output.WriteMessage(VtsiProjectSorting);
       }
       nluAgentNames_.WriteTo(ref output, _repeated_nluAgentNames_codec);
+      if (fieldMask_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(FieldMask);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PageSize);
+      }
+      statuses_.WriteTo(ref output, _repeated_statuses_codec);
+      if (DisplayNameContains.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayNameContains);
+      }
+      if (createdAfter_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreatedBefore);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3571,6 +4117,22 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VtsiProjectSorting);
       }
       size += nluAgentNames_.CalculateSize(_repeated_nluAgentNames_codec);
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      size += statuses_.CalculateSize(_repeated_statuses_codec);
+      if (DisplayNameContains.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayNameContains);
+      }
+      if (createdAfter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedAfter);
+      }
+      if (createdBefore_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreatedBefore);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3596,6 +4158,31 @@ namespace Ondewo.Vtsi {
         VtsiProjectSorting.MergeFrom(other.VtsiProjectSorting);
       }
       nluAgentNames_.Add(other.nluAgentNames_);
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      statuses_.Add(other.statuses_);
+      if (other.DisplayNameContains.Length != 0) {
+        DisplayNameContains = other.DisplayNameContains;
+      }
+      if (other.createdAfter_ != null) {
+        if (createdAfter_ == null) {
+          CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedAfter.MergeFrom(other.CreatedAfter);
+      }
+      if (other.createdBefore_ != null) {
+        if (createdBefore_ == null) {
+          CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreatedBefore.MergeFrom(other.CreatedBefore);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3634,6 +4221,40 @@ namespace Ondewo.Vtsi {
             nluAgentNames_.AddEntriesFrom(input, _repeated_nluAgentNames_codec);
             break;
           }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            statuses_.AddEntriesFrom(input, _repeated_statuses_codec);
+            break;
+          }
+          case 66: {
+            DisplayNameContains = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (createdAfter_ == null) {
+              CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAfter);
+            break;
+          }
+          case 82: {
+            if (createdBefore_ == null) {
+              CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedBefore);
+            break;
+          }
         }
       }
     #endif
@@ -3670,6 +4291,40 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             nluAgentNames_.AddEntriesFrom(ref input, _repeated_nluAgentNames_codec);
+            break;
+          }
+          case 42: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 48: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 58:
+          case 56: {
+            statuses_.AddEntriesFrom(ref input, _repeated_statuses_codec);
+            break;
+          }
+          case 66: {
+            DisplayNameContains = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (createdAfter_ == null) {
+              CreatedAfter = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedAfter);
+            break;
+          }
+          case 82: {
+            if (createdBefore_ == null) {
+              CreatedBefore = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreatedBefore);
             break;
           }
         }
@@ -3734,8 +4389,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.VtsiProject.Parser);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiProject> vtsiProjects_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiProject>();
     /// <summary>
-    /// The list of VTSI projects returned in the response.
-    /// Use the &amp;apos;repeated&amp;apos; keyword to indicate that this field can contain multiple instances of VtsiProject.
+    /// The VTSI projects of this page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3747,9 +4401,8 @@ namespace Ondewo.Vtsi {
     public const int NextPageTokenFieldNumber = 2;
     private string nextPageToken_ = "";
     /// <summary>
-    /// Token to retrieve the next page of results.
-    /// This field is a string that holds a token for fetching the next page of results.
-    /// If there are no more results in the list, this field will be empty.
+    /// Token to retrieve the next page of results. Opaque (see
+    /// &lt;code>ListVtsiProjectsRequest.page_token&lt;/code>). Empty when there are no more results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3916,7 +4569,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// This protobuf message defines the sorting order for VTSI (Virtual Test System Infrastructure) projects.
+  /// This protobuf message defines the sorting order for VTSI (Virtual Telephone System Integration) projects.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VtsiProjectSorting : pb::IMessage<VtsiProjectSorting>
@@ -4200,7 +4853,7 @@ namespace Ondewo.Vtsi {
       /// </summary>
       public enum VtsiProjectSortingField {
         /// <summary>
-        /// No sorting
+        /// The default order: by &lt;code>display_name&lt;/code>, ascending.
         /// </summary>
         [pbr::OriginalName("NO_VTSI_PROJECT_SORTING")] NoVtsiProjectSorting = 0,
         /// <summary>
@@ -4227,7 +4880,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to updated VTSI project
+  /// Request to update a VTSI project
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateVtsiProjectRequest : pb::IMessage<UpdateVtsiProjectRequest>
@@ -4266,6 +4919,8 @@ namespace Ondewo.Vtsi {
     public UpdateVtsiProjectRequest(UpdateVtsiProjectRequest other) : this() {
       vtsiProject_ = other.vtsiProject_ != null ? other.vtsiProject_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
+      validateOnly_ = other.validateOnly_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4279,7 +4934,10 @@ namespace Ondewo.Vtsi {
     public const int VtsiProjectFieldNumber = 1;
     private global::Ondewo.Vtsi.VtsiProject vtsiProject_;
     /// <summary>
-    /// Project Configs.
+    /// The project to update, identified by &lt;code>vtsi_project.name&lt;/code>
+    /// (&lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>), carrying the new values. The
+    /// output-only fields (&lt;code>vtsi_project_status&lt;/code>, the audit, counter and status fields) are
+    /// ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4333,6 +4991,46 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>VtsiProject&lt;/code> field paths to populate in
+    /// &lt;code>UpdateVtsiProjectResponse.vtsi_project&lt;/code>, relative to the &lt;code>VtsiProject&lt;/code> (no
+    /// &lt;code>vtsi_project.&lt;/code> prefix). Same convention as
+    /// &lt;a href="index.html#ondewo.vtsi.GetVtsiProjectRequest">GetVtsiProjectRequest.field_mask&lt;/a>; the
+    /// &lt;code>name&lt;/code> of the response is always populated. Unset or empty returns every field. An
+    /// unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> before anything is written. A mask never
+    /// changes what is updated (that is &lt;code>update_mask&lt;/code>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validate_only" field.</summary>
+    public const int ValidateOnlyFieldNumber = 4;
+    private bool validateOnly_;
+    /// <summary>
+    /// Optional. Validate only: merge the update over the stored project and run every check of a real
+    /// update (validation, authorization, the configuration render), and return the would-be project in
+    /// &lt;code>UpdateVtsiProjectResponse.vtsi_project&lt;/code>, but write nothing, touch no Asterisk, end no
+    /// call and emit nothing. A successful validation does not guarantee that a later update succeeds
+    /// (the project may change meanwhile). Default &lt;code>false&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ValidateOnly {
+      get { return validateOnly_; }
+      set {
+        validateOnly_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4350,6 +5048,8 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(VtsiProject, other.VtsiProject)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
+      if (ValidateOnly != other.ValidateOnly) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4359,6 +5059,8 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (vtsiProject_ != null) hash ^= VtsiProject.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
+      if (ValidateOnly != false) hash ^= ValidateOnly.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4385,6 +5087,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4403,6 +5113,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
+      if (ValidateOnly != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(ValidateOnly);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4418,6 +5136,12 @@ namespace Ondewo.Vtsi {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
+      }
+      if (ValidateOnly != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4442,6 +5166,15 @@ namespace Ondewo.Vtsi {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
+      }
+      if (other.ValidateOnly != false) {
+        ValidateOnly = other.ValidateOnly;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4474,6 +5207,17 @@ namespace Ondewo.Vtsi {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
             break;
           }
         }
@@ -4509,6 +5253,17 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
+          case 32: {
+            ValidateOnly = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -4517,7 +5272,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to updated VTSI project
+  /// Response to the update of a VTSI project
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateVtsiProjectResponse : pb::IMessage<UpdateVtsiProjectResponse>
@@ -4556,6 +5311,7 @@ namespace Ondewo.Vtsi {
     public UpdateVtsiProjectResponse(UpdateVtsiProjectResponse other) : this() {
       name_ = other.name_;
       errorMessage_ = other.errorMessage_;
+      vtsiProject_ = other.vtsiProject_ != null ? other.vtsiProject_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4584,7 +5340,8 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Never set: errors are reported as gRPC status codes (see the &lt;code>Projects&lt;/code> service
+    /// description). Kept for wire compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4592,6 +5349,23 @@ namespace Ondewo.Vtsi {
       get { return errorMessage_; }
       set {
         errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vtsi_project" field.</summary>
+    public const int VtsiProjectFieldNumber = 3;
+    private global::Ondewo.Vtsi.VtsiProject vtsiProject_;
+    /// <summary>
+    /// The project after the update (with &lt;code>validate_only&lt;/code>: the would-be project), in the full
+    /// view, redacted like &lt;code>GetVtsiProject&lt;/code> and narrowed by
+    /// &lt;code>UpdateVtsiProjectRequest.field_mask&lt;/code>. Left unset by a 9.0.0 server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.VtsiProject VtsiProject {
+      get { return vtsiProject_; }
+      set {
+        vtsiProject_ = value;
       }
     }
 
@@ -4612,6 +5386,7 @@ namespace Ondewo.Vtsi {
       }
       if (Name != other.Name) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (!object.Equals(VtsiProject, other.VtsiProject)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4621,6 +5396,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (vtsiProject_ != null) hash ^= VtsiProject.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4647,6 +5423,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(ErrorMessage);
       }
+      if (vtsiProject_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(VtsiProject);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4665,6 +5445,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteString(ErrorMessage);
       }
+      if (vtsiProject_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(VtsiProject);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4680,6 +5464,9 @@ namespace Ondewo.Vtsi {
       }
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (vtsiProject_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(VtsiProject);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4698,6 +5485,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.vtsiProject_ != null) {
+        if (vtsiProject_ == null) {
+          VtsiProject = new global::Ondewo.Vtsi.VtsiProject();
+        }
+        VtsiProject.MergeFrom(other.VtsiProject);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4724,6 +5517,13 @@ namespace Ondewo.Vtsi {
           }
           case 18: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (vtsiProject_ == null) {
+              VtsiProject = new global::Ondewo.Vtsi.VtsiProject();
+            }
+            input.ReadMessage(VtsiProject);
             break;
           }
         }
@@ -4753,6 +5553,13 @@ namespace Ondewo.Vtsi {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 26: {
+            if (vtsiProject_ == null) {
+              VtsiProject = new global::Ondewo.Vtsi.VtsiProject();
+            }
+            input.ReadMessage(VtsiProject);
+            break;
+          }
         }
       }
     }
@@ -4762,7 +5569,8 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Request to delete a VTSI project
-  /// If a deployed VTSI project was deleted then it was undeployed beforehand automatically
+  /// A deployed VTSI project is undeployed automatically before it is deleted (see
+  /// &lt;a href="index.html#ondewo.vtsi.Projects.DeleteVtsiProject">DeleteVtsiProject&lt;/a>).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVtsiProjectRequest : pb::IMessage<DeleteVtsiProjectRequest>
@@ -4967,7 +5775,6 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Response to delete a VTSI project
-  /// If a deployed VTSI project was deleted then it was undeployed beforehand automatically
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVtsiProjectResponse : pb::IMessage<DeleteVtsiProjectResponse>
@@ -5034,7 +5841,7 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Never set: errors are reported as gRPC status codes. Kept for wire compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5482,7 +6289,7 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Never set: errors are reported as gRPC status codes. Kept for wire compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5710,7 +6517,7 @@ namespace Ondewo.Vtsi {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Project name of the VTSI project.
+    /// VTSI project name with which to perform the call of the form &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5930,7 +6737,7 @@ namespace Ondewo.Vtsi {
     public const int ErrorMessageFieldNumber = 2;
     private string errorMessage_ = "";
     /// <summary>
-    /// error message if there are any.
+    /// Never set: errors are reported as gRPC status codes. Kept for wire compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

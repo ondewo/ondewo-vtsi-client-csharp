@@ -25,6 +25,50 @@ using grpc = global::Grpc.Core;
 namespace Ondewo.Vtsi {
   /// <summary>
   /// &lt;p>ONDEWO VTSI API&lt;/p>
+  /// &lt;p>Manages VTSI (Virtual Telephone System Integration) PROJECTS: the per-project configuration of an
+  /// Asterisk SIP server (its SIP trunk, its ports, its Asterisk version) together with the caller and
+  /// listener capacity of the project and the ONDEWO NLU agents it serves. Deploying a project starts its
+  /// Asterisk container; callers, listeners, campaigns and softphone accounts of the project need a
+  /// &lt;code>DEPLOYED&lt;/code> project to place or take calls.&lt;/p>
+  /// &lt;p>Errors are reported as gRPC status codes. The &lt;code>error_message&lt;/code> fields of the responses
+  /// are never set, neither on success nor on failure (they predate the status codes and are kept for wire
+  /// compatibility): &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, an unknown &lt;code>update_mask&lt;/code>
+  /// or &lt;code>field_mask&lt;/code> path, a malformed &lt;code>page_token&lt;/code> or an out-of-range value (each
+  /// naming the field); &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>ALREADY_EXISTS&lt;/code> when
+  /// &lt;code>CreateVtsiProject&lt;/code> names a project that exists; &lt;code>FAILED_PRECONDITION&lt;/code> when the
+  /// project is in a status that does not allow the operation (each RPC names its cases);
+  /// &lt;code>ABORTED&lt;/code> when another create, update, deploy, undeploy or delete of the same project held
+  /// it for longer than the server waits (about 30 seconds), in which case nothing was changed and the
+  /// request can be retried; &lt;code>UNAVAILABLE&lt;/code> when the docker daemon or the database cannot be
+  /// reached.&lt;/p>
+  /// &lt;p>Authorization (only when the server enforces it, i.e. &lt;code>ONDEWO_VTSI_KEYCLOAK_AUTH_ENABLED&lt;/code>
+  /// and &lt;code>ONDEWO_VTSI_AUTH_REQUIRED&lt;/code> are both true): a caller without a credential is
+  /// &lt;code>UNAUTHENTICATED&lt;/code> whatever it sent. A caller needs a server role (&lt;code>SERVER_ADMIN&lt;/code>,
+  /// &lt;code>SERVER_MANAGER&lt;/code> or &lt;code>SERVER_USER&lt;/code>), else every RPC is
+  /// &lt;code>PERMISSION_DENIED&lt;/code>. The project roles are derived from the caller&amp;apos;s roles on the
+  /// project&amp;apos;s &lt;code>nlu_agent_names&lt;/code>: &lt;code>CreateVtsiProject&lt;/code>,
+  /// &lt;code>GetVtsiProject&lt;/code>, &lt;code>UpdateVtsiProject&lt;/code>, &lt;code>DeleteVtsiProject&lt;/code>,
+  /// &lt;code>DeployVtsiProject&lt;/code> and &lt;code>UndeployVtsiProject&lt;/code> require
+  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher (&lt;code>PROJECT_ADMIN&lt;/code>); &lt;code>ListVtsiProjects&lt;/code>
+  /// is open to every project role and returns only the projects the caller holds a role on.
+  /// &lt;code>SERVER_ADMIN&lt;/code> passes every project check. With enforcement on, a well-formed request naming
+  /// a project the caller holds no role on, an unknown project included, is answered
+  /// &lt;code>PERMISSION_DENIED&lt;/code> rather than &lt;code>NOT_FOUND&lt;/code>, so the answer does not reveal
+  /// whether the project exists; &lt;code>NOT_FOUND&lt;/code> is then reserved to &lt;code>SERVER_ADMIN&lt;/code>. With
+  /// enforcement off (the default) every request is served and only logged.&lt;/p>
+  /// &lt;p>&lt;b>Credentials.&lt;/b> &lt;code>AsteriskConfigsVariables.sip_trunk_password&lt;/code> is stored and returned
+  /// as sent (it is not write-only): &lt;code>GetVtsiProject&lt;/code>, &lt;code>CreateVtsiProject&lt;/code>,
+  /// &lt;code>UpdateVtsiProject&lt;/code> and &lt;code>ListVtsiProjects&lt;/code> return it to every caller allowed to
+  /// call them with a view that populates &lt;code>asterisk_configs&lt;/code>. With enforcement on,
+  /// &lt;code>ListVtsiProjects&lt;/code> withholds the whole &lt;code>asterisk_configs&lt;/code> (and every other
+  /// configuration field) from a caller whose highest role on the project is &lt;code>PROJECT_EXECUTOR&lt;/code>
+  /// or &lt;code>PROJECT_USER&lt;/code>. Use a &lt;code>field_mask&lt;/code> without &lt;code>asterisk_configs&lt;/code> where
+  /// the password is not needed.&lt;/p>
+  /// &lt;p>Events: every change emits the matching &lt;code>VtsiEvent&lt;/code> of the project
+  /// (&lt;code>VTSI_EVENT_VTSI_PROJECT_UPDATED&lt;/code>, &lt;code>_DEPLOYED&lt;/code>, &lt;code>_DEPLOY_FAILED&lt;/code>,
+  /// &lt;code>_UNDEPLOYED&lt;/code>, &lt;code>_UNDEPLOY_FAILED&lt;/code>, &lt;code>_DELETED&lt;/code>) and, for every change
+  /// of &lt;code>vtsi_project_status&lt;/code>, &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code>. A request
+  /// with &lt;code>validate_only&lt;/code> emits nothing.&lt;/p>
   /// </summary>
   public static partial class Projects
   {
@@ -159,7 +203,26 @@ namespace Ondewo.Vtsi {
     public abstract partial class ProjectsBase
     {
       /// <summary>
-      /// &lt;p>Create a VTSI project with configs&lt;/p>
+      /// &lt;p>Creates a VTSI project with its configuration. The project is created
+      /// &lt;code>UNDEPLOYED&lt;/code>; nothing is started. &lt;code>max_callers&lt;/code> caller and
+      /// &lt;code>max_listeners&lt;/code> listener SIP accounts are provisioned for it and an Asterisk port is
+      /// assigned when none was given.&lt;/p>
+      /// &lt;p>With &lt;code>validate_only&lt;/code> every check of a real create runs (authorization included) and
+      /// nothing is written, reserved or emitted; the would-be project is returned.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or over-long (more than 256 characters)
+      /// &lt;code>display_name&lt;/code>, a negative &lt;code>max_callers&lt;/code> or &lt;code>max_listeners&lt;/code>, a port
+      /// outside 0..65535, &lt;code>asterisk_port&lt;/code> and &lt;code>asterisk_configs.asterisk_port&lt;/code> both set
+      /// and different, a malformed &lt;code>name&lt;/code>, an invalid &lt;code>asterisk_configs&lt;/code> (each naming
+      /// the field); &lt;code>ALREADY_EXISTS&lt;/code> when
+      /// &lt;code>vtsi_project.name&lt;/code> names an existing project (also when two creates of the same name
+      /// race); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the
+      /// service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on EVERY agent of
+      /// &lt;code>nlu_agent_names&lt;/code>; a project with no agent can only be created by
+      /// &lt;code>SERVER_ADMIN&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: none. A retry after a lost response creates a second project unless
+      /// &lt;code>vtsi_project.name&lt;/code> is set, in which case the retry is answered
+      /// &lt;code>ALREADY_EXISTS&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -171,7 +234,11 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Returns a VTSI project with its configuration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -183,7 +250,33 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Update a VTSI project with configs&lt;/p>
+      /// &lt;p>Updates a VTSI project: the fields named in &lt;code>update_mask&lt;/code>, or, with no mask, the
+      /// fields &lt;code>vtsi_project&lt;/code> sets (see &lt;code>UpdateVtsiProjectRequest.update_mask&lt;/code>).&lt;/p>
+      /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
+      /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
+      /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
+      /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
+      /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
+      /// ENDS EVERY CALL of the project: a redeploy undeploys and deploys the project and recycles its
+      /// listeners and pooled callers. Use &lt;code>validate_only&lt;/code> to check an update first.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>vtsi_project.name&lt;/code>,
+      /// an unknown &lt;code>update_mask&lt;/code> path (also the prefixed form &lt;code>vtsi_project.x&lt;/code>), a mask
+      /// that clears the configuration source (&lt;code>asterisk_configs&lt;/code> with no arm set), an out-of-range
+      /// value (as on create) or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is &lt;code>DELETING&lt;/code>;
+      /// &lt;code>ABORTED&lt;/code> when another lifecycle operation of the project held it too long or the
+      /// project changed concurrently, nothing being written; &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description. When a deployed project&amp;apos;s
+      /// Asterisk cannot be reloaded, restarted or redeployed the RPC fails (&lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code>) and the project is left as the failure left it (see
+      /// &lt;code>status_message&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project and on every agent of the
+      /// stored AND of the resulting &lt;code>nlu_agent_names&lt;/code> (removing an agent needs the same role as
+      /// adding it).&lt;/p>
+      /// &lt;p>Idempotency: an update is a set of absolute values, so a retry with the same request converges
+      /// to the same project (a redeploying update ends the calls of the retry&amp;apos;s moment too).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -195,7 +288,20 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Delete a VTSI project with configs&lt;/p>
+      /// &lt;p>Deletes a VTSI project and its configuration. A project that is deployed, deploying,
+      /// undeploying or &lt;code>DEPLOY_FAILED&lt;/code> is UNDEPLOYED FIRST, automatically, exactly as by &lt;code>UndeployVtsiProject&lt;/code>:
+      /// every call of the project ends and its listeners, callers and Asterisk container are removed. The
+      /// undeploy is best effort: a failing teardown is logged and the deletion goes on. The project then
+      /// moves to &lt;code>DELETING&lt;/code>, its stored configuration is removed and the project no longer
+      /// exists (&lt;code>DELETED&lt;/code> is never returned: a deleted
+      /// project is &lt;code>NOT_FOUND&lt;/code>). Deletion is permanent.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, also for a retry of a deletion that succeeded (the
+      /// RPC is not idempotent); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> when it had to undeploy, then
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>, the last event of the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -207,7 +313,30 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Deploy a VTSI project&lt;/p>
+      /// &lt;p>Deploys a VTSI project: starts its Asterisk container with the stored configuration and waits
+      /// until the container runs. SYNCHRONOUS: the RPC returns when the project is &lt;code>DEPLOYED&lt;/code>
+      /// or the deployment failed. The status moves &lt;code>UNDEPLOYED&lt;/code> (or &lt;code>DEPLOY_FAILED&lt;/code>)
+      /// &amp;gt; &lt;code>DEPLOYING&lt;/code> &amp;gt; &lt;code>DEPLOYED&lt;/code>; on failure the half-started container is
+      /// removed, the status becomes &lt;code>DEPLOY_FAILED&lt;/code> with the reason in
+      /// &lt;code>status_message&lt;/code>, and the RPC fails. The server waits about 30 seconds for the container
+      /// to run, plus the docker API timeout of each docker call (&lt;code>ONDEWO_VTSI_DOCKER_API_TIMEOUT_S&lt;/code>,
+      /// default 90 seconds); a client deadline of at least 3 minutes is recommended. Deploying applies the
+      /// project&amp;apos;s softphone accounts to the new Asterisk. No caller or listener is started: start them
+      /// with the &lt;code>Calls&lt;/code> service.&lt;/p>
+      /// &lt;p>Idempotent: deploying a &lt;code>DEPLOYED&lt;/code> project changes nothing and succeeds (nothing is
+      /// restarted); a deploy that arrives while another deploy of the project runs waits for it and then
+      /// finds the project &lt;code>DEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>, or &lt;code>DEPLOYING&lt;/code> / &lt;code>UNDEPLOYING&lt;/code> after the operation that
+      /// set the status was interrupted (undeploy the project first); &lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code> when the deployment failed (the project is then
+      /// &lt;code>DEPLOY_FAILED&lt;/code>); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -219,7 +348,25 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Undeploy a VTSI project&lt;/p>
+      /// &lt;p>Undeploys a VTSI project. SYNCHRONOUS: the status moves to &lt;code>UNDEPLOYING&lt;/code>, EVERY CALL
+      /// of the project is ended (callers and listeners alike, campaign calls included), the listeners and
+      /// the pooled callers are undeployed, the Asterisk container is removed, and the status becomes
+      /// &lt;code>UNDEPLOYED&lt;/code>. The registrations of the project&amp;apos;s softphone accounts end with the
+      /// container; the accounts themselves are kept and are applied again on the next deploy. The stored
+      /// configuration, callers, listeners and campaigns are kept. A failed undeploy restores the previous
+      /// status (or &lt;code>UNDEPLOYED&lt;/code> when the container is already gone) and fails the RPC.&lt;/p>
+      /// &lt;p>Idempotent: undeploying an &lt;code>UNDEPLOYED&lt;/code> project changes nothing and succeeds.
+      /// Undeploying a &lt;code>DEPLOY_FAILED&lt;/code> project removes what the failed deployment left and makes it
+      /// &lt;code>UNDEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>; &lt;code>INTERNAL&lt;/code> or &lt;code>UNAVAILABLE&lt;/code> when the teardown failed;
+      /// &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service
+      /// description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -231,7 +378,17 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Lists VTSI projects, filtered, sorted and paged. With authorization enforced, only the projects
+      /// the caller holds a project role on are listed (every project for &lt;code>SERVER_ADMIN&lt;/code>), and
+      /// the configuration fields are withheld from a &lt;code>PROJECT_EXECUTOR&lt;/code> or
+      /// &lt;code>PROJECT_USER&lt;/code> (see the service description); a caller without a usable credential gets an
+      /// empty page.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a negative &lt;code>page_size&lt;/code>, a malformed
+      /// &lt;code>page_token&lt;/code>, an unspecified status in &lt;code>statuses&lt;/code>, an over-long
+      /// &lt;code>display_name_contains&lt;/code>, a &lt;code>created_after&lt;/code> that is not before
+      /// &lt;code>created_before&lt;/code>, or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>UNAUTHENTICATED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: any project role (&lt;code>PROJECT_USER&lt;/code> or higher).&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -272,7 +429,26 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Create a VTSI project with configs&lt;/p>
+      /// &lt;p>Creates a VTSI project with its configuration. The project is created
+      /// &lt;code>UNDEPLOYED&lt;/code>; nothing is started. &lt;code>max_callers&lt;/code> caller and
+      /// &lt;code>max_listeners&lt;/code> listener SIP accounts are provisioned for it and an Asterisk port is
+      /// assigned when none was given.&lt;/p>
+      /// &lt;p>With &lt;code>validate_only&lt;/code> every check of a real create runs (authorization included) and
+      /// nothing is written, reserved or emitted; the would-be project is returned.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or over-long (more than 256 characters)
+      /// &lt;code>display_name&lt;/code>, a negative &lt;code>max_callers&lt;/code> or &lt;code>max_listeners&lt;/code>, a port
+      /// outside 0..65535, &lt;code>asterisk_port&lt;/code> and &lt;code>asterisk_configs.asterisk_port&lt;/code> both set
+      /// and different, a malformed &lt;code>name&lt;/code>, an invalid &lt;code>asterisk_configs&lt;/code> (each naming
+      /// the field); &lt;code>ALREADY_EXISTS&lt;/code> when
+      /// &lt;code>vtsi_project.name&lt;/code> names an existing project (also when two creates of the same name
+      /// race); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the
+      /// service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on EVERY agent of
+      /// &lt;code>nlu_agent_names&lt;/code>; a project with no agent can only be created by
+      /// &lt;code>SERVER_ADMIN&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: none. A retry after a lost response creates a second project unless
+      /// &lt;code>vtsi_project.name&lt;/code> is set, in which case the retry is answered
+      /// &lt;code>ALREADY_EXISTS&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -285,7 +461,26 @@ namespace Ondewo.Vtsi {
         return CreateVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Create a VTSI project with configs&lt;/p>
+      /// &lt;p>Creates a VTSI project with its configuration. The project is created
+      /// &lt;code>UNDEPLOYED&lt;/code>; nothing is started. &lt;code>max_callers&lt;/code> caller and
+      /// &lt;code>max_listeners&lt;/code> listener SIP accounts are provisioned for it and an Asterisk port is
+      /// assigned when none was given.&lt;/p>
+      /// &lt;p>With &lt;code>validate_only&lt;/code> every check of a real create runs (authorization included) and
+      /// nothing is written, reserved or emitted; the would-be project is returned.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or over-long (more than 256 characters)
+      /// &lt;code>display_name&lt;/code>, a negative &lt;code>max_callers&lt;/code> or &lt;code>max_listeners&lt;/code>, a port
+      /// outside 0..65535, &lt;code>asterisk_port&lt;/code> and &lt;code>asterisk_configs.asterisk_port&lt;/code> both set
+      /// and different, a malformed &lt;code>name&lt;/code>, an invalid &lt;code>asterisk_configs&lt;/code> (each naming
+      /// the field); &lt;code>ALREADY_EXISTS&lt;/code> when
+      /// &lt;code>vtsi_project.name&lt;/code> names an existing project (also when two creates of the same name
+      /// race); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the
+      /// service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on EVERY agent of
+      /// &lt;code>nlu_agent_names&lt;/code>; a project with no agent can only be created by
+      /// &lt;code>SERVER_ADMIN&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: none. A retry after a lost response creates a second project unless
+      /// &lt;code>vtsi_project.name&lt;/code> is set, in which case the retry is answered
+      /// &lt;code>ALREADY_EXISTS&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -296,7 +491,26 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_CreateVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Create a VTSI project with configs&lt;/p>
+      /// &lt;p>Creates a VTSI project with its configuration. The project is created
+      /// &lt;code>UNDEPLOYED&lt;/code>; nothing is started. &lt;code>max_callers&lt;/code> caller and
+      /// &lt;code>max_listeners&lt;/code> listener SIP accounts are provisioned for it and an Asterisk port is
+      /// assigned when none was given.&lt;/p>
+      /// &lt;p>With &lt;code>validate_only&lt;/code> every check of a real create runs (authorization included) and
+      /// nothing is written, reserved or emitted; the would-be project is returned.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or over-long (more than 256 characters)
+      /// &lt;code>display_name&lt;/code>, a negative &lt;code>max_callers&lt;/code> or &lt;code>max_listeners&lt;/code>, a port
+      /// outside 0..65535, &lt;code>asterisk_port&lt;/code> and &lt;code>asterisk_configs.asterisk_port&lt;/code> both set
+      /// and different, a malformed &lt;code>name&lt;/code>, an invalid &lt;code>asterisk_configs&lt;/code> (each naming
+      /// the field); &lt;code>ALREADY_EXISTS&lt;/code> when
+      /// &lt;code>vtsi_project.name&lt;/code> names an existing project (also when two creates of the same name
+      /// race); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the
+      /// service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on EVERY agent of
+      /// &lt;code>nlu_agent_names&lt;/code>; a project with no agent can only be created by
+      /// &lt;code>SERVER_ADMIN&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: none. A retry after a lost response creates a second project unless
+      /// &lt;code>vtsi_project.name&lt;/code> is set, in which case the retry is answered
+      /// &lt;code>ALREADY_EXISTS&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,7 +523,26 @@ namespace Ondewo.Vtsi {
         return CreateVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Create a VTSI project with configs&lt;/p>
+      /// &lt;p>Creates a VTSI project with its configuration. The project is created
+      /// &lt;code>UNDEPLOYED&lt;/code>; nothing is started. &lt;code>max_callers&lt;/code> caller and
+      /// &lt;code>max_listeners&lt;/code> listener SIP accounts are provisioned for it and an Asterisk port is
+      /// assigned when none was given.&lt;/p>
+      /// &lt;p>With &lt;code>validate_only&lt;/code> every check of a real create runs (authorization included) and
+      /// nothing is written, reserved or emitted; the would-be project is returned.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or over-long (more than 256 characters)
+      /// &lt;code>display_name&lt;/code>, a negative &lt;code>max_callers&lt;/code> or &lt;code>max_listeners&lt;/code>, a port
+      /// outside 0..65535, &lt;code>asterisk_port&lt;/code> and &lt;code>asterisk_configs.asterisk_port&lt;/code> both set
+      /// and different, a malformed &lt;code>name&lt;/code>, an invalid &lt;code>asterisk_configs&lt;/code> (each naming
+      /// the field); &lt;code>ALREADY_EXISTS&lt;/code> when
+      /// &lt;code>vtsi_project.name&lt;/code> names an existing project (also when two creates of the same name
+      /// race); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the
+      /// service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on EVERY agent of
+      /// &lt;code>nlu_agent_names&lt;/code>; a project with no agent can only be created by
+      /// &lt;code>SERVER_ADMIN&lt;/code>.&lt;/p>
+      /// &lt;p>Idempotency: none. A retry after a lost response creates a second project unless
+      /// &lt;code>vtsi_project.name&lt;/code> is set, in which case the retry is answered
+      /// &lt;code>ALREADY_EXISTS&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -320,7 +553,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_CreateVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Returns a VTSI project with its configuration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -333,7 +570,11 @@ namespace Ondewo.Vtsi {
         return GetVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Returns a VTSI project with its configuration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -344,7 +585,11 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_GetVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Returns a VTSI project with its configuration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,7 +602,11 @@ namespace Ondewo.Vtsi {
         return GetVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Returns a VTSI project with its configuration.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -368,7 +617,33 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_GetVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Update a VTSI project with configs&lt;/p>
+      /// &lt;p>Updates a VTSI project: the fields named in &lt;code>update_mask&lt;/code>, or, with no mask, the
+      /// fields &lt;code>vtsi_project&lt;/code> sets (see &lt;code>UpdateVtsiProjectRequest.update_mask&lt;/code>).&lt;/p>
+      /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
+      /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
+      /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
+      /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
+      /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
+      /// ENDS EVERY CALL of the project: a redeploy undeploys and deploys the project and recycles its
+      /// listeners and pooled callers. Use &lt;code>validate_only&lt;/code> to check an update first.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>vtsi_project.name&lt;/code>,
+      /// an unknown &lt;code>update_mask&lt;/code> path (also the prefixed form &lt;code>vtsi_project.x&lt;/code>), a mask
+      /// that clears the configuration source (&lt;code>asterisk_configs&lt;/code> with no arm set), an out-of-range
+      /// value (as on create) or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is &lt;code>DELETING&lt;/code>;
+      /// &lt;code>ABORTED&lt;/code> when another lifecycle operation of the project held it too long or the
+      /// project changed concurrently, nothing being written; &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description. When a deployed project&amp;apos;s
+      /// Asterisk cannot be reloaded, restarted or redeployed the RPC fails (&lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code>) and the project is left as the failure left it (see
+      /// &lt;code>status_message&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project and on every agent of the
+      /// stored AND of the resulting &lt;code>nlu_agent_names&lt;/code> (removing an agent needs the same role as
+      /// adding it).&lt;/p>
+      /// &lt;p>Idempotency: an update is a set of absolute values, so a retry with the same request converges
+      /// to the same project (a redeploying update ends the calls of the retry&amp;apos;s moment too).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -381,7 +656,33 @@ namespace Ondewo.Vtsi {
         return UpdateVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Update a VTSI project with configs&lt;/p>
+      /// &lt;p>Updates a VTSI project: the fields named in &lt;code>update_mask&lt;/code>, or, with no mask, the
+      /// fields &lt;code>vtsi_project&lt;/code> sets (see &lt;code>UpdateVtsiProjectRequest.update_mask&lt;/code>).&lt;/p>
+      /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
+      /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
+      /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
+      /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
+      /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
+      /// ENDS EVERY CALL of the project: a redeploy undeploys and deploys the project and recycles its
+      /// listeners and pooled callers. Use &lt;code>validate_only&lt;/code> to check an update first.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>vtsi_project.name&lt;/code>,
+      /// an unknown &lt;code>update_mask&lt;/code> path (also the prefixed form &lt;code>vtsi_project.x&lt;/code>), a mask
+      /// that clears the configuration source (&lt;code>asterisk_configs&lt;/code> with no arm set), an out-of-range
+      /// value (as on create) or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is &lt;code>DELETING&lt;/code>;
+      /// &lt;code>ABORTED&lt;/code> when another lifecycle operation of the project held it too long or the
+      /// project changed concurrently, nothing being written; &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description. When a deployed project&amp;apos;s
+      /// Asterisk cannot be reloaded, restarted or redeployed the RPC fails (&lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code>) and the project is left as the failure left it (see
+      /// &lt;code>status_message&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project and on every agent of the
+      /// stored AND of the resulting &lt;code>nlu_agent_names&lt;/code> (removing an agent needs the same role as
+      /// adding it).&lt;/p>
+      /// &lt;p>Idempotency: an update is a set of absolute values, so a retry with the same request converges
+      /// to the same project (a redeploying update ends the calls of the retry&amp;apos;s moment too).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -392,7 +693,33 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Update a VTSI project with configs&lt;/p>
+      /// &lt;p>Updates a VTSI project: the fields named in &lt;code>update_mask&lt;/code>, or, with no mask, the
+      /// fields &lt;code>vtsi_project&lt;/code> sets (see &lt;code>UpdateVtsiProjectRequest.update_mask&lt;/code>).&lt;/p>
+      /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
+      /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
+      /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
+      /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
+      /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
+      /// ENDS EVERY CALL of the project: a redeploy undeploys and deploys the project and recycles its
+      /// listeners and pooled callers. Use &lt;code>validate_only&lt;/code> to check an update first.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>vtsi_project.name&lt;/code>,
+      /// an unknown &lt;code>update_mask&lt;/code> path (also the prefixed form &lt;code>vtsi_project.x&lt;/code>), a mask
+      /// that clears the configuration source (&lt;code>asterisk_configs&lt;/code> with no arm set), an out-of-range
+      /// value (as on create) or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is &lt;code>DELETING&lt;/code>;
+      /// &lt;code>ABORTED&lt;/code> when another lifecycle operation of the project held it too long or the
+      /// project changed concurrently, nothing being written; &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description. When a deployed project&amp;apos;s
+      /// Asterisk cannot be reloaded, restarted or redeployed the RPC fails (&lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code>) and the project is left as the failure left it (see
+      /// &lt;code>status_message&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project and on every agent of the
+      /// stored AND of the resulting &lt;code>nlu_agent_names&lt;/code> (removing an agent needs the same role as
+      /// adding it).&lt;/p>
+      /// &lt;p>Idempotency: an update is a set of absolute values, so a retry with the same request converges
+      /// to the same project (a redeploying update ends the calls of the retry&amp;apos;s moment too).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -405,7 +732,33 @@ namespace Ondewo.Vtsi {
         return UpdateVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Update a VTSI project with configs&lt;/p>
+      /// &lt;p>Updates a VTSI project: the fields named in &lt;code>update_mask&lt;/code>, or, with no mask, the
+      /// fields &lt;code>vtsi_project&lt;/code> sets (see &lt;code>UpdateVtsiProjectRequest.update_mask&lt;/code>).&lt;/p>
+      /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
+      /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
+      /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
+      /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
+      /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
+      /// ENDS EVERY CALL of the project: a redeploy undeploys and deploys the project and recycles its
+      /// listeners and pooled callers. Use &lt;code>validate_only&lt;/code> to check an update first.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>vtsi_project.name&lt;/code>,
+      /// an unknown &lt;code>update_mask&lt;/code> path (also the prefixed form &lt;code>vtsi_project.x&lt;/code>), a mask
+      /// that clears the configuration source (&lt;code>asterisk_configs&lt;/code> with no arm set), an out-of-range
+      /// value (as on create) or an unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an
+      /// unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is &lt;code>DELETING&lt;/code>;
+      /// &lt;code>ABORTED&lt;/code> when another lifecycle operation of the project held it too long or the
+      /// project changed concurrently, nothing being written; &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description. When a deployed project&amp;apos;s
+      /// Asterisk cannot be reloaded, restarted or redeployed the RPC fails (&lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code>) and the project is left as the failure left it (see
+      /// &lt;code>status_message&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project and on every agent of the
+      /// stored AND of the resulting &lt;code>nlu_agent_names&lt;/code> (removing an agent needs the same role as
+      /// adding it).&lt;/p>
+      /// &lt;p>Idempotency: an update is a set of absolute values, so a retry with the same request converges
+      /// to the same project (a redeploying update ends the calls of the retry&amp;apos;s moment too).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -416,7 +769,20 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Delete a VTSI project with configs&lt;/p>
+      /// &lt;p>Deletes a VTSI project and its configuration. A project that is deployed, deploying,
+      /// undeploying or &lt;code>DEPLOY_FAILED&lt;/code> is UNDEPLOYED FIRST, automatically, exactly as by &lt;code>UndeployVtsiProject&lt;/code>:
+      /// every call of the project ends and its listeners, callers and Asterisk container are removed. The
+      /// undeploy is best effort: a failing teardown is logged and the deletion goes on. The project then
+      /// moves to &lt;code>DELETING&lt;/code>, its stored configuration is removed and the project no longer
+      /// exists (&lt;code>DELETED&lt;/code> is never returned: a deleted
+      /// project is &lt;code>NOT_FOUND&lt;/code>). Deletion is permanent.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, also for a retry of a deletion that succeeded (the
+      /// RPC is not idempotent); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> when it had to undeploy, then
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>, the last event of the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -429,7 +795,20 @@ namespace Ondewo.Vtsi {
         return DeleteVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Delete a VTSI project with configs&lt;/p>
+      /// &lt;p>Deletes a VTSI project and its configuration. A project that is deployed, deploying,
+      /// undeploying or &lt;code>DEPLOY_FAILED&lt;/code> is UNDEPLOYED FIRST, automatically, exactly as by &lt;code>UndeployVtsiProject&lt;/code>:
+      /// every call of the project ends and its listeners, callers and Asterisk container are removed. The
+      /// undeploy is best effort: a failing teardown is logged and the deletion goes on. The project then
+      /// moves to &lt;code>DELETING&lt;/code>, its stored configuration is removed and the project no longer
+      /// exists (&lt;code>DELETED&lt;/code> is never returned: a deleted
+      /// project is &lt;code>NOT_FOUND&lt;/code>). Deletion is permanent.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, also for a retry of a deletion that succeeded (the
+      /// RPC is not idempotent); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> when it had to undeploy, then
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>, the last event of the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -440,7 +819,20 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Delete a VTSI project with configs&lt;/p>
+      /// &lt;p>Deletes a VTSI project and its configuration. A project that is deployed, deploying,
+      /// undeploying or &lt;code>DEPLOY_FAILED&lt;/code> is UNDEPLOYED FIRST, automatically, exactly as by &lt;code>UndeployVtsiProject&lt;/code>:
+      /// every call of the project ends and its listeners, callers and Asterisk container are removed. The
+      /// undeploy is best effort: a failing teardown is logged and the deletion goes on. The project then
+      /// moves to &lt;code>DELETING&lt;/code>, its stored configuration is removed and the project no longer
+      /// exists (&lt;code>DELETED&lt;/code> is never returned: a deleted
+      /// project is &lt;code>NOT_FOUND&lt;/code>). Deletion is permanent.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, also for a retry of a deletion that succeeded (the
+      /// RPC is not idempotent); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> when it had to undeploy, then
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>, the last event of the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -453,7 +845,20 @@ namespace Ondewo.Vtsi {
         return DeleteVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Delete a VTSI project with configs&lt;/p>
+      /// &lt;p>Deletes a VTSI project and its configuration. A project that is deployed, deploying,
+      /// undeploying or &lt;code>DEPLOY_FAILED&lt;/code> is UNDEPLOYED FIRST, automatically, exactly as by &lt;code>UndeployVtsiProject&lt;/code>:
+      /// every call of the project ends and its listeners, callers and Asterisk container are removed. The
+      /// undeploy is best effort: a failing teardown is logged and the deletion goes on. The project then
+      /// moves to &lt;code>DELETING&lt;/code>, its stored configuration is removed and the project no longer
+      /// exists (&lt;code>DELETED&lt;/code> is never returned: a deleted
+      /// project is &lt;code>NOT_FOUND&lt;/code>). Deletion is permanent.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, also for a retry of a deletion that succeeded (the
+      /// RPC is not idempotent); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> when it had to undeploy, then
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DELETED&lt;/code>, the last event of the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -464,7 +869,30 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Deploy a VTSI project&lt;/p>
+      /// &lt;p>Deploys a VTSI project: starts its Asterisk container with the stored configuration and waits
+      /// until the container runs. SYNCHRONOUS: the RPC returns when the project is &lt;code>DEPLOYED&lt;/code>
+      /// or the deployment failed. The status moves &lt;code>UNDEPLOYED&lt;/code> (or &lt;code>DEPLOY_FAILED&lt;/code>)
+      /// &amp;gt; &lt;code>DEPLOYING&lt;/code> &amp;gt; &lt;code>DEPLOYED&lt;/code>; on failure the half-started container is
+      /// removed, the status becomes &lt;code>DEPLOY_FAILED&lt;/code> with the reason in
+      /// &lt;code>status_message&lt;/code>, and the RPC fails. The server waits about 30 seconds for the container
+      /// to run, plus the docker API timeout of each docker call (&lt;code>ONDEWO_VTSI_DOCKER_API_TIMEOUT_S&lt;/code>,
+      /// default 90 seconds); a client deadline of at least 3 minutes is recommended. Deploying applies the
+      /// project&amp;apos;s softphone accounts to the new Asterisk. No caller or listener is started: start them
+      /// with the &lt;code>Calls&lt;/code> service.&lt;/p>
+      /// &lt;p>Idempotent: deploying a &lt;code>DEPLOYED&lt;/code> project changes nothing and succeeds (nothing is
+      /// restarted); a deploy that arrives while another deploy of the project runs waits for it and then
+      /// finds the project &lt;code>DEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>, or &lt;code>DEPLOYING&lt;/code> / &lt;code>UNDEPLOYING&lt;/code> after the operation that
+      /// set the status was interrupted (undeploy the project first); &lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code> when the deployment failed (the project is then
+      /// &lt;code>DEPLOY_FAILED&lt;/code>); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -477,7 +905,30 @@ namespace Ondewo.Vtsi {
         return DeployVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Deploy a VTSI project&lt;/p>
+      /// &lt;p>Deploys a VTSI project: starts its Asterisk container with the stored configuration and waits
+      /// until the container runs. SYNCHRONOUS: the RPC returns when the project is &lt;code>DEPLOYED&lt;/code>
+      /// or the deployment failed. The status moves &lt;code>UNDEPLOYED&lt;/code> (or &lt;code>DEPLOY_FAILED&lt;/code>)
+      /// &amp;gt; &lt;code>DEPLOYING&lt;/code> &amp;gt; &lt;code>DEPLOYED&lt;/code>; on failure the half-started container is
+      /// removed, the status becomes &lt;code>DEPLOY_FAILED&lt;/code> with the reason in
+      /// &lt;code>status_message&lt;/code>, and the RPC fails. The server waits about 30 seconds for the container
+      /// to run, plus the docker API timeout of each docker call (&lt;code>ONDEWO_VTSI_DOCKER_API_TIMEOUT_S&lt;/code>,
+      /// default 90 seconds); a client deadline of at least 3 minutes is recommended. Deploying applies the
+      /// project&amp;apos;s softphone accounts to the new Asterisk. No caller or listener is started: start them
+      /// with the &lt;code>Calls&lt;/code> service.&lt;/p>
+      /// &lt;p>Idempotent: deploying a &lt;code>DEPLOYED&lt;/code> project changes nothing and succeeds (nothing is
+      /// restarted); a deploy that arrives while another deploy of the project runs waits for it and then
+      /// finds the project &lt;code>DEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>, or &lt;code>DEPLOYING&lt;/code> / &lt;code>UNDEPLOYING&lt;/code> after the operation that
+      /// set the status was interrupted (undeploy the project first); &lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code> when the deployment failed (the project is then
+      /// &lt;code>DEPLOY_FAILED&lt;/code>); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -488,7 +939,30 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_DeployVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Deploy a VTSI project&lt;/p>
+      /// &lt;p>Deploys a VTSI project: starts its Asterisk container with the stored configuration and waits
+      /// until the container runs. SYNCHRONOUS: the RPC returns when the project is &lt;code>DEPLOYED&lt;/code>
+      /// or the deployment failed. The status moves &lt;code>UNDEPLOYED&lt;/code> (or &lt;code>DEPLOY_FAILED&lt;/code>)
+      /// &amp;gt; &lt;code>DEPLOYING&lt;/code> &amp;gt; &lt;code>DEPLOYED&lt;/code>; on failure the half-started container is
+      /// removed, the status becomes &lt;code>DEPLOY_FAILED&lt;/code> with the reason in
+      /// &lt;code>status_message&lt;/code>, and the RPC fails. The server waits about 30 seconds for the container
+      /// to run, plus the docker API timeout of each docker call (&lt;code>ONDEWO_VTSI_DOCKER_API_TIMEOUT_S&lt;/code>,
+      /// default 90 seconds); a client deadline of at least 3 minutes is recommended. Deploying applies the
+      /// project&amp;apos;s softphone accounts to the new Asterisk. No caller or listener is started: start them
+      /// with the &lt;code>Calls&lt;/code> service.&lt;/p>
+      /// &lt;p>Idempotent: deploying a &lt;code>DEPLOYED&lt;/code> project changes nothing and succeeds (nothing is
+      /// restarted); a deploy that arrives while another deploy of the project runs waits for it and then
+      /// finds the project &lt;code>DEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>, or &lt;code>DEPLOYING&lt;/code> / &lt;code>UNDEPLOYING&lt;/code> after the operation that
+      /// set the status was interrupted (undeploy the project first); &lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code> when the deployment failed (the project is then
+      /// &lt;code>DEPLOY_FAILED&lt;/code>); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -501,7 +975,30 @@ namespace Ondewo.Vtsi {
         return DeployVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Deploy a VTSI project&lt;/p>
+      /// &lt;p>Deploys a VTSI project: starts its Asterisk container with the stored configuration and waits
+      /// until the container runs. SYNCHRONOUS: the RPC returns when the project is &lt;code>DEPLOYED&lt;/code>
+      /// or the deployment failed. The status moves &lt;code>UNDEPLOYED&lt;/code> (or &lt;code>DEPLOY_FAILED&lt;/code>)
+      /// &amp;gt; &lt;code>DEPLOYING&lt;/code> &amp;gt; &lt;code>DEPLOYED&lt;/code>; on failure the half-started container is
+      /// removed, the status becomes &lt;code>DEPLOY_FAILED&lt;/code> with the reason in
+      /// &lt;code>status_message&lt;/code>, and the RPC fails. The server waits about 30 seconds for the container
+      /// to run, plus the docker API timeout of each docker call (&lt;code>ONDEWO_VTSI_DOCKER_API_TIMEOUT_S&lt;/code>,
+      /// default 90 seconds); a client deadline of at least 3 minutes is recommended. Deploying applies the
+      /// project&amp;apos;s softphone accounts to the new Asterisk. No caller or listener is started: start them
+      /// with the &lt;code>Calls&lt;/code> service.&lt;/p>
+      /// &lt;p>Idempotent: deploying a &lt;code>DEPLOYED&lt;/code> project changes nothing and succeeds (nothing is
+      /// restarted); a deploy that arrives while another deploy of the project runs waits for it and then
+      /// finds the project &lt;code>DEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>, or &lt;code>DEPLOYING&lt;/code> / &lt;code>UNDEPLOYING&lt;/code> after the operation that
+      /// set the status was interrupted (undeploy the project first); &lt;code>INTERNAL&lt;/code> or
+      /// &lt;code>UNAVAILABLE&lt;/code> when the deployment failed (the project is then
+      /// &lt;code>DEPLOY_FAILED&lt;/code>); &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>,
+      /// &lt;code>PERMISSION_DENIED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -512,7 +1009,25 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_DeployVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Undeploy a VTSI project&lt;/p>
+      /// &lt;p>Undeploys a VTSI project. SYNCHRONOUS: the status moves to &lt;code>UNDEPLOYING&lt;/code>, EVERY CALL
+      /// of the project is ended (callers and listeners alike, campaign calls included), the listeners and
+      /// the pooled callers are undeployed, the Asterisk container is removed, and the status becomes
+      /// &lt;code>UNDEPLOYED&lt;/code>. The registrations of the project&amp;apos;s softphone accounts end with the
+      /// container; the accounts themselves are kept and are applied again on the next deploy. The stored
+      /// configuration, callers, listeners and campaigns are kept. A failed undeploy restores the previous
+      /// status (or &lt;code>UNDEPLOYED&lt;/code> when the container is already gone) and fails the RPC.&lt;/p>
+      /// &lt;p>Idempotent: undeploying an &lt;code>UNDEPLOYED&lt;/code> project changes nothing and succeeds.
+      /// Undeploying a &lt;code>DEPLOY_FAILED&lt;/code> project removes what the failed deployment left and makes it
+      /// &lt;code>UNDEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>; &lt;code>INTERNAL&lt;/code> or &lt;code>UNAVAILABLE&lt;/code> when the teardown failed;
+      /// &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service
+      /// description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -525,7 +1040,25 @@ namespace Ondewo.Vtsi {
         return UndeployVtsiProject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Undeploy a VTSI project&lt;/p>
+      /// &lt;p>Undeploys a VTSI project. SYNCHRONOUS: the status moves to &lt;code>UNDEPLOYING&lt;/code>, EVERY CALL
+      /// of the project is ended (callers and listeners alike, campaign calls included), the listeners and
+      /// the pooled callers are undeployed, the Asterisk container is removed, and the status becomes
+      /// &lt;code>UNDEPLOYED&lt;/code>. The registrations of the project&amp;apos;s softphone accounts end with the
+      /// container; the accounts themselves are kept and are applied again on the next deploy. The stored
+      /// configuration, callers, listeners and campaigns are kept. A failed undeploy restores the previous
+      /// status (or &lt;code>UNDEPLOYED&lt;/code> when the container is already gone) and fails the RPC.&lt;/p>
+      /// &lt;p>Idempotent: undeploying an &lt;code>UNDEPLOYED&lt;/code> project changes nothing and succeeds.
+      /// Undeploying a &lt;code>DEPLOY_FAILED&lt;/code> project removes what the failed deployment left and makes it
+      /// &lt;code>UNDEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>; &lt;code>INTERNAL&lt;/code> or &lt;code>UNAVAILABLE&lt;/code> when the teardown failed;
+      /// &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service
+      /// description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -536,7 +1069,25 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_UndeployVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Undeploy a VTSI project&lt;/p>
+      /// &lt;p>Undeploys a VTSI project. SYNCHRONOUS: the status moves to &lt;code>UNDEPLOYING&lt;/code>, EVERY CALL
+      /// of the project is ended (callers and listeners alike, campaign calls included), the listeners and
+      /// the pooled callers are undeployed, the Asterisk container is removed, and the status becomes
+      /// &lt;code>UNDEPLOYED&lt;/code>. The registrations of the project&amp;apos;s softphone accounts end with the
+      /// container; the accounts themselves are kept and are applied again on the next deploy. The stored
+      /// configuration, callers, listeners and campaigns are kept. A failed undeploy restores the previous
+      /// status (or &lt;code>UNDEPLOYED&lt;/code> when the container is already gone) and fails the RPC.&lt;/p>
+      /// &lt;p>Idempotent: undeploying an &lt;code>UNDEPLOYED&lt;/code> project changes nothing and succeeds.
+      /// Undeploying a &lt;code>DEPLOY_FAILED&lt;/code> project removes what the failed deployment left and makes it
+      /// &lt;code>UNDEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>; &lt;code>INTERNAL&lt;/code> or &lt;code>UNAVAILABLE&lt;/code> when the teardown failed;
+      /// &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service
+      /// description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -549,7 +1100,25 @@ namespace Ondewo.Vtsi {
         return UndeployVtsiProjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Undeploy a VTSI project&lt;/p>
+      /// &lt;p>Undeploys a VTSI project. SYNCHRONOUS: the status moves to &lt;code>UNDEPLOYING&lt;/code>, EVERY CALL
+      /// of the project is ended (callers and listeners alike, campaign calls included), the listeners and
+      /// the pooled callers are undeployed, the Asterisk container is removed, and the status becomes
+      /// &lt;code>UNDEPLOYED&lt;/code>. The registrations of the project&amp;apos;s softphone accounts end with the
+      /// container; the accounts themselves are kept and are applied again on the next deploy. The stored
+      /// configuration, callers, listeners and campaigns are kept. A failed undeploy restores the previous
+      /// status (or &lt;code>UNDEPLOYED&lt;/code> when the container is already gone) and fails the RPC.&lt;/p>
+      /// &lt;p>Idempotent: undeploying an &lt;code>UNDEPLOYED&lt;/code> project changes nothing and succeeds.
+      /// Undeploying a &lt;code>DEPLOY_FAILED&lt;/code> project removes what the failed deployment left and makes it
+      /// &lt;code>UNDEPLOYED&lt;/code>.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for an empty or malformed &lt;code>name&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>FAILED_PRECONDITION&lt;/code> while the project is
+      /// &lt;code>DELETING&lt;/code>; &lt;code>INTERNAL&lt;/code> or &lt;code>UNAVAILABLE&lt;/code> when the teardown failed;
+      /// &lt;code>ABORTED&lt;/code>, &lt;code>UNAUTHENTICATED&lt;/code>, &lt;code>PERMISSION_DENIED&lt;/code> as in the service
+      /// description.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED&lt;/code> or
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED&lt;/code>, and
+      /// &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code> per status change.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -560,7 +1129,17 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployVtsiProject, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Lists VTSI projects, filtered, sorted and paged. With authorization enforced, only the projects
+      /// the caller holds a project role on are listed (every project for &lt;code>SERVER_ADMIN&lt;/code>), and
+      /// the configuration fields are withheld from a &lt;code>PROJECT_EXECUTOR&lt;/code> or
+      /// &lt;code>PROJECT_USER&lt;/code> (see the service description); a caller without a usable credential gets an
+      /// empty page.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a negative &lt;code>page_size&lt;/code>, a malformed
+      /// &lt;code>page_token&lt;/code>, an unspecified status in &lt;code>statuses&lt;/code>, an over-long
+      /// &lt;code>display_name_contains&lt;/code>, a &lt;code>created_after&lt;/code> that is not before
+      /// &lt;code>created_before&lt;/code>, or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>UNAUTHENTICATED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: any project role (&lt;code>PROJECT_USER&lt;/code> or higher).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -573,7 +1152,17 @@ namespace Ondewo.Vtsi {
         return ListVtsiProjects(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Lists VTSI projects, filtered, sorted and paged. With authorization enforced, only the projects
+      /// the caller holds a project role on are listed (every project for &lt;code>SERVER_ADMIN&lt;/code>), and
+      /// the configuration fields are withheld from a &lt;code>PROJECT_EXECUTOR&lt;/code> or
+      /// &lt;code>PROJECT_USER&lt;/code> (see the service description); a caller without a usable credential gets an
+      /// empty page.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a negative &lt;code>page_size&lt;/code>, a malformed
+      /// &lt;code>page_token&lt;/code>, an unspecified status in &lt;code>statuses&lt;/code>, an over-long
+      /// &lt;code>display_name_contains&lt;/code>, a &lt;code>created_after&lt;/code> that is not before
+      /// &lt;code>created_before&lt;/code>, or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>UNAUTHENTICATED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: any project role (&lt;code>PROJECT_USER&lt;/code> or higher).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -584,7 +1173,17 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_ListVtsiProjects, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Lists VTSI projects, filtered, sorted and paged. With authorization enforced, only the projects
+      /// the caller holds a project role on are listed (every project for &lt;code>SERVER_ADMIN&lt;/code>), and
+      /// the configuration fields are withheld from a &lt;code>PROJECT_EXECUTOR&lt;/code> or
+      /// &lt;code>PROJECT_USER&lt;/code> (see the service description); a caller without a usable credential gets an
+      /// empty page.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a negative &lt;code>page_size&lt;/code>, a malformed
+      /// &lt;code>page_token&lt;/code>, an unspecified status in &lt;code>statuses&lt;/code>, an over-long
+      /// &lt;code>display_name_contains&lt;/code>, a &lt;code>created_after&lt;/code> that is not before
+      /// &lt;code>created_before&lt;/code>, or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>UNAUTHENTICATED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: any project role (&lt;code>PROJECT_USER&lt;/code> or higher).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -597,7 +1196,17 @@ namespace Ondewo.Vtsi {
         return ListVtsiProjectsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Get a VTSI project with configs&lt;/p>
+      /// &lt;p>Lists VTSI projects, filtered, sorted and paged. With authorization enforced, only the projects
+      /// the caller holds a project role on are listed (every project for &lt;code>SERVER_ADMIN&lt;/code>), and
+      /// the configuration fields are withheld from a &lt;code>PROJECT_EXECUTOR&lt;/code> or
+      /// &lt;code>PROJECT_USER&lt;/code> (see the service description); a caller without a usable credential gets an
+      /// empty page.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a negative &lt;code>page_size&lt;/code>, a malformed
+      /// &lt;code>page_token&lt;/code>, an unspecified status in &lt;code>statuses&lt;/code>, an over-long
+      /// &lt;code>display_name_contains&lt;/code>, a &lt;code>created_after&lt;/code> that is not before
+      /// &lt;code>created_before&lt;/code>, or an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>UNAUTHENTICATED&lt;/code> as in the service description.&lt;/p>
+      /// &lt;p>Authorization: any project role (&lt;code>PROJECT_USER&lt;/code> or higher).&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -42,8 +42,8 @@ namespace Ondewo.Vtsi {
             "bl9zdGF0aXN0aWNzGA0gASgLMh8ub25kZXdvLnZ0c2kuQ2FtcGFpZ25TdGF0",
             "aXN0aWNzEhkKEXJlc291cmNlX3NlcXVlbmNlGA4gASgDGjEKD0F0dHJpYnV0",
             "ZXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhIKEF9z",
-            "aXBfc3RhdHVzX3R5cGVCGwoZX3ByZXZpb3VzX3NpcF9zdGF0dXNfdHlwZSL9",
-            "AgoVVnRzaUV2ZW50U3Vic2NyaXB0aW9uEgwKBG5hbWUYASABKAkSGQoRdnRz",
+            "aXBfc3RhdHVzX3R5cGVCGwoZX3ByZXZpb3VzX3NpcF9zdGF0dXNfdHlwZSKu",
+            "AwoVVnRzaUV2ZW50U3Vic2NyaXB0aW9uEgwKBG5hbWUYASABKAkSGQoRdnRz",
             "aV9wcm9qZWN0X25hbWUYAiABKAkSFAoMZGlzcGxheV9uYW1lGAMgASgJEiYK",
             "BmV2ZW50cxgEIAMoDjIWLm9uZGV3by52dHNpLlZ0c2lFdmVudBISCgphbGxf",
             "ZXZlbnRzGAUgASgIEh4KFnJlc291cmNlX25hbWVfcHJlZml4ZXMYBiADKAkS",
@@ -51,200 +51,237 @@ namespace Ondewo.Vtsi {
             "cmVhdGVkX2J5GAkgASgJEi4KCmNyZWF0ZWRfYXQYCiABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wEhMKC21vZGlmaWVkX2J5GAsgASgJEi8KC21v",
             "ZGlmaWVkX2F0GAwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIW",
-            "Cg5jYW1wYWlnbl9uYW1lcxgNIAMoCSKDAgoZV2ViaG9va0RlbGl2ZXJ5U3Rh",
-            "dGlzdGljcxIXCg9kZWxpdmVyZWRfY291bnQYASABKAMSFAoMZmFpbGVkX2Nv",
-            "dW50GAIgASgDEhUKDWRyb3BwZWRfY291bnQYAyABKAMSNgoSbGFzdF9kZWxp",
-            "dmVyeV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI1",
-            "ChFsYXN0X3N1Y2Nlc3NfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASHQoVbGFzdF9odHRwX3N0YXR1c19jb2RlGAYgASgFEhIKCmxh",
-            "c3RfZXJyb3IYByABKAkijgQKB1dlYmhvb2sSDAoEbmFtZRgBIAEoCRIZChF2",
-            "dHNpX3Byb2plY3RfbmFtZRgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyABKAkS",
-            "CwoDdXJsGAQgASgJEjMKC2h0dHBfbWV0aG9kGAUgASgOMh4ub25kZXdvLnZ0",
-            "c2kuV2ViaG9va0h0dHBNZXRob2QSPwoOY3VzdG9tX2hlYWRlcnMYBiADKAsy",
-            "Jy5vbmRld28udnRzaS5XZWJob29rLkN1c3RvbUhlYWRlcnNFbnRyeRIQCghk",
-            "aXNhYmxlZBgHIAEoCBIqCgd0aW1lb3V0GAggASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uEkMKE2RlbGl2ZXJ5X3N0YXRpc3RpY3MYCSABKAsyJi5v",
-            "bmRld28udnRzaS5XZWJob29rRGVsaXZlcnlTdGF0aXN0aWNzEhIKCmNyZWF0",
-            "ZWRfYnkYCiABKAkSLgoKY3JlYXRlZF9hdBgLIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXASEwoLbW9kaWZpZWRfYnkYDCABKAkSLwoLbW9kaWZp",
-            "ZWRfYXQYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGjQKEkN1",
-            "c3RvbUhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBInEKD1Z0c2lFdmVudEZpbHRlchImCgZldmVudHMYASADKA4yFi5vbmRl",
-            "d28udnRzaS5WdHNpRXZlbnQSHgoWcmVzb3VyY2VfbmFtZV9wcmVmaXhlcxgC",
-            "IAMoCRIWCg5jYW1wYWlnbl9uYW1lcxgDIAMoCSJ/CiJDcmVhdGVWdHNpRXZl",
-            "bnRTdWJzY3JpcHRpb25SZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEg",
-            "ASgJEj4KEmV2ZW50X3N1YnNjcmlwdGlvbhgCIAEoCzIiLm9uZGV3by52dHNp",
-            "LlZ0c2lFdmVudFN1YnNjcmlwdGlvbiIvCh9HZXRWdHNpRXZlbnRTdWJzY3Jp",
-            "cHRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkilQEKIlVwZGF0ZVZ0c2lFdmVu",
-            "dFN1YnNjcmlwdGlvblJlcXVlc3QSPgoSZXZlbnRfc3Vic2NyaXB0aW9uGAEg",
-            "ASgLMiIub25kZXdvLnZ0c2kuVnRzaUV2ZW50U3Vic2NyaXB0aW9uEi8KC3Vw",
-            "ZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIy",
-            "CiJEZWxldGVWdHNpRXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0EgwKBG5hbWUY",
-            "ASABKAkiMwojRGVsZXRlVnRzaUV2ZW50U3Vic2NyaXB0aW9uUmVzcG9uc2US",
-            "DAoEbmFtZRgBIAEoCSJ5CiFMaXN0VnRzaUV2ZW50U3Vic2NyaXB0aW9uc1Jl",
-            "cXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSEQoJcGFnZV9zaXpl",
-            "GAIgASgFEhcKCnBhZ2VfdG9rZW4YAyABKAlIAIgBAUINCgtfcGFnZV90b2tl",
-            "biJ+CiJMaXN0VnRzaUV2ZW50U3Vic2NyaXB0aW9uc1Jlc3BvbnNlEj8KE2V2",
-            "ZW50X3N1YnNjcmlwdGlvbnMYASADKAsyIi5vbmRld28udnRzaS5WdHNpRXZl",
-            "bnRTdWJzY3JpcHRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIlgKFENy",
-            "ZWF0ZVdlYmhvb2tSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJ",
-            "EiUKB3dlYmhvb2sYAiABKAsyFC5vbmRld28udnRzaS5XZWJob29rIiEKEUdl",
-            "dFdlYmhvb2tSZXF1ZXN0EgwKBG5hbWUYASABKAkibgoUVXBkYXRlV2ViaG9v",
-            "a1JlcXVlc3QSJQoHd2ViaG9vaxgBIAEoCzIULm9uZGV3by52dHNpLldlYmhv",
-            "b2sSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrIiQKFERlbGV0ZVdlYmhvb2tSZXF1ZXN0EgwKBG5hbWUYASABKAki",
-            "SgoVRGVsZXRlV2ViaG9va1Jlc3BvbnNlEgwKBG5hbWUYASABKAkSIwobZGV0",
-            "YWNoZWRfc3Vic2NyaXB0aW9uX2NvdW50GAIgASgFImsKE0xpc3RXZWJob29r",
-            "c1JlcXVlc3QSGQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSEQoJcGFnZV9z",
-            "aXplGAIgASgFEhcKCnBhZ2VfdG9rZW4YAyABKAlIAIgBAUINCgtfcGFnZV90",
-            "b2tlbiJXChRMaXN0V2ViaG9va3NSZXNwb25zZRImCgh3ZWJob29rcxgBIAMo",
-            "CzIULm9uZGV3by52dHNpLldlYmhvb2sSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIiIKElRlc3RXZWJob29rUmVxdWVzdBIMCgRuYW1lGAEgASgJIpUBChNU",
-            "ZXN0V2ViaG9va1Jlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSGAoQaHR0cF9z",
-            "dGF0dXNfY29kZRgCIAEoBRIqCgdsYXRlbmN5GAMgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uEhUKDWVycm9yX21lc3NhZ2UYBCABKAkSEAoIZXZl",
-            "bnRfaWQYBSABKAkiwgEKGlN1YnNjcmliZVZ0c2lFdmVudHNSZXF1ZXN0EhkK",
-            "EXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEiEKF2V2ZW50X3N1YnNjcmlwdGlv",
-            "bl9uYW1lGAIgASgJSAASLgoGZmlsdGVyGAMgASgLMhwub25kZXdvLnZ0c2ku",
-            "VnRzaUV2ZW50RmlsdGVySAASGQoMcmVzdW1lX3Rva2VuGAQgASgJSAGIAQFC",
-            "CgoIc2VsZWN0b3JCDwoNX3Jlc3VtZV90b2tlbiKTAQobU3Vic2NyaWJlVnRz",
-            "aUV2ZW50c1Jlc3BvbnNlEi0KBmV2ZW50cxgBIAMoCzIdLm9uZGV3by52dHNp",
-            "LlZ0c2lFdmVudE1lc3NhZ2USFAoMcmVzdW1lX3Rva2VuGAIgASgJEhsKE2Ry",
-            "b3BwZWRfZXZlbnRfY291bnQYAyABKAMSEgoKZW5kX3JlYXNvbhgEIAEoCSrK",
-            "GwoJVnRzaUV2ZW50EhoKFlZUU0lfRVZFTlRfVU5TUEVDSUZJRUQQABIbChdW",
-            "VFNJX0VWRU5UX0NBTExfQ1JFQVRFRBBkEh0KGVZUU0lfRVZFTlRfQ0FMTF9J",
-            "TklUSUFURUQQZRIdChlWVFNJX0VWRU5UX0NBTExfQ09OTkVDVEVEEGYSHAoY",
-            "VlRTSV9FVkVOVF9DQUxMX0ZJTklTSEVEEGcSGgoWVlRTSV9FVkVOVF9DQUxM",
-            "X0ZBSUxFRBBoEiYKIlZUU0lfRVZFTlRfQ0FMTF9UUkFOU0ZFUl9JTklUSUFU",
-            "RUQQaRIfChtWVFNJX0VWRU5UX0NBTExfVFJBTlNGRVJSRUQQahIjCh9WVFNJ",
-            "X0VWRU5UX0NBTExfVFJBTlNGRVJfRkFJTEVEEGsSJAogVlRTSV9FVkVOVF9D",
-            "QUxMX0hBTkdVUF9JTklUSUFURUQQbBIuCipWVFNJX0VWRU5UX0NBTExfQU5T",
-            "V0VSSU5HX01BQ0hJTkVfREVURUNURUQQbRIbChdWVFNJX0VWRU5UX0NBTExf",
-            "U1RPUFBFRBBuEiYKIlZUU0lfRVZFTlRfQ0FMTF9TSVBfU1RBVFVTX0NIQU5H",
-            "RUQQbxInCiNWVFNJX0VWRU5UX0NBTExfUEFSVElDSVBBTlRfSU5WSVRFRBBw",
-            "EiYKIlZUU0lfRVZFTlRfQ0FMTF9QQVJUSUNJUEFOVF9KT0lORUQQcRImCiJW",
-            "VFNJX0VWRU5UX0NBTExfUEFSVElDSVBBTlRfRkFJTEVEEHISJAogVlRTSV9F",
-            "VkVOVF9DQUxMX1BBUlRJQ0lQQU5UX0xFRlQQcxIdChlWVFNJX0VWRU5UX0NB",
-            "TExfQk9UX01VVEVEEHQSHwobVlRTSV9FVkVOVF9DQUxMX0JPVF9VTk1VVEVE",
-            "EHUSJAogVlRTSV9FVkVOVF9DQUxMX0xJU1RFTklOR19QQVVTRUQQdhIlCiFW",
-            "VFNJX0VWRU5UX0NBTExfTElTVEVOSU5HX1JFU1VNRUQQdxIqCiZWVFNJX0VW",
-            "RU5UX0NBTExfQVVESU9fU1RSRUFNX0NPTk5FQ1RFRBB4Ei0KKVZUU0lfRVZF",
-            "TlRfQ0FMTF9BVURJT19TVFJFQU1fRElTQ09OTkVDVEVEEHkSHgoZVlRTSV9F",
-            "VkVOVF9DQUxMRVJfU1RBUlRFRBDIARIjCh5WVFNJX0VWRU5UX0NBTExFUl9T",
-            "VEFSVF9GQUlMRUQQyQESHgoZVlRTSV9FVkVOVF9DQUxMRVJfU1RPUFBFRBDK",
-            "ARIeChlWVFNJX0VWRU5UX0NBTExFUl9ERUxFVEVEEMsBEiAKG1ZUU0lfRVZF",
-            "TlRfQ0FMTEVSX1JFU1RBUlRFRBDMARIgChtWVFNJX0VWRU5UX0NBTExFUl9V",
-            "TkhFQUxUSFkQzQESHgoZVlRTSV9FVkVOVF9DQUxMRVJfSEVBTFRIWRDOARIg",
-            "ChtWVFNJX0VWRU5UX0xJU1RFTkVSX1NUQVJURUQQrAISJQogVlRTSV9FVkVO",
-            "VF9MSVNURU5FUl9TVEFSVF9GQUlMRUQQrQISIAobVlRTSV9FVkVOVF9MSVNU",
-            "RU5FUl9TVE9QUEVEEK4CEiAKG1ZUU0lfRVZFTlRfTElTVEVORVJfREVMRVRF",
-            "RBCvAhIiCh1WVFNJX0VWRU5UX0xJU1RFTkVSX1JFU1RBUlRFRBCwAhIiCh1W",
-            "VFNJX0VWRU5UX0xJU1RFTkVSX1VOSEVBTFRIWRCxAhIgChtWVFNJX0VWRU5U",
-            "X0xJU1RFTkVSX0hFQUxUSFkQsgISKAojVlRTSV9FVkVOVF9TQ0hFRFVMRURf",
-            "Q0FMTEVSX0NSRUFURUQQkAMSJgohVlRTSV9FVkVOVF9TQ0hFRFVMRURfQ0FM",
-            "TEVSX0ZJUkVEEJEDEicKIlZUU0lfRVZFTlRfU0NIRURVTEVEX0NBTExFUl9G",
-            "QUlMRUQQkgMSKgolVlRTSV9FVkVOVF9TQ0hFRFVMRURfQ0FMTEVSX0NBTkNF",
-            "TExFRBCTAxIwCitWVFNJX0VWRU5UX1NDSEVEVUxFRF9DQUxMRVJfUkVUUllf",
-            "U0NIRURVTEVEEJQDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJR05fQ1JFQVRFRBD0",
-            "AxIgChtWVFNJX0VWRU5UX0NBTVBBSUdOX1VQREFURUQQ9QMSIAobVlRTSV9F",
-            "VkVOVF9DQU1QQUlHTl9ERUxFVEVEEPYDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJ",
-            "R05fU1RBUlRFRBD3AxInCiJWVFNJX0VWRU5UX0NBTVBBSUdOX1NUT1BfUkVR",
-            "VUVTVEVEEPgDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJR05fU1RPUFBFRBD5AxIs",
-            "CidWVFNJX0VWRU5UX0NBTVBBSUdOX0hBUkRfU1RPUF9SRVFVRVNURUQQ+gMS",
-            "JQogVlRTSV9FVkVOVF9DQU1QQUlHTl9IQVJEX1NUT1BQRUQQ+wMSIAobVlRT",
-            "SV9FVkVOVF9DQU1QQUlHTl9SRVNVTUVEEPwDEiIKHVZUU0lfRVZFTlRfQ0FN",
-            "UEFJR05fQ09NUExFVEVEEP0DEiEKHFZUU0lfRVZFTlRfQ0FNUEFJR05fUFJP",
-            "R1JFU1MQ/gMSMwouVlRTSV9FVkVOVF9DQU1QQUlHTl9NQVhfUEFSQUxMRUxf",
-            "Q0FMTFNfQ0hBTkdFRBD/AxIkCh9WVFNJX0VWRU5UX0NBTVBBSUdOX0NBTExT",
-            "X0FEREVEEIAEEigKI1ZUU0lfRVZFTlRfQ0FNUEFJR05fQ0FMTF9ESVNQQVRD",
-            "SEVEEIEEEicKIlZUU0lfRVZFTlRfQ0FNUEFJR05fQ0FMTF9DT01QTEVURUQQ",
-            "ggQSJAofVlRTSV9FVkVOVF9DQU1QQUlHTl9DQUxMX0ZBSUxFRBCDBBItCihW",
-            "VFNJX0VWRU5UX0NBTVBBSUdOX0NBTExfUkVUUllfU0NIRURVTEVEEIQEEicK",
-            "IlZUU0lfRVZFTlRfQ0FNUEFJR05fQ0FMTF9DQU5DRUxMRUQQhQQSJQogVlRT",
-            "SV9FVkVOVF9DQU1QQUlHTl9BVVRPX1NUT1BQRUQQhgQSJAofVlRTSV9FVkVO",
-            "VF9WVFNJX1BST0pFQ1RfVVBEQVRFRBDZBBIkCh9WVFNJX0VWRU5UX1ZUU0lf",
-            "UFJPSkVDVF9ERUxFVEVEENoEEiUKIFZUU0lfRVZFTlRfVlRTSV9QUk9KRUNU",
-            "X0RFUExPWUVEENsEEioKJVZUU0lfRVZFTlRfVlRTSV9QUk9KRUNUX0RFUExP",
-            "WV9GQUlMRUQQ3AQSJwoiVlRTSV9FVkVOVF9WVFNJX1BST0pFQ1RfVU5ERVBM",
-            "T1lFRBDdBBIrCiZWVFNJX0VWRU5UX1ZUU0lfUFJPSkVDVF9TVEFUVVNfQ0hB",
-            "TkdFRBDeBBIsCidWVFNJX0VWRU5UX1ZUU0lfUFJPSkVDVF9VTkRFUExPWV9G",
-            "QUlMRUQQ3wQSIQocVlRTSV9FVkVOVF9BU1RFUklTS19ERVBMT1lFRBC8BRIg",
-            "ChtWVFNJX0VWRU5UX0FTVEVSSVNLX1JFTU9WRUQQvQUSIgodVlRTSV9FVkVO",
-            "VF9BU1RFUklTS19SRVNUQVJURUQQvgUSKAojVlRTSV9FVkVOVF9BU1RFUklT",
-            "S19DT05GSUdfUkVMT0FERUQQvwUSIgodVlRTSV9FVkVOVF9BU1RFUklTS19V",
-            "TkhFQUxUSFkQwAUSIAobVlRTSV9FVkVOVF9BU1RFUklTS19IRUFMVEhZEMEF",
-            "EikKJFZUU0lfRVZFTlRfQVNURVJJU0tfVFJVTktfUkVHSVNURVJFRBDCBRIr",
-            "CiZWVFNJX0VWRU5UX0FTVEVSSVNLX1RSVU5LX1VOUkVHSVNURVJFRBDDBRIm",
-            "CiFWVFNJX0VWRU5UX0FTVEVSSVNLX0RFUExPWV9GQUlMRUQQxAUSJwoiVlRT",
-            "SV9FVkVOVF9BU1RFUklTS19SRVNUQVJUX0ZBSUxFRBDFBRItCihWVFNJX0VW",
-            "RU5UX0FTVEVSSVNLX0NPTkZJR19SRUxPQURfRkFJTEVEEMYFEikKJFZUU0lf",
-            "RVZFTlRfU09GVFBIT05FX0FDQ09VTlRfQ1JFQVRFRBCgBhIpCiRWVFNJX0VW",
-            "RU5UX1NPRlRQSE9ORV9BQ0NPVU5UX1VQREFURUQQoQYSKQokVlRTSV9FVkVO",
-            "VF9TT0ZUUEhPTkVfQUNDT1VOVF9ERUxFVEVEEKIGEi0KKFZUU0lfRVZFTlRf",
-            "U09GVFBIT05FX0NSRURFTlRJQUxTX1JPVEFURUQQowYSLQooVlRTSV9FVkVO",
-            "VF9TT0ZUUEhPTkVfQ0VSVElGSUNBVEVfUkVWT0tFRBCkBhIcChdWVFNJX0VW",
-            "RU5UX1dFQkhPT0tfVEVTVBCEBxIfChpWVFNJX0VWRU5UX1dFQkhPT0tfQ1JF",
-            "QVRFRBCFBxIfChpWVFNJX0VWRU5UX1dFQkhPT0tfVVBEQVRFRBCGBxIfChpW",
-            "VFNJX0VWRU5UX1dFQkhPT0tfREVMRVRFRBCHBxIqCiVWVFNJX0VWRU5UX0VW",
-            "RU5UX1NVQlNDUklQVElPTl9DUkVBVEVEEIgHEioKJVZUU0lfRVZFTlRfRVZF",
-            "TlRfU1VCU0NSSVBUSU9OX1VQREFURUQQiQcSKgolVlRTSV9FVkVOVF9FVkVO",
-            "VF9TVUJTQ1JJUFRJT05fREVMRVRFRBCKByIGCNgEENgEKh9WVFNJX0VWRU5U",
-            "X1ZUU0lfUFJPSkVDVF9DUkVBVEVEKnMKEVdlYmhvb2tIdHRwTWV0aG9kEiMK",
-            "H1dFQkhPT0tfSFRUUF9NRVRIT0RfVU5TUEVDSUZJRUQQABIcChhXRUJIT09L",
-            "X0hUVFBfTUVUSE9EX1BPU1QQARIbChdXRUJIT09LX0hUVFBfTUVUSE9EX1BV",
-            "VBACMqMJCgZFdmVudHMScgobQ3JlYXRlVnRzaUV2ZW50U3Vic2NyaXB0aW9u",
-            "Ei8ub25kZXdvLnZ0c2kuQ3JlYXRlVnRzaUV2ZW50U3Vic2NyaXB0aW9uUmVx",
-            "dWVzdBoiLm9uZGV3by52dHNpLlZ0c2lFdmVudFN1YnNjcmlwdGlvbhJsChhH",
-            "ZXRWdHNpRXZlbnRTdWJzY3JpcHRpb24SLC5vbmRld28udnRzaS5HZXRWdHNp",
-            "RXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0GiIub25kZXdvLnZ0c2kuVnRzaUV2",
-            "ZW50U3Vic2NyaXB0aW9uEnIKG1VwZGF0ZVZ0c2lFdmVudFN1YnNjcmlwdGlv",
-            "bhIvLm9uZGV3by52dHNpLlVwZGF0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvblJl",
-            "cXVlc3QaIi5vbmRld28udnRzaS5WdHNpRXZlbnRTdWJzY3JpcHRpb24SgAEK",
-            "G0RlbGV0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvbhIvLm9uZGV3by52dHNpLkRl",
-            "bGV0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvblJlcXVlc3QaMC5vbmRld28udnRz",
-            "aS5EZWxldGVWdHNpRXZlbnRTdWJzY3JpcHRpb25SZXNwb25zZRJ9ChpMaXN0",
-            "VnRzaUV2ZW50U3Vic2NyaXB0aW9ucxIuLm9uZGV3by52dHNpLkxpc3RWdHNp",
-            "RXZlbnRTdWJzY3JpcHRpb25zUmVxdWVzdBovLm9uZGV3by52dHNpLkxpc3RW",
-            "dHNpRXZlbnRTdWJzY3JpcHRpb25zUmVzcG9uc2USSAoNQ3JlYXRlV2ViaG9v",
-            "axIhLm9uZGV3by52dHNpLkNyZWF0ZVdlYmhvb2tSZXF1ZXN0GhQub25kZXdv",
-            "LnZ0c2kuV2ViaG9vaxJCCgpHZXRXZWJob29rEh4ub25kZXdvLnZ0c2kuR2V0",
-            "V2ViaG9va1JlcXVlc3QaFC5vbmRld28udnRzaS5XZWJob29rEkgKDVVwZGF0",
-            "ZVdlYmhvb2sSIS5vbmRld28udnRzaS5VcGRhdGVXZWJob29rUmVxdWVzdBoU",
-            "Lm9uZGV3by52dHNpLldlYmhvb2sSVgoNRGVsZXRlV2ViaG9vaxIhLm9uZGV3",
-            "by52dHNpLkRlbGV0ZVdlYmhvb2tSZXF1ZXN0GiIub25kZXdvLnZ0c2kuRGVs",
-            "ZXRlV2ViaG9va1Jlc3BvbnNlElMKDExpc3RXZWJob29rcxIgLm9uZGV3by52",
-            "dHNpLkxpc3RXZWJob29rc1JlcXVlc3QaIS5vbmRld28udnRzaS5MaXN0V2Vi",
-            "aG9va3NSZXNwb25zZRJQCgtUZXN0V2ViaG9vaxIfLm9uZGV3by52dHNpLlRl",
-            "c3RXZWJob29rUmVxdWVzdBogLm9uZGV3by52dHNpLlRlc3RXZWJob29rUmVz",
-            "cG9uc2USagoTU3Vic2NyaWJlVnRzaUV2ZW50cxInLm9uZGV3by52dHNpLlN1",
-            "YnNjcmliZVZ0c2lFdmVudHNSZXF1ZXN0Gigub25kZXdvLnZ0c2kuU3Vic2Ny",
-            "aWJlVnRzaUV2ZW50c1Jlc3BvbnNlMAFiBnByb3RvMw=="));
+            "Cg5jYW1wYWlnbl9uYW1lcxgNIAMoCRIvCg9leGNsdWRlZF9ldmVudHMYDiAD",
+            "KA4yFi5vbmRld28udnRzaS5WdHNpRXZlbnQigwIKGVdlYmhvb2tEZWxpdmVy",
+            "eVN0YXRpc3RpY3MSFwoPZGVsaXZlcmVkX2NvdW50GAEgASgDEhQKDGZhaWxl",
+            "ZF9jb3VudBgCIAEoAxIVCg1kcm9wcGVkX2NvdW50GAMgASgDEjYKEmxhc3Rf",
+            "ZGVsaXZlcnlfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASNQoRbGFzdF9zdWNjZXNzX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEh0KFWxhc3RfaHR0cF9zdGF0dXNfY29kZRgGIAEoBRIS",
+            "CgpsYXN0X2Vycm9yGAcgASgJIqYECgdXZWJob29rEgwKBG5hbWUYASABKAkS",
+            "GQoRdnRzaV9wcm9qZWN0X25hbWUYAiABKAkSFAoMZGlzcGxheV9uYW1lGAMg",
+            "ASgJEgsKA3VybBgEIAEoCRIzCgtodHRwX21ldGhvZBgFIAEoDjIeLm9uZGV3",
+            "by52dHNpLldlYmhvb2tIdHRwTWV0aG9kEj8KDmN1c3RvbV9oZWFkZXJzGAYg",
+            "AygLMicub25kZXdvLnZ0c2kuV2ViaG9vay5DdXN0b21IZWFkZXJzRW50cnkS",
+            "EAoIZGlzYWJsZWQYByABKAgSKgoHdGltZW91dBgIIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbhJDChNkZWxpdmVyeV9zdGF0aXN0aWNzGAkgASgL",
+            "MiYub25kZXdvLnZ0c2kuV2ViaG9va0RlbGl2ZXJ5U3RhdGlzdGljcxISCgpj",
+            "cmVhdGVkX2J5GAogASgJEi4KCmNyZWF0ZWRfYXQYCyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wEhMKC21vZGlmaWVkX2J5GAwgASgJEi8KC21v",
+            "ZGlmaWVkX2F0GA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIW",
+            "Cg5zaWduaW5nX3NlY3JldBgOIAEoCRo0ChJDdXN0b21IZWFkZXJzRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASK2AQoPVnRzaUV2ZW50",
+            "RmlsdGVyEiYKBmV2ZW50cxgBIAMoDjIWLm9uZGV3by52dHNpLlZ0c2lFdmVu",
+            "dBIeChZyZXNvdXJjZV9uYW1lX3ByZWZpeGVzGAIgAygJEhYKDmNhbXBhaWdu",
+            "X25hbWVzGAMgAygJEhIKCmFsbF9ldmVudHMYBCABKAgSLwoPZXhjbHVkZWRf",
+            "ZXZlbnRzGAUgAygOMhYub25kZXdvLnZ0c2kuVnRzaUV2ZW50Iq8BCiJDcmVh",
+            "dGVWdHNpRXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0EhkKEXZ0c2lfcHJvamVj",
+            "dF9uYW1lGAEgASgJEj4KEmV2ZW50X3N1YnNjcmlwdGlvbhgCIAEoCzIiLm9u",
+            "ZGV3by52dHNpLlZ0c2lFdmVudFN1YnNjcmlwdGlvbhIuCgpmaWVsZF9tYXNr",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJfCh9HZXRWdHNp",
+            "RXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSLgoKZmll",
+            "bGRfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sixQEK",
+            "IlVwZGF0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvblJlcXVlc3QSPgoSZXZlbnRf",
+            "c3Vic2NyaXB0aW9uGAEgASgLMiIub25kZXdvLnZ0c2kuVnRzaUV2ZW50U3Vi",
+            "c2NyaXB0aW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLkZpZWxkTWFzaxIuCgpmaWVsZF9tYXNrGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzayJiCiJEZWxldGVWdHNpRXZlbnRTdWJzY3JpcHRp",
+            "b25SZXF1ZXN0EgwKBG5hbWUYASABKAkSLgoKZmllbGRfbWFzaxgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siMwojRGVsZXRlVnRzaUV2ZW50",
+            "U3Vic2NyaXB0aW9uUmVzcG9uc2USDAoEbmFtZRgBIAEoCSKpAQohTGlzdFZ0",
+            "c2lFdmVudFN1YnNjcmlwdGlvbnNSZXF1ZXN0EhkKEXZ0c2lfcHJvamVjdF9u",
+            "YW1lGAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIXCgpwYWdlX3Rva2VuGAMg",
+            "ASgJSACIAQESLgoKZmllbGRfbWFzaxgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5GaWVsZE1hc2tCDQoLX3BhZ2VfdG9rZW4ifgoiTGlzdFZ0c2lFdmVudFN1",
+            "YnNjcmlwdGlvbnNSZXNwb25zZRI/ChNldmVudF9zdWJzY3JpcHRpb25zGAEg",
+            "AygLMiIub25kZXdvLnZ0c2kuVnRzaUV2ZW50U3Vic2NyaXB0aW9uEhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSKIAQoUQ3JlYXRlV2ViaG9va1JlcXVlc3QS",
+            "GQoRdnRzaV9wcm9qZWN0X25hbWUYASABKAkSJQoHd2ViaG9vaxgCIAEoCzIU",
+            "Lm9uZGV3by52dHNpLldlYmhvb2sSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siUQoRR2V0V2ViaG9va1JlcXVlc3QS",
+            "DAoEbmFtZRgBIAEoCRIuCgpmaWVsZF9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzayKeAQoUVXBkYXRlV2ViaG9va1JlcXVlc3QSJQoH",
+            "d2ViaG9vaxgBIAEoCzIULm9uZGV3by52dHNpLldlYmhvb2sSLwoLdXBkYXRl",
+            "X21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEi4KCmZp",
+            "ZWxkX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIlQK",
+            "FERlbGV0ZVdlYmhvb2tSZXF1ZXN0EgwKBG5hbWUYASABKAkSLgoKZmllbGRf",
+            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siSgoVRGVs",
+            "ZXRlV2ViaG9va1Jlc3BvbnNlEgwKBG5hbWUYASABKAkSIwobZGV0YWNoZWRf",
+            "c3Vic2NyaXB0aW9uX2NvdW50GAIgASgFIpsBChNMaXN0V2ViaG9va3NSZXF1",
+            "ZXN0EhkKEXZ0c2lfcHJvamVjdF9uYW1lGAEgASgJEhEKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBRIXCgpwYWdlX3Rva2VuGAMgASgJSACIAQESLgoKZmllbGRfbWFzaxgE",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCDQoLX3BhZ2VfdG9r",
+            "ZW4iVwoUTGlzdFdlYmhvb2tzUmVzcG9uc2USJgoId2ViaG9va3MYASADKAsy",
+            "FC5vbmRld28udnRzaS5XZWJob29rEhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
+            "CSJQChJUZXN0V2ViaG9va1JlcXVlc3QSDAoEbmFtZRgBIAEoCRIsCgxzYW1w",
+            "bGVfZXZlbnQYAiABKA4yFi5vbmRld28udnRzaS5WdHNpRXZlbnQilQEKE1Rl",
+            "c3RXZWJob29rUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCBIYChBodHRwX3N0",
+            "YXR1c19jb2RlGAIgASgFEioKB2xhdGVuY3kYAyABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24SFQoNZXJyb3JfbWVzc2FnZRgEIAEoCRIQCghldmVu",
+            "dF9pZBgFIAEoCSLyAQoaU3Vic2NyaWJlVnRzaUV2ZW50c1JlcXVlc3QSGQoR",
+            "dnRzaV9wcm9qZWN0X25hbWUYASABKAkSIQoXZXZlbnRfc3Vic2NyaXB0aW9u",
+            "X25hbWUYAiABKAlIABIuCgZmaWx0ZXIYAyABKAsyHC5vbmRld28udnRzaS5W",
+            "dHNpRXZlbnRGaWx0ZXJIABIZCgxyZXN1bWVfdG9rZW4YBCABKAlIAYgBARIu",
+            "CgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIKCghzZWxlY3RvckIPCg1fcmVzdW1lX3Rva2VuIsoBChtTdWJzY3JpYmVW",
+            "dHNpRXZlbnRzUmVzcG9uc2USLQoGZXZlbnRzGAEgAygLMh0ub25kZXdvLnZ0",
+            "c2kuVnRzaUV2ZW50TWVzc2FnZRIUCgxyZXN1bWVfdG9rZW4YAiABKAkSGwoT",
+            "ZHJvcHBlZF9ldmVudF9jb3VudBgDIAEoAxISCgplbmRfcmVhc29uGAQgASgJ",
+            "EjUKD2VuZF9yZWFzb25fdHlwZRgFIAEoDjIcLm9uZGV3by52dHNpLlN0cmVh",
+            "bUVuZFJlYXNvbiLUAQodUmVkZWxpdmVyV2ViaG9va0V2ZW50c1JlcXVlc3QS",
+            "FAoMd2ViaG9va19uYW1lGAEgASgJEhEKCWV2ZW50X2lkcxgCIAMoCRIuCgpz",
+            "dGFydF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIs",
+            "CghlbmRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
+            "LAoGZmlsdGVyGAUgASgLMhwub25kZXdvLnZ0c2kuVnRzaUV2ZW50RmlsdGVy",
+            "IqcBCh5SZWRlbGl2ZXJXZWJob29rRXZlbnRzUmVzcG9uc2USFgoOZW5xdWV1",
+            "ZWRfY291bnQYASABKAUSHAoUbm90X2luX2pvdXJuYWxfY291bnQYAiABKAUS",
+            "GgoSbm90X2VucXVldWVkX2NvdW50GAMgASgFEjMKD25leHRfc3RhcnRfdGlt",
+            "ZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAq2x0KCVZ0c2lF",
+            "dmVudBIaChZWVFNJX0VWRU5UX1VOU1BFQ0lGSUVEEAASGwoXVlRTSV9FVkVO",
+            "VF9DQUxMX0NSRUFURUQQZBIdChlWVFNJX0VWRU5UX0NBTExfSU5JVElBVEVE",
+            "EGUSHQoZVlRTSV9FVkVOVF9DQUxMX0NPTk5FQ1RFRBBmEhwKGFZUU0lfRVZF",
+            "TlRfQ0FMTF9GSU5JU0hFRBBnEhoKFlZUU0lfRVZFTlRfQ0FMTF9GQUlMRUQQ",
+            "aBImCiJWVFNJX0VWRU5UX0NBTExfVFJBTlNGRVJfSU5JVElBVEVEEGkSHwob",
+            "VlRTSV9FVkVOVF9DQUxMX1RSQU5TRkVSUkVEEGoSIwofVlRTSV9FVkVOVF9D",
+            "QUxMX1RSQU5TRkVSX0ZBSUxFRBBrEiQKIFZUU0lfRVZFTlRfQ0FMTF9IQU5H",
+            "VVBfSU5JVElBVEVEEGwSLgoqVlRTSV9FVkVOVF9DQUxMX0FOU1dFUklOR19N",
+            "QUNISU5FX0RFVEVDVEVEEG0SGwoXVlRTSV9FVkVOVF9DQUxMX1NUT1BQRUQQ",
+            "bhImCiJWVFNJX0VWRU5UX0NBTExfU0lQX1NUQVRVU19DSEFOR0VEEG8SJwoj",
+            "VlRTSV9FVkVOVF9DQUxMX1BBUlRJQ0lQQU5UX0lOVklURUQQcBImCiJWVFNJ",
+            "X0VWRU5UX0NBTExfUEFSVElDSVBBTlRfSk9JTkVEEHESJgoiVlRTSV9FVkVO",
+            "VF9DQUxMX1BBUlRJQ0lQQU5UX0ZBSUxFRBByEiQKIFZUU0lfRVZFTlRfQ0FM",
+            "TF9QQVJUSUNJUEFOVF9MRUZUEHMSHQoZVlRTSV9FVkVOVF9DQUxMX0JPVF9N",
+            "VVRFRBB0Eh8KG1ZUU0lfRVZFTlRfQ0FMTF9CT1RfVU5NVVRFRBB1EiQKIFZU",
+            "U0lfRVZFTlRfQ0FMTF9MSVNURU5JTkdfUEFVU0VEEHYSJQohVlRTSV9FVkVO",
+            "VF9DQUxMX0xJU1RFTklOR19SRVNVTUVEEHcSKgomVlRTSV9FVkVOVF9DQUxM",
+            "X0FVRElPX1NUUkVBTV9DT05ORUNURUQQeBItCilWVFNJX0VWRU5UX0NBTExf",
+            "QVVESU9fU1RSRUFNX0RJU0NPTk5FQ1RFRBB5EhsKF1ZUU0lfRVZFTlRfQ0FM",
+            "TF9VUERBVEVEEHoSHgoZVlRTSV9FVkVOVF9DQUxMRVJfU1RBUlRFRBDIARIj",
+            "Ch5WVFNJX0VWRU5UX0NBTExFUl9TVEFSVF9GQUlMRUQQyQESHgoZVlRTSV9F",
+            "VkVOVF9DQUxMRVJfU1RPUFBFRBDKARIeChlWVFNJX0VWRU5UX0NBTExFUl9E",
+            "RUxFVEVEEMsBEiAKG1ZUU0lfRVZFTlRfQ0FMTEVSX1JFU1RBUlRFRBDMARIg",
+            "ChtWVFNJX0VWRU5UX0NBTExFUl9VTkhFQUxUSFkQzQESHgoZVlRTSV9FVkVO",
+            "VF9DQUxMRVJfSEVBTFRIWRDOARIeChlWVFNJX0VWRU5UX0NBTExFUl9VUERB",
+            "VEVEEM8BEiAKG1ZUU0lfRVZFTlRfTElTVEVORVJfU1RBUlRFRBCsAhIlCiBW",
+            "VFNJX0VWRU5UX0xJU1RFTkVSX1NUQVJUX0ZBSUxFRBCtAhIgChtWVFNJX0VW",
+            "RU5UX0xJU1RFTkVSX1NUT1BQRUQQrgISIAobVlRTSV9FVkVOVF9MSVNURU5F",
+            "Ul9ERUxFVEVEEK8CEiIKHVZUU0lfRVZFTlRfTElTVEVORVJfUkVTVEFSVEVE",
+            "ELACEiIKHVZUU0lfRVZFTlRfTElTVEVORVJfVU5IRUFMVEhZELECEiAKG1ZU",
+            "U0lfRVZFTlRfTElTVEVORVJfSEVBTFRIWRCyAhIgChtWVFNJX0VWRU5UX0xJ",
+            "U1RFTkVSX1VQREFURUQQswISKAojVlRTSV9FVkVOVF9TQ0hFRFVMRURfQ0FM",
+            "TEVSX0NSRUFURUQQkAMSJgohVlRTSV9FVkVOVF9TQ0hFRFVMRURfQ0FMTEVS",
+            "X0ZJUkVEEJEDEicKIlZUU0lfRVZFTlRfU0NIRURVTEVEX0NBTExFUl9GQUlM",
+            "RUQQkgMSKgolVlRTSV9FVkVOVF9TQ0hFRFVMRURfQ0FMTEVSX0NBTkNFTExF",
+            "RBCTAxIwCitWVFNJX0VWRU5UX1NDSEVEVUxFRF9DQUxMRVJfUkVUUllfU0NI",
+            "RURVTEVEEJQDEigKI1ZUU0lfRVZFTlRfU0NIRURVTEVEX0NBTExFUl9VUERB",
+            "VEVEEJUDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJR05fQ1JFQVRFRBD0AxIgChtW",
+            "VFNJX0VWRU5UX0NBTVBBSUdOX1VQREFURUQQ9QMSIAobVlRTSV9FVkVOVF9D",
+            "QU1QQUlHTl9ERUxFVEVEEPYDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJR05fU1RB",
+            "UlRFRBD3AxInCiJWVFNJX0VWRU5UX0NBTVBBSUdOX1NUT1BfUkVRVUVTVEVE",
+            "EPgDEiAKG1ZUU0lfRVZFTlRfQ0FNUEFJR05fU1RPUFBFRBD5AxIsCidWVFNJ",
+            "X0VWRU5UX0NBTVBBSUdOX0hBUkRfU1RPUF9SRVFVRVNURUQQ+gMSJQogVlRT",
+            "SV9FVkVOVF9DQU1QQUlHTl9IQVJEX1NUT1BQRUQQ+wMSIAobVlRTSV9FVkVO",
+            "VF9DQU1QQUlHTl9SRVNVTUVEEPwDEiIKHVZUU0lfRVZFTlRfQ0FNUEFJR05f",
+            "Q09NUExFVEVEEP0DEiEKHFZUU0lfRVZFTlRfQ0FNUEFJR05fUFJPR1JFU1MQ",
+            "/gMSMwouVlRTSV9FVkVOVF9DQU1QQUlHTl9NQVhfUEFSQUxMRUxfQ0FMTFNf",
+            "Q0hBTkdFRBD/AxIkCh9WVFNJX0VWRU5UX0NBTVBBSUdOX0NBTExTX0FEREVE",
+            "EIAEEigKI1ZUU0lfRVZFTlRfQ0FNUEFJR05fQ0FMTF9ESVNQQVRDSEVEEIEE",
+            "EicKIlZUU0lfRVZFTlRfQ0FNUEFJR05fQ0FMTF9DT01QTEVURUQQggQSJAof",
+            "VlRTSV9FVkVOVF9DQU1QQUlHTl9DQUxMX0ZBSUxFRBCDBBItCihWVFNJX0VW",
+            "RU5UX0NBTVBBSUdOX0NBTExfUkVUUllfU0NIRURVTEVEEIQEEicKIlZUU0lf",
+            "RVZFTlRfQ0FNUEFJR05fQ0FMTF9DQU5DRUxMRUQQhQQSJQogVlRTSV9FVkVO",
+            "VF9DQU1QQUlHTl9BVVRPX1NUT1BQRUQQhgQSJgohVlRTSV9FVkVOVF9DQU1Q",
+            "QUlHTl9DQUxMX1JFUVVFVUVEEIcEEi4KKVZUU0lfRVZFTlRfQ0FNUEFJR05f",
+            "Q0FMTElOR19XSU5ET1dfT1BFTkVEEIgEEi4KKVZUU0lfRVZFTlRfQ0FNUEFJ",
+            "R05fQ0FMTElOR19XSU5ET1dfQ0xPU0VEEIkEEiQKH1ZUU0lfRVZFTlRfVlRT",
+            "SV9QUk9KRUNUX1VQREFURUQQ2QQSJAofVlRTSV9FVkVOVF9WVFNJX1BST0pF",
+            "Q1RfREVMRVRFRBDaBBIlCiBWVFNJX0VWRU5UX1ZUU0lfUFJPSkVDVF9ERVBM",
+            "T1lFRBDbBBIqCiVWVFNJX0VWRU5UX1ZUU0lfUFJPSkVDVF9ERVBMT1lfRkFJ",
+            "TEVEENwEEicKIlZUU0lfRVZFTlRfVlRTSV9QUk9KRUNUX1VOREVQTE9ZRUQQ",
+            "3QQSKwomVlRTSV9FVkVOVF9WVFNJX1BST0pFQ1RfU1RBVFVTX0NIQU5HRUQQ",
+            "3gQSLAonVlRTSV9FVkVOVF9WVFNJX1BST0pFQ1RfVU5ERVBMT1lfRkFJTEVE",
+            "EN8EEiEKHFZUU0lfRVZFTlRfQVNURVJJU0tfREVQTE9ZRUQQvAUSIAobVlRT",
+            "SV9FVkVOVF9BU1RFUklTS19SRU1PVkVEEL0FEiIKHVZUU0lfRVZFTlRfQVNU",
+            "RVJJU0tfUkVTVEFSVEVEEL4FEigKI1ZUU0lfRVZFTlRfQVNURVJJU0tfQ09O",
+            "RklHX1JFTE9BREVEEL8FEiIKHVZUU0lfRVZFTlRfQVNURVJJU0tfVU5IRUFM",
+            "VEhZEMAFEiAKG1ZUU0lfRVZFTlRfQVNURVJJU0tfSEVBTFRIWRDBBRIpCiRW",
+            "VFNJX0VWRU5UX0FTVEVSSVNLX1RSVU5LX1JFR0lTVEVSRUQQwgUSKwomVlRT",
+            "SV9FVkVOVF9BU1RFUklTS19UUlVOS19VTlJFR0lTVEVSRUQQwwUSJgohVlRT",
+            "SV9FVkVOVF9BU1RFUklTS19ERVBMT1lfRkFJTEVEEMQFEicKIlZUU0lfRVZF",
+            "TlRfQVNURVJJU0tfUkVTVEFSVF9GQUlMRUQQxQUSLQooVlRTSV9FVkVOVF9B",
+            "U1RFUklTS19DT05GSUdfUkVMT0FEX0ZBSUxFRBDGBRIpCiRWVFNJX0VWRU5U",
+            "X1NPRlRQSE9ORV9BQ0NPVU5UX0NSRUFURUQQoAYSKQokVlRTSV9FVkVOVF9T",
+            "T0ZUUEhPTkVfQUNDT1VOVF9VUERBVEVEEKEGEikKJFZUU0lfRVZFTlRfU09G",
+            "VFBIT05FX0FDQ09VTlRfREVMRVRFRBCiBhItCihWVFNJX0VWRU5UX1NPRlRQ",
+            "SE9ORV9DUkVERU5USUFMU19ST1RBVEVEEKMGEi0KKFZUU0lfRVZFTlRfU09G",
+            "VFBIT05FX0NFUlRJRklDQVRFX1JFVk9LRUQQpAYSHAoXVlRTSV9FVkVOVF9X",
+            "RUJIT09LX1RFU1QQhAcSHwoaVlRTSV9FVkVOVF9XRUJIT09LX0NSRUFURUQQ",
+            "hQcSHwoaVlRTSV9FVkVOVF9XRUJIT09LX1VQREFURUQQhgcSHwoaVlRTSV9F",
+            "VkVOVF9XRUJIT09LX0RFTEVURUQQhwcSKgolVlRTSV9FVkVOVF9FVkVOVF9T",
+            "VUJTQ1JJUFRJT05fQ1JFQVRFRBCIBxIqCiVWVFNJX0VWRU5UX0VWRU5UX1NV",
+            "QlNDUklQVElPTl9VUERBVEVEEIkHEioKJVZUU0lfRVZFTlRfRVZFTlRfU1VC",
+            "U0NSSVBUSU9OX0RFTEVURUQQigciBgjYBBDYBCofVlRTSV9FVkVOVF9WVFNJ",
+            "X1BST0pFQ1RfQ1JFQVRFRCpzChFXZWJob29rSHR0cE1ldGhvZBIjCh9XRUJI",
+            "T09LX0hUVFBfTUVUSE9EX1VOU1BFQ0lGSUVEEAASHAoYV0VCSE9PS19IVFRQ",
+            "X01FVEhPRF9QT1NUEAESGwoXV0VCSE9PS19IVFRQX01FVEhPRF9QVVQQAjKW",
+            "CgoGRXZlbnRzEnIKG0NyZWF0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvbhIvLm9u",
+            "ZGV3by52dHNpLkNyZWF0ZVZ0c2lFdmVudFN1YnNjcmlwdGlvblJlcXVlc3Qa",
+            "Ii5vbmRld28udnRzaS5WdHNpRXZlbnRTdWJzY3JpcHRpb24SbAoYR2V0VnRz",
+            "aUV2ZW50U3Vic2NyaXB0aW9uEiwub25kZXdvLnZ0c2kuR2V0VnRzaUV2ZW50",
+            "U3Vic2NyaXB0aW9uUmVxdWVzdBoiLm9uZGV3by52dHNpLlZ0c2lFdmVudFN1",
+            "YnNjcmlwdGlvbhJyChtVcGRhdGVWdHNpRXZlbnRTdWJzY3JpcHRpb24SLy5v",
+            "bmRld28udnRzaS5VcGRhdGVWdHNpRXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0",
+            "GiIub25kZXdvLnZ0c2kuVnRzaUV2ZW50U3Vic2NyaXB0aW9uEoABChtEZWxl",
+            "dGVWdHNpRXZlbnRTdWJzY3JpcHRpb24SLy5vbmRld28udnRzaS5EZWxldGVW",
+            "dHNpRXZlbnRTdWJzY3JpcHRpb25SZXF1ZXN0GjAub25kZXdvLnZ0c2kuRGVs",
+            "ZXRlVnRzaUV2ZW50U3Vic2NyaXB0aW9uUmVzcG9uc2USfQoaTGlzdFZ0c2lF",
+            "dmVudFN1YnNjcmlwdGlvbnMSLi5vbmRld28udnRzaS5MaXN0VnRzaUV2ZW50",
+            "U3Vic2NyaXB0aW9uc1JlcXVlc3QaLy5vbmRld28udnRzaS5MaXN0VnRzaUV2",
+            "ZW50U3Vic2NyaXB0aW9uc1Jlc3BvbnNlEkgKDUNyZWF0ZVdlYmhvb2sSIS5v",
+            "bmRld28udnRzaS5DcmVhdGVXZWJob29rUmVxdWVzdBoULm9uZGV3by52dHNp",
+            "LldlYmhvb2sSQgoKR2V0V2ViaG9vaxIeLm9uZGV3by52dHNpLkdldFdlYmhv",
+            "b2tSZXF1ZXN0GhQub25kZXdvLnZ0c2kuV2ViaG9vaxJICg1VcGRhdGVXZWJo",
+            "b29rEiEub25kZXdvLnZ0c2kuVXBkYXRlV2ViaG9va1JlcXVlc3QaFC5vbmRl",
+            "d28udnRzaS5XZWJob29rElYKDURlbGV0ZVdlYmhvb2sSIS5vbmRld28udnRz",
+            "aS5EZWxldGVXZWJob29rUmVxdWVzdBoiLm9uZGV3by52dHNpLkRlbGV0ZVdl",
+            "Ymhvb2tSZXNwb25zZRJTCgxMaXN0V2ViaG9va3MSIC5vbmRld28udnRzaS5M",
+            "aXN0V2ViaG9va3NSZXF1ZXN0GiEub25kZXdvLnZ0c2kuTGlzdFdlYmhvb2tz",
+            "UmVzcG9uc2USUAoLVGVzdFdlYmhvb2sSHy5vbmRld28udnRzaS5UZXN0V2Vi",
+            "aG9va1JlcXVlc3QaIC5vbmRld28udnRzaS5UZXN0V2ViaG9va1Jlc3BvbnNl",
+            "EnEKFlJlZGVsaXZlcldlYmhvb2tFdmVudHMSKi5vbmRld28udnRzaS5SZWRl",
+            "bGl2ZXJXZWJob29rRXZlbnRzUmVxdWVzdBorLm9uZGV3by52dHNpLlJlZGVs",
+            "aXZlcldlYmhvb2tFdmVudHNSZXNwb25zZRJqChNTdWJzY3JpYmVWdHNpRXZl",
+            "bnRzEicub25kZXdvLnZ0c2kuU3Vic2NyaWJlVnRzaUV2ZW50c1JlcXVlc3Qa",
+            "KC5vbmRld28udnRzaS5TdWJzY3JpYmVWdHNpRXZlbnRzUmVzcG9uc2UwAWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ondewo.Sip.SipReflection.Descriptor, global::Ondewo.Vtsi.CampaignsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.VtsiEvent), typeof(global::Ondewo.Vtsi.WebhookHttpMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiEventMessage), global::Ondewo.Vtsi.VtsiEventMessage.Parser, new[]{ "EventId", "Event", "VtsiProjectName", "ResourceName", "EventTime", "SipStatusType", "SipStatusDescription", "PreviousSipStatusType", "CallName", "CampaignName", "Description", "Attributes", "CampaignStatistics", "ResourceSequence" }, new[]{ "SipStatusType", "PreviousSipStatusType" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiEventSubscription), global::Ondewo.Vtsi.VtsiEventSubscription.Parser, new[]{ "Name", "VtsiProjectName", "DisplayName", "Events", "AllEvents", "ResourceNamePrefixes", "WebhookNames", "Disabled", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "CampaignNames" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiEventSubscription), global::Ondewo.Vtsi.VtsiEventSubscription.Parser, new[]{ "Name", "VtsiProjectName", "DisplayName", "Events", "AllEvents", "ResourceNamePrefixes", "WebhookNames", "Disabled", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "CampaignNames", "ExcludedEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.WebhookDeliveryStatistics), global::Ondewo.Vtsi.WebhookDeliveryStatistics.Parser, new[]{ "DeliveredCount", "FailedCount", "DroppedCount", "LastDeliveryTime", "LastSuccessTime", "LastHttpStatusCode", "LastError" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Webhook), global::Ondewo.Vtsi.Webhook.Parser, new[]{ "Name", "VtsiProjectName", "DisplayName", "Url", "HttpMethod", "CustomHeaders", "Disabled", "Timeout", "DeliveryStatistics", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiEventFilter), global::Ondewo.Vtsi.VtsiEventFilter.Parser, new[]{ "Events", "ResourceNamePrefixes", "CampaignNames" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.CreateVtsiEventSubscriptionRequest.Parser, new[]{ "VtsiProjectName", "EventSubscription" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.GetVtsiEventSubscriptionRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.UpdateVtsiEventSubscriptionRequest.Parser, new[]{ "EventSubscription", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Webhook), global::Ondewo.Vtsi.Webhook.Parser, new[]{ "Name", "VtsiProjectName", "DisplayName", "Url", "HttpMethod", "CustomHeaders", "Disabled", "Timeout", "DeliveryStatistics", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "SigningSecret" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiEventFilter), global::Ondewo.Vtsi.VtsiEventFilter.Parser, new[]{ "Events", "ResourceNamePrefixes", "CampaignNames", "AllEvents", "ExcludedEvents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.CreateVtsiEventSubscriptionRequest.Parser, new[]{ "VtsiProjectName", "EventSubscription", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.GetVtsiEventSubscriptionRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.UpdateVtsiEventSubscriptionRequest.Parser, new[]{ "EventSubscription", "UpdateMask", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionRequest), global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionResponse), global::Ondewo.Vtsi.DeleteVtsiEventSubscriptionResponse.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiEventSubscriptionsRequest), global::Ondewo.Vtsi.ListVtsiEventSubscriptionsRequest.Parser, new[]{ "VtsiProjectName", "PageSize", "PageToken" }, new[]{ "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiEventSubscriptionsRequest), global::Ondewo.Vtsi.ListVtsiEventSubscriptionsRequest.Parser, new[]{ "VtsiProjectName", "PageSize", "PageToken", "FieldMask" }, new[]{ "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListVtsiEventSubscriptionsResponse), global::Ondewo.Vtsi.ListVtsiEventSubscriptionsResponse.Parser, new[]{ "EventSubscriptions", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateWebhookRequest), global::Ondewo.Vtsi.CreateWebhookRequest.Parser, new[]{ "VtsiProjectName", "Webhook" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetWebhookRequest), global::Ondewo.Vtsi.GetWebhookRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateWebhookRequest), global::Ondewo.Vtsi.UpdateWebhookRequest.Parser, new[]{ "Webhook", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteWebhookRequest), global::Ondewo.Vtsi.DeleteWebhookRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CreateWebhookRequest), global::Ondewo.Vtsi.CreateWebhookRequest.Parser, new[]{ "VtsiProjectName", "Webhook", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.GetWebhookRequest), global::Ondewo.Vtsi.GetWebhookRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.UpdateWebhookRequest), global::Ondewo.Vtsi.UpdateWebhookRequest.Parser, new[]{ "Webhook", "UpdateMask", "FieldMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteWebhookRequest), global::Ondewo.Vtsi.DeleteWebhookRequest.Parser, new[]{ "Name", "FieldMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DeleteWebhookResponse), global::Ondewo.Vtsi.DeleteWebhookResponse.Parser, new[]{ "Name", "DetachedSubscriptionCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListWebhooksRequest), global::Ondewo.Vtsi.ListWebhooksRequest.Parser, new[]{ "VtsiProjectName", "PageSize", "PageToken" }, new[]{ "PageToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListWebhooksRequest), global::Ondewo.Vtsi.ListWebhooksRequest.Parser, new[]{ "VtsiProjectName", "PageSize", "PageToken", "FieldMask" }, new[]{ "PageToken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ListWebhooksResponse), global::Ondewo.Vtsi.ListWebhooksResponse.Parser, new[]{ "Webhooks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TestWebhookRequest), global::Ondewo.Vtsi.TestWebhookRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TestWebhookRequest), global::Ondewo.Vtsi.TestWebhookRequest.Parser, new[]{ "Name", "SampleEvent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TestWebhookResponse), global::Ondewo.Vtsi.TestWebhookResponse.Parser, new[]{ "Success", "HttpStatusCode", "Latency", "ErrorMessage", "EventId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SubscribeVtsiEventsRequest), global::Ondewo.Vtsi.SubscribeVtsiEventsRequest.Parser, new[]{ "VtsiProjectName", "EventSubscriptionName", "Filter", "ResumeToken" }, new[]{ "Selector", "ResumeToken" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SubscribeVtsiEventsResponse), global::Ondewo.Vtsi.SubscribeVtsiEventsResponse.Parser, new[]{ "Events", "ResumeToken", "DroppedEventCount", "EndReason" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SubscribeVtsiEventsRequest), global::Ondewo.Vtsi.SubscribeVtsiEventsRequest.Parser, new[]{ "VtsiProjectName", "EventSubscriptionName", "Filter", "ResumeToken", "StartTime" }, new[]{ "Selector", "ResumeToken" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SubscribeVtsiEventsResponse), global::Ondewo.Vtsi.SubscribeVtsiEventsResponse.Parser, new[]{ "Events", "ResumeToken", "DroppedEventCount", "EndReason", "EndReasonType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RedeliverWebhookEventsRequest), global::Ondewo.Vtsi.RedeliverWebhookEventsRequest.Parser, new[]{ "WebhookName", "EventIds", "StartTime", "EndTime", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.RedeliverWebhookEventsResponse), global::Ondewo.Vtsi.RedeliverWebhookEventsResponse.Parser, new[]{ "EnqueuedCount", "NotInJournalCount", "NotEnqueuedCount", "NextStartTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -253,6 +290,30 @@ namespace Ondewo.Vtsi {
   #region Enums
   /// <summary>
   /// Every event VTSI reports. Values are grouped by resource in blocks of 100; numbers are stable.
+  /// &lt;p>&lt;b>Attributes.&lt;/b> &lt;code>VtsiEventMessage.attributes&lt;/code> carries the event-specific values listed at
+  /// each value below; a key whose value is unknown is left out, and keys not listed are never sent. Formats:
+  /// counts and numbers are base-10 integers without separators (&lt;code>3&lt;/code>); booleans are
+  /// &lt;code>true&lt;/code> / &lt;code>false&lt;/code>; times are RFC 3339 in UTC with a numeric offset
+  /// (&lt;code>2026-10-11T12:00:00+00:00&lt;/code>, fractional seconds possible); resource names are complete
+  /// (&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;&lt;/code>); &lt;code>updated_fields&lt;/code> is a
+  /// comma-separated list of &lt;code>update_mask&lt;/code> paths without spaces (&lt;code>display_name,url&lt;/code>);
+  /// a campaign &lt;code>state&lt;/code> / &lt;code>previous_state&lt;/code> is the &lt;code>CampaignState&lt;/code> name WITHOUT
+  /// its &lt;code>CAMPAIGN_STATE_&lt;/code> prefix (&lt;code>RUNNING&lt;/code>). An event carries at most 20 attributes and
+  /// a value at most 256 characters (longer values are cut); &lt;code>description&lt;/code> and
+  /// &lt;code>sip_status_description&lt;/code> at most 1024 characters.&lt;/p>
+  /// &lt;p>&lt;b>Call status attributes&lt;/b>, on every event derived from a change of a call&amp;apos;s SIP status (marked
+  /// "call status attributes" below): &lt;code>caller_name&lt;/code>, &lt;code>listener_name&lt;/code> or
+  /// &lt;code>scheduled_caller_name&lt;/code> (the resource that owns the call, the one that applies) and
+  /// &lt;code>phone_number&lt;/code> (the callee or caller number in clear, where recorded; treat it as personal
+  /// data). Such an event also sets &lt;code>call_name&lt;/code>, &lt;code>sip_status_type&lt;/code>,
+  /// &lt;code>previous_sip_status_type&lt;/code> (unset for a new call record), &lt;code>sip_status_description&lt;/code>
+  /// and &lt;code>resource_sequence&lt;/code> (the call&amp;apos;s status change number), and has a deterministic
+  /// &lt;code>event_id&lt;/code>, so replicas observing the same change report one event.&lt;/p>
+  /// &lt;p>&lt;b>Campaign call attributes&lt;/b>, on the &lt;code>VTSI_EVENT_CAMPAIGN_CALL_*&lt;/code> events:
+  /// &lt;code>attempt_number&lt;/code> (attempts started so far), &lt;code>phone_number&lt;/code> (the callee in clear) and
+  /// &lt;code>caller_name&lt;/code> (caller of the current or last attempt). They also set &lt;code>call_name&lt;/code>,
+  /// &lt;code>campaign_name&lt;/code>, &lt;code>sip_status_type&lt;/code>, &lt;code>sip_status_description&lt;/code> and
+  /// &lt;code>resource_sequence&lt;/code>; never &lt;code>campaign_statistics&lt;/code>.&lt;/p>
   /// </summary>
   public enum VtsiEvent {
     /// <summary>
@@ -260,227 +321,332 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// A call record was created: an outbound call was placed, or a listener received a call.
+    /// A call record was created: an outbound call was placed, or a listener received a call. Call status
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_CREATED")] CallCreated = 100,
     /// <summary>
-    /// The call is ringing: &lt;code>INCOMING_CALL_INITIATED&lt;/code> / &lt;code>OUTGOING_CALL_INITIATED&lt;/code>.
+    /// The call is ringing: &lt;code>INCOMING_CALL_INITIATED&lt;/code> / &lt;code>OUTGOING_CALL_INITIATED&lt;/code>. Call
+    /// status attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_INITIATED")] CallInitiated = 101,
     /// <summary>
-    /// The call was answered: &lt;code>INCOMING_CALL_CONNECTED&lt;/code> / &lt;code>OUTGOING_CALL_CONNECTED&lt;/code>.
+    /// The call was answered: &lt;code>INCOMING_CALL_CONNECTED&lt;/code> / &lt;code>OUTGOING_CALL_CONNECTED&lt;/code>. Call
+    /// status attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_CONNECTED")] CallConnected = 102,
     /// <summary>
-    /// The call ended normally: &lt;code>INCOMING_CALL_FINISHED&lt;/code> / &lt;code>OUTGOING_CALL_FINISHED&lt;/code>.
+    /// The call ended normally: &lt;code>INCOMING_CALL_FINISHED&lt;/code> / &lt;code>OUTGOING_CALL_FINISHED&lt;/code>. Call
+    /// status attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_FINISHED")] CallFinished = 103,
     /// <summary>
-    /// The call failed: &lt;code>INCOMING_CALL_FAILED&lt;/code> / &lt;code>OUTGOING_CALL_FAILED&lt;/code>.
+    /// The call failed: &lt;code>INCOMING_CALL_FAILED&lt;/code> / &lt;code>OUTGOING_CALL_FAILED&lt;/code>. Call status
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_FAILED")] CallFailed = 104,
     /// <summary>
     /// A transfer of the call started: &lt;code>TRANSFER_CALL_INITIATED&lt;/code>. Emitted when a BLIND transfer was
     /// accepted, or when the target of a WARM transfer starts ringing.
+    /// &lt;p>Attributes: &lt;code>transfer_id&lt;/code> (the target, a phone number masked to its last 3 digits, e.g.
+    /// &lt;code>***678&lt;/code>, or an extension), &lt;code>target_type&lt;/code> (&lt;code>phone_number&lt;/code>,
+    /// &lt;code>softphone&lt;/code>, &lt;code>listener&lt;/code>, &lt;code>listener_queue&lt;/code>, &lt;code>legacy&lt;/code>,
+    /// &lt;code>unknown&lt;/code>), &lt;code>mode&lt;/code> (&lt;code>blind&lt;/code> / &lt;code>warm&lt;/code>; &lt;code>WARM&lt;/code>, upper
+    /// case, when reported for the ringing WARM leg), &lt;code>outcome&lt;/code> (&lt;code>accepted&lt;/code>,
+    /// &lt;code>pending&lt;/code>, ...), &lt;code>sip_response_code&lt;/code> (SIP code, &lt;code>0&lt;/code> when unknown),
+    /// &lt;code>error_reason&lt;/code> (kebab-case token, may be empty), &lt;code>participant_id&lt;/code> (WARM leg),
+    /// &lt;code>source&lt;/code> (&lt;code>call_monitor&lt;/code> when observed by the call monitor). Sets
+    /// &lt;code>call_name&lt;/code>.&lt;/p>
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_TRANSFER_INITIATED")] CallTransferInitiated = 105,
     /// <summary>
     /// &lt;code>TransferCall&lt;/code> transferred the call. Emitted at the call&amp;apos;s terminal edge: a
     /// &lt;code>*_CALL_FINISHED&lt;/code> status whose description is &lt;code>Call transferred&lt;/code>.
+    /// &lt;p>Attributes: &lt;code>transfer_id&lt;/code> (masked as above), &lt;code>mode&lt;/code> (&lt;code>blind&lt;/code> /
+    /// &lt;code>warm&lt;/code>), &lt;code>outcome&lt;/code> (&lt;code>accepted&lt;/code>), &lt;code>sip_response_code&lt;/code>,
+    /// &lt;code>source&lt;/code> (&lt;code>call_monitor&lt;/code>), and the call status attributes
+    /// (&lt;code>caller_name&lt;/code> / &lt;code>listener_name&lt;/code> / &lt;code>scheduled_caller_name&lt;/code>,
+    /// &lt;code>phone_number&lt;/code>). Sets the call status fields.&lt;/p>
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_TRANSFERRED")] CallTransferred = 106,
     /// <summary>
     /// A transfer failed and the call was KEPT with the bot: &lt;code>TRANSFER_CALL_FAILED&lt;/code>, a refused or unanswered
     /// REFER, or a WARM target that was busy or did not answer.
+    /// &lt;p>Attributes: as &lt;code>VTSI_EVENT_CALL_TRANSFER_INITIATED&lt;/code>, with &lt;code>outcome&lt;/code> naming the
+    /// failure (&lt;code>target_invalid&lt;/code>, &lt;code>refer_rejected&lt;/code>, &lt;code>timeout&lt;/code>,
+    /// &lt;code>call_ended&lt;/code>, &lt;code>call_scope_mismatch&lt;/code>, &lt;code>sip_unreachable&lt;/code>,
+    /// &lt;code>refused&lt;/code>, or the SIP reason in snake case), &lt;code>error_reason&lt;/code> and, for a WARM leg,
+    /// &lt;code>participant_id&lt;/code> and &lt;code>end_reason&lt;/code> (as on
+    /// &lt;code>VTSI_EVENT_CALL_PARTICIPANT_FAILED&lt;/code>). &lt;code>description&lt;/code> says why.&lt;/p>
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_TRANSFER_FAILED")] CallTransferFailed = 107,
     /// <summary>
-    /// A hang-up started: &lt;code>SOFT_HANGUP_INITIATED&lt;/code> / &lt;code>HARD_HANGUP_INITIATED&lt;/code>.
+    /// A hang-up started: &lt;code>SOFT_HANGUP_INITIATED&lt;/code> / &lt;code>HARD_HANGUP_INITIATED&lt;/code>. Call status
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_HANGUP_INITIATED")] CallHangupInitiated = 108,
     /// <summary>
-    /// An answering machine was detected: &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code>.
+    /// An answering machine was detected: &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code>. Call status
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_ANSWERING_MACHINE_DETECTED")] CallAnsweringMachineDetected = 109,
     /// <summary>
     /// The call was ended by &lt;code>StopCall&lt;/code>, &lt;code>StopCalls&lt;/code>, &lt;code>StopAllCalls&lt;/code>
-    /// or a campaign hard stop.
+    /// or a campaign hard stop. No attributes; &lt;code>call_name&lt;/code> is not set (the call is the
+    /// &lt;code>resource_name&lt;/code>).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_STOPPED")] CallStopped = 110,
     /// <summary>
     /// The SIP status of the call changed (emitted for EVERY change, in addition to the specific
-    /// events above). &lt;code>previous_sip_status_type&lt;/code> holds the status before.
+    /// events above). &lt;code>previous_sip_status_type&lt;/code> holds the status before. Call status
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_SIP_STATUS_CHANGED")] CallSipStatusChanged = 111,
     /// <summary>
-    /// A participant was invited into the call (&lt;code>InviteToCall&lt;/code>). &lt;code>attributes&lt;/code> carry
-    /// &lt;code>participant_id&lt;/code>, &lt;code>mode&lt;/code> and &lt;code>actor&lt;/code> (who invited).
+    /// A participant was invited into the call (&lt;code>InviteToCall&lt;/code>).
+    /// &lt;p>Attributes (the participant attributes, also on 113 to 115): &lt;code>participant_id&lt;/code>,
+    /// &lt;code>mode&lt;/code> (&lt;code>CONFERENCE&lt;/code> / &lt;code>MONITOR&lt;/code>), &lt;code>purpose&lt;/code>
+    /// (&lt;code>invite&lt;/code> / &lt;code>warm_transfer&lt;/code>), &lt;code>state&lt;/code> (&lt;code>ParticipantState&lt;/code> name,
+    /// e.g. &lt;code>PARTICIPANT_STATE_RINGING&lt;/code>), &lt;code>softphone_account_name&lt;/code> (when a softphone
+    /// account was invited), &lt;code>end_reason&lt;/code> (on 114 and 115: &lt;code>NOANSWER&lt;/code>, &lt;code>BUSY&lt;/code>,
+    /// &lt;code>CHANUNAVAIL&lt;/code>, &lt;code>CALL_ENDED&lt;/code>, &lt;code>REMOVED&lt;/code>, &lt;code>HANGUP&lt;/code>,
+    /// &lt;code>HANDED_OVER&lt;/code>, &lt;code>JOIN_FAILED&lt;/code>, &lt;code>TIMEOUT&lt;/code>), &lt;code>actor&lt;/code> (who caused
+    /// it: the authenticated user, or &lt;code>system:call-control&lt;/code>), &lt;code>source&lt;/code>. Sets
+    /// &lt;code>call_name&lt;/code> and &lt;code>description&lt;/code>.&lt;/p>
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_PARTICIPANT_INVITED")] CallParticipantInvited = 112,
     /// <summary>
-    /// An invited participant answered and joined the call. &lt;code>attributes&lt;/code> carry &lt;code>participant_id&lt;/code>.
+    /// An invited participant answered and joined the call. The participant attributes (see 112);
+    /// &lt;code>actor&lt;/code> is who invited it.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_PARTICIPANT_JOINED")] CallParticipantJoined = 113,
     /// <summary>
-    /// An invited participant never joined (busy, no answer, unavailable, the call ended, ...).
-    /// &lt;code>attributes&lt;/code> carry &lt;code>participant_id&lt;/code> and &lt;code>end_reason&lt;/code>.
+    /// An invited participant never joined (busy, no answer, unavailable, the call ended, ...). The
+    /// participant attributes (see 112), with &lt;code>end_reason&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_PARTICIPANT_FAILED")] CallParticipantFailed = 114,
     /// <summary>
-    /// A joined participant left the call. &lt;code>attributes&lt;/code> carry &lt;code>participant_id&lt;/code> and
+    /// A joined participant left the call. The participant attributes (see 112), with
     /// &lt;code>end_reason&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_PARTICIPANT_LEFT")] CallParticipantLeft = 115,
     /// <summary>
-    /// The bot of the call was muted. &lt;code>attributes&lt;/code> carry &lt;code>actor&lt;/code> where a person caused it.
+    /// The bot of the call was muted. Attributes: &lt;code>source&lt;/code> (&lt;code>operator&lt;/code> for
+    /// &lt;code>SetCallMediaControl&lt;/code>, &lt;code>call_monitor&lt;/code> when the server observed it) and
+    /// &lt;code>actor&lt;/code> (the authenticated user where a person caused it, &lt;code>system&lt;/code> for the call
+    /// monitor). Sets &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_BOT_MUTED")] CallBotMuted = 116,
     /// <summary>
-    /// The bot of the call was unmuted. &lt;code>attributes&lt;/code> carry &lt;code>actor&lt;/code> where a person caused it.
+    /// The bot of the call was unmuted. Attributes as &lt;code>VTSI_EVENT_CALL_BOT_MUTED&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_BOT_UNMUTED")] CallBotUnmuted = 117,
     /// <summary>
-    /// The bot of the call stopped listening to the caller. &lt;code>attributes&lt;/code> carry &lt;code>actor&lt;/code> where a
-    /// person caused it.
+    /// The bot of the call stopped listening to the caller. Attributes as
+    /// &lt;code>VTSI_EVENT_CALL_BOT_MUTED&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_LISTENING_PAUSED")] CallListeningPaused = 118,
     /// <summary>
-    /// The bot of the call listens to the caller again. &lt;code>attributes&lt;/code> carry &lt;code>actor&lt;/code> where a person
-    /// caused it.
+    /// The bot of the call listens to the caller again. Attributes as
+    /// &lt;code>VTSI_EVENT_CALL_BOT_MUTED&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_LISTENING_RESUMED")] CallListeningResumed = 119,
     /// <summary>
     /// A live call audio stream (&lt;code>StreamCallAudio&lt;/code> / &lt;code>ListenCallAudio&lt;/code>) connected.
-    /// &lt;code>attributes&lt;/code> carry &lt;code>stream_id&lt;/code>, &lt;code>mode&lt;/code> and &lt;code>actor&lt;/code>.
+    /// Attributes: &lt;code>stream_id&lt;/code> (uuid), &lt;code>mode&lt;/code> (&lt;code>LISTEN&lt;/code> / &lt;code>TALK&lt;/code>),
+    /// &lt;code>rpc&lt;/code> (&lt;code>ListenCallAudio&lt;/code> / &lt;code>StreamCallAudio&lt;/code>), &lt;code>actor&lt;/code> (the
+    /// authenticated user, when known). Sets &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_AUDIO_STREAM_CONNECTED")] CallAudioStreamConnected = 120,
     /// <summary>
-    /// A live call audio stream disconnected. &lt;code>attributes&lt;/code> carry &lt;code>stream_id&lt;/code>, &lt;code>mode&lt;/code>,
-    /// &lt;code>actor&lt;/code> and &lt;code>end_reason&lt;/code>.
+    /// A live call audio stream disconnected. Attributes as
+    /// &lt;code>VTSI_EVENT_CALL_AUDIO_STREAM_CONNECTED&lt;/code>, plus &lt;code>end_reason&lt;/code> (the
+    /// &lt;code>CallAudioEndReason&lt;/code> name without prefix: &lt;code>CLIENT_CLOSED&lt;/code>, &lt;code>CALL_ENDED&lt;/code>,
+    /// &lt;code>CALL_TRANSFERRED&lt;/code>, &lt;code>MAX_DURATION&lt;/code>, &lt;code>STALLED&lt;/code>, &lt;code>INTERNAL&lt;/code>,
+    /// &lt;code>UNSPECIFIED&lt;/code>).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALL_AUDIO_STREAM_DISCONNECTED")] CallAudioStreamDisconnected = 121,
     /// <summary>
-    /// A caller started and placed its call.
+    /// The stored record of the call was updated (&lt;code>UpdateCall&lt;/code>, &lt;code>UpdateCalls&lt;/code>); the call
+    /// itself is unchanged. Attribute &lt;code>updated_fields&lt;/code> (the &lt;code>update_mask&lt;/code> paths, e.g.
+    /// &lt;code>labels&lt;/code>). Never carries a label value. Sets &lt;code>call_name&lt;/code>. Not emitted for an entry
+    /// of a batch that failed, nor when the update changed nothing.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_CALL_UPDATED")] CallUpdated = 122,
+    /// <summary>
+    /// A caller started and placed its call. No attributes; sets &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_STARTED")] CallerStarted = 200,
     /// <summary>
-    /// A caller could not be started; &lt;code>description&lt;/code> says why.
+    /// A caller could not be started; &lt;code>description&lt;/code> says why. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_START_FAILED")] CallerStartFailed = 201,
     /// <summary>
-    /// A caller was stopped (&lt;code>StopCaller&lt;/code>, &lt;code>StopCallers&lt;/code>).
+    /// A caller was stopped (&lt;code>StopCaller&lt;/code>, &lt;code>StopCallers&lt;/code>). No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_STOPPED")] CallerStopped = 202,
     /// <summary>
-    /// A caller was deleted.
+    /// A caller was deleted. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_DELETED")] CallerDeleted = 203,
     /// <summary>
-    /// A caller&amp;apos;s container was restarted by the server.
+    /// A caller&amp;apos;s container was restarted by the server. Attributes: &lt;code>container_name&lt;/code>,
+    /// &lt;code>reason&lt;/code> (free text, at most 64 characters, e.g. &lt;code>end-call-marker-expired&lt;/code>).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_RESTARTED")] CallerRestarted = 204,
     /// <summary>
-    /// A caller&amp;apos;s container was found not running or unhealthy.
+    /// A caller&amp;apos;s container was found not running or unhealthy. Attribute &lt;code>container_name&lt;/code>;
+    /// &lt;code>description&lt;/code> is &lt;code>container not running&lt;/code> or &lt;code>container unhealthy&lt;/code>; sets
+    /// &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_UNHEALTHY")] CallerUnhealthy = 205,
     /// <summary>
     /// A caller reported unhealthy is healthy again (its container answers its health check, or its
-    /// restart succeeded). Best effort: reported by the replica that reported it unhealthy.
+    /// restart succeeded). Best effort: reported by the replica that reported it unhealthy. No
+    /// attributes; sets &lt;code>call_name&lt;/code> where known.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CALLER_HEALTHY")] CallerHealthy = 206,
     /// <summary>
-    /// A listener started and is waiting for calls.
+    /// The stored configuration of a caller was updated (&lt;code>UpdateCaller&lt;/code>, &lt;code>UpdateCallers&lt;/code>);
+    /// its running container is unchanged. Attribute &lt;code>updated_fields&lt;/code> (the &lt;code>update_mask&lt;/code>
+    /// paths). Never carries a configuration value.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_CALLER_UPDATED")] CallerUpdated = 207,
+    /// <summary>
+    /// A listener started and is waiting for calls. No attributes; sets &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_STARTED")] ListenerStarted = 300,
     /// <summary>
-    /// A listener could not be started; &lt;code>description&lt;/code> says why.
+    /// A listener could not be started; &lt;code>description&lt;/code> says why. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_START_FAILED")] ListenerStartFailed = 301,
     /// <summary>
-    /// A listener was stopped (&lt;code>StopListener&lt;/code>, &lt;code>StopListeners&lt;/code>).
+    /// A listener was stopped (&lt;code>StopListener&lt;/code>, &lt;code>StopListeners&lt;/code>). No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_STOPPED")] ListenerStopped = 302,
     /// <summary>
-    /// A listener was deleted.
+    /// A listener was deleted. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_DELETED")] ListenerDeleted = 303,
     /// <summary>
-    /// A listener&amp;apos;s container was restarted by the server.
+    /// A listener&amp;apos;s container was restarted by the server. Attribute &lt;code>container_name&lt;/code>; sets
+    /// &lt;code>call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_RESTARTED")] ListenerRestarted = 304,
     /// <summary>
-    /// A listener&amp;apos;s container was found not running or unhealthy.
+    /// A listener&amp;apos;s container was found not running or unhealthy. Attribute &lt;code>container_name&lt;/code>;
+    /// &lt;code>description&lt;/code> as for &lt;code>VTSI_EVENT_CALLER_UNHEALTHY&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_UNHEALTHY")] ListenerUnhealthy = 305,
     /// <summary>
     /// A listener reported unhealthy is healthy again (its container answers its health check, or
-    /// its restart succeeded). Best effort: reported by the replica that reported it unhealthy.
+    /// its restart succeeded). Best effort: reported by the replica that reported it unhealthy. No
+    /// attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_LISTENER_HEALTHY")] ListenerHealthy = 306,
     /// <summary>
-    /// A scheduled caller was created.
+    /// The stored configuration of a listener was updated (&lt;code>UpdateListener&lt;/code>,
+    /// &lt;code>UpdateListeners&lt;/code>); its running container is unchanged. Attribute
+    /// &lt;code>updated_fields&lt;/code>. Never carries a configuration value.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_LISTENER_UPDATED")] ListenerUpdated = 307,
+    /// <summary>
+    /// A scheduled caller was created. Attribute &lt;code>scheduled_time&lt;/code> (RFC 3339). Sets
+    /// &lt;code>campaign_name&lt;/code> for a scheduled call of a campaign.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_CREATED")] ScheduledCallerCreated = 400,
     /// <summary>
-    /// A scheduled caller fired: its call was started (&lt;code>call_name&lt;/code> set).
+    /// A scheduled caller fired: its call was started (&lt;code>call_name&lt;/code> set). Attributes: outside a
+    /// campaign &lt;code>attempt&lt;/code> (the attempt number); in a campaign &lt;code>attempt_number&lt;/code> and
+    /// &lt;code>campaign_call_name&lt;/code> (and &lt;code>campaign_name&lt;/code> is set).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_FIRED")] ScheduledCallerFired = 401,
     /// <summary>
-    /// A scheduled caller failed for good; &lt;code>description&lt;/code> says why.
+    /// A scheduled caller failed for good; &lt;code>description&lt;/code> says why. Attributes: outside a campaign
+    /// &lt;code>attempt&lt;/code> and &lt;code>reason&lt;/code> (a classification token, e.g.
+    /// &lt;code>transient_grpc:unavailable&lt;/code>, &lt;code>configuration_error&lt;/code>, optionally suffixed
+    /// &lt;code>:attempt_budget_exhausted&lt;/code>); in a campaign &lt;code>attempt_number&lt;/code> and
+    /// &lt;code>campaign_call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_FAILED")] ScheduledCallerFailed = 402,
     /// <summary>
-    /// A scheduled caller was cancelled.
+    /// A scheduled caller was cancelled. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_CANCELLED")] ScheduledCallerCancelled = 403,
     /// <summary>
-    /// A scheduled caller failed and will be retried.
+    /// A scheduled caller failed and will be retried. Attributes: outside a campaign &lt;code>attempt&lt;/code>,
+    /// &lt;code>reason&lt;/code> and &lt;code>retry_not_before&lt;/code> (RFC 3339); in a campaign
+    /// &lt;code>attempt_number&lt;/code> and &lt;code>campaign_call_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_RETRY_SCHEDULED")] ScheduledCallerRetryScheduled = 404,
     /// <summary>
-    /// A campaign was created.
+    /// A scheduled caller was updated: its stored configuration (an update RPC of scheduled callers, where
+    /// the server offers one) or, for a scheduled call of a campaign requeued by
+    /// &lt;code>RetryCampaignCalls&lt;/code>, its status and scheduled time. Attribute &lt;code>updated_fields&lt;/code>
+    /// (e.g. &lt;code>status,scheduled_time&lt;/code>) and, when it changed, &lt;code>scheduled_time&lt;/code> (RFC 3339);
+    /// in a campaign also &lt;code>campaign_call_name&lt;/code> (and &lt;code>campaign_name&lt;/code> is set). Never carries
+    /// a configuration value.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_SCHEDULED_CALLER_UPDATED")] ScheduledCallerUpdated = 405,
+    /// <summary>
+    /// A campaign was created (&lt;code>CreateCampaign&lt;/code>, a &lt;code>CampaignAssignment.new_campaign&lt;/code>,
+    /// &lt;code>CloneCampaign&lt;/code>). No attributes, except for a clone: &lt;code>cloned_from&lt;/code> (the source
+    /// campaign&amp;apos;s resource name) and &lt;code>copied_call_count&lt;/code>. An idempotent replay emits nothing.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CREATED")] CampaignCreated = 500,
     /// <summary>
-    /// A campaign&amp;apos;s settings were updated.
+    /// A campaign&amp;apos;s settings were updated. Attribute &lt;code>updated_fields&lt;/code> (the
+    /// &lt;code>update_mask&lt;/code> paths). Never carries a call-default value.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_UPDATED")] CampaignUpdated = 501,
     /// <summary>
-    /// A campaign was deleted.
+    /// A campaign was deleted. Attributes: &lt;code>deleted_campaign_call_count&lt;/code>,
+    /// &lt;code>cancelled_scheduled_caller_count&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_DELETED")] CampaignDeleted = 502,
     /// <summary>
-    /// A campaign was started.
+    /// A campaign was started. Attributes: &lt;code>previous_state&lt;/code>, &lt;code>state&lt;/code>; none when the
+    /// campaign was created running by a &lt;code>CampaignAssignment&lt;/code>. &lt;code>description&lt;/code> is
+    /// &lt;code>calls were added&lt;/code> when adding calls started it.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_STARTED")] CampaignStarted = 503,
     /// <summary>
-    /// &lt;code>StopCampaign&lt;/code> was requested; running calls continue.
+    /// &lt;code>StopCampaign&lt;/code> was requested; running calls continue. Attributes: &lt;code>previous_state&lt;/code>,
+    /// &lt;code>state&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_STOP_REQUESTED")] CampaignStopRequested = 504,
     /// <summary>
     /// A campaign is stopped: it reached &lt;code>STOPPED&lt;/code> (after a stop request or an automatic
-    /// stop) once no call of it was running.
+    /// stop) once no call of it was running. Attributes: &lt;code>state&lt;/code> and &lt;code>display_name&lt;/code>
+    /// when the engine observed it; none (with &lt;code>description&lt;/code> &lt;code>no call of the campaign was in
+    /// flight&lt;/code>) when the stop request stopped it at once.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_STOPPED")] CampaignStopped = 505,
     /// <summary>
-    /// &lt;code>HardStopCampaign&lt;/code> was requested.
+    /// &lt;code>HardStopCampaign&lt;/code> (or a forced &lt;code>DeleteCampaign&lt;/code>) was requested. Attributes:
+    /// &lt;code>previous_state&lt;/code>, &lt;code>state&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_HARD_STOP_REQUESTED")] CampaignHardStopRequested = 506,
     /// <summary>
-    /// A campaign is hard stopped.
+    /// A campaign is hard stopped. Attributes as &lt;code>VTSI_EVENT_CAMPAIGN_STOPPED&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_HARD_STOPPED")] CampaignHardStopped = 507,
     /// <summary>
-    /// A campaign was resumed.
+    /// A campaign was resumed (&lt;code>ResumeCampaign&lt;/code>, or a &lt;code>COMPLETED&lt;/code> campaign that got calls
+    /// back from a &lt;code>CampaignAssignment&lt;/code> or &lt;code>RetryCampaignCalls&lt;/code>). Attributes:
+    /// &lt;code>previous_state&lt;/code>, &lt;code>state&lt;/code>; &lt;code>description&lt;/code> says what resumed it when it
+    /// was not &lt;code>ResumeCampaign&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_RESUMED")] CampaignResumed = 508,
     /// <summary>
-    /// Every call of a campaign is finished.
+    /// Every call of a campaign is finished. Attributes: &lt;code>state&lt;/code>, &lt;code>display_name&lt;/code>;
+    /// &lt;code>description&lt;/code> is the &lt;code>state_reason&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_COMPLETED")] CampaignCompleted = 509,
     /// <summary>
-    /// The statistics of a running campaign changed (throttled, at most every few seconds per
-    /// campaign). &lt;code>campaign_statistics&lt;/code> is set.
+    /// The statistics of a running campaign changed (throttled, at most once per
+    /// &lt;code>ONDEWO_VTSI_CAMPAIGN_PROGRESS_EVENT_MIN_INTERVAL_S&lt;/code>, 5 s by default, per campaign).
+    /// &lt;code>campaign_statistics&lt;/code> is set. Attributes: &lt;code>state&lt;/code>, &lt;code>display_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_PROGRESS")] CampaignProgress = 510,
     /// <summary>
@@ -489,151 +655,188 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_MAX_PARALLEL_CALLS_CHANGED")] CampaignMaxParallelCallsChanged = 511,
     /// <summary>
-    /// Calls were added to a campaign; attribute &lt;code>added_call_count&lt;/code>.
+    /// Calls were added to a campaign (an &lt;code>Add*ToCampaign&lt;/code> request, or &lt;code>CloneCampaign&lt;/code>
+    /// with &lt;code>include_calls&lt;/code>); attribute &lt;code>added_call_count&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALLS_ADDED")] CampaignCallsAdded = 512,
     /// <summary>
-    /// An attempt of a campaign call was started (&lt;code>call_name&lt;/code> set).
+    /// An attempt of a campaign call was started (&lt;code>call_name&lt;/code> set). Campaign call attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_DISPATCHED")] CampaignCallDispatched = 513,
     /// <summary>
-    /// A campaign call completed.
+    /// A campaign call completed. Campaign call attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_COMPLETED")] CampaignCallCompleted = 514,
     /// <summary>
-    /// A campaign call failed after its last attempt.
+    /// A campaign call failed after its last attempt. Campaign call attributes; &lt;code>description&lt;/code> is
+    /// the error.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_FAILED")] CampaignCallFailed = 515,
     /// <summary>
-    /// An attempt of a campaign call failed and the call will be retried.
+    /// An attempt of a campaign call failed and the call will be retried. Campaign call attributes;
+    /// &lt;code>description&lt;/code> is the error.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_RETRY_SCHEDULED")] CampaignCallRetryScheduled = 516,
     /// <summary>
-    /// A campaign call was cancelled.
+    /// A campaign call was cancelled (hard stop, cancelled scheduled caller, or
+    /// &lt;code>CancelCampaignCalls&lt;/code>). Campaign call attributes; &lt;code>description&lt;/code> says what cancelled
+    /// it.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_CANCELLED")] CampaignCallCancelled = 517,
     /// <summary>
     /// The SERVER stopped a campaign (it is now &lt;code>STOPPING&lt;/code>) after repeated failures that
     /// cannot succeed by repetition, e.g. a rejected credential; &lt;code>description&lt;/code> holds the
     /// &lt;code>state_reason&lt;/code>. &lt;code>VTSI_EVENT_CAMPAIGN_STOPPED&lt;/code> follows once no call runs.
+    /// Attributes: &lt;code>state&lt;/code> (&lt;code>STOPPING&lt;/code>), &lt;code>display_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_AUTO_STOPPED")] CampaignAutoStopped = 518,
     /// <summary>
-    /// A VTSI project was updated.
+    /// A FAILED or CANCELLED campaign call was put back into the queue by &lt;code>RetryCampaignCalls&lt;/code>.
+    /// Campaign call attributes, plus &lt;code>attempt_limit&lt;/code> (the call&amp;apos;s new attempt limit) and, for a
+    /// call now &lt;code>RETRY_PENDING&lt;/code>, &lt;code>next_attempt_time&lt;/code> (RFC 3339).
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALL_REQUEUED")] CampaignCallRequeued = 519,
+    /// <summary>
+    /// A RUNNING campaign with a &lt;code>calling_window&lt;/code> entered a slot and may start calls again (also when
+    /// it is started or resumed inside a slot after having been outside one, and when an update of the window
+    /// opens it). Attributes: &lt;code>state&lt;/code>, &lt;code>display_name&lt;/code>, &lt;code>window_end&lt;/code> (RFC 3339,
+    /// when the current run of slots ends). Best effort, at most one per edge, reported by the replica whose
+    /// engine ticked the campaign.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALLING_WINDOW_OPENED")] CampaignCallingWindowOpened = 520,
+    /// <summary>
+    /// A RUNNING campaign with a &lt;code>calling_window&lt;/code> left its last slot and starts no call until the next
+    /// one (also when it is started, or its window updated, outside every slot). Running calls continue.
+    /// Attributes: &lt;code>state&lt;/code>, &lt;code>display_name&lt;/code>, &lt;code>next_window_start&lt;/code> (RFC 3339).
+    /// Best effort, at most one per edge.
+    /// </summary>
+    [pbr::OriginalName("VTSI_EVENT_CAMPAIGN_CALLING_WINDOW_CLOSED")] CampaignCallingWindowClosed = 521,
+    /// <summary>
+    /// A VTSI project was updated. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_UPDATED")] VtsiProjectUpdated = 601,
     /// <summary>
     /// A VTSI project was deleted. Delivered to the webhooks subscribed to it at the moment of the
     /// deletion (their configuration is captured before it is deleted with the project) and to the
-    /// project&amp;apos;s open streams, which then end. It is the last event of the project.
+    /// project&amp;apos;s open streams, which then end. It is the last event of the project. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_DELETED")] VtsiProjectDeleted = 602,
     /// <summary>
-    /// A VTSI project was deployed.
+    /// A VTSI project was deployed. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_DEPLOYED")] VtsiProjectDeployed = 603,
     /// <summary>
-    /// Deploying a VTSI project failed; &lt;code>description&lt;/code> says why.
+    /// Deploying a VTSI project failed; &lt;code>description&lt;/code> says why. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_DEPLOY_FAILED")] VtsiProjectDeployFailed = 604,
     /// <summary>
-    /// A VTSI project was undeployed.
+    /// A VTSI project was undeployed. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_UNDEPLOYED")] VtsiProjectUndeployed = 605,
     /// <summary>
     /// The &lt;code>VtsiProjectStatus&lt;/code> of a project changed; attributes
-    /// &lt;code>previous_status&lt;/code> and &lt;code>status&lt;/code>.
+    /// &lt;code>previous_status&lt;/code> and &lt;code>status&lt;/code>, each a &lt;code>VtsiProjectStatus&lt;/code> name
+    /// (&lt;code>DEPLOYED&lt;/code>, &lt;code>UPDATING&lt;/code>, ...).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED")] VtsiProjectStatusChanged = 606,
     /// <summary>
-    /// Undeploying a VTSI project failed; &lt;code>description&lt;/code> says why.
+    /// Undeploying a VTSI project failed; &lt;code>description&lt;/code> says why. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_VTSI_PROJECT_UNDEPLOY_FAILED")] VtsiProjectUndeployFailed = 607,
     /// <summary>
-    /// The project&amp;apos;s Asterisk container was deployed.
+    /// The project&amp;apos;s Asterisk container was deployed. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_DEPLOYED")] AsteriskDeployed = 700,
     /// <summary>
-    /// The project&amp;apos;s Asterisk container was removed.
+    /// The project&amp;apos;s Asterisk container was removed. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_REMOVED")] AsteriskRemoved = 701,
     /// <summary>
-    /// The project&amp;apos;s Asterisk was restarted.
+    /// The project&amp;apos;s Asterisk was restarted. Attribute &lt;code>restart_reason&lt;/code> (&lt;code>plan&lt;/code> or
+    /// &lt;code>escalation&lt;/code>).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_RESTARTED")] AsteriskRestarted = 702,
     /// <summary>
-    /// The project&amp;apos;s Asterisk configuration was reloaded in place.
+    /// The project&amp;apos;s Asterisk configuration was reloaded in place. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_CONFIG_RELOADED")] AsteriskConfigReloaded = 703,
     /// <summary>
-    /// The project&amp;apos;s Asterisk container is not running or unhealthy.
+    /// The project&amp;apos;s Asterisk container is not running or unhealthy. Attribute
+    /// &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_UNHEALTHY")] AsteriskUnhealthy = 704,
     /// <summary>
-    /// The project&amp;apos;s Asterisk container is healthy again.
+    /// The project&amp;apos;s Asterisk container is healthy again. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_HEALTHY")] AsteriskHealthy = 705,
     /// <summary>
-    /// The SIP trunk registered with the carrier.
+    /// The SIP trunk registered with the carrier. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_TRUNK_REGISTERED")] AsteriskTrunkRegistered = 706,
     /// <summary>
-    /// The SIP trunk is no longer registered (rejected, unregistered or failed); attribute
-    /// &lt;code>registration_status&lt;/code>.
+    /// The SIP trunk is no longer registered (rejected, unregistered or failed); attributes
+    /// &lt;code>container_name&lt;/code> and &lt;code>registration_status&lt;/code> (Asterisk&amp;apos;s own token, e.g.
+    /// &lt;code>Rejected&lt;/code>, &lt;code>Unregistered&lt;/code>, &lt;code>Unknown&lt;/code>).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_TRUNK_UNREGISTERED")] AsteriskTrunkUnregistered = 707,
     /// <summary>
-    /// Deploying the project&amp;apos;s Asterisk container failed; &lt;code>description&lt;/code> says why.
+    /// Deploying the project&amp;apos;s Asterisk container failed; &lt;code>description&lt;/code> says why. Attribute
+    /// &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_DEPLOY_FAILED")] AsteriskDeployFailed = 708,
     /// <summary>
-    /// Restarting the project&amp;apos;s Asterisk failed; &lt;code>description&lt;/code> says why.
+    /// Restarting the project&amp;apos;s Asterisk failed; &lt;code>description&lt;/code> says why. Attribute
+    /// &lt;code>restart_reason&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_RESTART_FAILED")] AsteriskRestartFailed = 709,
     /// <summary>
     /// Reloading the project&amp;apos;s Asterisk configuration in place failed; &lt;code>description&lt;/code>
-    /// says why.
+    /// says why. Attribute &lt;code>container_name&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_ASTERISK_CONFIG_RELOAD_FAILED")] AsteriskConfigReloadFailed = 710,
     /// <summary>
-    /// A softphone account was created.
+    /// A softphone account was created. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SOFTPHONE_ACCOUNT_CREATED")] SoftphoneAccountCreated = 800,
     /// <summary>
-    /// A softphone account was updated.
+    /// A softphone account was updated. Attribute &lt;code>updated_fields&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SOFTPHONE_ACCOUNT_UPDATED")] SoftphoneAccountUpdated = 801,
     /// <summary>
-    /// A softphone account was deleted.
+    /// A softphone account was deleted. Attribute &lt;code>revoked_certificate_count&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SOFTPHONE_ACCOUNT_DELETED")] SoftphoneAccountDeleted = 802,
     /// <summary>
-    /// The credentials of a softphone account were rotated.
+    /// The credentials of a softphone account were rotated. Attribute &lt;code>certificate_rotated&lt;/code>
+    /// (boolean).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SOFTPHONE_CREDENTIALS_ROTATED")] SoftphoneCredentialsRotated = 803,
     /// <summary>
-    /// A softphone certificate was revoked.
+    /// A softphone certificate was revoked (resource_name: the certificate). Attribute
+    /// &lt;code>account_locked&lt;/code> (boolean).
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_SOFTPHONE_CERTIFICATE_REVOKED")] SoftphoneCertificateRevoked = 804,
     /// <summary>
-    /// Sent by &lt;code>TestWebhook&lt;/code> only.
+    /// Sent by &lt;code>TestWebhook&lt;/code> only (when it names no &lt;code>sample_event&lt;/code>). No attributes;
+    /// &lt;code>description&lt;/code> is &lt;code>webhook test&lt;/code>.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_WEBHOOK_TEST")] WebhookTest = 900,
     /// <summary>
-    /// A webhook was created (resource_name: the webhook). Never carries a header value.
+    /// A webhook was created (resource_name: the webhook). Never carries a header value or the signing
+    /// secret. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_WEBHOOK_CREATED")] WebhookCreated = 901,
     /// <summary>
     /// A webhook was updated; attribute &lt;code>updated_fields&lt;/code> (the mask paths). Never carries
-    /// a header value.
+    /// a header value or the signing secret.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_WEBHOOK_UPDATED")] WebhookUpdated = 902,
     /// <summary>
-    /// A webhook was deleted.
+    /// A webhook was deleted. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_WEBHOOK_DELETED")] WebhookDeleted = 903,
     /// <summary>
-    /// An event subscription was created (resource_name: the subscription).
+    /// An event subscription was created (resource_name: the subscription). No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_EVENT_SUBSCRIPTION_CREATED")] EventSubscriptionCreated = 904,
     /// <summary>
@@ -641,13 +844,17 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_EVENT_SUBSCRIPTION_UPDATED")] EventSubscriptionUpdated = 905,
     /// <summary>
-    /// An event subscription was deleted.
+    /// An event subscription was deleted. No attributes.
     /// </summary>
     [pbr::OriginalName("VTSI_EVENT_EVENT_SUBSCRIPTION_DELETED")] EventSubscriptionDeleted = 906,
   }
 
   /// <summary>
   /// HTTP method of a webhook request.
+  /// &lt;p>Note: the zero value &lt;code>WEBHOOK_HTTP_METHOD_UNSPECIFIED&lt;/code> is not "no method" but means
+  /// &lt;code>POST&lt;/code>, the default. It keeps its released name for wire and source compatibility; a webhook
+  /// written with it is stored and sent as POST, and &lt;code>Webhook.http_method&lt;/code> then reads back
+  /// &lt;code>WEBHOOK_HTTP_METHOD_POST&lt;/code>.&lt;/p>
   /// </summary>
   public enum WebhookHttpMethod {
     /// <summary>
@@ -938,7 +1145,9 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// Further event-specific values, e.g. &lt;code>caller_name&lt;/code>, &lt;code>listener_name&lt;/code>,
     /// &lt;code>phone_number&lt;/code>, &lt;code>container_name&lt;/code>, &lt;code>attempt_number&lt;/code>,
-    /// &lt;code>previous_status&lt;/code>. Keys are documented per event in the VTSI documentation.
+    /// &lt;code>previous_status&lt;/code>. The keys and value formats of each event are documented at its
+    /// &lt;a href="index.html#ondewo.vtsi.VtsiEvent">VtsiEvent&lt;/a> value; at most 20 entries, each value at most
+    /// 256 characters. Receivers must ignore keys they do not know: later versions may add keys.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1492,6 +1701,7 @@ namespace Ondewo.Vtsi {
       modifiedBy_ = other.modifiedBy_;
       modifiedAt_ = other.modifiedAt_ != null ? other.modifiedAt_.Clone() : null;
       campaignNames_ = other.campaignNames_.Clone();
+      excludedEvents_ = other.excludedEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1522,6 +1732,7 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// Output only. VTSI project of the subscription.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1536,7 +1747,8 @@ namespace Ondewo.Vtsi {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Human-readable name, at most 128 characters. Updatable.
+    /// Human-readable name, at most 128 characters. NOT unique within the project; may be empty, and an
+    /// empty display name stays empty (no default is generated). Updatable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1554,7 +1766,7 @@ namespace Ondewo.Vtsi {
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> events_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent>();
     /// <summary>
     /// The events to deliver. Required unless &lt;code>all_events&lt;/code> is set; must be empty when it
-    /// is. Updatable.
+    /// is. At most one entry per value (duplicates are ignored). Updatable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1566,7 +1778,8 @@ namespace Ondewo.Vtsi {
     public const int AllEventsFieldNumber = 5;
     private bool allEvents_;
     /// <summary>
-    /// Deliver every event, including events added in later versions. Updatable.
+    /// Deliver every event, including events added in later versions, except
+    /// &lt;code>excluded_events&lt;/code>. Updatable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1707,6 +1920,25 @@ namespace Ondewo.Vtsi {
       get { return campaignNames_; }
     }
 
+    /// <summary>Field number for the "excluded_events" field.</summary>
+    public const int ExcludedEventsFieldNumber = 14;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.VtsiEvent> _repeated_excludedEvents_codec
+        = pb::FieldCodec.ForEnum(114, x => (int) x, x => (global::Ondewo.Vtsi.VtsiEvent) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> excludedEvents_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent>();
+    /// <summary>
+    /// Events NOT to deliver, subtracted from the selection of &lt;code>events&lt;/code> / &lt;code>all_events&lt;/code>,
+    /// e.g. &lt;code>all_events&lt;/code> with &lt;code>VTSI_EVENT_CALL_SIP_STATUS_CHANGED&lt;/code> and
+    /// &lt;code>VTSI_EVENT_CAMPAIGN_PROGRESS&lt;/code> excluded. Empty means nothing is excluded.
+    /// &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code>, a reserved value, or a value that is also in &lt;code>events&lt;/code>
+    /// is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>. At most 100 entries. Updatable (path
+    /// &lt;code>excluded_events&lt;/code>, replaced whole).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> ExcludedEvents {
+      get { return excludedEvents_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1735,6 +1967,7 @@ namespace Ondewo.Vtsi {
       if (ModifiedBy != other.ModifiedBy) return false;
       if (!object.Equals(ModifiedAt, other.ModifiedAt)) return false;
       if(!campaignNames_.Equals(other.campaignNames_)) return false;
+      if(!excludedEvents_.Equals(other.excludedEvents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1755,6 +1988,7 @@ namespace Ondewo.Vtsi {
       if (ModifiedBy.Length != 0) hash ^= ModifiedBy.GetHashCode();
       if (modifiedAt_ != null) hash ^= ModifiedAt.GetHashCode();
       hash ^= campaignNames_.GetHashCode();
+      hash ^= excludedEvents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1813,6 +2047,7 @@ namespace Ondewo.Vtsi {
         output.WriteMessage(ModifiedAt);
       }
       campaignNames_.WriteTo(output, _repeated_campaignNames_codec);
+      excludedEvents_.WriteTo(output, _repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1863,6 +2098,7 @@ namespace Ondewo.Vtsi {
         output.WriteMessage(ModifiedAt);
       }
       campaignNames_.WriteTo(ref output, _repeated_campaignNames_codec);
+      excludedEvents_.WriteTo(ref output, _repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1904,6 +2140,7 @@ namespace Ondewo.Vtsi {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifiedAt);
       }
       size += campaignNames_.CalculateSize(_repeated_campaignNames_codec);
+      size += excludedEvents_.CalculateSize(_repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1953,6 +2190,7 @@ namespace Ondewo.Vtsi {
         ModifiedAt.MergeFrom(other.ModifiedAt);
       }
       campaignNames_.Add(other.campaignNames_);
+      excludedEvents_.Add(other.excludedEvents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2031,6 +2269,11 @@ namespace Ondewo.Vtsi {
             campaignNames_.AddEntriesFrom(input, _repeated_campaignNames_codec);
             break;
           }
+          case 114:
+          case 112: {
+            excludedEvents_.AddEntriesFrom(input, _repeated_excludedEvents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2107,6 +2350,11 @@ namespace Ondewo.Vtsi {
           }
           case 106: {
             campaignNames_.AddEntriesFrom(ref input, _repeated_campaignNames_codec);
+            break;
+          }
+          case 114:
+          case 112: {
+            excludedEvents_.AddEntriesFrom(ref input, _repeated_excludedEvents_codec);
             break;
           }
         }
@@ -2632,6 +2880,7 @@ namespace Ondewo.Vtsi {
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       modifiedBy_ = other.modifiedBy_;
       modifiedAt_ = other.modifiedAt_ != null ? other.modifiedAt_.Clone() : null;
+      signingSecret_ = other.signingSecret_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2662,6 +2911,7 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// Output only. VTSI project of the webhook.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2676,7 +2926,8 @@ namespace Ondewo.Vtsi {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Human-readable name, at most 128 characters. Updatable.
+    /// Human-readable name, at most 128 characters. NOT unique within the project; may be empty, and an
+    /// empty display name stays empty (no default is generated). Updatable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2844,6 +3095,45 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "signing_secret" field.</summary>
+    public const int SigningSecretFieldNumber = 14;
+    private string signingSecret_ = "";
+    /// <summary>
+    /// Optional. Secret with which the server SIGNS every request to this webhook, so the receiver can verify
+    /// that a request comes from this VTSI server and was not changed. WRITE-ONLY: every RPC returns
+    /// &lt;code>********&lt;/code> when a secret is stored and an empty string when none is; it is never logged and
+    /// never put on an event. 32 to 256 printable ASCII characters without whitespace (generate at least
+    /// 32 random characters); anything else, and the mask value itself on create, is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. Empty (the default) means requests are not signed.
+    /// &lt;p>Signature: each request carries the header&lt;/p>
+    /// &lt;pre>&lt;code>X-Ondewo-Vtsi-Signature: t=&amp;lt;unix seconds&amp;gt;,v1=&amp;lt;signature&amp;gt;&lt;/code>&lt;/pre>
+    /// &lt;p>where &lt;code>t&lt;/code> is the time the request was sent (base-10 seconds since the Unix epoch, a new
+    /// value for every attempt) and the signature is the lowercase hex HMAC-SHA256, keyed with the secret&amp;apos;s
+    /// bytes, of the ASCII string &lt;code>&amp;lt;t&amp;gt;.&lt;/code> followed by the exact bytes of the request body:&lt;/p>
+    /// &lt;pre>&lt;code>v1 = hex(HMAC_SHA256(key = signing_secret, message = t + "." + body))&lt;/code>&lt;/pre>
+    /// &lt;p>To verify: recompute it over the raw body as received (before any JSON parsing), compare in constant
+    /// time with each &lt;code>v1&lt;/code> value of the header (there can be two, see rotation), and reject the
+    /// request when none matches or when &lt;code>t&lt;/code> is more than 5 minutes away from the receiver&amp;apos;s
+    /// clock (replay protection; de-duplicate by &lt;code>event_id&lt;/code> as well). Further signature schemes may
+    /// be added later as additional comma-separated &lt;code>v&amp;lt;n&amp;gt;=&lt;/code> entries: ignore entries you do not
+    /// know.&lt;/p>
+    /// &lt;p>Rotation: &lt;code>UpdateWebhook&lt;/code> with &lt;code>update_mask&lt;/code> path &lt;code>signing_secret&lt;/code>
+    /// and the new value. For &lt;code>ONDEWO_VTSI_WEBHOOK_SIGNING_ROTATION_GRACE_S&lt;/code> (24 h by default) after
+    /// a rotation every request carries two signatures, &lt;code>t=...,v1=&amp;lt;new&amp;gt;,v1=&amp;lt;previous&amp;gt;&lt;/code>,
+    /// so the receiver can switch to the new secret at any time within that window; afterwards only the new
+    /// one. Writing an empty string removes signing at once (no grace); writing &lt;code>********&lt;/code> keeps the
+    /// stored secret, so a Get-modify-Update round trip does not change it. &lt;code>TestWebhook&lt;/code> signs like
+    /// a real delivery and is the way to check a receiver&amp;apos;s verification before relying on it.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SigningSecret {
+      get { return signingSecret_; }
+      set {
+        signingSecret_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2872,6 +3162,7 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (ModifiedBy != other.ModifiedBy) return false;
       if (!object.Equals(ModifiedAt, other.ModifiedAt)) return false;
+      if (SigningSecret != other.SigningSecret) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2892,6 +3183,7 @@ namespace Ondewo.Vtsi {
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (ModifiedBy.Length != 0) hash ^= ModifiedBy.GetHashCode();
       if (modifiedAt_ != null) hash ^= ModifiedAt.GetHashCode();
+      if (SigningSecret.Length != 0) hash ^= SigningSecret.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2959,6 +3251,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(106);
         output.WriteMessage(ModifiedAt);
       }
+      if (SigningSecret.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SigningSecret);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3018,6 +3314,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(106);
         output.WriteMessage(ModifiedAt);
       }
+      if (SigningSecret.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(SigningSecret);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3064,6 +3364,9 @@ namespace Ondewo.Vtsi {
       }
       if (modifiedAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModifiedAt);
+      }
+      if (SigningSecret.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SigningSecret);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3125,6 +3428,9 @@ namespace Ondewo.Vtsi {
           ModifiedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         ModifiedAt.MergeFrom(other.ModifiedAt);
+      }
+      if (other.SigningSecret.Length != 0) {
+        SigningSecret = other.SigningSecret;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3207,6 +3513,10 @@ namespace Ondewo.Vtsi {
               ModifiedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(ModifiedAt);
+            break;
+          }
+          case 114: {
+            SigningSecret = input.ReadString();
             break;
           }
         }
@@ -3292,6 +3602,10 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(ModifiedAt);
             break;
           }
+          case 114: {
+            SigningSecret = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3300,7 +3614,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Selects events for &lt;code>SubscribeVtsiEvents&lt;/code> without a stored subscription.
+  /// Selects events for &lt;code>SubscribeVtsiEvents&lt;/code> without a stored subscription, and narrows a
+  /// &lt;code>RedeliverWebhookEvents&lt;/code> window. Every set field narrows the selection (AND); the entries of one
+  /// list are alternatives (OR).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VtsiEventFilter : pb::IMessage<VtsiEventFilter>
@@ -3340,6 +3656,8 @@ namespace Ondewo.Vtsi {
       events_ = other.events_.Clone();
       resourceNamePrefixes_ = other.resourceNamePrefixes_.Clone();
       campaignNames_ = other.campaignNames_.Clone();
+      allEvents_ = other.allEvents_;
+      excludedEvents_ = other.excludedEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3355,7 +3673,10 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Ondewo.Vtsi.VtsiEvent) x);
     private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> events_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent>();
     /// <summary>
-    /// Only these events. Empty means every event.
+    /// Only these events. Empty means every event (unlike &lt;code>VtsiEventSubscription.events&lt;/code>, where
+    /// empty is refused unless &lt;code>all_events&lt;/code> is set: a filter is a one-off request, so "no
+    /// constraint" is its natural empty value). &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> or a reserved value is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3394,6 +3715,38 @@ namespace Ondewo.Vtsi {
       get { return campaignNames_; }
     }
 
+    /// <summary>Field number for the "all_events" field.</summary>
+    public const int AllEventsFieldNumber = 4;
+    private bool allEvents_;
+    /// <summary>
+    /// Every event, explicitly; equivalent to an empty &lt;code>events&lt;/code> and present for symmetry with
+    /// &lt;code>VtsiEventSubscription.all_events&lt;/code>. Set together with a non-empty &lt;code>events&lt;/code> is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllEvents {
+      get { return allEvents_; }
+      set {
+        allEvents_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "excluded_events" field.</summary>
+    public const int ExcludedEventsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Ondewo.Vtsi.VtsiEvent> _repeated_excludedEvents_codec
+        = pb::FieldCodec.ForEnum(42, x => (int) x, x => (global::Ondewo.Vtsi.VtsiEvent) x);
+    private readonly pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> excludedEvents_ = new pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent>();
+    /// <summary>
+    /// Events NOT to select, subtracted from the selection of &lt;code>events&lt;/code> / &lt;code>all_events&lt;/code>.
+    /// Same semantics and limits as &lt;code>VtsiEventSubscription.excluded_events&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.Vtsi.VtsiEvent> ExcludedEvents {
+      get { return excludedEvents_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3412,6 +3765,8 @@ namespace Ondewo.Vtsi {
       if(!events_.Equals(other.events_)) return false;
       if(!resourceNamePrefixes_.Equals(other.resourceNamePrefixes_)) return false;
       if(!campaignNames_.Equals(other.campaignNames_)) return false;
+      if (AllEvents != other.AllEvents) return false;
+      if(!excludedEvents_.Equals(other.excludedEvents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3422,6 +3777,8 @@ namespace Ondewo.Vtsi {
       hash ^= events_.GetHashCode();
       hash ^= resourceNamePrefixes_.GetHashCode();
       hash ^= campaignNames_.GetHashCode();
+      if (AllEvents != false) hash ^= AllEvents.GetHashCode();
+      hash ^= excludedEvents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3443,6 +3800,11 @@ namespace Ondewo.Vtsi {
       events_.WriteTo(output, _repeated_events_codec);
       resourceNamePrefixes_.WriteTo(output, _repeated_resourceNamePrefixes_codec);
       campaignNames_.WriteTo(output, _repeated_campaignNames_codec);
+      if (AllEvents != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AllEvents);
+      }
+      excludedEvents_.WriteTo(output, _repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3456,6 +3818,11 @@ namespace Ondewo.Vtsi {
       events_.WriteTo(ref output, _repeated_events_codec);
       resourceNamePrefixes_.WriteTo(ref output, _repeated_resourceNamePrefixes_codec);
       campaignNames_.WriteTo(ref output, _repeated_campaignNames_codec);
+      if (AllEvents != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(AllEvents);
+      }
+      excludedEvents_.WriteTo(ref output, _repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3469,6 +3836,10 @@ namespace Ondewo.Vtsi {
       size += events_.CalculateSize(_repeated_events_codec);
       size += resourceNamePrefixes_.CalculateSize(_repeated_resourceNamePrefixes_codec);
       size += campaignNames_.CalculateSize(_repeated_campaignNames_codec);
+      if (AllEvents != false) {
+        size += 1 + 1;
+      }
+      size += excludedEvents_.CalculateSize(_repeated_excludedEvents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3484,6 +3855,10 @@ namespace Ondewo.Vtsi {
       events_.Add(other.events_);
       resourceNamePrefixes_.Add(other.resourceNamePrefixes_);
       campaignNames_.Add(other.campaignNames_);
+      if (other.AllEvents != false) {
+        AllEvents = other.AllEvents;
+      }
+      excludedEvents_.Add(other.excludedEvents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3516,6 +3891,15 @@ namespace Ondewo.Vtsi {
             campaignNames_.AddEntriesFrom(input, _repeated_campaignNames_codec);
             break;
           }
+          case 32: {
+            AllEvents = input.ReadBool();
+            break;
+          }
+          case 42:
+          case 40: {
+            excludedEvents_.AddEntriesFrom(input, _repeated_excludedEvents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3546,6 +3930,15 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             campaignNames_.AddEntriesFrom(ref input, _repeated_campaignNames_codec);
+            break;
+          }
+          case 32: {
+            AllEvents = input.ReadBool();
+            break;
+          }
+          case 42:
+          case 40: {
+            excludedEvents_.AddEntriesFrom(ref input, _repeated_excludedEvents_codec);
             break;
           }
         }
@@ -3595,6 +3988,7 @@ namespace Ondewo.Vtsi {
     public CreateVtsiEventSubscriptionRequest(CreateVtsiEventSubscriptionRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       eventSubscription_ = other.eventSubscription_ != null ? other.eventSubscription_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3609,6 +4003,8 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with
+    /// &lt;code>NOT_FOUND&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3623,7 +4019,8 @@ namespace Ondewo.Vtsi {
     public const int EventSubscriptionFieldNumber = 2;
     private global::Ondewo.Vtsi.VtsiEventSubscription eventSubscription_;
     /// <summary>
-    /// The subscription to create.
+    /// The subscription to create. Output-only fields (&lt;code>name&lt;/code>, &lt;code>vtsi_project_name&lt;/code>,
+    /// &lt;code>created_*&lt;/code>, &lt;code>modified_*&lt;/code>) must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3631,6 +4028,25 @@ namespace Ondewo.Vtsi {
       get { return eventSubscription_; }
       set {
         eventSubscription_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>VtsiEventSubscription&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>VtsiEventSubscription&lt;/code> (no prefix), e.g. &lt;code>name&lt;/code>, &lt;code>events&lt;/code>. Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -3651,6 +4067,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(EventSubscription, other.EventSubscription)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3660,6 +4077,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (eventSubscription_ != null) hash ^= EventSubscription.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3686,6 +4104,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(EventSubscription);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3704,6 +4126,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(EventSubscription);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3719,6 +4145,9 @@ namespace Ondewo.Vtsi {
       }
       if (eventSubscription_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EventSubscription);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3740,6 +4169,12 @@ namespace Ondewo.Vtsi {
           EventSubscription = new global::Ondewo.Vtsi.VtsiEventSubscription();
         }
         EventSubscription.MergeFrom(other.EventSubscription);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3771,6 +4206,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(EventSubscription);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -3799,6 +4241,13 @@ namespace Ondewo.Vtsi {
               EventSubscription = new global::Ondewo.Vtsi.VtsiEventSubscription();
             }
             input.ReadMessage(EventSubscription);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -3847,6 +4296,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetVtsiEventSubscriptionRequest(GetVtsiEventSubscriptionRequest other) : this() {
       name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3861,6 +4311,8 @@ namespace Ondewo.Vtsi {
     private string name_ = "";
     /// <summary>
     /// Resource name of the subscription.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/event_subscriptions/&amp;lt;subscription_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3868,6 +4320,25 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>VtsiEventSubscription&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>VtsiEventSubscription&lt;/code> (no prefix), e.g. &lt;code>events&lt;/code>, &lt;code>webhook_names&lt;/code>. Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -3887,6 +4358,7 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3895,6 +4367,7 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3917,6 +4390,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3931,6 +4408,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3943,6 +4424,9 @@ namespace Ondewo.Vtsi {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3958,6 +4442,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3982,6 +4472,13 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -4003,6 +4500,13 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -4052,6 +4556,7 @@ namespace Ondewo.Vtsi {
     public UpdateVtsiEventSubscriptionRequest(UpdateVtsiEventSubscriptionRequest other) : this() {
       eventSubscription_ = other.eventSubscription_ != null ? other.eventSubscription_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4065,7 +4570,9 @@ namespace Ondewo.Vtsi {
     public const int EventSubscriptionFieldNumber = 1;
     private global::Ondewo.Vtsi.VtsiEventSubscription eventSubscription_;
     /// <summary>
-    /// The subscription, identified by &lt;code>event_subscription.name&lt;/code>.
+    /// The subscription, identified by &lt;code>event_subscription.name&lt;/code>
+    /// (&lt;code>projects/&amp;lt;project_uuid&amp;gt;/event_subscriptions/&amp;lt;subscription_uuid&amp;gt;&lt;/code>; malformed is
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>), carrying the new values of the fields named in &lt;code>update_mask&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4084,7 +4591,7 @@ namespace Ondewo.Vtsi {
     /// &lt;code>all_events&lt;/code>, &lt;code>resource_name_prefixes&lt;/code>, &lt;code>campaign_names&lt;/code>,
     /// &lt;code>webhook_names&lt;/code>, &lt;code>disabled&lt;/code>. An empty mask or another path is rejected
     /// with &lt;code>INVALID_ARGUMENT&lt;/code>. A path in the mask writes the sent value, including
-    /// &lt;code>false&lt;/code> and empty lists.
+    /// &lt;code>false&lt;/code> and empty lists. &lt;code>excluded_events&lt;/code> is updatable too.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4092,6 +4599,25 @@ namespace Ondewo.Vtsi {
       get { return updateMask_; }
       set {
         updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>VtsiEventSubscription&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>VtsiEventSubscription&lt;/code> (no prefix). Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -4112,6 +4638,7 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(EventSubscription, other.EventSubscription)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4121,6 +4648,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (eventSubscription_ != null) hash ^= EventSubscription.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4147,6 +4675,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4165,6 +4697,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4180,6 +4716,9 @@ namespace Ondewo.Vtsi {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4204,6 +4743,12 @@ namespace Ondewo.Vtsi {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4238,6 +4783,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -4269,6 +4821,13 @@ namespace Ondewo.Vtsi {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -4317,6 +4876,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteVtsiEventSubscriptionRequest(DeleteVtsiEventSubscriptionRequest other) : this() {
       name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4331,6 +4891,8 @@ namespace Ondewo.Vtsi {
     private string name_ = "";
     /// <summary>
     /// Resource name of the subscription.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/event_subscriptions/&amp;lt;subscription_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4338,6 +4900,24 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>DeleteVtsiEventSubscriptionResponse&lt;/code> field paths to populate
+    /// (as &lt;code>DeleteCampaignRequest.field_mask&lt;/code>). &lt;code>name&lt;/code> is always populated. Unset or empty
+    /// returns every field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before
+    /// anything is deleted. It shapes only the response: the subscription is deleted regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -4357,6 +4937,7 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4365,6 +4946,7 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4387,6 +4969,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4401,6 +4987,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4413,6 +5003,9 @@ namespace Ondewo.Vtsi {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4428,6 +5021,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4452,6 +5051,13 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -4473,6 +5079,13 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -4727,6 +5340,7 @@ namespace Ondewo.Vtsi {
       vtsiProjectName_ = other.vtsiProjectName_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4741,6 +5355,8 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with
+    /// &lt;code>NOT_FOUND&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4795,6 +5411,28 @@ namespace Ondewo.Vtsi {
       pageToken_ = null;
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned
+    /// &lt;code>VtsiEventSubscription&lt;/code>, relative to the &lt;code>VtsiEventSubscription&lt;/code> message (no
+    /// &lt;code>event_subscriptions.&lt;/code> prefix), e.g. &lt;code>display_name&lt;/code>, &lt;code>events&lt;/code>.
+    /// Nested paths through singular message fields are allowed; a path below a repeated or map field is
+    /// not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Applied after the server&amp;apos;s redaction, so
+    /// it can only narrow the response and never populates a field that was left empty. Not part of the
+    /// paging contract: a &lt;code>page_token&lt;/code> stays valid with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4813,6 +5451,7 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4823,6 +5462,7 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4853,6 +5493,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4875,6 +5519,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4893,6 +5541,9 @@ namespace Ondewo.Vtsi {
       }
       if (HasPageToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4914,6 +5565,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasPageToken) {
         PageToken = other.PageToken;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4946,6 +5603,13 @@ namespace Ondewo.Vtsi {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -4975,6 +5639,13 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5257,6 +5928,7 @@ namespace Ondewo.Vtsi {
     public CreateWebhookRequest(CreateWebhookRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       webhook_ = other.webhook_ != null ? other.webhook_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5271,6 +5943,8 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with
+    /// &lt;code>NOT_FOUND&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5285,7 +5959,8 @@ namespace Ondewo.Vtsi {
     public const int WebhookFieldNumber = 2;
     private global::Ondewo.Vtsi.Webhook webhook_;
     /// <summary>
-    /// The webhook to create.
+    /// The webhook to create. Output-only fields (&lt;code>name&lt;/code>, &lt;code>vtsi_project_name&lt;/code>,
+    /// &lt;code>delivery_statistics&lt;/code>, &lt;code>created_*&lt;/code>, &lt;code>modified_*&lt;/code>) must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5293,6 +5968,25 @@ namespace Ondewo.Vtsi {
       get { return webhook_; }
       set {
         webhook_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Webhook&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>Webhook&lt;/code> (no prefix), e.g. &lt;code>name&lt;/code>, &lt;code>url&lt;/code>. Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -5313,6 +6007,7 @@ namespace Ondewo.Vtsi {
       }
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (!object.Equals(Webhook, other.Webhook)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5322,6 +6017,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (webhook_ != null) hash ^= Webhook.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5348,6 +6044,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Webhook);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5366,6 +6066,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(Webhook);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5381,6 +6085,9 @@ namespace Ondewo.Vtsi {
       }
       if (webhook_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Webhook);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5402,6 +6109,12 @@ namespace Ondewo.Vtsi {
           Webhook = new global::Ondewo.Vtsi.Webhook();
         }
         Webhook.MergeFrom(other.Webhook);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5433,6 +6146,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(Webhook);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -5461,6 +6181,13 @@ namespace Ondewo.Vtsi {
               Webhook = new global::Ondewo.Vtsi.Webhook();
             }
             input.ReadMessage(Webhook);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5509,6 +6236,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWebhookRequest(GetWebhookRequest other) : this() {
       name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5523,6 +6251,8 @@ namespace Ondewo.Vtsi {
     private string name_ = "";
     /// <summary>
     /// Resource name of the webhook.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5530,6 +6260,25 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Webhook&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>Webhook&lt;/code> (no prefix), e.g. &lt;code>url&lt;/code>, &lt;code>delivery_statistics&lt;/code>. Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -5549,6 +6298,7 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5557,6 +6307,7 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5579,6 +6330,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5593,6 +6348,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5605,6 +6364,9 @@ namespace Ondewo.Vtsi {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5620,6 +6382,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5644,6 +6412,13 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -5665,6 +6440,13 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5714,6 +6496,7 @@ namespace Ondewo.Vtsi {
     public UpdateWebhookRequest(UpdateWebhookRequest other) : this() {
       webhook_ = other.webhook_ != null ? other.webhook_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5727,7 +6510,9 @@ namespace Ondewo.Vtsi {
     public const int WebhookFieldNumber = 1;
     private global::Ondewo.Vtsi.Webhook webhook_;
     /// <summary>
-    /// The webhook, identified by &lt;code>webhook.name&lt;/code>.
+    /// The webhook, identified by &lt;code>webhook.name&lt;/code>
+    /// (&lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>; malformed is
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>), carrying the new values of the fields named in &lt;code>update_mask&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5749,7 +6534,8 @@ namespace Ondewo.Vtsi {
     /// &lt;code>false&lt;/code>; an unset &lt;code>timeout&lt;/code> writes the server default. When
     /// &lt;code>url&lt;/code> moves to another origin and the webhook has stored headers,
     /// &lt;code>custom_headers&lt;/code> must be in the mask with real values (see
-    /// &lt;code>UpdateWebhook&lt;/code>).
+    /// &lt;code>UpdateWebhook&lt;/code>). &lt;code>signing_secret&lt;/code> is updatable too: a new value rotates it, an
+    /// empty one removes it, &lt;code>********&lt;/code> keeps it (see &lt;code>Webhook.signing_secret&lt;/code>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5757,6 +6543,25 @@ namespace Ondewo.Vtsi {
       get { return updateMask_; }
       set {
         updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>Webhook&lt;/code> field paths to populate, relative to the returned
+    /// &lt;code>Webhook&lt;/code> (no prefix). Nested paths through singular message fields are allowed; a path
+    /// below a repeated or map field is not. &lt;code>name&lt;/code> is always populated. Unset or empty returns every
+    /// field. An unknown path is rejected with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is
+    /// written. Applied after the masking of secrets, so it never reveals one. It shapes only the response.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -5777,6 +6582,7 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(Webhook, other.Webhook)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5786,6 +6592,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (webhook_ != null) hash ^= Webhook.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5812,6 +6619,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5830,6 +6641,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(UpdateMask);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5845,6 +6660,9 @@ namespace Ondewo.Vtsi {
       }
       if (updateMask_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5869,6 +6687,12 @@ namespace Ondewo.Vtsi {
           UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
         }
         UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5903,6 +6727,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(UpdateMask);
             break;
           }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -5934,6 +6765,13 @@ namespace Ondewo.Vtsi {
               UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
             }
             input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -5982,6 +6820,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWebhookRequest(DeleteWebhookRequest other) : this() {
       name_ = other.name_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5996,6 +6835,8 @@ namespace Ondewo.Vtsi {
     private string name_ = "";
     /// <summary>
     /// Resource name of the webhook.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6003,6 +6844,25 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the &lt;code>DeleteWebhookResponse&lt;/code> field paths to populate, e.g.
+    /// &lt;code>detached_subscription_count&lt;/code> (as &lt;code>DeleteCampaignRequest.field_mask&lt;/code>).
+    /// &lt;code>name&lt;/code> is always populated. Unset or empty returns every field. An unknown path is rejected
+    /// with &lt;code>INVALID_ARGUMENT&lt;/code> naming it, before anything is deleted. It shapes only the response:
+    /// the webhook is deleted regardless.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
       }
     }
 
@@ -6022,6 +6882,7 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6030,6 +6891,7 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6052,6 +6914,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6066,6 +6932,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6078,6 +6948,9 @@ namespace Ondewo.Vtsi {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6093,6 +6966,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6117,6 +6996,13 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -6138,6 +7024,13 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -6432,6 +7325,7 @@ namespace Ondewo.Vtsi {
       vtsiProjectName_ = other.vtsiProjectName_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
+      fieldMask_ = other.fieldMask_ != null ? other.fieldMask_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6446,6 +7340,8 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with
+    /// &lt;code>NOT_FOUND&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6500,6 +7396,29 @@ namespace Ondewo.Vtsi {
       pageToken_ = null;
     }
 
+    /// <summary>Field number for the "field_mask" field.</summary>
+    public const int FieldMaskFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask fieldMask_;
+    /// <summary>
+    /// Optional. Partial response: the field paths to populate in every returned &lt;code>Webhook&lt;/code>,
+    /// relative to the &lt;code>Webhook&lt;/code> message (no &lt;code>webhooks.&lt;/code> prefix), e.g.
+    /// &lt;code>display_name&lt;/code>, &lt;code>url&lt;/code>, &lt;code>delivery_statistics&lt;/code>. Nested paths through
+    /// singular message fields are allowed; a path below a repeated or map field is not. &lt;code>name&lt;/code>
+    /// is always populated. Unset or empty returns every field. An unknown path is rejected with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Applied after the masking of the custom header values (a
+    /// returned value stays &lt;code>********&lt;/code>), so it can only narrow the response and never populates a
+    /// field that was left empty. Not part of the paging contract: a &lt;code>page_token&lt;/code> stays valid
+    /// with another mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask FieldMask {
+      get { return fieldMask_; }
+      set {
+        fieldMask_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6518,6 +7437,7 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName != other.VtsiProjectName) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
+      if (!object.Equals(FieldMask, other.FieldMask)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6528,6 +7448,7 @@ namespace Ondewo.Vtsi {
       if (VtsiProjectName.Length != 0) hash ^= VtsiProjectName.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (HasPageToken) hash ^= PageToken.GetHashCode();
+      if (fieldMask_ != null) hash ^= FieldMask.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6558,6 +7479,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6580,6 +7505,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
+      if (fieldMask_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(FieldMask);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6598,6 +7527,9 @@ namespace Ondewo.Vtsi {
       }
       if (HasPageToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (fieldMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FieldMask);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6619,6 +7551,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasPageToken) {
         PageToken = other.PageToken;
+      }
+      if (other.fieldMask_ != null) {
+        if (fieldMask_ == null) {
+          FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        FieldMask.MergeFrom(other.FieldMask);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6651,6 +7589,13 @@ namespace Ondewo.Vtsi {
             PageToken = input.ReadString();
             break;
           }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
+            break;
+          }
         }
       }
     #endif
@@ -6680,6 +7625,13 @@ namespace Ondewo.Vtsi {
           }
           case 26: {
             PageToken = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (fieldMask_ == null) {
+              FieldMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(FieldMask);
             break;
           }
         }
@@ -6961,6 +7913,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TestWebhookRequest(TestWebhookRequest other) : this() {
       name_ = other.name_;
+      sampleEvent_ = other.sampleEvent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6975,6 +7928,8 @@ namespace Ondewo.Vtsi {
     private string name_ = "";
     /// <summary>
     /// Resource name of the webhook.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6982,6 +7937,34 @@ namespace Ondewo.Vtsi {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sample_event" field.</summary>
+    public const int SampleEventFieldNumber = 2;
+    private global::Ondewo.Vtsi.VtsiEvent sampleEvent_ = global::Ondewo.Vtsi.VtsiEvent.Unspecified;
+    /// <summary>
+    /// Optional. Send an event shaped like this real event instead of &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code>, so
+    /// a receiver can be tested against the payload it will get: &lt;code>event&lt;/code> is this value, the header
+    /// &lt;code>X-Ondewo-Vtsi-Event&lt;/code> its name, &lt;code>event_id&lt;/code> a fresh uuid,
+    /// &lt;code>vtsi_project_name&lt;/code> the webhook&amp;apos;s project, &lt;code>event_time&lt;/code> now, and every field and
+    /// attribute key the event carries (see its &lt;code>VtsiEvent&lt;/code> value) is filled with a placeholder of the
+    /// documented format: resource names use the all-zero uuid
+    /// &lt;code>00000000-0000-0000-0000-000000000000&lt;/code> (e.g.
+    /// &lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/00000000-0000-0000-0000-000000000000/calls/00000000-0000-0000-0000-000000000000&lt;/code>),
+    /// a phone number is &lt;code>+10000000000&lt;/code>, counts are &lt;code>0&lt;/code>, times are now. It always carries
+    /// the attribute &lt;code>test&lt;/code> = &lt;code>true&lt;/code>, &lt;code>description&lt;/code> &lt;code>webhook test&lt;/code>
+    /// and the header &lt;code>X-Ondewo-Vtsi-Test: true&lt;/code>, so a receiver can tell it from a real event and
+    /// must not act on it. No resource is read or changed. &lt;code>VTSI_EVENT_UNSPECIFIED&lt;/code> (the default)
+    /// sends &lt;code>VTSI_EVENT_WEBHOOK_TEST&lt;/code> as before; a reserved value or one the server does not know is
+    /// rejected with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.VtsiEvent SampleEvent {
+      get { return sampleEvent_; }
+      set {
+        sampleEvent_ = value;
       }
     }
 
@@ -7001,6 +7984,7 @@ namespace Ondewo.Vtsi {
         return true;
       }
       if (Name != other.Name) return false;
+      if (SampleEvent != other.SampleEvent) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7009,6 +7993,7 @@ namespace Ondewo.Vtsi {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SampleEvent != global::Ondewo.Vtsi.VtsiEvent.Unspecified) hash ^= SampleEvent.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7031,6 +8016,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SampleEvent != global::Ondewo.Vtsi.VtsiEvent.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SampleEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7045,6 +8034,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SampleEvent != global::Ondewo.Vtsi.VtsiEvent.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SampleEvent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7057,6 +8050,9 @@ namespace Ondewo.Vtsi {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SampleEvent != global::Ondewo.Vtsi.VtsiEvent.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SampleEvent);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7072,6 +8068,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.SampleEvent != global::Ondewo.Vtsi.VtsiEvent.Unspecified) {
+        SampleEvent = other.SampleEvent;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7096,6 +8095,10 @@ namespace Ondewo.Vtsi {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            SampleEvent = (global::Ondewo.Vtsi.VtsiEvent) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -7117,6 +8120,10 @@ namespace Ondewo.Vtsi {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            SampleEvent = (global::Ondewo.Vtsi.VtsiEvent) input.ReadEnum();
             break;
           }
         }
@@ -7539,6 +8546,7 @@ namespace Ondewo.Vtsi {
     public SubscribeVtsiEventsRequest(SubscribeVtsiEventsRequest other) : this() {
       vtsiProjectName_ = other.vtsiProjectName_;
       resumeToken_ = other.resumeToken_;
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       switch (other.SelectorCase) {
         case SelectorOneofCase.EventSubscriptionName:
           EventSubscriptionName = other.EventSubscriptionName;
@@ -7562,6 +8570,8 @@ namespace Ondewo.Vtsi {
     private string vtsiProjectName_ = "";
     /// <summary>
     /// VTSI project. The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/project&lt;/code>&lt;/pre>
+    /// Empty or malformed is rejected with &lt;code>INVALID_ARGUMENT&lt;/code>, an unknown project with
+    /// &lt;code>NOT_FOUND&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7575,8 +8585,13 @@ namespace Ondewo.Vtsi {
     /// <summary>Field number for the "event_subscription_name" field.</summary>
     public const int EventSubscriptionNameFieldNumber = 2;
     /// <summary>
-    /// Use the events and resource prefixes of this subscription (its webhooks are irrelevant
-    /// here). The format is:
+    /// Select events exactly as this subscription does: its &lt;code>events&lt;/code> or
+    /// &lt;code>all_events&lt;/code>, minus its &lt;code>excluded_events&lt;/code>, narrowed by its
+    /// &lt;code>resource_name_prefixes&lt;/code> and &lt;code>campaign_names&lt;/code> (its &lt;code>webhook_names&lt;/code>
+    /// are irrelevant here). Read when the stream opens and re-read within a few seconds of an update, so an
+    /// update applies to the open stream; disabling or deleting the subscription ends the stream. It must
+    /// be a subscription of &lt;code>vtsi_project_name&lt;/code> (&lt;code>INVALID_ARGUMENT&lt;/code> otherwise) and
+    /// enabled (&lt;code>FAILED_PRECONDITION&lt;/code> otherwise). The format is:
     /// &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/event_subscriptions/&amp;lt;subscription_uuid&amp;gt;&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7625,7 +8640,8 @@ namespace Ondewo.Vtsi {
     private string resumeToken_;
     /// <summary>
     /// Optional. The &lt;code>resume_token&lt;/code> of a previous response: continue after it.
-    /// Unset starts with events that happen from now on.
+    /// Unset starts with events that happen from now on (or at &lt;code>start_time&lt;/code>). Mutually exclusive
+    /// with &lt;code>start_time&lt;/code> (both set is &lt;code>INVALID_ARGUMENT&lt;/code>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7646,6 +8662,29 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearResumeToken() {
       resumeToken_ = null;
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Optional. Replay from the server&amp;apos;s event journal: the stream first delivers the journaled events of
+    /// the project that occurred at or after this time and match the selector, oldest first (journal order),
+    /// then continues live without a gap or a duplicate at the seam. Mutually exclusive with
+    /// &lt;code>resume_token&lt;/code>: use &lt;code>start_time&lt;/code> for a first connection or after losing the token,
+    /// the token for every reconnect. Older than the journal retention
+    /// (&lt;code>ONDEWO_VTSI_EVENT_JOURNAL_RETENTION_S&lt;/code>, 24 h by default) is &lt;code>OUT_OF_RANGE&lt;/code>; later
+    /// than the server&amp;apos;s clock is &lt;code>INVALID_ARGUMENT&lt;/code>. The journal holds only events of periods in
+    /// which the project had an open stream or an enabled subscription, so the replay can have gaps it cannot
+    /// report; reconcile with the status RPCs when completeness matters. Unset (the default) starts live.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
     }
 
     private object selector_;
@@ -7688,6 +8727,7 @@ namespace Ondewo.Vtsi {
       if (EventSubscriptionName != other.EventSubscriptionName) return false;
       if (!object.Equals(Filter, other.Filter)) return false;
       if (ResumeToken != other.ResumeToken) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
       if (SelectorCase != other.SelectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -7700,6 +8740,7 @@ namespace Ondewo.Vtsi {
       if (HasEventSubscriptionName) hash ^= EventSubscriptionName.GetHashCode();
       if (selectorCase_ == SelectorOneofCase.Filter) hash ^= Filter.GetHashCode();
       if (HasResumeToken) hash ^= ResumeToken.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
       hash ^= (int) selectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -7735,6 +8776,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(ResumeToken);
       }
+      if (startTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7761,6 +8806,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(ResumeToken);
       }
+      if (startTime_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(StartTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7783,6 +8832,9 @@ namespace Ondewo.Vtsi {
       if (HasResumeToken) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ResumeToken);
       }
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -7800,6 +8852,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasResumeToken) {
         ResumeToken = other.ResumeToken;
+      }
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
       }
       switch (other.SelectorCase) {
         case SelectorOneofCase.EventSubscriptionName:
@@ -7853,6 +8911,13 @@ namespace Ondewo.Vtsi {
             ResumeToken = input.ReadString();
             break;
           }
+          case 42: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
         }
       }
     #endif
@@ -7891,6 +8956,13 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             ResumeToken = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
             break;
           }
         }
@@ -7942,6 +9014,7 @@ namespace Ondewo.Vtsi {
       resumeToken_ = other.resumeToken_;
       droppedEventCount_ = other.droppedEventCount_;
       endReason_ = other.endReason_;
+      endReasonType_ = other.endReasonType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8002,7 +9075,8 @@ namespace Ondewo.Vtsi {
     public const int EndReasonFieldNumber = 4;
     private string endReason_ = "";
     /// <summary>
-    /// Set on the last message when the server ended the stream. Empty otherwise.
+    /// Set on the last message when the server ended the stream. Empty otherwise. Human-readable; branch on
+    /// &lt;code>end_reason_type&lt;/code> instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8010,6 +9084,26 @@ namespace Ondewo.Vtsi {
       get { return endReason_; }
       set {
         endReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "end_reason_type" field.</summary>
+    public const int EndReasonTypeFieldNumber = 5;
+    private global::Ondewo.Vtsi.StreamEndReason endReasonType_ = global::Ondewo.Vtsi.StreamEndReason.Unspecified;
+    /// <summary>
+    /// Set on the last message when the server ended the stream, next to &lt;code>end_reason&lt;/code>: one of
+    /// &lt;code>STREAM_END_REASON_MAX_DURATION&lt;/code>, &lt;code>STREAM_END_REASON_CLIENT_TOO_SLOW&lt;/code>,
+    /// &lt;code>STREAM_END_REASON_SUBSCRIPTION_DELETED&lt;/code>, &lt;code>STREAM_END_REASON_SUBSCRIPTION_DISABLED&lt;/code>,
+    /// &lt;code>STREAM_END_REASON_PROJECT_DELETED&lt;/code>, &lt;code>STREAM_END_REASON_SERVER_SHUTDOWN&lt;/code>.
+    /// &lt;code>STREAM_END_REASON_UNSPECIFIED&lt;/code> on every other message (and on the last message of a server
+    /// that predates this field).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.StreamEndReason EndReasonType {
+      get { return endReasonType_; }
+      set {
+        endReasonType_ = value;
       }
     }
 
@@ -8032,6 +9126,7 @@ namespace Ondewo.Vtsi {
       if (ResumeToken != other.ResumeToken) return false;
       if (DroppedEventCount != other.DroppedEventCount) return false;
       if (EndReason != other.EndReason) return false;
+      if (EndReasonType != other.EndReasonType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8043,6 +9138,7 @@ namespace Ondewo.Vtsi {
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (DroppedEventCount != 0L) hash ^= DroppedEventCount.GetHashCode();
       if (EndReason.Length != 0) hash ^= EndReason.GetHashCode();
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) hash ^= EndReasonType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8074,6 +9170,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(EndReason);
       }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) EndReasonType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8097,6 +9197,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(EndReason);
       }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) EndReasonType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8116,6 +9220,9 @@ namespace Ondewo.Vtsi {
       }
       if (EndReason.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EndReason);
+      }
+      if (EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EndReasonType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8138,6 +9245,9 @@ namespace Ondewo.Vtsi {
       }
       if (other.EndReason.Length != 0) {
         EndReason = other.EndReason;
+      }
+      if (other.EndReasonType != global::Ondewo.Vtsi.StreamEndReason.Unspecified) {
+        EndReasonType = other.EndReasonType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -8174,6 +9284,10 @@ namespace Ondewo.Vtsi {
             EndReason = input.ReadString();
             break;
           }
+          case 40: {
+            EndReasonType = (global::Ondewo.Vtsi.StreamEndReason) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -8207,6 +9321,740 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             EndReason = input.ReadString();
+            break;
+          }
+          case 40: {
+            EndReasonType = (global::Ondewo.Vtsi.StreamEndReason) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The request message for &lt;code>Events.RedeliverWebhookEvents&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RedeliverWebhookEventsRequest : pb::IMessage<RedeliverWebhookEventsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RedeliverWebhookEventsRequest> _parser = new pb::MessageParser<RedeliverWebhookEventsRequest>(() => new RedeliverWebhookEventsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RedeliverWebhookEventsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.EventsReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsRequest(RedeliverWebhookEventsRequest other) : this() {
+      webhookName_ = other.webhookName_;
+      eventIds_ = other.eventIds_.Clone();
+      startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+      endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      filter_ = other.filter_ != null ? other.filter_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsRequest Clone() {
+      return new RedeliverWebhookEventsRequest(this);
+    }
+
+    /// <summary>Field number for the "webhook_name" field.</summary>
+    public const int WebhookNameFieldNumber = 1;
+    private string webhookName_ = "";
+    /// <summary>
+    /// Required. Resource name of the webhook to send the events to; it must be enabled.
+    /// The format is: &lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/webhooks/&amp;lt;webhook_uuid&amp;gt;&lt;/code>&lt;/pre>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WebhookName {
+      get { return webhookName_; }
+      set {
+        webhookName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_ids" field.</summary>
+    public const int EventIdsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_eventIds_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> eventIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The events to send again, by &lt;code>event_id&lt;/code> (uuid), at most 1000, duplicates ignored. Sent in
+    /// journal order (oldest first), whatever the webhook&amp;apos;s subscriptions select (naming an event is the
+    /// selection) but only events of the webhook&amp;apos;s project: an id that the journal does not hold for this
+    /// project, whether expired, never journaled, unknown or of another project, is counted in
+    /// &lt;code>not_in_journal_count&lt;/code> and sent nowhere. Exactly one of &lt;code>event_ids&lt;/code> and
+    /// &lt;code>start_time&lt;/code> must be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> EventIds {
+      get { return eventIds_; }
+    }
+
+    /// <summary>Field number for the "start_time" field.</summary>
+    public const int StartTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+    /// <summary>
+    /// Start of a time window, inclusive, on the event&amp;apos;s &lt;code>event_time&lt;/code>: send the journaled events of
+    /// the project in the window that the webhook&amp;apos;s ENABLED event subscriptions select now (as for a live
+    /// event), narrowed by &lt;code>filter&lt;/code>, oldest first. Older than the journal retention is
+    /// &lt;code>OUT_OF_RANGE&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+      get { return startTime_; }
+      set {
+        startTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_time" field.</summary>
+    public const int EndTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+    /// <summary>
+    /// End of the window, exclusive. Unset means now. Must be after &lt;code>start_time&lt;/code> and is only valid
+    /// with it.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+      get { return endTime_; }
+      set {
+        endTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 5;
+    private global::Ondewo.Vtsi.VtsiEventFilter filter_;
+    /// <summary>
+    /// Optional. Narrows the selection further (AND), with the semantics of the inline filter of
+    /// &lt;code>SubscribeVtsiEventsRequest&lt;/code>; applied to &lt;code>event_ids&lt;/code> too.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.VtsiEventFilter Filter {
+      get { return filter_; }
+      set {
+        filter_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RedeliverWebhookEventsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RedeliverWebhookEventsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WebhookName != other.WebhookName) return false;
+      if(!eventIds_.Equals(other.eventIds_)) return false;
+      if (!object.Equals(StartTime, other.StartTime)) return false;
+      if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (!object.Equals(Filter, other.Filter)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WebhookName.Length != 0) hash ^= WebhookName.GetHashCode();
+      hash ^= eventIds_.GetHashCode();
+      if (startTime_ != null) hash ^= StartTime.GetHashCode();
+      if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (filter_ != null) hash ^= Filter.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WebhookName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WebhookName);
+      }
+      eventIds_.WriteTo(output, _repeated_eventIds_codec);
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WebhookName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(WebhookName);
+      }
+      eventIds_.WriteTo(ref output, _repeated_eventIds_codec);
+      if (startTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(StartTime);
+      }
+      if (endTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(EndTime);
+      }
+      if (filter_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Filter);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (WebhookName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WebhookName);
+      }
+      size += eventIds_.CalculateSize(_repeated_eventIds_codec);
+      if (startTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+      }
+      if (endTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (filter_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filter);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RedeliverWebhookEventsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WebhookName.Length != 0) {
+        WebhookName = other.WebhookName;
+      }
+      eventIds_.Add(other.eventIds_);
+      if (other.startTime_ != null) {
+        if (startTime_ == null) {
+          StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        StartTime.MergeFrom(other.StartTime);
+      }
+      if (other.endTime_ != null) {
+        if (endTime_ == null) {
+          EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.filter_ != null) {
+        if (filter_ == null) {
+          Filter = new global::Ondewo.Vtsi.VtsiEventFilter();
+        }
+        Filter.MergeFrom(other.Filter);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            WebhookName = input.ReadString();
+            break;
+          }
+          case 18: {
+            eventIds_.AddEntriesFrom(input, _repeated_eventIds_codec);
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            if (filter_ == null) {
+              Filter = new global::Ondewo.Vtsi.VtsiEventFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            WebhookName = input.ReadString();
+            break;
+          }
+          case 18: {
+            eventIds_.AddEntriesFrom(ref input, _repeated_eventIds_codec);
+            break;
+          }
+          case 26: {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(StartTime);
+            break;
+          }
+          case 34: {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(EndTime);
+            break;
+          }
+          case 42: {
+            if (filter_ == null) {
+              Filter = new global::Ondewo.Vtsi.VtsiEventFilter();
+            }
+            input.ReadMessage(Filter);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The response message for &lt;code>Events.RedeliverWebhookEvents&lt;/code>.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RedeliverWebhookEventsResponse : pb::IMessage<RedeliverWebhookEventsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RedeliverWebhookEventsResponse> _parser = new pb::MessageParser<RedeliverWebhookEventsResponse>(() => new RedeliverWebhookEventsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RedeliverWebhookEventsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.EventsReflection.Descriptor.MessageTypes[24]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsResponse(RedeliverWebhookEventsResponse other) : this() {
+      enqueuedCount_ = other.enqueuedCount_;
+      notInJournalCount_ = other.notInJournalCount_;
+      notEnqueuedCount_ = other.notEnqueuedCount_;
+      nextStartTime_ = other.nextStartTime_ != null ? other.nextStartTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RedeliverWebhookEventsResponse Clone() {
+      return new RedeliverWebhookEventsResponse(this);
+    }
+
+    /// <summary>Field number for the "enqueued_count" field.</summary>
+    public const int EnqueuedCountFieldNumber = 1;
+    private int enqueuedCount_;
+    /// <summary>
+    /// Events queued for the webhook by this request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int EnqueuedCount {
+      get { return enqueuedCount_; }
+      set {
+        enqueuedCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "not_in_journal_count" field.</summary>
+    public const int NotInJournalCountFieldNumber = 2;
+    private int notInJournalCount_;
+    /// <summary>
+    /// Named &lt;code>event_ids&lt;/code> the journal does not hold for the webhook&amp;apos;s project (expired, never
+    /// journaled, unknown, or of another project). &lt;code>0&lt;/code> for a window.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NotInJournalCount {
+      get { return notInJournalCount_; }
+      set {
+        notInJournalCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "not_enqueued_count" field.</summary>
+    public const int NotEnqueuedCountFieldNumber = 3;
+    private int notEnqueuedCount_;
+    /// <summary>
+    /// Selected events that were NOT queued: beyond the per-request bound of 1000, or because the
+    /// server&amp;apos;s webhook queue (&lt;code>ONDEWO_VTSI_WEBHOOK_MAX_QUEUED_EVENTS_PER_WEBHOOK&lt;/code>, 1000 by
+    /// default) was full. Send them with another request (for a window: from &lt;code>next_start_time&lt;/code>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int NotEnqueuedCount {
+      get { return notEnqueuedCount_; }
+      set {
+        notEnqueuedCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "next_start_time" field.</summary>
+    public const int NextStartTimeFieldNumber = 4;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp nextStartTime_;
+    /// <summary>
+    /// For a window with &lt;code>not_enqueued_count&lt;/code> above 0: the &lt;code>event_time&lt;/code> of the first event
+    /// that was not queued; pass it as the next request&amp;apos;s &lt;code>start_time&lt;/code> (with the same
+    /// &lt;code>end_time&lt;/code>). Events with the same &lt;code>event_time&lt;/code> as the last queued one may then be
+    /// sent twice; receivers de-duplicate by &lt;code>event_id&lt;/code>. Unset otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp NextStartTime {
+      get { return nextStartTime_; }
+      set {
+        nextStartTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RedeliverWebhookEventsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RedeliverWebhookEventsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (EnqueuedCount != other.EnqueuedCount) return false;
+      if (NotInJournalCount != other.NotInJournalCount) return false;
+      if (NotEnqueuedCount != other.NotEnqueuedCount) return false;
+      if (!object.Equals(NextStartTime, other.NextStartTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (EnqueuedCount != 0) hash ^= EnqueuedCount.GetHashCode();
+      if (NotInJournalCount != 0) hash ^= NotInJournalCount.GetHashCode();
+      if (NotEnqueuedCount != 0) hash ^= NotEnqueuedCount.GetHashCode();
+      if (nextStartTime_ != null) hash ^= NextStartTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (EnqueuedCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(EnqueuedCount);
+      }
+      if (NotInJournalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NotInJournalCount);
+      }
+      if (NotEnqueuedCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(NotEnqueuedCount);
+      }
+      if (nextStartTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(NextStartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (EnqueuedCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(EnqueuedCount);
+      }
+      if (NotInJournalCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(NotInJournalCount);
+      }
+      if (NotEnqueuedCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(NotEnqueuedCount);
+      }
+      if (nextStartTime_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(NextStartTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (EnqueuedCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(EnqueuedCount);
+      }
+      if (NotInJournalCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NotInJournalCount);
+      }
+      if (NotEnqueuedCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(NotEnqueuedCount);
+      }
+      if (nextStartTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NextStartTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RedeliverWebhookEventsResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.EnqueuedCount != 0) {
+        EnqueuedCount = other.EnqueuedCount;
+      }
+      if (other.NotInJournalCount != 0) {
+        NotInJournalCount = other.NotInJournalCount;
+      }
+      if (other.NotEnqueuedCount != 0) {
+        NotEnqueuedCount = other.NotEnqueuedCount;
+      }
+      if (other.nextStartTime_ != null) {
+        if (nextStartTime_ == null) {
+          NextStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        NextStartTime.MergeFrom(other.NextStartTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            EnqueuedCount = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            NotInJournalCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            NotEnqueuedCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (nextStartTime_ == null) {
+              NextStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextStartTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            EnqueuedCount = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            NotInJournalCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            NotEnqueuedCount = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            if (nextStartTime_ == null) {
+              NextStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(NextStartTime);
             break;
           }
         }

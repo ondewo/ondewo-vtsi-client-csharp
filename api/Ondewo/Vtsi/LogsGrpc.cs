@@ -25,6 +25,28 @@ using grpc = global::Grpc.Core;
 namespace Ondewo.Vtsi {
   /// <summary>
   /// &lt;p>ONDEWO VTSI API&lt;/p>
+  /// &lt;p>Reads, follows, exports and erases the CONTAINER LOGS VTSI captures from the per-call
+  /// ondewo-sip / ondewo-csi containers of a VTSI project. Entries are served from the VTSI database, not
+  /// from the docker daemon, so the logs of a container that was already removed stay readable until
+  /// retention or &lt;code>DeleteCallLogs&lt;/code> removes them.&lt;/p>
+  /// &lt;p>&lt;b>Secrets are redacted server-side&lt;/b> in every RPC that returns log text
+  /// (&lt;code>StreamCallLogs&lt;/code>, &lt;code>ListCallLogs&lt;/code>, &lt;code>ExportCallLogs&lt;/code>): the
+  /// project&amp;apos;s SIP passwords, the call-control secrets and, unless the operator disabled it
+  /// (&lt;code>ONDEWO_VTSI_LOG_MASK_IDENTIFIERS&lt;/code>, default true), identifiers such as phone numbers. The
+  /// redaction runs when the entry is read, so a redaction rule added later also applies to entries
+  /// captured before it.&lt;/p>
+  /// &lt;p>Errors are reported as gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name,
+  /// filter, cursor, &lt;code>page_token&lt;/code> or &lt;code>field_mask&lt;/code> (each naming the field);
+  /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the
+  /// server already serves its maximum of concurrent streams or exports; &lt;code>UNAVAILABLE&lt;/code> when the
+  /// database cannot be reached.&lt;/p>
+  /// &lt;p>Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller
+  /// without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires
+  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project (&lt;code>PROJECT_EXECUTOR&lt;/code> and
+  /// &lt;code>PROJECT_USER&lt;/code> are refused, because log text can carry conversation content), otherwise
+  /// &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project. A long-running
+  /// &lt;code>StreamCallLogs&lt;/code> or &lt;code>ExportCallLogs&lt;/code> re-checks the caller&amp;apos;s role
+  /// periodically and ends when it was revoked or the credential expired.&lt;/p>
   /// </summary>
   public static partial class Logs
   {
@@ -83,6 +105,10 @@ namespace Ondewo.Vtsi {
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.DeleteCallLogsRequest> __Marshaller_ondewo_vtsi_DeleteCallLogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.DeleteCallLogsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.DeleteCallLogsResponse> __Marshaller_ondewo_vtsi_DeleteCallLogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.DeleteCallLogsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.ExportCallLogsRequest> __Marshaller_ondewo_vtsi_ExportCallLogsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ExportCallLogsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.ExportCallLogsResponse> __Marshaller_ondewo_vtsi_ExportCallLogsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.ExportCallLogsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.StreamCallLogsRequest, global::Ondewo.Vtsi.StreamCallLogsResponse> __Method_StreamCallLogs = new grpc::Method<global::Ondewo.Vtsi.StreamCallLogsRequest, global::Ondewo.Vtsi.StreamCallLogsResponse>(
@@ -124,6 +150,14 @@ namespace Ondewo.Vtsi {
         __Marshaller_ondewo_vtsi_DeleteCallLogsRequest,
         __Marshaller_ondewo_vtsi_DeleteCallLogsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.ExportCallLogsRequest, global::Ondewo.Vtsi.ExportCallLogsResponse> __Method_ExportCallLogs = new grpc::Method<global::Ondewo.Vtsi.ExportCallLogsRequest, global::Ondewo.Vtsi.ExportCallLogsResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "ExportCallLogs",
+        __Marshaller_ondewo_vtsi_ExportCallLogsRequest,
+        __Marshaller_ondewo_vtsi_ExportCallLogsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -142,6 +176,23 @@ namespace Ondewo.Vtsi {
       /// server-side maximum stream duration is reached.&lt;/p>
       /// &lt;p>Entries are served from the VTSI database rather than from the docker daemon, so a
       /// container that has already been removed still streams. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>Limits: at most &lt;code>ONDEWO_VTSI_LOG_STREAM_MAX_DURATION_S&lt;/code> (default 3600) seconds per
+      /// stream, after which the server sends a final message with &lt;code>end_reason_code =
+      /// LOG_STREAM_END_REASON_MAX_DURATION&lt;/code> and a &lt;code>resume_token&lt;/code> to reconnect with; at most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_STREAMS&lt;/code> (default 16) concurrent streams per server,
+      /// beyond which a new stream is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. New entries are polled every
+      /// &lt;code>ONDEWO_VTSI_LOG_STREAM_POLL_INTERVAL_S&lt;/code> (default 0.5) seconds. The server sends NO
+      /// keep-alive message: a quiet container sends nothing, so a client must not treat silence as a dead
+      /// stream (use HTTP/2 keep-alive pings to detect a dead connection).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a filter
+      /// carrying &lt;code>start_time&lt;/code> or &lt;code>end_time&lt;/code>, an &lt;code>after_seq&lt;/code> with a filter
+      /// that does not resolve to exactly one log stream, or a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. When the
+      /// caller&amp;apos;s role is revoked or its credential expires during the stream, the server sends a final
+      /// message (&lt;code>LOG_STREAM_END_REASON_PERMISSION_REVOKED&lt;/code> /
+      /// &lt;code>LOG_STREAM_END_REASON_CREDENTIALS_EXPIRED&lt;/code>, with a &lt;code>resume_token&lt;/code>) and ends
+      /// the stream with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -157,6 +208,16 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Returns a bounded, filtered page of captured container log entries. Supports a time window,
       /// severity filtering, a regular expression, a plain-text search and cursor paging in both
       /// directions for infinite scrolling. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>No time window is required: without &lt;code>start_time&lt;/code> / &lt;code>end_time&lt;/code> the window is
+      /// the newest &lt;code>max_lines&lt;/code> matching entries (or, with &lt;code>oldest_first&lt;/code>, the oldest
+      /// after the cursor). With &lt;code>include_counts&lt;/code> the response also carries the number of matching
+      /// entries per severity.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an invalid
+      /// or over-long &lt;code>regex&lt;/code>, a &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>,
+      /// &lt;code>before_seq&lt;/code> / &lt;code>after_seq&lt;/code> combined with &lt;code>resume_token&lt;/code> or with a
+      /// filter that does not resolve to exactly one log stream, a malformed &lt;code>resume_token&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -170,6 +231,11 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the capture state of a single log stream, i.e. of one capture generation of one
       /// container.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code> or
+      /// &lt;code>name&lt;/code>, for a log stream that belongs to another project than
+      /// &lt;code>vtsi_project_name&lt;/code>, or for an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -184,6 +250,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Lists the log streams VTSI has captured for a project. A single container yields a new log
       /// stream every time it is recreated, because a recreated container is a new docker container
       /// whose previous logs no longer exist.&lt;/p>
+      /// &lt;p>Ordered by &lt;code>capture_started_at&lt;/code>, newest first (ties by an internal id, so the order is
+      /// stable).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a malformed &lt;code>page_token&lt;/code>,
+      /// &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> in &lt;code>capture_states&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -198,12 +271,66 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Permanently deletes captured log entries matching a filter. This is the erasure path for
       /// data-subject requests: retention answers &amp;quot;delete everything older than N days&amp;quot;, this
       /// answers &amp;quot;delete everything for this call or this phone number&amp;quot;.&lt;/p>
+      /// &lt;p>Only the identity filters and the time window apply; a time window ALONE (no identity filter)
+      /// is a valid filter and deletes every entry of the project inside it. The deletion is permanent and
+      /// runs in batches; a log stream whose last entry was deleted is removed too, unless it is still
+      /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code>.&lt;/p>
+      /// &lt;p>&lt;b>Race with live capture:&lt;/b> the deletion removes what is stored when it runs. A container
+      /// whose capture is still running keeps being captured, so entries it emits AFTER the deletion are
+      /// stored again (there is no tombstone). To erase the logs of a call completely, delete them after
+      /// the call ended and its capture is &lt;code>LOG_CAPTURE_STATE_STOPPED&lt;/code>, or repeat the deletion.&lt;/p>
+      /// &lt;p>Idempotent: repeating a deletion succeeds and reports &lt;code>0&lt;/code> deleted entries. With
+      /// &lt;code>validate_only&lt;/code> nothing is deleted and the counts are what would be deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an empty
+      /// filter (a filter whose only field is &lt;code>call_types = [BOTH]&lt;/code> counts as empty), a content
+      /// filter (&lt;code>text&lt;/code>, &lt;code>regex&lt;/code>, &lt;code>log_levels&lt;/code>, &lt;code>min_log_level&lt;/code>,
+      /// &lt;code>include_unleveled_lines&lt;/code>, &lt;code>log_sources&lt;/code>, &lt;code>channels&lt;/code>,
+      /// &lt;code>emitter_prefixes&lt;/code>, &lt;code>thread_names&lt;/code>; presence alone counts) or a
+      /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown
+      /// project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project. Every deletion is logged
+      /// by the server with the project, the filter fields in scope and the deleted counts.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.DeleteCallLogsResponse> DeleteCallLogs(global::Ondewo.Vtsi.DeleteCallLogsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Exports the captured log entries matching a filter as a file: plain text, NDJSON or CSV,
+      /// streamed in chunks. Entries are exported oldest first, with the same filter semantics and the same
+      /// server-side secret redaction as &lt;code>ListCallLogs&lt;/code>; unlike &lt;code>ListCallLogs&lt;/code> the
+      /// content filters are applied to EVERY entry of the window, never only inside a page. Concatenating
+      /// the &lt;code>chunk&lt;/code>s of all messages in order yields the file.&lt;/p>
+      /// &lt;p>A bounded time window is REQUIRED: &lt;code>filter.start_time&lt;/code> AND
+      /// &lt;code>filter.end_time&lt;/code> must both be set, with &lt;code>start_time&lt;/code> before
+      /// &lt;code>end_time&lt;/code>, because an export reads every entry of the window. (This is stricter than
+      /// &lt;code>ListCallLogs&lt;/code>, which needs no window because it reads one bounded page.)&lt;/p>
+      /// &lt;p>Limits: each &lt;code>chunk&lt;/code> is at most 1 MiB; an export holds at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_ENTRIES&lt;/code> (default 1000000) entries and at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_BYTES&lt;/code> (default 1 GiB) of output. When a limit is reached the
+      /// export ends early with &lt;code>truncated = true&lt;/code> on the last message; narrow the window (e.g.
+      /// start a new export at the timestamp of the last exported entry). At most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_EXPORTS&lt;/code> (default 2) exports run per server, beyond which
+      /// a new one is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. The export is a snapshot of what is stored when each
+      /// entry is read; entries captured during the export may or may not be included.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a missing,
+      /// empty or inverted time window, an invalid &lt;code>regex&lt;/code> or an unknown
+      /// &lt;code>format&lt;/code> value; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. A role revoked or a credential expired during the export
+      /// ends it with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> and no last message.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task ExportCallLogs(global::Ondewo.Vtsi.ExportCallLogsRequest request, grpc::IServerStreamWriter<global::Ondewo.Vtsi.ExportCallLogsResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -245,6 +372,23 @@ namespace Ondewo.Vtsi {
       /// server-side maximum stream duration is reached.&lt;/p>
       /// &lt;p>Entries are served from the VTSI database rather than from the docker daemon, so a
       /// container that has already been removed still streams. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>Limits: at most &lt;code>ONDEWO_VTSI_LOG_STREAM_MAX_DURATION_S&lt;/code> (default 3600) seconds per
+      /// stream, after which the server sends a final message with &lt;code>end_reason_code =
+      /// LOG_STREAM_END_REASON_MAX_DURATION&lt;/code> and a &lt;code>resume_token&lt;/code> to reconnect with; at most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_STREAMS&lt;/code> (default 16) concurrent streams per server,
+      /// beyond which a new stream is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. New entries are polled every
+      /// &lt;code>ONDEWO_VTSI_LOG_STREAM_POLL_INTERVAL_S&lt;/code> (default 0.5) seconds. The server sends NO
+      /// keep-alive message: a quiet container sends nothing, so a client must not treat silence as a dead
+      /// stream (use HTTP/2 keep-alive pings to detect a dead connection).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a filter
+      /// carrying &lt;code>start_time&lt;/code> or &lt;code>end_time&lt;/code>, an &lt;code>after_seq&lt;/code> with a filter
+      /// that does not resolve to exactly one log stream, or a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. When the
+      /// caller&amp;apos;s role is revoked or its credential expires during the stream, the server sends a final
+      /// message (&lt;code>LOG_STREAM_END_REASON_PERMISSION_REVOKED&lt;/code> /
+      /// &lt;code>LOG_STREAM_END_REASON_CREDENTIALS_EXPIRED&lt;/code>, with a &lt;code>resume_token&lt;/code>) and ends
+      /// the stream with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -264,6 +408,23 @@ namespace Ondewo.Vtsi {
       /// server-side maximum stream duration is reached.&lt;/p>
       /// &lt;p>Entries are served from the VTSI database rather than from the docker daemon, so a
       /// container that has already been removed still streams. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>Limits: at most &lt;code>ONDEWO_VTSI_LOG_STREAM_MAX_DURATION_S&lt;/code> (default 3600) seconds per
+      /// stream, after which the server sends a final message with &lt;code>end_reason_code =
+      /// LOG_STREAM_END_REASON_MAX_DURATION&lt;/code> and a &lt;code>resume_token&lt;/code> to reconnect with; at most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_STREAMS&lt;/code> (default 16) concurrent streams per server,
+      /// beyond which a new stream is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. New entries are polled every
+      /// &lt;code>ONDEWO_VTSI_LOG_STREAM_POLL_INTERVAL_S&lt;/code> (default 0.5) seconds. The server sends NO
+      /// keep-alive message: a quiet container sends nothing, so a client must not treat silence as a dead
+      /// stream (use HTTP/2 keep-alive pings to detect a dead connection).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a filter
+      /// carrying &lt;code>start_time&lt;/code> or &lt;code>end_time&lt;/code>, an &lt;code>after_seq&lt;/code> with a filter
+      /// that does not resolve to exactly one log stream, or a malformed &lt;code>resume_token&lt;/code>;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. When the
+      /// caller&amp;apos;s role is revoked or its credential expires during the stream, the server sends a final
+      /// message (&lt;code>LOG_STREAM_END_REASON_PERMISSION_REVOKED&lt;/code> /
+      /// &lt;code>LOG_STREAM_END_REASON_CREDENTIALS_EXPIRED&lt;/code>, with a &lt;code>resume_token&lt;/code>) and ends
+      /// the stream with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code>.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -277,6 +438,16 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Returns a bounded, filtered page of captured container log entries. Supports a time window,
       /// severity filtering, a regular expression, a plain-text search and cursor paging in both
       /// directions for infinite scrolling. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>No time window is required: without &lt;code>start_time&lt;/code> / &lt;code>end_time&lt;/code> the window is
+      /// the newest &lt;code>max_lines&lt;/code> matching entries (or, with &lt;code>oldest_first&lt;/code>, the oldest
+      /// after the cursor). With &lt;code>include_counts&lt;/code> the response also carries the number of matching
+      /// entries per severity.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an invalid
+      /// or over-long &lt;code>regex&lt;/code>, a &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>,
+      /// &lt;code>before_seq&lt;/code> / &lt;code>after_seq&lt;/code> combined with &lt;code>resume_token&lt;/code> or with a
+      /// filter that does not resolve to exactly one log stream, a malformed &lt;code>resume_token&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -292,6 +463,16 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Returns a bounded, filtered page of captured container log entries. Supports a time window,
       /// severity filtering, a regular expression, a plain-text search and cursor paging in both
       /// directions for infinite scrolling. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>No time window is required: without &lt;code>start_time&lt;/code> / &lt;code>end_time&lt;/code> the window is
+      /// the newest &lt;code>max_lines&lt;/code> matching entries (or, with &lt;code>oldest_first&lt;/code>, the oldest
+      /// after the cursor). With &lt;code>include_counts&lt;/code> the response also carries the number of matching
+      /// entries per severity.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an invalid
+      /// or over-long &lt;code>regex&lt;/code>, a &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>,
+      /// &lt;code>before_seq&lt;/code> / &lt;code>after_seq&lt;/code> combined with &lt;code>resume_token&lt;/code> or with a
+      /// filter that does not resolve to exactly one log stream, a malformed &lt;code>resume_token&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -305,6 +486,16 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Returns a bounded, filtered page of captured container log entries. Supports a time window,
       /// severity filtering, a regular expression, a plain-text search and cursor paging in both
       /// directions for infinite scrolling. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>No time window is required: without &lt;code>start_time&lt;/code> / &lt;code>end_time&lt;/code> the window is
+      /// the newest &lt;code>max_lines&lt;/code> matching entries (or, with &lt;code>oldest_first&lt;/code>, the oldest
+      /// after the cursor). With &lt;code>include_counts&lt;/code> the response also carries the number of matching
+      /// entries per severity.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an invalid
+      /// or over-long &lt;code>regex&lt;/code>, a &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>,
+      /// &lt;code>before_seq&lt;/code> / &lt;code>after_seq&lt;/code> combined with &lt;code>resume_token&lt;/code> or with a
+      /// filter that does not resolve to exactly one log stream, a malformed &lt;code>resume_token&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -320,6 +511,16 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Returns a bounded, filtered page of captured container log entries. Supports a time window,
       /// severity filtering, a regular expression, a plain-text search and cursor paging in both
       /// directions for infinite scrolling. Secrets are redacted server-side.&lt;/p>
+      /// &lt;p>No time window is required: without &lt;code>start_time&lt;/code> / &lt;code>end_time&lt;/code> the window is
+      /// the newest &lt;code>max_lines&lt;/code> matching entries (or, with &lt;code>oldest_first&lt;/code>, the oldest
+      /// after the cursor). With &lt;code>include_counts&lt;/code> the response also carries the number of matching
+      /// entries per severity.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an invalid
+      /// or over-long &lt;code>regex&lt;/code>, a &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>,
+      /// &lt;code>before_seq&lt;/code> / &lt;code>after_seq&lt;/code> combined with &lt;code>resume_token&lt;/code> or with a
+      /// filter that does not resolve to exactly one log stream, a malformed &lt;code>resume_token&lt;/code> or an
+      /// unknown &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -332,6 +533,11 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the capture state of a single log stream, i.e. of one capture generation of one
       /// container.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code> or
+      /// &lt;code>name&lt;/code>, for a log stream that belongs to another project than
+      /// &lt;code>vtsi_project_name&lt;/code>, or for an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -346,6 +552,11 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the capture state of a single log stream, i.e. of one capture generation of one
       /// container.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code> or
+      /// &lt;code>name&lt;/code>, for a log stream that belongs to another project than
+      /// &lt;code>vtsi_project_name&lt;/code>, or for an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -358,6 +569,11 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the capture state of a single log stream, i.e. of one capture generation of one
       /// container.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code> or
+      /// &lt;code>name&lt;/code>, for a log stream that belongs to another project than
+      /// &lt;code>vtsi_project_name&lt;/code>, or for an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -372,6 +588,11 @@ namespace Ondewo.Vtsi {
       /// <summary>
       /// &lt;p>Returns the capture state of a single log stream, i.e. of one capture generation of one
       /// container.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code> or
+      /// &lt;code>name&lt;/code>, for a log stream that belongs to another project than
+      /// &lt;code>vtsi_project_name&lt;/code>, or for an unknown &lt;code>field_mask&lt;/code> path;
+      /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -385,6 +606,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Lists the log streams VTSI has captured for a project. A single container yields a new log
       /// stream every time it is recreated, because a recreated container is a new docker container
       /// whose previous logs no longer exist.&lt;/p>
+      /// &lt;p>Ordered by &lt;code>capture_started_at&lt;/code>, newest first (ties by an internal id, so the order is
+      /// stable).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a malformed &lt;code>page_token&lt;/code>,
+      /// &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> in &lt;code>capture_states&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -400,6 +628,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Lists the log streams VTSI has captured for a project. A single container yields a new log
       /// stream every time it is recreated, because a recreated container is a new docker container
       /// whose previous logs no longer exist.&lt;/p>
+      /// &lt;p>Ordered by &lt;code>capture_started_at&lt;/code>, newest first (ties by an internal id, so the order is
+      /// stable).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a malformed &lt;code>page_token&lt;/code>,
+      /// &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> in &lt;code>capture_states&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -413,6 +648,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Lists the log streams VTSI has captured for a project. A single container yields a new log
       /// stream every time it is recreated, because a recreated container is a new docker container
       /// whose previous logs no longer exist.&lt;/p>
+      /// &lt;p>Ordered by &lt;code>capture_started_at&lt;/code>, newest first (ties by an internal id, so the order is
+      /// stable).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a malformed &lt;code>page_token&lt;/code>,
+      /// &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> in &lt;code>capture_states&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -428,6 +670,13 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Lists the log streams VTSI has captured for a project. A single container yields a new log
       /// stream every time it is recreated, because a recreated container is a new docker container
       /// whose previous logs no longer exist.&lt;/p>
+      /// &lt;p>Ordered by &lt;code>capture_started_at&lt;/code>, newest first (ties by an internal id, so the order is
+      /// stable).&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a negative
+      /// &lt;code>page_size&lt;/code>, a malformed &lt;code>page_token&lt;/code>,
+      /// &lt;code>LOG_CAPTURE_STATE_UNSPECIFIED&lt;/code> in &lt;code>capture_states&lt;/code> or an unknown
+      /// &lt;code>field_mask&lt;/code> path; &lt;code>NOT_FOUND&lt;/code> for an unknown project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -441,6 +690,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Permanently deletes captured log entries matching a filter. This is the erasure path for
       /// data-subject requests: retention answers &amp;quot;delete everything older than N days&amp;quot;, this
       /// answers &amp;quot;delete everything for this call or this phone number&amp;quot;.&lt;/p>
+      /// &lt;p>Only the identity filters and the time window apply; a time window ALONE (no identity filter)
+      /// is a valid filter and deletes every entry of the project inside it. The deletion is permanent and
+      /// runs in batches; a log stream whose last entry was deleted is removed too, unless it is still
+      /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code>.&lt;/p>
+      /// &lt;p>&lt;b>Race with live capture:&lt;/b> the deletion removes what is stored when it runs. A container
+      /// whose capture is still running keeps being captured, so entries it emits AFTER the deletion are
+      /// stored again (there is no tombstone). To erase the logs of a call completely, delete them after
+      /// the call ended and its capture is &lt;code>LOG_CAPTURE_STATE_STOPPED&lt;/code>, or repeat the deletion.&lt;/p>
+      /// &lt;p>Idempotent: repeating a deletion succeeds and reports &lt;code>0&lt;/code> deleted entries. With
+      /// &lt;code>validate_only&lt;/code> nothing is deleted and the counts are what would be deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an empty
+      /// filter (a filter whose only field is &lt;code>call_types = [BOTH]&lt;/code> counts as empty), a content
+      /// filter (&lt;code>text&lt;/code>, &lt;code>regex&lt;/code>, &lt;code>log_levels&lt;/code>, &lt;code>min_log_level&lt;/code>,
+      /// &lt;code>include_unleveled_lines&lt;/code>, &lt;code>log_sources&lt;/code>, &lt;code>channels&lt;/code>,
+      /// &lt;code>emitter_prefixes&lt;/code>, &lt;code>thread_names&lt;/code>; presence alone counts) or a
+      /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown
+      /// project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project. Every deletion is logged
+      /// by the server with the project, the filter fields in scope and the deleted counts.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -456,6 +724,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Permanently deletes captured log entries matching a filter. This is the erasure path for
       /// data-subject requests: retention answers &amp;quot;delete everything older than N days&amp;quot;, this
       /// answers &amp;quot;delete everything for this call or this phone number&amp;quot;.&lt;/p>
+      /// &lt;p>Only the identity filters and the time window apply; a time window ALONE (no identity filter)
+      /// is a valid filter and deletes every entry of the project inside it. The deletion is permanent and
+      /// runs in batches; a log stream whose last entry was deleted is removed too, unless it is still
+      /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code>.&lt;/p>
+      /// &lt;p>&lt;b>Race with live capture:&lt;/b> the deletion removes what is stored when it runs. A container
+      /// whose capture is still running keeps being captured, so entries it emits AFTER the deletion are
+      /// stored again (there is no tombstone). To erase the logs of a call completely, delete them after
+      /// the call ended and its capture is &lt;code>LOG_CAPTURE_STATE_STOPPED&lt;/code>, or repeat the deletion.&lt;/p>
+      /// &lt;p>Idempotent: repeating a deletion succeeds and reports &lt;code>0&lt;/code> deleted entries. With
+      /// &lt;code>validate_only&lt;/code> nothing is deleted and the counts are what would be deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an empty
+      /// filter (a filter whose only field is &lt;code>call_types = [BOTH]&lt;/code> counts as empty), a content
+      /// filter (&lt;code>text&lt;/code>, &lt;code>regex&lt;/code>, &lt;code>log_levels&lt;/code>, &lt;code>min_log_level&lt;/code>,
+      /// &lt;code>include_unleveled_lines&lt;/code>, &lt;code>log_sources&lt;/code>, &lt;code>channels&lt;/code>,
+      /// &lt;code>emitter_prefixes&lt;/code>, &lt;code>thread_names&lt;/code>; presence alone counts) or a
+      /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown
+      /// project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project. Every deletion is logged
+      /// by the server with the project, the filter fields in scope and the deleted counts.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -469,6 +756,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Permanently deletes captured log entries matching a filter. This is the erasure path for
       /// data-subject requests: retention answers &amp;quot;delete everything older than N days&amp;quot;, this
       /// answers &amp;quot;delete everything for this call or this phone number&amp;quot;.&lt;/p>
+      /// &lt;p>Only the identity filters and the time window apply; a time window ALONE (no identity filter)
+      /// is a valid filter and deletes every entry of the project inside it. The deletion is permanent and
+      /// runs in batches; a log stream whose last entry was deleted is removed too, unless it is still
+      /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code>.&lt;/p>
+      /// &lt;p>&lt;b>Race with live capture:&lt;/b> the deletion removes what is stored when it runs. A container
+      /// whose capture is still running keeps being captured, so entries it emits AFTER the deletion are
+      /// stored again (there is no tombstone). To erase the logs of a call completely, delete them after
+      /// the call ended and its capture is &lt;code>LOG_CAPTURE_STATE_STOPPED&lt;/code>, or repeat the deletion.&lt;/p>
+      /// &lt;p>Idempotent: repeating a deletion succeeds and reports &lt;code>0&lt;/code> deleted entries. With
+      /// &lt;code>validate_only&lt;/code> nothing is deleted and the counts are what would be deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an empty
+      /// filter (a filter whose only field is &lt;code>call_types = [BOTH]&lt;/code> counts as empty), a content
+      /// filter (&lt;code>text&lt;/code>, &lt;code>regex&lt;/code>, &lt;code>log_levels&lt;/code>, &lt;code>min_log_level&lt;/code>,
+      /// &lt;code>include_unleveled_lines&lt;/code>, &lt;code>log_sources&lt;/code>, &lt;code>channels&lt;/code>,
+      /// &lt;code>emitter_prefixes&lt;/code>, &lt;code>thread_names&lt;/code>; presence alone counts) or a
+      /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown
+      /// project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project. Every deletion is logged
+      /// by the server with the project, the filter fields in scope and the deleted counts.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -484,6 +790,25 @@ namespace Ondewo.Vtsi {
       /// &lt;p>Permanently deletes captured log entries matching a filter. This is the erasure path for
       /// data-subject requests: retention answers &amp;quot;delete everything older than N days&amp;quot;, this
       /// answers &amp;quot;delete everything for this call or this phone number&amp;quot;.&lt;/p>
+      /// &lt;p>Only the identity filters and the time window apply; a time window ALONE (no identity filter)
+      /// is a valid filter and deletes every entry of the project inside it. The deletion is permanent and
+      /// runs in batches; a log stream whose last entry was deleted is removed too, unless it is still
+      /// &lt;code>LOG_CAPTURE_STATE_CAPTURING&lt;/code>.&lt;/p>
+      /// &lt;p>&lt;b>Race with live capture:&lt;/b> the deletion removes what is stored when it runs. A container
+      /// whose capture is still running keeps being captured, so entries it emits AFTER the deletion are
+      /// stored again (there is no tombstone). To erase the logs of a call completely, delete them after
+      /// the call ended and its capture is &lt;code>LOG_CAPTURE_STATE_STOPPED&lt;/code>, or repeat the deletion.&lt;/p>
+      /// &lt;p>Idempotent: repeating a deletion succeeds and reports &lt;code>0&lt;/code> deleted entries. With
+      /// &lt;code>validate_only&lt;/code> nothing is deleted and the counts are what would be deleted.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, an empty
+      /// filter (a filter whose only field is &lt;code>call_types = [BOTH]&lt;/code> counts as empty), a content
+      /// filter (&lt;code>text&lt;/code>, &lt;code>regex&lt;/code>, &lt;code>log_levels&lt;/code>, &lt;code>min_log_level&lt;/code>,
+      /// &lt;code>include_unleveled_lines&lt;/code>, &lt;code>log_sources&lt;/code>, &lt;code>channels&lt;/code>,
+      /// &lt;code>emitter_prefixes&lt;/code>, &lt;code>thread_names&lt;/code>; presence alone counts) or a
+      /// &lt;code>start_time&lt;/code> after &lt;code>end_time&lt;/code>; &lt;code>NOT_FOUND&lt;/code> for an unknown
+      /// project.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project. Every deletion is logged
+      /// by the server with the project, the filter fields in scope and the deleted counts.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -492,6 +817,74 @@ namespace Ondewo.Vtsi {
       public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.DeleteCallLogsResponse> DeleteCallLogsAsync(global::Ondewo.Vtsi.DeleteCallLogsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteCallLogs, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Exports the captured log entries matching a filter as a file: plain text, NDJSON or CSV,
+      /// streamed in chunks. Entries are exported oldest first, with the same filter semantics and the same
+      /// server-side secret redaction as &lt;code>ListCallLogs&lt;/code>; unlike &lt;code>ListCallLogs&lt;/code> the
+      /// content filters are applied to EVERY entry of the window, never only inside a page. Concatenating
+      /// the &lt;code>chunk&lt;/code>s of all messages in order yields the file.&lt;/p>
+      /// &lt;p>A bounded time window is REQUIRED: &lt;code>filter.start_time&lt;/code> AND
+      /// &lt;code>filter.end_time&lt;/code> must both be set, with &lt;code>start_time&lt;/code> before
+      /// &lt;code>end_time&lt;/code>, because an export reads every entry of the window. (This is stricter than
+      /// &lt;code>ListCallLogs&lt;/code>, which needs no window because it reads one bounded page.)&lt;/p>
+      /// &lt;p>Limits: each &lt;code>chunk&lt;/code> is at most 1 MiB; an export holds at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_ENTRIES&lt;/code> (default 1000000) entries and at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_BYTES&lt;/code> (default 1 GiB) of output. When a limit is reached the
+      /// export ends early with &lt;code>truncated = true&lt;/code> on the last message; narrow the window (e.g.
+      /// start a new export at the timestamp of the last exported entry). At most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_EXPORTS&lt;/code> (default 2) exports run per server, beyond which
+      /// a new one is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. The export is a snapshot of what is stored when each
+      /// entry is read; entries captured during the export may or may not be included.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a missing,
+      /// empty or inverted time window, an invalid &lt;code>regex&lt;/code> or an unknown
+      /// &lt;code>format&lt;/code> value; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. A role revoked or a credential expired during the export
+      /// ends it with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> and no last message.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.ExportCallLogsResponse> ExportCallLogs(global::Ondewo.Vtsi.ExportCallLogsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportCallLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Exports the captured log entries matching a filter as a file: plain text, NDJSON or CSV,
+      /// streamed in chunks. Entries are exported oldest first, with the same filter semantics and the same
+      /// server-side secret redaction as &lt;code>ListCallLogs&lt;/code>; unlike &lt;code>ListCallLogs&lt;/code> the
+      /// content filters are applied to EVERY entry of the window, never only inside a page. Concatenating
+      /// the &lt;code>chunk&lt;/code>s of all messages in order yields the file.&lt;/p>
+      /// &lt;p>A bounded time window is REQUIRED: &lt;code>filter.start_time&lt;/code> AND
+      /// &lt;code>filter.end_time&lt;/code> must both be set, with &lt;code>start_time&lt;/code> before
+      /// &lt;code>end_time&lt;/code>, because an export reads every entry of the window. (This is stricter than
+      /// &lt;code>ListCallLogs&lt;/code>, which needs no window because it reads one bounded page.)&lt;/p>
+      /// &lt;p>Limits: each &lt;code>chunk&lt;/code> is at most 1 MiB; an export holds at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_ENTRIES&lt;/code> (default 1000000) entries and at most
+      /// &lt;code>ONDEWO_VTSI_LOG_EXPORT_MAX_BYTES&lt;/code> (default 1 GiB) of output. When a limit is reached the
+      /// export ends early with &lt;code>truncated = true&lt;/code> on the last message; narrow the window (e.g.
+      /// start a new export at the timestamp of the last exported entry). At most
+      /// &lt;code>ONDEWO_VTSI_LOG_MAX_CONCURRENT_EXPORTS&lt;/code> (default 2) exports run per server, beyond which
+      /// a new one is &lt;code>RESOURCE_EXHAUSTED&lt;/code>. The export is a snapshot of what is stored when each
+      /// entry is read; entries captured during the export may or may not be included.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed &lt;code>vtsi_project_name&lt;/code>, a missing,
+      /// empty or inverted time window, an invalid &lt;code>regex&lt;/code> or an unknown
+      /// &lt;code>format&lt;/code> value; &lt;code>NOT_FOUND&lt;/code> for an unknown project;
+      /// &lt;code>RESOURCE_EXHAUSTED&lt;/code> as above. A role revoked or a credential expired during the export
+      /// ends it with &lt;code>PERMISSION_DENIED&lt;/code> / &lt;code>UNAUTHENTICATED&lt;/code> and no last message.&lt;/p>
+      /// &lt;p>Authorization: &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Ondewo.Vtsi.ExportCallLogsResponse> ExportCallLogs(global::Ondewo.Vtsi.ExportCallLogsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_ExportCallLogs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -511,7 +904,8 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_ListCallLogs, serviceImpl.ListCallLogs)
           .AddMethod(__Method_GetCallLogStream, serviceImpl.GetCallLogStream)
           .AddMethod(__Method_ListCallLogStreams, serviceImpl.ListCallLogStreams)
-          .AddMethod(__Method_DeleteCallLogs, serviceImpl.DeleteCallLogs).Build();
+          .AddMethod(__Method_DeleteCallLogs, serviceImpl.DeleteCallLogs)
+          .AddMethod(__Method_ExportCallLogs, serviceImpl.ExportCallLogs).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -526,6 +920,7 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_GetCallLogStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.GetCallLogStreamRequest, global::Ondewo.Vtsi.CallLogStream>(serviceImpl.GetCallLogStream));
       serviceBinder.AddMethod(__Method_ListCallLogStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.ListCallLogStreamsRequest, global::Ondewo.Vtsi.ListCallLogStreamsResponse>(serviceImpl.ListCallLogStreams));
       serviceBinder.AddMethod(__Method_DeleteCallLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.DeleteCallLogsRequest, global::Ondewo.Vtsi.DeleteCallLogsResponse>(serviceImpl.DeleteCallLogs));
+      serviceBinder.AddMethod(__Method_ExportCallLogs, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.ExportCallLogsRequest, global::Ondewo.Vtsi.ExportCallLogsResponse>(serviceImpl.ExportCallLogs));
     }
 
   }
