@@ -151,9 +151,11 @@ SNUPKG=${NUPKG_DIR}/${OndewoPackageId}.${ONDEWO_VTSI_VERSION}.snupkg
 NUGET_FLATCONTAINER:=https://api.nuget.org/v3-flatcontainer/$(shell echo ${OndewoPackageId} | tr 'A-Z' 'a-z')
 NUGET_VERIFICATION_KEY_API=https://www.nuget.org/api/v2/package/create-verification-key/${OndewoPackageId}/${ONDEWO_VTSI_VERSION}
 # verify_nuget_published polls this often, this far apart: 30 x 30 s = 15 minutes, which covers
-# nuget.org's validation and indexing of a fresh upload.
-NUGET_VERIFY_ATTEMPTS?=30
-NUGET_VERIFY_INTERVAL_S?=30
+# nuget.org's validation and indexing of a fresh upload. VERIFY_ATTEMPTS / VERIFY_INTERVAL_S, the
+# names every ONDEWO client's release_verify takes (`make release_verify VERIFY_ATTEMPTS=3
+# VERIFY_INTERVAL_S=10`, as the ondewo-vtsi-api driver passes them), set them too.
+NUGET_VERIFY_ATTEMPTS?=$(or $(VERIFY_ATTEMPTS),30)
+NUGET_VERIFY_INTERVAL_S?=$(or $(VERIFY_INTERVAL_S),30)
 # Scratch tree for publish_dry_run: the extracted nuspec and an isolated consumer restore.
 DRY_RUN_DIR=.nuget-dry-run
 # Keeps the .proto submodule out of the SDK's default Compile glob on a host build.

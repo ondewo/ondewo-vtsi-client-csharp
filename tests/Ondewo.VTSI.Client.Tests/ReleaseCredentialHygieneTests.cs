@@ -142,6 +142,22 @@ namespace Ondewo.Vtsi.Client.Tests
             }
         }
 
+        /// <summary>
+        /// The ondewo-vtsi-api driver and the integration checks pass the polling budget as
+        /// VERIFY_ATTEMPTS / VERIFY_INTERVAL_S, the names every ONDEWO client's release_verify takes;
+        /// the NuGet poll used to ignore them and always waited its own 30 x 30 s.
+        /// </summary>
+        [Fact]
+        public void TheNugetPollTakesTheSharedVerifyBudgetNames()
+        {
+            Assert.Matches(new Regex(@"^NUGET_VERIFY_ATTEMPTS\?=\$\(or \$\(VERIFY_ATTEMPTS\),30\)\s*$", RegexOptions.Multiline), Makefile);
+            Assert.Matches(new Regex(@"^NUGET_VERIFY_INTERVAL_S\?=\$\(or \$\(VERIFY_INTERVAL_S\),30\)\s*$", RegexOptions.Multiline), Makefile);
+            string poll = Recipe("verify_nuget_published");
+            Assert.Contains("-ge ${NUGET_VERIFY_ATTEMPTS}", poll, StringComparison.Ordinal);
+            Assert.Contains("sleep ${NUGET_VERIFY_INTERVAL_S}", poll, StringComparison.Ordinal);
+            Assert.Contains("verify_nuget_published", Recipe("release_verify"), StringComparison.Ordinal);
+        }
+
         [Fact]
         public void ThePreflightAndTheVerificationAreReadOnlyAndCompleteTheirChecks()
         {
