@@ -32,15 +32,32 @@ namespace Ondewo.Vtsi.Client.Tests
         private static string Makefile => File.ReadAllText(Path.Combine(RepositoryRoot, "Makefile"));
 
         [Fact]
-        public void TheMakefileSlicesFromTheHeadingToTheSeparator()
+        public void TheMakefileSlicesFromTheAnchoredHeadingToTheSeparator()
         {
-            // A sed range ending at /\*\*/ stops at the first **bold** span of the notes instead.
+            // Anchored and quoted (\Q..\E): 9.1.1 must match neither a 9.1.10 heading nor a sentence
+            // mentioning the version. A range ending at /\*\*/ would stop at the first **bold** span.
             string expected =
-                $"perl -ne 'print if /Release ONDEWO {Product} Csharp Client ${{{VersionVariable}}}/../^\\*{{5}}/'";
+                $"perl -ne 'print if /^\\#+ Release ONDEWO {Product} Csharp Client \\Q${{{VersionVariable}}}\\E$$/../^\\*{{5}}/' RELEASE.md";
 
-            Assert.Contains("CURRENT_RELEASE_NOTES=`cat RELEASE.md \\", Makefile, StringComparison.Ordinal);
-            Assert.Contains(expected, Makefile, StringComparison.Ordinal);
-            Assert.Contains("-n \"$(CURRENT_RELEASE_NOTES)\"", Makefile, StringComparison.Ordinal);
+            Assert.Contains("RELEASE_NOTES_CMD=" + expected, Makefile, StringComparison.Ordinal);
+            Assert.Contains("CURRENT_RELEASE_NOTES=`$(RELEASE_NOTES_CMD)`", Makefile, StringComparison.Ordinal);
+            // The notes reach gh on stdin, so nothing in RELEASE.md can change the command line.
+            Assert.Contains("$(RELEASE_NOTES_CMD) | GH_TOKEN=", Makefile, StringComparison.Ordinal);
+            Assert.Contains("--notes-file -", Makefile, StringComparison.Ordinal);
+        }
+
+        [Fact]
+        public void TheSliceIsAnchoredOnTheWholeVersion()
+        {
+            string[] lines =
+            {
+                "## Release ONDEWO VTSI Csharp Client 9.1.10", "* ten", "*****",
+                "## Release ONDEWO VTSI Csharp Client 9.1.1", "* one", "*****",
+            };
+
+            List<string> slice = Slice(lines, $@"^#+ Release ONDEWO {Product} Csharp Client {Regex.Escape("9.1.1")}$");
+
+            Assert.Equal(new[] { "## Release ONDEWO VTSI Csharp Client 9.1.1", "* one", "*****" }, slice);
         }
 
         [Fact]
@@ -79,7 +96,7 @@ namespace Ondewo.Vtsi.Client.Tests
             Match version = Regex.Match(Makefile, $@"^{VersionVariable}=(?<version>\S+)\s*$", RegexOptions.Multiline);
             Assert.True(version.Success, $"no {VersionVariable}= line in the Makefile");
 
-            List<string> slice = Slice(ReleaseLines, $"Release ONDEWO {Product} Csharp Client {version.Groups["version"].Value}");
+            List<string> slice = Slice(ReleaseLines, $@"^#+ Release ONDEWO {Product} Csharp Client {Regex.Escape(version.Groups["version"].Value)}$");
 
             Assert.True(slice.Count > 2, $"the release notes of {version.Groups["version"].Value} are empty");
             Assert.Matches(Heading, slice[0]);

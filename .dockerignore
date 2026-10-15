@@ -1,0 +1,13 @@
+# No docker build in this repository uses it as its context today (the compiler image is built from
+# ondewo-proto-compiler/csharp, the gh image from stdin). Should one ever do, the credentials clone,
+# the git metadata and the build output must never reach a build context or an image layer.
+ondewo-devops-accounts
+.git
+**/.git
+bin
+obj
+artifacts
+nupkg
+coverage
+.nuget-dry-run
+node_modules

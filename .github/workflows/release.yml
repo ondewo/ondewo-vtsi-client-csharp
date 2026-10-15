@@ -1,9 +1,11 @@
 name: release
 
-# Publishing half of the release. `make ondewo_release` cuts the branch, the tag and the GitHub
-# release from a developer machine; pushing that tag is what triggers this workflow, which rebuilds
-# the committed stubs from scratch and pushes the package to nuget.org. Nothing here is reachable
-# from an ordinary push - ci.yml runs the same packaging path credential-free on every commit.
+# The tag-side check of a release. `make ondewo_release` publishes to nuget.org from the release
+# machine, waits until nuget.org serves the version, and only then pushes the branch, the tag and the
+# GitHub release; pushing the tag triggers this workflow, which re-runs the test and packaging gates
+# on the exact tree the tag points at, pushes the package only if nuget.org does not have it yet, and
+# verifies nuget.org serves it. Nothing here is reachable from an ordinary push - ci.yml runs the same
+# packaging path credential-free on every commit.
 on:
   push:
     # GitHub filter-pattern syntax, not a regex: `+` means "one or more of the preceding
@@ -44,9 +46,9 @@ jobs:
           fi
           echo "NUGET_API_KEY is configured."
 
-      # The api submodule is NOT checked out - exactly like ci.yml. This job packs the stubs that are
-      # COMMITTED under api/; regenerating them is a docker-bound developer step that has already
-      # happened by the time the release tag exists.
+      # This job packs the stubs that are COMMITTED under api/ - exactly like ci.yml, it never runs
+      # protoc; regenerating them is a docker-bound developer step that has already happened by the
+      # time the release tag exists.
       # actions/checkout starts with a bare `git init`, and git then prints a multi-line
       # "Using 'master' as the name for the initial branch" hint into every job log. Naming the
       # default up front silences it; master is this repository's default branch anyway.
@@ -62,6 +64,13 @@ jobs:
       # and this step is what keeps it able to do its job. One small public repository, depth 1.
       - name: Check out the pinned proto-compiler submodule
         run: git submodule update --init --depth 1 ondewo-proto-compiler
+
+      # The api submodule's own protos (not its nested s2t/sip/t2s submodules): the API-surface tests
+      # DERIVE every ondewo.vtsi service and RPC from them, instead of hard-coding counts and lists
+      # that break on the next API release. Without it they fall back to the committed stubs, and a
+      # test asserts that CI does not.
+      - name: Check out the pinned VTSI API submodule
+        run: git submodule update --init --depth 1 ondewo-vtsi-api
 
       # The tag is what a consumer sees on GitHub; ONDEWO_VTSI_VERSION is what ends up in the
       # <version> of the .nupkg. Publishing 8.7.0 off a tag called 8.7.1 is unrecoverable - the
@@ -104,17 +113,29 @@ jobs:
       - name: Dry-run the NuGet publish
         run: make publish_dry_run
 
-      # The only step that needs the secret. It reaches `make push_to_nuget` through env: only:
-      # `dotnet nuget push` reads NUGET_API_KEY from the environment (.NET SDK 10.0.400+, which
-      # setup-dotnet 10.0.x installs; the recipe refuses an SDK that cannot), so the key is on no
-      # process's argv and never in the log.
-      # --skip-duplicate makes a re-run of an already-published version a no-op instead of a
-      # failure, which is what lets a release that died after the upload be resumed. Pushing the
-      # .nupkg uploads the .snupkg symbol package sitting beside it in nupkg/.
-      - name: Push to nuget.org
+      # `make release` pushes to nuget.org from the release machine and waits until nuget.org serves
+      # the version BEFORE it pushes this tag, so on a regular release the version is already there and
+      # this step says so and pushes nothing. It pushes only for a tag cut some other way. There is no
+      # --skip-duplicate: a push that nuget.org refuses as a duplicate is a real failure, not a no-op.
+      # The secret reaches `make push_to_nuget` through env: only: `dotnet nuget push` reads
+      # NUGET_API_KEY from the environment (.NET SDK 10.0.400+, which setup-dotnet 10.0.x installs; the
+      # recipe refuses an SDK that cannot), so the key is on no process's argv and never in the log.
+      # Pushing the .nupkg uploads the .snupkg symbol package sitting beside it in nupkg/.
+      - name: Push to nuget.org unless make release already did
         env:
           NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-        run: make push_to_nuget
+        run: |
+          set -eu
+          if make --no-print-directory -s check_nuget_serves_version; then
+            echo "nuget.org already serves Ondewo.VTSI.Client ${GITHUB_REF_NAME} (pushed by make release) - nothing to push."
+            exit 0
+          fi
+          make push_to_nuget
+
+      # Read-only: fails the run unless nuget.org lists the version and serves its .nupkg (polls for
+      # up to 15 minutes while nuget.org validates and indexes a fresh upload).
+      - name: Verify nuget.org serves the version
+        run: make verify_nuget_published
 
       - uses: actions/upload-artifact@v7
         if: always()

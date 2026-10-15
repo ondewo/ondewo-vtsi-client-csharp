@@ -1,0 +1,30 @@
+#!/bin/sh
+# `gh` for the release, from a pinned image (tools/gh-in-docker/Dockerfile), so the release host needs
+# no gh of its own and every release runs the same gh version.
+#   * The image is built on first use, from stdin - with NO build context - and tagged with the gh
+#     version and the Dockerfile's own hash, so a changed pin builds a new image.
+#   * GH_TOKEN is passed by NAME (`-e GH_TOKEN`): docker copies the value out of its own environment,
+#     so it never reaches an argv. The Makefile sets it for each gh call from GITHUB_GH_TOKEN; nothing
+#     is ever logged in, so no token is written to a gh config file anywhere.
+#   * Nothing is mounted. Every call names its repository with --repo and reads its input (release
+#     notes) from stdin.
+set -eu
+
+here="$(cd "$(dirname "$0")" && pwd)"
+dockerfile="${here}/Dockerfile"
+version="$(sed -n 's/^ARG GH_VERSION=//p' "${dockerfile}")"
+hash="$(sha256sum "${dockerfile}" | cut -c1-12)"
+image="ondewo-release-gh:${version}-${hash}"
+
+if ! docker image inspect "${image}" >/dev/null 2>&1; then
+	docker build --quiet -t "${image}" - < "${dockerfile}" >&2
+fi
+
+exec docker run --rm -i \
+	--user "$(id -u):$(id -g)" \
+	-e HOME=/tmp \
+	-e GH_TOKEN \
+	-e GH_NO_UPDATE_NOTIFIER=1 \
+	-e GH_PROMPT_DISABLED=1 \
+	-e NO_COLOR=1 \
+	"${image}" "$@"

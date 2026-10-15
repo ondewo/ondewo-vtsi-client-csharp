@@ -26,14 +26,14 @@ export
 
 # ---------------- BEFORE RELEASE ----------------
 # 1 - Update Version Number (ONDEWO_VTSI_VERSION)
-# 2 - Update RELEASE.md
+# 2 - Update RELEASE.md (a non-empty "## Release ONDEWO VTSI Csharp Client <version>" section)
 # 3 - make build
-# -------------- Release Process Steps --------------
-# 1 - Get Credentials from devops-accounts repo
-# 2 - Create Release Branch and push
-# 3 - Create Release Tag and push
-# 4 - GitHub Release
-# 5 - NuGet Release
+# -------------- Release Process Steps (make ondewo_release) --------------
+# 1 - spc, then read the credentials from ondewo-devops-accounts and DELETE that clone at once
+# 2 - release_preflight: every credential is valid, the version is unreleased everywhere (read-only)
+# 3 - build, the full test suite, the NuGet dry run and the SDK guard - all before anything is committed
+# 4 - local release commit -> push to nuget.org -> wait until nuget.org serves the version
+# 5 - git push -> release branch -> tag -> GitHub release -> release_verify
 
 ########################################################
 # 		Variables
@@ -56,15 +56,41 @@ GITHUB_GH_TOKEN?=ENTER_YOUR_TOKEN_HERE
 NUGET_API_KEY?=ENTER_HERE_YOUR_NUGET_API_KEY
 NUGET_SOURCE?=https://api.nuget.org/v3/index.json
 
-# Terminate the release-notes slice on the ***** separator that delimits release entries, NOT on
-# /\*\*/ - that matches the first markdown **bold** span inside the entry and silently truncates
-# the notes there, with no error from `gh release create`.
-CURRENT_RELEASE_NOTES=`cat RELEASE.md \
-	| perl -ne 'print if /Release ONDEWO VTSI Csharp Client ${ONDEWO_VTSI_VERSION}/../^\*{5}/'`
+# The `export` at the top hands every variable to every recipe - and so to `dotnet restore/build/test`,
+# which runs the build targets of third-party packages. The credentials are therefore taken back out
+# of that blanket export (this line must come AFTER the ?= defaults above: an `unexport` of a variable
+# that does not exist yet defines it as empty, and the ?= would then never apply) and handed back
+# only to the targets below, whose recipes use them. A sub-make re-reads this file and so starts
+# unexported again. GH_TOKEN / GITHUB_TOKEN are unexported too: every gh call sets GH_TOKEN itself,
+# from GITHUB_GH_TOKEN, so a stale token in the caller's environment can never be the one gh uses.
+unexport GITHUB_GH_TOKEN NUGET_API_KEY GH_TOKEN GITHUB_TOKEN
+GITHUB_CREDENTIAL_TARGETS=release release_preflight release_verify check_release_credentials \
+	check_gh_token_valid build_gh_release push_to_gh verify_gh_release
+NUGET_CREDENTIAL_TARGETS=release release_preflight check_release_credentials check_nuget_api_key_valid \
+	push_to_nuget
+$(GITHUB_CREDENTIAL_TARGETS): export GITHUB_GH_TOKEN:=$(GITHUB_GH_TOKEN)
+$(NUGET_CREDENTIAL_TARGETS): export NUGET_API_KEY:=$(NUGET_API_KEY)
 
-GH_REPO="https://github.com/ondewo/ondewo-vtsi-client-csharp"
-DEVOPS_ACCOUNT_GIT="ondewo-devops-accounts"
-DEVOPS_ACCOUNT_DIR="./${DEVOPS_ACCOUNT_GIT}"
+# The section of RELEASE.md that becomes the GitHub release body: from the heading of THIS version -
+# anchored and with the version quoted (\Q..\E), so 9.1.1 matches neither a 9.1.10 heading nor a
+# sentence that mentions the version - down to the ***** separator that ends every entry. NOT down
+# to /\*\*/: that matches the first markdown **bold** span inside the entry and silently truncates
+# the notes there, with no error from `gh release create`.
+RELEASE_NOTES_CMD=perl -ne 'print if /^\#+ Release ONDEWO VTSI Csharp Client \Q${ONDEWO_VTSI_VERSION}\E$$/../^\*{5}/' RELEASE.md
+CURRENT_RELEASE_NOTES=`$(RELEASE_NOTES_CMD)`
+
+GH_REPO_PATH=ondewo/ondewo-vtsi-client-csharp
+GH_REPO="https://github.com/${GH_REPO_PATH}"
+# gh runs from a pinned image (tools/gh-in-docker), so the release needs no gh on the host and every
+# release uses the same gh. `make release GH=gh` uses the host's instead.
+GH?=$(CURDIR)/tools/gh-in-docker/gh
+# The devops-accounts clone. Empty: run_release_with_devops clones into a fresh directory OUTSIDE the
+# repository (which is mounted into containers) and deletes it as soon as the credentials are read.
+# Set (the ondewo-vtsi-api driver does, to one clone shared by all eleven clients): that directory is
+# used as it is and left alone - its owner deletes it.
+DEVOPS_ACCOUNT_GIT=ondewo-devops-accounts
+DEVOPS_ACCOUNT_DIR?=
+
 
 # --- Layout
 # ONDEWO_API_DIR       submodule holding the .proto sources; it is also the protoc -I root, so it
@@ -77,9 +103,16 @@ ONDEWO_PROTO_COMPILER_DIR:=ondewo-proto-compiler
 ONDEWO_PROTOS_SUBDIR=ondewo
 ONDEWO_PROTOS_DIR=${ONDEWO_API_DIR}/${ONDEWO_PROTOS_SUBDIR}
 
-# The fixed image tag is the ONLY contract with the compiler; `make build_compiler` rebuilds it
-# from the pinned submodule.
-PROTO_COMPILER_IMAGE=ondewo-csharp-proto-compiler:latest
+# The compiler image is tagged with the compiler VERSION it was built from (not :latest, which any
+# other checkout on the same docker daemon can overwrite with a different compiler); `make
+# build_compiler` rebuilds it from the pinned submodule, on the pinned SDK image below.
+PROTO_COMPILER_VERSION=$(patsubst tags/%,%,${ONDEWO_PROTO_COMPILER_GIT_BRANCH})
+PROTO_COMPILER_IMAGE=ondewo-csharp-proto-compiler:${PROTO_COMPILER_VERSION}
+# The ONE .NET SDK image, by exact version AND digest: the compiler image is built FROM it, and
+# tools/dotnet-in-docker/dotnet runs it on a host without a .NET SDK (the wrapper carries the same
+# default; a test keeps the two equal).
+DOTNET_SDK_TAG=10.0.401-noble@sha256:e70cdb7f80b0348f5cb85f19a8f670fca061f033d57eed12fa003d58b0e06317
+DOTNET_SDK_IMAGE=mcr.microsoft.com/dotnet/sdk:${DOTNET_SDK_TAG}
 PROTO_COMPILER_DOCKERFILE:=${ONDEWO_PROTO_COMPILER_DIR}/csharp/Dockerfile
 
 # --- MSBuild properties read by the generated project file
@@ -97,6 +130,15 @@ OndewoPackageVersion=${ONDEWO_VTSI_VERSION}
 NUPKG_DIR=nupkg
 NUPKG=${NUPKG_DIR}/${OndewoPackageId}.${ONDEWO_VTSI_VERSION}.nupkg
 SNUPKG=${NUPKG_DIR}/${OndewoPackageId}.${ONDEWO_VTSI_VERSION}.snupkg
+# nuget.org's read-only package content API - what a consumer's restore downloads from - and the
+# endpoint that proves an API key may push this package (it mints a short-lived verification key;
+# nothing is uploaded). The flat container lower-cases ids.
+NUGET_FLATCONTAINER:=https://api.nuget.org/v3-flatcontainer/$(shell echo ${OndewoPackageId} | tr 'A-Z' 'a-z')
+NUGET_VERIFICATION_KEY_API=https://www.nuget.org/api/v2/package/create-verification-key/${OndewoPackageId}/${ONDEWO_VTSI_VERSION}
+# verify_nuget_published polls this often, this far apart: 30 x 30 s = 15 minutes, which covers
+# nuget.org's validation and indexing of a fresh upload.
+NUGET_VERIFY_ATTEMPTS?=30
+NUGET_VERIFY_INTERVAL_S?=30
 # Scratch tree for publish_dry_run: the extracted nuspec and an isolated consumer restore.
 DRY_RUN_DIR=.nuget-dry-run
 # Keeps the .proto submodule out of the SDK's default Compile glob on a host build.
@@ -181,7 +223,11 @@ build_compiler: ## Build the proto compiler docker image from the pinned submodu
 		echo "$(RED)[ERROR]$(NC) ${PROTO_COMPILER_DOCKERFILE} is missing - run 'make update_submodules' first"; \
 		exit 1; \
 	}
-	cd ${ONDEWO_PROTO_COMPILER_DIR}/csharp && sh build.sh
+# Built directly rather than through the submodule's build.sh, which tags :latest, passes --no-cache
+# and builds FROM the floating sdk:10.0 tag.
+	docker build -t ${PROTO_COMPILER_IMAGE} \
+		--build-arg DOTNET_SDK_VERSION=${DOTNET_SDK_TAG} \
+		${ONDEWO_PROTO_COMPILER_DIR}/csharp
 
 # Derived from ondewo-proto-compiler/csharp/example/run-compile.sh - same image tag and the same
 # three positional arguments <relative_protos_dir> <target_subdir> <package_id>.
@@ -200,6 +246,12 @@ generate_ondewo_protos: ## Generate the csharp gRPC client stubs and the NuGet p
 		echo "$(RED)[ERROR]$(NC) ${ONDEWO_PROTOS_DIR} is missing - run 'make update_submodules' first"; \
 		exit 1; \
 	}
+# The whole repository is mounted into a root container below, so it must never hold the
+# credentials clone (run_release_with_devops keeps it outside; this catches a leftover old-style one).
+	@test ! -e ${DEVOPS_ACCOUNT_GIT} || { \
+		echo "$(RED)[ERROR]$(NC) ./${DEVOPS_ACCOUNT_GIT} exists - delete it: it would be mounted into the compiler container"; \
+		exit 1; \
+	}
 	@echo "$(BLUE)[INFO]$(NC) Generating csharp stubs from ${ONDEWO_PROTOS_DIR} into api/ ..."
 	docker run --rm \
 		-e OndewoPackageVersion=${ONDEWO_VTSI_VERSION} \
@@ -211,12 +263,15 @@ generate_ondewo_protos: ## Generate the csharp gRPC client stubs and the NuGet p
 
 # The csharp image writes under root-owned /image-data, so - unlike the python target - its
 # container must NOT run with --user, and everything it copies to the output volume lands owned
-# by root. Only the paths the image owns are touched, never the whole working tree.
+# by root. Ownership is handed back by a root container too (the compiler image itself, entrypoint
+# chown), so no sudo is needed on the host. Only the paths the image owns are touched, never the
+# whole working tree.
 fix_generated_file_ownership: ## Take back ownership of the files the compiler container wrote as root
 	@for path in api artifacts nupkg ${OndewoPackageId}.csproj ; do \
-		if [ -e "$$path" ] && [ "$$(ls -ld "$$path" | awk '{print $$3}')" != "$$(id -un)" ]; then \
+		if [ -e "$$path" ] && [ "$$(stat -c %u:%g "$$path")" != "$$(id -u):$$(id -g)" ]; then \
 			echo "$(BLUE)[INFO]$(NC) Taking ownership of $$path ..." ; \
-			sudo chown -R "$$(id -un):$$(id -gn)" "$$path" || exit 1 ; \
+			docker run --rm --entrypoint chown -v "$(CURDIR)/$$path:/owned/$$path" \
+				${PROTO_COMPILER_IMAGE} -R "$$(id -u):$$(id -g)" "/owned/$$path" || exit 1 ; \
 		fi ; \
 	done
 
@@ -338,12 +393,85 @@ checkout_defined_submodule_versions: ## Check out the submodule versions pinned 
 ########################################################
 #		Release
 
-check_release_credentials: ## Assert both release credentials are usable before anything is pushed
-# The registry credential used to be exercised only by the very LAST step of `release`, long after
-# the release branch, the tag and the GitHub release had been pushed to origin. A missing NuGet key
-# then left an immovable tag behind, and `spc` refused every retry because that branch and tag now
-# existed - so the recovery was to hand-delete both from origin. Both credentials are therefore
-# checked here, while the release is still a no-op.
+# The whole release, in the order a repository test (ReleaseOrderTests) pins:
+#   release_preflight          read-only: credentials valid, version unreleased, notes present, tools
+#   build -> test -> publish_dry_run -> check_nuget_push_sdk
+#                              everything that can fail without side effects fails HERE, while the
+#                              release is still a no-op (the 9.1.0 release only packed and checked the
+#                              package after the tag was on origin)
+#   local commit               `git diff --cached --quiet ||`: nothing to commit is fine, a commit that
+#                              FAILS (no identity, say) stops the release instead of tagging the
+#                              previous commit, which `-git commit` used to do
+#   push_to_nuget -> verify_nuget_published
+#                              nuget.org is driven from this host, so it goes BEFORE anything reaches
+#                              origin: a version nuget.org rejects leaves no branch or tag behind, and
+#                              the tag - which triggers release.yml - only appears once nuget.org
+#                              serves the package (release.yml then finds it there and pushes nothing)
+#   git push -> release branch -> tag -> GitHub release -> release_verify
+release: ## Automate the entire release process
+	@echo "$(BLUE)[INFO]$(NC) Start release ${ONDEWO_VTSI_VERSION}"
+	$(MAKE) release_preflight
+	$(MAKE) build
+	-$(MAKE) precommit_hooks_run_all_files
+	git status
+	$(MAKE) check_build
+	$(MAKE) test
+	$(MAKE) publish_dry_run
+	$(MAKE) check_nuget_push_sdk
+	git add api
+	git add ${OndewoPackageId}.csproj
+	git add Makefile
+	git add README.md
+	git add RELEASE.md
+# tests/ is NOT packaged, but leaving it out of the release commit means a regression test written
+# alongside a fix never reaches the repository and CI never runs it.
+	git add tests
+	git add ${ONDEWO_PROTO_COMPILER_DIR}
+	git add ${ONDEWO_API_DIR}
+	git status
+	git diff --cached --quiet || git commit --no-verify -m "chore(release): prepare release ${ONDEWO_VTSI_VERSION}"
+	$(MAKE) push_to_nuget
+	$(MAKE) verify_nuget_published
+	git push
+	$(MAKE) create_release_branch
+	$(MAKE) create_release_tag
+	$(MAKE) push_to_gh
+	$(MAKE) release_verify
+	@echo "$(GREEN)[SUCCESS]$(NC) Release ${ONDEWO_VTSI_VERSION} finished"
+
+# Read-only. Every check runs - a failure does not hide the next one - and the release stops if any
+# failed, before anything is built, committed, pushed or published.
+release_preflight: ## Read-only release gate: credentials valid, version unreleased, notes present, host tools
+	@rc=0 ; \
+	for check in check_release_tools check_release_credentials check_gh_token_valid check_nuget_api_key_valid \
+	             check_version_unreleased check_release_notes ; do \
+		$(MAKE) --no-print-directory $$check || rc=1 ; \
+	done ; \
+	if [ $$rc -ne 0 ]; then \
+		echo "$(RED)[ERROR]$(NC) release preflight FAILED - nothing was built, committed, pushed or published" ; \
+		exit 1 ; \
+	fi ; \
+	echo "$(GREEN)[SUCCESS]$(NC) release preflight passed for ${ONDEWO_VTSI_VERSION}"
+
+# Read-only. What a finished release must look like from the outside.
+release_verify: verify_tag_on_origin verify_gh_release verify_nuget_published ## Read-only: the tag is on origin, the GitHub release has notes, nuget.org serves the version
+	@echo "$(GREEN)[SUCCESS]$(NC) ${ONDEWO_VTSI_VERSION} is tagged, released on GitHub and served by nuget.org"
+
+# docker, make, git, perl and curl are all the release needs. dotnet runs in the pinned SDK image when
+# the host has none (tools/dotnet-in-docker), gh always in its pinned image (tools/gh-in-docker),
+# unzip is replaced by tools/zip-entries.pl, and no step uses sudo.
+check_release_tools: ## Assert the host tools the release needs exist (docker, git, perl, curl) and docker answers
+	@rc=0 ; \
+	for tool in docker git perl curl ; do \
+		command -v $$tool >/dev/null 2>&1 || { echo "$(RED)[ERROR]$(NC) '$$tool' is not on PATH - the release needs it" ; rc=1 ; } ; \
+	done ; \
+	if [ $$rc -eq 0 ] && ! docker info >/dev/null 2>&1; then \
+		echo "$(RED)[ERROR]$(NC) docker is installed but the daemon does not answer (docker info failed)" ; rc=1 ; \
+	fi ; \
+	if [ $$rc -ne 0 ]; then exit 1 ; fi ; \
+	echo "$(GREEN)[SUCCESS]$(NC) docker, git, perl and curl are available (dotnet: $$(command -v dotnet), gh: ${GH})"
+
+check_release_credentials: ## Assert both release credentials are set (not empty, not the placeholder)
 	@rc=0 ; \
 	if [ -z "$${GITHUB_GH_TOKEN}" ] || [ "$${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
 		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is not set - create one at https://github.com/settings/tokens" ; \
@@ -361,40 +489,59 @@ check_release_credentials: ## Assert both release credentials are usable before 
 	fi ; \
 	echo "$(GREEN)[SUCCESS]$(NC) both release credentials are set"
 
-release: ## Automate the entire release process
-	@echo "$(BLUE)[INFO]$(NC) Start release ${ONDEWO_VTSI_VERSION}"
-# FIRST, before anything is built, branched, tagged or pushed: a release that cannot reach GitHub or
-# nuget.org has to fail while it is still a no-op, not after a tag it cannot take back is on origin.
-	make check_release_credentials
-	make check_release_notes
-	make build
-	-make precommit_hooks_run_all_files
-	git status
-	make check_build
-# The test suite runs BEFORE anything is committed, branched, tagged or published: a release whose
-# own CI would fail must stop while it is still a no-op.
-	make test
-	git add api
-	git add ${OndewoPackageId}.csproj
-	git add Makefile
-	git add README.md
-	git add RELEASE.md
-# tests/ is NOT packaged, but leaving it out of the release commit means a regression test written
-# alongside a fix never reaches the repository and CI never runs it.
-	-git add tests
-	git add ${ONDEWO_PROTO_COMPILER_DIR}
-	git add ${ONDEWO_API_DIR}
-	git status
-	-git commit --no-verify -m "Preparing for release ${ONDEWO_VTSI_VERSION}"
-	git push
-	make create_release_branch
-	make create_release_tag
-# NuGet first and the GitHub release LAST, so a GitHub release exists only for a version that is on
-# nuget.org too. The tag stays before both: it triggers release.yml, which also pushes to nuget.org;
-# both pushes use --skip-duplicate, so whichever arrives second is a no-op.
-	make publish
-	make push_to_gh
-	@echo "$(GREEN)[SUCCESS]$(NC) Release finished"
+# GET /repos/<owner>/<repo> changes nothing. `.permissions` is only present for an authenticated
+# caller, and `push` is exactly what the release branch, the tag and the GitHub release need.
+check_gh_token_valid: ## Assert GitHub accepts GITHUB_GH_TOKEN and lets it push to this repository (read-only)
+	@push=$$(GH_TOKEN="$$GITHUB_GH_TOKEN" $(GH) api "repos/${GH_REPO_PATH}" --jq .permissions.push) \
+		|| { echo "$(RED)[ERROR]$(NC) GitHub refused GITHUB_GH_TOKEN (see the gh error above)"; exit 1; }; \
+	if [ "$$push" != "true" ]; then \
+		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is valid but may not push to ${GH_REPO_PATH} (permissions.push=$$push)"; \
+		exit 1; \
+	fi; \
+	echo "$(GREEN)[SUCCESS]$(NC) GitHub accepts GITHUB_GH_TOKEN and it may push to ${GH_REPO_PATH}"
+
+# POST .../create-verification-key/<id>/<version> answers 200 only for a key that exists, has not
+# expired and is scoped to push this package id; it mints a one-hour verification key and uploads
+# nothing. The key reaches curl on stdin (`-K -`, printf is a shell builtin), never on an argv, and
+# the response - which carries the minted key - is discarded unread.
+check_nuget_api_key_valid: ## Assert nuget.org accepts NUGET_API_KEY for pushing this package (uploads nothing)
+	@if [ -z "$${NUGET_API_KEY}" ] || [ "$${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
+		echo "$(RED)[ERROR]$(NC) NUGET_API_KEY is not set"; exit 1; \
+	fi; \
+	code=$$(printf 'header = "X-NuGet-ApiKey: %s"\n' "$$NUGET_API_KEY" \
+		| curl -sS --connect-timeout 20 --max-time 60 -K - -X POST -d '' -o /dev/null -w '%{http_code}' \
+			"${NUGET_VERIFICATION_KEY_API}") || code="no answer"; \
+	case "$$code" in \
+		200) echo "$(GREEN)[SUCCESS]$(NC) nuget.org accepts NUGET_API_KEY for pushing ${OndewoPackageId}" ;; \
+		401|403) echo "$(RED)[ERROR]$(NC) nuget.org refused NUGET_API_KEY (HTTP $$code): it is wrong, EXPIRED, or not scoped to push ${OndewoPackageId}"; \
+			echo "        renew it at https://www.nuget.org/account/apikeys (Push, glob Ondewo.*) and update ondewo-devops-accounts/account_nuget.env"; \
+			exit 1 ;; \
+		*) echo "$(RED)[ERROR]$(NC) unexpected answer from nuget.org (HTTP $$code) - cannot tell whether NUGET_API_KEY is valid"; exit 1 ;; \
+	esac
+
+# Anchored: `git ls-remote --exit-code` exits 2 when the exact ref does not exist, 0 when it does,
+# and anything else when origin could not be asked - which is a failure too, never a pass.
+check_version_unreleased: ## Assert ONDEWO_VTSI_VERSION is no tag or release branch on origin and not on nuget.org (read-only)
+	@rc=0 ; \
+	for ref in "refs/tags/${ONDEWO_VTSI_VERSION}" "refs/heads/release/${ONDEWO_VTSI_VERSION}" ; do \
+		git ls-remote --exit-code origin "$$ref" >/dev/null 2>&1 ; status=$$? ; \
+		case $$status in \
+			0) echo "$(RED)[ERROR]$(NC) $$ref already exists on origin" ; rc=1 ;; \
+			2) ;; \
+			*) echo "$(RED)[ERROR]$(NC) cannot ask origin for $$ref (git ls-remote exit $$status)" ; rc=1 ;; \
+		esac ; \
+	done ; \
+	index=$$(mktemp) ; trap 'rm -f "$$index"' EXIT ; \
+	code=$$(curl -sS --connect-timeout 20 --max-time 60 -o "$$index" -w '%{http_code}' "${NUGET_FLATCONTAINER}/index.json") || code="no answer" ; \
+	case "$$code" in \
+		200) if grep -Fq '"${ONDEWO_VTSI_VERSION}"' "$$index" ; then \
+				echo "$(RED)[ERROR]$(NC) ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} is ALREADY on nuget.org - a version can never be pushed twice" ; rc=1 ; \
+			fi ;; \
+		404) ;; \
+		*) echo "$(RED)[ERROR]$(NC) cannot read ${NUGET_FLATCONTAINER}/index.json (HTTP $$code)" ; rc=1 ;; \
+	esac ; \
+	if [ $$rc -ne 0 ]; then exit 1 ; fi ; \
+	echo "$(GREEN)[SUCCESS]$(NC) ${ONDEWO_VTSI_VERSION} is neither on origin nor on nuget.org"
 
 create_release_branch: ## Create Release Branch and push it to origin
 	git checkout -b "release/${ONDEWO_VTSI_VERSION}"
@@ -404,45 +551,48 @@ create_release_tag: ## Create Release Tag and push it to origin
 	git tag -a ${ONDEWO_VTSI_VERSION} -m "release/${ONDEWO_VTSI_VERSION}"
 	git push origin ${ONDEWO_VTSI_VERSION}
 
-login_to_gh: ## Login to Github CLI with Access Token
-	@if [ -z "$${GITHUB_GH_TOKEN}" ] || [ "$${GITHUB_GH_TOKEN}" = "ENTER_YOUR_TOKEN_HERE" ]; then \
-		echo "$(RED)[ERROR]$(NC) GITHUB_GH_TOKEN is not set - create one at https://github.com/settings/tokens"; \
-		exit 1; \
-	fi
-# gh refuses `auth login` while GH_TOKEN is set in the environment ("The value of the GH_TOKEN
-# environment variable is being used for authentication") and exits 1 - which stopped the 9.1.0
-# release after the NuGet push and before the GitHub release. gh already authenticates with that
-# token then, so there is nothing to log in.
-	@if [ -n "$${GH_TOKEN:-}" ]; then \
-		echo "$(BLUE)[INFO]$(NC) GH_TOKEN is set in the environment - gh authenticates with it, skipping gh auth login"; \
-	else \
-		echo "$${GITHUB_GH_TOKEN}" | gh auth login -p ssh --with-token; \
-	fi
-
-check_release_notes: ## Assert RELEASE.md carries an entry for ONDEWO_VTSI_VERSION
-# `gh release create -n ""` succeeds and publishes an EMPTY release, so an entry that was forgotten -
-# or a heading whose wording drifted away from what the CURRENT_RELEASE_NOTES flip-flop greps for -
-# is otherwise only noticed by whoever reads the release page afterwards, by which time the tag
-# exists and cannot be moved.
+# `gh release create` with empty notes succeeds and publishes an EMPTY release, so an entry that was
+# forgotten - or a heading whose wording drifted away from what RELEASE_NOTES_CMD matches - is
+# otherwise only noticed by whoever reads the release page afterwards.
+check_release_notes: ## Assert RELEASE.md has a non-empty section for ONDEWO_VTSI_VERSION
 	@notes="$(CURRENT_RELEASE_NOTES)"; \
-	if [ -z "$$notes" ]; then \
-		echo "$(RED)[ERROR]$(NC) RELEASE.md has no 'Release ONDEWO VTSI Csharp Client ${ONDEWO_VTSI_VERSION}' entry"; \
+	body=$$(printf '%s\n' "$$notes" | sed -e '1d' -e '/^\*\{5\}/d' | tr -d '[:space:]'); \
+	if [ -z "$$notes" ] || [ -z "$$body" ]; then \
+		echo "$(RED)[ERROR]$(NC) RELEASE.md has no non-empty '## Release ONDEWO VTSI Csharp Client ${ONDEWO_VTSI_VERSION}' section"; \
 		echo "        The GitHub release would be created with empty notes - add the entry, under that"; \
 		echo "        exact heading and terminated by the ***** separator, before releasing."; \
 		exit 1; \
 	fi; \
 	echo "$(GREEN)[SUCCESS]$(NC) RELEASE.md has release notes for ${ONDEWO_VTSI_VERSION}"
 
-build_gh_release: check_release_notes ## Generate Github Release with CLI
-	gh release create --repo $(GH_REPO) "$(ONDEWO_VTSI_VERSION)" -n "$(CURRENT_RELEASE_NOTES)" -t "Release ${ONDEWO_VTSI_VERSION}"
+# The notes reach gh on stdin (--notes-file -), so no quote, backtick or $ in RELEASE.md can break
+# or change the command line. GH_TOKEN is set for this one command, from GITHUB_GH_TOKEN; there is
+# no `gh auth login`, so no token is ever written to ~/.config/gh on the release host.
+build_gh_release: check_release_notes ## Create the GitHub release with the RELEASE.md section as its notes
+	$(RELEASE_NOTES_CMD) | GH_TOKEN="$$GITHUB_GH_TOKEN" $(GH) release create "${ONDEWO_VTSI_VERSION}" \
+		--repo ${GH_REPO_PATH} --verify-tag --title "Release ${ONDEWO_VTSI_VERSION}" --notes-file -
 
-push_to_gh: login_to_gh build_gh_release ## Logs into GitHub CLI and releases
+push_to_gh: build_gh_release ## Create the GitHub release
 	@echo 'Released to Github'
+
+verify_tag_on_origin: ## Assert the release tag exists on origin (read-only)
+	@git ls-remote --exit-code origin "refs/tags/${ONDEWO_VTSI_VERSION}" >/dev/null || { \
+		echo "$(RED)[ERROR]$(NC) the tag ${ONDEWO_VTSI_VERSION} is not on origin"; exit 1; }
+	@echo "$(GREEN)[SUCCESS]$(NC) the tag ${ONDEWO_VTSI_VERSION} is on origin"
+
+verify_gh_release: ## Assert the GitHub release exists and its notes are not empty (read-only)
+	@body=$$(GH_TOKEN="$$GITHUB_GH_TOKEN" $(GH) release view "${ONDEWO_VTSI_VERSION}" --repo ${GH_REPO_PATH} --json body --jq .body) \
+		|| { echo "$(RED)[ERROR]$(NC) there is no GitHub release ${ONDEWO_VTSI_VERSION} (see the gh error above)"; exit 1; }; \
+	if [ -z "$$(printf '%s' "$$body" | tr -d '[:space:]')" ]; then \
+		echo "$(RED)[ERROR]$(NC) the GitHub release ${ONDEWO_VTSI_VERSION} has EMPTY notes"; exit 1; \
+	fi; \
+	echo "$(GREEN)[SUCCESS]$(NC) the GitHub release ${ONDEWO_VTSI_VERSION} exists and has notes"
 
 ########################################################
 #		NUGET
 
-publish: publish_dry_run push_to_nuget ## Verify the packed package, then publish it to nuget.org
+# `release` runs the same steps one by one, publish_dry_run long before anything is pushed.
+publish: publish_dry_run push_to_nuget verify_nuget_published ## Verify the packed package, publish it to nuget.org and wait until nuget.org serves it
 	@echo "$(GREEN)[SUCCESS]$(NC) ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} published to ${NUGET_SOURCE}"
 
 # The credential-free half of `publish`, and the only half CI ever runs. It exercises the whole
@@ -465,10 +615,11 @@ verify_nupkg_metadata: ## Assert the packed .nupkg/.snupkg carry the metadata nu
 		echo "        must stay set in ${OndewoPackageId}.csproj"; \
 		exit 1; \
 	}
+# The packages are read with tools/zip-entries.pl (core perl), so no unzip is needed on the host.
 	@mkdir -p ${DRY_RUN_DIR}
-	@unzip -p "${NUPKG}" "${OndewoPackageId}.nuspec" > ${DRY_RUN_DIR}/packed.nuspec
-	@unzip -l "${NUPKG}"  > ${DRY_RUN_DIR}/nupkg.list
-	@unzip -l "${SNUPKG}" > ${DRY_RUN_DIR}/snupkg.list
+	@perl tools/zip-entries.pl cat "${NUPKG}" "${OndewoPackageId}.nuspec" > ${DRY_RUN_DIR}/packed.nuspec
+	@perl tools/zip-entries.pl list "${NUPKG}"  > ${DRY_RUN_DIR}/nupkg.list
+	@perl tools/zip-entries.pl list "${SNUPKG}" > ${DRY_RUN_DIR}/snupkg.list
 	@echo "$(BLUE)[INFO]$(NC) Checking the nuspec of ${NUPKG} ..."
 	@rc=0 ; \
 	require() { \
@@ -489,9 +640,9 @@ verify_nupkg_metadata: ## Assert the packed .nupkg/.snupkg carry the metadata nu
 	require "RepositoryType"         "<repository[^>]+type=\"git\""                    "$$nuspec" ; \
 	require "RepositoryUrl"          "<repository[^>]+url=\"https?://.+\""             "$$nuspec" ; \
 	require "PackageReadmeFile"      "<readme>README.md</readme>"                      "$$nuspec" ; \
-	require "readme in the package"  "[[:space:]]README.md$$"                          "${DRY_RUN_DIR}/nupkg.list" ; \
-	require "assembly in the package" "lib/.+/${OndewoPackageId}.dll$$"                "${DRY_RUN_DIR}/nupkg.list" ; \
-	require "portable pdb in the symbols" "lib/.+/${OndewoPackageId}.pdb$$"            "${DRY_RUN_DIR}/snupkg.list" ; \
+	require "readme in the package"  "^README.md$$"                                    "${DRY_RUN_DIR}/nupkg.list" ; \
+	require "assembly in the package" "^lib/.+/${OndewoPackageId}.dll$$"               "${DRY_RUN_DIR}/nupkg.list" ; \
+	require "portable pdb in the symbols" "^lib/.+/${OndewoPackageId}.pdb$$"           "${DRY_RUN_DIR}/snupkg.list" ; \
 	if [ $$rc -ne 0 ]; then \
 		echo "$(RED)[ERROR]$(NC) ${NUPKG} is missing metadata nuget.org expects - fix ${OndewoPackageId}.csproj" ; \
 		exit 1 ; \
@@ -541,14 +692,27 @@ verify_nupkg_installs: ## Restore the packed package into a throwaway consumer p
 	}
 	@echo "$(GREEN)[SUCCESS]$(NC) a consumer can install ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} and its dependency graph"
 
+# An SDK older than 10.0.400 ignores NUGET_API_KEY and would push WITHOUT a key (see push_to_nuget).
+# `release` runs this before anything is committed; push_to_nuget runs it again.
+check_nuget_push_sdk: ## Assert this .NET SDK's `dotnet nuget push` reads NUGET_API_KEY from the environment
+	@dotnet nuget push --help 2>/dev/null | grep -q NUGET_API_KEY || { \
+		echo "$(RED)[ERROR]$(NC) this .NET SDK's 'dotnet nuget push' cannot read NUGET_API_KEY from the"; \
+		echo "        environment (SDK 10.0.400 and later can) - install a current .NET 10 SDK"; \
+		exit 1; \
+	}
+	@echo "$(GREEN)[SUCCESS]$(NC) 'dotnet nuget push' reads NUGET_API_KEY from the environment"
+
 # The API key never reaches an argv. `dotnet nuget push` reads it from the NUGET_API_KEY environment
-# variable when --api-key is not given (the `export` at the top of this file exports it), so neither
-# the shell nor the NuGet.CommandLine.XPlat.dll the `dotnet` muxer re-execs ever carries it on its
-# command line, which /proc/<pid>/cmdline shows to every user of the machine. That fallback exists
-# from .NET SDK 10.0.400 on (`dotnet nuget push --help` documents it); an older SDK would silently
-# push WITHOUT a key, hence the guard below. A NuGet.Config <apikeys> entry is no alternative: on
-# Linux it fails with "Encryption is not supported on non-Windows platforms" (measured, SDK 10.0.401).
-# Keep the key narrowly scoped anyway (Push only, glob Ondewo.*).
+# variable when --api-key is not given (this target is one of NUGET_CREDENTIAL_TARGETS, the only
+# ones the key is exported to), so neither the shell nor the NuGet.CommandLine.XPlat.dll the `dotnet`
+# muxer re-execs ever carries it on its command line, which /proc/<pid>/cmdline shows to every user
+# of the machine. That fallback exists from .NET SDK 10.0.400 on (`dotnet nuget push --help`
+# documents it); an older SDK would silently push WITHOUT a key, hence the guard below. A
+# NuGet.Config <apikeys> entry is no alternative: on Linux it fails with "Encryption is not
+# supported on non-Windows platforms" (measured, SDK 10.0.401). Keep the key narrowly scoped anyway
+# (Push only, glob Ondewo.*).
+# No --skip-duplicate: release_preflight proved the version is not on nuget.org, so "already exists"
+# here is a real problem and fails the release instead of passing as a no-op.
 # Pushing the .nupkg also uploads the .snupkg sitting beside it, with the same key.
 push_to_nuget: ## Publish the packed NuGet package to nuget.org
 	@if [ -z "$${NUGET_API_KEY}" ] || [ "$${NUGET_API_KEY}" = "ENTER_HERE_YOUR_NUGET_API_KEY" ]; then \
@@ -572,28 +736,71 @@ push_to_nuget: ## Publish the packed NuGet package to nuget.org
 		exit 1; \
 	}
 	@dotnet nuget push "${NUPKG}" \
-		--source ${NUGET_SOURCE} \
-		--skip-duplicate
+		--source ${NUGET_SOURCE}
 	@echo "$(GREEN)[SUCCESS]$(NC) Released to NuGet"
+
+# One look, read-only: true when the flat container's version index lists the version AND its .nupkg
+# downloads (200). A shell snippet rather than a sub-make, so the polling loop below does not print
+# a make error for every look that finds nothing yet.
+NUGET_SERVES_VERSION=listed=no ; served=no ; \
+	if curl -fsS --connect-timeout 20 --max-time 60 "${NUGET_FLATCONTAINER}/index.json" 2>/dev/null \
+		| grep -Fq '"${ONDEWO_VTSI_VERSION}"' ; then listed=yes ; fi ; \
+	code=$$(curl -sS --connect-timeout 20 --max-time 120 -o /dev/null -w '%{http_code}' \
+		"${NUGET_FLATCONTAINER}/${ONDEWO_VTSI_VERSION}/$$(echo ${OndewoPackageId} | tr 'A-Z' 'a-z').${ONDEWO_VTSI_VERSION}.nupkg") \
+		|| code="no answer" ; \
+	if [ "$$code" = 200 ]; then served=yes ; fi ; \
+	echo "$(BLUE)[INFO]$(NC) nuget.org: ${ONDEWO_VTSI_VERSION} listed=$$listed, .nupkg HTTP $$code" ; \
+	[ "$$listed" = yes ] && [ "$$served" = yes ]
+unexport NUGET_SERVES_VERSION
+
+# release.yml uses it to see that `make release` already pushed the version.
+check_nuget_serves_version: ## Exit 0 if nuget.org lists ONDEWO_VTSI_VERSION and serves its .nupkg (one look, read-only)
+	@$(NUGET_SERVES_VERSION)
+
+# Read-only. A fresh upload is validated and indexed before nuget.org serves it, so this polls
+# (NUGET_VERIFY_ATTEMPTS x NUGET_VERIFY_INTERVAL_S, 15 minutes by default) and fails the release when
+# the version never appears - the GitHub release, the branch and the tag are never created then.
+verify_nuget_published: ## Wait until nuget.org lists ONDEWO_VTSI_VERSION and serves its .nupkg (read-only)
+	@attempt=1 ; \
+	until { $(NUGET_SERVES_VERSION) ; } ; do \
+		if [ $$attempt -ge ${NUGET_VERIFY_ATTEMPTS} ]; then \
+			echo "$(RED)[ERROR]$(NC) nuget.org does not serve ${OndewoPackageId} ${ONDEWO_VTSI_VERSION} after ${NUGET_VERIFY_ATTEMPTS} attempts" ; \
+			exit 1 ; \
+		fi ; \
+		echo "$(BLUE)[INFO]$(NC) attempt $$attempt/${NUGET_VERIFY_ATTEMPTS}: not served yet, retrying in ${NUGET_VERIFY_INTERVAL_S} s ..." ; \
+		attempt=$$((attempt + 1)) ; \
+		sleep ${NUGET_VERIFY_INTERVAL_S} ; \
+	done ; \
+	echo "$(GREEN)[SUCCESS]$(NC) nuget.org serves ${OndewoPackageId} ${ONDEWO_VTSI_VERSION}"
 
 ########################################################
 #		DEVOPS-ACCOUNTS
 
-ondewo_release: spc clone_devops_accounts run_release_with_devops ## Release with credentials from devops-accounts repo
-	@rm -rf ${DEVOPS_ACCOUNT_GIT}
+ondewo_release: spc run_release_with_devops ## Release with credentials from devops-accounts repo
 
-clone_devops_accounts: ## Clones devops-accounts repo
-	if [ -d $(DEVOPS_ACCOUNT_GIT) ]; then rm -Rf $(DEVOPS_ACCOUNT_GIT); fi
-	git clone git@bitbucket.org:ondewo/${DEVOPS_ACCOUNT_GIT}.git
-
-run_release_with_devops: ## Read credentials from the cloned devops-accounts repo and run the full release
-# Anchored (`^NAME=`, so a comment mentioning a name cannot match) and handed to the sub-make through
-# its ENVIRONMENT: `make release NAME=value` put every credential on make's argv.
-	@set -a \
-		&& eval "$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' \
-			${DEVOPS_ACCOUNT_DIR}/account_github.env ${DEVOPS_ACCOUNT_DIR}/account_nuget.env)" \
-		&& set +a \
-		&& $(MAKE) release
+# Reads the two credentials and hands them to the release through its ENVIRONMENT (`make release
+# NAME=value` would put them on make's argv). The grep is anchored (`^NAME=`), so a comment that
+# merely mentions a name cannot match.
+#   * DEVOPS_ACCOUNT_DIR set to an existing directory (the ondewo-vtsi-api driver's one clone for all
+#     eleven clients): read from there, and leave the directory to its owner.
+#   * otherwise: clone into a fresh directory OUTSIDE this repository - the repository is mounted
+#     into the compiler and dotnet containers - and DELETE it right after the credentials are read,
+#     before the release starts. The trap deletes it on every other way out (a failed clone or read,
+#     Ctrl-C), so no account file outlives this recipe.
+run_release_with_devops: ## Read credentials from devops-accounts, delete the clone, then run the full release
+	@set -eu ; \
+	dir="$${DEVOPS_ACCOUNT_DIR:-}" ; own="" ; \
+	if [ -z "$$dir" ] || [ ! -d "$$dir" ]; then \
+		own=$$(mktemp -d "$${TMPDIR:-/tmp}/${DEVOPS_ACCOUNT_GIT}.XXXXXX") ; \
+		trap 'rm -rf "$$own"' EXIT INT TERM ; \
+		git clone --quiet --depth 1 git@bitbucket.org:ondewo/${DEVOPS_ACCOUNT_GIT}.git "$$own" ; \
+		dir="$$own" ; \
+	fi ; \
+	set -a ; \
+	eval "$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' "$$dir/account_github.env" "$$dir/account_nuget.env")" ; \
+	set +a ; \
+	if [ -n "$$own" ]; then rm -rf "$$own" ; fi ; \
+	$(MAKE) release
 
 spc: ## Checks if the Release Branch and Tag already exist
 	$(eval filtered_branches:= $(shell git branch --all | grep -E "(^|[ /])release/$(subst .,\.,${ONDEWO_VTSI_VERSION})$$"))

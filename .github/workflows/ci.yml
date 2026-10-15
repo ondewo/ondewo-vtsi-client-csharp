@@ -3,6 +3,7 @@ name: ci
 on:
   push:
     branches: ['**']
+    tags: ['**']
   pull_request:
   workflow_dispatch:
 
@@ -48,10 +49,10 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
-      # The api submodule is NOT checked out. This job builds and tests the stubs that are COMMITTED
-      # under api/; it never builds the compiler image and never runs protoc - regenerating the
-      # stubs is a separate, slow, docker-bound concern driven by `make build` on a developer
-      # machine, and Directory.Build.props mirrors the pins so a build without it works.
+      # This job builds and tests the stubs that are COMMITTED under api/; it never builds the
+      # compiler image and never runs protoc - regenerating the stubs is a separate, slow,
+      # docker-bound concern driven by `make build` on a developer machine, and
+      # Directory.Build.props mirrors the pins so a build without the submodules works.
       # actions/checkout starts with a bare `git init`, and git then prints a multi-line
       # "Using 'master' as the name for the initial branch" hint into every job log. Naming the
       # default up front silences it; master is this repository's default branch anyway.
@@ -67,6 +68,13 @@ jobs:
       # and this step is what keeps it able to do its job. One small public repository, depth 1.
       - name: Check out the pinned proto-compiler submodule
         run: git submodule update --init --depth 1 ondewo-proto-compiler
+
+      # The api submodule's own protos (not its nested s2t/sip/t2s submodules): the API-surface tests
+      # DERIVE every ondewo.vtsi service and RPC from them, instead of hard-coding counts and lists
+      # that break on the next API release. Without it they fall back to the committed stubs, and a
+      # test asserts that CI does not.
+      - name: Check out the pinned VTSI API submodule
+        run: git submodule update --init --depth 1 ondewo-vtsi-api
 
       - uses: actions/setup-dotnet@v6
         with:
