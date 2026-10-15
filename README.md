@@ -423,6 +423,11 @@ of `unzip`, and nothing uses `sudo`.
    when empty) and finally **`release_verify`**: the tag is on origin, the GitHub release has notes, nuget.org
    serves the version. `make release_verify` can be run on its own at any time; it changes nothing.
 
+`release_preflight` and `release_verify` also run standalone with nothing but `DEVOPS_ACCOUNT_DIR` set (the
+`ondewo-vtsi-api` driver does that): they read the credentials from that directory themselves. `make -n
+ondewo_release` only prints - it does not clone `ondewo-devops-accounts` (the release sub-make goes through
+`$(SUBMAKE)`, because GNU make executes a line that references `$(MAKE)` even under `-n`).
+
 `GITHUB_GH_TOKEN` and `NUGET_API_KEY` are read at runtime only and must never be committed. They never reach an
 argv or a log, and they are not even in the environment of most steps: the `Makefile` `unexport`s both from its
 blanket `export` and hands them back only to the targets that use them (`GITHUB_CREDENTIAL_TARGETS`,

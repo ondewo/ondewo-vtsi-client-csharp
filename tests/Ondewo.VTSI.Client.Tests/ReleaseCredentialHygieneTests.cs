@@ -54,7 +54,7 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.Contains("set -a", recipe, StringComparison.Ordinal);
             // Anchored: an unanchored grep also picks up comment lines that merely mention a name.
             Assert.Matches(new Regex(@"grep -h -E '\^\("), recipe);
-            Assert.Matches(new Regex(@"\$\(MAKE\) release\s*$"), recipe);
+            Assert.Matches(new Regex(@"\$\(SUBMAKE\) release\s*$"), recipe);
         }
 
         /// <summary>
@@ -70,10 +70,15 @@ namespace Ondewo.Vtsi.Client.Tests
             int clone = recipe.IndexOf("git clone", StringComparison.Ordinal);
             int read = recipe.IndexOf("eval \"$$(grep", StringComparison.Ordinal);
             int delete = recipe.IndexOf("rm -rf \"$$own\" ;", read, StringComparison.Ordinal);
-            int release = recipe.IndexOf("$(MAKE) release", StringComparison.Ordinal);
+            int release = recipe.IndexOf("$(SUBMAKE) release", StringComparison.Ordinal);
 
             Assert.True(clone >= 0 && read > clone && delete > read && release > delete,
-                "run_release_with_devops must clone, read, delete the clone and only then run $(MAKE) release");
+                "run_release_with_devops must clone, read, delete the clone and only then run $(SUBMAKE) release");
+            // GNU make EXECUTES a recipe line referencing $(MAKE) even under -n, so `make -n ondewo_release`
+            // would really clone the credentials repository; through SUBMAKE the line is only printed.
+            Assert.DoesNotContain("$(MAKE)", recipe, StringComparison.Ordinal);
+            Assert.DoesNotContain("${MAKE}", recipe, StringComparison.Ordinal);
+            Assert.Matches(new Regex(@"^SUBMAKE:=\$\(MAKE\)\s*$", RegexOptions.Multiline), Makefile);
             Assert.Contains("set -eu", recipe, StringComparison.Ordinal);
             Assert.Contains("mktemp -d", recipe, StringComparison.Ordinal);
             Assert.Matches(new Regex(@"trap 'rm -rf ""\$\$own""' EXIT INT TERM"), recipe);
@@ -122,6 +127,21 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.DoesNotContain(RecipeLines, line => Regex.IsMatch(line.Text, @"^\t-\s*git commit"));
         }
 
+        /// <summary>
+        /// The ondewo-vtsi-api driver runs release_preflight and release_verify standalone, with only
+        /// DEVOPS_ACCOUNT_DIR set, so both read the credentials from that directory themselves - first.
+        /// </summary>
+        [Fact]
+        public void ThePreflightAndTheVerificationLoadTheirOwnCredentialsFromDevopsAccountDir()
+        {
+            Assert.Matches(new Regex(@"^LOAD_DEVOPS_CREDENTIALS=if \[ -n ""\$\$\{DEVOPS_ACCOUNT_DIR:-\}"" \] && \[ -d ", RegexOptions.Multiline), Makefile);
+            Assert.Contains("eval \"$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' \\", Makefile, StringComparison.Ordinal);
+            foreach (string target in new[] { "release_preflight", "release_verify" })
+            {
+                Assert.StartsWith("$(LOAD_DEVOPS_CREDENTIALS) ;", RecipeCommands(target)[0], StringComparison.Ordinal);
+            }
+        }
+
         [Fact]
         public void ThePreflightAndTheVerificationAreReadOnlyAndCompleteTheirChecks()
         {
@@ -142,7 +162,7 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.Contains("create-verification-key", Makefile, StringComparison.Ordinal);
             Assert.Contains("| curl -sS --connect-timeout 20 --max-time 60 -K - ", nugetKey, StringComparison.Ordinal);
             Assert.Contains("-o /dev/null", nugetKey, StringComparison.Ordinal);
-            Assert.Matches(new Regex(@"^release_verify: verify_tag_on_origin verify_gh_release verify_nuget_published ##", RegexOptions.Multiline), Makefile);
+            Assert.Contains("verify_tag_on_origin verify_gh_release verify_nuget_published", Recipe("release_verify"), StringComparison.Ordinal);
             Assert.Contains("--json body --jq .body", Recipe("verify_gh_release"), StringComparison.Ordinal);
             foreach (string target in new[] { "release_preflight", "release_verify", "check_version_unreleased", "verify_nuget_published", "verify_gh_release" })
             {

@@ -90,6 +90,21 @@ GH?=$(CURDIR)/tools/gh-in-docker/gh
 # used as it is and left alone - its owner deletes it.
 DEVOPS_ACCOUNT_GIT=ondewo-devops-accounts
 DEVOPS_ACCOUNT_DIR?=
+# The ondewo-vtsi-api driver also runs release_preflight and release_verify STANDALONE, with nothing
+# but DEVOPS_ACCOUNT_DIR set, so those two load the credentials themselves: this shell snippet reads
+# them from that directory into the recipe shell's environment (anchored grep, set -a / eval, so no
+# value reaches an argv), and is a no-op when DEVOPS_ACCOUNT_DIR is unset or no directory.
+LOAD_DEVOPS_CREDENTIALS=if [ -n "$${DEVOPS_ACCOUNT_DIR:-}" ] && [ -d "$${DEVOPS_ACCOUNT_DIR}" ]; then \
+		set -a ; \
+		eval "$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' \
+			"$${DEVOPS_ACCOUNT_DIR}/account_github.env" "$${DEVOPS_ACCOUNT_DIR}/account_nuget.env")" ; \
+		set +a ; \
+	fi
+unexport LOAD_DEVOPS_CREDENTIALS
+# The sub-make of run_release_with_devops. GNU make EXECUTES a recipe line that references $(MAKE)
+# even under -n, so `make -n ondewo_release` would really clone ondewo-devops-accounts; through this
+# variable the line is only printed, like every other one.
+SUBMAKE:=$(MAKE)
 
 
 # --- Layout
@@ -442,7 +457,8 @@ release: ## Automate the entire release process
 # Read-only. Every check runs - a failure does not hide the next one - and the release stops if any
 # failed, before anything is built, committed, pushed or published.
 release_preflight: ## Read-only release gate: credentials valid, version unreleased, notes present, host tools
-	@rc=0 ; \
+	@$(LOAD_DEVOPS_CREDENTIALS) ; \
+	rc=0 ; \
 	for check in check_release_tools check_release_credentials check_gh_token_valid check_nuget_api_key_valid \
 	             check_version_unreleased check_release_notes ; do \
 		$(MAKE) --no-print-directory $$check || rc=1 ; \
@@ -454,7 +470,9 @@ release_preflight: ## Read-only release gate: credentials valid, version unrelea
 	echo "$(GREEN)[SUCCESS]$(NC) release preflight passed for ${ONDEWO_VTSI_VERSION}"
 
 # Read-only. What a finished release must look like from the outside.
-release_verify: verify_tag_on_origin verify_gh_release verify_nuget_published ## Read-only: the tag is on origin, the GitHub release has notes, nuget.org serves the version
+release_verify: ## Read-only: the tag is on origin, the GitHub release has notes, nuget.org serves the version
+	@$(LOAD_DEVOPS_CREDENTIALS) ; \
+	$(MAKE) --no-print-directory verify_tag_on_origin verify_gh_release verify_nuget_published
 	@echo "$(GREEN)[SUCCESS]$(NC) ${ONDEWO_VTSI_VERSION} is tagged, released on GitHub and served by nuget.org"
 
 # docker, make, git, perl and curl are all the release needs. dotnet runs in the pinned SDK image when
@@ -800,7 +818,7 @@ run_release_with_devops: ## Read credentials from devops-accounts, delete the cl
 	eval "$$(grep -h -E '^(GITHUB_GH_TOKEN|NUGET_API_KEY)=' "$$dir/account_github.env" "$$dir/account_nuget.env")" ; \
 	set +a ; \
 	if [ -n "$$own" ]; then rm -rf "$$own" ; fi ; \
-	$(MAKE) release
+	$(SUBMAKE) release
 
 spc: ## Checks if the Release Branch and Tag already exist
 	$(eval filtered_branches:= $(shell git branch --all | grep -E "(^|[ /])release/$(subst .,\.,${ONDEWO_VTSI_VERSION})$$"))
