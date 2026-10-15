@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Google.Protobuf;
@@ -22,14 +24,18 @@ namespace Ondewo.Vtsi.Client.Tests
     {
         private const string DummyTarget = "http://localhost:50051";
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Projects</c> declares, in declaration order.</summary>
+        // The RPC lists below are MUST-CONTAIN pins - RPCs consumers rely on, in declaration order - and
+        // never the whole surface: the complete set of every service is DERIVED from the protos (or the
+        // committed stubs) by VtsiApiSurface, so the next API release adds RPCs without editing them.
+
+        /// <summary>RPCs <c>ondewo.vtsi.Projects</c> must declare.</summary>
         private static readonly string[] ProjectsRpcs =
         {
             "CreateVtsiProject", "GetVtsiProject", "UpdateVtsiProject", "DeleteVtsiProject",
             "DeployVtsiProject", "UndeployVtsiProject", "ListVtsiProjects",
         };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Logs</c> declares, in declaration order.</summary>
+        /// <summary>RPCs <c>ondewo.vtsi.Logs</c> must declare.</summary>
         private static readonly string[] LogsRpcs =
         {
             "StreamCallLogs", "ListCallLogs", "GetCallLogStream", "ListCallLogStreams",
@@ -39,10 +45,10 @@ namespace Ondewo.Vtsi.Client.Tests
         /// <summary>The live server-streaming RPC of <c>ondewo.vtsi.Logs</c>.</summary>
         private const string StreamingRpc = "StreamCallLogs";
 
-        /// <summary>Every server-streaming RPC of <c>ondewo.vtsi.Logs</c> (9.1.0 adds <c>ExportCallLogs</c>).</summary>
+        /// <summary>Server-streaming RPCs <c>ondewo.vtsi.Logs</c> must declare (9.1.0 adds <c>ExportCallLogs</c>).</summary>
         private static readonly string[] LogsStreamingRpcs = { StreamingRpc, "ExportCallLogs" };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Softphones</c> declares (9.1.0), in declaration order.</summary>
+        /// <summary>RPCs <c>ondewo.vtsi.Softphones</c> must declare (as of 9.1.0).</summary>
         private static readonly string[] SoftphonesRpcs =
         {
             "CreateSoftphoneAccount", "GetSoftphoneAccount", "UpdateSoftphoneAccount", "DeleteSoftphoneAccount",
@@ -51,7 +57,7 @@ namespace Ondewo.Vtsi.Client.Tests
             "GetSoftphoneRegistration",
         };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Campaigns</c> declares (9.1.0), in declaration order.</summary>
+        /// <summary>RPCs <c>ondewo.vtsi.Campaigns</c> must declare (as of 9.1.0).</summary>
         private static readonly string[] CampaignsRpcs =
         {
             "CreateCampaign", "GetCampaign", "UpdateCampaign", "DeleteCampaign", "ListCampaigns",
@@ -60,7 +66,7 @@ namespace Ondewo.Vtsi.Client.Tests
             "CloneCampaign",
         };
 
-        /// <summary>Every RPC <c>ondewo.vtsi.Events</c> declares (9.1.0), in declaration order.</summary>
+        /// <summary>RPCs <c>ondewo.vtsi.Events</c> must declare (as of 9.1.0).</summary>
         private static readonly string[] EventsRpcs =
         {
             "CreateVtsiEventSubscription", "GetVtsiEventSubscription", "UpdateVtsiEventSubscription",
@@ -69,7 +75,7 @@ namespace Ondewo.Vtsi.Client.Tests
             "SubscribeVtsiEvents",
         };
 
-        /// <summary>The streaming RPCs of <c>ondewo.vtsi.Calls</c> (9.1.0) and their method types.</summary>
+        /// <summary>Streaming RPCs <c>ondewo.vtsi.Calls</c> must declare (as of 9.1.0), with their method types.</summary>
         private static readonly (string Rpc, MethodType Type)[] CallsStreamingRpcs =
         {
             ("StreamCallerStatus", MethodType.ServerStreaming),
@@ -243,9 +249,9 @@ namespace Ondewo.Vtsi.Client.Tests
         }
 
         /// <summary>
-        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest: 48 RPCs in
-        /// 9.1.0. Each unary one gets a blocking and an <c>...Async</c> client method; the five
-        /// streaming ones (status streams and live call audio) get exactly one.
+        /// <c>ondewo.vtsi.Calls</c> is the product's main service and by far the largest. Each unary RPC
+        /// gets a blocking and an <c>...Async</c> client method; each streaming one (status streams and
+        /// live call audio) gets exactly one. The full RPC set is derived (<see cref="VtsiApiSurface"/>).
         /// </summary>
         [Fact]
         public void CallsClientBindsToAChannelAndExposesEveryDeclaredRpcTwice()
@@ -256,8 +262,12 @@ namespace Ondewo.Vtsi.Client.Tests
 
             Assert.NotNull(client);
             Assert.Equal("ondewo.vtsi.Calls", Calls.Descriptor.FullName);
-            Assert.Equal(48, Calls.Descriptor.Methods.Count);
+            Assert.Equal(VtsiApiSurface.RpcNamesOf("ondewo.vtsi.Calls"), Calls.Descriptor.Methods.Select(method => method.Name));
             Assert.Contains(Calls.Descriptor.Methods, method => method.Name == "StartCaller");
+            foreach ((string rpc, MethodType type) in CallsStreamingRpcs)
+            {
+                Assert.Equal(type, MethodTypeOf(typeof(Calls), rpc));
+            }
 
             string[] clientMethods = typeof(Calls.CallsClient)
                 .GetMethods()
@@ -268,16 +278,15 @@ namespace Ondewo.Vtsi.Client.Tests
             foreach (MethodDescriptor rpc in Calls.Descriptor.Methods)
             {
                 Assert.Contains(rpc.Name, clientMethods);
-                (string Rpc, MethodType Type) streaming = CallsStreamingRpcs.SingleOrDefault(entry => entry.Rpc == rpc.Name);
-                if (streaming.Rpc == null)
+                if (rpc.IsClientStreaming || rpc.IsServerStreaming)
                 {
-                    Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc.Name));
-                    Assert.Contains(rpc.Name + "Async", clientMethods);
+                    Assert.NotEqual(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc.Name));
+                    Assert.DoesNotContain(rpc.Name + "Async", clientMethods);
                 }
                 else
                 {
-                    Assert.Equal(streaming.Type, MethodTypeOf(typeof(Calls), rpc.Name));
-                    Assert.DoesNotContain(rpc.Name + "Async", clientMethods);
+                    Assert.Equal(MethodType.Unary, MethodTypeOf(typeof(Calls), rpc.Name));
+                    Assert.Contains(rpc.Name + "Async", clientMethods);
                 }
             }
 
@@ -305,8 +314,10 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.NotNull(logs);
             Assert.Equal("ondewo.vtsi.Projects", Projects.Descriptor.FullName);
             Assert.Equal("ondewo.vtsi.Logs", Logs.Descriptor.FullName);
-            Assert.Equal(ProjectsRpcs, Projects.Descriptor.Methods.Select(method => method.Name));
-            Assert.Equal(LogsRpcs, Logs.Descriptor.Methods.Select(method => method.Name));
+            Assert.Equal(VtsiApiSurface.RpcNamesOf("ondewo.vtsi.Projects"), Projects.Descriptor.Methods.Select(method => method.Name));
+            Assert.Equal(VtsiApiSurface.RpcNamesOf("ondewo.vtsi.Logs"), Logs.Descriptor.Methods.Select(method => method.Name));
+            AssertContainsInOrder(ProjectsRpcs, Projects.Descriptor.Methods.Select(method => method.Name));
+            AssertContainsInOrder(LogsRpcs, Logs.Descriptor.Methods.Select(method => method.Name));
         }
 
         /// <summary>
@@ -325,9 +336,9 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.Equal("ondewo.vtsi.Softphones", Softphones.Descriptor.FullName);
             Assert.Equal("ondewo.vtsi.Campaigns", Campaigns.Descriptor.FullName);
             Assert.Equal("ondewo.vtsi.Events", Events.Descriptor.FullName);
-            Assert.Equal(SoftphonesRpcs, Softphones.Descriptor.Methods.Select(method => method.Name));
-            Assert.Equal(CampaignsRpcs, Campaigns.Descriptor.Methods.Select(method => method.Name));
-            Assert.Equal(EventsRpcs, Events.Descriptor.Methods.Select(method => method.Name));
+            AssertContainsInOrder(SoftphonesRpcs, Softphones.Descriptor.Methods.Select(method => method.Name));
+            AssertContainsInOrder(CampaignsRpcs, Campaigns.Descriptor.Methods.Select(method => method.Name));
+            AssertContainsInOrder(EventsRpcs, Events.Descriptor.Methods.Select(method => method.Name));
 
             foreach ((Type service, Type client, string[] rpcs, string streamingRpc) in new[]
                      {
@@ -501,6 +512,115 @@ namespace Ondewo.Vtsi.Client.Tests
             Assert.Same(ProductStubs.Assembly, typeof(global::Ondewo.S2T.TranscribeRequestConfig).Assembly);
             Assert.Same(ProductStubs.Assembly, typeof(global::Ondewo.T2S.RequestConfig).Assembly);
         }
+
+        /// <summary>
+        /// Every service the VTSI protos declare is generated - nothing more, nothing less - with exactly
+        /// the declared RPCs, in declaration order, each with its declared streaming shape, and a client
+        /// that exposes it: a unary RPC as a blocking and an <c>...Async</c> method, a streaming RPC as one.
+        /// Derived from the protos (or the committed stubs), so a new RPC needs no test edit.
+        /// </summary>
+        [Fact]
+        public void EveryServiceTheVtsiApiDeclaresIsGeneratedWithEveryRpcAndItsStreamingShape()
+        {
+            using GrpcChannel channel = GrpcChannel.ForAddress(DummyTarget);
+            Type[] serviceClasses = ProductStubs.Assembly.GetTypes()
+                .Where(type => type.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static)?.PropertyType == typeof(ServiceDescriptor))
+                .Where(type => ServiceDescriptorOf(type).FullName.StartsWith(VtsiApiSurface.Package + ".", StringComparison.Ordinal))
+                .ToArray();
+
+            Assert.Equal(
+                VtsiApiSurface.Services.Keys.OrderBy(name => name, StringComparer.Ordinal),
+                serviceClasses.Select(type => ServiceDescriptorOf(type).FullName).OrderBy(name => name, StringComparer.Ordinal));
+
+            foreach (Type serviceClass in serviceClasses)
+            {
+                ServiceDescriptor service = ServiceDescriptorOf(serviceClass);
+                IReadOnlyList<VtsiApiSurface.Rpc> declared = VtsiApiSurface.RpcsOf(service.FullName);
+                Assert.Equal(declared.Select(rpc => rpc.Name), service.Methods.Select(method => method.Name));
+
+                Type clientClass = serviceClass.GetNestedType(serviceClass.Name + "Client");
+                Assert.NotNull(clientClass);
+                Assert.NotNull(Activator.CreateInstance(clientClass, channel));
+                string[] clientMethods = clientClass.GetMethods().Select(method => method.Name).Distinct().ToArray();
+
+                foreach (VtsiApiSurface.Rpc rpc in declared)
+                {
+                    MethodDescriptor method = service.FindMethodByName(rpc.Name);
+                    Assert.Equal(rpc.ClientStreaming, method.IsClientStreaming);
+                    Assert.Equal(rpc.ServerStreaming, method.IsServerStreaming);
+                    MethodType expected = (rpc.ClientStreaming, rpc.ServerStreaming) switch
+                    {
+                        (false, false) => MethodType.Unary,
+                        (false, true) => MethodType.ServerStreaming,
+                        (true, false) => MethodType.ClientStreaming,
+                        _ => MethodType.DuplexStreaming,
+                    };
+                    Assert.Equal(expected, MethodTypeOf(serviceClass, rpc.Name));
+                    Assert.Contains(rpc.Name, clientMethods);
+                    if (expected == MethodType.Unary)
+                    {
+                        Assert.Contains(rpc.Name + "Async", clientMethods);
+                    }
+                    else
+                    {
+                        Assert.DoesNotContain(rpc.Name + "Async", clientMethods);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// The derivation itself is pinned, so the test above cannot pass by deriving nothing: both
+        /// parsers read real declarations, every service the product is known for is found, and CI -
+        /// which checks the api submodule out - really reads the protos rather than falling back.
+        /// </summary>
+        [Fact]
+        public void TheDerivedApiSurfaceReadsRealDeclarations()
+        {
+            Dictionary<string, List<VtsiApiSurface.Rpc>> proto = VtsiApiSurface.ParseProto(
+                "syntax = \"proto3\";\npackage ondewo.vtsi;\n// rpc Commented (A) returns (B);\n" +
+                "service S {\n  rpc One (A) returns (B) { option (x) = { get: \"//v1/{name}\" }; }\n" +
+                "  rpc Two(stream A)\n    returns (stream B);\n  rpc Three (A) returns (stream B);\n}\n");
+            Assert.Equal(
+                new[] { new VtsiApiSurface.Rpc("One", false, false), new VtsiApiSurface.Rpc("Two", true, true), new VtsiApiSurface.Rpc("Three", false, true) },
+                Assert.Single(proto, entry => entry.Key == "ondewo.vtsi.S").Value);
+
+            Dictionary<string, List<VtsiApiSurface.Rpc>> stub = VtsiApiSurface.ParseStub(
+                File.ReadAllText(Path.Combine(VtsiApiSurface.RepositoryRoot, "api", "Ondewo", "Vtsi", "LogsGrpc.cs")));
+            Assert.Contains(new VtsiApiSurface.Rpc("StreamCallLogs", false, true), stub["ondewo.vtsi.Logs"]);
+            Assert.Contains(new VtsiApiSurface.Rpc("ListCallLogs", false, false), stub["ondewo.vtsi.Logs"]);
+
+            foreach (string service in new[]
+                     {
+                         "ondewo.vtsi.Calls", "ondewo.vtsi.Projects", "ondewo.vtsi.Logs",
+                         "ondewo.vtsi.Softphones", "ondewo.vtsi.Campaigns", "ondewo.vtsi.Events",
+                     })
+            {
+                Assert.Contains(service, VtsiApiSurface.Services.Keys);
+            }
+
+            if (Environment.GetEnvironmentVariable("GITHUB_ACTIONS") == "true")
+            {
+                Assert.Equal("protos", VtsiApiSurface.Source);
+            }
+        }
+
+        /// <summary>Asserts <paramref name="pins"/> all occur in <paramref name="actual"/>, in the same relative order.</summary>
+        private static void AssertContainsInOrder(IEnumerable<string> pins, IEnumerable<string> actual)
+        {
+            List<string> names = actual.ToList();
+            int previous = -1;
+            foreach (string pin in pins)
+            {
+                int index = names.IndexOf(pin);
+                Assert.True(index >= 0, $"{pin} is not declared");
+                Assert.True(index > previous, $"{pin} is declared out of order");
+                previous = index;
+            }
+        }
+
+        private static ServiceDescriptor ServiceDescriptorOf(Type serviceClass) =>
+            (ServiceDescriptor)serviceClass.GetProperty("Descriptor", BindingFlags.Public | BindingFlags.Static)!.GetValue(null)!;
 
         private static MethodType MethodTypeOf(Type serviceClass, string rpc)
         {
