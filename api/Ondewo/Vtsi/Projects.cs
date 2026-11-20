@@ -26,126 +26,153 @@ namespace Ondewo.Vtsi {
           string.Concat(
             "ChpvbmRld28vdnRzaS9wcm9qZWN0cy5wcm90bxILb25kZXdvLnZ0c2kaIGdv",
             "b2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvItcFCgtWdHNpUHJvamVjdBIMCgRuYW1lGAEg",
-            "ASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRITCgttYXhfY2FsbGVycxgDIAEo",
-            "BRIVCg1tYXhfbGlzdGVuZXJzGAQgASgFEjYKEGFzdGVyaXNrX2NvbmZpZ3MY",
-            "BSABKAsyHC5vbmRld28udnRzaS5Bc3Rlcmlza0NvbmZpZ3MSOwoTdnRzaV9w",
-            "cm9qZWN0X3N0YXR1cxgGIAEoDjIeLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
-            "U3RhdHVzEhIKCmNyZWF0ZWRfYnkYByABKAkSLgoKY3JlYXRlZF9hdBgIIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEwoLbW9kaWZpZWRfYnkY",
-            "CSABKAkSLwoLbW9kaWZpZWRfYXQYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wEhYKDmFjdGl2ZV9jYWxsZXJzGAsgASgFEhgKEGFjdGl2ZV9s",
-            "aXN0ZW5lcnMYDCABKAUSFQoNYXN0ZXJpc2tfcG9ydBgNIAEoBRIXCg9ubHVf",
-            "YWdlbnRfbmFtZXMYDiADKAkSGAoQZGVwbG95ZWRfY2FsbGVycxgPIAEoBRIa",
-            "ChJkZXBsb3llZF9saXN0ZW5lcnMYECABKAUSJwofdHJhbnNmZXJfcGhvbmVf",
-            "bnVtYmVyX2FsbG93bGlzdBgRIAMoCRIWCg5zdGF0dXNfbWVzc2FnZRgSIAEo",
-            "CRI1ChFzdGF0dXNfY2hhbmdlZF9hdBgTIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXASRQoYdHJ1bmtfcmVnaXN0cmF0aW9uX3N0YXRlGBQgASgO",
-            "MiMub25kZXdvLnZ0c2kuVHJ1bmtSZWdpc3RyYXRpb25TdGF0ZRIiChphc3Rl",
-            "cmlza192ZXJzaW9uX2VmZmVjdGl2ZRgVIAEoCSLsAwoYQXN0ZXJpc2tDb25m",
-            "aWdzVmFyaWFibGVzEhoKEnNpcF90cnVua191c2VybmFtZRgBIAEoCRIaChJz",
-            "aXBfdHJ1bmtfcGFzc3dvcmQYAiABKAkSFgoOc2lwX3RydW5rX2hvc3QYAyAB",
-            "KAkSFwoPdHJhbnNmZXJfbnVtYmVyGAQgASgJEhwKFHRyYW5zZmVyX251bWJl",
-            "cl9ob3N0GAUgASgJEh4KFnNpcF90cnVua19waG9uZV9udW1iZXIYBiABKAkS",
-            "OwoTc2lwX3RydW5rX3RyYW5zcG9ydBgHIAEoDjIeLm9uZGV3by52dHNpLlNp",
-            "cFRydW5rVHJhbnNwb3J0EiIKFXNpcF90cnVua19zb3VyY2VfY2lkchgIIAEo",
-            "CUgAiAEBEioKHXNpcF90cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVtGAkgASgJ",
-            "SAGIAQESJAoXc2lwX3RydW5rX3ZlcmlmeV9zZXJ2ZXIYCiABKAhIAogBARIe",
-            "ChZzb2Z0cGhvbmVfcGVybWl0X2NpZHJzGAsgAygJQhgKFl9zaXBfdHJ1bmtf",
-            "c291cmNlX2NpZHJCIAoeX3NpcF90cnVua19jYV9jZXJ0aWZpY2F0ZXNfcGVt",
-            "QhoKGF9zaXBfdHJ1bmtfdmVyaWZ5X3NlcnZlciKeAQoUQXN0ZXJpc2tDb25m",
-            "aWdzRmlsZXMSHgoWcGpzaXBfY29uZl9maWxlX3N0cmluZxgBIAEoCRIjChtl",
-            "eHRlbnNpb25zX2NvbmZfZmlsZV9zdHJpbmcYAiABKAkSHwoXcXVldWVzX2Nv",
-            "bmZfZmlsZV9zdHJpbmcYAyABKAkSIAoYbW9kdWxlc19jb25mX2ZpbGVfc3Ry",
-            "aW5nGAQgASgJIroCCg9Bc3Rlcmlza0NvbmZpZ3MSSwoaYXN0ZXJpc2tfY29u",
-            "Zmlnc192YXJpYWJsZXMYASABKAsyJS5vbmRld28udnRzaS5Bc3Rlcmlza0Nv",
-            "bmZpZ3NWYXJpYWJsZXNIABJDChZhc3Rlcmlza19jb25maWdzX2ZpbGVzGAIg",
-            "ASgLMiEub25kZXdvLnZ0c2kuQXN0ZXJpc2tDb25maWdzRmlsZXNIABIwCiZh",
-            "c3Rlcmlza19jb25maWdzX3RhcmdldF9kaXJlY3RvcnlfbmFtZRgDIAEoCUgA",
-            "EhUKDWFzdGVyaXNrX3BvcnQYBCABKAUSHQoQYXN0ZXJpc2tfdmVyc2lvbhgF",
-            "IAEoCUgBiAEBQhgKFmFzdGVyaXNrX2NvbmZpZ3Nfb25lb2ZCEwoRX2FzdGVy",
-            "aXNrX3ZlcnNpb24ifAoYQ3JlYXRlVnRzaVByb2plY3RSZXF1ZXN0Ei4KDHZ0",
-            "c2lfcHJvamVjdBgBIAEoCzIYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0EhkK",
-            "DWVycm9yX21lc3NhZ2UYAiABKAlCAhgBEhUKDXZhbGlkYXRlX29ubHkYAyAB",
-            "KAgiYgoZQ3JlYXRlVnRzaVByb2plY3RSZXNwb25zZRIuCgx2dHNpX3Byb2pl",
-            "Y3QYASABKAsyGC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIVCg1lcnJvcl9t",
-            "ZXNzYWdlGAIgASgJIo4BChVHZXRWdHNpUHJvamVjdFJlcXVlc3QSDAoEbmFt",
-            "ZRgBIAEoCRI3ChF2dHNpX3Byb2plY3RfdmlldxgCIAEoDjIcLm9uZGV3by52",
-            "dHNpLlZ0c2lQcm9qZWN0VmlldxIuCgpmaWVsZF9tYXNrGAMgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLkZpZWxkTWFzayLrAwoXTGlzdFZ0c2lQcm9qZWN0c1Jl",
-            "cXVlc3QSNwoRdnRzaV9wcm9qZWN0X3ZpZXcYASABKA4yHC5vbmRld28udnRz",
-            "aS5WdHNpUHJvamVjdFZpZXcSFwoKcGFnZV90b2tlbhgCIAEoCUgAiAEBEkIK",
-            "FHZ0c2lfcHJvamVjdF9zb3J0aW5nGAMgASgLMh8ub25kZXdvLnZ0c2kuVnRz",
-            "aVByb2plY3RTb3J0aW5nSAGIAQESFwoPbmx1X2FnZW50X25hbWVzGAQgAygJ",
-            "Ei4KCmZpZWxkX21hc2sYBSABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
-            "YXNrEhEKCXBhZ2Vfc2l6ZRgGIAEoBRIwCghzdGF0dXNlcxgHIAMoDjIeLm9u",
-            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0U3RhdHVzEh0KFWRpc3BsYXlfbmFtZV9j",
-            "b250YWlucxgIIAEoCRIxCg1jcmVhdGVkX2FmdGVyGAkgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIyCg5jcmVhdGVkX2JlZm9yZRgKIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDQoLX3BhZ2VfdG9rZW5CFwoV",
-            "X3Z0c2lfcHJvamVjdF9zb3J0aW5nImQKGExpc3RWdHNpUHJvamVjdHNSZXNw",
-            "b25zZRIvCg12dHNpX3Byb2plY3RzGAEgAygLMhgub25kZXdvLnZ0c2kuVnRz",
-            "aVByb2plY3QSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpsDChJWdHNpUHJv",
-            "amVjdFNvcnRpbmcSUwoNc29ydGluZ19maWVsZBgBIAEoDjI3Lm9uZGV3by52",
-            "dHNpLlZ0c2lQcm9qZWN0U29ydGluZy5WdHNpUHJvamVjdFNvcnRpbmdGaWVs",
-            "ZEgAiAEBEj4KDHNvcnRpbmdfbW9kZRgCIAEoDjIjLm9uZGV3by52dHNpLlZ0",
-            "c2lQcm9qZWN0U29ydGluZ01vZGVIAYgBASLMAQoXVnRzaVByb2plY3RTb3J0",
-            "aW5nRmllbGQSGwoXTk9fVlRTSV9QUk9KRUNUX1NPUlRJTkcQABIdChlTT1JU",
-            "X1ZUU0lfUFJPSkVDVF9CWV9OQU1FEAESJQohU09SVF9WVFNJX1BST0pFQ1Rf",
-            "QllfRElTUExBWV9OQU1FEAISJgoiU09SVF9WVFNJX1BST0pFQ1RfQllfQ1JF",
-            "QVRJT05fREFURRADEiYKIlNPUlRfVlRTSV9QUk9KRUNUX0JZX0xBU1RfTU9E",
-            "SUZJRUQQBEIQCg5fc29ydGluZ19maWVsZEIPCg1fc29ydGluZ19tb2RlIsIB",
-            "ChhVcGRhdGVWdHNpUHJvamVjdFJlcXVlc3QSLgoMdnRzaV9wcm9qZWN0GAEg",
-            "ASgLMhgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QSLwoLdXBkYXRlX21hc2sY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEi4KCmZpZWxkX21h",
-            "c2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhUKDXZhbGlk",
-            "YXRlX29ubHkYBCABKAgicAoZVXBkYXRlVnRzaVByb2plY3RSZXNwb25zZRIM",
-            "CgRuYW1lGAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkSLgoMdnRzaV9w",
-            "cm9qZWN0GAMgASgLMhgub25kZXdvLnZ0c2kuVnRzaVByb2plY3QiKAoYRGVs",
-            "ZXRlVnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkiQAoZRGVsZXRl",
-            "VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1lGAEgASgJEhUKDWVycm9yX21l",
-            "c3NhZ2UYAiABKAkiKAoYRGVwbG95VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5h",
-            "bWUYASABKAkiQAoZRGVwbG95VnRzaVByb2plY3RSZXNwb25zZRIMCgRuYW1l",
-            "GAEgASgJEhUKDWVycm9yX21lc3NhZ2UYAiABKAkiKgoaVW5kZXBsb3lWdHNp",
-            "UHJvamVjdFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJCChtVbmRlcGxveVZ0c2lQ",
-            "cm9qZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdl",
-            "GAIgASgJKuoBChZUcnVua1JlZ2lzdHJhdGlvblN0YXRlEigKJFRSVU5LX1JF",
-            "R0lTVFJBVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEicKI1RSVU5LX1JFR0lT",
-            "VFJBVElPTl9TVEFURV9SRUdJU1RFUkVEEAESKQolVFJVTktfUkVHSVNUUkFU",
-            "SU9OX1NUQVRFX1VOUkVHSVNURVJFRBACEiUKIVRSVU5LX1JFR0lTVFJBVElP",
-            "Tl9TVEFURV9SRUpFQ1RFRBADEisKJ1RSVU5LX1JFR0lTVFJBVElPTl9TVEFU",
-            "RV9OT1RfQ09ORklHVVJFRBAEKp4BChFWdHNpUHJvamVjdFN0YXR1cxIPCgtV",
-            "TlNQRUNJRklFRBAAEg4KClVOREVQTE9ZRUQQARIMCghVUERBVElORxACEg0K",
-            "CURFUExPWUlORxADEgwKCERFUExPWUVEEAQSDwoLVU5ERVBMT1lJTkcQBRIM",
-            "CghERUxFVElORxAGEgsKB0RFTEVURUQQBxIRCg1ERVBMT1lfRkFJTEVEEAgq",
-            "jwEKEVNpcFRydW5rVHJhbnNwb3J0EiMKH1NJUF9UUlVOS19UUkFOU1BPUlRf",
-            "VU5TUEVDSUZJRUQQABIbChdTSVBfVFJVTktfVFJBTlNQT1JUX1RMUxABEhsK",
-            "F1NJUF9UUlVOS19UUkFOU1BPUlRfVURQEAISGwoXU0lQX1RSVU5LX1RSQU5T",
-            "UE9SVF9UQ1AQAyo3ChZWdHNpUHJvamVjdFNvcnRpbmdNb2RlEg0KCUFTQ0VO",
-            "RElORxAAEg4KCkRFU0NFTkRJTkcQASqOAQoPVnRzaVByb2plY3RWaWV3EiEK",
-            "HVZUU0lfUFJPSkVDVF9WSUVXX1VOU1BFQ0lGSUVEEAASGgoWVlRTSV9QUk9K",
-            "RUNUX1ZJRVdfRlVMTBABEh0KGVZUU0lfUFJPSkVDVF9WSUVXX1NIQUxMT1cQ",
-            "AhIdChlWVFNJX1BST0pFQ1RfVklFV19NSU5JTVVNEAMytQUKCFByb2plY3Rz",
-            "EmIKEUNyZWF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuQ3JlYXRlVnRz",
-            "aVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuQ3JlYXRlVnRzaVByb2pl",
-            "Y3RSZXNwb25zZRJOCg5HZXRWdHNpUHJvamVjdBIiLm9uZGV3by52dHNpLkdl",
-            "dFZ0c2lQcm9qZWN0UmVxdWVzdBoYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0",
-            "EmIKEVVwZGF0ZVZ0c2lQcm9qZWN0EiUub25kZXdvLnZ0c2kuVXBkYXRlVnRz",
-            "aVByb2plY3RSZXF1ZXN0GiYub25kZXdvLnZ0c2kuVXBkYXRlVnRzaVByb2pl",
-            "Y3RSZXNwb25zZRJiChFEZWxldGVWdHNpUHJvamVjdBIlLm9uZGV3by52dHNp",
-            "LkRlbGV0ZVZ0c2lQcm9qZWN0UmVxdWVzdBomLm9uZGV3by52dHNpLkRlbGV0",
-            "ZVZ0c2lQcm9qZWN0UmVzcG9uc2USYgoRRGVwbG95VnRzaVByb2plY3QSJS5v",
-            "bmRld28udnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlcXVlc3QaJi5vbmRld28u",
-            "dnRzaS5EZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEmgKE1VuZGVwbG95VnRz",
-            "aVByb2plY3QSJy5vbmRld28udnRzaS5VbmRlcGxveVZ0c2lQcm9qZWN0UmVx",
-            "dWVzdBooLm9uZGV3by52dHNpLlVuZGVwbG95VnRzaVByb2plY3RSZXNwb25z",
-            "ZRJfChBMaXN0VnRzaVByb2plY3RzEiQub25kZXdvLnZ0c2kuTGlzdFZ0c2lQ",
-            "cm9qZWN0c1JlcXVlc3QaJS5vbmRld28udnRzaS5MaXN0VnRzaVByb2plY3Rz",
-            "UmVzcG9uc2ViBnByb3RvMw=="));
+            "dWYvdGltZXN0YW1wLnByb3RvGh5vbmRld28vdnRzaS9jYWxsX2NvbmZpZ3Mu",
+            "cHJvdG8i3QgKC1Z0c2lQcm9qZWN0EgwKBG5hbWUYASABKAkSFAoMZGlzcGxh",
+            "eV9uYW1lGAIgASgJEhMKC21heF9jYWxsZXJzGAMgASgFEhUKDW1heF9saXN0",
+            "ZW5lcnMYBCABKAUSNgoQYXN0ZXJpc2tfY29uZmlncxgFIAEoCzIcLm9uZGV3",
+            "by52dHNpLkFzdGVyaXNrQ29uZmlncxI7ChN2dHNpX3Byb2plY3Rfc3RhdHVz",
+            "GAYgASgOMh4ub25kZXdvLnZ0c2kuVnRzaVByb2plY3RTdGF0dXMSEgoKY3Jl",
+            "YXRlZF9ieRgHIAEoCRIuCgpjcmVhdGVkX2F0GAggASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBITCgttb2RpZmllZF9ieRgJIAEoCRIvCgttb2Rp",
+            "ZmllZF9hdBgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASFgoO",
+            "YWN0aXZlX2NhbGxlcnMYCyABKAUSGAoQYWN0aXZlX2xpc3RlbmVycxgMIAEo",
+            "BRIVCg1hc3Rlcmlza19wb3J0GA0gASgFEhcKD25sdV9hZ2VudF9uYW1lcxgO",
+            "IAMoCRIYChBkZXBsb3llZF9jYWxsZXJzGA8gASgFEhoKEmRlcGxveWVkX2xp",
+            "c3RlbmVycxgQIAEoBRInCh90cmFuc2Zlcl9waG9uZV9udW1iZXJfYWxsb3ds",
+            "aXN0GBEgAygJEhYKDnN0YXR1c19tZXNzYWdlGBIgASgJEjUKEXN0YXR1c19j",
+            "aGFuZ2VkX2F0GBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJF",
+            "Chh0cnVua19yZWdpc3RyYXRpb25fc3RhdGUYFCABKA4yIy5vbmRld28udnRz",
+            "aS5UcnVua1JlZ2lzdHJhdGlvblN0YXRlEiIKGmFzdGVyaXNrX3ZlcnNpb25f",
+            "ZWZmZWN0aXZlGBUgASgJEj8KFndhcm1fdHJhbnNmZXJfZGVmYXVsdHMYFiAB",
+            "KAsyHy5vbmRld28udnRzaS5XYXJtVHJhbnNmZXJDb25maWcSSQoUZmVhdHVy",
+            "ZV9hdmFpbGFiaWxpdHkYFyABKAsyKy5vbmRld28udnRzaS5WdHNpUHJvamVj",
+            "dEZlYXR1cmVBdmFpbGFiaWxpdHkSHgoRaXZyX21lbnVzX2VuYWJsZWQYGCAB",
+            "KAhIAIgBARJYChl0cmFuc2Zlcl90YXJnZXRfZGlyZWN0b3J5GBkgAygLMjUu",
+            "b25kZXdvLnZ0c2kuVnRzaVByb2plY3QuVHJhbnNmZXJUYXJnZXREaXJlY3Rv",
+            "cnlFbnRyeRpoChxUcmFuc2ZlclRhcmdldERpcmVjdG9yeUVudHJ5EgsKA2tl",
+            "eRgBIAEoCRI3CgV2YWx1ZRgCIAEoCzIoLm9uZGV3by52dHNpLlRyYW5zZmVy",
+            "VGFyZ2V0RGlyZWN0b3J5SXRlbToCOAFCFAoSX2l2cl9tZW51c19lbmFibGVk",
+            "IkgKG1RyYW5zZmVyVGFyZ2V0RGlyZWN0b3J5SXRlbRIUCgxkaXNwbGF5X25h",
+            "bWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkinwEKHlZ0c2lQcm9qZWN0",
+            "RmVhdHVyZUF2YWlsYWJpbGl0eRI2Cgp3YXJtX2ludHJvGAEgASgOMiIub25k",
+            "ZXdvLnZ0c2kuV2FybUludHJvQXZhaWxhYmlsaXR5EhoKEndhcm1faW50cm9f",
+            "cGhhc2VfYhgCIAEoCBIpCgNpdnIYAyABKA4yHC5vbmRld28udnRzaS5JdnJB",
+            "dmFpbGFiaWxpdHki7AMKGEFzdGVyaXNrQ29uZmlnc1ZhcmlhYmxlcxIaChJz",
+            "aXBfdHJ1bmtfdXNlcm5hbWUYASABKAkSGgoSc2lwX3RydW5rX3Bhc3N3b3Jk",
+            "GAIgASgJEhYKDnNpcF90cnVua19ob3N0GAMgASgJEhcKD3RyYW5zZmVyX251",
+            "bWJlchgEIAEoCRIcChR0cmFuc2Zlcl9udW1iZXJfaG9zdBgFIAEoCRIeChZz",
+            "aXBfdHJ1bmtfcGhvbmVfbnVtYmVyGAYgASgJEjsKE3NpcF90cnVua190cmFu",
+            "c3BvcnQYByABKA4yHi5vbmRld28udnRzaS5TaXBUcnVua1RyYW5zcG9ydBIi",
+            "ChVzaXBfdHJ1bmtfc291cmNlX2NpZHIYCCABKAlIAIgBARIqCh1zaXBfdHJ1",
+            "bmtfY2FfY2VydGlmaWNhdGVzX3BlbRgJIAEoCUgBiAEBEiQKF3NpcF90cnVu",
+            "a192ZXJpZnlfc2VydmVyGAogASgISAKIAQESHgoWc29mdHBob25lX3Blcm1p",
+            "dF9jaWRycxgLIAMoCUIYChZfc2lwX3RydW5rX3NvdXJjZV9jaWRyQiAKHl9z",
+            "aXBfdHJ1bmtfY2FfY2VydGlmaWNhdGVzX3BlbUIaChhfc2lwX3RydW5rX3Zl",
+            "cmlmeV9zZXJ2ZXIingEKFEFzdGVyaXNrQ29uZmlnc0ZpbGVzEh4KFnBqc2lw",
+            "X2NvbmZfZmlsZV9zdHJpbmcYASABKAkSIwobZXh0ZW5zaW9uc19jb25mX2Zp",
+            "bGVfc3RyaW5nGAIgASgJEh8KF3F1ZXVlc19jb25mX2ZpbGVfc3RyaW5nGAMg",
+            "ASgJEiAKGG1vZHVsZXNfY29uZl9maWxlX3N0cmluZxgEIAEoCSK6AgoPQXN0",
+            "ZXJpc2tDb25maWdzEksKGmFzdGVyaXNrX2NvbmZpZ3NfdmFyaWFibGVzGAEg",
+            "ASgLMiUub25kZXdvLnZ0c2kuQXN0ZXJpc2tDb25maWdzVmFyaWFibGVzSAAS",
+            "QwoWYXN0ZXJpc2tfY29uZmlnc19maWxlcxgCIAEoCzIhLm9uZGV3by52dHNp",
+            "LkFzdGVyaXNrQ29uZmlnc0ZpbGVzSAASMAomYXN0ZXJpc2tfY29uZmlnc190",
+            "YXJnZXRfZGlyZWN0b3J5X25hbWUYAyABKAlIABIVCg1hc3Rlcmlza19wb3J0",
+            "GAQgASgFEh0KEGFzdGVyaXNrX3ZlcnNpb24YBSABKAlIAYgBAUIYChZhc3Rl",
+            "cmlza19jb25maWdzX29uZW9mQhMKEV9hc3Rlcmlza192ZXJzaW9uInwKGENy",
+            "ZWF0ZVZ0c2lQcm9qZWN0UmVxdWVzdBIuCgx2dHNpX3Byb2plY3QYASABKAsy",
+            "GC5vbmRld28udnRzaS5WdHNpUHJvamVjdBIZCg1lcnJvcl9tZXNzYWdlGAIg",
+            "ASgJQgIYARIVCg12YWxpZGF0ZV9vbmx5GAMgASgIImIKGUNyZWF0ZVZ0c2lQ",
+            "cm9qZWN0UmVzcG9uc2USLgoMdnRzaV9wcm9qZWN0GAEgASgLMhgub25kZXdv",
+            "LnZ0c2kuVnRzaVByb2plY3QSFQoNZXJyb3JfbWVzc2FnZRgCIAEoCSKOAQoV",
+            "R2V0VnRzaVByb2plY3RSZXF1ZXN0EgwKBG5hbWUYASABKAkSNwoRdnRzaV9w",
+            "cm9qZWN0X3ZpZXcYAiABKA4yHC5vbmRld28udnRzaS5WdHNpUHJvamVjdFZp",
+            "ZXcSLgoKZmllbGRfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
+            "ZE1hc2si6wMKF0xpc3RWdHNpUHJvamVjdHNSZXF1ZXN0EjcKEXZ0c2lfcHJv",
+            "amVjdF92aWV3GAEgASgOMhwub25kZXdvLnZ0c2kuVnRzaVByb2plY3RWaWV3",
+            "EhcKCnBhZ2VfdG9rZW4YAiABKAlIAIgBARJCChR2dHNpX3Byb2plY3Rfc29y",
+            "dGluZxgDIAEoCzIfLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0U29ydGluZ0gB",
+            "iAEBEhcKD25sdV9hZ2VudF9uYW1lcxgEIAMoCRIuCgpmaWVsZF9tYXNrGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzaxIRCglwYWdlX3NpemUY",
+            "BiABKAUSMAoIc3RhdHVzZXMYByADKA4yHi5vbmRld28udnRzaS5WdHNpUHJv",
+            "amVjdFN0YXR1cxIdChVkaXNwbGF5X25hbWVfY29udGFpbnMYCCABKAkSMQoN",
+            "Y3JlYXRlZF9hZnRlchgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASMgoOY3JlYXRlZF9iZWZvcmUYCiABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQg0KC19wYWdlX3Rva2VuQhcKFV92dHNpX3Byb2plY3Rfc29y",
+            "dGluZyJkChhMaXN0VnRzaVByb2plY3RzUmVzcG9uc2USLwoNdnRzaV9wcm9q",
+            "ZWN0cxgBIAMoCzIYLm9uZGV3by52dHNpLlZ0c2lQcm9qZWN0EhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSKbAwoSVnRzaVByb2plY3RTb3J0aW5nElMKDXNv",
+            "cnRpbmdfZmllbGQYASABKA4yNy5vbmRld28udnRzaS5WdHNpUHJvamVjdFNv",
+            "cnRpbmcuVnRzaVByb2plY3RTb3J0aW5nRmllbGRIAIgBARI+Cgxzb3J0aW5n",
+            "X21vZGUYAiABKA4yIy5vbmRld28udnRzaS5WdHNpUHJvamVjdFNvcnRpbmdN",
+            "b2RlSAGIAQEizAEKF1Z0c2lQcm9qZWN0U29ydGluZ0ZpZWxkEhsKF05PX1ZU",
+            "U0lfUFJPSkVDVF9TT1JUSU5HEAASHQoZU09SVF9WVFNJX1BST0pFQ1RfQllf",
+            "TkFNRRABEiUKIVNPUlRfVlRTSV9QUk9KRUNUX0JZX0RJU1BMQVlfTkFNRRAC",
+            "EiYKIlNPUlRfVlRTSV9QUk9KRUNUX0JZX0NSRUFUSU9OX0RBVEUQAxImCiJT",
+            "T1JUX1ZUU0lfUFJPSkVDVF9CWV9MQVNUX01PRElGSUVEEARCEAoOX3NvcnRp",
+            "bmdfZmllbGRCDwoNX3NvcnRpbmdfbW9kZSLCAQoYVXBkYXRlVnRzaVByb2pl",
+            "Y3RSZXF1ZXN0Ei4KDHZ0c2lfcHJvamVjdBgBIAEoCzIYLm9uZGV3by52dHNp",
+            "LlZ0c2lQcm9qZWN0Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFzaxIuCgpmaWVsZF9tYXNrGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLkZpZWxkTWFzaxIVCg12YWxpZGF0ZV9vbmx5GAQgASgIInAK",
+            "GVVwZGF0ZVZ0c2lQcm9qZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1l",
+            "cnJvcl9tZXNzYWdlGAIgASgJEi4KDHZ0c2lfcHJvamVjdBgDIAEoCzIYLm9u",
+            "ZGV3by52dHNpLlZ0c2lQcm9qZWN0IigKGERlbGV0ZVZ0c2lQcm9qZWN0UmVx",
+            "dWVzdBIMCgRuYW1lGAEgASgJIkAKGURlbGV0ZVZ0c2lQcm9qZWN0UmVzcG9u",
+            "c2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9tZXNzYWdlGAIgASgJIigKGERl",
+            "cGxveVZ0c2lQcm9qZWN0UmVxdWVzdBIMCgRuYW1lGAEgASgJIkAKGURlcGxv",
+            "eVZ0c2lQcm9qZWN0UmVzcG9uc2USDAoEbmFtZRgBIAEoCRIVCg1lcnJvcl9t",
+            "ZXNzYWdlGAIgASgJIioKGlVuZGVwbG95VnRzaVByb2plY3RSZXF1ZXN0EgwK",
+            "BG5hbWUYASABKAkiQgobVW5kZXBsb3lWdHNpUHJvamVjdFJlc3BvbnNlEgwK",
+            "BG5hbWUYASABKAkSFQoNZXJyb3JfbWVzc2FnZRgCIAEoCSqtAgoVV2FybUlu",
+            "dHJvQXZhaWxhYmlsaXR5EicKI1dBUk1fSU5UUk9fQVZBSUxBQklMSVRZX1VO",
+            "U1BFQ0lGSUVEEAASJQohV0FSTV9JTlRST19BVkFJTEFCSUxJVFlfQVZBSUxB",
+            "QkxFEAESMgouV0FSTV9JTlRST19BVkFJTEFCSUxJVFlfRElTQUJMRURfQllf",
+            "REVQTE9ZTUVOVBACEjAKLFdBUk1fSU5UUk9fQVZBSUxBQklMSVRZX05FRURT",
+            "X0xPQ0FMX0FTVEVSSVNLEAMSKgomV0FSTV9JTlRST19BVkFJTEFCSUxJVFlf",
+            "TkVFRFNfTElTVEVORVIQBBIyCi5XQVJNX0lOVFJPX0FWQUlMQUJJTElUWV9O",
+            "RUVEU19DQUxMX0NPTlRST0xfS0VZEAUqqwEKD0l2ckF2YWlsYWJpbGl0eRIg",
+            "ChxJVlJfQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASHgoaSVZSX0FWQUlM",
+            "QUJJTElUWV9BVkFJTEFCTEUQARIrCidJVlJfQVZBSUxBQklMSVRZX0RJU0FC",
+            "TEVEX0JZX0RFUExPWU1FTlQQAhIpCiVJVlJfQVZBSUxBQklMSVRZX05FRURT",
+            "X0xPQ0FMX0FTVEVSSVNLEAMq6gEKFlRydW5rUmVnaXN0cmF0aW9uU3RhdGUS",
+            "KAokVFJVTktfUkVHSVNUUkFUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASJwoj",
+            "VFJVTktfUkVHSVNUUkFUSU9OX1NUQVRFX1JFR0lTVEVSRUQQARIpCiVUUlVO",
+            "S19SRUdJU1RSQVRJT05fU1RBVEVfVU5SRUdJU1RFUkVEEAISJQohVFJVTktf",
+            "UkVHSVNUUkFUSU9OX1NUQVRFX1JFSkVDVEVEEAMSKwonVFJVTktfUkVHSVNU",
+            "UkFUSU9OX1NUQVRFX05PVF9DT05GSUdVUkVEEAQqngEKEVZ0c2lQcm9qZWN0",
+            "U3RhdHVzEg8KC1VOU1BFQ0lGSUVEEAASDgoKVU5ERVBMT1lFRBABEgwKCFVQ",
+            "REFUSU5HEAISDQoJREVQTE9ZSU5HEAMSDAoIREVQTE9ZRUQQBBIPCgtVTkRF",
+            "UExPWUlORxAFEgwKCERFTEVUSU5HEAYSCwoHREVMRVRFRBAHEhEKDURFUExP",
+            "WV9GQUlMRUQQCCqPAQoRU2lwVHJ1bmtUcmFuc3BvcnQSIwofU0lQX1RSVU5L",
+            "X1RSQU5TUE9SVF9VTlNQRUNJRklFRBAAEhsKF1NJUF9UUlVOS19UUkFOU1BP",
+            "UlRfVExTEAESGwoXU0lQX1RSVU5LX1RSQU5TUE9SVF9VRFAQAhIbChdTSVBf",
+            "VFJVTktfVFJBTlNQT1JUX1RDUBADKjcKFlZ0c2lQcm9qZWN0U29ydGluZ01v",
+            "ZGUSDQoJQVNDRU5ESU5HEAASDgoKREVTQ0VORElORxABKo4BCg9WdHNpUHJv",
+            "amVjdFZpZXcSIQodVlRTSV9QUk9KRUNUX1ZJRVdfVU5TUEVDSUZJRUQQABIa",
+            "ChZWVFNJX1BST0pFQ1RfVklFV19GVUxMEAESHQoZVlRTSV9QUk9KRUNUX1ZJ",
+            "RVdfU0hBTExPVxACEh0KGVZUU0lfUFJPSkVDVF9WSUVXX01JTklNVU0QAzK1",
+            "BQoIUHJvamVjdHMSYgoRQ3JlYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRz",
+            "aS5DcmVhdGVWdHNpUHJvamVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5DcmVh",
+            "dGVWdHNpUHJvamVjdFJlc3BvbnNlEk4KDkdldFZ0c2lQcm9qZWN0EiIub25k",
+            "ZXdvLnZ0c2kuR2V0VnRzaVByb2plY3RSZXF1ZXN0Ghgub25kZXdvLnZ0c2ku",
+            "VnRzaVByb2plY3QSYgoRVXBkYXRlVnRzaVByb2plY3QSJS5vbmRld28udnRz",
+            "aS5VcGRhdGVWdHNpUHJvamVjdFJlcXVlc3QaJi5vbmRld28udnRzaS5VcGRh",
+            "dGVWdHNpUHJvamVjdFJlc3BvbnNlEmIKEURlbGV0ZVZ0c2lQcm9qZWN0EiUu",
+            "b25kZXdvLnZ0c2kuRGVsZXRlVnRzaVByb2plY3RSZXF1ZXN0GiYub25kZXdv",
+            "LnZ0c2kuRGVsZXRlVnRzaVByb2plY3RSZXNwb25zZRJiChFEZXBsb3lWdHNp",
+            "UHJvamVjdBIlLm9uZGV3by52dHNpLkRlcGxveVZ0c2lQcm9qZWN0UmVxdWVz",
+            "dBomLm9uZGV3by52dHNpLkRlcGxveVZ0c2lQcm9qZWN0UmVzcG9uc2USaAoT",
+            "VW5kZXBsb3lWdHNpUHJvamVjdBInLm9uZGV3by52dHNpLlVuZGVwbG95VnRz",
+            "aVByb2plY3RSZXF1ZXN0Gigub25kZXdvLnZ0c2kuVW5kZXBsb3lWdHNpUHJv",
+            "amVjdFJlc3BvbnNlEl8KEExpc3RWdHNpUHJvamVjdHMSJC5vbmRld28udnRz",
+            "aS5MaXN0VnRzaVByb2plY3RzUmVxdWVzdBolLm9uZGV3by52dHNpLkxpc3RW",
+            "dHNpUHJvamVjdHNSZXNwb25zZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.TrunkRegistrationState), typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.SipTrunkTransport), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners", "TransferPhoneNumberAllowlist", "StatusMessage", "StatusChangedAt", "TrunkRegistrationState", "AsteriskVersionEffective" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Ondewo.Vtsi.CallConfigsReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.WarmIntroAvailability), typeof(global::Ondewo.Vtsi.IvrAvailability), typeof(global::Ondewo.Vtsi.TrunkRegistrationState), typeof(global::Ondewo.Vtsi.VtsiProjectStatus), typeof(global::Ondewo.Vtsi.SipTrunkTransport), typeof(global::Ondewo.Vtsi.VtsiProjectSortingMode), typeof(global::Ondewo.Vtsi.VtsiProjectView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProject), global::Ondewo.Vtsi.VtsiProject.Parser, new[]{ "Name", "DisplayName", "MaxCallers", "MaxListeners", "AsteriskConfigs", "VtsiProjectStatus", "CreatedBy", "CreatedAt", "ModifiedBy", "ModifiedAt", "ActiveCallers", "ActiveListeners", "AsteriskPort", "NluAgentNames", "DeployedCallers", "DeployedListeners", "TransferPhoneNumberAllowlist", "StatusMessage", "StatusChangedAt", "TrunkRegistrationState", "AsteriskVersionEffective", "WarmTransferDefaults", "FeatureAvailability", "IvrMenusEnabled", "TransferTargetDirectory" }, new[]{ "IvrMenusEnabled" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TransferTargetDirectoryItem), global::Ondewo.Vtsi.TransferTargetDirectoryItem.Parser, new[]{ "DisplayName", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VtsiProjectFeatureAvailability), global::Ondewo.Vtsi.VtsiProjectFeatureAvailability.Parser, new[]{ "WarmIntro", "WarmIntroPhaseB", "Ivr" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsVariables), global::Ondewo.Vtsi.AsteriskConfigsVariables.Parser, new[]{ "SipTrunkUsername", "SipTrunkPassword", "SipTrunkHost", "TransferNumber", "TransferNumberHost", "SipTrunkPhoneNumber", "SipTrunkTransport", "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer", "SoftphonePermitCidrs" }, new[]{ "SipTrunkSourceCidr", "SipTrunkCaCertificatesPem", "SipTrunkVerifyServer" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigsFiles), global::Ondewo.Vtsi.AsteriskConfigsFiles.Parser, new[]{ "PjsipConfFileString", "ExtensionsConfFileString", "QueuesConfFileString", "ModulesConfFileString" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AsteriskConfigs), global::Ondewo.Vtsi.AsteriskConfigs.Parser, new[]{ "AsteriskConfigsVariables", "AsteriskConfigsFiles", "AsteriskConfigsTargetDirectoryName", "AsteriskPort", "AsteriskVersion" }, new[]{ "AsteriskConfigsOneof", "AsteriskVersion" }, null, null, null),
@@ -169,6 +196,58 @@ namespace Ondewo.Vtsi {
 
   }
   #region Enums
+  /// <summary>
+  /// &lt;p>Whether a project can run warm intros, and if not, why&lt;/p>
+  /// </summary>
+  public enum WarmIntroAvailability {
+    /// <summary>
+    /// Not computed (e.g. an older server)
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Warm intros can run
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_AVAILABLE")] Available = 1,
+    /// <summary>
+    /// The deployment switch &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code> is off
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_DISABLED_BY_DEPLOYMENT")] DisabledByDeployment = 2,
+    /// <summary>
+    /// The project&amp;apos;s Asterisk is not run by this server (or is older than Asterisk 22)
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_LOCAL_ASTERISK")] NeedsLocalAsterisk = 3,
+    /// <summary>
+    /// The project has no listener to run the intro (a project with pooled callers only)
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_LISTENER")] NeedsListener = 4,
+    /// <summary>
+    /// The deployment has no call-control key (&lt;code>ONDEWO_VTSI_CALL_CONTROL_KEY&lt;/code>)
+    /// </summary>
+    [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_CALL_CONTROL_KEY")] NeedsCallControlKey = 5,
+  }
+
+  /// <summary>
+  /// &lt;p>Whether a project can use IVR menus, and if not, why&lt;/p>
+  /// </summary>
+  public enum IvrAvailability {
+    /// <summary>
+    /// Not computed (e.g. an older server)
+    /// </summary>
+    [pbr::OriginalName("IVR_AVAILABILITY_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// IVR menus can be published and routed
+    /// </summary>
+    [pbr::OriginalName("IVR_AVAILABILITY_AVAILABLE")] Available = 1,
+    /// <summary>
+    /// The deployment switch &lt;code>ONDEWO_VTSI_IVR_ACTIVE&lt;/code> is off
+    /// </summary>
+    [pbr::OriginalName("IVR_AVAILABILITY_DISABLED_BY_DEPLOYMENT")] DisabledByDeployment = 2,
+    /// <summary>
+    /// The project&amp;apos;s Asterisk is not run by this server
+    /// </summary>
+    [pbr::OriginalName("IVR_AVAILABILITY_NEEDS_LOCAL_ASTERISK")] NeedsLocalAsterisk = 3,
+  }
+
   /// <summary>
   /// Registration state of a VTSI project&amp;apos;s SIP trunk with the carrier.
   /// </summary>
@@ -337,6 +416,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<VtsiProject> _parser = new pb::MessageParser<VtsiProject>(() => new VtsiProject());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VtsiProject> Parser { get { return _parser; } }
@@ -364,6 +444,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VtsiProject(VtsiProject other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
       maxCallers_ = other.maxCallers_;
@@ -385,6 +466,10 @@ namespace Ondewo.Vtsi {
       statusChangedAt_ = other.statusChangedAt_ != null ? other.statusChangedAt_.Clone() : null;
       trunkRegistrationState_ = other.trunkRegistrationState_;
       asteriskVersionEffective_ = other.asteriskVersionEffective_;
+      warmTransferDefaults_ = other.warmTransferDefaults_ != null ? other.warmTransferDefaults_.Clone() : null;
+      featureAvailability_ = other.featureAvailability_ != null ? other.featureAvailability_.Clone() : null;
+      ivrMenusEnabled_ = other.ivrMenusEnabled_;
+      transferTargetDirectory_ = other.transferTargetDirectory_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -745,6 +830,102 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "warm_transfer_defaults" field.</summary>
+    public const int WarmTransferDefaultsFieldNumber = 22;
+    private global::Ondewo.Vtsi.WarmTransferConfig warmTransferDefaults_;
+    /// <summary>
+    /// OPTIONAL: The project&amp;apos;s default warm intro of a WARM transfer (see
+    /// &lt;a href="index.html#ondewo.vtsi.WarmTransferConfig">WarmTransferConfig&lt;/a>): the level below a call&amp;apos;s
+    /// &lt;code>VoiceInteractionConfig.warm_transfer_config&lt;/code> and a
+    /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code>. &lt;code>enabled=true&lt;/code> while the deployment switch
+    /// &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code> is off, or a phase-B field while phase B is off, is refused
+    /// with &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>reason=warm-intro-disabled&lt;/code> /
+    /// &lt;code>reason=phase-b-not-enabled&lt;/code>); an invalid field with &lt;code>INVALID_ARGUMENT&lt;/code> naming it.
+    /// Updatable with the update mask path &lt;code>warm_transfer_defaults&lt;/code> or its leaf paths, e.g.
+    /// &lt;code>warm_transfer_defaults.enabled&lt;/code>. Touches no Asterisk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.WarmTransferConfig WarmTransferDefaults {
+      get { return warmTransferDefaults_; }
+      set {
+        warmTransferDefaults_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "feature_availability" field.</summary>
+    public const int FeatureAvailabilityFieldNumber = 23;
+    private global::Ondewo.Vtsi.VtsiProjectFeatureAvailability featureAvailability_;
+    /// <summary>
+    /// Output only. Which features can run in this project with the deployment, the Asterisk and the listeners it
+    /// has now, computed on every &lt;code>GetVtsiProject&lt;/code> / &lt;code>ListVtsiProjects&lt;/code> (it costs no RPC).
+    /// Read it instead of learning from a refusal. Ignored on create and update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.VtsiProjectFeatureAvailability FeatureAvailability {
+      get { return featureAvailability_; }
+      set {
+        featureAvailability_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ivr_menus_enabled" field.</summary>
+    public const int IvrMenusEnabledFieldNumber = 24;
+    private readonly static bool IvrMenusEnabledDefaultValue = false;
+
+    private bool ivrMenusEnabled_;
+    /// <summary>
+    /// OPTIONAL: Whether the project&amp;apos;s published IVR menus route its inbound phone numbers. Unset means
+    /// &lt;code>true&lt;/code>. &lt;code>false&lt;/code> switches every route off at once (every inbound number reaches the
+    /// listener queue as without a menu) and keeps the menus and their phone number bindings, so &lt;code>true&lt;/code>
+    /// restores them. Updatable with the update mask path &lt;code>ivr_menus_enabled&lt;/code>; it reloads no Asterisk and
+    /// ends no call.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IvrMenusEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return ivrMenusEnabled_; } else { return IvrMenusEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        ivrMenusEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ivr_menus_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIvrMenusEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "ivr_menus_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIvrMenusEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "transfer_target_directory" field.</summary>
+    public const int TransferTargetDirectoryFieldNumber = 25;
+    private static readonly pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem>.Codec _map_transferTargetDirectory_codec
+        = new pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.TransferTargetDirectoryItem.Parser), 202);
+    private readonly pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem> transferTargetDirectory_ = new pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem>();
+    /// <summary>
+    /// OPTIONAL: Directory of the project&amp;apos;s human transfer targets, keyed by the target: an E.164 phone number
+    /// (&lt;code>^\+[1-9][0-9]{6,14}$&lt;/code>, which must pass &lt;code>transfer_phone_number_allowlist&lt;/code>) or the
+    /// &lt;code>sip_username&lt;/code> of a softphone account of the project. It names a target in a warm intro
+    /// (&lt;code>{callee_name}&lt;/code>) and describes it, below a transfer&amp;apos;s own
+    /// &lt;code>WarmTransferConfig.callee_display_name&lt;/code> / &lt;code>callee_description&lt;/code> and the softphone
+    /// account&amp;apos;s &lt;code>display_name&lt;/code> / &lt;code>description&lt;/code>. That is how the bot&amp;apos;s own handover to
+    /// a target names the right person. At most 200 entries; an invalid key or entry is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Updatable with the update mask path
+    /// &lt;code>transfer_target_directory&lt;/code> (the whole map is replaced). Touches no Asterisk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem> TransferTargetDirectory {
+      get { return transferTargetDirectory_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -781,6 +962,10 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(StatusChangedAt, other.StatusChangedAt)) return false;
       if (TrunkRegistrationState != other.TrunkRegistrationState) return false;
       if (AsteriskVersionEffective != other.AsteriskVersionEffective) return false;
+      if (!object.Equals(WarmTransferDefaults, other.WarmTransferDefaults)) return false;
+      if (!object.Equals(FeatureAvailability, other.FeatureAvailability)) return false;
+      if (IvrMenusEnabled != other.IvrMenusEnabled) return false;
+      if (!TransferTargetDirectory.Equals(other.TransferTargetDirectory)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -809,6 +994,10 @@ namespace Ondewo.Vtsi {
       if (statusChangedAt_ != null) hash ^= StatusChangedAt.GetHashCode();
       if (TrunkRegistrationState != global::Ondewo.Vtsi.TrunkRegistrationState.Unspecified) hash ^= TrunkRegistrationState.GetHashCode();
       if (AsteriskVersionEffective.Length != 0) hash ^= AsteriskVersionEffective.GetHashCode();
+      if (warmTransferDefaults_ != null) hash ^= WarmTransferDefaults.GetHashCode();
+      if (featureAvailability_ != null) hash ^= FeatureAvailability.GetHashCode();
+      if (HasIvrMenusEnabled) hash ^= IvrMenusEnabled.GetHashCode();
+      hash ^= TransferTargetDirectory.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -905,6 +1094,19 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(170, 1);
         output.WriteString(AsteriskVersionEffective);
       }
+      if (warmTransferDefaults_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(WarmTransferDefaults);
+      }
+      if (featureAvailability_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(FeatureAvailability);
+      }
+      if (HasIvrMenusEnabled) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(IvrMenusEnabled);
+      }
+      transferTargetDirectory_.WriteTo(output, _map_transferTargetDirectory_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -993,6 +1195,19 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(170, 1);
         output.WriteString(AsteriskVersionEffective);
       }
+      if (warmTransferDefaults_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(WarmTransferDefaults);
+      }
+      if (featureAvailability_ != null) {
+        output.WriteRawTag(186, 1);
+        output.WriteMessage(FeatureAvailability);
+      }
+      if (HasIvrMenusEnabled) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(IvrMenusEnabled);
+      }
+      transferTargetDirectory_.WriteTo(ref output, _map_transferTargetDirectory_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1062,6 +1277,16 @@ namespace Ondewo.Vtsi {
       if (AsteriskVersionEffective.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(AsteriskVersionEffective);
       }
+      if (warmTransferDefaults_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(WarmTransferDefaults);
+      }
+      if (featureAvailability_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FeatureAvailability);
+      }
+      if (HasIvrMenusEnabled) {
+        size += 2 + 1;
+      }
+      size += transferTargetDirectory_.CalculateSize(_map_transferTargetDirectory_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1145,6 +1370,22 @@ namespace Ondewo.Vtsi {
       if (other.AsteriskVersionEffective.Length != 0) {
         AsteriskVersionEffective = other.AsteriskVersionEffective;
       }
+      if (other.warmTransferDefaults_ != null) {
+        if (warmTransferDefaults_ == null) {
+          WarmTransferDefaults = new global::Ondewo.Vtsi.WarmTransferConfig();
+        }
+        WarmTransferDefaults.MergeFrom(other.WarmTransferDefaults);
+      }
+      if (other.featureAvailability_ != null) {
+        if (featureAvailability_ == null) {
+          FeatureAvailability = new global::Ondewo.Vtsi.VtsiProjectFeatureAvailability();
+        }
+        FeatureAvailability.MergeFrom(other.FeatureAvailability);
+      }
+      if (other.HasIvrMenusEnabled) {
+        IvrMenusEnabled = other.IvrMenusEnabled;
+      }
+      transferTargetDirectory_.MergeFrom(other.transferTargetDirectory_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1258,6 +1499,28 @@ namespace Ondewo.Vtsi {
           }
           case 170: {
             AsteriskVersionEffective = input.ReadString();
+            break;
+          }
+          case 178: {
+            if (warmTransferDefaults_ == null) {
+              WarmTransferDefaults = new global::Ondewo.Vtsi.WarmTransferConfig();
+            }
+            input.ReadMessage(WarmTransferDefaults);
+            break;
+          }
+          case 186: {
+            if (featureAvailability_ == null) {
+              FeatureAvailability = new global::Ondewo.Vtsi.VtsiProjectFeatureAvailability();
+            }
+            input.ReadMessage(FeatureAvailability);
+            break;
+          }
+          case 192: {
+            IvrMenusEnabled = input.ReadBool();
+            break;
+          }
+          case 202: {
+            transferTargetDirectory_.AddEntriesFrom(input, _map_transferTargetDirectory_codec);
             break;
           }
         }
@@ -1375,6 +1638,556 @@ namespace Ondewo.Vtsi {
             AsteriskVersionEffective = input.ReadString();
             break;
           }
+          case 178: {
+            if (warmTransferDefaults_ == null) {
+              WarmTransferDefaults = new global::Ondewo.Vtsi.WarmTransferConfig();
+            }
+            input.ReadMessage(WarmTransferDefaults);
+            break;
+          }
+          case 186: {
+            if (featureAvailability_ == null) {
+              FeatureAvailability = new global::Ondewo.Vtsi.VtsiProjectFeatureAvailability();
+            }
+            input.ReadMessage(FeatureAvailability);
+            break;
+          }
+          case 192: {
+            IvrMenusEnabled = input.ReadBool();
+            break;
+          }
+          case 202: {
+            transferTargetDirectory_.AddEntriesFrom(ref input, _map_transferTargetDirectory_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>One human transfer target of &lt;code>VtsiProject.transfer_target_directory&lt;/code>. Carries no secret&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TransferTargetDirectoryItem : pb::IMessage<TransferTargetDirectoryItem>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TransferTargetDirectoryItem> _parser = new pb::MessageParser<TransferTargetDirectoryItem>(() => new TransferTargetDirectoryItem());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TransferTargetDirectoryItem> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TransferTargetDirectoryItem() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TransferTargetDirectoryItem(TransferTargetDirectoryItem other) : this() {
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TransferTargetDirectoryItem Clone() {
+      return new TransferTargetDirectoryItem(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Who the target is, e.g. &lt;code>Frau Berger, Buchhaltung&lt;/code>. 1 to 128 characters
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// The target&amp;apos;s role and context, for a warm intro&amp;apos;s briefing. At most 512 characters
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TransferTargetDirectoryItem);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TransferTargetDirectoryItem other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TransferTargetDirectoryItem other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>Which features can run in a VTSI project. Output only&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class VtsiProjectFeatureAvailability : pb::IMessage<VtsiProjectFeatureAvailability>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VtsiProjectFeatureAvailability> _parser = new pb::MessageParser<VtsiProjectFeatureAvailability>(() => new VtsiProjectFeatureAvailability());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VtsiProjectFeatureAvailability> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VtsiProjectFeatureAvailability() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VtsiProjectFeatureAvailability(VtsiProjectFeatureAvailability other) : this() {
+      warmIntro_ = other.warmIntro_;
+      warmIntroPhaseB_ = other.warmIntroPhaseB_;
+      ivr_ = other.ivr_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VtsiProjectFeatureAvailability Clone() {
+      return new VtsiProjectFeatureAvailability(this);
+    }
+
+    /// <summary>Field number for the "warm_intro" field.</summary>
+    public const int WarmIntroFieldNumber = 1;
+    private global::Ondewo.Vtsi.WarmIntroAvailability warmIntro_ = global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified;
+    /// <summary>
+    /// Whether a WARM transfer can run a warm intro
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.WarmIntroAvailability WarmIntro {
+      get { return warmIntro_; }
+      set {
+        warmIntro_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warm_intro_phase_b" field.</summary>
+    public const int WarmIntroPhaseBFieldNumber = 2;
+    private bool warmIntroPhaseB_;
+    /// <summary>
+    /// Whether the phase-B fields of &lt;code>WarmTransferConfig&lt;/code> (LLM summary, hold music) are accepted
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool WarmIntroPhaseB {
+      get { return warmIntroPhaseB_; }
+      set {
+        warmIntroPhaseB_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ivr" field.</summary>
+    public const int IvrFieldNumber = 3;
+    private global::Ondewo.Vtsi.IvrAvailability ivr_ = global::Ondewo.Vtsi.IvrAvailability.Unspecified;
+    /// <summary>
+    /// Whether the project can publish and route IVR menus
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.IvrAvailability Ivr {
+      get { return ivr_; }
+      set {
+        ivr_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VtsiProjectFeatureAvailability);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VtsiProjectFeatureAvailability other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (WarmIntro != other.WarmIntro) return false;
+      if (WarmIntroPhaseB != other.WarmIntroPhaseB) return false;
+      if (Ivr != other.Ivr) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (WarmIntro != global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified) hash ^= WarmIntro.GetHashCode();
+      if (WarmIntroPhaseB != false) hash ^= WarmIntroPhaseB.GetHashCode();
+      if (Ivr != global::Ondewo.Vtsi.IvrAvailability.Unspecified) hash ^= Ivr.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (WarmIntro != global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WarmIntro);
+      }
+      if (WarmIntroPhaseB != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(WarmIntroPhaseB);
+      }
+      if (Ivr != global::Ondewo.Vtsi.IvrAvailability.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Ivr);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (WarmIntro != global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) WarmIntro);
+      }
+      if (WarmIntroPhaseB != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(WarmIntroPhaseB);
+      }
+      if (Ivr != global::Ondewo.Vtsi.IvrAvailability.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Ivr);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (WarmIntro != global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WarmIntro);
+      }
+      if (WarmIntroPhaseB != false) {
+        size += 1 + 1;
+      }
+      if (Ivr != global::Ondewo.Vtsi.IvrAvailability.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Ivr);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VtsiProjectFeatureAvailability other) {
+      if (other == null) {
+        return;
+      }
+      if (other.WarmIntro != global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified) {
+        WarmIntro = other.WarmIntro;
+      }
+      if (other.WarmIntroPhaseB != false) {
+        WarmIntroPhaseB = other.WarmIntroPhaseB;
+      }
+      if (other.Ivr != global::Ondewo.Vtsi.IvrAvailability.Unspecified) {
+        Ivr = other.Ivr;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            WarmIntro = (global::Ondewo.Vtsi.WarmIntroAvailability) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            WarmIntroPhaseB = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Ivr = (global::Ondewo.Vtsi.IvrAvailability) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            WarmIntro = (global::Ondewo.Vtsi.WarmIntroAvailability) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            WarmIntroPhaseB = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Ivr = (global::Ondewo.Vtsi.IvrAvailability) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1401,7 +2214,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2087,7 +2900,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2416,7 +3229,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2878,7 +3691,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3182,7 +3995,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3437,7 +4250,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3737,7 +4550,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4352,7 +5165,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4587,7 +5400,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4897,7 +5710,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5289,7 +6102,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5587,7 +6400,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5791,7 +6604,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6035,7 +6848,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6239,7 +7052,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6483,7 +7296,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6687,7 +7500,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ondewo.Vtsi.ProjectsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

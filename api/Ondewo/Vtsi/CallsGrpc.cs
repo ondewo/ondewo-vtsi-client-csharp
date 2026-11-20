@@ -238,6 +238,10 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.SetCallMediaControlResponse> __Marshaller_ondewo_vtsi_SetCallMediaControlResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SetCallMediaControlResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.SendCallDtmfRequest> __Marshaller_ondewo_vtsi_SendCallDtmfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SendCallDtmfRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Vtsi.SendCallDtmfResponse> __Marshaller_ondewo_vtsi_SendCallDtmfResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.SendCallDtmfResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallAudioRequest> __Marshaller_ondewo_vtsi_StreamCallAudioRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallAudioRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Vtsi.StreamCallAudioResponse> __Marshaller_ondewo_vtsi_StreamCallAudioResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Vtsi.StreamCallAudioResponse.Parser));
@@ -611,6 +615,14 @@ namespace Ondewo.Vtsi {
         "SetCallMediaControl",
         __Marshaller_ondewo_vtsi_SetCallMediaControlRequest,
         __Marshaller_ondewo_vtsi_SetCallMediaControlResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Vtsi.SendCallDtmfRequest, global::Ondewo.Vtsi.SendCallDtmfResponse> __Method_SendCallDtmf = new grpc::Method<global::Ondewo.Vtsi.SendCallDtmfRequest, global::Ondewo.Vtsi.SendCallDtmfResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SendCallDtmf",
+        __Marshaller_ondewo_vtsi_SendCallDtmfRequest,
+        __Marshaller_ondewo_vtsi_SendCallDtmfResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse> __Method_StreamCallAudio = new grpc::Method<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(
@@ -1302,13 +1314,21 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener, the listener queue or a published
+      /// IVR menu.&lt;/p>
       /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
       /// resolved and validated before anything is sent; an invalid target is answered with
       /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
       /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
       /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
       /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>A WARM transfer whose effective &lt;code>WarmTransferConfig&lt;/code> is enabled runs a WARM INTRO: once the human
+      /// target answers, an ONDEWO bot asks whether a person is on the line, briefs them and asks whether they accept;
+      /// only an accepting target is joined. It answers &lt;code>TRANSFER_OUTCOME_PENDING&lt;/code>, and the final outcome
+      /// (&lt;code>TRANSFER_OUTCOME_ACCEPTED&lt;/code>, &lt;code>_DECLINED&lt;/code>, &lt;code>_NO_DECISION&lt;/code>,
+      /// &lt;code>_TARGET_UNAVAILABLE&lt;/code>, &lt;code>_INTRO_UNAVAILABLE&lt;/code>, or a busy / unanswered target&amp;apos;s
+      /// usual outcome) arrives in &lt;code>Call.last_transfer&lt;/code> and the events. See
+      /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> for its refusals.&lt;/p>
       /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
       /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
       /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
@@ -1572,6 +1592,34 @@ namespace Ondewo.Vtsi {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.SetCallMediaControlResponse> SetCallMediaControl(global::Ondewo.Vtsi.SetCallMediaControlRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Press DTMF keys on a connected call, e.g. to navigate the IVR an outbound call reached or to enter a code on
+      /// the caller&amp;apos;s behalf. The keys go out as RFC 4733 telephone events from the bot&amp;apos;s leg, one every
+      /// 250 ms, in order; a later request for the same call follows the earlier one and never interleaves with it.
+      /// No tone is played into the call audio, so the bot does not hear the keys. The response means the keys were
+      /// queued: if the call ends meanwhile, the remaining keys are dropped. A peer that did not negotiate
+      /// &lt;code>telephone-event&lt;/code> receives no key.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_CALL_DTMF_SENT&lt;/code>. The keys are never written to a log, an event or an audit
+      /// record: only their number is.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=invalid-digits&lt;/code>: &lt;code>digits&lt;/code> empty, longer
+      /// than 64 or outside &lt;code>0-9 * # A-D&lt;/code>), &lt;code>NOT_FOUND&lt;/code> (&lt;code>reason=call-not-found&lt;/code>),
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>sip-image-too-old&lt;/code>, &lt;code>no-audio-stream&lt;/code>),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>call-control-busy&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, number of keys). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Vtsi.SendCallDtmfResponse> SendCallDtmf(global::Ondewo.Vtsi.SendCallDtmfRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4306,13 +4354,21 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_StopAllCalls, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener, the listener queue or a published
+      /// IVR menu.&lt;/p>
       /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
       /// resolved and validated before anything is sent; an invalid target is answered with
       /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
       /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
       /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
       /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>A WARM transfer whose effective &lt;code>WarmTransferConfig&lt;/code> is enabled runs a WARM INTRO: once the human
+      /// target answers, an ONDEWO bot asks whether a person is on the line, briefs them and asks whether they accept;
+      /// only an accepting target is joined. It answers &lt;code>TRANSFER_OUTCOME_PENDING&lt;/code>, and the final outcome
+      /// (&lt;code>TRANSFER_OUTCOME_ACCEPTED&lt;/code>, &lt;code>_DECLINED&lt;/code>, &lt;code>_NO_DECISION&lt;/code>,
+      /// &lt;code>_TARGET_UNAVAILABLE&lt;/code>, &lt;code>_INTRO_UNAVAILABLE&lt;/code>, or a busy / unanswered target&amp;apos;s
+      /// usual outcome) arrives in &lt;code>Call.last_transfer&lt;/code> and the events. See
+      /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> for its refusals.&lt;/p>
       /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
       /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
       /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
@@ -4336,13 +4392,21 @@ namespace Ondewo.Vtsi {
         return TransferCall(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener, the listener queue or a published
+      /// IVR menu.&lt;/p>
       /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
       /// resolved and validated before anything is sent; an invalid target is answered with
       /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
       /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
       /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
       /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>A WARM transfer whose effective &lt;code>WarmTransferConfig&lt;/code> is enabled runs a WARM INTRO: once the human
+      /// target answers, an ONDEWO bot asks whether a person is on the line, briefs them and asks whether they accept;
+      /// only an accepting target is joined. It answers &lt;code>TRANSFER_OUTCOME_PENDING&lt;/code>, and the final outcome
+      /// (&lt;code>TRANSFER_OUTCOME_ACCEPTED&lt;/code>, &lt;code>_DECLINED&lt;/code>, &lt;code>_NO_DECISION&lt;/code>,
+      /// &lt;code>_TARGET_UNAVAILABLE&lt;/code>, &lt;code>_INTRO_UNAVAILABLE&lt;/code>, or a busy / unanswered target&amp;apos;s
+      /// usual outcome) arrives in &lt;code>Call.last_transfer&lt;/code> and the events. See
+      /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> for its refusals.&lt;/p>
       /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
       /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
       /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
@@ -4364,13 +4428,21 @@ namespace Ondewo.Vtsi {
         return CallInvoker.BlockingUnaryCall(__Method_TransferCall, null, options, request);
       }
       /// <summary>
-      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener, the listener queue or a published
+      /// IVR menu.&lt;/p>
       /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
       /// resolved and validated before anything is sent; an invalid target is answered with
       /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
       /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
       /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
       /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>A WARM transfer whose effective &lt;code>WarmTransferConfig&lt;/code> is enabled runs a WARM INTRO: once the human
+      /// target answers, an ONDEWO bot asks whether a person is on the line, briefs them and asks whether they accept;
+      /// only an accepting target is joined. It answers &lt;code>TRANSFER_OUTCOME_PENDING&lt;/code>, and the final outcome
+      /// (&lt;code>TRANSFER_OUTCOME_ACCEPTED&lt;/code>, &lt;code>_DECLINED&lt;/code>, &lt;code>_NO_DECISION&lt;/code>,
+      /// &lt;code>_TARGET_UNAVAILABLE&lt;/code>, &lt;code>_INTRO_UNAVAILABLE&lt;/code>, or a busy / unanswered target&amp;apos;s
+      /// usual outcome) arrives in &lt;code>Call.last_transfer&lt;/code> and the events. See
+      /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> for its refusals.&lt;/p>
       /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
       /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
       /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
@@ -4394,13 +4466,21 @@ namespace Ondewo.Vtsi {
         return TransferCallAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener or the listener queue.&lt;/p>
+      /// &lt;p>Transfer a call to a phone number, a softphone account, another listener, the listener queue or a published
+      /// IVR menu.&lt;/p>
       /// &lt;p>The target is either the typed &lt;code>target&lt;/code> or the legacy raw &lt;code>transfer_id&lt;/code>, never both. It is
       /// resolved and validated before anything is sent; an invalid target is answered with
       /// &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> and an &lt;code>error_reason&lt;/code>, and the call is untouched.&lt;/p>
       /// &lt;p>&lt;code>TRANSFER_MODE_BLIND&lt;/code> (default) sends a SIP REFER and reports its outcome: a refused REFER keeps the
       /// call with the bot. &lt;code>TRANSFER_MODE_WARM&lt;/code> rings the target into the call first, and the bot leaves only
       /// after the target joined (Asterisk 22 only).&lt;/p>
+      /// &lt;p>A WARM transfer whose effective &lt;code>WarmTransferConfig&lt;/code> is enabled runs a WARM INTRO: once the human
+      /// target answers, an ONDEWO bot asks whether a person is on the line, briefs them and asks whether they accept;
+      /// only an accepting target is joined. It answers &lt;code>TRANSFER_OUTCOME_PENDING&lt;/code>, and the final outcome
+      /// (&lt;code>TRANSFER_OUTCOME_ACCEPTED&lt;/code>, &lt;code>_DECLINED&lt;/code>, &lt;code>_NO_DECISION&lt;/code>,
+      /// &lt;code>_TARGET_UNAVAILABLE&lt;/code>, &lt;code>_INTRO_UNAVAILABLE&lt;/code>, or a busy / unanswered target&amp;apos;s
+      /// usual outcome) arrives in &lt;code>Call.last_transfer&lt;/code> and the events. See
+      /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> for its refusals.&lt;/p>
       /// &lt;p>Telephony outcomes (busy, no answer, REFER rejected) are successful RPCs carrying an &lt;code>outcome&lt;/code>.
       /// Refusals before any side effect also return a gRPC status with &lt;code>reason=&amp;lt;token&amp;gt;&lt;/code> in its details:
       /// &lt;code>INVALID_ARGUMENT&lt;/code> (both targets set, malformed target), &lt;code>NOT_FOUND&lt;/code> (call or target not
@@ -5308,6 +5388,118 @@ namespace Ondewo.Vtsi {
         return CallInvoker.AsyncUnaryCall(__Method_SetCallMediaControl, null, options, request);
       }
       /// <summary>
+      /// &lt;p>Press DTMF keys on a connected call, e.g. to navigate the IVR an outbound call reached or to enter a code on
+      /// the caller&amp;apos;s behalf. The keys go out as RFC 4733 telephone events from the bot&amp;apos;s leg, one every
+      /// 250 ms, in order; a later request for the same call follows the earlier one and never interleaves with it.
+      /// No tone is played into the call audio, so the bot does not hear the keys. The response means the keys were
+      /// queued: if the call ends meanwhile, the remaining keys are dropped. A peer that did not negotiate
+      /// &lt;code>telephone-event&lt;/code> receives no key.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_CALL_DTMF_SENT&lt;/code>. The keys are never written to a log, an event or an audit
+      /// record: only their number is.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=invalid-digits&lt;/code>: &lt;code>digits&lt;/code> empty, longer
+      /// than 64 or outside &lt;code>0-9 * # A-D&lt;/code>), &lt;code>NOT_FOUND&lt;/code> (&lt;code>reason=call-not-found&lt;/code>),
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>sip-image-too-old&lt;/code>, &lt;code>no-audio-stream&lt;/code>),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>call-control-busy&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, number of keys). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SendCallDtmfResponse SendCallDtmf(global::Ondewo.Vtsi.SendCallDtmfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SendCallDtmf(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Press DTMF keys on a connected call, e.g. to navigate the IVR an outbound call reached or to enter a code on
+      /// the caller&amp;apos;s behalf. The keys go out as RFC 4733 telephone events from the bot&amp;apos;s leg, one every
+      /// 250 ms, in order; a later request for the same call follows the earlier one and never interleaves with it.
+      /// No tone is played into the call audio, so the bot does not hear the keys. The response means the keys were
+      /// queued: if the call ends meanwhile, the remaining keys are dropped. A peer that did not negotiate
+      /// &lt;code>telephone-event&lt;/code> receives no key.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_CALL_DTMF_SENT&lt;/code>. The keys are never written to a log, an event or an audit
+      /// record: only their number is.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=invalid-digits&lt;/code>: &lt;code>digits&lt;/code> empty, longer
+      /// than 64 or outside &lt;code>0-9 * # A-D&lt;/code>), &lt;code>NOT_FOUND&lt;/code> (&lt;code>reason=call-not-found&lt;/code>),
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>sip-image-too-old&lt;/code>, &lt;code>no-audio-stream&lt;/code>),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>call-control-busy&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, number of keys). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Vtsi.SendCallDtmfResponse SendCallDtmf(global::Ondewo.Vtsi.SendCallDtmfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SendCallDtmf, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Press DTMF keys on a connected call, e.g. to navigate the IVR an outbound call reached or to enter a code on
+      /// the caller&amp;apos;s behalf. The keys go out as RFC 4733 telephone events from the bot&amp;apos;s leg, one every
+      /// 250 ms, in order; a later request for the same call follows the earlier one and never interleaves with it.
+      /// No tone is played into the call audio, so the bot does not hear the keys. The response means the keys were
+      /// queued: if the call ends meanwhile, the remaining keys are dropped. A peer that did not negotiate
+      /// &lt;code>telephone-event&lt;/code> receives no key.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_CALL_DTMF_SENT&lt;/code>. The keys are never written to a log, an event or an audit
+      /// record: only their number is.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=invalid-digits&lt;/code>: &lt;code>digits&lt;/code> empty, longer
+      /// than 64 or outside &lt;code>0-9 * # A-D&lt;/code>), &lt;code>NOT_FOUND&lt;/code> (&lt;code>reason=call-not-found&lt;/code>),
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>sip-image-too-old&lt;/code>, &lt;code>no-audio-stream&lt;/code>),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>call-control-busy&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, number of keys). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SendCallDtmfResponse> SendCallDtmfAsync(global::Ondewo.Vtsi.SendCallDtmfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SendCallDtmfAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Press DTMF keys on a connected call, e.g. to navigate the IVR an outbound call reached or to enter a code on
+      /// the caller&amp;apos;s behalf. The keys go out as RFC 4733 telephone events from the bot&amp;apos;s leg, one every
+      /// 250 ms, in order; a later request for the same call follows the earlier one and never interleaves with it.
+      /// No tone is played into the call audio, so the bot does not hear the keys. The response means the keys were
+      /// queued: if the call ends meanwhile, the remaining keys are dropped. A peer that did not negotiate
+      /// &lt;code>telephone-event&lt;/code> receives no key.&lt;/p>
+      /// &lt;p>Events: &lt;code>VTSI_EVENT_CALL_DTMF_SENT&lt;/code>. The keys are never written to a log, an event or an audit
+      /// record: only their number is.&lt;/p>
+      /// &lt;p>Errors: &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=invalid-digits&lt;/code>: &lt;code>digits&lt;/code> empty, longer
+      /// than 64 or outside &lt;code>0-9 * # A-D&lt;/code>), &lt;code>NOT_FOUND&lt;/code> (&lt;code>reason=call-not-found&lt;/code>),
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>call-not-connected&lt;/code>, &lt;code>amd-in-progress&lt;/code>,
+      /// &lt;code>call-not-yet-identified&lt;/code>, &lt;code>sip-image-too-old&lt;/code>, &lt;code>no-audio-stream&lt;/code>),
+      /// &lt;code>ABORTED&lt;/code> (&lt;code>call-control-busy&lt;/code>), &lt;code>UNAVAILABLE&lt;/code> (&lt;code>sip-unreachable&lt;/code>).&lt;/p>
+      /// &lt;p>Authorization: requires the role &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project, and the server&amp;apos;s
+      /// Keycloak auth mode &lt;code>ENFORCE&lt;/code>; otherwise &lt;code>PERMISSION_DENIED&lt;/code>, or
+      /// &lt;code>FAILED_PRECONDITION&lt;/code> with &lt;code>reason=call-supervision-requires-auth&lt;/code> when auth is not enforced.
+      /// Every action writes an audit record (who, call, when, number of keys). No announcement is played to the caller.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Vtsi.SendCallDtmfResponse> SendCallDtmfAsync(global::Ondewo.Vtsi.SendCallDtmfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SendCallDtmf, null, options, request);
+      }
+      /// <summary>
       /// &lt;p>Live audio of a connected call, both ways. The first request MUST be &lt;code>config&lt;/code> (within 2 seconds).
       /// LISTEN receives the caller mixed with the bot. TALK sends the agent&amp;apos;s audio to the caller and REQUIRES
       /// &lt;code>take_over&lt;/code>: the bot is muted and does not listen while the stream is connected, and resumes when it
@@ -5457,6 +5649,7 @@ namespace Ondewo.Vtsi {
           .AddMethod(__Method_InviteToCall, serviceImpl.InviteToCall)
           .AddMethod(__Method_RemoveCallParticipant, serviceImpl.RemoveCallParticipant)
           .AddMethod(__Method_SetCallMediaControl, serviceImpl.SetCallMediaControl)
+          .AddMethod(__Method_SendCallDtmf, serviceImpl.SendCallDtmf)
           .AddMethod(__Method_StreamCallAudio, serviceImpl.StreamCallAudio)
           .AddMethod(__Method_ListenCallAudio, serviceImpl.ListenCallAudio).Build();
     }
@@ -5514,6 +5707,7 @@ namespace Ondewo.Vtsi {
       serviceBinder.AddMethod(__Method_InviteToCall, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.InviteToCallRequest, global::Ondewo.Vtsi.InviteToCallResponse>(serviceImpl.InviteToCall));
       serviceBinder.AddMethod(__Method_RemoveCallParticipant, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.RemoveCallParticipantRequest, global::Ondewo.Vtsi.RemoveCallParticipantResponse>(serviceImpl.RemoveCallParticipant));
       serviceBinder.AddMethod(__Method_SetCallMediaControl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.SetCallMediaControlRequest, global::Ondewo.Vtsi.SetCallMediaControlResponse>(serviceImpl.SetCallMediaControl));
+      serviceBinder.AddMethod(__Method_SendCallDtmf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Vtsi.SendCallDtmfRequest, global::Ondewo.Vtsi.SendCallDtmfResponse>(serviceImpl.SendCallDtmf));
       serviceBinder.AddMethod(__Method_StreamCallAudio, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Ondewo.Vtsi.StreamCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(serviceImpl.StreamCallAudio));
       serviceBinder.AddMethod(__Method_ListenCallAudio, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ondewo.Vtsi.ListenCallAudioRequest, global::Ondewo.Vtsi.StreamCallAudioResponse>(serviceImpl.ListenCallAudio));
     }

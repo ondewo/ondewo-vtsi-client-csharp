@@ -89,6 +89,8 @@ namespace Ondewo.Sip {
     static readonly grpc::Marshaller<global::Ondewo.Sip.SipCallAudioRequest> __Marshaller_ondewo_sip_SipCallAudioRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipCallAudioRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ondewo.Sip.SipCallAudioResponse> __Marshaller_ondewo_sip_SipCallAudioResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipCallAudioResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ondewo.Sip.SipSendDtmfRequest> __Marshaller_ondewo_sip_SipSendDtmfRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ondewo.Sip.SipSendDtmfRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ondewo.Sip.SipStartSessionRequest, global::Ondewo.Sip.SipStatus> __Method_SipStartSession = new grpc::Method<global::Ondewo.Sip.SipStartSessionRequest, global::Ondewo.Sip.SipStatus>(
@@ -202,6 +204,14 @@ namespace Ondewo.Sip {
         __Marshaller_ondewo_sip_SipCallAudioRequest,
         __Marshaller_ondewo_sip_SipCallAudioResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ondewo.Sip.SipSendDtmfRequest, global::Ondewo.Sip.SipStatus> __Method_SipSendDtmf = new grpc::Method<global::Ondewo.Sip.SipSendDtmfRequest, global::Ondewo.Sip.SipStatus>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SipSendDtmf",
+        __Marshaller_ondewo_sip_SipSendDtmfRequest,
+        __Marshaller_ondewo_sip_SipStatus);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -273,6 +283,15 @@ namespace Ondewo.Sip {
       /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
       /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
       /// is sent and the call is kept.&lt;/p>
+      /// &lt;p>Transfer delegation (see &lt;code>SipTransferDelegation&lt;/code>): in a container started with
+      /// &lt;code>SIP_TRANSFER_DELEGATION_ACTIVE=True&lt;/code> a transfer that the in-container speech-to-speech pipeline asks for
+      /// on a connected call is not sent. It is parked in &lt;code>SipStatus.delegated_transfer&lt;/code> and RETURNED as
+      /// &lt;code>TRANSFER_CALL_FAILED&lt;/code> with &lt;code>exception_name=TransferDelegated&lt;/code> and
+      /// &lt;code>description = reason=delegated-to-vtsi&lt;/code>; the call is kept. A client (ONDEWO VTSI) then claims it with
+      /// &lt;code>delegation&lt;/code> and &lt;code>delegated_request_id&lt;/code>. A second transfer of the pipeline while one is
+      /// parked is refused with &lt;code>exception_name=TransferInProgress&lt;/code>. Without that environment variable, and
+      /// for every request with &lt;code>delegation = SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> from any other peer, the
+      /// transfer is sent as before.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -389,6 +408,10 @@ namespace Ondewo.Sip {
       /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
       /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
       /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// &lt;p>A request may carry a &lt;code>warm_transfer_outcome&lt;/code> notice (participant owner only, refused otherwise with
+      /// &lt;code>exception_name=InvalidWarmTransferOutcomeNotice&lt;/code>). The notice is handed to the speech-to-speech
+      /// pipeline whether or not the level changed, and the answer of the pipeline is returned in
+      /// &lt;code>SipStatus.warm_transfer_outcome_notice_status&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -418,6 +441,26 @@ namespace Ondewo.Sip {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task SipStreamCallAudio(grpc::IAsyncStreamReader<global::Ondewo.Sip.SipCallAudioRequest> requestStream, grpc::IServerStreamWriter<global::Ondewo.Sip.SipCallAudioResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// &lt;p>Send DTMF keys into the ongoing connected call, as RFC 4733 telephone-events (e.g. to navigate an IVR the bot
+      /// called, or for an operator).&lt;/p>
+      /// &lt;p>Metadata as for &lt;code>SipSetCallMediaControl&lt;/code>: &lt;code>x-ondewo-expected-call-id&lt;/code> must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call; a peer outside the container presents
+      /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> when the container has one.&lt;/p>
+      /// &lt;p>Returns the live status. Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code>
+      /// (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>, &lt;code>NoOngoingCall&lt;/code>,
+      /// &lt;code>AmdInProgress&lt;/code>, &lt;code>InvalidDtmf&lt;/code>) and never assigned to the shared status. The keys are never
+      /// logged in clear.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Ondewo.Sip.SipStatus> SipSendDtmf(global::Ondewo.Sip.SipSendDtmfRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -656,6 +699,15 @@ namespace Ondewo.Sip {
       /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
       /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
       /// is sent and the call is kept.&lt;/p>
+      /// &lt;p>Transfer delegation (see &lt;code>SipTransferDelegation&lt;/code>): in a container started with
+      /// &lt;code>SIP_TRANSFER_DELEGATION_ACTIVE=True&lt;/code> a transfer that the in-container speech-to-speech pipeline asks for
+      /// on a connected call is not sent. It is parked in &lt;code>SipStatus.delegated_transfer&lt;/code> and RETURNED as
+      /// &lt;code>TRANSFER_CALL_FAILED&lt;/code> with &lt;code>exception_name=TransferDelegated&lt;/code> and
+      /// &lt;code>description = reason=delegated-to-vtsi&lt;/code>; the call is kept. A client (ONDEWO VTSI) then claims it with
+      /// &lt;code>delegation&lt;/code> and &lt;code>delegated_request_id&lt;/code>. A second transfer of the pipeline while one is
+      /// parked is refused with &lt;code>exception_name=TransferInProgress&lt;/code>. Without that environment variable, and
+      /// for every request with &lt;code>delegation = SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> from any other peer, the
+      /// transfer is sent as before.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -680,6 +732,15 @@ namespace Ondewo.Sip {
       /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
       /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
       /// is sent and the call is kept.&lt;/p>
+      /// &lt;p>Transfer delegation (see &lt;code>SipTransferDelegation&lt;/code>): in a container started with
+      /// &lt;code>SIP_TRANSFER_DELEGATION_ACTIVE=True&lt;/code> a transfer that the in-container speech-to-speech pipeline asks for
+      /// on a connected call is not sent. It is parked in &lt;code>SipStatus.delegated_transfer&lt;/code> and RETURNED as
+      /// &lt;code>TRANSFER_CALL_FAILED&lt;/code> with &lt;code>exception_name=TransferDelegated&lt;/code> and
+      /// &lt;code>description = reason=delegated-to-vtsi&lt;/code>; the call is kept. A client (ONDEWO VTSI) then claims it with
+      /// &lt;code>delegation&lt;/code> and &lt;code>delegated_request_id&lt;/code>. A second transfer of the pipeline while one is
+      /// parked is refused with &lt;code>exception_name=TransferInProgress&lt;/code>. Without that environment variable, and
+      /// for every request with &lt;code>delegation = SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> from any other peer, the
+      /// transfer is sent as before.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -702,6 +763,15 @@ namespace Ondewo.Sip {
       /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
       /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
       /// is sent and the call is kept.&lt;/p>
+      /// &lt;p>Transfer delegation (see &lt;code>SipTransferDelegation&lt;/code>): in a container started with
+      /// &lt;code>SIP_TRANSFER_DELEGATION_ACTIVE=True&lt;/code> a transfer that the in-container speech-to-speech pipeline asks for
+      /// on a connected call is not sent. It is parked in &lt;code>SipStatus.delegated_transfer&lt;/code> and RETURNED as
+      /// &lt;code>TRANSFER_CALL_FAILED&lt;/code> with &lt;code>exception_name=TransferDelegated&lt;/code> and
+      /// &lt;code>description = reason=delegated-to-vtsi&lt;/code>; the call is kept. A client (ONDEWO VTSI) then claims it with
+      /// &lt;code>delegation&lt;/code> and &lt;code>delegated_request_id&lt;/code>. A second transfer of the pipeline while one is
+      /// parked is refused with &lt;code>exception_name=TransferInProgress&lt;/code>. Without that environment variable, and
+      /// for every request with &lt;code>delegation = SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> from any other peer, the
+      /// transfer is sent as before.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -726,6 +796,15 @@ namespace Ondewo.Sip {
       /// party in it, the invited participant included. The refusal is RETURNED as &lt;code>TRANSFER_CALL_FAILED&lt;/code> with
       /// &lt;code>exception_name=ParticipantsPresent&lt;/code> and &lt;code>description = reason=participants-present&lt;/code>; nothing
       /// is sent and the call is kept.&lt;/p>
+      /// &lt;p>Transfer delegation (see &lt;code>SipTransferDelegation&lt;/code>): in a container started with
+      /// &lt;code>SIP_TRANSFER_DELEGATION_ACTIVE=True&lt;/code> a transfer that the in-container speech-to-speech pipeline asks for
+      /// on a connected call is not sent. It is parked in &lt;code>SipStatus.delegated_transfer&lt;/code> and RETURNED as
+      /// &lt;code>TRANSFER_CALL_FAILED&lt;/code> with &lt;code>exception_name=TransferDelegated&lt;/code> and
+      /// &lt;code>description = reason=delegated-to-vtsi&lt;/code>; the call is kept. A client (ONDEWO VTSI) then claims it with
+      /// &lt;code>delegation&lt;/code> and &lt;code>delegated_request_id&lt;/code>. A second transfer of the pipeline while one is
+      /// parked is refused with &lt;code>exception_name=TransferInProgress&lt;/code>. Without that environment variable, and
+      /// for every request with &lt;code>delegation = SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> from any other peer, the
+      /// transfer is sent as before.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1123,6 +1202,10 @@ namespace Ondewo.Sip {
       /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
       /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
       /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// &lt;p>A request may carry a &lt;code>warm_transfer_outcome&lt;/code> notice (participant owner only, refused otherwise with
+      /// &lt;code>exception_name=InvalidWarmTransferOutcomeNotice&lt;/code>). The notice is handed to the speech-to-speech
+      /// pipeline whether or not the level changed, and the answer of the pipeline is returned in
+      /// &lt;code>SipStatus.warm_transfer_outcome_notice_status&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1146,6 +1229,10 @@ namespace Ondewo.Sip {
       /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
       /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
       /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// &lt;p>A request may carry a &lt;code>warm_transfer_outcome&lt;/code> notice (participant owner only, refused otherwise with
+      /// &lt;code>exception_name=InvalidWarmTransferOutcomeNotice&lt;/code>). The notice is handed to the speech-to-speech
+      /// pipeline whether or not the level changed, and the answer of the pipeline is returned in
+      /// &lt;code>SipStatus.warm_transfer_outcome_notice_status&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1167,6 +1254,10 @@ namespace Ondewo.Sip {
       /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
       /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
       /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// &lt;p>A request may carry a &lt;code>warm_transfer_outcome&lt;/code> notice (participant owner only, refused otherwise with
+      /// &lt;code>exception_name=InvalidWarmTransferOutcomeNotice&lt;/code>). The notice is handed to the speech-to-speech
+      /// pipeline whether or not the level changed, and the answer of the pipeline is returned in
+      /// &lt;code>SipStatus.warm_transfer_outcome_notice_status&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1190,6 +1281,10 @@ namespace Ondewo.Sip {
       /// &lt;code>NoOngoingCall&lt;/code>, &lt;code>AmdInProgress&lt;/code>, &lt;code>CsiMediaControlFailed&lt;/code>) and never assigned to
       /// the shared status. When the pipeline refuses or fails, a requested pause is rolled back and a requested mute is
       /// kept (the safe direction); the returned fields carry the actual level.&lt;/p>
+      /// &lt;p>A request may carry a &lt;code>warm_transfer_outcome&lt;/code> notice (participant owner only, refused otherwise with
+      /// &lt;code>exception_name=InvalidWarmTransferOutcomeNotice&lt;/code>). The notice is handed to the speech-to-speech
+      /// pipeline whether or not the level changed, and the answer of the pipeline is returned in
+      /// &lt;code>SipStatus.warm_transfer_outcome_notice_status&lt;/code>.&lt;/p>
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1241,6 +1336,86 @@ namespace Ondewo.Sip {
       {
         return CallInvoker.AsyncDuplexStreamingCall(__Method_SipStreamCallAudio, null, options);
       }
+      /// <summary>
+      /// &lt;p>Send DTMF keys into the ongoing connected call, as RFC 4733 telephone-events (e.g. to navigate an IVR the bot
+      /// called, or for an operator).&lt;/p>
+      /// &lt;p>Metadata as for &lt;code>SipSetCallMediaControl&lt;/code>: &lt;code>x-ondewo-expected-call-id&lt;/code> must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call; a peer outside the container presents
+      /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> when the container has one.&lt;/p>
+      /// &lt;p>Returns the live status. Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code>
+      /// (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>, &lt;code>NoOngoingCall&lt;/code>,
+      /// &lt;code>AmdInProgress&lt;/code>, &lt;code>InvalidDtmf&lt;/code>) and never assigned to the shared status. The keys are never
+      /// logged in clear.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipSendDtmf(global::Ondewo.Sip.SipSendDtmfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipSendDtmf(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Send DTMF keys into the ongoing connected call, as RFC 4733 telephone-events (e.g. to navigate an IVR the bot
+      /// called, or for an operator).&lt;/p>
+      /// &lt;p>Metadata as for &lt;code>SipSetCallMediaControl&lt;/code>: &lt;code>x-ondewo-expected-call-id&lt;/code> must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call; a peer outside the container presents
+      /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> when the container has one.&lt;/p>
+      /// &lt;p>Returns the live status. Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code>
+      /// (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>, &lt;code>NoOngoingCall&lt;/code>,
+      /// &lt;code>AmdInProgress&lt;/code>, &lt;code>InvalidDtmf&lt;/code>) and never assigned to the shared status. The keys are never
+      /// logged in clear.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Ondewo.Sip.SipStatus SipSendDtmf(global::Ondewo.Sip.SipSendDtmfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SipSendDtmf, null, options, request);
+      }
+      /// <summary>
+      /// &lt;p>Send DTMF keys into the ongoing connected call, as RFC 4733 telephone-events (e.g. to navigate an IVR the bot
+      /// called, or for an operator).&lt;/p>
+      /// &lt;p>Metadata as for &lt;code>SipSetCallMediaControl&lt;/code>: &lt;code>x-ondewo-expected-call-id&lt;/code> must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call; a peer outside the container presents
+      /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> when the container has one.&lt;/p>
+      /// &lt;p>Returns the live status. Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code>
+      /// (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>, &lt;code>NoOngoingCall&lt;/code>,
+      /// &lt;code>AmdInProgress&lt;/code>, &lt;code>InvalidDtmf&lt;/code>) and never assigned to the shared status. The keys are never
+      /// logged in clear.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipSendDtmfAsync(global::Ondewo.Sip.SipSendDtmfRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SipSendDtmfAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// &lt;p>Send DTMF keys into the ongoing connected call, as RFC 4733 telephone-events (e.g. to navigate an IVR the bot
+      /// called, or for an operator).&lt;/p>
+      /// &lt;p>Metadata as for &lt;code>SipSetCallMediaControl&lt;/code>: &lt;code>x-ondewo-expected-call-id&lt;/code> must equal
+      /// &lt;code>SipStatus.call_id&lt;/code> of the ongoing call; a peer outside the container presents
+      /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> when the container has one.&lt;/p>
+      /// &lt;p>Returns the live status. Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code>
+      /// (&lt;code>CallScopeMismatch&lt;/code>, &lt;code>CallControlUnauthenticated&lt;/code>, &lt;code>NoOngoingCall&lt;/code>,
+      /// &lt;code>AmdInProgress&lt;/code>, &lt;code>InvalidDtmf&lt;/code>) and never assigned to the shared status. The keys are never
+      /// logged in clear.&lt;/p>
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Ondewo.Sip.SipStatus> SipSendDtmfAsync(global::Ondewo.Sip.SipSendDtmfRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SipSendDtmf, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SipClient NewInstance(ClientBaseConfiguration configuration)
@@ -1268,7 +1443,8 @@ namespace Ondewo.Sip {
           .AddMethod(__Method_SipUnMute, serviceImpl.SipUnMute)
           .AddMethod(__Method_SipReportAnsweringMachineDetected, serviceImpl.SipReportAnsweringMachineDetected)
           .AddMethod(__Method_SipSetCallMediaControl, serviceImpl.SipSetCallMediaControl)
-          .AddMethod(__Method_SipStreamCallAudio, serviceImpl.SipStreamCallAudio).Build();
+          .AddMethod(__Method_SipStreamCallAudio, serviceImpl.SipStreamCallAudio)
+          .AddMethod(__Method_SipSendDtmf, serviceImpl.SipSendDtmf).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1292,6 +1468,7 @@ namespace Ondewo.Sip {
       serviceBinder.AddMethod(__Method_SipReportAnsweringMachineDetected, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipReportAnsweringMachineDetectedRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipReportAnsweringMachineDetected));
       serviceBinder.AddMethod(__Method_SipSetCallMediaControl, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipSetCallMediaControlRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipSetCallMediaControl));
       serviceBinder.AddMethod(__Method_SipStreamCallAudio, serviceImpl == null ? null : new grpc::DuplexStreamingServerMethod<global::Ondewo.Sip.SipCallAudioRequest, global::Ondewo.Sip.SipCallAudioResponse>(serviceImpl.SipStreamCallAudio));
+      serviceBinder.AddMethod(__Method_SipSendDtmf, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ondewo.Sip.SipSendDtmfRequest, global::Ondewo.Sip.SipStatus>(serviceImpl.SipSendDtmf));
     }
 
   }

@@ -255,7 +255,9 @@ namespace Ondewo.Vtsi {
       /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
       /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
       /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
-      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code>, &lt;code>warm_transfer_defaults&lt;/code> and
+      /// &lt;code>transfer_target_directory&lt;/code> touch no Asterisk; &lt;code>ivr_menus_enabled&lt;/code> only rewrites the
+      /// inbound routes in the running Asterisk&amp;apos;s database and keeps every call; a configuration change that Asterisk
       /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
       /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
       /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
@@ -622,7 +624,9 @@ namespace Ondewo.Vtsi {
       /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
       /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
       /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
-      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code>, &lt;code>warm_transfer_defaults&lt;/code> and
+      /// &lt;code>transfer_target_directory&lt;/code> touch no Asterisk; &lt;code>ivr_menus_enabled&lt;/code> only rewrites the
+      /// inbound routes in the running Asterisk&amp;apos;s database and keeps every call; a configuration change that Asterisk
       /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
       /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
       /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
@@ -661,7 +665,9 @@ namespace Ondewo.Vtsi {
       /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
       /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
       /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
-      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code>, &lt;code>warm_transfer_defaults&lt;/code> and
+      /// &lt;code>transfer_target_directory&lt;/code> touch no Asterisk; &lt;code>ivr_menus_enabled&lt;/code> only rewrites the
+      /// inbound routes in the running Asterisk&amp;apos;s database and keeps every call; a configuration change that Asterisk
       /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
       /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
       /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
@@ -698,7 +704,9 @@ namespace Ondewo.Vtsi {
       /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
       /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
       /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
-      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code>, &lt;code>warm_transfer_defaults&lt;/code> and
+      /// &lt;code>transfer_target_directory&lt;/code> touch no Asterisk; &lt;code>ivr_menus_enabled&lt;/code> only rewrites the
+      /// inbound routes in the running Asterisk&amp;apos;s database and keeps every call; a configuration change that Asterisk
       /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
       /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
       /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and
@@ -737,7 +745,9 @@ namespace Ondewo.Vtsi {
       /// &lt;p>An update of an &lt;code>UNDEPLOYED&lt;/code> project only writes it. An update of a
       /// &lt;code>DEPLOYED&lt;/code> project is applied to the running Asterisk by the cheapest path that applies
       /// every change, chosen by the server: &lt;code>display_name&lt;/code>, &lt;code>nlu_agent_names&lt;/code> and
-      /// &lt;code>transfer_phone_number_allowlist&lt;/code> touch no Asterisk; a configuration change that Asterisk
+      /// &lt;code>transfer_phone_number_allowlist&lt;/code>, &lt;code>warm_transfer_defaults&lt;/code> and
+      /// &lt;code>transfer_target_directory&lt;/code> touch no Asterisk; &lt;code>ivr_menus_enabled&lt;/code> only rewrites the
+      /// inbound routes in the running Asterisk&amp;apos;s database and keeps every call; a configuration change that Asterisk
       /// measurably applies on a reload is reloaded in place and keeps every call; every other change is a
       /// RESTART of the Asterisk container or a REDEPLOY of the project (a changed &lt;code>max_callers&lt;/code>,
       /// &lt;code>max_listeners&lt;/code>, Asterisk port, &lt;code>asterisk_version&lt;/code> or managed account), and

@@ -79,356 +79,422 @@ namespace Ondewo.S2T {
             "c2VfZmFzdF90cmFuc2NyaXB0aW9uX2FwaRgBIAEoCEgAiAEBEicKGnVzZV9k",
             "ZXRhaWxlZF9vdXRwdXRfZm9ybWF0GAIgASgISAGIAQFCHQobX3VzZV9mYXN0",
             "X3RyYW5zY3JpcHRpb25fYXBpQh0KG191c2VfZGV0YWlsZWRfb3V0cHV0X2Zv",
-            "cm1hdCKvAgoaVHJhbnNjcmlwdGlvblJldHVybk9wdGlvbnMSHgoWcmV0dXJu",
+            "cm1hdCLXAgoaVHJhbnNjcmlwdGlvblJldHVybk9wdGlvbnMSHgoWcmV0dXJu",
             "X3N0YXJ0X29mX3NwZWVjaBgBIAEoCBIUCgxyZXR1cm5fYXVkaW8YAiABKAgS",
             "HwoXcmV0dXJuX2NvbmZpZGVuY2Vfc2NvcmUYAyABKAgSKQohcmV0dXJuX2Fs",
             "dGVybmF0aXZlX3RyYW5zY3JpcHRpb25zGAQgASgIEiwKJHJldHVybl9hbHRl",
             "cm5hdGl2ZV90cmFuc2NyaXB0aW9uc19uchgFIAEoBRIgChhyZXR1cm5fYWx0",
             "ZXJuYXRpdmVfd29yZHMYBiABKAgSIwobcmV0dXJuX2FsdGVybmF0aXZlX3dv",
-            "cmRzX25yGAcgASgFEhoKEnJldHVybl93b3JkX3RpbWluZxgIIAEoCCLJAQoZ",
-            "VXR0ZXJhbmNlRGV0ZWN0aW9uT3B0aW9ucxIeChR0cmFuc2NyaWJlX25vdF9m",
-            "aW5hbBgBIAEoCEgAEhoKEm5leHRfY2h1bmtfdGltZW91dBgCIAEoAhI6Cg50",
-            "dXJuX2RldGVjdGlvbhgDIAEoCzIgLm9uZGV3by5zMnQuVHVybkRldGVjdGlv",
-            "bk9wdGlvbnNIAUIcChpvbmVvZl90cmFuc2NyaWJlX25vdF9maW5hbEIWChRv",
-            "bmVvZl90dXJuX2RldGVjdGlvbiKQAQoVUG9zdFByb2Nlc3NpbmdPcHRpb25z",
-            "EhsKE3NwZWxsaW5nX2NvcnJlY3Rpb24YASABKAgSEQoJbm9ybWFsaXplGAIg",
-            "ASgIEioKBmNvbmZpZxgDIAEoCzIaLm9uZGV3by5zMnQuUG9zdFByb2Nlc3Np",
-            "bmcSGwoTbGxtX3Bvc3RfcHJvY2Vzc2luZxgEIAEoCCKjAQoNVHJhbnNjcmlw",
-            "dGlvbhIVCg10cmFuc2NyaXB0aW9uGAEgASgJEhgKEGNvbmZpZGVuY2Vfc2Nv",
-            "cmUYAiABKAISJQoFd29yZHMYAyADKAsyFi5vbmRld28uczJ0LldvcmREZXRh",
-            "aWwSOgoMYWx0ZXJuYXRpdmVzGAQgAygLMiQub25kZXdvLnMydC5UcmFuc2Ny",
-            "aXB0aW9uQWx0ZXJuYXRpdmUiaQoYVHJhbnNjcmlwdGlvbkFsdGVybmF0aXZl",
-            "EhIKCnRyYW5zY3JpcHQYASABKAkSEgoKY29uZmlkZW5jZRgCIAEoAhIlCgV3",
-            "b3JkcxgDIAMoCzIWLm9uZGV3by5zMnQuV29yZERldGFpbCKMAQoKV29yZERl",
-            "dGFpbBISCgpzdGFydF90aW1lGAEgASgCEhAKCGVuZF90aW1lGAIgASgCEgwK",
-            "BHdvcmQYAyABKAkSEgoKY29uZmlkZW5jZRgEIAEoAhI2ChF3b3JkX2FsdGVy",
-            "bmF0aXZlcxgFIAMoCzIbLm9uZGV3by5zMnQuV29yZEFsdGVybmF0aXZlIjMK",
-            "D1dvcmRBbHRlcm5hdGl2ZRIMCgR3b3JkGAEgASgJEhIKCmNvbmZpZGVuY2UY",
-            "AiABKAIijgEKF1RyYW5zY3JpYmVTdHJlYW1SZXF1ZXN0EhMKC2F1ZGlvX2No",
-            "dW5rGAEgASgMEhUKDWVuZF9vZl9zdHJlYW0YAiABKAgSMwoGY29uZmlnGAMg",
-            "ASgLMiMub25kZXdvLnMydC5UcmFuc2NyaWJlUmVxdWVzdENvbmZpZxISCgpt",
-            "dXRlX2F1ZGlvGAQgASgIIoMCChhUcmFuc2NyaWJlU3RyZWFtUmVzcG9uc2US",
-            "MQoOdHJhbnNjcmlwdGlvbnMYASADKAsyGS5vbmRld28uczJ0LlRyYW5zY3Jp",
-            "cHRpb24SDAoEdGltZRgCIAEoAhINCgVmaW5hbBgDIAEoCBIUCgxyZXR1cm5f",
-            "YXVkaW8YBCABKAgSDQoFYXVkaW8YBSABKAwSFwoPdXR0ZXJhbmNlX3N0YXJ0",
-            "GAYgASgIEhIKCmF1ZGlvX3V1aWQYByABKAkSNQoGY29uZmlnGAggASgLMiMu",
-            "b25kZXdvLnMydC5UcmFuc2NyaWJlUmVxdWVzdENvbmZpZ0gAQg4KDG9uZW9m",
-            "X2NvbmZpZyJgChVUcmFuc2NyaWJlRmlsZVJlcXVlc3QSEgoKYXVkaW9fZmls",
-            "ZRgBIAEoDBIzCgZjb25maWcYAiABKAsyIy5vbmRld28uczJ0LlRyYW5zY3Jp",
-            "YmVSZXF1ZXN0Q29uZmlnIm0KFlRyYW5zY3JpYmVGaWxlUmVzcG9uc2USMQoO",
-            "dHJhbnNjcmlwdGlvbnMYASADKAsyGS5vbmRld28uczJ0LlRyYW5zY3JpcHRp",
-            "b24SDAoEdGltZRgCIAEoAhISCgphdWRpb191dWlkGAMgASgJIhsKDVMydFBp",
-            "cGVsaW5lSWQSCgoCaWQYASABKAkibwoXTGlzdFMydFBpcGVsaW5lc1JlcXVl",
-            "c3QSEQoJbGFuZ3VhZ2VzGAEgAygJEhcKD3BpcGVsaW5lX293bmVycxgCIAMo",
-            "CRIPCgdkb21haW5zGAMgAygJEhcKD3JlZ2lzdGVyZWRfb25seRgEIAEoCCJT",
-            "ChhMaXN0UzJ0UGlwZWxpbmVzUmVzcG9uc2USNwoQcGlwZWxpbmVfY29uZmln",
-            "cxgBIAMoCzIdLm9uZGV3by5zMnQuU3BlZWNoMlRleHRDb25maWciQwoXTGlz",
-            "dFMydExhbmd1YWdlc1JlcXVlc3QSDwoHZG9tYWlucxgBIAMoCRIXCg9waXBl",
-            "bGluZV9vd25lcnMYAiADKAkiLQoYTGlzdFMydExhbmd1YWdlc1Jlc3BvbnNl",
-            "EhEKCWxhbmd1YWdlcxgBIAMoCSJDChVMaXN0UzJ0RG9tYWluc1JlcXVlc3QS",
-            "EQoJbGFuZ3VhZ2VzGAEgAygJEhcKD3BpcGVsaW5lX293bmVycxgCIAMoCSIp",
-            "ChZMaXN0UzJ0RG9tYWluc1Jlc3BvbnNlEg8KB2RvbWFpbnMYASADKAkiLAoZ",
-            "UzJ0R2V0U2VydmljZUluZm9SZXNwb25zZRIPCgd2ZXJzaW9uGAEgASgJIuUC",
-            "ChFTcGVlY2gyVGV4dENvbmZpZxIKCgJpZBgBIAEoCRIvCgtkZXNjcmlwdGlv",
-            "bhgCIAEoCzIaLm9uZGV3by5zMnQuUzJ0RGVzY3JpcHRpb24SDgoGYWN0aXZl",
-            "GAMgASgIEisKCWluZmVyZW5jZRgEIAEoCzIYLm9uZGV3by5zMnQuUzJ0SW5m",
-            "ZXJlbmNlEjUKEHN0cmVhbWluZ19zZXJ2ZXIYBSABKAsyGy5vbmRld28uczJ0",
-            "LlN0cmVhbWluZ1NlcnZlchJEChh2b2ljZV9hY3Rpdml0eV9kZXRlY3Rpb24Y",
-            "BiABKAsyIi5vbmRld28uczJ0LlZvaWNlQWN0aXZpdHlEZXRlY3Rpb24SMwoP",
-            "cG9zdF9wcm9jZXNzaW5nGAcgASgLMhoub25kZXdvLnMydC5Qb3N0UHJvY2Vz",
-            "c2luZxIkCgdsb2dnaW5nGAggASgLMhMub25kZXdvLnMydC5Mb2dnaW5nIlwK",
-            "DlMydERlc2NyaXB0aW9uEhAKCGxhbmd1YWdlGAEgASgJEhYKDnBpcGVsaW5l",
-            "X293bmVyGAIgASgJEg4KBmRvbWFpbhgDIAEoCRIQCghjb21tZW50cxgEIAEo",
-            "CSKxAQoMUzJ0SW5mZXJlbmNlEjMKD2Fjb3VzdGljX21vZGVscxgBIAEoCzIa",
-            "Lm9uZGV3by5zMnQuQWNvdXN0aWNNb2RlbHMSMwoPbGFuZ3VhZ2VfbW9kZWxz",
-            "GAIgASgLMhoub25kZXdvLnMydC5MYW5ndWFnZU1vZGVscxI3ChFpbmZlcmVu",
-            "Y2VfYmFja2VuZBgDIAEoDjIcLm9uZGV3by5zMnQuSW5mZXJlbmNlQmFja2Vu",
-            "ZCKWBAoOQWNvdXN0aWNNb2RlbHMSDAoEdHlwZRgBIAEoCRIkCgd3YXYydmVj",
-            "GAIgASgLMhMub25kZXdvLnMydC5XYXYyVmVjEjEKDndhdjJ2ZWNfdHJpdG9u",
-            "GAMgASgLMhkub25kZXdvLnMydC5XYXYyVmVjVHJpdG9uEiQKB3doaXNwZXIY",
-            "BCABKAsyEy5vbmRld28uczJ0LldoaXNwZXISMQoOd2hpc3Blcl90cml0b24Y",
-            "BSABKAsyGS5vbmRld28uczJ0LldoaXNwZXJUcml0b24SQwoYczJ0X2Nsb3Vk",
-            "X3NlcnZpY2VfYW1hem9uGAYgASgLMiEub25kZXdvLnMydC5TMnRDbG91ZFNl",
-            "cnZpY2VBbWF6b24SRwoaczJ0X2Nsb3VkX3NlcnZpY2VfZGVlcGdyYW0YByAB",
-            "KAsyIy5vbmRld28uczJ0LlMydENsb3VkU2VydmljZURlZXBncmFtEkMKGHMy",
-            "dF9jbG91ZF9zZXJ2aWNlX2dvb2dsZRgIIAEoCzIhLm9uZGV3by5zMnQuUzJ0",
-            "Q2xvdWRTZXJ2aWNlR29vZ2xlEkkKG3MydF9jbG91ZF9zZXJ2aWNlX21pY3Jv",
-            "c29mdBgJIAEoCzIkLm9uZGV3by5zMnQuUzJ0Q2xvdWRTZXJ2aWNlTWljcm9z",
-            "b2Z0EiYKCHBhcmFrZWV0GAogASgLMhQub25kZXdvLnMydC5QYXJha2VldCLN",
-            "AQoVUzJ0Q2xvdWRTZXJ2aWNlQW1hem9uEhAKCGxhbmd1YWdlGAEgASgJEhsK",
-            "E3N0cmVhbWluZ19hdmFpbGFibGUYAiABKAgSLAokZW5hYmxlX3BhcnRpYWxf",
-            "cmVzdWx0c19zdGFiaWxpemF0aW9uGAMgASgIEiEKGXBhcnRpYWxfcmVzdWx0",
-            "c19zdGFiaWxpdHkYBCABKAkSGwoTbGFuZ3VhZ2VfbW9kZWxfbmFtZRgFIAEo",
-            "CRIXCg92b2NhYnVsYXJ5X25hbWUYBiABKAkiowEKF1MydENsb3VkU2Vydmlj",
-            "ZURlZXBncmFtEhIKCm1vZGVsX25hbWUYASABKAkSEAoIbGFuZ3VhZ2UYAiAB",
-            "KAkSEQoJcHVuY3R1YXRlGAMgASgIEhQKDHNtYXJ0X2Zvcm1hdBgEIAEoCBIQ",
-            "CghudW1lcmFscxgFIAEoCBIUCgxtZWFzdXJlbWVudHMYBiABKAgSEQoJZGlj",
-            "dGF0aW9uGAcgASgIIuEBChVTMnRDbG91ZFNlcnZpY2VHb29nbGUSEgoKbW9k",
-            "ZWxfbmFtZRgBIAEoCRIQCghsYW5ndWFnZRgCIAEoCRIkChxlbmFibGVfYXV0",
-            "b21hdGljX3B1bmN0dWF0aW9uGAMgASgIEiAKGGVuYWJsZV93b3JkX3RpbWVf",
-            "b2Zmc2V0cxgEIAEoCBIeChZlbmFibGVfd29yZF9jb25maWRlbmNlGAUgASgI",
-            "EiAKGHRyYW5zY3JpcHRfbm9ybWFsaXphdGlvbhgGIAEoCBIYChBtYXhfYWx0",
-            "ZXJuYXRpdmVzGAcgASgFInQKGFMydENsb3VkU2VydmljZU1pY3Jvc29mdBIQ",
-            "CghsYW5ndWFnZRgBIAEoCRIiChp1c2VfZmFzdF90cmFuc2NyaXB0aW9uX2Fw",
-            "aRgCIAEoCBIiChp1c2VfZGV0YWlsZWRfb3V0cHV0X2Zvcm1hdBgDIAEoCCJO",
-            "CgdXaGlzcGVyEhIKCm1vZGVsX3BhdGgYASABKAkSDwoHdXNlX2dwdRgCIAEo",
-            "CBIQCghsYW5ndWFnZRgDIAEoCRIMCgR0YXNrGAQgASgJItYBCg1XaGlzcGVy",
-            "VHJpdG9uEhYKDnByb2Nlc3Nvcl9wYXRoGAEgASgJEhkKEXRyaXRvbl9tb2Rl",
-            "bF9uYW1lGAIgASgJEhwKFHRyaXRvbl9tb2RlbF92ZXJzaW9uGAMgASgJEhwK",
-            "FGNoZWNrX3N0YXR1c190aW1lb3V0GAQgASgDEhAKCGxhbmd1YWdlGAUgASgJ",
-            "EgwKBHRhc2sYBiABKAkSGgoSdHJpdG9uX3NlcnZlcl9ob3N0GAcgASgJEhoK",
-            "EnRyaXRvbl9zZXJ2ZXJfcG9ydBgIIAEoAyIuCgdXYXYyVmVjEhIKCm1vZGVs",
-            "X3BhdGgYASABKAkSDwoHdXNlX2dwdRgCIAEoCCK2AQoNV2F2MlZlY1RyaXRv",
-            "bhIWCg5wcm9jZXNzb3JfcGF0aBgBIAEoCRIZChF0cml0b25fbW9kZWxfbmFt",
-            "ZRgCIAEoCRIcChR0cml0b25fbW9kZWxfdmVyc2lvbhgDIAEoCRIcChRjaGVj",
-            "a19zdGF0dXNfdGltZW91dBgEIAEoAxIaChJ0cml0b25fc2VydmVyX2hvc3QY",
-            "BSABKAkSGgoSdHJpdG9uX3NlcnZlcl9wb3J0GAYgASgDIpkBCghQYXJha2Vl",
-            "dBIZChF0cml0b25fbW9kZWxfbmFtZRgBIAEoCRIcChR0cml0b25fbW9kZWxf",
-            "dmVyc2lvbhgCIAEoCRIcChRjaGVja19zdGF0dXNfdGltZW91dBgDIAEoAxIa",
-            "ChJ0cml0b25fc2VydmVyX2hvc3QYBCABKAkSGgoSdHJpdG9uX3NlcnZlcl9w",
-            "b3J0GAUgASgDIiUKB1B0RmlsZXMSDAoEcGF0aBgBIAEoCRIMCgRzdGVwGAIg",
-            "ASgJIhgKCENrcHRGaWxlEgwKBHBhdGgYASABKAkiiAEKDkxhbmd1YWdlTW9k",
-            "ZWxzEgwKBHBhdGgYASABKAkSEQoJYmVhbV9zaXplGAIgASgDEhIKCmRlZmF1",
-            "bHRfbG0YAyABKAkSIAoYYmVhbV9zZWFyY2hfc2NvcmVyX2FscGhhGAQgASgC",
-            "Eh8KF2JlYW1fc2VhcmNoX3Njb3Jlcl9iZXRhGAUgASgCIpEBCg9TdHJlYW1p",
-            "bmdTZXJ2ZXISDAoEaG9zdBgBIAEoCRIMCgRwb3J0GAIgASgDEhQKDG91dHB1",
-            "dF9zdHlsZRgDIAEoCRJMChxzdHJlYW1pbmdfc3BlZWNoX3JlY29nbml0aW9u",
-            "GAQgASgLMiYub25kZXdvLnMydC5TdHJlYW1pbmdTcGVlY2hSZWNvZ25pdGlv",
-            "biLeAQoaU3RyZWFtaW5nU3BlZWNoUmVjb2duaXRpb24SHAoUdHJhbnNjcmli",
-            "ZV9ub3RfZmluYWwYASABKAgSFwoPZGVjb2RpbmdfbWV0aG9kGAIgASgJEhUK",
-            "DXNhbXBsaW5nX3JhdGUYAyABKAMSHAoUbWluX2F1ZGlvX2NodW5rX3NpemUY",
-            "BCABKAMSGgoSbmV4dF9jaHVua190aW1lb3V0GAUgASgCEjgKDnR1cm5fZGV0",
-            "ZWN0aW9uGAYgASgLMiAub25kZXdvLnMydC5UdXJuRGV0ZWN0aW9uT3B0aW9u",
-            "cyKEAwoUVHVybkRldGVjdGlvbk9wdGlvbnMSEwoGYWN0aXZlGAEgASgISACI",
-            "AQESJgoZZnVsbF91dHRlcmFuY2VfZGVwbG95bWVudBgCIAEoCEgBiAEBEikK",
-            "HHR1cm5fZGV0ZWN0aW9uX3N5c3RlbV9wcm9tcHQYAyABKAlIAogBARInChp0",
-            "dXJuX2RldGVjdGlvbl91c2VyX3Byb21wdBgEIAEoCUgDiAEBEkwKIXR1cm5f",
-            "ZGV0ZWN0aW9uX2xsbV9vcGVuYWlfb3B0aW9ucxgFIAEoCzIcLm9uZGV3by5z",
-            "MnQuT3BlbmFpTGxtT3B0aW9uc0gEiAEBQgkKB19hY3RpdmVCHAoaX2Z1bGxf",
-            "dXR0ZXJhbmNlX2RlcGxveW1lbnRCHwodX3R1cm5fZGV0ZWN0aW9uX3N5c3Rl",
-            "bV9wcm9tcHRCHQobX3R1cm5fZGV0ZWN0aW9uX3VzZXJfcHJvbXB0QiQKIl90",
-            "dXJuX2RldGVjdGlvbl9sbG1fb3BlbmFpX29wdGlvbnMi3g0KEE9wZW5haUxs",
-            "bU9wdGlvbnMSFAoHYXBpX2tleRgBIAEoCUgAiAEBEhkKDG9yZ2FuaXphdGlv",
-            "bhgCIAEoCUgBiAEBEhQKB3Byb2plY3QYAyABKAlIAogBARIbCg53ZWJob29r",
-            "X3NlY3JldBgEIAEoCUgDiAEBEhUKCGJhc2VfdXJsGAUgASgJSASIAQESHwoS",
-            "d2Vic29ja2V0X2Jhc2VfdXJsGAYgASgJSAWIAQESFAoHdGltZW91dBgHIAEo",
-            "AkgGiAEBEhgKC21heF9yZXRyaWVzGAggASgFSAeIAQESSQoPZGVmYXVsdF9o",
-            "ZWFkZXJzGAkgAygLMjAub25kZXdvLnMydC5PcGVuYWlMbG1PcHRpb25zLkRl",
-            "ZmF1bHRIZWFkZXJzRW50cnkSMwoNZGVmYXVsdF9xdWVyeRgKIAEoCzIXLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3RICIgBARInChpzdHJpY3RfcmVzcG9uc2Vf",
-            "dmFsaWRhdGlvbhgLIAEoCEgJiAEBEg0KBW1vZGVsGAwgASgJEh4KEWZyZXF1",
-            "ZW5jeV9wZW5hbHR5GA0gASgCSAqIAQESPwoKbG9naXRfYmlhcxgOIAMoCzIr",
-            "Lm9uZGV3by5zMnQuT3BlbmFpTGxtT3B0aW9ucy5Mb2dpdEJpYXNFbnRyeRIV",
-            "Cghsb2dwcm9icxgPIAEoCEgLiAEBEiIKFW1heF9jb21wbGV0aW9uX3Rva2Vu",
-            "cxgQIAEoBUgMiAEBEhcKCm1heF90b2tlbnMYESABKAVIDYgBARIuCghtZXRh",
-            "ZGF0YRgSIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RIDogBARIOCgFu",
-            "GBMgASgFSA+IAQESHQoQcHJlc2VuY2VfcGVuYWx0eRgUIAEoAkgQiAEBEh0K",
-            "EHByb21wdF9jYWNoZV9rZXkYFSABKAlIEYgBARI6ChByZWFzb25pbmdfZWZm",
-            "b3J0GBYgASgOMhsub25kZXdvLnMydC5SZWFzb25pbmdFZmZvcnRIEogBARIR",
-            "CgRzZWVkGBcgASgDSBOIAQESMgoMc2VydmljZV90aWVyGBggASgOMhcub25k",
-            "ZXdvLnMydC5TZXJ2aWNlVGllckgUiAEBEgwKBHN0b3AYGSADKAkSEgoFc3Rv",
-            "cmUYGiABKAhIFYgBARIYCgt0ZW1wZXJhdHVyZRgbIAEoAkgWiAEBEhkKDHRv",
-            "cF9sb2dwcm9icxgcIAEoBUgXiAEBEhIKBXRvcF9wGB0gASgCSBiIAQESEQoE",
-            "dXNlchgeIAEoCUgZiAEBEi0KCXZlcmJvc2l0eRgfIAEoDjIVLm9uZGV3by5z",
-            "MnQuVmVyYm9zaXR5SBqIAQESMwoNZXh0cmFfaGVhZGVycxggIAEoCzIXLmdv",
-            "b2dsZS5wcm90b2J1Zi5TdHJ1Y3RIG4gBARIxCgtleHRyYV9xdWVyeRghIAEo",
-            "CzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RIHIgBARIwCgpleHRyYV9ib2R5",
-            "GCIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEgdiAEBGjUKE0RlZmF1",
-            "bHRIZWFkZXJzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ARowCg5Mb2dpdEJpYXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAU6AjgBQgoKCF9hcGlfa2V5Qg8KDV9vcmdhbml6YXRpb25CCgoIX3Byb2pl",
-            "Y3RCEQoPX3dlYmhvb2tfc2VjcmV0QgsKCV9iYXNlX3VybEIVChNfd2Vic29j",
-            "a2V0X2Jhc2VfdXJsQgoKCF90aW1lb3V0Qg4KDF9tYXhfcmV0cmllc0IQCg5f",
-            "ZGVmYXVsdF9xdWVyeUIdChtfc3RyaWN0X3Jlc3BvbnNlX3ZhbGlkYXRpb25C",
-            "FAoSX2ZyZXF1ZW5jeV9wZW5hbHR5QgsKCV9sb2dwcm9ic0IYChZfbWF4X2Nv",
-            "bXBsZXRpb25fdG9rZW5zQg0KC19tYXhfdG9rZW5zQgsKCV9tZXRhZGF0YUIE",
-            "CgJfbkITChFfcHJlc2VuY2VfcGVuYWx0eUITChFfcHJvbXB0X2NhY2hlX2tl",
-            "eUITChFfcmVhc29uaW5nX2VmZm9ydEIHCgVfc2VlZEIPCg1fc2VydmljZV90",
-            "aWVyQggKBl9zdG9yZUIOCgxfdGVtcGVyYXR1cmVCDwoNX3RvcF9sb2dwcm9i",
-            "c0IICgZfdG9wX3BCBwoFX3VzZXJCDAoKX3ZlcmJvc2l0eUIQCg5fZXh0cmFf",
-            "aGVhZGVyc0IOCgxfZXh0cmFfcXVlcnlCDQoLX2V4dHJhX2JvZHkikgIKFlZv",
-            "aWNlQWN0aXZpdHlEZXRlY3Rpb24SDgoGYWN0aXZlGAEgASgJEhUKDXNhbXBs",
-            "aW5nX3JhdGUYAiABKAMSJgoIcHlhbm5vdGUYAyABKAsyFC5vbmRld28uczJ0",
-            "LlB5YW5ub3RlEiIKBnNpbGVybxgEIAEoCzISLm9uZGV3by5zMnQuU2lsZXJv",
-            "Ei8KDXdlc3BlYWtlcl90c2QYBSABKAsyGC5vbmRld28uczJ0Lldlc3BlYWtl",
-            "clRzZBIpCgp2YWRfbWV0aG9kGAYgASgOMhUub25kZXdvLnMydC5WYWRNZXRo",
-            "b2QSKQoKdHNkX21ldGhvZBgHIAEoDjIVLm9uZGV3by5zMnQuVHNkTWV0aG9k",
-            "IqEBCghQeWFubm90ZRISCgptb2RlbF9uYW1lGAEgASgJEhYKDm1pbl9hdWRp",
-            "b19zaXplGAIgASgDEhgKEG1pbl9kdXJhdGlvbl9vZmYYAyABKAISFwoPbWlu",
-            "X2R1cmF0aW9uX29uGAQgASgCEhoKEnRyaXRvbl9zZXJ2ZXJfaG9zdBgFIAEo",
-            "CRIaChJ0cml0b25fc2VydmVyX3BvcnQYBiABKAMiwgIKBlNpbGVybxISCgpt",
-            "b2RlbF9uYW1lGAEgASgJEhYKDm1pbl9hdWRpb19zaXplGAIgASgDEhYKCXRo",
-            "cmVzaG9sZBgDIAEoAkgAiAEBEiMKFm1pbl9zcGVlY2hfZHVyYXRpb25fbXMY",
-            "BCABKAJIAYgBARIkChdtaW5fc2lsZW5jZV9kdXJhdGlvbl9tcxgFIAEoAkgC",
-            "iAEBEhoKDXNwZWVjaF9wYWRfbXMYBiABKAJIA4gBARIaChJ0cml0b25fc2Vy",
-            "dmVyX2hvc3QYByABKAkSGgoSdHJpdG9uX3NlcnZlcl9wb3J0GAggASgDQgwK",
-            "Cl90aHJlc2hvbGRCGQoXX21pbl9zcGVlY2hfZHVyYXRpb25fbXNCGgoYX21p",
-            "bl9zaWxlbmNlX2R1cmF0aW9uX21zQhAKDl9zcGVlY2hfcGFkX21zIvgBCgxX",
-            "ZXNwZWFrZXJUc2QSDgoGYWN0aXZlGAEgASgIEhIKCm1vZGVsX25hbWUYAiAB",
-            "KAkSGgoSdHJpdG9uX3NlcnZlcl9ob3N0GAMgASgJEhoKEnRyaXRvbl9zZXJ2",
-            "ZXJfcG9ydBgEIAEoAxIhChRzaW1pbGFyaXR5X3RocmVzaG9sZBgFIAEoAkgA",
-            "iAEBEh0KEG1pbl9hdWRpb19sZW5ndGgYBiABKAJIAYgBARIcChRyZWZlcmVu",
-            "Y2VfbWF4X2xlbmd0aBgHIAEoAkIXChVfc2ltaWxhcml0eV90aHJlc2hvbGRC",
-            "EwoRX21pbl9hdWRpb19sZW5ndGgiVwoOUG9zdFByb2Nlc3NpbmcSEAoIcGlw",
-            "ZWxpbmUYASADKAkSMwoPcG9zdF9wcm9jZXNzb3JzGAIgASgLMhoub25kZXdv",
-            "LnMydC5Qb3N0UHJvY2Vzc29ycyKtAQoOUG9zdFByb2Nlc3NvcnMSJwoJc3lt",
-            "X3NwZWxsGAEgASgLMhQub25kZXdvLnMydC5TeW1TcGVsbBIzCg1ub3JtYWxp",
-            "emF0aW9uGAIgASgLMhwub25kZXdvLnMydC5TMnROb3JtYWxpemF0aW9uEj0K",
-            "E2xsbV9wb3N0X3Byb2Nlc3NpbmcYAyABKAsyIC5vbmRld28uczJ0LlMydExs",
-            "bVBvc3RQcm9jZXNzaW5nIloKCFN5bVNwZWxsEhEKCWRpY3RfcGF0aBgBIAEo",
-            "CRIkChxtYXhfZGljdGlvbmFyeV9lZGl0X2Rpc3RhbmNlGAIgASgDEhUKDXBy",
-            "ZWZpeF9sZW5ndGgYAyABKAMiNgoQUzJ0Tm9ybWFsaXphdGlvbhIQCghsYW5n",
-            "dWFnZRgBIAEoCRIQCghwaXBlbGluZRgCIAMoCSKJDgoUUzJ0TGxtUG9zdFBy",
-            "b2Nlc3NpbmcSUQomczJ0X2xsbV9wb3N0X3Byb2Nlc3Npbmdfb3BlbmFpX29w",
-            "dGlvbnMYASABKAsyHC5vbmRld28uczJ0Lk9wZW5haUxsbU9wdGlvbnNIAIgB",
-            "ARIyCiVzMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19zeXN0ZW1fcHJvbXB0GAIg",
-            "ASgJSAGIAQESMgolczJ0X2xsbV9wb3N0X3Byb2Nlc3NpbmdfZW5kaW5nX3By",
-            "b21wdBgDIAEoCUgCiAEBEmMKJnMydF9sbG1fcG9zdF9wcm9jZXNzaW5nX2Nh",
-            "c2luZ19vcHRpb25zGAQgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJv",
-            "Y2Vzc2luZ1N1YlRhc2tPcHRpb25zSAOIAQESaAorczJ0X2xsbV9wb3N0X3By",
-            "b2Nlc3NpbmdfcHVuY3R1YXRpb25fb3B0aW9ucxgFIAEoCzIuLm9uZGV3by5z",
-            "MnQuUzJ0TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gEiAEBEnAK",
-            "M3MydF9sbG1fcG9zdF9wcm9jZXNzaW5nX3NwZWxsaW5nX2NvcnJlY3Rpb25f",
-            "b3B0aW9ucxgGIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3Np",
-            "bmdTdWJUYXNrT3B0aW9uc0gFiAEBEnAKM3MydF9sbG1fcG9zdF9wcm9jZXNz",
-            "aW5nX3NlbWFudGljX2NvcnJlY3Rpb25fb3B0aW9ucxgHIAEoCzIuLm9uZGV3",
-            "by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gGiAEB",
-            "EmwKK3MydF9sbG1fcG9zdF9wcm9jZXNzaW5nX3RyYW5zbGF0aW9uX29wdGlv",
-            "bnMYCCABKAsyMi5vbmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nVHJh",
-            "bnNsYXRpb25PcHRpb25zSAeIAQESfwo1czJ0X2xsbV9wb3N0X3Byb2Nlc3Np",
-            "bmdfaW52ZXJzZV9ub3JtYWxpemF0aW9uX29wdGlvbnMYCSABKAsyOy5vbmRl",
-            "d28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nSW52ZXJzZU5vcm1hbGl6YXRp",
-            "b25PcHRpb25zSAiIAQEScAotczJ0X2xsbV9wb3N0X3Byb2Nlc3Npbmdfbm9y",
-            "bWFsaXphdGlvbl9vcHRpb25zGAogASgLMjQub25kZXdvLnMydC5TMnRMbG1Q",
-            "b3N0UHJvY2Vzc2luZ05vcm1hbGl6YXRpb25PcHRpb25zSAmIAQEScAotczJ0",
-            "X2xsbV9wb3N0X3Byb2Nlc3Npbmdfc3VtbWFyaXphdGlvbl9vcHRpb25zGAsg",
-            "ASgLMjQub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1bW1hcml6",
-            "YXRpb25PcHRpb25zSAqIAQESaAorczJ0X2xsbV9wb3N0X3Byb2Nlc3Npbmdf",
-            "dXNlcl9wcm9tcHRfb3B0aW9ucxgMIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxt",
-            "UG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gLiAEBQikKJ19zMnRfbGxt",
-            "X3Bvc3RfcHJvY2Vzc2luZ19vcGVuYWlfb3B0aW9uc0IoCiZfczJ0X2xsbV9w",
-            "b3N0X3Byb2Nlc3Npbmdfc3lzdGVtX3Byb21wdEIoCiZfczJ0X2xsbV9wb3N0",
-            "X3Byb2Nlc3NpbmdfZW5kaW5nX3Byb21wdEIpCidfczJ0X2xsbV9wb3N0X3By",
-            "b2Nlc3NpbmdfY2FzaW5nX29wdGlvbnNCLgosX3MydF9sbG1fcG9zdF9wcm9j",
-            "ZXNzaW5nX3B1bmN0dWF0aW9uX29wdGlvbnNCNgo0X3MydF9sbG1fcG9zdF9w",
-            "cm9jZXNzaW5nX3NwZWxsaW5nX2NvcnJlY3Rpb25fb3B0aW9uc0I2CjRfczJ0",
-            "X2xsbV9wb3N0X3Byb2Nlc3Npbmdfc2VtYW50aWNfY29ycmVjdGlvbl9vcHRp",
-            "b25zQi4KLF9zMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ190cmFuc2xhdGlvbl9v",
-            "cHRpb25zQjgKNl9zMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19pbnZlcnNlX25v",
-            "cm1hbGl6YXRpb25fb3B0aW9uc0IwCi5fczJ0X2xsbV9wb3N0X3Byb2Nlc3Np",
-            "bmdfbm9ybWFsaXphdGlvbl9vcHRpb25zQjAKLl9zMnRfbGxtX3Bvc3RfcHJv",
-            "Y2Vzc2luZ19zdW1tYXJpemF0aW9uX29wdGlvbnNCLgosX3MydF9sbG1fcG9z",
-            "dF9wcm9jZXNzaW5nX3VzZXJfcHJvbXB0X29wdGlvbnMijAEKJlMydExsbVBv",
-            "c3RQcm9jZXNzaW5nVHJhbnNsYXRpb25PcHRpb25zEhMKBmFjdGl2ZRgBIAEo",
-            "CEgAiAEBEhUKCGxhbmd1YWdlGAIgASgJSAGIAQESEwoGcHJvbXB0GAMgASgJ",
-            "SAKIAQFCCQoHX2FjdGl2ZUILCglfbGFuZ3VhZ2VCCQoHX3Byb21wdCKHBQov",
+            "cmRzX25yGAcgASgFEhoKEnJldHVybl93b3JkX3RpbWluZxgIIAEoCBImCh5y",
+            "ZXR1cm5fZW5kX29mX3NwZWVjaF9jYW5kaWRhdGUYCSABKAgi3wIKGVV0dGVy",
+            "YW5jZURldGVjdGlvbk9wdGlvbnMSHgoUdHJhbnNjcmliZV9ub3RfZmluYWwY",
+            "ASABKAhIABIaChJuZXh0X2NodW5rX3RpbWVvdXQYAiABKAISOgoOdHVybl9k",
+            "ZXRlY3Rpb24YAyABKAsyIC5vbmRld28uczJ0LlR1cm5EZXRlY3Rpb25PcHRp",
+            "b25zSAESIQoUbWluX2F1ZGlvX2NodW5rX3NpemUYBCABKANIAogBARIwCiN0",
+            "cmFuc2NyaWJlX25vdF9maW5hbF9wZXJpb2Rfc2Vjb25kcxgFIAEoAkgDiAEB",
+            "QhwKGm9uZW9mX3RyYW5zY3JpYmVfbm90X2ZpbmFsQhYKFG9uZW9mX3R1cm5f",
+            "ZGV0ZWN0aW9uQhcKFV9taW5fYXVkaW9fY2h1bmtfc2l6ZUImCiRfdHJhbnNj",
+            "cmliZV9ub3RfZmluYWxfcGVyaW9kX3NlY29uZHMikAEKFVBvc3RQcm9jZXNz",
+            "aW5nT3B0aW9ucxIbChNzcGVsbGluZ19jb3JyZWN0aW9uGAEgASgIEhEKCW5v",
+            "cm1hbGl6ZRgCIAEoCBIqCgZjb25maWcYAyABKAsyGi5vbmRld28uczJ0LlBv",
+            "c3RQcm9jZXNzaW5nEhsKE2xsbV9wb3N0X3Byb2Nlc3NpbmcYBCABKAgiowEK",
+            "DVRyYW5zY3JpcHRpb24SFQoNdHJhbnNjcmlwdGlvbhgBIAEoCRIYChBjb25m",
+            "aWRlbmNlX3Njb3JlGAIgASgCEiUKBXdvcmRzGAMgAygLMhYub25kZXdvLnMy",
+            "dC5Xb3JkRGV0YWlsEjoKDGFsdGVybmF0aXZlcxgEIAMoCzIkLm9uZGV3by5z",
+            "MnQuVHJhbnNjcmlwdGlvbkFsdGVybmF0aXZlImkKGFRyYW5zY3JpcHRpb25B",
+            "bHRlcm5hdGl2ZRISCgp0cmFuc2NyaXB0GAEgASgJEhIKCmNvbmZpZGVuY2UY",
+            "AiABKAISJQoFd29yZHMYAyADKAsyFi5vbmRld28uczJ0LldvcmREZXRhaWwi",
+            "jAEKCldvcmREZXRhaWwSEgoKc3RhcnRfdGltZRgBIAEoAhIQCghlbmRfdGlt",
+            "ZRgCIAEoAhIMCgR3b3JkGAMgASgJEhIKCmNvbmZpZGVuY2UYBCABKAISNgoR",
+            "d29yZF9hbHRlcm5hdGl2ZXMYBSADKAsyGy5vbmRld28uczJ0LldvcmRBbHRl",
+            "cm5hdGl2ZSIzCg9Xb3JkQWx0ZXJuYXRpdmUSDAoEd29yZBgBIAEoCRISCgpj",
+            "b25maWRlbmNlGAIgASgCIo4BChdUcmFuc2NyaWJlU3RyZWFtUmVxdWVzdBIT",
+            "CgthdWRpb19jaHVuaxgBIAEoDBIVCg1lbmRfb2Zfc3RyZWFtGAIgASgIEjMK",
+            "BmNvbmZpZxgDIAEoCzIjLm9uZGV3by5zMnQuVHJhbnNjcmliZVJlcXVlc3RD",
+            "b25maWcSEgoKbXV0ZV9hdWRpbxgEIAEoCCKkAgoYVHJhbnNjcmliZVN0cmVh",
+            "bVJlc3BvbnNlEjEKDnRyYW5zY3JpcHRpb25zGAEgAygLMhkub25kZXdvLnMy",
+            "dC5UcmFuc2NyaXB0aW9uEgwKBHRpbWUYAiABKAISDQoFZmluYWwYAyABKAgS",
+            "FAoMcmV0dXJuX2F1ZGlvGAQgASgIEg0KBWF1ZGlvGAUgASgMEhcKD3V0dGVy",
+            "YW5jZV9zdGFydBgGIAEoCBISCgphdWRpb191dWlkGAcgASgJEh8KF2VuZF9v",
+            "Zl9zcGVlY2hfY2FuZGlkYXRlGAkgASgIEjUKBmNvbmZpZxgIIAEoCzIjLm9u",
+            "ZGV3by5zMnQuVHJhbnNjcmliZVJlcXVlc3RDb25maWdIAEIOCgxvbmVvZl9j",
+            "b25maWciYAoVVHJhbnNjcmliZUZpbGVSZXF1ZXN0EhIKCmF1ZGlvX2ZpbGUY",
+            "ASABKAwSMwoGY29uZmlnGAIgASgLMiMub25kZXdvLnMydC5UcmFuc2NyaWJl",
+            "UmVxdWVzdENvbmZpZyJtChZUcmFuc2NyaWJlRmlsZVJlc3BvbnNlEjEKDnRy",
+            "YW5zY3JpcHRpb25zGAEgAygLMhkub25kZXdvLnMydC5UcmFuc2NyaXB0aW9u",
+            "EgwKBHRpbWUYAiABKAISEgoKYXVkaW9fdXVpZBgDIAEoCSIbCg1TMnRQaXBl",
+            "bGluZUlkEgoKAmlkGAEgASgJIm8KF0xpc3RTMnRQaXBlbGluZXNSZXF1ZXN0",
+            "EhEKCWxhbmd1YWdlcxgBIAMoCRIXCg9waXBlbGluZV9vd25lcnMYAiADKAkS",
+            "DwoHZG9tYWlucxgDIAMoCRIXCg9yZWdpc3RlcmVkX29ubHkYBCABKAgiUwoY",
+            "TGlzdFMydFBpcGVsaW5lc1Jlc3BvbnNlEjcKEHBpcGVsaW5lX2NvbmZpZ3MY",
+            "ASADKAsyHS5vbmRld28uczJ0LlNwZWVjaDJUZXh0Q29uZmlnIkMKF0xpc3RT",
+            "MnRMYW5ndWFnZXNSZXF1ZXN0Eg8KB2RvbWFpbnMYASADKAkSFwoPcGlwZWxp",
+            "bmVfb3duZXJzGAIgAygJIi0KGExpc3RTMnRMYW5ndWFnZXNSZXNwb25zZRIR",
+            "CglsYW5ndWFnZXMYASADKAkiQwoVTGlzdFMydERvbWFpbnNSZXF1ZXN0EhEK",
+            "CWxhbmd1YWdlcxgBIAMoCRIXCg9waXBlbGluZV9vd25lcnMYAiADKAkiKQoW",
+            "TGlzdFMydERvbWFpbnNSZXNwb25zZRIPCgdkb21haW5zGAEgAygJIiwKGVMy",
+            "dEdldFNlcnZpY2VJbmZvUmVzcG9uc2USDwoHdmVyc2lvbhgBIAEoCSLlAgoR",
+            "U3BlZWNoMlRleHRDb25maWcSCgoCaWQYASABKAkSLwoLZGVzY3JpcHRpb24Y",
+            "AiABKAsyGi5vbmRld28uczJ0LlMydERlc2NyaXB0aW9uEg4KBmFjdGl2ZRgD",
+            "IAEoCBIrCglpbmZlcmVuY2UYBCABKAsyGC5vbmRld28uczJ0LlMydEluZmVy",
+            "ZW5jZRI1ChBzdHJlYW1pbmdfc2VydmVyGAUgASgLMhsub25kZXdvLnMydC5T",
+            "dHJlYW1pbmdTZXJ2ZXISRAoYdm9pY2VfYWN0aXZpdHlfZGV0ZWN0aW9uGAYg",
+            "ASgLMiIub25kZXdvLnMydC5Wb2ljZUFjdGl2aXR5RGV0ZWN0aW9uEjMKD3Bv",
+            "c3RfcHJvY2Vzc2luZxgHIAEoCzIaLm9uZGV3by5zMnQuUG9zdFByb2Nlc3Np",
+            "bmcSJAoHbG9nZ2luZxgIIAEoCzITLm9uZGV3by5zMnQuTG9nZ2luZyJcCg5T",
+            "MnREZXNjcmlwdGlvbhIQCghsYW5ndWFnZRgBIAEoCRIWCg5waXBlbGluZV9v",
+            "d25lchgCIAEoCRIOCgZkb21haW4YAyABKAkSEAoIY29tbWVudHMYBCABKAki",
+            "sQEKDFMydEluZmVyZW5jZRIzCg9hY291c3RpY19tb2RlbHMYASABKAsyGi5v",
+            "bmRld28uczJ0LkFjb3VzdGljTW9kZWxzEjMKD2xhbmd1YWdlX21vZGVscxgC",
+            "IAEoCzIaLm9uZGV3by5zMnQuTGFuZ3VhZ2VNb2RlbHMSNwoRaW5mZXJlbmNl",
+            "X2JhY2tlbmQYAyABKA4yHC5vbmRld28uczJ0LkluZmVyZW5jZUJhY2tlbmQi",
+            "lgQKDkFjb3VzdGljTW9kZWxzEgwKBHR5cGUYASABKAkSJAoHd2F2MnZlYxgC",
+            "IAEoCzITLm9uZGV3by5zMnQuV2F2MlZlYxIxCg53YXYydmVjX3RyaXRvbhgD",
+            "IAEoCzIZLm9uZGV3by5zMnQuV2F2MlZlY1RyaXRvbhIkCgd3aGlzcGVyGAQg",
+            "ASgLMhMub25kZXdvLnMydC5XaGlzcGVyEjEKDndoaXNwZXJfdHJpdG9uGAUg",
+            "ASgLMhkub25kZXdvLnMydC5XaGlzcGVyVHJpdG9uEkMKGHMydF9jbG91ZF9z",
+            "ZXJ2aWNlX2FtYXpvbhgGIAEoCzIhLm9uZGV3by5zMnQuUzJ0Q2xvdWRTZXJ2",
+            "aWNlQW1hem9uEkcKGnMydF9jbG91ZF9zZXJ2aWNlX2RlZXBncmFtGAcgASgL",
+            "MiMub25kZXdvLnMydC5TMnRDbG91ZFNlcnZpY2VEZWVwZ3JhbRJDChhzMnRf",
+            "Y2xvdWRfc2VydmljZV9nb29nbGUYCCABKAsyIS5vbmRld28uczJ0LlMydENs",
+            "b3VkU2VydmljZUdvb2dsZRJJChtzMnRfY2xvdWRfc2VydmljZV9taWNyb3Nv",
+            "ZnQYCSABKAsyJC5vbmRld28uczJ0LlMydENsb3VkU2VydmljZU1pY3Jvc29m",
+            "dBImCghwYXJha2VldBgKIAEoCzIULm9uZGV3by5zMnQuUGFyYWtlZXQizQEK",
+            "FVMydENsb3VkU2VydmljZUFtYXpvbhIQCghsYW5ndWFnZRgBIAEoCRIbChNz",
+            "dHJlYW1pbmdfYXZhaWxhYmxlGAIgASgIEiwKJGVuYWJsZV9wYXJ0aWFsX3Jl",
+            "c3VsdHNfc3RhYmlsaXphdGlvbhgDIAEoCBIhChlwYXJ0aWFsX3Jlc3VsdHNf",
+            "c3RhYmlsaXR5GAQgASgJEhsKE2xhbmd1YWdlX21vZGVsX25hbWUYBSABKAkS",
+            "FwoPdm9jYWJ1bGFyeV9uYW1lGAYgASgJIqMBChdTMnRDbG91ZFNlcnZpY2VE",
+            "ZWVwZ3JhbRISCgptb2RlbF9uYW1lGAEgASgJEhAKCGxhbmd1YWdlGAIgASgJ",
+            "EhEKCXB1bmN0dWF0ZRgDIAEoCBIUCgxzbWFydF9mb3JtYXQYBCABKAgSEAoI",
+            "bnVtZXJhbHMYBSABKAgSFAoMbWVhc3VyZW1lbnRzGAYgASgIEhEKCWRpY3Rh",
+            "dGlvbhgHIAEoCCLhAQoVUzJ0Q2xvdWRTZXJ2aWNlR29vZ2xlEhIKCm1vZGVs",
+            "X25hbWUYASABKAkSEAoIbGFuZ3VhZ2UYAiABKAkSJAocZW5hYmxlX2F1dG9t",
+            "YXRpY19wdW5jdHVhdGlvbhgDIAEoCBIgChhlbmFibGVfd29yZF90aW1lX29m",
+            "ZnNldHMYBCABKAgSHgoWZW5hYmxlX3dvcmRfY29uZmlkZW5jZRgFIAEoCBIg",
+            "Chh0cmFuc2NyaXB0X25vcm1hbGl6YXRpb24YBiABKAgSGAoQbWF4X2FsdGVy",
+            "bmF0aXZlcxgHIAEoBSJ0ChhTMnRDbG91ZFNlcnZpY2VNaWNyb3NvZnQSEAoI",
+            "bGFuZ3VhZ2UYASABKAkSIgoadXNlX2Zhc3RfdHJhbnNjcmlwdGlvbl9hcGkY",
+            "AiABKAgSIgoadXNlX2RldGFpbGVkX291dHB1dF9mb3JtYXQYAyABKAgiTgoH",
+            "V2hpc3BlchISCgptb2RlbF9wYXRoGAEgASgJEg8KB3VzZV9ncHUYAiABKAgS",
+            "EAoIbGFuZ3VhZ2UYAyABKAkSDAoEdGFzaxgEIAEoCSLWAQoNV2hpc3BlclRy",
+            "aXRvbhIWCg5wcm9jZXNzb3JfcGF0aBgBIAEoCRIZChF0cml0b25fbW9kZWxf",
+            "bmFtZRgCIAEoCRIcChR0cml0b25fbW9kZWxfdmVyc2lvbhgDIAEoCRIcChRj",
+            "aGVja19zdGF0dXNfdGltZW91dBgEIAEoAxIQCghsYW5ndWFnZRgFIAEoCRIM",
+            "CgR0YXNrGAYgASgJEhoKEnRyaXRvbl9zZXJ2ZXJfaG9zdBgHIAEoCRIaChJ0",
+            "cml0b25fc2VydmVyX3BvcnQYCCABKAMiLgoHV2F2MlZlYxISCgptb2RlbF9w",
+            "YXRoGAEgASgJEg8KB3VzZV9ncHUYAiABKAgitgEKDVdhdjJWZWNUcml0b24S",
+            "FgoOcHJvY2Vzc29yX3BhdGgYASABKAkSGQoRdHJpdG9uX21vZGVsX25hbWUY",
+            "AiABKAkSHAoUdHJpdG9uX21vZGVsX3ZlcnNpb24YAyABKAkSHAoUY2hlY2tf",
+            "c3RhdHVzX3RpbWVvdXQYBCABKAMSGgoSdHJpdG9uX3NlcnZlcl9ob3N0GAUg",
+            "ASgJEhoKEnRyaXRvbl9zZXJ2ZXJfcG9ydBgGIAEoAyKZAQoIUGFyYWtlZXQS",
+            "GQoRdHJpdG9uX21vZGVsX25hbWUYASABKAkSHAoUdHJpdG9uX21vZGVsX3Zl",
+            "cnNpb24YAiABKAkSHAoUY2hlY2tfc3RhdHVzX3RpbWVvdXQYAyABKAMSGgoS",
+            "dHJpdG9uX3NlcnZlcl9ob3N0GAQgASgJEhoKEnRyaXRvbl9zZXJ2ZXJfcG9y",
+            "dBgFIAEoAyIlCgdQdEZpbGVzEgwKBHBhdGgYASABKAkSDAoEc3RlcBgCIAEo",
+            "CSIYCghDa3B0RmlsZRIMCgRwYXRoGAEgASgJIogBCg5MYW5ndWFnZU1vZGVs",
+            "cxIMCgRwYXRoGAEgASgJEhEKCWJlYW1fc2l6ZRgCIAEoAxISCgpkZWZhdWx0",
+            "X2xtGAMgASgJEiAKGGJlYW1fc2VhcmNoX3Njb3Jlcl9hbHBoYRgEIAEoAhIf",
+            "ChdiZWFtX3NlYXJjaF9zY29yZXJfYmV0YRgFIAEoAiKRAQoPU3RyZWFtaW5n",
+            "U2VydmVyEgwKBGhvc3QYASABKAkSDAoEcG9ydBgCIAEoAxIUCgxvdXRwdXRf",
+            "c3R5bGUYAyABKAkSTAocc3RyZWFtaW5nX3NwZWVjaF9yZWNvZ25pdGlvbhgE",
+            "IAEoCzImLm9uZGV3by5zMnQuU3RyZWFtaW5nU3BlZWNoUmVjb2duaXRpb24i",
+            "1gIKGlN0cmVhbWluZ1NwZWVjaFJlY29nbml0aW9uEiEKFHRyYW5zY3JpYmVf",
+            "bm90X2ZpbmFsGAEgASgISACIAQESFwoPZGVjb2RpbmdfbWV0aG9kGAIgASgJ",
+            "EhUKDXNhbXBsaW5nX3JhdGUYAyABKAMSHAoUbWluX2F1ZGlvX2NodW5rX3Np",
+            "emUYBCABKAMSGgoSbmV4dF9jaHVua190aW1lb3V0GAUgASgCEjgKDnR1cm5f",
+            "ZGV0ZWN0aW9uGAYgASgLMiAub25kZXdvLnMydC5UdXJuRGV0ZWN0aW9uT3B0",
+            "aW9ucxIwCiN0cmFuc2NyaWJlX25vdF9maW5hbF9wZXJpb2Rfc2Vjb25kcxgH",
+            "IAEoAkgBiAEBQhcKFV90cmFuc2NyaWJlX25vdF9maW5hbEImCiRfdHJhbnNj",
+            "cmliZV9ub3RfZmluYWxfcGVyaW9kX3NlY29uZHMi3QgKFFR1cm5EZXRlY3Rp",
+            "b25PcHRpb25zEhMKBmFjdGl2ZRgBIAEoCEgBiAEBEiYKGWZ1bGxfdXR0ZXJh",
+            "bmNlX2RlcGxveW1lbnQYAiABKAhIAogBARItChx0dXJuX2RldGVjdGlvbl9z",
+            "eXN0ZW1fcHJvbXB0GAMgASgJQgIYAUgDiAEBEisKGnR1cm5fZGV0ZWN0aW9u",
+            "X3VzZXJfcHJvbXB0GAQgASgJQgIYAUgEiAEBElAKIXR1cm5fZGV0ZWN0aW9u",
+            "X2xsbV9vcGVuYWlfb3B0aW9ucxgFIAEoCzIcLm9uZGV3by5zMnQuT3BlbmFp",
+            "TGxtT3B0aW9uc0ICGAFIBYgBARIrCh5pbmNvbXBsZXRlX21heF9zaWxlbmNl",
+            "X3NlY29uZHMYBiABKAJIBogBARJeCiN0dXJuX2RldGVjdGlvbl9jb252ZXJz",
+            "YXRpb25fY29udGV4dBgHIAEoCzIsLm9uZGV3by5zMnQuVHVybkRldGVjdGlv",
+            "bkNvbnZlcnNhdGlvbkNvbnRleHRIB4gBARJSCh90dXJuX2RldGVjdGlvbl9j",
+            "aGF0X2xsbV9vcHRpb25zGAggASgLMicub25kZXdvLnMydC5UdXJuRGV0ZWN0",
+            "aW9uQ2hhdExsbU9wdGlvbnNIABJoCit0dXJuX2RldGVjdGlvbl9lbmRfb2Zf",
+            "dXR0ZXJhbmNlX2xsbV9vcHRpb25zGAkgASgLMjEub25kZXdvLnMydC5UdXJu",
+            "RGV0ZWN0aW9uRW5kT2ZVdHRlcmFuY2VMbG1PcHRpb25zSAASVAogdHVybl9k",
+            "ZXRlY3Rpb25fb25kZXdvX2RlX29wdGlvbnMYCiABKAsyKC5vbmRld28uczJ0",
+            "LlR1cm5EZXRlY3Rpb25PbmRld29EZU9wdGlvbnNIABJhCid0dXJuX2RldGVj",
+            "dGlvbl9vbmRld29fZGVfZnVzaW9uX29wdGlvbnMYCyABKAsyLi5vbmRld28u",
+            "czJ0LlR1cm5EZXRlY3Rpb25PbmRld29EZUZ1c2lvbk9wdGlvbnNIABJlCil0",
+            "dXJuX2RldGVjdGlvbl9waXBlY2F0X3NtYXJ0X3R1cm5fb3B0aW9ucxgMIAEo",
+            "CzIwLm9uZGV3by5zMnQuVHVybkRldGVjdGlvblBpcGVjYXRTbWFydFR1cm5P",
+            "cHRpb25zSABCFQoTb25lb2ZfdHVybl9kZXRlY3RvckIJCgdfYWN0aXZlQhwK",
+            "Gl9mdWxsX3V0dGVyYW5jZV9kZXBsb3ltZW50Qh8KHV90dXJuX2RldGVjdGlv",
+            "bl9zeXN0ZW1fcHJvbXB0Qh0KG190dXJuX2RldGVjdGlvbl91c2VyX3Byb21w",
+            "dEIkCiJfdHVybl9kZXRlY3Rpb25fbGxtX29wZW5haV9vcHRpb25zQiEKH19p",
+            "bmNvbXBsZXRlX21heF9zaWxlbmNlX3NlY29uZHNCJgokX3R1cm5fZGV0ZWN0",
+            "aW9uX2NvbnZlcnNhdGlvbl9jb250ZXh0IssBChtUdXJuRGV0ZWN0aW9uQ2hh",
+            "dExsbU9wdGlvbnMSPQoSb3BlbmFpX2xsbV9vcHRpb25zGAEgASgLMhwub25k",
+            "ZXdvLnMydC5PcGVuYWlMbG1PcHRpb25zSACIAQESGgoNc3lzdGVtX3Byb21w",
+            "dBgCIAEoCUgBiAEBEhgKC3VzZXJfcHJvbXB0GAMgASgJSAKIAQFCFQoTX29w",
+            "ZW5haV9sbG1fb3B0aW9uc0IQCg5fc3lzdGVtX3Byb21wdEIOCgxfdXNlcl9w",
+            "cm9tcHQirQMKJVR1cm5EZXRlY3Rpb25FbmRPZlV0dGVyYW5jZUxsbU9wdGlv",
+            "bnMSPQoSb3BlbmFpX2xsbV9vcHRpb25zGAEgASgLMhwub25kZXdvLnMydC5P",
+            "cGVuYWlMbG1PcHRpb25zSACIAQESLgohZW5kX29mX3R1cm5fcHJvYmFiaWxp",
+            "dHlfdGhyZXNob2xkGAIgASgCSAGIAQESSgoZdHVybl9kZXRlY3Rpb25faG9s",
+            "ZF9iYW5kcxgDIAEoCzIiLm9uZGV3by5zMnQuVHVybkRldGVjdGlvbkhvbGRC",
+            "YW5kc0gCiAEBEiAKE3VuY2VydGFpbl9taW5fd29yZHMYBCABKA1IA4gBARIe",
+            "ChFleGFjdF9wcm9iYWJpbGl0eRgFIAEoCEgEiAEBQhUKE19vcGVuYWlfbGxt",
+            "X29wdGlvbnNCJAoiX2VuZF9vZl90dXJuX3Byb2JhYmlsaXR5X3RocmVzaG9s",
+            "ZEIcChpfdHVybl9kZXRlY3Rpb25faG9sZF9iYW5kc0IWChRfdW5jZXJ0YWlu",
+            "X21pbl93b3Jkc0IUChJfZXhhY3RfcHJvYmFiaWxpdHkiygEKHFR1cm5EZXRl",
+            "Y3Rpb25PbmRld29EZU9wdGlvbnMSPQoSb3BlbmFpX2xsbV9vcHRpb25zGAEg",
+            "ASgLMhwub25kZXdvLnMydC5PcGVuYWlMbG1PcHRpb25zSACIAQESLgohZW5k",
+            "X29mX3R1cm5fcHJvYmFiaWxpdHlfdGhyZXNob2xkGAIgASgCSAGIAQFCFQoT",
+            "X29wZW5haV9sbG1fb3B0aW9uc0IkCiJfZW5kX29mX3R1cm5fcHJvYmFiaWxp",
+            "dHlfdGhyZXNob2xkItABCiJUdXJuRGV0ZWN0aW9uT25kZXdvRGVGdXNpb25P",
+            "cHRpb25zEj0KEm9wZW5haV9sbG1fb3B0aW9ucxgBIAEoCzIcLm9uZGV3by5z",
+            "MnQuT3BlbmFpTGxtT3B0aW9uc0gAiAEBEi4KIWVuZF9vZl90dXJuX3Byb2Jh",
+            "YmlsaXR5X3RocmVzaG9sZBgCIAEoAkgBiAEBQhUKE19vcGVuYWlfbGxtX29w",
+            "dGlvbnNCJAoiX2VuZF9vZl90dXJuX3Byb2JhYmlsaXR5X3RocmVzaG9sZCL8",
+            "AgokVHVybkRldGVjdGlvblBpcGVjYXRTbWFydFR1cm5PcHRpb25zEhcKCm1v",
+            "ZGVsX25hbWUYASABKAlIAIgBARIfChJ0cml0b25fc2VydmVyX2hvc3QYAiAB",
+            "KAlIAYgBARIfChJ0cml0b25fc2VydmVyX3BvcnQYAyABKANIAogBARIeChFt",
+            "YXhfYXVkaW9fc2Vjb25kcxgEIAEoAkgDiAEBEhwKD3RpbWVvdXRfc2Vjb25k",
+            "cxgFIAEoAkgEiAEBEi4KIWVuZF9vZl90dXJuX3Byb2JhYmlsaXR5X3RocmVz",
+            "aG9sZBgGIAEoAkgFiAEBQg0KC19tb2RlbF9uYW1lQhUKE190cml0b25fc2Vy",
+            "dmVyX2hvc3RCFQoTX3RyaXRvbl9zZXJ2ZXJfcG9ydEIUChJfbWF4X2F1ZGlv",
+            "X3NlY29uZHNCEgoQX3RpbWVvdXRfc2Vjb25kc0IkCiJfZW5kX29mX3R1cm5f",
+            "cHJvYmFiaWxpdHlfdGhyZXNob2xkIm4KIFR1cm5EZXRlY3Rpb25Db252ZXJz",
+            "YXRpb25Db250ZXh0EkoKHHR1cm5fZGV0ZWN0aW9uX2NvbnRleHRfdHVybnMY",
+            "ASADKAsyJC5vbmRld28uczJ0LlR1cm5EZXRlY3Rpb25Db250ZXh0VHVybiKi",
+            "AQoYVHVybkRldGVjdGlvbkNvbnRleHRUdXJuEjcKBHJvbGUYASABKA4yKS5v",
+            "bmRld28uczJ0LlR1cm5EZXRlY3Rpb25Db250ZXh0VHVybi5Sb2xlEgwKBHRl",
+            "eHQYAiABKAkiPwoEUm9sZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASDQoJUk9M",
+            "RV9VU0VSEAESEgoOUk9MRV9BU1NJU1RBTlQQAiJeChZUdXJuRGV0ZWN0aW9u",
+            "SG9sZEJhbmRzEkQKGXR1cm5fZGV0ZWN0aW9uX2hvbGRfYmFuZHMYASADKAsy",
+            "IS5vbmRld28uczJ0LlR1cm5EZXRlY3Rpb25Ib2xkQmFuZCJPChVUdXJuRGV0",
+            "ZWN0aW9uSG9sZEJhbmQSGQoRdXBwZXJfcHJvYmFiaWxpdHkYASABKAISGwoT",
+            "bWF4X3NpbGVuY2Vfc2Vjb25kcxgCIAEoAiLeDQoQT3BlbmFpTGxtT3B0aW9u",
+            "cxIUCgdhcGlfa2V5GAEgASgJSACIAQESGQoMb3JnYW5pemF0aW9uGAIgASgJ",
+            "SAGIAQESFAoHcHJvamVjdBgDIAEoCUgCiAEBEhsKDndlYmhvb2tfc2VjcmV0",
+            "GAQgASgJSAOIAQESFQoIYmFzZV91cmwYBSABKAlIBIgBARIfChJ3ZWJzb2Nr",
+            "ZXRfYmFzZV91cmwYBiABKAlIBYgBARIUCgd0aW1lb3V0GAcgASgCSAaIAQES",
+            "GAoLbWF4X3JldHJpZXMYCCABKAVIB4gBARJJCg9kZWZhdWx0X2hlYWRlcnMY",
+            "CSADKAsyMC5vbmRld28uczJ0Lk9wZW5haUxsbU9wdGlvbnMuRGVmYXVsdEhl",
+            "YWRlcnNFbnRyeRIzCg1kZWZhdWx0X3F1ZXJ5GAogASgLMhcuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cnVjdEgIiAEBEicKGnN0cmljdF9yZXNwb25zZV92YWxpZGF0",
+            "aW9uGAsgASgISAmIAQESDQoFbW9kZWwYDCABKAkSHgoRZnJlcXVlbmN5X3Bl",
+            "bmFsdHkYDSABKAJICogBARI/Cgpsb2dpdF9iaWFzGA4gAygLMisub25kZXdv",
+            "LnMydC5PcGVuYWlMbG1PcHRpb25zLkxvZ2l0Qmlhc0VudHJ5EhUKCGxvZ3By",
+            "b2JzGA8gASgISAuIAQESIgoVbWF4X2NvbXBsZXRpb25fdG9rZW5zGBAgASgF",
+            "SAyIAQESFwoKbWF4X3Rva2VucxgRIAEoBUgNiAEBEi4KCG1ldGFkYXRhGBIg",
+            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEgOiAEBEg4KAW4YEyABKAVI",
+            "D4gBARIdChBwcmVzZW5jZV9wZW5hbHR5GBQgASgCSBCIAQESHQoQcHJvbXB0",
+            "X2NhY2hlX2tleRgVIAEoCUgRiAEBEjoKEHJlYXNvbmluZ19lZmZvcnQYFiAB",
+            "KA4yGy5vbmRld28uczJ0LlJlYXNvbmluZ0VmZm9ydEgSiAEBEhEKBHNlZWQY",
+            "FyABKANIE4gBARIyCgxzZXJ2aWNlX3RpZXIYGCABKA4yFy5vbmRld28uczJ0",
+            "LlNlcnZpY2VUaWVySBSIAQESDAoEc3RvcBgZIAMoCRISCgVzdG9yZRgaIAEo",
+            "CEgViAEBEhgKC3RlbXBlcmF0dXJlGBsgASgCSBaIAQESGQoMdG9wX2xvZ3By",
+            "b2JzGBwgASgFSBeIAQESEgoFdG9wX3AYHSABKAJIGIgBARIRCgR1c2VyGB4g",
+            "ASgJSBmIAQESLQoJdmVyYm9zaXR5GB8gASgOMhUub25kZXdvLnMydC5WZXJi",
+            "b3NpdHlIGogBARIzCg1leHRyYV9oZWFkZXJzGCAgASgLMhcuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cnVjdEgbiAEBEjEKC2V4dHJhX3F1ZXJ5GCEgASgLMhcuZ29v",
+            "Z2xlLnByb3RvYnVmLlN0cnVjdEgciAEBEjAKCmV4dHJhX2JvZHkYIiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0SB2IAQEaNQoTRGVmYXVsdEhlYWRl",
+            "cnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjAKDkxv",
+            "Z2l0Qmlhc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAFC",
+            "CgoIX2FwaV9rZXlCDwoNX29yZ2FuaXphdGlvbkIKCghfcHJvamVjdEIRCg9f",
+            "d2ViaG9va19zZWNyZXRCCwoJX2Jhc2VfdXJsQhUKE193ZWJzb2NrZXRfYmFz",
+            "ZV91cmxCCgoIX3RpbWVvdXRCDgoMX21heF9yZXRyaWVzQhAKDl9kZWZhdWx0",
+            "X3F1ZXJ5Qh0KG19zdHJpY3RfcmVzcG9uc2VfdmFsaWRhdGlvbkIUChJfZnJl",
+            "cXVlbmN5X3BlbmFsdHlCCwoJX2xvZ3Byb2JzQhgKFl9tYXhfY29tcGxldGlv",
+            "bl90b2tlbnNCDQoLX21heF90b2tlbnNCCwoJX21ldGFkYXRhQgQKAl9uQhMK",
+            "EV9wcmVzZW5jZV9wZW5hbHR5QhMKEV9wcm9tcHRfY2FjaGVfa2V5QhMKEV9y",
+            "ZWFzb25pbmdfZWZmb3J0QgcKBV9zZWVkQg8KDV9zZXJ2aWNlX3RpZXJCCAoG",
+            "X3N0b3JlQg4KDF90ZW1wZXJhdHVyZUIPCg1fdG9wX2xvZ3Byb2JzQggKBl90",
+            "b3BfcEIHCgVfdXNlckIMCgpfdmVyYm9zaXR5QhAKDl9leHRyYV9oZWFkZXJz",
+            "Qg4KDF9leHRyYV9xdWVyeUINCgtfZXh0cmFfYm9keSKSAgoWVm9pY2VBY3Rp",
+            "dml0eURldGVjdGlvbhIOCgZhY3RpdmUYASABKAkSFQoNc2FtcGxpbmdfcmF0",
+            "ZRgCIAEoAxImCghweWFubm90ZRgDIAEoCzIULm9uZGV3by5zMnQuUHlhbm5v",
+            "dGUSIgoGc2lsZXJvGAQgASgLMhIub25kZXdvLnMydC5TaWxlcm8SLwoNd2Vz",
+            "cGVha2VyX3RzZBgFIAEoCzIYLm9uZGV3by5zMnQuV2VzcGVha2VyVHNkEikK",
+            "CnZhZF9tZXRob2QYBiABKA4yFS5vbmRld28uczJ0LlZhZE1ldGhvZBIpCgp0",
+            "c2RfbWV0aG9kGAcgASgOMhUub25kZXdvLnMydC5Uc2RNZXRob2QioQEKCFB5",
+            "YW5ub3RlEhIKCm1vZGVsX25hbWUYASABKAkSFgoObWluX2F1ZGlvX3NpemUY",
+            "AiABKAMSGAoQbWluX2R1cmF0aW9uX29mZhgDIAEoAhIXCg9taW5fZHVyYXRp",
+            "b25fb24YBCABKAISGgoSdHJpdG9uX3NlcnZlcl9ob3N0GAUgASgJEhoKEnRy",
+            "aXRvbl9zZXJ2ZXJfcG9ydBgGIAEoAyLCAgoGU2lsZXJvEhIKCm1vZGVsX25h",
+            "bWUYASABKAkSFgoObWluX2F1ZGlvX3NpemUYAiABKAMSFgoJdGhyZXNob2xk",
+            "GAMgASgCSACIAQESIwoWbWluX3NwZWVjaF9kdXJhdGlvbl9tcxgEIAEoAkgB",
+            "iAEBEiQKF21pbl9zaWxlbmNlX2R1cmF0aW9uX21zGAUgASgCSAKIAQESGgoN",
+            "c3BlZWNoX3BhZF9tcxgGIAEoAkgDiAEBEhoKEnRyaXRvbl9zZXJ2ZXJfaG9z",
+            "dBgHIAEoCRIaChJ0cml0b25fc2VydmVyX3BvcnQYCCABKANCDAoKX3RocmVz",
+            "aG9sZEIZChdfbWluX3NwZWVjaF9kdXJhdGlvbl9tc0IaChhfbWluX3NpbGVu",
+            "Y2VfZHVyYXRpb25fbXNCEAoOX3NwZWVjaF9wYWRfbXMi+AEKDFdlc3BlYWtl",
+            "clRzZBIOCgZhY3RpdmUYASABKAgSEgoKbW9kZWxfbmFtZRgCIAEoCRIaChJ0",
+            "cml0b25fc2VydmVyX2hvc3QYAyABKAkSGgoSdHJpdG9uX3NlcnZlcl9wb3J0",
+            "GAQgASgDEiEKFHNpbWlsYXJpdHlfdGhyZXNob2xkGAUgASgCSACIAQESHQoQ",
+            "bWluX2F1ZGlvX2xlbmd0aBgGIAEoAkgBiAEBEhwKFHJlZmVyZW5jZV9tYXhf",
+            "bGVuZ3RoGAcgASgCQhcKFV9zaW1pbGFyaXR5X3RocmVzaG9sZEITChFfbWlu",
+            "X2F1ZGlvX2xlbmd0aCJXCg5Qb3N0UHJvY2Vzc2luZxIQCghwaXBlbGluZRgB",
+            "IAMoCRIzCg9wb3N0X3Byb2Nlc3NvcnMYAiABKAsyGi5vbmRld28uczJ0LlBv",
+            "c3RQcm9jZXNzb3JzIq0BCg5Qb3N0UHJvY2Vzc29ycxInCglzeW1fc3BlbGwY",
+            "ASABKAsyFC5vbmRld28uczJ0LlN5bVNwZWxsEjMKDW5vcm1hbGl6YXRpb24Y",
+            "AiABKAsyHC5vbmRld28uczJ0LlMydE5vcm1hbGl6YXRpb24SPQoTbGxtX3Bv",
+            "c3RfcHJvY2Vzc2luZxgDIAEoCzIgLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFBy",
+            "b2Nlc3NpbmciWgoIU3ltU3BlbGwSEQoJZGljdF9wYXRoGAEgASgJEiQKHG1h",
+            "eF9kaWN0aW9uYXJ5X2VkaXRfZGlzdGFuY2UYAiABKAMSFQoNcHJlZml4X2xl",
+            "bmd0aBgDIAEoAyI2ChBTMnROb3JtYWxpemF0aW9uEhAKCGxhbmd1YWdlGAEg",
+            "ASgJEhAKCHBpcGVsaW5lGAIgAygJIokOChRTMnRMbG1Qb3N0UHJvY2Vzc2lu",
+            "ZxJRCiZzMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19vcGVuYWlfb3B0aW9ucxgB",
+            "IAEoCzIcLm9uZGV3by5zMnQuT3BlbmFpTGxtT3B0aW9uc0gAiAEBEjIKJXMy",
+            "dF9sbG1fcG9zdF9wcm9jZXNzaW5nX3N5c3RlbV9wcm9tcHQYAiABKAlIAYgB",
+            "ARIyCiVzMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19lbmRpbmdfcHJvbXB0GAMg",
+            "ASgJSAKIAQESYwomczJ0X2xsbV9wb3N0X3Byb2Nlc3NpbmdfY2FzaW5nX29w",
+            "dGlvbnMYBCABKAsyLi5vbmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5n",
+            "U3ViVGFza09wdGlvbnNIA4gBARJoCitzMnRfbGxtX3Bvc3RfcHJvY2Vzc2lu",
+            "Z19wdW5jdHVhdGlvbl9vcHRpb25zGAUgASgLMi4ub25kZXdvLnMydC5TMnRM",
+            "bG1Qb3N0UHJvY2Vzc2luZ1N1YlRhc2tPcHRpb25zSASIAQEScAozczJ0X2xs",
+            "bV9wb3N0X3Byb2Nlc3Npbmdfc3BlbGxpbmdfY29ycmVjdGlvbl9vcHRpb25z",
+            "GAYgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRh",
+            "c2tPcHRpb25zSAWIAQEScAozczJ0X2xsbV9wb3N0X3Byb2Nlc3Npbmdfc2Vt",
+            "YW50aWNfY29ycmVjdGlvbl9vcHRpb25zGAcgASgLMi4ub25kZXdvLnMydC5T",
+            "MnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRhc2tPcHRpb25zSAaIAQESbAorczJ0",
+            "X2xsbV9wb3N0X3Byb2Nlc3NpbmdfdHJhbnNsYXRpb25fb3B0aW9ucxgIIAEo",
+            "CzIyLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3NpbmdUcmFuc2xhdGlv",
+            "bk9wdGlvbnNIB4gBARJ/CjVzMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19pbnZl",
+            "cnNlX25vcm1hbGl6YXRpb25fb3B0aW9ucxgJIAEoCzI7Lm9uZGV3by5zMnQu",
             "UzJ0TGxtUG9zdFByb2Nlc3NpbmdJbnZlcnNlTm9ybWFsaXphdGlvbk9wdGlv",
-            "bnMSEwoGYWN0aXZlGAEgASgISACIAQESQgoFZW1haWwYAiABKAsyLi5vbmRl",
-            "d28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnNIAYgB",
-            "ARJJCgxwaG9uZV9udW1iZXIYAyABKAsyLi5vbmRld28uczJ0LlMydExsbVBv",
-            "c3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnNIAogBARJKCg1kYXRlX2FuZF90",
-            "aW1lGAQgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1",
-            "YlRhc2tPcHRpb25zSAOIAQESTwoSY3JlZGl0X2NhcmRfbnVtYmVyGAUgASgL",
-            "Mi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRhc2tPcHRp",
-            "b25zSASIAQESUwoWc29jaWFsX3NlY3VyaXR5X251bWJlchgGIAEoCzIuLm9u",
-            "ZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gF",
-            "iAEBEkYKCXRpbWVfem9uZRgHIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9z",
-            "dFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gGiAEBQgkKB19hY3RpdmVCCAoG",
-            "X2VtYWlsQg8KDV9waG9uZV9udW1iZXJCEAoOX2RhdGVfYW5kX3RpbWVCFQoT",
-            "X2NyZWRpdF9jYXJkX251bWJlckIZChdfc29jaWFsX3NlY3VyaXR5X251bWJl",
-            "ckIMCgpfdGltZV96b25lIoAFCihTMnRMbG1Qb3N0UHJvY2Vzc2luZ05vcm1h",
-            "bGl6YXRpb25PcHRpb25zEhMKBmFjdGl2ZRgBIAEoCEgAiAEBEkIKBWVtYWls",
-            "GAIgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRh",
-            "c2tPcHRpb25zSAGIAQESSQoMcGhvbmVfbnVtYmVyGAMgASgLMi4ub25kZXdv",
-            "LnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRhc2tPcHRpb25zSAKIAQES",
-            "SgoNZGF0ZV9hbmRfdGltZRgEIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9z",
-            "dFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gDiAEBEk8KEmNyZWRpdF9jYXJk",
-            "X251bWJlchgFIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3Np",
-            "bmdTdWJUYXNrT3B0aW9uc0gEiAEBElMKFnNvY2lhbF9zZWN1cml0eV9udW1i",
-            "ZXIYBiABKAsyLi5vbmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3Vi",
-            "VGFza09wdGlvbnNIBYgBARJGCgl0aW1lX3pvbmUYByABKAsyLi5vbmRld28u",
-            "czJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnNIBogBAUIJ",
-            "CgdfYWN0aXZlQggKBl9lbWFpbEIPCg1fcGhvbmVfbnVtYmVyQhAKDl9kYXRl",
-            "X2FuZF90aW1lQhUKE19jcmVkaXRfY2FyZF9udW1iZXJCGQoXX3NvY2lhbF9z",
-            "ZWN1cml0eV9udW1iZXJCDAoKX3RpbWVfem9uZSK2AQooUzJ0TGxtUG9zdFBy",
-            "b2Nlc3NpbmdTdW1tYXJpemF0aW9uT3B0aW9ucxITCgZhY3RpdmUYASABKAhI",
-            "AIgBARITCgZwcm9tcHQYAiABKAlIAYgBARIWCgltaW5fY2hhcnMYAyABKAVI",
-            "AogBARIWCgltYXhfY2hhcnMYBCABKAVIA4gBAUIJCgdfYWN0aXZlQgkKB19w",
-            "cm9tcHRCDAoKX21pbl9jaGFyc0IMCgpfbWF4X2NoYXJzImQKIlMydExsbVBv",
-            "c3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnMSEwoGYWN0aXZlGAEgASgISACI",
-            "AQESEwoGcHJvbXB0GAIgASgJSAGIAQFCCQoHX2FjdGl2ZUIJCgdfcHJvbXB0",
-            "IiUKB0xvZ2dpbmcSDAoEdHlwZRgBIAEoCRIMCgRwYXRoGAIgASgJIisKHExp",
-            "c3RTMnRMYW5ndWFnZU1vZGVsc1JlcXVlc3QSCwoDaWRzGAEgAygJIkMKF0xh",
-            "bmd1YWdlTW9kZWxQaXBlbGluZUlkEhMKC3BpcGVsaW5lX2lkGAEgASgJEhMK",
-            "C21vZGVsX25hbWVzGAIgAygJIl0KHUxpc3RTMnRMYW5ndWFnZU1vZGVsc1Jl",
-            "c3BvbnNlEjwKD2xtX3BpcGVsaW5lX2lkcxgBIAMoCzIjLm9uZGV3by5zMnQu",
-            "TGFuZ3VhZ2VNb2RlbFBpcGVsaW5lSWQiPQoeQ3JlYXRlVXNlckxhbmd1YWdl",
-            "TW9kZWxSZXF1ZXN0EhsKE2xhbmd1YWdlX21vZGVsX25hbWUYASABKAkiPQoe",
-            "RGVsZXRlVXNlckxhbmd1YWdlTW9kZWxSZXF1ZXN0EhsKE2xhbmd1YWdlX21v",
-            "ZGVsX25hbWUYASABKAkiVQohQWRkRGF0YVRvVXNlckxhbmd1YWdlTW9kZWxS",
-            "ZXF1ZXN0EhsKE2xhbmd1YWdlX21vZGVsX25hbWUYASABKAkSEwoLemlwcGVk",
-            "X2RhdGEYAiABKAwiSwodVHJhaW5Vc2VyTGFuZ3VhZ2VNb2RlbFJlcXVlc3QS",
-            "GwoTbGFuZ3VhZ2VfbW9kZWxfbmFtZRgBIAEoCRINCgVvcmRlchgCIAEoAyI4",
-            "CiRMaXN0UzJ0Tm9ybWFsaXphdGlvblBpcGVsaW5lc1JlcXVlc3QSEAoIbGFu",
-            "Z3VhZ2UYASABKAkiTAolTGlzdFMydE5vcm1hbGl6YXRpb25QaXBlbGluZXNS",
-            "ZXNwb25zZRIjChtzMnRfbm9ybWFsaXphdGlvbl9waXBlbGluZXMYASADKAkq",
-            "TQoIRGVjb2RpbmcSCwoHREVGQVVMVBAAEgoKBkdSRUVEWRABEhcKE0JFQU1f",
-            "U0VBUkNIX1dJVEhfTE0QAhIPCgtCRUFNX1NFQVJDSBADKqECChBJbmZlcmVu",
-            "Y2VCYWNrZW5kEh0KGUlORkVSRU5DRV9CQUNLRU5EX1VOS05PV04QABIdChlJ",
-            "TkZFUkVOQ0VfQkFDS0VORF9QWVRPUkNIEAESGgoWSU5GRVJFTkNFX0JBQ0tF",
-            "TkRfRkxBWBACEioKJklORkVSRU5DRV9CQUNLRU5EX0NMT1VEX1NFUlZJQ0Vf",
-            "QU1BWk9OEAMSLAooSU5GRVJFTkNFX0JBQ0tFTkRfQ0xPVURfU0VSVklDRV9E",
-            "RUVQR1JBTRAEEioKJklORkVSRU5DRV9CQUNLRU5EX0NMT1VEX1NFUlZJQ0Vf",
-            "R09PR0xFEAUSLQopSU5GRVJFTkNFX0JBQ0tFTkRfQ0xPVURfU0VSVklDRV9N",
-            "SUNST1NPRlQQBiqmAQoLU2VydmljZVRpZXISHAoYU0VSVklDRV9USUVSX1VO",
-            "U1BFQ0lGSUVEEAASFQoRU0VSVklDRV9USUVSX0FVVE8QARIYChRTRVJWSUNF",
-            "X1RJRVJfREVGQVVMVBACEhUKEVNFUlZJQ0VfVElFUl9GTEVYEAMSFgoSU0VS",
-            "VklDRV9USUVSX1NDQUxFEAQSGQoVU0VSVklDRV9USUVSX1BSSU9SSVRZEAUq",
-            "YwoJVmVyYm9zaXR5EhkKFVZFUkJPU0lUWV9VTlNQRUNJRklFRBAAEhEKDVZF",
-            "UkJPU0lUWV9MT1cQARIUChBWRVJCT1NJVFlfTUVESVVNEAISEgoOVkVSQk9T",
-            "SVRZX0hJR0gQAyqjAQoPUmVhc29uaW5nRWZmb3J0EiAKHFJFQVNPTklOR19F",
-            "RkZPUlRfVU5TUEVDSUZJRUQQABIcChhSRUFTT05JTkdfRUZGT1JUX01JTklN",
-            "QUwQARIYChRSRUFTT05JTkdfRUZGT1JUX0xPVxACEhsKF1JFQVNPTklOR19F",
-            "RkZPUlRfTUVESVVNEAMSGQoVUkVBU09OSU5HX0VGRk9SVF9ISUdIEAQqVwoJ",
-            "VmFkTWV0aG9kEhoKFlZBRF9NRVRIT0RfVU5TUEVDSUZJRUQQABIXChNWQURf",
-            "TUVUSE9EX1BZQU5OT1RFEAESFQoRVkFEX01FVEhPRF9TSUxFUk8QAipvCglU",
-            "c2RNZXRob2QSGgoWVFNEX01FVEhPRF9VTlNQRUNJRklFRBAAEhMKD1RTRF9N",
-            "RVRIT0RfTk9ORRABEhcKE1RTRF9NRVRIT0RfUFlBTk5PVEUQAhIYChRUU0Rf",
-            "TUVUSE9EX1dFU1BFQUtFUhADMvMLCgtTcGVlY2gyVGV4dBJZCg5UcmFuc2Ny",
-            "aWJlRmlsZRIhLm9uZGV3by5zMnQuVHJhbnNjcmliZUZpbGVSZXF1ZXN0GiIu",
-            "b25kZXdvLnMydC5UcmFuc2NyaWJlRmlsZVJlc3BvbnNlIgASYwoQVHJhbnNj",
-            "cmliZVN0cmVhbRIjLm9uZGV3by5zMnQuVHJhbnNjcmliZVN0cmVhbVJlcXVl",
-            "c3QaJC5vbmRld28uczJ0LlRyYW5zY3JpYmVTdHJlYW1SZXNwb25zZSIAKAEw",
-            "ARJMCg5HZXRTMnRQaXBlbGluZRIZLm9uZGV3by5zMnQuUzJ0UGlwZWxpbmVJ",
-            "ZBodLm9uZGV3by5zMnQuU3BlZWNoMlRleHRDb25maWciABJPChFDcmVhdGVT",
-            "MnRQaXBlbGluZRIdLm9uZGV3by5zMnQuU3BlZWNoMlRleHRDb25maWcaGS5v",
-            "bmRld28uczJ0LlMydFBpcGVsaW5lSWQiABJIChFEZWxldGVTMnRQaXBlbGlu",
-            "ZRIZLm9uZGV3by5zMnQuUzJ0UGlwZWxpbmVJZBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIAEkwKEVVwZGF0ZVMydFBpcGVsaW5lEh0ub25kZXdvLnMydC5T",
-            "cGVlY2gyVGV4dENvbmZpZxoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEl8K",
-            "EExpc3RTMnRQaXBlbGluZXMSIy5vbmRld28uczJ0Lkxpc3RTMnRQaXBlbGlu",
-            "ZXNSZXF1ZXN0GiQub25kZXdvLnMydC5MaXN0UzJ0UGlwZWxpbmVzUmVzcG9u",
-            "c2UiABJfChBMaXN0UzJ0TGFuZ3VhZ2VzEiMub25kZXdvLnMydC5MaXN0UzJ0",
-            "TGFuZ3VhZ2VzUmVxdWVzdBokLm9uZGV3by5zMnQuTGlzdFMydExhbmd1YWdl",
-            "c1Jlc3BvbnNlIgASWQoOTGlzdFMydERvbWFpbnMSIS5vbmRld28uczJ0Lkxp",
-            "c3RTMnREb21haW5zUmVxdWVzdBoiLm9uZGV3by5zMnQuTGlzdFMydERvbWFp",
-            "bnNSZXNwb25zZSIAElEKDkdldFNlcnZpY2VJbmZvEhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5GiUub25kZXdvLnMydC5TMnRHZXRTZXJ2aWNlSW5mb1Jlc3Bv",
-            "bnNlIgASbgoVTGlzdFMydExhbmd1YWdlTW9kZWxzEigub25kZXdvLnMydC5M",
-            "aXN0UzJ0TGFuZ3VhZ2VNb2RlbHNSZXF1ZXN0Gikub25kZXdvLnMydC5MaXN0",
-            "UzJ0TGFuZ3VhZ2VNb2RlbHNSZXNwb25zZSIAEl8KF0NyZWF0ZVVzZXJMYW5n",
-            "dWFnZU1vZGVsEioub25kZXdvLnMydC5DcmVhdGVVc2VyTGFuZ3VhZ2VNb2Rl",
-            "bFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJfChdEZWxldGVV",
-            "c2VyTGFuZ3VhZ2VNb2RlbBIqLm9uZGV3by5zMnQuRGVsZXRlVXNlckxhbmd1",
-            "YWdlTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASZQoa",
-            "QWRkRGF0YVRvVXNlckxhbmd1YWdlTW9kZWwSLS5vbmRld28uczJ0LkFkZERh",
-            "dGFUb1VzZXJMYW5ndWFnZU1vZGVsUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1",
-            "Zi5FbXB0eSIAEl0KFlRyYWluVXNlckxhbmd1YWdlTW9kZWwSKS5vbmRld28u",
-            "czJ0LlRyYWluVXNlckxhbmd1YWdlTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnBy",
-            "b3RvYnVmLkVtcHR5IgAShAEKHUxpc3RTMnROb3JtYWxpemF0aW9uUGlwZWxp",
-            "bmVzEjAub25kZXdvLnMydC5MaXN0UzJ0Tm9ybWFsaXphdGlvblBpcGVsaW5l",
-            "c1JlcXVlc3QaMS5vbmRld28uczJ0Lkxpc3RTMnROb3JtYWxpemF0aW9uUGlw",
-            "ZWxpbmVzUmVzcG9uc2ViBnByb3RvMw=="));
+            "bnNICIgBARJwCi1zMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19ub3JtYWxpemF0",
+            "aW9uX29wdGlvbnMYCiABKAsyNC5vbmRld28uczJ0LlMydExsbVBvc3RQcm9j",
+            "ZXNzaW5nTm9ybWFsaXphdGlvbk9wdGlvbnNICYgBARJwCi1zMnRfbGxtX3Bv",
+            "c3RfcHJvY2Vzc2luZ19zdW1tYXJpemF0aW9uX29wdGlvbnMYCyABKAsyNC5v",
+            "bmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3VtbWFyaXphdGlvbk9w",
+            "dGlvbnNICogBARJoCitzMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ191c2VyX3By",
+            "b21wdF9vcHRpb25zGAwgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJv",
+            "Y2Vzc2luZ1N1YlRhc2tPcHRpb25zSAuIAQFCKQonX3MydF9sbG1fcG9zdF9w",
+            "cm9jZXNzaW5nX29wZW5haV9vcHRpb25zQigKJl9zMnRfbGxtX3Bvc3RfcHJv",
+            "Y2Vzc2luZ19zeXN0ZW1fcHJvbXB0QigKJl9zMnRfbGxtX3Bvc3RfcHJvY2Vz",
+            "c2luZ19lbmRpbmdfcHJvbXB0QikKJ19zMnRfbGxtX3Bvc3RfcHJvY2Vzc2lu",
+            "Z19jYXNpbmdfb3B0aW9uc0IuCixfczJ0X2xsbV9wb3N0X3Byb2Nlc3Npbmdf",
+            "cHVuY3R1YXRpb25fb3B0aW9uc0I2CjRfczJ0X2xsbV9wb3N0X3Byb2Nlc3Np",
+            "bmdfc3BlbGxpbmdfY29ycmVjdGlvbl9vcHRpb25zQjYKNF9zMnRfbGxtX3Bv",
+            "c3RfcHJvY2Vzc2luZ19zZW1hbnRpY19jb3JyZWN0aW9uX29wdGlvbnNCLgos",
+            "X3MydF9sbG1fcG9zdF9wcm9jZXNzaW5nX3RyYW5zbGF0aW9uX29wdGlvbnNC",
+            "OAo2X3MydF9sbG1fcG9zdF9wcm9jZXNzaW5nX2ludmVyc2Vfbm9ybWFsaXph",
+            "dGlvbl9vcHRpb25zQjAKLl9zMnRfbGxtX3Bvc3RfcHJvY2Vzc2luZ19ub3Jt",
+            "YWxpemF0aW9uX29wdGlvbnNCMAouX3MydF9sbG1fcG9zdF9wcm9jZXNzaW5n",
+            "X3N1bW1hcml6YXRpb25fb3B0aW9uc0IuCixfczJ0X2xsbV9wb3N0X3Byb2Nl",
+            "c3NpbmdfdXNlcl9wcm9tcHRfb3B0aW9ucyKMAQomUzJ0TGxtUG9zdFByb2Nl",
+            "c3NpbmdUcmFuc2xhdGlvbk9wdGlvbnMSEwoGYWN0aXZlGAEgASgISACIAQES",
+            "FQoIbGFuZ3VhZ2UYAiABKAlIAYgBARITCgZwcm9tcHQYAyABKAlIAogBAUIJ",
+            "CgdfYWN0aXZlQgsKCV9sYW5ndWFnZUIJCgdfcHJvbXB0IocFCi9TMnRMbG1Q",
+            "b3N0UHJvY2Vzc2luZ0ludmVyc2VOb3JtYWxpemF0aW9uT3B0aW9ucxITCgZh",
+            "Y3RpdmUYASABKAhIAIgBARJCCgVlbWFpbBgCIAEoCzIuLm9uZGV3by5zMnQu",
+            "UzJ0TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gBiAEBEkkKDHBo",
+            "b25lX251bWJlchgDIAEoCzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nl",
+            "c3NpbmdTdWJUYXNrT3B0aW9uc0gCiAEBEkoKDWRhdGVfYW5kX3RpbWUYBCAB",
+            "KAsyLi5vbmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09w",
+            "dGlvbnNIA4gBARJPChJjcmVkaXRfY2FyZF9udW1iZXIYBSABKAsyLi5vbmRl",
+            "d28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnNIBIgB",
+            "ARJTChZzb2NpYWxfc2VjdXJpdHlfbnVtYmVyGAYgASgLMi4ub25kZXdvLnMy",
+            "dC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRhc2tPcHRpb25zSAWIAQESRgoJ",
+            "dGltZV96b25lGAcgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vz",
+            "c2luZ1N1YlRhc2tPcHRpb25zSAaIAQFCCQoHX2FjdGl2ZUIICgZfZW1haWxC",
+            "DwoNX3Bob25lX251bWJlckIQCg5fZGF0ZV9hbmRfdGltZUIVChNfY3JlZGl0",
+            "X2NhcmRfbnVtYmVyQhkKF19zb2NpYWxfc2VjdXJpdHlfbnVtYmVyQgwKCl90",
+            "aW1lX3pvbmUigAUKKFMydExsbVBvc3RQcm9jZXNzaW5nTm9ybWFsaXphdGlv",
+            "bk9wdGlvbnMSEwoGYWN0aXZlGAEgASgISACIAQESQgoFZW1haWwYAiABKAsy",
+            "Li5vbmRld28uczJ0LlMydExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09wdGlv",
+            "bnNIAYgBARJJCgxwaG9uZV9udW1iZXIYAyABKAsyLi5vbmRld28uczJ0LlMy",
+            "dExsbVBvc3RQcm9jZXNzaW5nU3ViVGFza09wdGlvbnNIAogBARJKCg1kYXRl",
+            "X2FuZF90aW1lGAQgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vz",
+            "c2luZ1N1YlRhc2tPcHRpb25zSAOIAQESTwoSY3JlZGl0X2NhcmRfbnVtYmVy",
+            "GAUgASgLMi4ub25kZXdvLnMydC5TMnRMbG1Qb3N0UHJvY2Vzc2luZ1N1YlRh",
+            "c2tPcHRpb25zSASIAQESUwoWc29jaWFsX3NlY3VyaXR5X251bWJlchgGIAEo",
+            "CzIuLm9uZGV3by5zMnQuUzJ0TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0",
+            "aW9uc0gFiAEBEkYKCXRpbWVfem9uZRgHIAEoCzIuLm9uZGV3by5zMnQuUzJ0",
+            "TGxtUG9zdFByb2Nlc3NpbmdTdWJUYXNrT3B0aW9uc0gGiAEBQgkKB19hY3Rp",
+            "dmVCCAoGX2VtYWlsQg8KDV9waG9uZV9udW1iZXJCEAoOX2RhdGVfYW5kX3Rp",
+            "bWVCFQoTX2NyZWRpdF9jYXJkX251bWJlckIZChdfc29jaWFsX3NlY3VyaXR5",
+            "X251bWJlckIMCgpfdGltZV96b25lIrYBCihTMnRMbG1Qb3N0UHJvY2Vzc2lu",
+            "Z1N1bW1hcml6YXRpb25PcHRpb25zEhMKBmFjdGl2ZRgBIAEoCEgAiAEBEhMK",
+            "BnByb21wdBgCIAEoCUgBiAEBEhYKCW1pbl9jaGFycxgDIAEoBUgCiAEBEhYK",
+            "CW1heF9jaGFycxgEIAEoBUgDiAEBQgkKB19hY3RpdmVCCQoHX3Byb21wdEIM",
+            "CgpfbWluX2NoYXJzQgwKCl9tYXhfY2hhcnMiZAoiUzJ0TGxtUG9zdFByb2Nl",
+            "c3NpbmdTdWJUYXNrT3B0aW9ucxITCgZhY3RpdmUYASABKAhIAIgBARITCgZw",
+            "cm9tcHQYAiABKAlIAYgBAUIJCgdfYWN0aXZlQgkKB19wcm9tcHQiJQoHTG9n",
+            "Z2luZxIMCgR0eXBlGAEgASgJEgwKBHBhdGgYAiABKAkiKwocTGlzdFMydExh",
+            "bmd1YWdlTW9kZWxzUmVxdWVzdBILCgNpZHMYASADKAkiQwoXTGFuZ3VhZ2VN",
+            "b2RlbFBpcGVsaW5lSWQSEwoLcGlwZWxpbmVfaWQYASABKAkSEwoLbW9kZWxf",
+            "bmFtZXMYAiADKAkiXQodTGlzdFMydExhbmd1YWdlTW9kZWxzUmVzcG9uc2US",
+            "PAoPbG1fcGlwZWxpbmVfaWRzGAEgAygLMiMub25kZXdvLnMydC5MYW5ndWFn",
+            "ZU1vZGVsUGlwZWxpbmVJZCI9Ch5DcmVhdGVVc2VyTGFuZ3VhZ2VNb2RlbFJl",
+            "cXVlc3QSGwoTbGFuZ3VhZ2VfbW9kZWxfbmFtZRgBIAEoCSI9Ch5EZWxldGVV",
+            "c2VyTGFuZ3VhZ2VNb2RlbFJlcXVlc3QSGwoTbGFuZ3VhZ2VfbW9kZWxfbmFt",
+            "ZRgBIAEoCSJVCiFBZGREYXRhVG9Vc2VyTGFuZ3VhZ2VNb2RlbFJlcXVlc3QS",
+            "GwoTbGFuZ3VhZ2VfbW9kZWxfbmFtZRgBIAEoCRITCgt6aXBwZWRfZGF0YRgC",
+            "IAEoDCJLCh1UcmFpblVzZXJMYW5ndWFnZU1vZGVsUmVxdWVzdBIbChNsYW5n",
+            "dWFnZV9tb2RlbF9uYW1lGAEgASgJEg0KBW9yZGVyGAIgASgDIjgKJExpc3RT",
+            "MnROb3JtYWxpemF0aW9uUGlwZWxpbmVzUmVxdWVzdBIQCghsYW5ndWFnZRgB",
+            "IAEoCSJMCiVMaXN0UzJ0Tm9ybWFsaXphdGlvblBpcGVsaW5lc1Jlc3BvbnNl",
+            "EiMKG3MydF9ub3JtYWxpemF0aW9uX3BpcGVsaW5lcxgBIAMoCSpNCghEZWNv",
+            "ZGluZxILCgdERUZBVUxUEAASCgoGR1JFRURZEAESFwoTQkVBTV9TRUFSQ0hf",
+            "V0lUSF9MTRACEg8KC0JFQU1fU0VBUkNIEAMqoQIKEEluZmVyZW5jZUJhY2tl",
+            "bmQSHQoZSU5GRVJFTkNFX0JBQ0tFTkRfVU5LTk9XThAAEh0KGUlORkVSRU5D",
+            "RV9CQUNLRU5EX1BZVE9SQ0gQARIaChZJTkZFUkVOQ0VfQkFDS0VORF9GTEFY",
+            "EAISKgomSU5GRVJFTkNFX0JBQ0tFTkRfQ0xPVURfU0VSVklDRV9BTUFaT04Q",
+            "AxIsCihJTkZFUkVOQ0VfQkFDS0VORF9DTE9VRF9TRVJWSUNFX0RFRVBHUkFN",
+            "EAQSKgomSU5GRVJFTkNFX0JBQ0tFTkRfQ0xPVURfU0VSVklDRV9HT09HTEUQ",
+            "BRItCilJTkZFUkVOQ0VfQkFDS0VORF9DTE9VRF9TRVJWSUNFX01JQ1JPU09G",
+            "VBAGKqYBCgtTZXJ2aWNlVGllchIcChhTRVJWSUNFX1RJRVJfVU5TUEVDSUZJ",
+            "RUQQABIVChFTRVJWSUNFX1RJRVJfQVVUTxABEhgKFFNFUlZJQ0VfVElFUl9E",
+            "RUZBVUxUEAISFQoRU0VSVklDRV9USUVSX0ZMRVgQAxIWChJTRVJWSUNFX1RJ",
+            "RVJfU0NBTEUQBBIZChVTRVJWSUNFX1RJRVJfUFJJT1JJVFkQBSpjCglWZXJi",
+            "b3NpdHkSGQoVVkVSQk9TSVRZX1VOU1BFQ0lGSUVEEAASEQoNVkVSQk9TSVRZ",
+            "X0xPVxABEhQKEFZFUkJPU0lUWV9NRURJVU0QAhISCg5WRVJCT1NJVFlfSElH",
+            "SBADKqMBCg9SZWFzb25pbmdFZmZvcnQSIAocUkVBU09OSU5HX0VGRk9SVF9V",
+            "TlNQRUNJRklFRBAAEhwKGFJFQVNPTklOR19FRkZPUlRfTUlOSU1BTBABEhgK",
+            "FFJFQVNPTklOR19FRkZPUlRfTE9XEAISGwoXUkVBU09OSU5HX0VGRk9SVF9N",
+            "RURJVU0QAxIZChVSRUFTT05JTkdfRUZGT1JUX0hJR0gQBCpXCglWYWRNZXRo",
+            "b2QSGgoWVkFEX01FVEhPRF9VTlNQRUNJRklFRBAAEhcKE1ZBRF9NRVRIT0Rf",
+            "UFlBTk5PVEUQARIVChFWQURfTUVUSE9EX1NJTEVSTxACKm8KCVRzZE1ldGhv",
+            "ZBIaChZUU0RfTUVUSE9EX1VOU1BFQ0lGSUVEEAASEwoPVFNEX01FVEhPRF9O",
+            "T05FEAESFwoTVFNEX01FVEhPRF9QWUFOTk9URRACEhgKFFRTRF9NRVRIT0Rf",
+            "V0VTUEVBS0VSEAMy8wsKC1NwZWVjaDJUZXh0ElkKDlRyYW5zY3JpYmVGaWxl",
+            "EiEub25kZXdvLnMydC5UcmFuc2NyaWJlRmlsZVJlcXVlc3QaIi5vbmRld28u",
+            "czJ0LlRyYW5zY3JpYmVGaWxlUmVzcG9uc2UiABJjChBUcmFuc2NyaWJlU3Ry",
+            "ZWFtEiMub25kZXdvLnMydC5UcmFuc2NyaWJlU3RyZWFtUmVxdWVzdBokLm9u",
+            "ZGV3by5zMnQuVHJhbnNjcmliZVN0cmVhbVJlc3BvbnNlIgAoATABEkwKDkdl",
+            "dFMydFBpcGVsaW5lEhkub25kZXdvLnMydC5TMnRQaXBlbGluZUlkGh0ub25k",
+            "ZXdvLnMydC5TcGVlY2gyVGV4dENvbmZpZyIAEk8KEUNyZWF0ZVMydFBpcGVs",
+            "aW5lEh0ub25kZXdvLnMydC5TcGVlY2gyVGV4dENvbmZpZxoZLm9uZGV3by5z",
+            "MnQuUzJ0UGlwZWxpbmVJZCIAEkgKEURlbGV0ZVMydFBpcGVsaW5lEhkub25k",
+            "ZXdvLnMydC5TMnRQaXBlbGluZUlkGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IgASTAoRVXBkYXRlUzJ0UGlwZWxpbmUSHS5vbmRld28uczJ0LlNwZWVjaDJU",
+            "ZXh0Q29uZmlnGhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IgASXwoQTGlzdFMy",
+            "dFBpcGVsaW5lcxIjLm9uZGV3by5zMnQuTGlzdFMydFBpcGVsaW5lc1JlcXVl",
+            "c3QaJC5vbmRld28uczJ0Lkxpc3RTMnRQaXBlbGluZXNSZXNwb25zZSIAEl8K",
+            "EExpc3RTMnRMYW5ndWFnZXMSIy5vbmRld28uczJ0Lkxpc3RTMnRMYW5ndWFn",
+            "ZXNSZXF1ZXN0GiQub25kZXdvLnMydC5MaXN0UzJ0TGFuZ3VhZ2VzUmVzcG9u",
+            "c2UiABJZCg5MaXN0UzJ0RG9tYWlucxIhLm9uZGV3by5zMnQuTGlzdFMydERv",
+            "bWFpbnNSZXF1ZXN0GiIub25kZXdvLnMydC5MaXN0UzJ0RG9tYWluc1Jlc3Bv",
+            "bnNlIgASUQoOR2V0U2VydmljZUluZm8SFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkaJS5vbmRld28uczJ0LlMydEdldFNlcnZpY2VJbmZvUmVzcG9uc2UiABJu",
+            "ChVMaXN0UzJ0TGFuZ3VhZ2VNb2RlbHMSKC5vbmRld28uczJ0Lkxpc3RTMnRM",
+            "YW5ndWFnZU1vZGVsc1JlcXVlc3QaKS5vbmRld28uczJ0Lkxpc3RTMnRMYW5n",
+            "dWFnZU1vZGVsc1Jlc3BvbnNlIgASXwoXQ3JlYXRlVXNlckxhbmd1YWdlTW9k",
+            "ZWwSKi5vbmRld28uczJ0LkNyZWF0ZVVzZXJMYW5ndWFnZU1vZGVsUmVxdWVz",
+            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIAEl8KF0RlbGV0ZVVzZXJMYW5n",
+            "dWFnZU1vZGVsEioub25kZXdvLnMydC5EZWxldGVVc2VyTGFuZ3VhZ2VNb2Rl",
+            "bFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiABJlChpBZGREYXRh",
+            "VG9Vc2VyTGFuZ3VhZ2VNb2RlbBItLm9uZGV3by5zMnQuQWRkRGF0YVRvVXNl",
+            "ckxhbmd1YWdlTW9kZWxSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "IgASXQoWVHJhaW5Vc2VyTGFuZ3VhZ2VNb2RlbBIpLm9uZGV3by5zMnQuVHJh",
+            "aW5Vc2VyTGFuZ3VhZ2VNb2RlbFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYu",
+            "RW1wdHkiABKEAQodTGlzdFMydE5vcm1hbGl6YXRpb25QaXBlbGluZXMSMC5v",
+            "bmRld28uczJ0Lkxpc3RTMnROb3JtYWxpemF0aW9uUGlwZWxpbmVzUmVxdWVz",
+            "dBoxLm9uZGV3by5zMnQuTGlzdFMydE5vcm1hbGl6YXRpb25QaXBlbGluZXNS",
+            "ZXNwb25zZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.S2T.Decoding), typeof(global::Ondewo.S2T.InferenceBackend), typeof(global::Ondewo.S2T.ServiceTier), typeof(global::Ondewo.S2T.Verbosity), typeof(global::Ondewo.S2T.ReasoningEffort), typeof(global::Ondewo.S2T.VadMethod), typeof(global::Ondewo.S2T.TsdMethod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -438,15 +504,15 @@ namespace Ondewo.S2T {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.S2tCloudProviderConfigDeepgram), global::Ondewo.S2T.S2tCloudProviderConfigDeepgram.Parser, new[]{ "Punctuate", "SmartFormat", "Numerals", "Measurements", "Dictation" }, new[]{ "Punctuate", "SmartFormat", "Numerals", "Measurements", "Dictation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.S2tCloudProviderConfigGoogle), global::Ondewo.S2T.S2tCloudProviderConfigGoogle.Parser, new[]{ "EnableAutomaticPunctuation", "EnableWordTimeOffsets", "EnableWordConfidence", "TranscriptNormalization", "MaxAlternatives" }, new[]{ "EnableAutomaticPunctuation", "EnableWordTimeOffsets", "EnableWordConfidence", "TranscriptNormalization", "MaxAlternatives" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.S2tCloudProviderConfigMicrosoft), global::Ondewo.S2T.S2tCloudProviderConfigMicrosoft.Parser, new[]{ "UseFastTranscriptionApi", "UseDetailedOutputFormat" }, new[]{ "UseFastTranscriptionApi", "UseDetailedOutputFormat" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscriptionReturnOptions), global::Ondewo.S2T.TranscriptionReturnOptions.Parser, new[]{ "ReturnStartOfSpeech", "ReturnAudio", "ReturnConfidenceScore", "ReturnAlternativeTranscriptions", "ReturnAlternativeTranscriptionsNr", "ReturnAlternativeWords", "ReturnAlternativeWordsNr", "ReturnWordTiming" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.UtteranceDetectionOptions), global::Ondewo.S2T.UtteranceDetectionOptions.Parser, new[]{ "TranscribeNotFinal", "NextChunkTimeout", "TurnDetection" }, new[]{ "OneofTranscribeNotFinal", "OneofTurnDetection" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscriptionReturnOptions), global::Ondewo.S2T.TranscriptionReturnOptions.Parser, new[]{ "ReturnStartOfSpeech", "ReturnAudio", "ReturnConfidenceScore", "ReturnAlternativeTranscriptions", "ReturnAlternativeTranscriptionsNr", "ReturnAlternativeWords", "ReturnAlternativeWordsNr", "ReturnWordTiming", "ReturnEndOfSpeechCandidate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.UtteranceDetectionOptions), global::Ondewo.S2T.UtteranceDetectionOptions.Parser, new[]{ "TranscribeNotFinal", "NextChunkTimeout", "TurnDetection", "MinAudioChunkSize", "TranscribeNotFinalPeriodSeconds" }, new[]{ "OneofTranscribeNotFinal", "OneofTurnDetection", "MinAudioChunkSize", "TranscribeNotFinalPeriodSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.PostProcessingOptions), global::Ondewo.S2T.PostProcessingOptions.Parser, new[]{ "SpellingCorrection", "Normalize", "Config", "LlmPostProcessing" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.Transcription), global::Ondewo.S2T.Transcription.Parser, new[]{ "Transcription_", "ConfidenceScore", "Words", "Alternatives" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscriptionAlternative), global::Ondewo.S2T.TranscriptionAlternative.Parser, new[]{ "Transcript", "Confidence", "Words" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.WordDetail), global::Ondewo.S2T.WordDetail.Parser, new[]{ "StartTime", "EndTime", "Word", "Confidence", "WordAlternatives" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.WordAlternative), global::Ondewo.S2T.WordAlternative.Parser, new[]{ "Word", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscribeStreamRequest), global::Ondewo.S2T.TranscribeStreamRequest.Parser, new[]{ "AudioChunk", "EndOfStream", "Config", "MuteAudio" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscribeStreamResponse), global::Ondewo.S2T.TranscribeStreamResponse.Parser, new[]{ "Transcriptions", "Time", "Final", "ReturnAudio", "Audio", "UtteranceStart", "AudioUuid", "Config" }, new[]{ "OneofConfig" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscribeStreamResponse), global::Ondewo.S2T.TranscribeStreamResponse.Parser, new[]{ "Transcriptions", "Time", "Final", "ReturnAudio", "Audio", "UtteranceStart", "AudioUuid", "EndOfSpeechCandidate", "Config" }, new[]{ "OneofConfig" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscribeFileRequest), global::Ondewo.S2T.TranscribeFileRequest.Parser, new[]{ "AudioFile", "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TranscribeFileResponse), global::Ondewo.S2T.TranscribeFileResponse.Parser, new[]{ "Transcriptions", "Time", "AudioUuid" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.S2tPipelineId), global::Ondewo.S2T.S2tPipelineId.Parser, new[]{ "Id" }, null, null, null, null),
@@ -474,8 +540,17 @@ namespace Ondewo.S2T {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.CkptFile), global::Ondewo.S2T.CkptFile.Parser, new[]{ "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.LanguageModels), global::Ondewo.S2T.LanguageModels.Parser, new[]{ "Path", "BeamSize", "DefaultLm", "BeamSearchScorerAlpha", "BeamSearchScorerBeta" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.StreamingServer), global::Ondewo.S2T.StreamingServer.Parser, new[]{ "Host", "Port", "OutputStyle", "StreamingSpeechRecognition" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.StreamingSpeechRecognition), global::Ondewo.S2T.StreamingSpeechRecognition.Parser, new[]{ "TranscribeNotFinal", "DecodingMethod", "SamplingRate", "MinAudioChunkSize", "NextChunkTimeout", "TurnDetection" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionOptions), global::Ondewo.S2T.TurnDetectionOptions.Parser, new[]{ "Active", "FullUtteranceDeployment", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "TurnDetectionLlmOpenaiOptions" }, new[]{ "Active", "FullUtteranceDeployment", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "TurnDetectionLlmOpenaiOptions" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.StreamingSpeechRecognition), global::Ondewo.S2T.StreamingSpeechRecognition.Parser, new[]{ "TranscribeNotFinal", "DecodingMethod", "SamplingRate", "MinAudioChunkSize", "NextChunkTimeout", "TurnDetection", "TranscribeNotFinalPeriodSeconds" }, new[]{ "TranscribeNotFinal", "TranscribeNotFinalPeriodSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionOptions), global::Ondewo.S2T.TurnDetectionOptions.Parser, new[]{ "Active", "FullUtteranceDeployment", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "TurnDetectionLlmOpenaiOptions", "IncompleteMaxSilenceSeconds", "TurnDetectionConversationContext", "TurnDetectionChatLlmOptions", "TurnDetectionEndOfUtteranceLlmOptions", "TurnDetectionOndewoDeOptions", "TurnDetectionOndewoDeFusionOptions", "TurnDetectionPipecatSmartTurnOptions" }, new[]{ "OneofTurnDetector", "Active", "FullUtteranceDeployment", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "TurnDetectionLlmOpenaiOptions", "IncompleteMaxSilenceSeconds", "TurnDetectionConversationContext" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionChatLlmOptions), global::Ondewo.S2T.TurnDetectionChatLlmOptions.Parser, new[]{ "OpenaiLlmOptions", "SystemPrompt", "UserPrompt" }, new[]{ "OpenaiLlmOptions", "SystemPrompt", "UserPrompt" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions), global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions.Parser, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold", "TurnDetectionHoldBands", "UncertainMinWords", "ExactProbability" }, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold", "TurnDetectionHoldBands", "UncertainMinWords", "ExactProbability" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionOndewoDeOptions), global::Ondewo.S2T.TurnDetectionOndewoDeOptions.Parser, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold" }, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions), global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions.Parser, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold" }, new[]{ "OpenaiLlmOptions", "EndOfTurnProbabilityThreshold" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions), global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions.Parser, new[]{ "ModelName", "TritonServerHost", "TritonServerPort", "MaxAudioSeconds", "TimeoutSeconds", "EndOfTurnProbabilityThreshold" }, new[]{ "ModelName", "TritonServerHost", "TritonServerPort", "MaxAudioSeconds", "TimeoutSeconds", "EndOfTurnProbabilityThreshold" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionConversationContext), global::Ondewo.S2T.TurnDetectionConversationContext.Parser, new[]{ "TurnDetectionContextTurns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionContextTurn), global::Ondewo.S2T.TurnDetectionContextTurn.Parser, new[]{ "Role", "Text" }, null, new[]{ typeof(global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionHoldBands), global::Ondewo.S2T.TurnDetectionHoldBands.Parser, new[]{ "TurnDetectionHoldBands_" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.TurnDetectionHoldBand), global::Ondewo.S2T.TurnDetectionHoldBand.Parser, new[]{ "UpperProbability", "MaxSilenceSeconds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.OpenaiLlmOptions), global::Ondewo.S2T.OpenaiLlmOptions.Parser, new[]{ "ApiKey", "Organization", "Project", "WebhookSecret", "BaseUrl", "WebsocketBaseUrl", "Timeout", "MaxRetries", "DefaultHeaders", "DefaultQuery", "StrictResponseValidation", "Model", "FrequencyPenalty", "LogitBias", "Logprobs", "MaxCompletionTokens", "MaxTokens", "Metadata", "N", "PresencePenalty", "PromptCacheKey", "ReasoningEffort", "Seed", "ServiceTier", "Stop", "Store", "Temperature", "TopLogprobs", "TopP", "User", "Verbosity", "ExtraHeaders", "ExtraQuery", "ExtraBody" }, new[]{ "ApiKey", "Organization", "Project", "WebhookSecret", "BaseUrl", "WebsocketBaseUrl", "Timeout", "MaxRetries", "DefaultQuery", "StrictResponseValidation", "FrequencyPenalty", "Logprobs", "MaxCompletionTokens", "MaxTokens", "Metadata", "N", "PresencePenalty", "PromptCacheKey", "ReasoningEffort", "Seed", "ServiceTier", "Store", "Temperature", "TopLogprobs", "TopP", "User", "Verbosity", "ExtraHeaders", "ExtraQuery", "ExtraBody" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.VoiceActivityDetection), global::Ondewo.S2T.VoiceActivityDetection.Parser, new[]{ "Active", "SamplingRate", "Pyannote", "Silero", "WespeakerTsd", "VadMethod", "TsdMethod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.S2T.Pyannote), global::Ondewo.S2T.Pyannote.Parser, new[]{ "ModelName", "MinAudioSize", "MinDurationOff", "MinDurationOn", "TritonServerHost", "TritonServerPort" }, null, null, null, null),
@@ -3560,6 +3635,7 @@ namespace Ondewo.S2T {
       returnAlternativeWords_ = other.returnAlternativeWords_;
       returnAlternativeWordsNr_ = other.returnAlternativeWordsNr_;
       returnWordTiming_ = other.returnWordTiming_;
+      returnEndOfSpeechCandidate_ = other.returnEndOfSpeechCandidate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3689,6 +3765,27 @@ namespace Ondewo.S2T {
       }
     }
 
+    /// <summary>Field number for the "return_end_of_speech_candidate" field.</summary>
+    public const int ReturnEndOfSpeechCandidateFieldNumber = 9;
+    private bool returnEndOfSpeechCandidate_;
+    /// <summary>
+    /// Optional. Whether the server should send an end-of-speech candidate on a stream (see
+    /// &lt;code>TranscribeStreamResponse.end_of_speech_candidate&lt;/code> for what is sent and when). Only used in
+    /// TranscribeStream, and only acted on under server-side turn detection. Fixed per stream, like
+    /// &lt;code>return_start_of_speech&lt;/code>: the server completes each request config from the one in effect, so a
+    /// later request without &lt;code>return_options&lt;/code> keeps it, but a later &lt;code>return_options&lt;/code> block
+    /// replaces every return option at once and must repeat this field, or the candidate stops for the rest of the
+    /// stream. Defaults to false: no candidate is sent, exactly as before this field existed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReturnEndOfSpeechCandidate {
+      get { return returnEndOfSpeechCandidate_; }
+      set {
+        returnEndOfSpeechCandidate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3712,6 +3809,7 @@ namespace Ondewo.S2T {
       if (ReturnAlternativeWords != other.ReturnAlternativeWords) return false;
       if (ReturnAlternativeWordsNr != other.ReturnAlternativeWordsNr) return false;
       if (ReturnWordTiming != other.ReturnWordTiming) return false;
+      if (ReturnEndOfSpeechCandidate != other.ReturnEndOfSpeechCandidate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3727,6 +3825,7 @@ namespace Ondewo.S2T {
       if (ReturnAlternativeWords != false) hash ^= ReturnAlternativeWords.GetHashCode();
       if (ReturnAlternativeWordsNr != 0) hash ^= ReturnAlternativeWordsNr.GetHashCode();
       if (ReturnWordTiming != false) hash ^= ReturnWordTiming.GetHashCode();
+      if (ReturnEndOfSpeechCandidate != false) hash ^= ReturnEndOfSpeechCandidate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3777,6 +3876,10 @@ namespace Ondewo.S2T {
         output.WriteRawTag(64);
         output.WriteBool(ReturnWordTiming);
       }
+      if (ReturnEndOfSpeechCandidate != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(ReturnEndOfSpeechCandidate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3819,6 +3922,10 @@ namespace Ondewo.S2T {
         output.WriteRawTag(64);
         output.WriteBool(ReturnWordTiming);
       }
+      if (ReturnEndOfSpeechCandidate != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(ReturnEndOfSpeechCandidate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3851,6 +3958,9 @@ namespace Ondewo.S2T {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ReturnAlternativeWordsNr);
       }
       if (ReturnWordTiming != false) {
+        size += 1 + 1;
+      }
+      if (ReturnEndOfSpeechCandidate != false) {
         size += 1 + 1;
       }
       if (_unknownFields != null) {
@@ -3888,6 +3998,9 @@ namespace Ondewo.S2T {
       }
       if (other.ReturnWordTiming != false) {
         ReturnWordTiming = other.ReturnWordTiming;
+      }
+      if (other.ReturnEndOfSpeechCandidate != false) {
+        ReturnEndOfSpeechCandidate = other.ReturnEndOfSpeechCandidate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3938,6 +4051,10 @@ namespace Ondewo.S2T {
           }
           case 64: {
             ReturnWordTiming = input.ReadBool();
+            break;
+          }
+          case 72: {
+            ReturnEndOfSpeechCandidate = input.ReadBool();
             break;
           }
         }
@@ -3991,6 +4108,10 @@ namespace Ondewo.S2T {
             ReturnWordTiming = input.ReadBool();
             break;
           }
+          case 72: {
+            ReturnEndOfSpeechCandidate = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -4009,6 +4130,7 @@ namespace Ondewo.S2T {
   {
     private static readonly pb::MessageParser<UtteranceDetectionOptions> _parser = new pb::MessageParser<UtteranceDetectionOptions>(() => new UtteranceDetectionOptions());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UtteranceDetectionOptions> Parser { get { return _parser; } }
@@ -4036,7 +4158,10 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UtteranceDetectionOptions(UtteranceDetectionOptions other) : this() {
+      _hasBits0 = other._hasBits0;
       nextChunkTimeout_ = other.nextChunkTimeout_;
+      minAudioChunkSize_ = other.minAudioChunkSize_;
+      transcribeNotFinalPeriodSeconds_ = other.transcribeNotFinalPeriodSeconds_;
       switch (other.OneofTranscribeNotFinalCase) {
         case OneofTranscribeNotFinalOneofCase.TranscribeNotFinal:
           TranscribeNotFinal = other.TranscribeNotFinal;
@@ -4061,7 +4186,10 @@ namespace Ondewo.S2T {
     /// <summary>Field number for the "transcribe_not_final" field.</summary>
     public const int TranscribeNotFinalFieldNumber = 1;
     /// <summary>
-    /// Return also immediate transcription results
+    /// Return also immediate transcription results (non-final transcriptions of an utterance while it is
+    /// still being spoken). Unset: the pipeline's &lt;code>StreamingSpeechRecognition.transcribe_not_final&lt;/code>,
+    /// then the server default, which is now &lt;code>true&lt;/code>; an explicit &lt;code>false&lt;/code> opts this
+    /// request out of non-final results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4115,6 +4243,78 @@ namespace Ondewo.S2T {
         oneofTurnDetection_ = value;
         oneofTurnDetectionCase_ = value == null ? OneofTurnDetectionOneofCase.None : OneofTurnDetectionOneofCase.TurnDetection;
       }
+    }
+
+    /// <summary>Field number for the "min_audio_chunk_size" field.</summary>
+    public const int MinAudioChunkSizeFieldNumber = 4;
+    private readonly static long MinAudioChunkSizeDefaultValue = 0L;
+
+    private long minAudioChunkSize_;
+    /// <summary>
+    /// Optional. The processing chunk of THIS stream, in samples at the pipeline's sampling rate: the server buffers
+    /// the incoming audio until it holds this many samples and only then runs the voice-activity search, the sliding
+    /// transcription and the turn detector, so it is the cadence at which an utterance can end (8000 samples at
+    /// 16 kHz = 0.5 s; 1600 = 0.1 s). Overrides &lt;code>StreamingSpeechRecognition.min_audio_chunk_size&lt;/code> of the
+    /// pipeline config for this stream only. Allowed: 320 - 32000 (20 ms - 2 s at 16 kHz); a smaller chunk costs
+    /// proportionally more voice-activity and transcription requests. Read from the first request of a stream that
+    /// carries it; a later request cannot change a running stream's chunk. Unset: the pipeline's value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long MinAudioChunkSize {
+      get { if ((_hasBits0 & 1) != 0) { return minAudioChunkSize_; } else { return MinAudioChunkSizeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        minAudioChunkSize_ = value;
+      }
+    }
+    /// <summary>Gets whether the "min_audio_chunk_size" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMinAudioChunkSize {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "min_audio_chunk_size" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMinAudioChunkSize() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "transcribe_not_final_period_seconds" field.</summary>
+    public const int TranscribeNotFinalPeriodSecondsFieldNumber = 5;
+    private readonly static float TranscribeNotFinalPeriodSecondsDefaultValue = 0F;
+
+    private float transcribeNotFinalPeriodSeconds_;
+    /// <summary>
+    /// Optional. The minimum new audio, in seconds, between two non-final transcriptions of an utterance (the
+    /// partial-transcription cadence; applies only while &lt;code>transcribe_not_final&lt;/code> is in force). Overrides
+    /// &lt;code>StreamingSpeechRecognition.transcribe_not_final_period_seconds&lt;/code> of the pipeline config and the
+    /// server setting &lt;code>ONDEWO_S2T_INFERENCE_SLIDING_PERIOD_OF_TRANSCRIPT&lt;/code> for this request only. Allowed:
+    /// (0, 5]; a shorter period costs proportionally more transcription requests. The server checks the period once
+    /// per processing chunk, so the effective cadence is rounded up to whole &lt;code>min_audio_chunk_size&lt;/code>
+    /// chunks. Unset: the pipeline's value, then the server setting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float TranscribeNotFinalPeriodSeconds {
+      get { if ((_hasBits0 & 2) != 0) { return transcribeNotFinalPeriodSeconds_; } else { return TranscribeNotFinalPeriodSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        transcribeNotFinalPeriodSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "transcribe_not_final_period_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscribeNotFinalPeriodSeconds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "transcribe_not_final_period_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscribeNotFinalPeriodSeconds() {
+      _hasBits0 &= ~2;
     }
 
     private object oneofTranscribeNotFinal_;
@@ -4175,6 +4375,8 @@ namespace Ondewo.S2T {
       if (TranscribeNotFinal != other.TranscribeNotFinal) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(NextChunkTimeout, other.NextChunkTimeout)) return false;
       if (!object.Equals(TurnDetection, other.TurnDetection)) return false;
+      if (MinAudioChunkSize != other.MinAudioChunkSize) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TranscribeNotFinalPeriodSeconds, other.TranscribeNotFinalPeriodSeconds)) return false;
       if (OneofTranscribeNotFinalCase != other.OneofTranscribeNotFinalCase) return false;
       if (OneofTurnDetectionCase != other.OneofTurnDetectionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4187,6 +4389,8 @@ namespace Ondewo.S2T {
       if (HasTranscribeNotFinal) hash ^= TranscribeNotFinal.GetHashCode();
       if (NextChunkTimeout != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NextChunkTimeout);
       if (oneofTurnDetectionCase_ == OneofTurnDetectionOneofCase.TurnDetection) hash ^= TurnDetection.GetHashCode();
+      if (HasMinAudioChunkSize) hash ^= MinAudioChunkSize.GetHashCode();
+      if (HasTranscribeNotFinalPeriodSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TranscribeNotFinalPeriodSeconds);
       hash ^= (int) oneofTranscribeNotFinalCase_;
       hash ^= (int) oneofTurnDetectionCase_;
       if (_unknownFields != null) {
@@ -4219,6 +4423,14 @@ namespace Ondewo.S2T {
         output.WriteRawTag(26);
         output.WriteMessage(TurnDetection);
       }
+      if (HasMinAudioChunkSize) {
+        output.WriteRawTag(32);
+        output.WriteInt64(MinAudioChunkSize);
+      }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(TranscribeNotFinalPeriodSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4241,6 +4453,14 @@ namespace Ondewo.S2T {
         output.WriteRawTag(26);
         output.WriteMessage(TurnDetection);
       }
+      if (HasMinAudioChunkSize) {
+        output.WriteRawTag(32);
+        output.WriteInt64(MinAudioChunkSize);
+      }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(TranscribeNotFinalPeriodSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4260,6 +4480,12 @@ namespace Ondewo.S2T {
       if (oneofTurnDetectionCase_ == OneofTurnDetectionOneofCase.TurnDetection) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetection);
       }
+      if (HasMinAudioChunkSize) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinAudioChunkSize);
+      }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4274,6 +4500,12 @@ namespace Ondewo.S2T {
       }
       if (other.NextChunkTimeout != 0F) {
         NextChunkTimeout = other.NextChunkTimeout;
+      }
+      if (other.HasMinAudioChunkSize) {
+        MinAudioChunkSize = other.MinAudioChunkSize;
+      }
+      if (other.HasTranscribeNotFinalPeriodSeconds) {
+        TranscribeNotFinalPeriodSeconds = other.TranscribeNotFinalPeriodSeconds;
       }
       switch (other.OneofTranscribeNotFinalCase) {
         case OneofTranscribeNotFinalOneofCase.TranscribeNotFinal:
@@ -4326,6 +4558,14 @@ namespace Ondewo.S2T {
             TurnDetection = subBuilder;
             break;
           }
+          case 32: {
+            MinAudioChunkSize = input.ReadInt64();
+            break;
+          }
+          case 45: {
+            TranscribeNotFinalPeriodSeconds = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -4360,6 +4600,14 @@ namespace Ondewo.S2T {
             }
             input.ReadMessage(subBuilder);
             TurnDetection = subBuilder;
+            break;
+          }
+          case 32: {
+            MinAudioChunkSize = input.ReadInt64();
+            break;
+          }
+          case 45: {
+            TranscribeNotFinalPeriodSeconds = input.ReadFloat();
             break;
           }
         }
@@ -6257,6 +6505,7 @@ namespace Ondewo.S2T {
       audio_ = other.audio_;
       utteranceStart_ = other.utteranceStart_;
       audioUuid_ = other.audioUuid_;
+      endOfSpeechCandidate_ = other.endOfSpeechCandidate_;
       switch (other.OneofConfigCase) {
         case OneofConfigOneofCase.Config:
           Config = other.Config.Clone();
@@ -6377,6 +6626,32 @@ namespace Ondewo.S2T {
       }
     }
 
+    /// <summary>Field number for the "end_of_speech_candidate" field.</summary>
+    public const int EndOfSpeechCandidateFieldNumber = 9;
+    private bool endOfSpeechCandidate_;
+    /// <summary>
+    /// Whether this response is an end-of-speech candidate. Sent only when the request set
+    /// &lt;code>TranscriptionReturnOptions.return_end_of_speech_candidate&lt;/code>, only under server-side turn
+    /// detection, and only on the chunk where the server found the end of the caller's speech and its turn detector
+    /// held the utterance open (not finished, an uncertain hold band, or the minimum endpointing delay), so the final
+    /// may follow seconds later. Not sent without turn detection, when the detector judges the turn finished (the
+    /// final is then sent on that same chunk), or while the utterance has no text yet. Never set on a final.
+    /// At most once per pause: if the caller resumes speaking and pauses again, the next pause may send another one.
+    /// With non-final results on, it is a FLAG on the non-final response the server sends for that chunk anyway, so
+    /// it is an ordinary partial plus the hint, not an extra response; with non-final results off, the server sends
+    /// one non-final response carrying the current text in &lt;code>transcriptions&lt;/code>. It is a hint, not a commit:
+    /// the utterance's final still follows, or the utterance continues if the caller resumes, and the final text may
+    /// differ. Always false otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EndOfSpeechCandidate {
+      get { return endOfSpeechCandidate_; }
+      set {
+        endOfSpeechCandidate_ = value;
+      }
+    }
+
     /// <summary>Field number for the "config" field.</summary>
     public const int ConfigFieldNumber = 8;
     /// <summary>
@@ -6434,6 +6709,7 @@ namespace Ondewo.S2T {
       if (Audio != other.Audio) return false;
       if (UtteranceStart != other.UtteranceStart) return false;
       if (AudioUuid != other.AudioUuid) return false;
+      if (EndOfSpeechCandidate != other.EndOfSpeechCandidate) return false;
       if (!object.Equals(Config, other.Config)) return false;
       if (OneofConfigCase != other.OneofConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -6450,6 +6726,7 @@ namespace Ondewo.S2T {
       if (Audio.Length != 0) hash ^= Audio.GetHashCode();
       if (UtteranceStart != false) hash ^= UtteranceStart.GetHashCode();
       if (AudioUuid.Length != 0) hash ^= AudioUuid.GetHashCode();
+      if (EndOfSpeechCandidate != false) hash ^= EndOfSpeechCandidate.GetHashCode();
       if (oneofConfigCase_ == OneofConfigOneofCase.Config) hash ^= Config.GetHashCode();
       hash ^= (int) oneofConfigCase_;
       if (_unknownFields != null) {
@@ -6499,6 +6776,10 @@ namespace Ondewo.S2T {
         output.WriteRawTag(66);
         output.WriteMessage(Config);
       }
+      if (EndOfSpeechCandidate != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EndOfSpeechCandidate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6538,6 +6819,10 @@ namespace Ondewo.S2T {
         output.WriteRawTag(66);
         output.WriteMessage(Config);
       }
+      if (EndOfSpeechCandidate != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(EndOfSpeechCandidate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6566,6 +6851,9 @@ namespace Ondewo.S2T {
       }
       if (AudioUuid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AudioUuid);
+      }
+      if (EndOfSpeechCandidate != false) {
+        size += 1 + 1;
       }
       if (oneofConfigCase_ == OneofConfigOneofCase.Config) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Config);
@@ -6600,6 +6888,9 @@ namespace Ondewo.S2T {
       }
       if (other.AudioUuid.Length != 0) {
         AudioUuid = other.AudioUuid;
+      }
+      if (other.EndOfSpeechCandidate != false) {
+        EndOfSpeechCandidate = other.EndOfSpeechCandidate;
       }
       switch (other.OneofConfigCase) {
         case OneofConfigOneofCase.Config:
@@ -6666,6 +6957,10 @@ namespace Ondewo.S2T {
             Config = subBuilder;
             break;
           }
+          case 72: {
+            EndOfSpeechCandidate = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -6720,6 +7015,10 @@ namespace Ondewo.S2T {
             }
             input.ReadMessage(subBuilder);
             Config = subBuilder;
+            break;
+          }
+          case 72: {
+            EndOfSpeechCandidate = input.ReadBool();
             break;
           }
         }
@@ -15370,6 +15669,7 @@ namespace Ondewo.S2T {
   {
     private static readonly pb::MessageParser<StreamingSpeechRecognition> _parser = new pb::MessageParser<StreamingSpeechRecognition>(() => new StreamingSpeechRecognition());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StreamingSpeechRecognition> Parser { get { return _parser; } }
@@ -15397,12 +15697,14 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingSpeechRecognition(StreamingSpeechRecognition other) : this() {
+      _hasBits0 = other._hasBits0;
       transcribeNotFinal_ = other.transcribeNotFinal_;
       decodingMethod_ = other.decodingMethod_;
       samplingRate_ = other.samplingRate_;
       minAudioChunkSize_ = other.minAudioChunkSize_;
       nextChunkTimeout_ = other.nextChunkTimeout_;
       turnDetection_ = other.turnDetection_ != null ? other.turnDetection_.Clone() : null;
+      transcribeNotFinalPeriodSeconds_ = other.transcribeNotFinalPeriodSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -15414,17 +15716,36 @@ namespace Ondewo.S2T {
 
     /// <summary>Field number for the "transcribe_not_final" field.</summary>
     public const int TranscribeNotFinalFieldNumber = 1;
+    private readonly static bool TranscribeNotFinalDefaultValue = false;
+
     private bool transcribeNotFinal_;
     /// <summary>
-    /// Indicates whether to transcribe non-final results.
+    /// Indicates whether to transcribe non-final results for every stream of this pipeline. Unset: the server
+    /// default, which is now &lt;code>true&lt;/code>; an explicit &lt;code>false&lt;/code> opts the pipeline out of non-final
+    /// results. A request's &lt;code>UtteranceDetectionOptions.transcribe_not_final&lt;/code> overrides it. Declared
+    /// &lt;code>optional&lt;/code> (same field number, wire-compatible) so an explicit &lt;code>false&lt;/code> can be told
+    /// apart from unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TranscribeNotFinal {
-      get { return transcribeNotFinal_; }
+      get { if ((_hasBits0 & 1) != 0) { return transcribeNotFinal_; } else { return TranscribeNotFinalDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         transcribeNotFinal_ = value;
       }
+    }
+    /// <summary>Gets whether the "transcribe_not_final" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscribeNotFinal {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "transcribe_not_final" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscribeNotFinal() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "decoding_method" field.</summary>
@@ -15502,6 +15823,40 @@ namespace Ondewo.S2T {
       }
     }
 
+    /// <summary>Field number for the "transcribe_not_final_period_seconds" field.</summary>
+    public const int TranscribeNotFinalPeriodSecondsFieldNumber = 7;
+    private readonly static float TranscribeNotFinalPeriodSecondsDefaultValue = 0F;
+
+    private float transcribeNotFinalPeriodSeconds_;
+    /// <summary>
+    /// Optional. The minimum new audio, in seconds, between two non-final transcriptions of an utterance (the
+    /// partial-transcription cadence) for every stream of this pipeline. Overrides the server setting
+    /// &lt;code>ONDEWO_S2T_INFERENCE_SLIDING_PERIOD_OF_TRANSCRIPT&lt;/code>; a request's
+    /// &lt;code>UtteranceDetectionOptions.transcribe_not_final_period_seconds&lt;/code> overrides it. Allowed: (0, 5]; the
+    /// effective cadence is rounded up to whole &lt;code>min_audio_chunk_size&lt;/code> chunks. Unset: the server setting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float TranscribeNotFinalPeriodSeconds {
+      get { if ((_hasBits0 & 2) != 0) { return transcribeNotFinalPeriodSeconds_; } else { return TranscribeNotFinalPeriodSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        transcribeNotFinalPeriodSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "transcribe_not_final_period_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTranscribeNotFinalPeriodSeconds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "transcribe_not_final_period_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTranscribeNotFinalPeriodSeconds() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -15523,6 +15878,7 @@ namespace Ondewo.S2T {
       if (MinAudioChunkSize != other.MinAudioChunkSize) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(NextChunkTimeout, other.NextChunkTimeout)) return false;
       if (!object.Equals(TurnDetection, other.TurnDetection)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TranscribeNotFinalPeriodSeconds, other.TranscribeNotFinalPeriodSeconds)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -15530,12 +15886,13 @@ namespace Ondewo.S2T {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TranscribeNotFinal != false) hash ^= TranscribeNotFinal.GetHashCode();
+      if (HasTranscribeNotFinal) hash ^= TranscribeNotFinal.GetHashCode();
       if (DecodingMethod.Length != 0) hash ^= DecodingMethod.GetHashCode();
       if (SamplingRate != 0L) hash ^= SamplingRate.GetHashCode();
       if (MinAudioChunkSize != 0L) hash ^= MinAudioChunkSize.GetHashCode();
       if (NextChunkTimeout != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NextChunkTimeout);
       if (turnDetection_ != null) hash ^= TurnDetection.GetHashCode();
+      if (HasTranscribeNotFinalPeriodSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TranscribeNotFinalPeriodSeconds);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -15554,7 +15911,7 @@ namespace Ondewo.S2T {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TranscribeNotFinal != false) {
+      if (HasTranscribeNotFinal) {
         output.WriteRawTag(8);
         output.WriteBool(TranscribeNotFinal);
       }
@@ -15577,6 +15934,10 @@ namespace Ondewo.S2T {
       if (turnDetection_ != null) {
         output.WriteRawTag(50);
         output.WriteMessage(TurnDetection);
+      }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        output.WriteRawTag(61);
+        output.WriteFloat(TranscribeNotFinalPeriodSeconds);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -15588,7 +15949,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TranscribeNotFinal != false) {
+      if (HasTranscribeNotFinal) {
         output.WriteRawTag(8);
         output.WriteBool(TranscribeNotFinal);
       }
@@ -15612,6 +15973,10 @@ namespace Ondewo.S2T {
         output.WriteRawTag(50);
         output.WriteMessage(TurnDetection);
       }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        output.WriteRawTag(61);
+        output.WriteFloat(TranscribeNotFinalPeriodSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -15622,7 +15987,7 @@ namespace Ondewo.S2T {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TranscribeNotFinal != false) {
+      if (HasTranscribeNotFinal) {
         size += 1 + 1;
       }
       if (DecodingMethod.Length != 0) {
@@ -15640,6 +16005,9 @@ namespace Ondewo.S2T {
       if (turnDetection_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetection);
       }
+      if (HasTranscribeNotFinalPeriodSeconds) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -15652,7 +16020,7 @@ namespace Ondewo.S2T {
       if (other == null) {
         return;
       }
-      if (other.TranscribeNotFinal != false) {
+      if (other.HasTranscribeNotFinal) {
         TranscribeNotFinal = other.TranscribeNotFinal;
       }
       if (other.DecodingMethod.Length != 0) {
@@ -15672,6 +16040,9 @@ namespace Ondewo.S2T {
           TurnDetection = new global::Ondewo.S2T.TurnDetectionOptions();
         }
         TurnDetection.MergeFrom(other.TurnDetection);
+      }
+      if (other.HasTranscribeNotFinalPeriodSeconds) {
+        TranscribeNotFinalPeriodSeconds = other.TranscribeNotFinalPeriodSeconds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -15717,6 +16088,10 @@ namespace Ondewo.S2T {
               TurnDetection = new global::Ondewo.S2T.TurnDetectionOptions();
             }
             input.ReadMessage(TurnDetection);
+            break;
+          }
+          case 61: {
+            TranscribeNotFinalPeriodSeconds = input.ReadFloat();
             break;
           }
         }
@@ -15765,6 +16140,10 @@ namespace Ondewo.S2T {
             input.ReadMessage(TurnDetection);
             break;
           }
+          case 61: {
+            TranscribeNotFinalPeriodSeconds = input.ReadFloat();
+            break;
+          }
         }
       }
     }
@@ -15773,7 +16152,14 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to turn-detection in utterances&lt;/p>
+  /// &lt;p>TurnDetectionOptions configures turn detection: deciding, at a pause of the caller, whether the caller has
+  /// finished the turn. Exactly one turn detector is chosen by &lt;code>oneof_turn_detector&lt;/code>; the fields outside it
+  /// apply to every detector.&lt;/p>
+  /// &lt;p>Precedence for every field: the request config's value
+  /// (&lt;code>TranscribeRequestConfig.utterance_detection.turn_detection&lt;/code>), then the pipeline config's value
+  /// (&lt;code>StreamingSpeechRecognition.turn_detection&lt;/code>), then the server's configured value. When the request
+  /// config chooses a different detector than the pipeline config, the request config's detector is used with only
+  /// its own fields: none of the pipeline config's detector fields carry over.&lt;/p>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionOptions : pb::IMessage<TurnDetectionOptions>
@@ -15817,6 +16203,26 @@ namespace Ondewo.S2T {
       turnDetectionSystemPrompt_ = other.turnDetectionSystemPrompt_;
       turnDetectionUserPrompt_ = other.turnDetectionUserPrompt_;
       turnDetectionLlmOpenaiOptions_ = other.turnDetectionLlmOpenaiOptions_ != null ? other.turnDetectionLlmOpenaiOptions_.Clone() : null;
+      incompleteMaxSilenceSeconds_ = other.incompleteMaxSilenceSeconds_;
+      turnDetectionConversationContext_ = other.turnDetectionConversationContext_ != null ? other.turnDetectionConversationContext_.Clone() : null;
+      switch (other.OneofTurnDetectorCase) {
+        case OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions:
+          TurnDetectionChatLlmOptions = other.TurnDetectionChatLlmOptions.Clone();
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions:
+          TurnDetectionEndOfUtteranceLlmOptions = other.TurnDetectionEndOfUtteranceLlmOptions.Clone();
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions:
+          TurnDetectionOndewoDeOptions = other.TurnDetectionOndewoDeOptions.Clone();
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions:
+          TurnDetectionOndewoDeFusionOptions = other.TurnDetectionOndewoDeFusionOptions.Clone();
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions:
+          TurnDetectionPipecatSmartTurnOptions = other.TurnDetectionPipecatSmartTurnOptions.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -15862,9 +16268,9 @@ namespace Ondewo.S2T {
 
     private bool fullUtteranceDeployment_;
     /// <summary>
-    /// Optional. Whether to transcribe the whole utterance when turn moment is detected. It is helpful to increase
-    /// accuracy of transcriptions in cost of drop in speed. If deactivated, it just transcribe from last short silence
-    /// period and concatenates the transcriptions of small audio chunks between tiny silences.
+    /// Optional. Whether to transcribe the whole utterance when the end of a turn is detected. It increases the
+    /// accuracy of the transcription at the cost of speed. If deactivated, only the audio after the last short
+    /// silence is transcribed and the transcriptions of the short audio chunks between silences are concatenated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15894,8 +16300,11 @@ namespace Ondewo.S2T {
 
     private string turnDetectionSystemPrompt_;
     /// <summary>
-    /// Optional. System prompt used to guide the turn-detection model.
+    /// Optional. Deprecated in favour of &lt;code>turn_detection_chat_llm_options.system_prompt&lt;/code>, but still
+    /// honoured so that configurations written for ondewo-s2t-api 7.5.0 and earlier keep working unchanged. Read
+    /// only when &lt;code>oneof_turn_detector&lt;/code> is not set.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TurnDetectionSystemPrompt {
@@ -15905,12 +16314,14 @@ namespace Ondewo.S2T {
       }
     }
     /// <summary>Gets whether the "turn_detection_system_prompt" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTurnDetectionSystemPrompt {
       get { return turnDetectionSystemPrompt_ != null; }
     }
     /// <summary>Clears the value of the "turn_detection_system_prompt" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTurnDetectionSystemPrompt() {
@@ -15923,8 +16334,10 @@ namespace Ondewo.S2T {
 
     private string turnDetectionUserPrompt_;
     /// <summary>
-    /// Optional. User prompt used as input to the turn-detection model.
+    /// Optional. Deprecated in favour of &lt;code>turn_detection_chat_llm_options.user_prompt&lt;/code>, but still
+    /// honoured. Read only when &lt;code>oneof_turn_detector&lt;/code> is not set.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TurnDetectionUserPrompt {
@@ -15934,12 +16347,14 @@ namespace Ondewo.S2T {
       }
     }
     /// <summary>Gets whether the "turn_detection_user_prompt" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTurnDetectionUserPrompt {
       get { return turnDetectionUserPrompt_ != null; }
     }
     /// <summary>Clears the value of the "turn_detection_user_prompt" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTurnDetectionUserPrompt() {
@@ -15950,8 +16365,16 @@ namespace Ondewo.S2T {
     public const int TurnDetectionLlmOpenaiOptionsFieldNumber = 5;
     private global::Ondewo.S2T.OpenaiLlmOptions turnDetectionLlmOpenaiOptions_;
     /// <summary>
-    /// Optional. Configuration options for the OpenAI client used for turn detection.
+    /// Optional. Deprecated in favour of &lt;code>oneof_turn_detector&lt;/code>, but still honoured. Read only when
+    /// &lt;code>oneof_turn_detector&lt;/code> is not set; its &lt;code>model&lt;/code> then selects the detector by its name, as
+    /// before &lt;code>oneof_turn_detector&lt;/code> existed: a name starting with &lt;code>pipecat-smart-turn&lt;/code> selects
+    /// pipecat Smart Turn, one starting with &lt;code>ondewo-s2t-model-de-vad-tsd-ondewo-qwen3&lt;/code> the ONDEWO German
+    /// turn-detection model, one starting with &lt;code>ondewo-s2t-model-de-fusion-turn-detection&lt;/code> the ONDEWO
+    /// German fusion turn detector, and any other name a chat LLM or an end-of-utterance LLM. A name starting with
+    /// &lt;code>pipecat-&lt;/code> or &lt;code>ondewo-s2t-model-&lt;/code> that matches none of these is refused with
+    /// INVALID_ARGUMENT. On this path every detector-specific value is the server's configured value.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Ondewo.S2T.OpenaiLlmOptions TurnDetectionLlmOpenaiOptions {
@@ -15959,6 +16382,164 @@ namespace Ondewo.S2T {
       set {
         turnDetectionLlmOpenaiOptions_ = value;
       }
+    }
+
+    /// <summary>Field number for the "incomplete_max_silence_seconds" field.</summary>
+    public const int IncompleteMaxSilenceSecondsFieldNumber = 6;
+    private readonly static float IncompleteMaxSilenceSecondsDefaultValue = 0F;
+
+    private float incompleteMaxSilenceSeconds_;
+    /// <summary>
+    /// Optional. Seconds of silence after an utterance judged NOT finished before it is finished anyway, valid
+    /// range: 0 - 4. The server raises a value below the voice activity detection's &lt;code>min_duration_off&lt;/code>
+    /// to it. Unset = the server's configured value (default: the &lt;code>min_duration_off&lt;/code> in use). Applies to
+    /// every "not finished" verdict, whichever detector gave it, including a verdict that did not arrive in time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float IncompleteMaxSilenceSeconds {
+      get { if ((_hasBits0 & 4) != 0) { return incompleteMaxSilenceSeconds_; } else { return IncompleteMaxSilenceSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        incompleteMaxSilenceSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "incomplete_max_silence_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIncompleteMaxSilenceSeconds {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "incomplete_max_silence_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIncompleteMaxSilenceSeconds() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "turn_detection_conversation_context" field.</summary>
+    public const int TurnDetectionConversationContextFieldNumber = 7;
+    private global::Ondewo.S2T.TurnDetectionConversationContext turnDetectionConversationContext_;
+    /// <summary>
+    /// Optional. The latest turns of the conversation before the caller's utterance under evaluation, handed to the
+    /// end-of-utterance LLM as preceding chat turns so that it can judge the utterance against what was said
+    /// before, e.g. a bare number answering a question for a number. Kept outside &lt;code>oneof_turn_detector&lt;/code>
+    /// because it is conversation data, not detector configuration: the server keeps it per stream, a request
+    /// whose turn detection carries this field replaces it, an empty wrapper (no turns) clears it, and a request
+    /// without it keeps it. That is why it is a wrapper: the server merges request configs per whole top-level
+    /// field, so a field it did not store itself could not survive a later request that carries turn detection
+    /// without it. The server caps the number of turns and the length of each turn. Unset or empty: the utterance
+    /// is judged alone. Read only by &lt;code>turn_detection_end_of_utterance_llm_options&lt;/code>; ignored by every
+    /// other detector. Honoured only in a request config; ignored in a pipeline config, where a per-stream context
+    /// has no meaning.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionConversationContext TurnDetectionConversationContext {
+      get { return turnDetectionConversationContext_; }
+      set {
+        turnDetectionConversationContext_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "turn_detection_chat_llm_options" field.</summary>
+    public const int TurnDetectionChatLlmOptionsFieldNumber = 8;
+    /// <summary>
+    /// A chat LLM asked, with a prompt, whether the caller has finished the turn.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionChatLlmOptions TurnDetectionChatLlmOptions {
+      get { return oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions ? (global::Ondewo.S2T.TurnDetectionChatLlmOptions) oneofTurnDetector_ : null; }
+      set {
+        oneofTurnDetector_ = value;
+        oneofTurnDetectorCase_ = value == null ? OneofTurnDetectorOneofCase.None : OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions;
+      }
+    }
+
+    /// <summary>Field number for the "turn_detection_end_of_utterance_llm_options" field.</summary>
+    public const int TurnDetectionEndOfUtteranceLlmOptionsFieldNumber = 9;
+    /// <summary>
+    /// An end-of-utterance LLM (LiveKit-shaped) that scores the probability of the end-of-utterance token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions TurnDetectionEndOfUtteranceLlmOptions {
+      get { return oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions ? (global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions) oneofTurnDetector_ : null; }
+      set {
+        oneofTurnDetector_ = value;
+        oneofTurnDetectorCase_ = value == null ? OneofTurnDetectorOneofCase.None : OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions;
+      }
+    }
+
+    /// <summary>Field number for the "turn_detection_ondewo_de_options" field.</summary>
+    public const int TurnDetectionOndewoDeOptionsFieldNumber = 10;
+    /// <summary>
+    /// The ONDEWO German turn-detection model: the turn's text and timing, served by vLLM.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionOndewoDeOptions TurnDetectionOndewoDeOptions {
+      get { return oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions ? (global::Ondewo.S2T.TurnDetectionOndewoDeOptions) oneofTurnDetector_ : null; }
+      set {
+        oneofTurnDetector_ = value;
+        oneofTurnDetectorCase_ = value == null ? OneofTurnDetectorOneofCase.None : OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions;
+      }
+    }
+
+    /// <summary>Field number for the "turn_detection_ondewo_de_fusion_options" field.</summary>
+    public const int TurnDetectionOndewoDeFusionOptionsFieldNumber = 11;
+    /// <summary>
+    /// The ONDEWO German fusion turn detector: the ONDEWO German text model on vLLM plus acoustic heads on
+    /// Triton, combined into one end-of-turn probability.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions TurnDetectionOndewoDeFusionOptions {
+      get { return oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions ? (global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions) oneofTurnDetector_ : null; }
+      set {
+        oneofTurnDetector_ = value;
+        oneofTurnDetectorCase_ = value == null ? OneofTurnDetectorOneofCase.None : OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions;
+      }
+    }
+
+    /// <summary>Field number for the "turn_detection_pipecat_smart_turn_options" field.</summary>
+    public const int TurnDetectionPipecatSmartTurnOptionsFieldNumber = 12;
+    /// <summary>
+    /// pipecat Smart Turn v3.2: audio only, served by Triton.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions TurnDetectionPipecatSmartTurnOptions {
+      get { return oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions ? (global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions) oneofTurnDetector_ : null; }
+      set {
+        oneofTurnDetector_ = value;
+        oneofTurnDetectorCase_ = value == null ? OneofTurnDetectorOneofCase.None : OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions;
+      }
+    }
+
+    private object oneofTurnDetector_;
+    /// <summary>Enum of possible cases for the "oneof_turn_detector" oneof.</summary>
+    public enum OneofTurnDetectorOneofCase {
+      None = 0,
+      TurnDetectionChatLlmOptions = 8,
+      TurnDetectionEndOfUtteranceLlmOptions = 9,
+      TurnDetectionOndewoDeOptions = 10,
+      TurnDetectionOndewoDeFusionOptions = 11,
+      TurnDetectionPipecatSmartTurnOptions = 12,
+    }
+    private OneofTurnDetectorOneofCase oneofTurnDetectorCase_ = OneofTurnDetectorOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public OneofTurnDetectorOneofCase OneofTurnDetectorCase {
+      get { return oneofTurnDetectorCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOneofTurnDetector() {
+      oneofTurnDetectorCase_ = OneofTurnDetectorOneofCase.None;
+      oneofTurnDetector_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15981,6 +16562,14 @@ namespace Ondewo.S2T {
       if (TurnDetectionSystemPrompt != other.TurnDetectionSystemPrompt) return false;
       if (TurnDetectionUserPrompt != other.TurnDetectionUserPrompt) return false;
       if (!object.Equals(TurnDetectionLlmOpenaiOptions, other.TurnDetectionLlmOpenaiOptions)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(IncompleteMaxSilenceSeconds, other.IncompleteMaxSilenceSeconds)) return false;
+      if (!object.Equals(TurnDetectionConversationContext, other.TurnDetectionConversationContext)) return false;
+      if (!object.Equals(TurnDetectionChatLlmOptions, other.TurnDetectionChatLlmOptions)) return false;
+      if (!object.Equals(TurnDetectionEndOfUtteranceLlmOptions, other.TurnDetectionEndOfUtteranceLlmOptions)) return false;
+      if (!object.Equals(TurnDetectionOndewoDeOptions, other.TurnDetectionOndewoDeOptions)) return false;
+      if (!object.Equals(TurnDetectionOndewoDeFusionOptions, other.TurnDetectionOndewoDeFusionOptions)) return false;
+      if (!object.Equals(TurnDetectionPipecatSmartTurnOptions, other.TurnDetectionPipecatSmartTurnOptions)) return false;
+      if (OneofTurnDetectorCase != other.OneofTurnDetectorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -15993,6 +16582,14 @@ namespace Ondewo.S2T {
       if (HasTurnDetectionSystemPrompt) hash ^= TurnDetectionSystemPrompt.GetHashCode();
       if (HasTurnDetectionUserPrompt) hash ^= TurnDetectionUserPrompt.GetHashCode();
       if (turnDetectionLlmOpenaiOptions_ != null) hash ^= TurnDetectionLlmOpenaiOptions.GetHashCode();
+      if (HasIncompleteMaxSilenceSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IncompleteMaxSilenceSeconds);
+      if (turnDetectionConversationContext_ != null) hash ^= TurnDetectionConversationContext.GetHashCode();
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) hash ^= TurnDetectionChatLlmOptions.GetHashCode();
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) hash ^= TurnDetectionEndOfUtteranceLlmOptions.GetHashCode();
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) hash ^= TurnDetectionOndewoDeOptions.GetHashCode();
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) hash ^= TurnDetectionOndewoDeFusionOptions.GetHashCode();
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) hash ^= TurnDetectionPipecatSmartTurnOptions.GetHashCode();
+      hash ^= (int) oneofTurnDetectorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -16031,6 +16628,34 @@ namespace Ondewo.S2T {
         output.WriteRawTag(42);
         output.WriteMessage(TurnDetectionLlmOpenaiOptions);
       }
+      if (HasIncompleteMaxSilenceSeconds) {
+        output.WriteRawTag(53);
+        output.WriteFloat(IncompleteMaxSilenceSeconds);
+      }
+      if (turnDetectionConversationContext_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TurnDetectionConversationContext);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TurnDetectionChatLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TurnDetectionEndOfUtteranceLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) {
+        output.WriteRawTag(82);
+        output.WriteMessage(TurnDetectionOndewoDeOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) {
+        output.WriteRawTag(90);
+        output.WriteMessage(TurnDetectionOndewoDeFusionOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TurnDetectionPipecatSmartTurnOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -16061,6 +16686,34 @@ namespace Ondewo.S2T {
         output.WriteRawTag(42);
         output.WriteMessage(TurnDetectionLlmOpenaiOptions);
       }
+      if (HasIncompleteMaxSilenceSeconds) {
+        output.WriteRawTag(53);
+        output.WriteFloat(IncompleteMaxSilenceSeconds);
+      }
+      if (turnDetectionConversationContext_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TurnDetectionConversationContext);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TurnDetectionChatLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) {
+        output.WriteRawTag(74);
+        output.WriteMessage(TurnDetectionEndOfUtteranceLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) {
+        output.WriteRawTag(82);
+        output.WriteMessage(TurnDetectionOndewoDeOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) {
+        output.WriteRawTag(90);
+        output.WriteMessage(TurnDetectionOndewoDeFusionOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) {
+        output.WriteRawTag(98);
+        output.WriteMessage(TurnDetectionPipecatSmartTurnOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -16085,6 +16738,27 @@ namespace Ondewo.S2T {
       }
       if (turnDetectionLlmOpenaiOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionLlmOpenaiOptions);
+      }
+      if (HasIncompleteMaxSilenceSeconds) {
+        size += 1 + 4;
+      }
+      if (turnDetectionConversationContext_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionConversationContext);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionChatLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionEndOfUtteranceLlmOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionOndewoDeOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionOndewoDeFusionOptions);
+      }
+      if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionPipecatSmartTurnOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -16116,6 +16790,48 @@ namespace Ondewo.S2T {
         }
         TurnDetectionLlmOpenaiOptions.MergeFrom(other.TurnDetectionLlmOpenaiOptions);
       }
+      if (other.HasIncompleteMaxSilenceSeconds) {
+        IncompleteMaxSilenceSeconds = other.IncompleteMaxSilenceSeconds;
+      }
+      if (other.turnDetectionConversationContext_ != null) {
+        if (turnDetectionConversationContext_ == null) {
+          TurnDetectionConversationContext = new global::Ondewo.S2T.TurnDetectionConversationContext();
+        }
+        TurnDetectionConversationContext.MergeFrom(other.TurnDetectionConversationContext);
+      }
+      switch (other.OneofTurnDetectorCase) {
+        case OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions:
+          if (TurnDetectionChatLlmOptions == null) {
+            TurnDetectionChatLlmOptions = new global::Ondewo.S2T.TurnDetectionChatLlmOptions();
+          }
+          TurnDetectionChatLlmOptions.MergeFrom(other.TurnDetectionChatLlmOptions);
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions:
+          if (TurnDetectionEndOfUtteranceLlmOptions == null) {
+            TurnDetectionEndOfUtteranceLlmOptions = new global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions();
+          }
+          TurnDetectionEndOfUtteranceLlmOptions.MergeFrom(other.TurnDetectionEndOfUtteranceLlmOptions);
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions:
+          if (TurnDetectionOndewoDeOptions == null) {
+            TurnDetectionOndewoDeOptions = new global::Ondewo.S2T.TurnDetectionOndewoDeOptions();
+          }
+          TurnDetectionOndewoDeOptions.MergeFrom(other.TurnDetectionOndewoDeOptions);
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions:
+          if (TurnDetectionOndewoDeFusionOptions == null) {
+            TurnDetectionOndewoDeFusionOptions = new global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions();
+          }
+          TurnDetectionOndewoDeFusionOptions.MergeFrom(other.TurnDetectionOndewoDeFusionOptions);
+          break;
+        case OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions:
+          if (TurnDetectionPipecatSmartTurnOptions == null) {
+            TurnDetectionPipecatSmartTurnOptions = new global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions();
+          }
+          TurnDetectionPipecatSmartTurnOptions.MergeFrom(other.TurnDetectionPipecatSmartTurnOptions);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -16156,6 +16872,62 @@ namespace Ondewo.S2T {
               TurnDetectionLlmOpenaiOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
             }
             input.ReadMessage(TurnDetectionLlmOpenaiOptions);
+            break;
+          }
+          case 53: {
+            IncompleteMaxSilenceSeconds = input.ReadFloat();
+            break;
+          }
+          case 58: {
+            if (turnDetectionConversationContext_ == null) {
+              TurnDetectionConversationContext = new global::Ondewo.S2T.TurnDetectionConversationContext();
+            }
+            input.ReadMessage(TurnDetectionConversationContext);
+            break;
+          }
+          case 66: {
+            global::Ondewo.S2T.TurnDetectionChatLlmOptions subBuilder = new global::Ondewo.S2T.TurnDetectionChatLlmOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) {
+              subBuilder.MergeFrom(TurnDetectionChatLlmOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionChatLlmOptions = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions subBuilder = new global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) {
+              subBuilder.MergeFrom(TurnDetectionEndOfUtteranceLlmOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionEndOfUtteranceLlmOptions = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Ondewo.S2T.TurnDetectionOndewoDeOptions subBuilder = new global::Ondewo.S2T.TurnDetectionOndewoDeOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) {
+              subBuilder.MergeFrom(TurnDetectionOndewoDeOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionOndewoDeOptions = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions subBuilder = new global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) {
+              subBuilder.MergeFrom(TurnDetectionOndewoDeFusionOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionOndewoDeFusionOptions = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions subBuilder = new global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) {
+              subBuilder.MergeFrom(TurnDetectionPipecatSmartTurnOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionPipecatSmartTurnOptions = subBuilder;
             break;
           }
         }
@@ -16200,6 +16972,2799 @@ namespace Ondewo.S2T {
             input.ReadMessage(TurnDetectionLlmOpenaiOptions);
             break;
           }
+          case 53: {
+            IncompleteMaxSilenceSeconds = input.ReadFloat();
+            break;
+          }
+          case 58: {
+            if (turnDetectionConversationContext_ == null) {
+              TurnDetectionConversationContext = new global::Ondewo.S2T.TurnDetectionConversationContext();
+            }
+            input.ReadMessage(TurnDetectionConversationContext);
+            break;
+          }
+          case 66: {
+            global::Ondewo.S2T.TurnDetectionChatLlmOptions subBuilder = new global::Ondewo.S2T.TurnDetectionChatLlmOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionChatLlmOptions) {
+              subBuilder.MergeFrom(TurnDetectionChatLlmOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionChatLlmOptions = subBuilder;
+            break;
+          }
+          case 74: {
+            global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions subBuilder = new global::Ondewo.S2T.TurnDetectionEndOfUtteranceLlmOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionEndOfUtteranceLlmOptions) {
+              subBuilder.MergeFrom(TurnDetectionEndOfUtteranceLlmOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionEndOfUtteranceLlmOptions = subBuilder;
+            break;
+          }
+          case 82: {
+            global::Ondewo.S2T.TurnDetectionOndewoDeOptions subBuilder = new global::Ondewo.S2T.TurnDetectionOndewoDeOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeOptions) {
+              subBuilder.MergeFrom(TurnDetectionOndewoDeOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionOndewoDeOptions = subBuilder;
+            break;
+          }
+          case 90: {
+            global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions subBuilder = new global::Ondewo.S2T.TurnDetectionOndewoDeFusionOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionOndewoDeFusionOptions) {
+              subBuilder.MergeFrom(TurnDetectionOndewoDeFusionOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionOndewoDeFusionOptions = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions subBuilder = new global::Ondewo.S2T.TurnDetectionPipecatSmartTurnOptions();
+            if (oneofTurnDetectorCase_ == OneofTurnDetectorOneofCase.TurnDetectionPipecatSmartTurnOptions) {
+              subBuilder.MergeFrom(TurnDetectionPipecatSmartTurnOptions);
+            }
+            input.ReadMessage(subBuilder);
+            TurnDetectionPipecatSmartTurnOptions = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionChatLlmOptions configures a chat LLM as the turn detector: the LLM is asked, with the prompts
+  /// below and the transcription of the turn, whether the caller has finished.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionChatLlmOptions : pb::IMessage<TurnDetectionChatLlmOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionChatLlmOptions> _parser = new pb::MessageParser<TurnDetectionChatLlmOptions>(() => new TurnDetectionChatLlmOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionChatLlmOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionChatLlmOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionChatLlmOptions(TurnDetectionChatLlmOptions other) : this() {
+      openaiLlmOptions_ = other.openaiLlmOptions_ != null ? other.openaiLlmOptions_.Clone() : null;
+      systemPrompt_ = other.systemPrompt_;
+      userPrompt_ = other.userPrompt_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionChatLlmOptions Clone() {
+      return new TurnDetectionChatLlmOptions(this);
+    }
+
+    /// <summary>Field number for the "openai_llm_options" field.</summary>
+    public const int OpenaiLlmOptionsFieldNumber = 1;
+    private global::Ondewo.S2T.OpenaiLlmOptions openaiLlmOptions_;
+    /// <summary>
+    /// Optional. The OpenAI-compatible endpoint and model of the chat LLM. Unset fields take the server's
+    /// configured values. A &lt;code>model&lt;/code> starting with &lt;code>pipecat-&lt;/code> or
+    /// &lt;code>ondewo-s2t-model-&lt;/code> is refused with INVALID_ARGUMENT: those detectors have their own options.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.OpenaiLlmOptions OpenaiLlmOptions {
+      get { return openaiLlmOptions_; }
+      set {
+        openaiLlmOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "system_prompt" field.</summary>
+    public const int SystemPromptFieldNumber = 2;
+    private readonly static string SystemPromptDefaultValue = "";
+
+    private string systemPrompt_;
+    /// <summary>
+    /// Optional. System prompt that guides the LLM. Unset = the server's configured prompt.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SystemPrompt {
+      get { return systemPrompt_ ?? SystemPromptDefaultValue; }
+      set {
+        systemPrompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "system_prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSystemPrompt {
+      get { return systemPrompt_ != null; }
+    }
+    /// <summary>Clears the value of the "system_prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSystemPrompt() {
+      systemPrompt_ = null;
+    }
+
+    /// <summary>Field number for the "user_prompt" field.</summary>
+    public const int UserPromptFieldNumber = 3;
+    private readonly static string UserPromptDefaultValue = "";
+
+    private string userPrompt_;
+    /// <summary>
+    /// Optional. User prompt that carries the turn under evaluation. Unset = the server's configured prompt.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UserPrompt {
+      get { return userPrompt_ ?? UserPromptDefaultValue; }
+      set {
+        userPrompt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "user_prompt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUserPrompt {
+      get { return userPrompt_ != null; }
+    }
+    /// <summary>Clears the value of the "user_prompt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUserPrompt() {
+      userPrompt_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionChatLlmOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionChatLlmOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OpenaiLlmOptions, other.OpenaiLlmOptions)) return false;
+      if (SystemPrompt != other.SystemPrompt) return false;
+      if (UserPrompt != other.UserPrompt) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (openaiLlmOptions_ != null) hash ^= OpenaiLlmOptions.GetHashCode();
+      if (HasSystemPrompt) hash ^= SystemPrompt.GetHashCode();
+      if (HasUserPrompt) hash ^= UserPrompt.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasSystemPrompt) {
+        output.WriteRawTag(18);
+        output.WriteString(SystemPrompt);
+      }
+      if (HasUserPrompt) {
+        output.WriteRawTag(26);
+        output.WriteString(UserPrompt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasSystemPrompt) {
+        output.WriteRawTag(18);
+        output.WriteString(SystemPrompt);
+      }
+      if (HasUserPrompt) {
+        output.WriteRawTag(26);
+        output.WriteString(UserPrompt);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (openaiLlmOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenaiLlmOptions);
+      }
+      if (HasSystemPrompt) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SystemPrompt);
+      }
+      if (HasUserPrompt) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPrompt);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionChatLlmOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.openaiLlmOptions_ != null) {
+        if (openaiLlmOptions_ == null) {
+          OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+        }
+        OpenaiLlmOptions.MergeFrom(other.OpenaiLlmOptions);
+      }
+      if (other.HasSystemPrompt) {
+        SystemPrompt = other.SystemPrompt;
+      }
+      if (other.HasUserPrompt) {
+        UserPrompt = other.UserPrompt;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 18: {
+            SystemPrompt = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserPrompt = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 18: {
+            SystemPrompt = input.ReadString();
+            break;
+          }
+          case 26: {
+            UserPrompt = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionEndOfUtteranceLlmOptions configures an end-of-utterance LLM (LiveKit-shaped, e.g.
+  /// &lt;code>livekit/turn-detector&lt;/code>) as the turn detector: the model scores the probability of the
+  /// end-of-utterance token after the turn's transcription and, when
+  /// &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code> is set, the turns before it.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionEndOfUtteranceLlmOptions : pb::IMessage<TurnDetectionEndOfUtteranceLlmOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionEndOfUtteranceLlmOptions> _parser = new pb::MessageParser<TurnDetectionEndOfUtteranceLlmOptions>(() => new TurnDetectionEndOfUtteranceLlmOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionEndOfUtteranceLlmOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[45]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionEndOfUtteranceLlmOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionEndOfUtteranceLlmOptions(TurnDetectionEndOfUtteranceLlmOptions other) : this() {
+      _hasBits0 = other._hasBits0;
+      openaiLlmOptions_ = other.openaiLlmOptions_ != null ? other.openaiLlmOptions_.Clone() : null;
+      endOfTurnProbabilityThreshold_ = other.endOfTurnProbabilityThreshold_;
+      turnDetectionHoldBands_ = other.turnDetectionHoldBands_ != null ? other.turnDetectionHoldBands_.Clone() : null;
+      uncertainMinWords_ = other.uncertainMinWords_;
+      exactProbability_ = other.exactProbability_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionEndOfUtteranceLlmOptions Clone() {
+      return new TurnDetectionEndOfUtteranceLlmOptions(this);
+    }
+
+    /// <summary>Field number for the "openai_llm_options" field.</summary>
+    public const int OpenaiLlmOptionsFieldNumber = 1;
+    private global::Ondewo.S2T.OpenaiLlmOptions openaiLlmOptions_;
+    /// <summary>
+    /// Optional. The OpenAI-compatible endpoint and served model name. Unset fields take the server's configured
+    /// values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.OpenaiLlmOptions OpenaiLlmOptions {
+      get { return openaiLlmOptions_; }
+      set {
+        openaiLlmOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_of_turn_probability_threshold" field.</summary>
+    public const int EndOfTurnProbabilityThresholdFieldNumber = 2;
+    private readonly static float EndOfTurnProbabilityThresholdDefaultValue = 0F;
+
+    private float endOfTurnProbabilityThreshold_;
+    /// <summary>
+    /// Optional. The end-of-utterance probability at or above which the caller is taken to have finished the turn,
+    /// valid range: 0 - 1. Unset = the server's configured value (default: the threshold configured for the
+    /// language of the stream).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float EndOfTurnProbabilityThreshold {
+      get { if ((_hasBits0 & 1) != 0) { return endOfTurnProbabilityThreshold_; } else { return EndOfTurnProbabilityThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        endOfTurnProbabilityThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_of_turn_probability_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndOfTurnProbabilityThreshold {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "end_of_turn_probability_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndOfTurnProbabilityThreshold() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "turn_detection_hold_bands" field.</summary>
+    public const int TurnDetectionHoldBandsFieldNumber = 3;
+    private global::Ondewo.S2T.TurnDetectionHoldBands turnDetectionHoldBands_;
+    /// <summary>
+    /// Optional. How long a turn judged finished, but only with a probability below a band's upper bound, waits
+    /// for further silence before it is committed. Unset = the server's configured value (default: the bands
+    /// configured for the language of the stream). A wrapper only so that "set with no bands" (a turn at or above
+    /// the threshold is committed at once) means something different from "unset".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionHoldBands TurnDetectionHoldBands {
+      get { return turnDetectionHoldBands_; }
+      set {
+        turnDetectionHoldBands_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "uncertain_min_words" field.</summary>
+    public const int UncertainMinWordsFieldNumber = 4;
+    private readonly static uint UncertainMinWordsDefaultValue = 0;
+
+    private uint uncertainMinWords_;
+    /// <summary>
+    /// Optional. The minimum number of words an utterance needs before a hold band may hold it; a shorter
+    /// utterance judged finished is committed at once. Unset = the server's configured value (default: 3).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint UncertainMinWords {
+      get { if ((_hasBits0 & 2) != 0) { return uncertainMinWords_; } else { return UncertainMinWordsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        uncertainMinWords_ = value;
+      }
+    }
+    /// <summary>Gets whether the "uncertain_min_words" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUncertainMinWords {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "uncertain_min_words" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUncertainMinWords() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "exact_probability" field.</summary>
+    public const int ExactProbabilityFieldNumber = 5;
+    private readonly static bool ExactProbabilityDefaultValue = false;
+
+    private bool exactProbability_;
+    /// <summary>
+    /// Optional. Whether the exact probability of the end-of-utterance token is computed instead of being read
+    /// from the returned top log probabilities. Unset = the server's configured value (default: false). Requires a
+    /// deployment that returns prompt log probabilities (vLLM &lt;code>prompt_logprobs&lt;/code>); on any other
+    /// deployment the probability reads 0, so every turn is judged not finished and waits for
+    /// &lt;code>TurnDetectionOptions.incomplete_max_silence_seconds&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ExactProbability {
+      get { if ((_hasBits0 & 4) != 0) { return exactProbability_; } else { return ExactProbabilityDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        exactProbability_ = value;
+      }
+    }
+    /// <summary>Gets whether the "exact_probability" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasExactProbability {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "exact_probability" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearExactProbability() {
+      _hasBits0 &= ~4;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionEndOfUtteranceLlmOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionEndOfUtteranceLlmOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OpenaiLlmOptions, other.OpenaiLlmOptions)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(EndOfTurnProbabilityThreshold, other.EndOfTurnProbabilityThreshold)) return false;
+      if (!object.Equals(TurnDetectionHoldBands, other.TurnDetectionHoldBands)) return false;
+      if (UncertainMinWords != other.UncertainMinWords) return false;
+      if (ExactProbability != other.ExactProbability) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (openaiLlmOptions_ != null) hash ^= OpenaiLlmOptions.GetHashCode();
+      if (HasEndOfTurnProbabilityThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(EndOfTurnProbabilityThreshold);
+      if (turnDetectionHoldBands_ != null) hash ^= TurnDetectionHoldBands.GetHashCode();
+      if (HasUncertainMinWords) hash ^= UncertainMinWords.GetHashCode();
+      if (HasExactProbability) hash ^= ExactProbability.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (turnDetectionHoldBands_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TurnDetectionHoldBands);
+      }
+      if (HasUncertainMinWords) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(UncertainMinWords);
+      }
+      if (HasExactProbability) {
+        output.WriteRawTag(40);
+        output.WriteBool(ExactProbability);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (turnDetectionHoldBands_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(TurnDetectionHoldBands);
+      }
+      if (HasUncertainMinWords) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(UncertainMinWords);
+      }
+      if (HasExactProbability) {
+        output.WriteRawTag(40);
+        output.WriteBool(ExactProbability);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (openaiLlmOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        size += 1 + 4;
+      }
+      if (turnDetectionHoldBands_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TurnDetectionHoldBands);
+      }
+      if (HasUncertainMinWords) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(UncertainMinWords);
+      }
+      if (HasExactProbability) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionEndOfUtteranceLlmOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.openaiLlmOptions_ != null) {
+        if (openaiLlmOptions_ == null) {
+          OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+        }
+        OpenaiLlmOptions.MergeFrom(other.OpenaiLlmOptions);
+      }
+      if (other.HasEndOfTurnProbabilityThreshold) {
+        EndOfTurnProbabilityThreshold = other.EndOfTurnProbabilityThreshold;
+      }
+      if (other.turnDetectionHoldBands_ != null) {
+        if (turnDetectionHoldBands_ == null) {
+          TurnDetectionHoldBands = new global::Ondewo.S2T.TurnDetectionHoldBands();
+        }
+        TurnDetectionHoldBands.MergeFrom(other.TurnDetectionHoldBands);
+      }
+      if (other.HasUncertainMinWords) {
+        UncertainMinWords = other.UncertainMinWords;
+      }
+      if (other.HasExactProbability) {
+        ExactProbability = other.ExactProbability;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            if (turnDetectionHoldBands_ == null) {
+              TurnDetectionHoldBands = new global::Ondewo.S2T.TurnDetectionHoldBands();
+            }
+            input.ReadMessage(TurnDetectionHoldBands);
+            break;
+          }
+          case 32: {
+            UncertainMinWords = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            ExactProbability = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+          case 26: {
+            if (turnDetectionHoldBands_ == null) {
+              TurnDetectionHoldBands = new global::Ondewo.S2T.TurnDetectionHoldBands();
+            }
+            input.ReadMessage(TurnDetectionHoldBands);
+            break;
+          }
+          case 32: {
+            UncertainMinWords = input.ReadUInt32();
+            break;
+          }
+          case 40: {
+            ExactProbability = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionOndewoDeOptions configures the ONDEWO German turn-detection model as the turn detector. It judges
+  /// the turn from its text and word timing and is served by vLLM.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionOndewoDeOptions : pb::IMessage<TurnDetectionOndewoDeOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionOndewoDeOptions> _parser = new pb::MessageParser<TurnDetectionOndewoDeOptions>(() => new TurnDetectionOndewoDeOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionOndewoDeOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[46]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeOptions(TurnDetectionOndewoDeOptions other) : this() {
+      _hasBits0 = other._hasBits0;
+      openaiLlmOptions_ = other.openaiLlmOptions_ != null ? other.openaiLlmOptions_.Clone() : null;
+      endOfTurnProbabilityThreshold_ = other.endOfTurnProbabilityThreshold_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeOptions Clone() {
+      return new TurnDetectionOndewoDeOptions(this);
+    }
+
+    /// <summary>Field number for the "openai_llm_options" field.</summary>
+    public const int OpenaiLlmOptionsFieldNumber = 1;
+    private global::Ondewo.S2T.OpenaiLlmOptions openaiLlmOptions_;
+    /// <summary>
+    /// Optional. The vLLM deployment: &lt;code>base_url&lt;/code>, &lt;code>api_key&lt;/code> and &lt;code>timeout&lt;/code> address
+    /// it, &lt;code>model&lt;/code> is the served model name, e.g.
+    /// &lt;code>ondewo-s2t-model-de-vad-tsd-ondewo-qwen3-0.6b&lt;/code>. Unset fields take the server's configured values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.OpenaiLlmOptions OpenaiLlmOptions {
+      get { return openaiLlmOptions_; }
+      set {
+        openaiLlmOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_of_turn_probability_threshold" field.</summary>
+    public const int EndOfTurnProbabilityThresholdFieldNumber = 2;
+    private readonly static float EndOfTurnProbabilityThresholdDefaultValue = 0F;
+
+    private float endOfTurnProbabilityThreshold_;
+    /// <summary>
+    /// Optional. The end-of-turn probability the model must reach for the caller to be taken to have finished the
+    /// turn, valid range: 0 - 1. A turn below it is judged not finished and waits for
+    /// &lt;code>TurnDetectionOptions.incomplete_max_silence_seconds&lt;/code>. Unset = the server's configured value
+    /// (default: 0.5). Precedence: the request config's value, then the pipeline config's value, then the server's
+    /// configured value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float EndOfTurnProbabilityThreshold {
+      get { if ((_hasBits0 & 1) != 0) { return endOfTurnProbabilityThreshold_; } else { return EndOfTurnProbabilityThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        endOfTurnProbabilityThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_of_turn_probability_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndOfTurnProbabilityThreshold {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "end_of_turn_probability_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndOfTurnProbabilityThreshold() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionOndewoDeOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionOndewoDeOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OpenaiLlmOptions, other.OpenaiLlmOptions)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(EndOfTurnProbabilityThreshold, other.EndOfTurnProbabilityThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (openaiLlmOptions_ != null) hash ^= OpenaiLlmOptions.GetHashCode();
+      if (HasEndOfTurnProbabilityThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(EndOfTurnProbabilityThreshold);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (openaiLlmOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionOndewoDeOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.openaiLlmOptions_ != null) {
+        if (openaiLlmOptions_ == null) {
+          OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+        }
+        OpenaiLlmOptions.MergeFrom(other.OpenaiLlmOptions);
+      }
+      if (other.HasEndOfTurnProbabilityThreshold) {
+        EndOfTurnProbabilityThreshold = other.EndOfTurnProbabilityThreshold;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionOndewoDeFusionOptions configures the ONDEWO German fusion turn detector. It combines the ONDEWO
+  /// German text model on vLLM, acoustic heads on Triton and signals computed from the stream into one end-of-turn
+  /// probability. The Triton heads, the text model's served name and the weights file are server settings.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionOndewoDeFusionOptions : pb::IMessage<TurnDetectionOndewoDeFusionOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionOndewoDeFusionOptions> _parser = new pb::MessageParser<TurnDetectionOndewoDeFusionOptions>(() => new TurnDetectionOndewoDeFusionOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionOndewoDeFusionOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeFusionOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeFusionOptions(TurnDetectionOndewoDeFusionOptions other) : this() {
+      _hasBits0 = other._hasBits0;
+      openaiLlmOptions_ = other.openaiLlmOptions_ != null ? other.openaiLlmOptions_.Clone() : null;
+      endOfTurnProbabilityThreshold_ = other.endOfTurnProbabilityThreshold_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionOndewoDeFusionOptions Clone() {
+      return new TurnDetectionOndewoDeFusionOptions(this);
+    }
+
+    /// <summary>Field number for the "openai_llm_options" field.</summary>
+    public const int OpenaiLlmOptionsFieldNumber = 1;
+    private global::Ondewo.S2T.OpenaiLlmOptions openaiLlmOptions_;
+    /// <summary>
+    /// Optional. Addresses the vLLM deployment of the text model (&lt;code>base_url&lt;/code>, &lt;code>api_key&lt;/code>,
+    /// &lt;code>timeout&lt;/code>); &lt;code>model&lt;/code> names the fusion variant, e.g.
+    /// &lt;code>ondewo-s2t-model-de-fusion-turn-detection&lt;/code>. Unset fields take the server's configured values.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.OpenaiLlmOptions OpenaiLlmOptions {
+      get { return openaiLlmOptions_; }
+      set {
+        openaiLlmOptions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "end_of_turn_probability_threshold" field.</summary>
+    public const int EndOfTurnProbabilityThresholdFieldNumber = 2;
+    private readonly static float EndOfTurnProbabilityThresholdDefaultValue = 0F;
+
+    private float endOfTurnProbabilityThreshold_;
+    /// <summary>
+    /// Optional. The end-of-turn probability at or above which the caller is taken to have finished the turn,
+    /// valid range: 0 - 1. Unset = the server's configured value, else the weights file's threshold.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float EndOfTurnProbabilityThreshold {
+      get { if ((_hasBits0 & 1) != 0) { return endOfTurnProbabilityThreshold_; } else { return EndOfTurnProbabilityThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        endOfTurnProbabilityThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_of_turn_probability_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndOfTurnProbabilityThreshold {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "end_of_turn_probability_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndOfTurnProbabilityThreshold() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionOndewoDeFusionOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionOndewoDeFusionOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OpenaiLlmOptions, other.OpenaiLlmOptions)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(EndOfTurnProbabilityThreshold, other.EndOfTurnProbabilityThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (openaiLlmOptions_ != null) hash ^= OpenaiLlmOptions.GetHashCode();
+      if (HasEndOfTurnProbabilityThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(EndOfTurnProbabilityThreshold);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (openaiLlmOptions_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(21);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (openaiLlmOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OpenaiLlmOptions);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionOndewoDeFusionOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.openaiLlmOptions_ != null) {
+        if (openaiLlmOptions_ == null) {
+          OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+        }
+        OpenaiLlmOptions.MergeFrom(other.OpenaiLlmOptions);
+      }
+      if (other.HasEndOfTurnProbabilityThreshold) {
+        EndOfTurnProbabilityThreshold = other.EndOfTurnProbabilityThreshold;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (openaiLlmOptions_ == null) {
+              OpenaiLlmOptions = new global::Ondewo.S2T.OpenaiLlmOptions();
+            }
+            input.ReadMessage(OpenaiLlmOptions);
+            break;
+          }
+          case 21: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionPipecatSmartTurnOptions configures pipecat Smart Turn v3.2 as the turn detector. It judges the
+  /// turn from the caller's audio alone and is served by Triton.&lt;/p>
+  /// &lt;p>Model: &lt;a href="https://github.com/pipecat-ai/smart-turn">pipecat Smart Turn&lt;/a>&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionPipecatSmartTurnOptions : pb::IMessage<TurnDetectionPipecatSmartTurnOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionPipecatSmartTurnOptions> _parser = new pb::MessageParser<TurnDetectionPipecatSmartTurnOptions>(() => new TurnDetectionPipecatSmartTurnOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionPipecatSmartTurnOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[48]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionPipecatSmartTurnOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionPipecatSmartTurnOptions(TurnDetectionPipecatSmartTurnOptions other) : this() {
+      _hasBits0 = other._hasBits0;
+      modelName_ = other.modelName_;
+      tritonServerHost_ = other.tritonServerHost_;
+      tritonServerPort_ = other.tritonServerPort_;
+      maxAudioSeconds_ = other.maxAudioSeconds_;
+      timeoutSeconds_ = other.timeoutSeconds_;
+      endOfTurnProbabilityThreshold_ = other.endOfTurnProbabilityThreshold_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionPipecatSmartTurnOptions Clone() {
+      return new TurnDetectionPipecatSmartTurnOptions(this);
+    }
+
+    /// <summary>Field number for the "model_name" field.</summary>
+    public const int ModelNameFieldNumber = 1;
+    private readonly static string ModelNameDefaultValue = "";
+
+    private string modelName_;
+    /// <summary>
+    /// Optional. Full name of the Triton model. Unset = the server's configured value (default:
+    /// &lt;code>ondewo-s2t-model-multi-turn-detection-pipecat-smart-turn-3.2-onnx-triton&lt;/code>).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ModelName {
+      get { return modelName_ ?? ModelNameDefaultValue; }
+      set {
+        modelName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "model_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasModelName {
+      get { return modelName_ != null; }
+    }
+    /// <summary>Clears the value of the "model_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModelName() {
+      modelName_ = null;
+    }
+
+    /// <summary>Field number for the "triton_server_host" field.</summary>
+    public const int TritonServerHostFieldNumber = 2;
+    private readonly static string TritonServerHostDefaultValue = "";
+
+    private string tritonServerHost_;
+    /// <summary>
+    /// Optional. Host name of the Triton inference server that serves the model, as
+    /// &lt;code>Pyannote.triton_server_host&lt;/code>. Unset = the server's configured value. The connection uses the
+    /// server's Triton client TLS settings.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TritonServerHost {
+      get { return tritonServerHost_ ?? TritonServerHostDefaultValue; }
+      set {
+        tritonServerHost_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "triton_server_host" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTritonServerHost {
+      get { return tritonServerHost_ != null; }
+    }
+    /// <summary>Clears the value of the "triton_server_host" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTritonServerHost() {
+      tritonServerHost_ = null;
+    }
+
+    /// <summary>Field number for the "triton_server_port" field.</summary>
+    public const int TritonServerPortFieldNumber = 3;
+    private readonly static long TritonServerPortDefaultValue = 0L;
+
+    private long tritonServerPort_;
+    /// <summary>
+    /// Optional. Port of the Triton inference server that serves the model, as
+    /// &lt;code>Pyannote.triton_server_port&lt;/code>. Unset = the server's configured value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long TritonServerPort {
+      get { if ((_hasBits0 & 1) != 0) { return tritonServerPort_; } else { return TritonServerPortDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        tritonServerPort_ = value;
+      }
+    }
+    /// <summary>Gets whether the "triton_server_port" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTritonServerPort {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "triton_server_port" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTritonServerPort() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "max_audio_seconds" field.</summary>
+    public const int MaxAudioSecondsFieldNumber = 4;
+    private readonly static float MaxAudioSecondsDefaultValue = 0F;
+
+    private float maxAudioSeconds_;
+    /// <summary>
+    /// Optional. Seconds of the caller's audio, ending at the decision moment, that the model hears; valid range:
+    /// 1 - 8. Shorter audio is left-padded with silence to 8 s, as the model was trained. Unset = the server's
+    /// configured value (default: 8).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MaxAudioSeconds {
+      get { if ((_hasBits0 & 2) != 0) { return maxAudioSeconds_; } else { return MaxAudioSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        maxAudioSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_audio_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxAudioSeconds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "max_audio_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxAudioSeconds() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "timeout_seconds" field.</summary>
+    public const int TimeoutSecondsFieldNumber = 5;
+    private readonly static float TimeoutSecondsDefaultValue = 0F;
+
+    private float timeoutSeconds_;
+    /// <summary>
+    /// Optional. Seconds to wait for Triton's answer, valid range: greater than 0, at most 5. A turn whose verdict
+    /// does not arrive in time is judged not finished and waits for
+    /// &lt;code>TurnDetectionOptions.incomplete_max_silence_seconds&lt;/code>. Unset = the server's configured value
+    /// (default: 0.2).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float TimeoutSeconds {
+      get { if ((_hasBits0 & 4) != 0) { return timeoutSeconds_; } else { return TimeoutSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        timeoutSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "timeout_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTimeoutSeconds {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "timeout_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTimeoutSeconds() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "end_of_turn_probability_threshold" field.</summary>
+    public const int EndOfTurnProbabilityThresholdFieldNumber = 6;
+    private readonly static float EndOfTurnProbabilityThresholdDefaultValue = 0F;
+
+    private float endOfTurnProbabilityThreshold_;
+    /// <summary>
+    /// Optional. The end-of-turn probability Smart Turn must report for the caller to be taken to have finished the
+    /// turn, valid range: 0 - 1. A turn below it is judged not finished and waits for
+    /// &lt;code>TurnDetectionOptions.incomplete_max_silence_seconds&lt;/code>. Unset = the server's configured value
+    /// (default: 0.5). Precedence: the request config's value, then the pipeline config's value, then the server's
+    /// configured value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float EndOfTurnProbabilityThreshold {
+      get { if ((_hasBits0 & 8) != 0) { return endOfTurnProbabilityThreshold_; } else { return EndOfTurnProbabilityThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        endOfTurnProbabilityThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "end_of_turn_probability_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEndOfTurnProbabilityThreshold {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "end_of_turn_probability_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEndOfTurnProbabilityThreshold() {
+      _hasBits0 &= ~8;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionPipecatSmartTurnOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionPipecatSmartTurnOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ModelName != other.ModelName) return false;
+      if (TritonServerHost != other.TritonServerHost) return false;
+      if (TritonServerPort != other.TritonServerPort) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MaxAudioSeconds, other.MaxAudioSeconds)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TimeoutSeconds, other.TimeoutSeconds)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(EndOfTurnProbabilityThreshold, other.EndOfTurnProbabilityThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasModelName) hash ^= ModelName.GetHashCode();
+      if (HasTritonServerHost) hash ^= TritonServerHost.GetHashCode();
+      if (HasTritonServerPort) hash ^= TritonServerPort.GetHashCode();
+      if (HasMaxAudioSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxAudioSeconds);
+      if (HasTimeoutSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TimeoutSeconds);
+      if (HasEndOfTurnProbabilityThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(EndOfTurnProbabilityThreshold);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasModelName) {
+        output.WriteRawTag(10);
+        output.WriteString(ModelName);
+      }
+      if (HasTritonServerHost) {
+        output.WriteRawTag(18);
+        output.WriteString(TritonServerHost);
+      }
+      if (HasTritonServerPort) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TritonServerPort);
+      }
+      if (HasMaxAudioSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(MaxAudioSeconds);
+      }
+      if (HasTimeoutSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(TimeoutSeconds);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(53);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasModelName) {
+        output.WriteRawTag(10);
+        output.WriteString(ModelName);
+      }
+      if (HasTritonServerHost) {
+        output.WriteRawTag(18);
+        output.WriteString(TritonServerHost);
+      }
+      if (HasTritonServerPort) {
+        output.WriteRawTag(24);
+        output.WriteInt64(TritonServerPort);
+      }
+      if (HasMaxAudioSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(MaxAudioSeconds);
+      }
+      if (HasTimeoutSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(TimeoutSeconds);
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        output.WriteRawTag(53);
+        output.WriteFloat(EndOfTurnProbabilityThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasModelName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelName);
+      }
+      if (HasTritonServerHost) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TritonServerHost);
+      }
+      if (HasTritonServerPort) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TritonServerPort);
+      }
+      if (HasMaxAudioSeconds) {
+        size += 1 + 4;
+      }
+      if (HasTimeoutSeconds) {
+        size += 1 + 4;
+      }
+      if (HasEndOfTurnProbabilityThreshold) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionPipecatSmartTurnOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasModelName) {
+        ModelName = other.ModelName;
+      }
+      if (other.HasTritonServerHost) {
+        TritonServerHost = other.TritonServerHost;
+      }
+      if (other.HasTritonServerPort) {
+        TritonServerPort = other.TritonServerPort;
+      }
+      if (other.HasMaxAudioSeconds) {
+        MaxAudioSeconds = other.MaxAudioSeconds;
+      }
+      if (other.HasTimeoutSeconds) {
+        TimeoutSeconds = other.TimeoutSeconds;
+      }
+      if (other.HasEndOfTurnProbabilityThreshold) {
+        EndOfTurnProbabilityThreshold = other.EndOfTurnProbabilityThreshold;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            TritonServerHost = input.ReadString();
+            break;
+          }
+          case 24: {
+            TritonServerPort = input.ReadInt64();
+            break;
+          }
+          case 37: {
+            MaxAudioSeconds = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            TimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 53: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ModelName = input.ReadString();
+            break;
+          }
+          case 18: {
+            TritonServerHost = input.ReadString();
+            break;
+          }
+          case 24: {
+            TritonServerPort = input.ReadInt64();
+            break;
+          }
+          case 37: {
+            MaxAudioSeconds = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            TimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 53: {
+            EndOfTurnProbabilityThreshold = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionConversationContext carries the latest turns of the conversation for
+  /// &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code> (see
+  /// &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code>). No other detector reads it.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionConversationContext : pb::IMessage<TurnDetectionConversationContext>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionConversationContext> _parser = new pb::MessageParser<TurnDetectionConversationContext>(() => new TurnDetectionConversationContext());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionConversationContext> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[49]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionConversationContext() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionConversationContext(TurnDetectionConversationContext other) : this() {
+      turnDetectionContextTurns_ = other.turnDetectionContextTurns_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionConversationContext Clone() {
+      return new TurnDetectionConversationContext(this);
+    }
+
+    /// <summary>Field number for the "turn_detection_context_turns" field.</summary>
+    public const int TurnDetectionContextTurnsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ondewo.S2T.TurnDetectionContextTurn> _repeated_turnDetectionContextTurns_codec
+        = pb::FieldCodec.ForMessage(10, global::Ondewo.S2T.TurnDetectionContextTurn.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionContextTurn> turnDetectionContextTurns_ = new pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionContextTurn>();
+    /// <summary>
+    /// The turns of the conversation, oldest first. They EXCLUDE the caller's utterance under evaluation, which
+    /// the server appends itself.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionContextTurn> TurnDetectionContextTurns {
+      get { return turnDetectionContextTurns_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionConversationContext);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionConversationContext other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!turnDetectionContextTurns_.Equals(other.turnDetectionContextTurns_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= turnDetectionContextTurns_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      turnDetectionContextTurns_.WriteTo(output, _repeated_turnDetectionContextTurns_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      turnDetectionContextTurns_.WriteTo(ref output, _repeated_turnDetectionContextTurns_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += turnDetectionContextTurns_.CalculateSize(_repeated_turnDetectionContextTurns_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionConversationContext other) {
+      if (other == null) {
+        return;
+      }
+      turnDetectionContextTurns_.Add(other.turnDetectionContextTurns_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            turnDetectionContextTurns_.AddEntriesFrom(input, _repeated_turnDetectionContextTurns_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            turnDetectionContextTurns_.AddEntriesFrom(ref input, _repeated_turnDetectionContextTurns_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>One turn of the conversation context of the turn detection, read only by
+  /// &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionContextTurn : pb::IMessage<TurnDetectionContextTurn>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionContextTurn> _parser = new pb::MessageParser<TurnDetectionContextTurn>(() => new TurnDetectionContextTurn());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionContextTurn> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[50]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionContextTurn() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionContextTurn(TurnDetectionContextTurn other) : this() {
+      role_ = other.role_;
+      text_ = other.text_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionContextTurn Clone() {
+      return new TurnDetectionContextTurn(this);
+    }
+
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 1;
+    private global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role role_ = global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified;
+    /// <summary>
+    /// Who spoke the turn.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role Role {
+      get { return role_; }
+      set {
+        role_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "text" field.</summary>
+    public const int TextFieldNumber = 2;
+    private string text_ = "";
+    /// <summary>
+    /// The text of the turn.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Text {
+      get { return text_; }
+      set {
+        text_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionContextTurn);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionContextTurn other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Role != other.Role) return false;
+      if (Text != other.Text) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Role != global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified) hash ^= Role.GetHashCode();
+      if (Text.Length != 0) hash ^= Text.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Role != global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Role);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Role != global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Role);
+      }
+      if (Text.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Text);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Role != global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (Text.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Text);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionContextTurn other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Role != global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role.Unspecified) {
+        Role = other.Role;
+      }
+      if (other.Text.Length != 0) {
+        Text = other.Text;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Role = (global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Role = (global::Ondewo.S2T.TurnDetectionContextTurn.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Text = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the TurnDetectionContextTurn message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// &lt;p>Who spoke the turn.&lt;/p>
+      /// </summary>
+      public enum Role {
+        /// <summary>
+        /// Unspecified role. The server ignores a turn without a role.
+        /// </summary>
+        [pbr::OriginalName("ROLE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The caller, i.e. the speaker whose turns are detected.
+        /// </summary>
+        [pbr::OriginalName("ROLE_USER")] User = 1,
+        /// <summary>
+        /// The voice assistant. Its text is what the caller HEARD, i.e. the spoken prefix of an interrupted
+        /// utterance.
+        /// </summary>
+        [pbr::OriginalName("ROLE_ASSISTANT")] Assistant = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// &lt;p>TurnDetectionHoldBands carries the hold bands of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>. No other
+  /// detector reads them.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionHoldBands : pb::IMessage<TurnDetectionHoldBands>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionHoldBands> _parser = new pb::MessageParser<TurnDetectionHoldBands>(() => new TurnDetectionHoldBands());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionHoldBands> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[51]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBands() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBands(TurnDetectionHoldBands other) : this() {
+      turnDetectionHoldBands_ = other.turnDetectionHoldBands_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBands Clone() {
+      return new TurnDetectionHoldBands(this);
+    }
+
+    /// <summary>Field number for the "turn_detection_hold_bands" field.</summary>
+    public const int TurnDetectionHoldBands_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ondewo.S2T.TurnDetectionHoldBand> _repeated_turnDetectionHoldBands_codec
+        = pb::FieldCodec.ForMessage(10, global::Ondewo.S2T.TurnDetectionHoldBand.Parser);
+    private readonly pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionHoldBand> turnDetectionHoldBands_ = new pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionHoldBand>();
+    /// <summary>
+    /// The bands, each holding a turn judged finished with a probability below its upper bound: the first band,
+    /// sorted by &lt;code>upper_probability&lt;/code>, whose upper probability exceeds the end-of-utterance probability
+    /// decides the hold. A probability above every band is finished at once.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ondewo.S2T.TurnDetectionHoldBand> TurnDetectionHoldBands_ {
+      get { return turnDetectionHoldBands_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionHoldBands);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionHoldBands other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!turnDetectionHoldBands_.Equals(other.turnDetectionHoldBands_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= turnDetectionHoldBands_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      turnDetectionHoldBands_.WriteTo(output, _repeated_turnDetectionHoldBands_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      turnDetectionHoldBands_.WriteTo(ref output, _repeated_turnDetectionHoldBands_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += turnDetectionHoldBands_.CalculateSize(_repeated_turnDetectionHoldBands_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionHoldBands other) {
+      if (other == null) {
+        return;
+      }
+      turnDetectionHoldBands_.Add(other.turnDetectionHoldBands_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            turnDetectionHoldBands_.AddEntriesFrom(input, _repeated_turnDetectionHoldBands_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            turnDetectionHoldBands_.AddEntriesFrom(ref input, _repeated_turnDetectionHoldBands_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// &lt;p>One hold band of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.&lt;/p>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class TurnDetectionHoldBand : pb::IMessage<TurnDetectionHoldBand>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<TurnDetectionHoldBand> _parser = new pb::MessageParser<TurnDetectionHoldBand>(() => new TurnDetectionHoldBand());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<TurnDetectionHoldBand> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[52]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBand() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBand(TurnDetectionHoldBand other) : this() {
+      upperProbability_ = other.upperProbability_;
+      maxSilenceSeconds_ = other.maxSilenceSeconds_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public TurnDetectionHoldBand Clone() {
+      return new TurnDetectionHoldBand(this);
+    }
+
+    /// <summary>Field number for the "upper_probability" field.</summary>
+    public const int UpperProbabilityFieldNumber = 1;
+    private float upperProbability_;
+    /// <summary>
+    /// The exclusive upper bound of the end-of-utterance probabilities this band covers, valid range: 0 - 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float UpperProbability {
+      get { return upperProbability_; }
+      set {
+        upperProbability_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_silence_seconds" field.</summary>
+    public const int MaxSilenceSecondsFieldNumber = 2;
+    private float maxSilenceSeconds_;
+    /// <summary>
+    /// Seconds of silence a turn in this band waits before it is committed, valid range: 0 - 4. The server never
+    /// holds longer than &lt;code>TurnDetectionOptions.incomplete_max_silence_seconds&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MaxSilenceSeconds {
+      get { return maxSilenceSeconds_; }
+      set {
+        maxSilenceSeconds_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as TurnDetectionHoldBand);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(TurnDetectionHoldBand other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(UpperProbability, other.UpperProbability)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MaxSilenceSeconds, other.MaxSilenceSeconds)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UpperProbability != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(UpperProbability);
+      if (MaxSilenceSeconds != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxSilenceSeconds);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UpperProbability != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(UpperProbability);
+      }
+      if (MaxSilenceSeconds != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MaxSilenceSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UpperProbability != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(UpperProbability);
+      }
+      if (MaxSilenceSeconds != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MaxSilenceSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UpperProbability != 0F) {
+        size += 1 + 4;
+      }
+      if (MaxSilenceSeconds != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(TurnDetectionHoldBand other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UpperProbability != 0F) {
+        UpperProbability = other.UpperProbability;
+      }
+      if (other.MaxSilenceSeconds != 0F) {
+        MaxSilenceSeconds = other.MaxSilenceSeconds;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            UpperProbability = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            MaxSilenceSeconds = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            UpperProbability = input.ReadFloat();
+            break;
+          }
+          case 21: {
+            MaxSilenceSeconds = input.ReadFloat();
+            break;
+          }
         }
       }
     }
@@ -16226,7 +19791,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18173,7 +21738,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18652,7 +22217,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19063,7 +22628,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19623,7 +23188,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20105,7 +23670,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20347,7 +23912,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20658,7 +24223,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[51]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[60]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20943,7 +24508,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[52]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[61]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21176,7 +24741,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[53]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21939,7 +25504,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[54]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22268,7 +25833,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[55]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[64]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22783,7 +26348,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[56]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[65]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23298,7 +26863,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[57]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[66]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23685,7 +27250,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[58]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[67]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23960,7 +27525,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[59]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[68]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24204,7 +27769,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[60]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[69]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24398,7 +27963,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[61]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[70]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24631,7 +28196,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[62]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[71]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24827,7 +28392,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[63]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[72]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25031,7 +28596,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[64]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[73]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25235,7 +28800,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[65]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[74]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25480,7 +29045,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[66]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[75]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25725,7 +29290,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[67]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[76]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -25929,7 +29494,7 @@ namespace Ondewo.S2T {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[68]; }
+      get { return global::Ondewo.S2T.SpeechToTextReflection.Descriptor.MessageTypes[77]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
