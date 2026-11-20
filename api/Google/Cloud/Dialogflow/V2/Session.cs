@@ -4583,7 +4583,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ToolCallIdFieldNumber = 1;
     private string toolCallId_ = "";
     /// <summary>
-    /// Stable id assigned by the upstream framework (autogen / langchain).
+    /// Stable id assigned by the upstream framework (e.g. langchain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5600,7 +5600,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ProviderFieldNumber = 1;
     private string provider_ = "";
     /// <summary>
-    /// Provider tag: "autogen" | "langchain" | "openai" | "anthropic" | ...
+    /// Provider tag: "langchain" | "openai" | "anthropic" | ... ("autogen" only on telemetry recorded before AutoGen
+    /// was removed).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6125,7 +6126,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int TeamNameFieldNumber = 36;
     private string teamName_ = "";
     /// <summary>
-    /// Autogen team display name owning the call.
+    /// Display name of the agent team owning the call; empty for a single agent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6140,7 +6141,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int TeamIdFieldNumber = 37;
     private string teamId_ = "";
     /// <summary>
-    /// Autogen team identifier (UUID).
+    /// Identifier (UUID) of the agent team owning the call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6155,7 +6156,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int AgentRoleFieldNumber = 38;
     private string agentRole_ = "";
     /// <summary>
-    /// Autogen agent role tag (user_proxy | assistant | tool_executor | reflection).
+    /// Role tag of the agent that made the call inside its team.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6170,7 +6171,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SenderAgentFieldNumber = 39;
     private string senderAgent_ = "";
     /// <summary>
-    /// Name of the autogen agent that produced the message.
+    /// Name of the agent that produced the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6185,7 +6186,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int RecipientAgentFieldNumber = 40;
     private string recipientAgent_ = "";
     /// <summary>
-    /// Name of the autogen agent that received the message.
+    /// Name of the agent that received the message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6200,7 +6201,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int TurnIndexFieldNumber = 41;
     private int turnIndex_;
     /// <summary>
-    /// Zero-based position of this LLM call inside the autogen &lt;code>run_stream()&lt;/code> sequence.
+    /// Zero-based position of this LLM call inside the agent run&amp;apos;s sequence of LLM calls.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6215,7 +6216,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ReflectionIterationsFieldNumber = 42;
     private int reflectionIterations_;
     /// <summary>
-    /// Number of reflection loops executed in &lt;code>robust_assistant_agent&lt;/code> for this call.
+    /// Deprecated: number of reflection loops of the removed AutoGen &lt;code>robust_assistant_agent&lt;/code> for this
+    /// call. No current agent runs reflection loops, so it is 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6230,7 +6232,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int TerminationReasonFieldNumber = 43;
     private string terminationReason_ = "";
     /// <summary>
-    /// Autogen &lt;code>TaskResult.stop_reason&lt;/code> string when surfaced.
+    /// Stop reason of the agent team run when surfaced (formerly AutoGen &lt;code>TaskResult.stop_reason&lt;/code>).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6645,7 +6647,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// &lt;code>llm_call_id&lt;/code> (&lt;code>LlmLlmCallStartedEvent&lt;/code>,
     /// &lt;code>LlmToolCallStartedEvent&lt;/code>, ...), so an aggregate or a persisted row can be
     /// correlated back to the live event stream. Distinct from &lt;code>run_id&lt;/code> (field 11),
-    /// which is the UPSTREAM framework's id (autogen / langchain).
+    /// which is the UPSTREAM framework's id (e.g. langchain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13067,7 +13069,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string toolCallId_ = "";
     /// <summary>
     /// Stable id of the representative invocation, assigned by the upstream framework
-    /// (autogen / langchain).
+    /// (e.g. langchain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16374,7 +16376,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ProviderFieldNumber = 2;
     private string provider_ = "";
     /// <summary>
-    /// Provider tag: "autogen" | "langchain" | "openai" | "anthropic" | ...
+    /// Provider tag: "langchain" | "openai" | "anthropic" | ... ("autogen" only on telemetry recorded before AutoGen
+    /// was removed).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17074,7 +17077,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int ToolCallIdFieldNumber = 1;
     private string toolCallId_ = "";
     /// <summary>
-    /// Stable id assigned by the upstream framework (autogen / langchain).
+    /// Stable id assigned by the upstream framework (e.g. langchain).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
