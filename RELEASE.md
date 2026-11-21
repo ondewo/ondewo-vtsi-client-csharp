@@ -2,6 +2,26 @@
 
 *****************
 
+## Release ONDEWO VTSI Csharp Client 9.5.2
+
+### New Features
+
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) Offline-token start-up, as the python ondewo-vtsi-client 9.5.2 has it: the client config accepts a Keycloak *offline* refresh token (`RefreshToken`) instead of a password. The token provider then starts with one `grant_type=refresh_token` exchange, auto-refreshes exactly as on the password path and never sends a password grant, not even as a fallback for a refused token.
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) A Keycloak config needs a password OR a refresh token; when both are set the token wins. The token is redacted from every rendering of the config like the password, and it takes part (hashed) in the key of the shared-provider registry, so two configs of different tenants never share a provider. The `token_expiration_in_s` window is armed on both paths.
+
+### Bug Fixes
+
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) Keycloak token refresh: a failed refresh no longer ends the background refresh; it survives every failure and retries with one full-jitter backoff (5 s doubling up to 300 s) that the background refresh and the per-call path share, and a success resets it. Concurrent callers share one in-flight refresh. A still-valid token keeps being served while its refresh fails; only an EXPIRED token raises.
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) Every token failure is a `KeycloakAuthenticationError` with the cause kept: a network error, a non-2xx status, a body that is not JSON or not a JSON object, a missing `access_token` and a non-numeric `expires_in`. A malformed response changes no provider state, and a token response without an `access_token` is reported by its field names only, never by its values. A password login whose response carries no `refresh_token` is accepted, as in the python SDK.
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) The token-endpoint request timeout is 10 s, and quoted Keycloak error bodies are cut at 500 characters.
+
+### Improvements
+
+* [[OND236-120]](https://ondewo.atlassian.net/browse/OND236-120) Behaviour aligned with the python SDK and every other ONDEWO client SDK, pinned by the shared cross-SDK test catalogue (T01-T62) and its edge cases.
+* Tracking API Version [9.5.0](https://github.com/ondewo/ondewo-vtsi-api/releases/tag/9.5.0) ( [Documentation](https://ondewo.github.io/ondewo-vtsi-api/) )
+
+*****************
+
 ## Release ONDEWO VTSI Csharp Client 9.5.0
 
 ### Improvements
