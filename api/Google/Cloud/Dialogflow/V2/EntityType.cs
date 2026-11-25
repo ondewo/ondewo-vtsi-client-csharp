@@ -216,9 +216,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
   #region Enums
   /// <summary>
-  /// Represents the options for views of an entity type.
-  /// An entity type can be a sizable object. Therefore, we provide a resource view that
-  /// does not return all values and synonyms besides the full view that is set by default.
+  /// Represents the options for views of an entity type. An entity type can be a sizable object. Therefore, we provide a resource view that does not return all values and synonyms besides the full view that is set by default.
   /// </summary>
   public enum EntityTypeView {
     /// <summary>
@@ -265,9 +263,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
   #region Messages
   /// <summary>
-  /// Represents an entity type.
-  /// Entity types serve as a tool for extracting parameter values from natural
-  /// language queries.
+  /// Represents an entity type. Entity types serve as a tool for extracting parameter values from natural language queries.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EntityType : pb::IMessage<EntityType>
@@ -998,9 +994,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
-      /// Represents different entity type expansion modes. Automated expansion
-      /// allows an agent to recognize values that have not been explicitly listed in
-      /// the entity (for example, new kinds of shopping list items).
+      /// Represents different entity type expansion modes. Automated expansion allows an agent to recognize values that have not been explicitly listed in the entity (for example, new kinds of shopping list items).
       /// </summary>
       public enum AutoExpansionMode {
         /// <summary>

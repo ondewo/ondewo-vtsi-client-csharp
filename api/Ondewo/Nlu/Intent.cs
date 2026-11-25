@@ -438,9 +438,7 @@ namespace Ondewo.Nlu {
   }
   #region Enums
   /// <summary>
-  /// Represents the options for views of an intent.
-  /// An intent can be a sizable object. Therefore, we provide a resource view that
-  /// does not return training phrases in the response by default.
+  /// Represents the options for views of an intent. An intent can be a sizable object. Therefore, we provide a resource view that does not return training phrases in the response by default.
   /// </summary>
   public enum IntentView {
     /// <summary>
@@ -500,8 +498,7 @@ namespace Ondewo.Nlu {
 
   #region Messages
   /// <summary>
-  /// Represents an intent.
-  /// Intents convert a number of user expressions or patterns into an action. An action is an extraction of a user command or sentence semantics.
+  /// Represents an intent. Intents convert a number of user expressions or patterns into an action. An action is an extraction of a user command or sentence semantics.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Intent : pb::IMessage<Intent>
@@ -2503,8 +2500,7 @@ namespace Ondewo.Nlu {
           }
 
           /// <summary>
-          /// Represents an entity annotation in a training phrase. The entity can be annotated on the level of
-          /// entity type only or both entity type and entity value.
+          /// Represents an entity annotation in a training phrase. The entity can be annotated on the level of entity type only or both entity type and entity value.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class Entity : pb::IMessage<Entity>

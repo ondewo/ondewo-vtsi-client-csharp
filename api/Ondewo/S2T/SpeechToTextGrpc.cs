@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.S2T {
   /// <summary>
-  /// &lt;p>Speech-to-text service&lt;/p>
+  /// Speech-to-text service
   /// </summary>
   public static partial class Speech2Text
   {

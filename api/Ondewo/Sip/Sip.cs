@@ -229,17 +229,11 @@ namespace Ondewo.Sip {
   }
   #region Enums
   /// <summary>
-  /// &lt;p>How a &lt;code>SipTransferCall&lt;/code> handles a transfer that the container parked in
-  /// &lt;code>SipStatus.delegated_transfer&lt;/code> instead of sending it.&lt;/p>
-  /// &lt;p>Every value other than &lt;code>SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> requires the
-  /// &lt;code>x-ondewo-sip-call-control-token&lt;/code> metadatum (otherwise &lt;code>CallControlUnauthenticated&lt;/code>) and the
-  /// &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum naming the ongoing call (missing or different:
-  /// &lt;code>CallScopeMismatch&lt;/code>), plus &lt;code>delegated_request_id&lt;/code> (otherwise
-  /// &lt;code>DelegatedRequestMismatch&lt;/code>). Refusals are RETURNED in &lt;code>exception_name&lt;/code> /
-  /// &lt;code>description&lt;/code> and never assigned to the shared status.&lt;/p>
-  /// &lt;p>A parked transfer that is neither claimed nor ended within &lt;code>SIP_TRANSFER_DELEGATION_CLAIM_TIMEOUT_S&lt;/code> is
-  /// dropped WITHOUT a REFER, and the pipeline is told with &lt;code>SIP_WARM_TRANSFER_OUTCOME_DELEGATION_EXPIRED&lt;/code>. A
-  /// claimed transfer never expires.&lt;/p>
+  /// How a &lt;code>SipTransferCall&lt;/code> handles a transfer that the container parked in &lt;code>SipStatus.delegated_transfer&lt;/code> instead of sending it.
+  ///
+  /// Every value other than &lt;code>SIP_TRANSFER_DELEGATION_UNSPECIFIED&lt;/code> requires the &lt;code>x-ondewo-sip-call-control-token&lt;/code> metadatum (otherwise &lt;code>CallControlUnauthenticated&lt;/code>) and the &lt;code>x-ondewo-expected-call-id&lt;/code> metadatum naming the ongoing call (missing or different: &lt;code>CallScopeMismatch&lt;/code>), plus &lt;code>delegated_request_id&lt;/code> (otherwise &lt;code>DelegatedRequestMismatch&lt;/code>). Refusals are RETURNED in &lt;code>exception_name&lt;/code> / &lt;code>description&lt;/code> and never assigned to the shared status.
+  ///
+  /// A parked transfer that is neither claimed nor ended within &lt;code>SIP_TRANSFER_DELEGATION_CLAIM_TIMEOUT_S&lt;/code> is dropped WITHOUT a REFER, and the pipeline is told with &lt;code>SIP_WARM_TRANSFER_OUTCOME_DELEGATION_EXPIRED&lt;/code>. A claimed transfer never expires.
   /// </summary>
   public enum SipTransferDelegation {
     /// <summary>
@@ -266,7 +260,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Desired setting of one media control flag&lt;/p>
+  /// Desired setting of one media control flag
   /// </summary>
   public enum MediaControlSetting {
     /// <summary>
@@ -284,8 +278,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Owner of a media control hold. Each owner holds its own mute and pause; releasing one owner's hold never releases
-  /// another owner's&lt;/p>
+  /// Owner of a media control hold. Each owner holds its own mute and pause; releasing one owner's hold never releases another owner's
   /// </summary>
   public enum MediaControlOwner {
     /// <summary>
@@ -305,7 +298,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Outcome of a warm transfer that the bot tells the caller&lt;/p>
+  /// Outcome of a warm transfer that the bot tells the caller
   /// </summary>
   public enum SipWarmTransferOutcome {
     /// <summary>
@@ -329,7 +322,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Answer of the speech-to-speech pipeline to a &lt;code>SipWarmTransferOutcomeNotice&lt;/code>&lt;/p>
+  /// Answer of the speech-to-speech pipeline to a &lt;code>SipWarmTransferOutcomeNotice&lt;/code>
   /// </summary>
   public enum SipWarmTransferOutcomeNoticeStatus {
     /// <summary>
@@ -360,7 +353,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Mode of a &lt;code>SipStreamCallAudio&lt;/code> stream&lt;/p>
+  /// Mode of a &lt;code>SipStreamCallAudio&lt;/code> stream
   /// </summary>
   public enum SipCallAudioMode {
     /// <summary>
@@ -378,7 +371,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Why a &lt;code>SipStreamCallAudio&lt;/code> stream ended&lt;/p>
+  /// Why a &lt;code>SipStreamCallAudio&lt;/code> stream ended
   /// </summary>
   public enum SipCallAudioEndReason {
     /// <summary>
@@ -415,7 +408,7 @@ namespace Ondewo.Sip {
 
   #region Messages
   /// <summary>
-  /// &lt;p>Ends an ongoing call of the active SIP session of the active SIP account&lt;/p>
+  /// Ends an ongoing call of the active SIP session of the active SIP account
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipEndCallRequest : pb::IMessage<SipEndCallRequest>
@@ -713,7 +706,7 @@ namespace Ondewo.Sip {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// &lt;p>Why the call is being ended&lt;/p>
+      /// Why the call is being ended
       /// </summary>
       public enum EndCallReason {
         /// <summary>
@@ -748,7 +741,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Reports the verdict of the answering machine detection of the ongoing outgoing call&lt;/p>
+  /// Reports the verdict of the answering machine detection of the ongoing outgoing call
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipReportAnsweringMachineDetectedRequest : pb::IMessage<SipReportAnsweringMachineDetectedRequest>
@@ -962,8 +955,9 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Result of the answering machine detection (AMD) of an outbound call&lt;/p>
-  /// &lt;p>Carries identifiers from closed vocabularies only: never audio, transcript text or a phone number&lt;/p>
+  /// Result of the answering machine detection (AMD) of an outbound call
+  ///
+  /// Carries identifiers from closed vocabularies only: never audio, transcript text or a phone number
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnsweringMachineDetectionResult : pb::IMessage<AnsweringMachineDetectionResult>
@@ -1440,7 +1434,7 @@ namespace Ondewo.Sip {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// &lt;p>Who or what answered the call&lt;/p>
+      /// Who or what answered the call
       /// </summary>
       public enum Verdict {
         /// <summary>
@@ -1482,7 +1476,7 @@ namespace Ondewo.Sip {
       }
 
       /// <summary>
-      /// &lt;p>Evidence that led to the verdict&lt;/p>
+      /// Evidence that led to the verdict
       /// </summary>
       public enum Cause {
         /// <summary>
@@ -1524,7 +1518,7 @@ namespace Ondewo.Sip {
       }
 
       /// <summary>
-      /// &lt;p>What was done because of the verdict&lt;/p>
+      /// What was done because of the verdict
       /// </summary>
       public enum ActionTaken {
         /// <summary>
@@ -1555,7 +1549,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request to start the call with the active SIP session of the active SIP account&lt;/p>
+  /// Request to start the call with the active SIP session of the active SIP account
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipStartCallRequest : pb::IMessage<SipStartCallRequest>
@@ -1788,7 +1782,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request for registering a SIP account at a SIP server&lt;/p>
+  /// Request for registering a SIP account at a SIP server
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipRegisterAccountRequest : pb::IMessage<SipRegisterAccountRequest>
@@ -2113,7 +2107,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request for starting a new SIP session for a specified account&lt;/p>
+  /// Request for starting a new SIP session for a specified account
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipStartSessionRequest : pb::IMessage<SipStartSessionRequest>
@@ -2358,7 +2352,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request for transferring a call with or without headers&lt;/p>
+  /// Request for transferring a call with or without headers
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipTransferCallRequest : pb::IMessage<SipTransferCallRequest>
@@ -2737,12 +2731,9 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>A transfer that the in-container speech-to-speech pipeline asked for and the container handed to a client instead
-  /// of sending it (see &lt;code>SipTransferDelegation&lt;/code>). Call-scoped: empty when no transfer is parked, when no call
-  /// is ongoing, and after the call ended.&lt;/p>
-  /// &lt;p>&lt;code>SipGetSipStatus&lt;/code>, &lt;code>SipGetSipStatusHistory&lt;/code> and every other response report only
-  /// &lt;code>request_id&lt;/code>, &lt;code>requested_at&lt;/code> and &lt;code>target_is_phone_number&lt;/code>. The target and the headers
-  /// are filled ONLY in the response of a &lt;code>SIP_TRANSFER_DELEGATION_CLAIM&lt;/code>.&lt;/p>
+  /// A transfer that the in-container speech-to-speech pipeline asked for and the container handed to a client instead of sending it (see &lt;code>SipTransferDelegation&lt;/code>). Call-scoped: empty when no transfer is parked, when no call is ongoing, and after the call ended.
+  ///
+  /// &lt;code>SipGetSipStatus&lt;/code>, &lt;code>SipGetSipStatusHistory&lt;/code> and every other response report only &lt;code>request_id&lt;/code>, &lt;code>requested_at&lt;/code> and &lt;code>target_is_phone_number&lt;/code>. The target and the headers are filled ONLY in the response of a &lt;code>SIP_TRANSFER_DELEGATION_CLAIM&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipDelegatedTransfer : pb::IMessage<SipDelegatedTransfer>
@@ -3109,7 +3100,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Status information for a SIP account, session, or call&lt;/p>
+  /// Status information for a SIP account, session, or call
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipStatus : pb::IMessage<SipStatus>
@@ -4172,7 +4163,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>History of SIP status&lt;/p>
+  /// History of SIP status
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipStatusHistoryResponse : pb::IMessage<SipStatusHistoryResponse>
@@ -4365,7 +4356,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request of &lt;code>SipSetCallMediaControl&lt;/code>&lt;/p>
+  /// Request of &lt;code>SipSetCallMediaControl&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipSetCallMediaControlRequest : pb::IMessage<SipSetCallMediaControlRequest>
@@ -4754,8 +4745,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>One-shot notice of a warm-transfer outcome for the bot. The pipeline tells the caller at most once per
-  /// &lt;code>request_id&lt;/code> and call. Carries no reason text the target gave&lt;/p>
+  /// One-shot notice of a warm-transfer outcome for the bot. The pipeline tells the caller at most once per &lt;code>request_id&lt;/code> and call. Carries no reason text the target gave
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipWarmTransferOutcomeNotice : pb::IMessage<SipWarmTransferOutcomeNotice>
@@ -5163,7 +5153,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request of &lt;code>SipSendDtmf&lt;/code>&lt;/p>
+  /// Request of &lt;code>SipSendDtmf&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipSendDtmfRequest : pb::IMessage<SipSendDtmfRequest>
@@ -5369,7 +5359,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of a &lt;code>SipStreamCallAudio&lt;/code> stream. Must be the first request of the stream&lt;/p>
+  /// Configuration of a &lt;code>SipStreamCallAudio&lt;/code> stream. Must be the first request of the stream
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioConfig : pb::IMessage<SipCallAudioConfig>
@@ -5775,7 +5765,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>One frame of call audio&lt;/p>
+  /// One frame of call audio
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioFrame : pb::IMessage<SipCallAudioFrame>
@@ -6019,7 +6009,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Request of &lt;code>SipStreamCallAudio&lt;/code>&lt;/p>
+  /// Request of &lt;code>SipStreamCallAudio&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioRequest : pb::IMessage<SipCallAudioRequest>
@@ -6379,7 +6369,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream is connected&lt;/p>
+  /// Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream is connected
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioStarted : pb::IMessage<SipCallAudioStarted>
@@ -6703,7 +6693,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Counters of a &lt;code>SipStreamCallAudio&lt;/code> stream, sent periodically&lt;/p>
+  /// Counters of a &lt;code>SipStreamCallAudio&lt;/code> stream, sent periodically
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioStats : pb::IMessage<SipCallAudioStats>
@@ -7067,7 +7057,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream ends normally&lt;/p>
+  /// Sent once when a &lt;code>SipStreamCallAudio&lt;/code> stream ends normally
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioEnded : pb::IMessage<SipCallAudioEnded>
@@ -7311,7 +7301,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Response of &lt;code>SipStreamCallAudio&lt;/code>&lt;/p>
+  /// Response of &lt;code>SipStreamCallAudio&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallAudioResponse : pb::IMessage<SipCallAudioResponse>
@@ -7726,7 +7716,7 @@ namespace Ondewo.Sip {
   }
 
   /// <summary>
-  /// &lt;p>Plays a list of wav files&lt;/p>
+  /// Plays a list of wav files
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipPlayWavFilesRequest : pb::IMessage<SipPlayWavFilesRequest>

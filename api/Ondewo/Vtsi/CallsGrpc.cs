@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Vtsi {
   /// <summary>
-  /// &lt;p>ONDEWO VTSI API&lt;/p>
+  /// ONDEWO VTSI API
   /// </summary>
   public static partial class Calls
   {

@@ -639,7 +639,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Latency tier to use for processing an OpenAI request. Affects cost and throughput.&lt;/p>
+  /// Latency tier to use for processing an OpenAI request. Affects cost and throughput.
   /// </summary>
   public enum ServiceTier {
     /// <summary>
@@ -669,7 +669,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Verbosity level for the response output.&lt;/p>
+  /// Verbosity level for the response output.
   /// </summary>
   public enum Verbosity {
     /// <summary>
@@ -691,7 +691,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Effort level for reasoning models (e.g., o1, o3). Controls the trade-off between speed and quality.&lt;/p>
+  /// Effort level for reasoning models (e.g., o1, o3). Controls the trade-off between speed and quality.
   /// </summary>
   public enum ReasoningEffort {
     /// <summary>
@@ -717,7 +717,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>VadMethod selects the model used to split the audio stream into utterances.&lt;/p>
+  /// VadMethod selects the model used to split the audio stream into utterances.
   /// </summary>
   public enum VadMethod {
     /// <summary>
@@ -736,9 +736,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TsdMethod selects the model used for target-speaker detection (TSD): deciding whether a
-  /// newly detected utterance came from the main speaker of the call, so that speech from anyone
-  /// else (crosstalk, background speakers, barge-in) can be rejected.&lt;/p>
+  /// TsdMethod selects the model used for target-speaker detection (TSD): deciding whether a newly detected utterance came from the main speaker of the call, so that speech from anyone else (crosstalk, background speakers, barge-in) can be rejected.
   /// </summary>
   public enum TsdMethod {
     /// <summary>
@@ -770,7 +768,7 @@ namespace Ondewo.S2T {
 
   #region Messages
   /// <summary>
-  /// &lt;p>Configuration for a request to transcribe audio&lt;/p>
+  /// Configuration for a request to transcribe audio
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscribeRequestConfig : pb::IMessage<TranscribeRequestConfig>
@@ -1667,7 +1665,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration for cloud provider settings for Speech-to-Text (S2T).&lt;/p>
+  /// Configuration for cloud provider settings for Speech-to-Text (S2T).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudProviderConfig : pb::IMessage<S2tCloudProviderConfig>
@@ -2027,7 +2025,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Amazon web service speech-to-text provider.&lt;/p>
+  /// Configuration details specific to the Amazon web service speech-to-text provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudProviderConfigAmazon : pb::IMessage<S2tCloudProviderConfigAmazon>
@@ -2417,7 +2415,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Deepgram speech-to-text provider.&lt;/p>
+  /// Configuration details specific to the Deepgram speech-to-text provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudProviderConfigDeepgram : pb::IMessage<S2tCloudProviderConfigDeepgram>
@@ -2864,7 +2862,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Google speech-to-text provider.&lt;/p>
+  /// Configuration details specific to the Google speech-to-text provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudProviderConfigGoogle : pb::IMessage<S2tCloudProviderConfigGoogle>
@@ -3311,7 +3309,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Microsoft Azure speech-to-text provider.&lt;/p>
+  /// Configuration details specific to the Microsoft Azure speech-to-text provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudProviderConfigMicrosoft : pb::IMessage<S2tCloudProviderConfigMicrosoft>
@@ -3590,7 +3588,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the return values of a transcribe request&lt;/p>
+  /// Configuration of the return values of a transcribe request
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscriptionReturnOptions : pb::IMessage<TranscriptionReturnOptions>
@@ -4120,7 +4118,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to detect utterances&lt;/p>
+  /// Configuration of the options to detect utterances
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UtteranceDetectionOptions : pb::IMessage<UtteranceDetectionOptions>
@@ -4618,7 +4616,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the post-processing options&lt;/p>
+  /// Configuration of the post-processing options
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostProcessingOptions : pb::IMessage<PostProcessingOptions>
@@ -4952,7 +4950,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The transcription message&lt;/p>
+  /// The transcription message
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Transcription : pb::IMessage<Transcription>
@@ -5255,7 +5253,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The alternative transcription message&lt;/p>
+  /// The alternative transcription message
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscriptionAlternative : pb::IMessage<TranscriptionAlternative>
@@ -5529,7 +5527,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>WordDetail provides word-specific information for recognized words.&lt;/p>
+  /// WordDetail provides word-specific information for recognized words.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WordDetail : pb::IMessage<WordDetail>
@@ -5884,7 +5882,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The word alternative message&lt;/p>
+  /// The word alternative message
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WordAlternative : pb::IMessage<WordAlternative>
@@ -6128,7 +6126,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Request to transcribe an audio stream&lt;/p>
+  /// Request to transcribe an audio stream
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscribeStreamRequest : pb::IMessage<TranscribeStreamRequest>
@@ -6461,7 +6459,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The response message of a stream transcription&lt;/p>
+  /// The response message of a stream transcription
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscribeStreamResponse : pb::IMessage<TranscribeStreamResponse>
@@ -7029,7 +7027,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>A request to transcribe an audio file&lt;/p>
+  /// A request to transcribe an audio file
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscribeFileRequest : pb::IMessage<TranscribeFileRequest>
@@ -7282,7 +7280,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The response message for a transcribe file request&lt;/p>
+  /// The response message for a transcribe file request
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TranscribeFileResponse : pb::IMessage<TranscribeFileResponse>
@@ -7555,7 +7553,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The pipeline id for a specific pipeline configuration&lt;/p>
+  /// The pipeline id for a specific pipeline configuration
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tPipelineId : pb::IMessage<S2tPipelineId>
@@ -7759,7 +7757,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Request to list all speech-to-text pipelines. Optionally also filter criteria can be set&lt;/p>
+  /// Request to list all speech-to-text pipelines. Optionally also filter criteria can be set
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tPipelinesRequest : pb::IMessage<ListS2tPipelinesRequest>
@@ -8051,7 +8049,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>ListS2tPipelinesResponse is used to return a list of all speech-to-text pipelines.&lt;/p>
+  /// ListS2tPipelinesResponse is used to return a list of all speech-to-text pipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tPipelinesResponse : pb::IMessage<ListS2tPipelinesResponse>
@@ -8246,7 +8244,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>ListS2tLanguagesRequest is used to request a list of available languages. Optionally, filters can be set.&lt;/p>
+  /// ListS2tLanguagesRequest is used to request a list of available languages. Optionally, filters can be set.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tLanguagesRequest : pb::IMessage<ListS2tLanguagesRequest>
@@ -8469,7 +8467,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Response message to list available languages&lt;/p>
+  /// Response message to list available languages
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tLanguagesResponse : pb::IMessage<ListS2tLanguagesResponse>
@@ -8662,7 +8660,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Request message to list available domains. Optionally also filters can be set.&lt;/p>
+  /// Request message to list available domains. Optionally also filters can be set.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tDomainsRequest : pb::IMessage<ListS2tDomainsRequest>
@@ -8884,7 +8882,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Response message to list available domains&lt;/p>
+  /// Response message to list available domains
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tDomainsResponse : pb::IMessage<ListS2tDomainsResponse>
@@ -9077,7 +9075,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tGetServiceInfoResponse is used to return version information about the speech-to-text service.&lt;/p>
+  /// S2tGetServiceInfoResponse is used to return version information about the speech-to-text service.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tGetServiceInfoResponse : pb::IMessage<S2tGetServiceInfoResponse>
@@ -9281,7 +9279,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Speech2TextConfig is a configuration message for the speech-to-text pipeline&lt;/p>
+  /// Speech2TextConfig is a configuration message for the speech-to-text pipeline
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Speech2TextConfig : pb::IMessage<Speech2TextConfig>
@@ -9819,7 +9817,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tDescription contains descriptive information about the speech-to-text pipeline.&lt;/p>
+  /// S2tDescription contains descriptive information about the speech-to-text pipeline.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tDescription : pb::IMessage<S2tDescription>
@@ -10143,7 +10141,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tInference contains information about inference models used in the speech-to-text pipeline.&lt;/p>
+  /// S2tInference contains information about inference models used in the speech-to-text pipeline.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tInference : pb::IMessage<S2tInference>
@@ -10445,7 +10443,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>AcousticModels contains information about different types of acoustic models.&lt;/p>
+  /// AcousticModels contains information about different types of acoustic models.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AcousticModels : pb::IMessage<AcousticModels>
@@ -11090,7 +11088,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tCloudServiceAmazon message contains settings for the Amazon web service Cloud service inference.&lt;/p>
+  /// S2tCloudServiceAmazon message contains settings for the Amazon web service Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudServiceAmazon : pb::IMessage<S2tCloudServiceAmazon>
@@ -11503,7 +11501,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tCloudServiceDeepgram message contains settings for the Deepgram Cloud service inference.&lt;/p>
+  /// S2tCloudServiceDeepgram message contains settings for the Deepgram Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudServiceDeepgram : pb::IMessage<S2tCloudServiceDeepgram>
@@ -11955,7 +11953,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tCloudServiceGoogle message contains settings for the Google Cloud service inference.&lt;/p>
+  /// S2tCloudServiceGoogle message contains settings for the Google Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudServiceGoogle : pb::IMessage<S2tCloudServiceGoogle>
@@ -12407,7 +12405,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tCloudServiceMicrosoft message contains settings for the Microsoft Azure Cloud service inference.&lt;/p>
+  /// S2tCloudServiceMicrosoft message contains settings for the Microsoft Azure Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tCloudServiceMicrosoft : pb::IMessage<S2tCloudServiceMicrosoft>
@@ -12694,7 +12692,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Whisper contains information about the Whisper model.&lt;/p>
+  /// Whisper contains information about the Whisper model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Whisper : pb::IMessage<Whisper>
@@ -13018,7 +13016,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>WhisperTriton contains information about the Whisper model using Triton.&lt;/p>
+  /// WhisperTriton contains information about the Whisper model using Triton.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WhisperTriton : pb::IMessage<WhisperTriton>
@@ -13502,7 +13500,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Wav2Vec contains information about the Wav2Vec model.&lt;/p>
+  /// Wav2Vec contains information about the Wav2Vec model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Wav2Vec : pb::IMessage<Wav2Vec>
@@ -13746,7 +13744,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Wav2VecTriton contains information about the Wav2Vec model using Triton.&lt;/p>
+  /// Wav2VecTriton contains information about the Wav2Vec model using Triton.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Wav2VecTriton : pb::IMessage<Wav2VecTriton>
@@ -14150,7 +14148,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Parakeet contains information about the Parakeet model.&lt;/p>
+  /// Parakeet contains information about the Parakeet model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Parakeet : pb::IMessage<Parakeet>
@@ -14514,7 +14512,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>PtFiles contains information about PT files.&lt;/p>
+  /// PtFiles contains information about PT files.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PtFiles : pb::IMessage<PtFiles>
@@ -14758,7 +14756,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>CkptFile contains information about checkpoint files.&lt;/p>
+  /// CkptFile contains information about checkpoint files.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CkptFile : pb::IMessage<CkptFile>
@@ -14962,7 +14960,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>LanguageModels contains information about language models.&lt;/p>
+  /// LanguageModels contains information about language models.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LanguageModels : pb::IMessage<LanguageModels>
@@ -15326,7 +15324,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>StreamingServer contains information about the streaming server.&lt;/p>
+  /// StreamingServer contains information about the streaming server.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingServer : pb::IMessage<StreamingServer>
@@ -15659,7 +15657,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>StreamingSpeechRecognition contains information about streaming speech recognition settings.&lt;/p>
+  /// StreamingSpeechRecognition contains information about streaming speech recognition settings.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingSpeechRecognition : pb::IMessage<StreamingSpeechRecognition>
@@ -16152,14 +16150,9 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionOptions configures turn detection: deciding, at a pause of the caller, whether the caller has
-  /// finished the turn. Exactly one turn detector is chosen by &lt;code>oneof_turn_detector&lt;/code>; the fields outside it
-  /// apply to every detector.&lt;/p>
-  /// &lt;p>Precedence for every field: the request config's value
-  /// (&lt;code>TranscribeRequestConfig.utterance_detection.turn_detection&lt;/code>), then the pipeline config's value
-  /// (&lt;code>StreamingSpeechRecognition.turn_detection&lt;/code>), then the server's configured value. When the request
-  /// config chooses a different detector than the pipeline config, the request config's detector is used with only
-  /// its own fields: none of the pipeline config's detector fields carry over.&lt;/p>
+  /// TurnDetectionOptions configures turn detection: deciding, at a pause of the caller, whether the caller has finished the turn. Exactly one turn detector is chosen by &lt;code>oneof_turn_detector&lt;/code>; the fields outside it apply to every detector.
+  ///
+  /// Precedence for every field: the request config's value (&lt;code>TranscribeRequestConfig.utterance_detection.turn_detection&lt;/code>), then the pipeline config's value (&lt;code>StreamingSpeechRecognition.turn_detection&lt;/code>), then the server's configured value. When the request config chooses a different detector than the pipeline config, the request config's detector is used with only its own fields: none of the pipeline config's detector fields carry over.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionOptions : pb::IMessage<TurnDetectionOptions>
@@ -17036,8 +17029,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionChatLlmOptions configures a chat LLM as the turn detector: the LLM is asked, with the prompts
-  /// below and the transcription of the turn, whether the caller has finished.&lt;/p>
+  /// TurnDetectionChatLlmOptions configures a chat LLM as the turn detector: the LLM is asked, with the prompts below and the transcription of the turn, whether the caller has finished.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionChatLlmOptions : pb::IMessage<TurnDetectionChatLlmOptions>
@@ -17360,10 +17352,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionEndOfUtteranceLlmOptions configures an end-of-utterance LLM (LiveKit-shaped, e.g.
-  /// &lt;code>livekit/turn-detector&lt;/code>) as the turn detector: the model scores the probability of the
-  /// end-of-utterance token after the turn's transcription and, when
-  /// &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code> is set, the turns before it.&lt;/p>
+  /// TurnDetectionEndOfUtteranceLlmOptions configures an end-of-utterance LLM (LiveKit-shaped, e.g. &lt;code>livekit/turn-detector&lt;/code>) as the turn detector: the model scores the probability of the end-of-utterance token after the turn's transcription and, when &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code> is set, the turns before it.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionEndOfUtteranceLlmOptions : pb::IMessage<TurnDetectionEndOfUtteranceLlmOptions>
@@ -17803,8 +17792,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionOndewoDeOptions configures the ONDEWO German turn-detection model as the turn detector. It judges
-  /// the turn from its text and word timing and is served by vLLM.&lt;/p>
+  /// TurnDetectionOndewoDeOptions configures the ONDEWO German turn-detection model as the turn detector. It judges the turn from its text and word timing and is served by vLLM.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionOndewoDeOptions : pb::IMessage<TurnDetectionOndewoDeOptions>
@@ -18080,9 +18068,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionOndewoDeFusionOptions configures the ONDEWO German fusion turn detector. It combines the ONDEWO
-  /// German text model on vLLM, acoustic heads on Triton and signals computed from the stream into one end-of-turn
-  /// probability. The Triton heads, the text model's served name and the weights file are server settings.&lt;/p>
+  /// TurnDetectionOndewoDeFusionOptions configures the ONDEWO German fusion turn detector. It combines the ONDEWO German text model on vLLM, acoustic heads on Triton and signals computed from the stream into one end-of-turn probability. The Triton heads, the text model's served name and the weights file are server settings.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionOndewoDeFusionOptions : pb::IMessage<TurnDetectionOndewoDeFusionOptions>
@@ -18355,9 +18341,9 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionPipecatSmartTurnOptions configures pipecat Smart Turn v3.2 as the turn detector. It judges the
-  /// turn from the caller's audio alone and is served by Triton.&lt;/p>
-  /// &lt;p>Model: &lt;a href="https://github.com/pipecat-ai/smart-turn">pipecat Smart Turn&lt;/a>&lt;/p>
+  /// TurnDetectionPipecatSmartTurnOptions configures pipecat Smart Turn v3.2 as the turn detector. It judges the turn from the caller's audio alone and is served by Triton.
+  ///
+  /// Model: &lt;a href="https://github.com/pipecat-ai/smart-turn">pipecat Smart Turn&lt;/a>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionPipecatSmartTurnOptions : pb::IMessage<TurnDetectionPipecatSmartTurnOptions>
@@ -18864,9 +18850,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionConversationContext carries the latest turns of the conversation for
-  /// &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code> (see
-  /// &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code>). No other detector reads it.&lt;/p>
+  /// TurnDetectionConversationContext carries the latest turns of the conversation for &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code> (see &lt;code>TurnDetectionOptions.turn_detection_conversation_context&lt;/code>). No other detector reads it.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionConversationContext : pb::IMessage<TurnDetectionConversationContext>
@@ -19060,8 +19044,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>One turn of the conversation context of the turn detection, read only by
-  /// &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.&lt;/p>
+  /// One turn of the conversation context of the turn detection, read only by &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionContextTurn : pb::IMessage<TurnDetectionContextTurn>
@@ -19308,7 +19291,7 @@ namespace Ondewo.S2T {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// &lt;p>Who spoke the turn.&lt;/p>
+      /// Who spoke the turn.
       /// </summary>
       public enum Role {
         /// <summary>
@@ -19332,8 +19315,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TurnDetectionHoldBands carries the hold bands of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>. No other
-  /// detector reads them.&lt;/p>
+  /// TurnDetectionHoldBands carries the hold bands of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>. No other detector reads them.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionHoldBands : pb::IMessage<TurnDetectionHoldBands>
@@ -19528,7 +19510,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>One hold band of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.&lt;/p>
+  /// One hold band of &lt;code>TurnDetectionEndOfUtteranceLlmOptions&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionHoldBand : pb::IMessage<TurnDetectionHoldBand>
@@ -19773,7 +19755,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration options for OpenAI client chat completion requests used in turn detection and LLM post-processing.&lt;/p>
+  /// Configuration options for OpenAI client chat completion requests used in turn detection and LLM post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OpenaiLlmOptions : pb::IMessage<OpenaiLlmOptions>
@@ -21721,7 +21703,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>VoiceActivityDetection contains information about voice activity detection settings.&lt;/p>
+  /// VoiceActivityDetection contains information about voice activity detection settings.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VoiceActivityDetection : pb::IMessage<VoiceActivityDetection>
@@ -22199,8 +22181,9 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Pyannote contains configuration for the Pyannote voice activity detection model.&lt;/p>
-  /// &lt;p>Library: &lt;a href="https://github.com/pyannote/pyannote-audio/blob/develop/tutorials/voice_activity_detection.ipynb">pyannote-audio&lt;/a>&lt;/p>
+  /// Pyannote contains configuration for the Pyannote voice activity detection model.
+  ///
+  /// Library: &lt;a href="https://github.com/pyannote/pyannote-audio/blob/develop/tutorials/voice_activity_detection.ipynb">pyannote-audio&lt;/a>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Pyannote : pb::IMessage<Pyannote>
@@ -22606,11 +22589,11 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Silero contains configuration for the Silero voice activity detection model.&lt;/p>
-  /// &lt;p>Unlike &lt;code>Pyannote&lt;/code>, Silero is configured with its own parameters rather than
-  /// &lt;code>(min_duration_on, min_duration_off)&lt;/code>. They carry exactly the meaning they have
-  /// upstream in &lt;code>get_speech_timestamps&lt;/code> / &lt;code>VADIterator&lt;/code>.&lt;/p>
-  /// &lt;p>Library: &lt;a href="https://github.com/snakers4/silero-vad">silero-vad&lt;/a>&lt;/p>
+  /// Silero contains configuration for the Silero voice activity detection model.
+  ///
+  /// Unlike &lt;code>Pyannote&lt;/code>, Silero is configured with its own parameters rather than &lt;code>(min_duration_on, min_duration_off)&lt;/code>. They carry exactly the meaning they have upstream in &lt;code>get_speech_timestamps&lt;/code> / &lt;code>VADIterator&lt;/code>.
+  ///
+  /// Library: &lt;a href="https://github.com/snakers4/silero-vad">silero-vad&lt;/a>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Silero : pb::IMessage<Silero>
@@ -23166,11 +23149,9 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>WespeakerTsd contains configuration for the WeSpeaker target-speaker detection (TSD)
-  /// model. Given a reference speaker embedding, it decides whether a newly detected utterance
-  /// was spoken by the same person, so that speech from a different speaker (e.g. background
-  /// noise, crosstalk, or a barge-in) can be rejected.&lt;/p>
-  /// &lt;p>Library: &lt;a href="https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM">wespeaker-voxceleb-resnet34-LM&lt;/a>&lt;/p>
+  /// WespeakerTsd contains configuration for the WeSpeaker target-speaker detection (TSD) model. Given a reference speaker embedding, it decides whether a newly detected utterance was spoken by the same person, so that speech from a different speaker (e.g. background noise, crosstalk, or a barge-in) can be rejected.
+  ///
+  /// Library: &lt;a href="https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM">wespeaker-voxceleb-resnet34-LM&lt;/a>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WespeakerTsd : pb::IMessage<WespeakerTsd>
@@ -23653,7 +23634,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>PostProcessing contains the configuration for post-processing.&lt;/p>
+  /// PostProcessing contains the configuration for post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostProcessing : pb::IMessage<PostProcessing>
@@ -23895,7 +23876,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>PostProcessors contains configurations for post-processors.&lt;/p>
+  /// PostProcessors contains configurations for post-processors.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PostProcessors : pb::IMessage<PostProcessors>
@@ -24206,7 +24187,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>SymSpell contains configuration for the SymSpell spelling correction.&lt;/p>
+  /// SymSpell contains configuration for the SymSpell spelling correction.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SymSpell : pb::IMessage<SymSpell>
@@ -24491,7 +24472,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tNormalization contains configuration for the speech-to-text normalization.&lt;/p>
+  /// S2tNormalization contains configuration for the speech-to-text normalization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tNormalization : pb::IMessage<S2tNormalization>
@@ -24724,7 +24705,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>S2tLlmPostProcessing contains configuration for the speech-to-text postprocessing with LLM.&lt;/p>
+  /// S2tLlmPostProcessing contains configuration for the speech-to-text postprocessing with LLM.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessing : pb::IMessage<S2tLlmPostProcessing>
@@ -25486,7 +25467,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to translation task in LLM post-processing.&lt;/p>
+  /// Configuration of the options to translation task in LLM post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessingTranslationOptions : pb::IMessage<S2tLlmPostProcessingTranslationOptions>
@@ -25815,7 +25796,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to inverse-normalization task in LLM post-processing.&lt;/p>
+  /// Configuration of the options to inverse-normalization task in LLM post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessingInverseNormalizationOptions : pb::IMessage<S2tLlmPostProcessingInverseNormalizationOptions>
@@ -26330,7 +26311,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to normalization task in LLM post-processing.&lt;/p>
+  /// Configuration of the options to normalization task in LLM post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessingNormalizationOptions : pb::IMessage<S2tLlmPostProcessingNormalizationOptions>
@@ -26845,7 +26826,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of the options to summarization task in LLM post-processing.&lt;/p>
+  /// Configuration of the options to summarization task in LLM post-processing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessingSummarizationOptions : pb::IMessage<S2tLlmPostProcessingSummarizationOptions>
@@ -27230,9 +27211,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Common configuration for an individual LLM post-processing sub-task (e.g. email, phone number,
-  /// date and time, credit card number, social security number, time zone).
-  /// Used by both normalization and inverse-normalization tasks.&lt;/p>
+  /// Common configuration for an individual LLM post-processing sub-task (e.g. email, phone number, date and time, credit card number, social security number, time zone). Used by both normalization and inverse-normalization tasks.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tLlmPostProcessingSubTaskOptions : pb::IMessage<S2tLlmPostProcessingSubTaskOptions>
@@ -27508,7 +27487,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>Logging contains configuration for logging.&lt;/p>
+  /// Logging contains configuration for logging.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Logging : pb::IMessage<Logging>
@@ -27752,7 +27731,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>ListS2tLanguageModelsRequest is used to request a list of available language models for specified pipelines.&lt;/p>
+  /// ListS2tLanguageModelsRequest is used to request a list of available language models for specified pipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tLanguageModelsRequest : pb::IMessage<ListS2tLanguageModelsRequest>
@@ -27946,7 +27925,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>LanguageModelPipelineId contains information about a pipeline and its available language models.&lt;/p>
+  /// LanguageModelPipelineId contains information about a pipeline and its available language models.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LanguageModelPipelineId : pb::IMessage<LanguageModelPipelineId>
@@ -28179,7 +28158,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>ListS2tLanguageModelsResponse is used to return the available language models for specified pipelines.&lt;/p>
+  /// ListS2tLanguageModelsResponse is used to return the available language models for specified pipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tLanguageModelsResponse : pb::IMessage<ListS2tLanguageModelsResponse>
@@ -28375,7 +28354,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>CreateUserLanguageModelRequest is used to request the creation of a new user-specific language model.&lt;/p>
+  /// CreateUserLanguageModelRequest is used to request the creation of a new user-specific language model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateUserLanguageModelRequest : pb::IMessage<CreateUserLanguageModelRequest>
@@ -28579,7 +28558,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>DeleteUserLanguageModelRequest is used to request the deletion of a user-specific language model.&lt;/p>
+  /// DeleteUserLanguageModelRequest is used to request the deletion of a user-specific language model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteUserLanguageModelRequest : pb::IMessage<DeleteUserLanguageModelRequest>
@@ -28783,7 +28762,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>AddDataToUserLanguageModelRequest is used to request the addition of data to a user-specific language model.&lt;/p>
+  /// AddDataToUserLanguageModelRequest is used to request the addition of data to a user-specific language model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddDataToUserLanguageModelRequest : pb::IMessage<AddDataToUserLanguageModelRequest>
@@ -29028,7 +29007,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>TrainUserLanguageModelRequest is used to request the training of a user-specific language model.&lt;/p>
+  /// TrainUserLanguageModelRequest is used to request the training of a user-specific language model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TrainUserLanguageModelRequest : pb::IMessage<TrainUserLanguageModelRequest>
@@ -29272,8 +29251,9 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The request message for &lt;code>ListS2tNormalizationPipelines&lt;/code>.&lt;/p>
-  /// &lt;p>Filter pipelines by attributes in request.&lt;/p>
+  /// The request message for &lt;code>ListS2tNormalizationPipelines&lt;/code>.
+  ///
+  /// Filter pipelines by attributes in request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tNormalizationPipelinesRequest : pb::IMessage<ListS2tNormalizationPipelinesRequest>
@@ -29477,7 +29457,7 @@ namespace Ondewo.S2T {
   }
 
   /// <summary>
-  /// &lt;p>The response message for &lt;code>ListS2tNormalizationPipelines&lt;/code>.&lt;/p>
+  /// The response message for &lt;code>ListS2tNormalizationPipelines&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListS2tNormalizationPipelinesResponse : pb::IMessage<ListS2tNormalizationPipelinesResponse>

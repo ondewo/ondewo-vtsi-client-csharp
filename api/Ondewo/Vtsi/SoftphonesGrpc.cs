@@ -24,37 +24,19 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Vtsi {
   /// <summary>
-  /// &lt;p>ONDEWO VTSI API&lt;/p>
-  /// &lt;p>Manages the SOFTPHONE ACCOUNTS of a VTSI project: SIP accounts on the project&amp;apos;s Asterisk that
-  /// a human uses from a softphone such as Zoiper, to call into the project&amp;apos;s listeners or to be reached
-  /// by the project.&lt;/p>
-  /// &lt;p>A softphone account is NEVER one of the &lt;code>ondewo000N&lt;/code> accounts the per-call ondewo-sip
-  /// containers register with: it has its own SIP credentials, its own endpoint on the Asterisk and, for
-  /// &lt;code>SOFTPHONE_TRANSPORT_SECURITY_CLIENT_CERTIFICATE&lt;/code>, its own client certificate issued by the
-  /// project&amp;apos;s SOFTPHONE certificate authority.&lt;/p>
-  /// &lt;p>&lt;b>Secrets are handed out exactly once.&lt;/b> The SIP password and the password-protected PKCS#12
-  /// bundle carrying the client private key appear only in the responses of
-  /// &lt;code>CreateSoftphoneAccount&lt;/code> and &lt;code>RotateSoftphoneCredentials&lt;/code>. VTSI keeps no copy of
-  /// the private key or of the PKCS#12 password, and stores the SIP password only in the form the Asterisk
-  /// needs to verify a SIP digest. No other RPC returns a secret; a lost private key or password is
-  /// recovered by rotating it.&lt;/p>
-  /// &lt;p>Errors are reported as gRPC status codes, not as &lt;code>error_message&lt;/code> fields:
-  /// &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, filter, field mask or value;
-  /// &lt;code>NOT_FOUND&lt;/code> for an unknown project, account or certificate;
-  /// &lt;code>ALREADY_EXISTS&lt;/code> for a &lt;code>sip_username&lt;/code> already taken in the project;
-  /// &lt;code>FAILED_PRECONDITION&lt;/code> when the project or the account is in a state that does not allow the
-  /// operation (each RPC names its cases); &lt;code>ABORTED&lt;/code> when a concurrent change to the same account
-  /// won, in which case nothing was stored and the request can be retried.&lt;/p>
-  /// &lt;p>&lt;b>A change that reduces access is enforced before it is acknowledged.&lt;/b> When
-  /// &lt;code>UpdateSoftphoneAccount&lt;/code>, &lt;code>DeleteSoftphoneAccount&lt;/code> or
-  /// &lt;code>RevokeSoftphoneCertificate&lt;/code> is stored but the running Asterisk of a deployed project could
-  /// not be updated, the RPC fails with &lt;code>FAILED_PRECONDITION&lt;/code>; the stored change is applied by
-  /// the next successful change or deployment. &lt;code>CreateSoftphoneAccount&lt;/code> and
-  /// &lt;code>RotateSoftphoneCredentials&lt;/code> return their one-time secrets even then.&lt;/p>
-  /// &lt;p>Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller
-  /// without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires
-  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the account&amp;apos;s project, otherwise
-  /// &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project.&lt;/p>
+  /// ONDEWO VTSI API
+  ///
+  /// Manages the SOFTPHONE ACCOUNTS of a VTSI project: SIP accounts on the project&amp;apos;s Asterisk that a human uses from a softphone such as Zoiper, to call into the project&amp;apos;s listeners or to be reached by the project.
+  ///
+  /// A softphone account is NEVER one of the &lt;code>ondewo000N&lt;/code> accounts the per-call ondewo-sip containers register with: it has its own SIP credentials, its own endpoint on the Asterisk and, for &lt;code>SOFTPHONE_TRANSPORT_SECURITY_CLIENT_CERTIFICATE&lt;/code>, its own client certificate issued by the project&amp;apos;s SOFTPHONE certificate authority.
+  ///
+  /// &lt;b>Secrets are handed out exactly once.&lt;/b> The SIP password and the password-protected PKCS#12 bundle carrying the client private key appear only in the responses of &lt;code>CreateSoftphoneAccount&lt;/code> and &lt;code>RotateSoftphoneCredentials&lt;/code>. VTSI keeps no copy of the private key or of the PKCS#12 password, and stores the SIP password only in the form the Asterisk needs to verify a SIP digest. No other RPC returns a secret; a lost private key or password is recovered by rotating it.
+  ///
+  /// Errors are reported as gRPC status codes, not as &lt;code>error_message&lt;/code> fields: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, filter, field mask or value; &lt;code>NOT_FOUND&lt;/code> for an unknown project, account or certificate; &lt;code>ALREADY_EXISTS&lt;/code> for a &lt;code>sip_username&lt;/code> already taken in the project; &lt;code>FAILED_PRECONDITION&lt;/code> when the project or the account is in a state that does not allow the operation (each RPC names its cases); &lt;code>ABORTED&lt;/code> when a concurrent change to the same account won, in which case nothing was stored and the request can be retried.
+  ///
+  /// &lt;b>A change that reduces access is enforced before it is acknowledged.&lt;/b> When &lt;code>UpdateSoftphoneAccount&lt;/code>, &lt;code>DeleteSoftphoneAccount&lt;/code> or &lt;code>RevokeSoftphoneCertificate&lt;/code> is stored but the running Asterisk of a deployed project could not be updated, the RPC fails with &lt;code>FAILED_PRECONDITION&lt;/code>; the stored change is applied by the next successful change or deployment. &lt;code>CreateSoftphoneAccount&lt;/code> and &lt;code>RotateSoftphoneCredentials&lt;/code> return their one-time secrets even then.
+  ///
+  /// Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the account&amp;apos;s project, otherwise &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project.
   /// </summary>
   public static partial class Softphones
   {

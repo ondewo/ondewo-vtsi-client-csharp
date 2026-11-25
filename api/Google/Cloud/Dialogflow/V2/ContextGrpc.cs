@@ -40,9 +40,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// A context represents additional information included with user input or with an intent returned by the Dialogflow API. Contexts are helpful for differentiating user input which may be vague or have a different meaning depending on additional details from your application such as user setting and preferences, previous user input, where the user is in your application, geographic location, and so on.
   ///
-  /// You can include contexts as input parameters of a &lt;a href="index.html#ondewo.nlu.Sessions.DetectIntent">DetectIntent&lt;/a> (or &lt;a href="index.html#ondewo.nlu.Sessions.StreamingDetectIntent">StreamingDetectIntent&lt;/a>) request, or as output contexts included in the returned intent.
-  /// Contexts expire when an intent is matched, after the number of &lt;code>DetectIntent&lt;/code> requests specified by the &lt;code>lifespan_count&lt;/code> parameter, or after 10 minutes if no intents are matched for a &lt;code>DetectIntent&lt;/code> request.
-  /// For more information about contexts, see the &lt;a href="https://dialogflow.com/docs/contexts">Dialogflow documentation&lt;/a>.
+  /// You can include contexts as input parameters of a &lt;a href="index.html#ondewo.nlu.Sessions.DetectIntent">DetectIntent&lt;/a> (or &lt;a href="index.html#ondewo.nlu.Sessions.StreamingDetectIntent">StreamingDetectIntent&lt;/a>) request, or as output contexts included in the returned intent. Contexts expire when an intent is matched, after the number of &lt;code>DetectIntent&lt;/code> requests specified by the &lt;code>lifespan_count&lt;/code> parameter, or after 10 minutes if no intents are matched for a &lt;code>DetectIntent&lt;/code> request. For more information about contexts, see the &lt;a href="https://dialogflow.com/docs/contexts">Dialogflow documentation&lt;/a>.
   /// </summary>
   public static partial class Contexts
   {

@@ -31,7 +31,7 @@ namespace Ondewo.Vtsi {
             "by1zcGVlY2gucHJvdG8iQgoRQmFzZVNlcnZpY2VDb25maWcSDAoEaG9zdBgB",
             "IAEoCRIMCgRwb3J0GAIgASgFEhEKCWdycGNfY2VydBgDIAEoCSI1CgtDcmVk",
             "ZW50aWFscxIUCgxhY2NvdW50X25hbWUYASABKAkSEAoIcGFzc3dvcmQYAiAB",
-            "KAkixQMKDU5sdVZ0c2lDb25maWcSNwoPbmx1X2Jhc2VfY29uZmlnGAEgASgL",
+            "KAkipwYKDU5sdVZ0c2lDb25maWcSNwoPbmx1X2Jhc2VfY29uZmlnGAEgASgL",
             "Mh4ub25kZXdvLnZ0c2kuQmFzZVNlcnZpY2VDb25maWcSLwoLY3JlZGVudGlh",
             "bHMYAiABKAsyGC5vbmRld28udnRzaS5DcmVkZW50aWFsc0gAEhQKCmF1dGhf",
             "dG9rZW4YAyABKAlIABISCgphZ2VudF9uYW1lGAQgASgJEhUKDWxhbmd1YWdl",
@@ -40,277 +40,343 @@ namespace Ondewo.Vtsi {
             "dXRoX3Rva2VuGAggASgJEjoKCHBsYXRmb3JtGAkgASgOMiMub25kZXdvLm5s",
             "dS5JbnRlbnQuTWVzc2FnZS5QbGF0Zm9ybUgBiAEBElAKHHByZWVtcHRpdmVf",
             "Z2VuZXJhdGlvbl9jb25maWcYCiABKAsyKi5vbmRld28udnRzaS5ObHVQcmVl",
-            "bXB0aXZlR2VuZXJhdGlvbkNvbmZpZ0IQCg5hdXRoZW50aWNhdGlvbkILCglf",
-            "cGxhdGZvcm0i2QEKHU5sdVByZWVtcHRpdmVHZW5lcmF0aW9uQ29uZmlnEiAK",
-            "E21heF9kcmFmdHNfcGVyX3R1cm4YASABKAVIAIgBARIlChhtaW5fc3RhYmxl",
-            "X2R3ZWxsX3NlY29uZHMYAiABKAJIAYgBARIhChRtaW5faW50ZXJ2YWxfc2Vj",
-            "b25kcxgDIAEoAkgCiAEBQhYKFF9tYXhfZHJhZnRzX3Blcl90dXJuQhsKGV9t",
-            "aW5fc3RhYmxlX2R3ZWxsX3NlY29uZHNCFwoVX21pbl9pbnRlcnZhbF9zZWNv",
-            "bmRzIs8BCg1UMnNWdHNpQ29uZmlnEjcKD3Qyc19iYXNlX2NvbmZpZxgBIAEo",
-            "CzIeLm9uZGV3by52dHNpLkJhc2VTZXJ2aWNlQ29uZmlnEjUKEnQyc19yZXF1",
-            "ZXN0X2NvbmZpZxgCIAEoCzIZLm9uZGV3by50MnMuUmVxdWVzdENvbmZpZxJO",
-            "ChtwcmVlbXB0aXZlX3N5bnRoZXNpc19jb25maWcYAyABKAsyKS5vbmRld28u",
-            "dnRzaS5UMnNQcmVlbXB0aXZlU3ludGhlc2lzQ29uZmlnImIKHFQyc1ByZWVt",
-            "cHRpdmVTeW50aGVzaXNDb25maWcSFAoHZW5hYmxlZBgBIAEoCEgAiAEBEhQK",
-            "B2NodW5rZWQYAiABKAhIAYgBAUIKCghfZW5hYmxlZEIKCghfY2h1bmtlZCKU",
-            "AQoNUzJ0VnRzaUNvbmZpZxI3Cg9zMnRfYmFzZV9jb25maWcYASABKAsyHi5v",
-            "bmRld28udnRzaS5CYXNlU2VydmljZUNvbmZpZxJKCh1zMnRfdHJhbnNjcmli",
-            "ZV9yZXF1ZXN0X2NvbmZpZxgCIAEoCzIjLm9uZGV3by5zMnQuVHJhbnNjcmli",
-            "ZVJlcXVlc3RDb25maWcisQIKFENvbW1vblNlcnZpY2VzQ29uZmlnEjMKD3My",
-            "dF92dHNpX2NvbmZpZxgBIAEoCzIaLm9uZGV3by52dHNpLlMydFZ0c2lDb25m",
-            "aWcSMwoPbmx1X3Z0c2lfY29uZmlnGAIgASgLMhoub25kZXdvLnZ0c2kuTmx1",
-            "VnRzaUNvbmZpZxIzCg90MnNfdnRzaV9jb25maWcYAyABKAsyGi5vbmRld28u",
-            "dnRzaS5UMnNWdHNpQ29uZmlnEjMKD2NzaV92dHNpX2NvbmZpZxgEIAEoCzIa",
-            "Lm9uZGV3by52dHNpLkNzaVZ0c2lDb25maWcSRQoYdm9pY2VfaW50ZXJhY3Rp",
-            "b25fY29uZmlnGAUgASgLMiMub25kZXdvLnZ0c2kuVm9pY2VJbnRlcmFjdGlv",
-            "bkNvbmZpZyKyAwoWVm9pY2VJbnRlcmFjdGlvbkNvbmZpZxI/ChV0dXJuX2Rl",
-            "dGVjdGlvbl9jb25maWcYASABKAsyIC5vbmRld28udnRzaS5UdXJuRGV0ZWN0",
-            "aW9uQ29uZmlnEk0KHGludGVycnVwdGlvbl9oYW5kbGluZ19jb25maWcYAiAB",
-            "KAsyJy5vbmRld28udnRzaS5JbnRlcnJ1cHRpb25IYW5kbGluZ0NvbmZpZxJB",
-            "ChZyZXNwb25zZV90aW1pbmdfY29uZmlnGAMgASgLMiEub25kZXdvLnZ0c2ku",
-            "UmVzcG9uc2VUaW1pbmdDb25maWcSWAoiYW5zd2VyaW5nX21hY2hpbmVfZGV0",
-            "ZWN0aW9uX2NvbmZpZxgEIAEoCzIsLm9uZGV3by52dHNpLkFuc3dlcmluZ01h",
-            "Y2hpbmVEZXRlY3Rpb25Db25maWcSLAoLZHRtZl9jb25maWcYBSABKAsyFy5v",
-            "bmRld28udnRzaS5EdG1mQ29uZmlnEj0KFHdhcm1fdHJhbnNmZXJfY29uZmln",
-            "GAYgASgLMh8ub25kZXdvLnZ0c2kuV2FybVRyYW5zZmVyQ29uZmlnIsgBCgpE",
-            "dG1mQ29uZmlnEhQKB2VuYWJsZWQYASABKAhIAIgBARIVCghiYXJnZV9pbhgC",
-            "IAEoCEgBiAEBEiMKFmludGVyX2RpZ2l0X3RpbWVvdXRfbXMYAyABKA1IAogB",
-            "ARIeChF1bmRlY2xhcmVkX3BvbGljeRgEIAEoCUgDiAEBQgoKCF9lbmFibGVk",
-            "QgsKCV9iYXJnZV9pbkIZChdfaW50ZXJfZGlnaXRfdGltZW91dF9tc0IUChJf",
-            "dW5kZWNsYXJlZF9wb2xpY3kiqgsKEldhcm1UcmFuc2ZlckNvbmZpZxIUCgdl",
-            "bmFibGVkGAEgASgISACIAQESGQoMaW50cm9fcHJvbXB0GAIgASgJSAGIAQES",
-            "OwoRaW50cm9fdGV4dF9zb3VyY2UYAyABKA4yIC5vbmRld28udnRzaS5XYXJt",
-            "SW50cm9UZXh0U291cmNlEhsKDnJlYWR5X3F1ZXN0aW9uGAQgASgJSAKIAQES",
-            "JwoaY29uZmlybV9odW1hbl9iZWZvcmVfaW50cm8YBSABKAhIA4gBARIcCg9h",
-            "Y2NlcHRfcXVlc3Rpb24YBiABKAlIBIgBARIkChdkZWNsaW5lX3JlYXNvbl9x",
-            "dWVzdGlvbhgHIAEoCUgFiAEBEiQKF2NhbGxlcl9kZWNsaW5lZF9tZXNzYWdl",
-            "GAggASgJSAaIAQESJwoaY2FsbGVyX3VucmVhY2hhYmxlX21lc3NhZ2UYCSAB",
-            "KAlIB4gBARIYCgthY2NlcHRfZHRtZhgKIAEoCUgIiAEBEhkKDGRlY2xpbmVf",
-            "ZHRtZhgLIAEoCUgJiAEBEh8KEmRlY2lzaW9uX3RpbWVvdXRfcxgMIAEoDUgK",
-            "iAEBEiEKFG1heF9pbnRyb19kdXJhdGlvbl9zGA0gASgNSAuIAQESIAoTY2Fs",
-            "bGVlX2Rpc3BsYXlfbmFtZRgOIAEoCUgMiAEBEh8KEmNhbGxlZV9kZXNjcmlw",
-            "dGlvbhgPIAEoCUgNiAEBEkUKFG9uX2ludHJvX3VuYXZhaWxhYmxlGBAgASgO",
-            "Micub25kZXdvLnZ0c2kuV2FybUludHJvVW5hdmFpbGFibGVQb2xpY3kSIwoW",
-            "YXBwbHlfdG9fYm90X3RyYW5zZmVycxgRIAEoCEgOiAEBEiAKE2NhbGxlcl9o",
-            "b2xkX21lc3NhZ2UYEiABKAlID4gBARIeChFjYWxsZXJfaG9sZF9tdXNpYxgT",
-            "IAEoCEgQiAEBEicKGmNhbGxlcl9yZWFzc3VyZV9pbnRlcnZhbF9zGBQgASgN",
-            "SBGIAQESIgoVbGxtX2NjYWlfc2VydmljZV9uYW1lGBUgASgJSBKIAQESJgoZ",
-            "Y2FsbGVyX2Rpc2Nsb3N1cmVfbWVzc2FnZRgWIAEoCUgTiAEBEiQKF2NhbGxl",
-            "cl9hY2NlcHRlZF9tZXNzYWdlGBcgASgJSBSIAQESHgoRc3RvcmVfaW50cm9f",
-            "YXVkaW8YGCABKAhIFYgBARIcChRpbnRyb19saXN0ZW5lcl9uYW1lcxgZIAMo",
-            "CUIKCghfZW5hYmxlZEIPCg1faW50cm9fcHJvbXB0QhEKD19yZWFkeV9xdWVz",
-            "dGlvbkIdChtfY29uZmlybV9odW1hbl9iZWZvcmVfaW50cm9CEgoQX2FjY2Vw",
-            "dF9xdWVzdGlvbkIaChhfZGVjbGluZV9yZWFzb25fcXVlc3Rpb25CGgoYX2Nh",
-            "bGxlcl9kZWNsaW5lZF9tZXNzYWdlQh0KG19jYWxsZXJfdW5yZWFjaGFibGVf",
-            "bWVzc2FnZUIOCgxfYWNjZXB0X2R0bWZCDwoNX2RlY2xpbmVfZHRtZkIVChNf",
-            "ZGVjaXNpb25fdGltZW91dF9zQhcKFV9tYXhfaW50cm9fZHVyYXRpb25fc0IW",
-            "ChRfY2FsbGVlX2Rpc3BsYXlfbmFtZUIVChNfY2FsbGVlX2Rlc2NyaXB0aW9u",
-            "QhkKF19hcHBseV90b19ib3RfdHJhbnNmZXJzQhYKFF9jYWxsZXJfaG9sZF9t",
-            "ZXNzYWdlQhQKEl9jYWxsZXJfaG9sZF9tdXNpY0IdChtfY2FsbGVyX3JlYXNz",
-            "dXJlX2ludGVydmFsX3NCGAoWX2xsbV9jY2FpX3NlcnZpY2VfbmFtZUIcChpf",
-            "Y2FsbGVyX2Rpc2Nsb3N1cmVfbWVzc2FnZUIaChhfY2FsbGVyX2FjY2VwdGVk",
-            "X21lc3NhZ2VCFAoSX3N0b3JlX2ludHJvX2F1ZGlvIrcDCg9XYXJtSW50cm9S",
-            "ZWNvcmQSEAoIaW50cm9faWQYASABKAkSMAoIZGVjaXNpb24YAiABKA4yHi5v",
-            "bmRld28udnRzaS5XYXJtSW50cm9EZWNpc2lvbhIzCgpkZWNpZGVkX2J5GAMg",
-            "ASgOMh8ub25kZXdvLnZ0c2kuV2FybUludHJvRGVjaWRlZEJ5Eh4KFmRlY2xp",
-            "bmVfcmVhc29uX3ByZXNlbnQYBCABKAgSFwoPaW50cm9fY2FsbF9uYW1lGAUg",
-            "ASgJEjAKDXJpbmdfZHVyYXRpb24YBiABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb24SMQoOaW50cm9fZHVyYXRpb24YByABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb24SNQoLdGV4dF9zb3VyY2UYCCABKA4yIC5vbmRld28u",
-            "dnRzaS5XYXJtSW50cm9UZXh0U291cmNlEhYKDnRleHRfZmVsbF9iYWNrGAkg",
-            "ASgIEg0KBWNhdXNlGAogASgJEhgKEG5vdGljZV9kZWxpdmVyZWQYCyABKAgS",
-            "FQoNaW50cm9fc3RhcnRlZBgMIAEoCCKTCwoTVHVybkRldGVjdGlvbkNvbmZp",
-            "ZxJACgRtb2RlGAEgASgOMjIub25kZXdvLnZ0c2kuVHVybkRldGVjdGlvbkNv",
-            "bmZpZy5UdXJuRGV0ZWN0aW9uTW9kZRIqCh1taW5fZW5kcG9pbnRpbmdfZGVs",
-            "YXlfc2Vjb25kcxgCIAEoAkgAiAEBEioKHW1heF9lbmRwb2ludGluZ19kZWxh",
-            "eV9zZWNvbmRzGAMgASgCSAGIAQESRgoOdHVybl9lYWdlcm5lc3MYBCABKA4y",
-            "Li5vbmRld28udnRzaS5UdXJuRGV0ZWN0aW9uQ29uZmlnLlR1cm5FYWdlcm5l",
-            "c3MSKQocdHVybl9kZXRlY3Rpb25fc3lzdGVtX3Byb21wdBgFIAEoCUgCiAEB",
-            "EicKGnR1cm5fZGV0ZWN0aW9uX3VzZXJfcHJvbXB0GAYgASgJSAOIAQESJwoa",
-            "Y29udmVyc2F0aW9uX2NvbnRleHRfdHVybnMYByABKA1IBIgBARIgChNzZW1h",
-            "bnRpY19tb2RlbF9uYW1lGAggASgJSAWIAQESLgohZW5kX29mX3R1cm5fcHJv",
-            "YmFiaWxpdHlfdGhyZXNob2xkGAkgASgCSAaIAQESRwoKaG9sZF9iYW5kcxgK",
-            "IAEoCzIzLm9uZGV3by52dHNpLlR1cm5EZXRlY3Rpb25Db25maWcuRW5kT2ZU",
-            "dXJuSG9sZEJhbmRzEiAKE3VuY2VydGFpbl9taW5fd29yZHMYCyABKA1IB4gB",
-            "ARIrCh5pbmNvbXBsZXRlX21heF9zaWxlbmNlX3NlY29uZHMYDCABKAJICIgB",
-            "ARIeChFleGFjdF9wcm9iYWJpbGl0eRgNIAEoCEgJiAEBEicKGmZpbmFsX21l",
-            "cmdlX3dpbmRvd19zZWNvbmRzGA4gASgCSAqIAQESNgoQZGljdGF0aW9uX2Nv",
-            "bmZpZxgPIAEoCzIcLm9uZGV3by52dHNpLkRpY3RhdGlvbkNvbmZpZxpXChJF",
-            "bmRPZlR1cm5Ib2xkQmFuZHMSQQoFYmFuZHMYASADKAsyMi5vbmRld28udnRz",
-            "aS5UdXJuRGV0ZWN0aW9uQ29uZmlnLkVuZE9mVHVybkhvbGRCYW5kGksKEUVu",
-            "ZE9mVHVybkhvbGRCYW5kEhkKEXVwcGVyX3Byb2JhYmlsaXR5GAEgASgCEhsK",
-            "E21heF9zaWxlbmNlX3NlY29uZHMYAiABKAIiZgoRVHVybkRldGVjdGlvbk1v",
-            "ZGUSIwofVFVSTl9ERVRFQ1RJT05fTU9ERV9VTlNQRUNJRklFRBAAEgcKA1ZB",
-            "RBABEhIKDlNFTUFOVElDX01PREVMEAISDwoLQVVESU9fTU9ERUwQAyJTCg1U",
-            "dXJuRWFnZXJuZXNzEh4KGlRVUk5fRUFHRVJORVNTX1VOU1BFQ0lGSUVEEAAS",
-            "CwoHUEFUSUVOVBABEgoKBk5PUk1BTBACEgkKBUVBR0VSEANCIAoeX21pbl9l",
-            "bmRwb2ludGluZ19kZWxheV9zZWNvbmRzQiAKHl9tYXhfZW5kcG9pbnRpbmdf",
-            "ZGVsYXlfc2Vjb25kc0IfCh1fdHVybl9kZXRlY3Rpb25fc3lzdGVtX3Byb21w",
-            "dEIdChtfdHVybl9kZXRlY3Rpb25fdXNlcl9wcm9tcHRCHQobX2NvbnZlcnNh",
-            "dGlvbl9jb250ZXh0X3R1cm5zQhYKFF9zZW1hbnRpY19tb2RlbF9uYW1lQiQK",
-            "Il9lbmRfb2ZfdHVybl9wcm9iYWJpbGl0eV90aHJlc2hvbGRCFgoUX3VuY2Vy",
-            "dGFpbl9taW5fd29yZHNCIQofX2luY29tcGxldGVfbWF4X3NpbGVuY2Vfc2Vj",
-            "b25kc0IUChJfZXhhY3RfcHJvYmFiaWxpdHlCHQobX2ZpbmFsX21lcmdlX3dp",
-            "bmRvd19zZWNvbmRzIpAGCg9EaWN0YXRpb25Db25maWcSGQoMaG9sZF9lbmFi",
-            "bGVkGAEgASgISACIAQESIwoWZXhwZWN0ZWRfaW5wdXRfZW5hYmxlZBgCIAEo",
-            "CEgBiAEBEiwKH3JlYWRfYmFja19mcm9tX2JvdF90ZXh0X2VuYWJsZWQYAyAB",
-            "KAhIAogBARIlChhob2xkX2dlbmVyaWNfbWF4X3NlY29uZHMYBCABKAJIA4gB",
-            "ARJgChxob2xkX21heF9zZWNvbmRzX2J5X2NhdGVnb3J5GAUgAygLMjoub25k",
-            "ZXdvLnZ0c2kuRGljdGF0aW9uQ29uZmlnLkhvbGRNYXhTZWNvbmRzQnlDYXRl",
-            "Z29yeUVudHJ5EioKHWhvbGRfaW52YWxpZF9jaGVja3N1bV9zZWNvbmRzGAYg",
-            "ASgCSASIAQESKwoeZWFybHlfY29tbWl0X29uX2NvbXBsZXRlX3ZhbHVlGAcg",
-            "ASgISAWIAQESLgohczJ0X3Nsb3RfbWluX2R1cmF0aW9uX29mZl9zZWNvbmRz",
-            "GAggASgCSAaIAQESNgopczJ0X3Nsb3RfbWluX2R1cmF0aW9uX29mZl9yZXN0",
-            "b3JlX3NlY29uZHMYCSABKAJIB4gBARo/Ch1Ib2xkTWF4U2Vjb25kc0J5Q2F0",
-            "ZWdvcnlFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAI6AjgBQg8K",
-            "DV9ob2xkX2VuYWJsZWRCGQoXX2V4cGVjdGVkX2lucHV0X2VuYWJsZWRCIgog",
-            "X3JlYWRfYmFja19mcm9tX2JvdF90ZXh0X2VuYWJsZWRCGwoZX2hvbGRfZ2Vu",
-            "ZXJpY19tYXhfc2Vjb25kc0IgCh5faG9sZF9pbnZhbGlkX2NoZWNrc3VtX3Nl",
-            "Y29uZHNCIQofX2Vhcmx5X2NvbW1pdF9vbl9jb21wbGV0ZV92YWx1ZUIkCiJf",
-            "czJ0X3Nsb3RfbWluX2R1cmF0aW9uX29mZl9zZWNvbmRzQiwKKl9zMnRfc2xv",
-            "dF9taW5fZHVyYXRpb25fb2ZmX3Jlc3RvcmVfc2Vjb25kcyKiBQoaSW50ZXJy",
-            "dXB0aW9uSGFuZGxpbmdDb25maWcSFAoHZW5hYmxlZBgBIAEoCEgAiAEBEi4K",
-            "IW1pbl9pbnRlcnJ1cHRpb25fZHVyYXRpb25fc2Vjb25kcxgCIAEoAkgBiAEB",
-            "EiMKFm1pbl9pbnRlcnJ1cHRpb25fd29yZHMYAyABKAVIAogBARIvCiJmYWxz",
-            "ZV9pbnRlcnJ1cHRpb25fdGltZW91dF9zZWNvbmRzGAQgASgCSAOIAQESLAof",
-            "cmVzdW1lX2FmdGVyX2ZhbHNlX2ludGVycnVwdGlvbhgFIAEoCEgEiAEBEhwK",
-            "D2JhY2tvZmZfc2Vjb25kcxgGIAEoAkgFiAEBEiwKH2ZpcnN0X21lc3NhZ2Vf",
-            "cHJvdGVjdGVkX3NlY29uZHMYByABKAJIBogBARIxCiR0cmFuc2NyaWJlX29u",
-            "X2Rpc2FibGVkX2ludGVycnVwdGlvbnMYCCABKAhIB4gBARIlChhpbnRlcnJ1",
-            "cHRpb25fZmFkZV9vdXRfbXMYCSABKAVICIgBAUIKCghfZW5hYmxlZEIkCiJf",
-            "bWluX2ludGVycnVwdGlvbl9kdXJhdGlvbl9zZWNvbmRzQhkKF19taW5faW50",
-            "ZXJydXB0aW9uX3dvcmRzQiUKI19mYWxzZV9pbnRlcnJ1cHRpb25fdGltZW91",
-            "dF9zZWNvbmRzQiIKIF9yZXN1bWVfYWZ0ZXJfZmFsc2VfaW50ZXJydXB0aW9u",
-            "QhIKEF9iYWNrb2ZmX3NlY29uZHNCIgogX2ZpcnN0X21lc3NhZ2VfcHJvdGVj",
-            "dGVkX3NlY29uZHNCJwolX3RyYW5zY3JpYmVfb25fZGlzYWJsZWRfaW50ZXJy",
-            "dXB0aW9uc0IbChlfaW50ZXJydXB0aW9uX2ZhZGVfb3V0X21zIv8CChRSZXNw",
-            "b25zZVRpbWluZ0NvbmZpZxIhChR0dXJuX3RpbWVvdXRfc2Vjb25kcxgBIAEo",
-            "AkgAiAEBEi0KIHNpbGVuY2VfZW5kX2NhbGxfdGltZW91dF9zZWNvbmRzGAIg",
-            "ASgCSAGIAQESOwoTc29mdF90aW1lb3V0X2NvbmZpZxgDIAEoCzIeLm9uZGV3",
-            "by52dHNpLlNvZnRUaW1lb3V0Q29uZmlnEioKHXByZWVtcHRpdmVfZ2VuZXJh",
-            "dGlvbl9lbmFibGVkGAQgASgISAKIAQESKgoddDJzX2NodW5rZWRfc3RyZWFt",
-            "aW5nX2VuYWJsZWQYBSABKAhIA4gBAUIXChVfdHVybl90aW1lb3V0X3NlY29u",
-            "ZHNCIwohX3NpbGVuY2VfZW5kX2NhbGxfdGltZW91dF9zZWNvbmRzQiAKHl9w",
-            "cmVlbXB0aXZlX2dlbmVyYXRpb25fZW5hYmxlZEIgCh5fdDJzX2NodW5rZWRf",
-            "c3RyZWFtaW5nX2VuYWJsZWQijwEKEVNvZnRUaW1lb3V0Q29uZmlnEhwKD3Rp",
-            "bWVvdXRfc2Vjb25kcxgBIAEoAkgAiAEBEhAKCG1lc3NhZ2VzGAIgAygJEh8K",
-            "Em1heF9wZXJfZ2VuZXJhdGlvbhgDIAEoBUgBiAEBQhIKEF90aW1lb3V0X3Nl",
-            "Y29uZHNCFQoTX21heF9wZXJfZ2VuZXJhdGlvbiL+CwofQW5zd2VyaW5nTWFj",
-            "aGluZURldGVjdGlvbkNvbmZpZxITCgZhY3RpdmUYASABKAhIAIgBARJLCgZh",
-            "Y3Rpb24YAiABKA4yNi5vbmRld28udnRzaS5BbnN3ZXJpbmdNYWNoaW5lRGV0",
-            "ZWN0aW9uQ29uZmlnLkFtZEFjdGlvbkgBiAEBElUKC3NlbnNpdGl2aXR5GAMg",
-            "ASgOMjsub25kZXdvLnZ0c2kuQW5zd2VyaW5nTWFjaGluZURldGVjdGlvbkNv",
-            "bmZpZy5BbWRTZW5zaXRpdml0eUgCiAEBEiEKFG1heF9kZWNpc2lvbl90aW1l",
-            "X21zGAQgASgFSAOIAQESIAoTbWF4X21hY2hpbmVfd2FpdF9tcxgFIAEoBUgE",
-            "iAEBEigKG2JlZXBfd2FpdF9hZnRlcl9ncmVldGluZ19tcxgGIAEoBUgFiAEB",
-            "Eh8KEmluaXRpYWxfc2lsZW5jZV9tcxgHIAEoBUgGiAEBEiIKFW1heF9odW1h",
-            "bl9ncmVldGluZ19tcxgIIAEoBUgHiAEBEiQKF2dyZWV0aW5nX2VuZF9zaWxl",
-            "bmNlX21zGAkgASgFSAiIAQESIgoVYmVlcF9kZXRlY3Rpb25fYWN0aXZlGAog",
-            "ASgISAmIAQESIgoaYWRkaXRpb25hbF9tYWNoaW5lX3BocmFzZXMYCyADKAkS",
-            "IAoYYWRkaXRpb25hbF9odW1hbl9waHJhc2VzGAwgAygJEhsKDmhhbmdfdXBf",
-            "b25fZmF4GA0gASgISAqIAQESLAofaGFuZ191cF9vbl9uZXR3b3JrX2Fubm91",
-            "bmNlbWVudBgOIAEoCEgLiAEBEhsKDmhhbmdfdXBfb25faXZyGA8gASgISAyI",
-            "AQESJgoZaGFuZ191cF9vbl9jYWxsX3NjcmVlbmluZxgQIAEoCEgNiAEBEiEK",
-            "FHZvaWNlX21lc3NhZ2VfaW50ZW50GBEgASgJSA6IAQESKwoedm9pY2VfbWVz",
-            "c2FnZV9tYXhfYmVlcF93YWl0X21zGBIgASgFSA+IAQESJQoYdm9pY2VfbWVz",
-            "c2FnZV90aW1lb3V0X21zGBMgASgFSBCIAQESJQoYa2V5d29yZF9kZXRlY3Rp",
-            "b25fYWN0aXZlGBQgASgISBGIAQESJQoYY2FkZW5jZV9kZXRlY3Rpb25fYWN0",
-            "aXZlGBUgASgISBKIAQEiXgoJQW1kQWN0aW9uEhoKFkFNRF9BQ1RJT05fVU5T",
-            "UEVDSUZJRUQQABILCgdIQU5HX1VQEAESDwoLREVURUNUX09OTFkQAhIXChNM",
-            "RUFWRV9WT0lDRV9NRVNTQUdFEAMiUAoOQW1kU2Vuc2l0aXZpdHkSHwobQU1E",
-            "X1NFTlNJVElWSVRZX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAESCgoGTUVESVVN",
-            "EAISCAoESElHSBADQgkKB19hY3RpdmVCCQoHX2FjdGlvbkIOCgxfc2Vuc2l0",
-            "aXZpdHlCFwoVX21heF9kZWNpc2lvbl90aW1lX21zQhYKFF9tYXhfbWFjaGlu",
-            "ZV93YWl0X21zQh4KHF9iZWVwX3dhaXRfYWZ0ZXJfZ3JlZXRpbmdfbXNCFQoT",
-            "X2luaXRpYWxfc2lsZW5jZV9tc0IYChZfbWF4X2h1bWFuX2dyZWV0aW5nX21z",
-            "QhoKGF9ncmVldGluZ19lbmRfc2lsZW5jZV9tc0IYChZfYmVlcF9kZXRlY3Rp",
-            "b25fYWN0aXZlQhEKD19oYW5nX3VwX29uX2ZheEIiCiBfaGFuZ191cF9vbl9u",
-            "ZXR3b3JrX2Fubm91bmNlbWVudEIRCg9faGFuZ191cF9vbl9pdnJCHAoaX2hh",
-            "bmdfdXBfb25fY2FsbF9zY3JlZW5pbmdCFwoVX3ZvaWNlX21lc3NhZ2VfaW50",
-            "ZW50QiEKH192b2ljZV9tZXNzYWdlX21heF9iZWVwX3dhaXRfbXNCGwoZX3Zv",
-            "aWNlX21lc3NhZ2VfdGltZW91dF9tc0IbChlfa2V5d29yZF9kZXRlY3Rpb25f",
-            "YWN0aXZlQhsKGV9jYWRlbmNlX2RldGVjdGlvbl9hY3RpdmUiKAoNU2lwQmFz",
-            "ZUNvbmZpZxIXCg9zaXBfc2ltX3ZlcnNpb24YASABKAkizwEKD1NpcENhbGxl",
-            "ckNvbmZpZxIzCg9zaXBfYmFzZV9jb25maWcYASABKAsyGi5vbmRld28udnRz",
-            "aS5TaXBCYXNlQ29uZmlnEhEKCWNhbGxlZV9pZBgCIAEoCRJBCgtzaXBfaGVh",
-            "ZGVycxgDIAMoCzIsLm9uZGV3by52dHNpLlNpcENhbGxlckNvbmZpZy5TaXBI",
-            "ZWFkZXJzRW50cnkaMQoPU2lwSGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEi4wMKDUNzaVZ0c2lDb25maWcSOQoSczJ0X3Z0",
-            "c2lfY2FsbGJhY2tzGAEgASgLMh0ub25kZXdvLnZ0c2kuUzJ0VnRzaUNhbGxi",
-            "YWNrcxI5ChJubHVfdnRzaV9jYWxsYmFja3MYAiABKAsyHS5vbmRld28udnRz",
-            "aS5ObHVWdHNpQ2FsbGJhY2tzEjkKEnQyc192dHNpX2NhbGxiYWNrcxgDIAEo",
-            "CzIdLm9uZGV3by52dHNpLlQyc1Z0c2lDYWxsYmFja3MSSAoZYXVkaW9fb2Jq",
-            "ZWN0X3N0b3JlX2NvbmZpZxgEIAEoCzIlLm9uZGV3by52dHNpLkF1ZGlvT2Jq",
-            "ZWN0U3RvcmFnZUNvbmZpZxI/ChVtZXNzYWdlX2Jyb2tlcl9jb25maWcYBSAB",
-            "KAsyIC5vbmRld28udnRzaS5NZXNzYWdlQnJva2VyQ29uZmlnEiYKGWFjdGl2",
-            "YXRlX2NvbnRyb2xfbWVzc2FnZXMYBiABKAhIAIgBARJQChxwcmVlbXB0aXZl",
-            "X2dlbmVyYXRpb25fY29uZmlnGAcgASgLMioub25kZXdvLnZ0c2kuQ3NpUHJl",
-            "ZW1wdGl2ZUdlbmVyYXRpb25Db25maWdCHAoaX2FjdGl2YXRlX2NvbnRyb2xf",
-            "bWVzc2FnZXMiiwEKHUNzaVByZWVtcHRpdmVHZW5lcmF0aW9uQ29uZmlnEhQK",
-            "B2VuYWJsZWQYASABKAhIAIgBARIoChtjb21taXRfd2FpdF90aW1lb3V0X3Nl",
-            "Y29uZHMYAiABKAJIAYgBAUIKCghfZW5hYmxlZEIeChxfY29tbWl0X3dhaXRf",
-            "dGltZW91dF9zZWNvbmRzItoBChhBdWRpb09iamVjdFN0b3JhZ2VDb25maWcS",
-            "KgodYWN0aXZhdGVfYXVkaW9fb2JqZWN0X3N0b3JhZ2UYASABKAhIAIgBARJw",
-            "Ci9hdWRpb19vYmplY3Rfc3RvcmFnZV9zZXJ2aWNlc19hY3RpdmF0aW9uX2Nv",
-            "bmZpZxgCIAEoCzI3Lm9uZGV3by52dHNpLkF1ZGlvT2JqZWN0U3RvcmFnZVNl",
-            "cnZpY2VzQWN0aXZhdGlvbkNvbmZpZ0IgCh5fYWN0aXZhdGVfYXVkaW9fb2Jq",
-            "ZWN0X3N0b3JhZ2UihAEKKkF1ZGlvT2JqZWN0U3RvcmFnZVNlcnZpY2VzQWN0",
-            "aXZhdGlvbkNvbmZpZxIZCgxhY3RpdmF0ZV9zMnQYASABKAhIAIgBARIZCgxh",
-            "Y3RpdmF0ZV90MnMYAiABKAhIAYgBAUIPCg1fYWN0aXZhdGVfczJ0Qg8KDV9h",
-            "Y3RpdmF0ZV90MnMikAIKE01lc3NhZ2VCcm9rZXJDb25maWcSJAoXYWN0aXZh",
-            "dGVfbWVzc2FnZV9icm9rZXIYASABKAhIAYgBARJlCiltZXNzYWdlX2Jyb2tl",
-            "cl9zZXJ2aWNlc19hY3RpdmF0aW9uX2NvbmZpZxgCIAEoCzIyLm9uZGV3by52",
-            "dHNpLk1lc3NhZ2VCcm9rZXJTZXJ2aWNlc0FjdGl2YXRpb25Db25maWcSNwoQ",
-            "cmFiYml0X21xX2NvbmZpZxgDIAEoCzIbLm9uZGV3by52dHNpLlJhYmJpdE1x",
-            "Q29uZmlnSABCFwoVbWVzc2FnZV9icm9rZXJfY29uZmlnQhoKGF9hY3RpdmF0",
-            "ZV9tZXNzYWdlX2Jyb2tlciLXAQolTWVzc2FnZUJyb2tlclNlcnZpY2VzQWN0",
-            "aXZhdGlvbkNvbmZpZxIZCgxhY3RpdmF0ZV9zMnQYASABKAhIAIgBARIZCgxh",
-            "Y3RpdmF0ZV9ubHUYAiABKAhIAYgBARIZCgxhY3RpdmF0ZV90MnMYAyABKAhI",
-            "AogBARIZCgxhY3RpdmF0ZV9zaXAYBCABKAhIA4gBAUIPCg1fYWN0aXZhdGVf",
-            "czJ0Qg8KDV9hY3RpdmF0ZV9ubHVCDwoNX2FjdGl2YXRlX3Qyc0IPCg1fYWN0",
-            "aXZhdGVfc2lwIlwKDlJhYmJpdE1xQ29uZmlnEgwKBGhvc3QYASABKAkSDAoE",
-            "cG9ydBgCIAEoBRIOCgZwb3J0XzIYAyABKAUSDAoEdXNlchgEIAEoCRIQCghw",
-            "YXNzd29yZBgFIAEoCSJJChBTMnRWdHNpQ2FsbGJhY2tzEhkKEXByZV9zMnRf",
-            "Y2FsbGJhY2tzGAEgAygJEhoKEnBvc3RfczJ0X2NhbGxiYWNrcxgCIAMoCSJJ",
-            "ChBObHVWdHNpQ2FsbGJhY2tzEhkKEXByZV9ubHVfY2FsbGJhY2tzGAEgAygJ",
-            "EhoKEnBvc3Rfbmx1X2NhbGxiYWNrcxgCIAMoCSJJChBUMnNWdHNpQ2FsbGJh",
-            "Y2tzEhkKEXByZV90MnNfY2FsbGJhY2tzGAEgAygJEhoKEnBvc3RfdDJzX2Nh",
-            "bGxiYWNrcxgCIAMoCSqKAQoTV2FybUludHJvVGV4dFNvdXJjZRImCiJXQVJN",
-            "X0lOVFJPX1RFWFRfU09VUkNFX1VOU1BFQ0lGSUVEEAASIwofV0FSTV9JTlRS",
-            "T19URVhUX1NPVVJDRV9URU1QTEFURRABEiYKIldBUk1fSU5UUk9fVEVYVF9T",
-            "T1VSQ0VfTExNX1NVTU1BUlkQAiq4AQoaV2FybUludHJvVW5hdmFpbGFibGVQ",
-            "b2xpY3kSLQopV0FSTV9JTlRST19VTkFWQUlMQUJMRV9QT0xJQ1lfVU5TUEVD",
-            "SUZJRUQQABI3CjNXQVJNX0lOVFJPX1VOQVZBSUxBQkxFX1BPTElDWV9DT05O",
-            "RUNUX1dJVEhPVVRfSU5UUk8QARIyCi5XQVJNX0lOVFJPX1VOQVZBSUxBQkxF",
-            "X1BPTElDWV9SRVRVUk5fVE9fQ0FMTEVSEAIqoQEKEVdhcm1JbnRyb0RlY2lz",
-            "aW9uEiMKH1dBUk1fSU5UUk9fREVDSVNJT05fVU5TUEVDSUZJRUQQABIgChxX",
-            "QVJNX0lOVFJPX0RFQ0lTSU9OX0FDQ0VQVEVEEAESIAocV0FSTV9JTlRST19E",
-            "RUNJU0lPTl9ERUNMSU5FRBACEiMKH1dBUk1fSU5UUk9fREVDSVNJT05fTk9f",
-            "REVDSVNJT04QAyqgAQoSV2FybUludHJvRGVjaWRlZEJ5EiUKIVdBUk1fSU5U",
-            "Uk9fREVDSURFRF9CWV9VTlNQRUNJRklFRBAAEh4KGldBUk1fSU5UUk9fREVD",
-            "SURFRF9CWV9EVE1GEAESIAocV0FSTV9JTlRST19ERUNJREVEX0JZX1NQRUVD",
-            "SBACEiEKHVdBUk1fSU5UUk9fREVDSURFRF9CWV9USU1FT1VUEANiBnByb3Rv",
-            "Mw=="));
+            "bXB0aXZlR2VuZXJhdGlvbkNvbmZpZxIlChhhaV90ZWFtc19maWxsZXJzX2F1",
+            "ZGlibGUYCyABKAhIAogBARIkChdmYWlsdXJlX2Fwb2xvZ3lfbWVzc2FnZRgM",
+            "IAEoCUgDiAEBEigKG3Nlc3Npb25faWRfZnJvbV9zaXBfY29udGV4dBgNIAEo",
+            "CEgEiAEBEioKHWFpX3RlYW1zX3B1c2hfbWF4X2FnZV9zZWNvbmRzGA4gASgC",
+            "SAWIAQESJQoYYWlfdGVhbXNfcHVzaF9tYXhfc3Bva2VuGA8gASgFSAaIAQFC",
+            "EAoOYXV0aGVudGljYXRpb25CCwoJX3BsYXRmb3JtQhsKGV9haV90ZWFtc19m",
+            "aWxsZXJzX2F1ZGlibGVCGgoYX2ZhaWx1cmVfYXBvbG9neV9tZXNzYWdlQh4K",
+            "HF9zZXNzaW9uX2lkX2Zyb21fc2lwX2NvbnRleHRCIAoeX2FpX3RlYW1zX3B1",
+            "c2hfbWF4X2FnZV9zZWNvbmRzQhsKGV9haV90ZWFtc19wdXNoX21heF9zcG9r",
+            "ZW4i2QEKHU5sdVByZWVtcHRpdmVHZW5lcmF0aW9uQ29uZmlnEiAKE21heF9k",
+            "cmFmdHNfcGVyX3R1cm4YASABKAVIAIgBARIlChhtaW5fc3RhYmxlX2R3ZWxs",
+            "X3NlY29uZHMYAiABKAJIAYgBARIhChRtaW5faW50ZXJ2YWxfc2Vjb25kcxgD",
+            "IAEoAkgCiAEBQhYKFF9tYXhfZHJhZnRzX3Blcl90dXJuQhsKGV9taW5fc3Rh",
+            "YmxlX2R3ZWxsX3NlY29uZHNCFwoVX21pbl9pbnRlcnZhbF9zZWNvbmRzIskC",
+            "Cg1UMnNWdHNpQ29uZmlnEjcKD3Qyc19iYXNlX2NvbmZpZxgBIAEoCzIeLm9u",
+            "ZGV3by52dHNpLkJhc2VTZXJ2aWNlQ29uZmlnEjUKEnQyc19yZXF1ZXN0X2Nv",
+            "bmZpZxgCIAEoCzIZLm9uZGV3by50MnMuUmVxdWVzdENvbmZpZxJOChtwcmVl",
+            "bXB0aXZlX3N5bnRoZXNpc19jb25maWcYAyABKAsyKS5vbmRld28udnRzaS5U",
+            "MnNQcmVlbXB0aXZlU3ludGhlc2lzQ29uZmlnEicKGnN5bnRoZXNpemVfdGlt",
+            "ZW91dF9zZWNvbmRzGAQgASgCSACIAQESHAoPY2FjaGVfcmV0ZW50aW9uGAUg",
+            "ASgJSAGIAQFCHQobX3N5bnRoZXNpemVfdGltZW91dF9zZWNvbmRzQhIKEF9j",
+            "YWNoZV9yZXRlbnRpb24iYgocVDJzUHJlZW1wdGl2ZVN5bnRoZXNpc0NvbmZp",
+            "ZxIUCgdlbmFibGVkGAEgASgISACIAQESFAoHY2h1bmtlZBgCIAEoCEgBiAEB",
+            "QgoKCF9lbmFibGVkQgoKCF9jaHVua2VkIs4BCg1TMnRWdHNpQ29uZmlnEjcK",
+            "D3MydF9iYXNlX2NvbmZpZxgBIAEoCzIeLm9uZGV3by52dHNpLkJhc2VTZXJ2",
+            "aWNlQ29uZmlnEkoKHXMydF90cmFuc2NyaWJlX3JlcXVlc3RfY29uZmlnGAIg",
+            "ASgLMiMub25kZXdvLnMydC5UcmFuc2NyaWJlUmVxdWVzdENvbmZpZxIgChNm",
+            "YWlsdXJlX3NpcF90cmlnZ2VyGAMgASgJSACIAQFCFgoUX2ZhaWx1cmVfc2lw",
+            "X3RyaWdnZXIirAMKFENvbW1vblNlcnZpY2VzQ29uZmlnEjMKD3MydF92dHNp",
+            "X2NvbmZpZxgBIAEoCzIaLm9uZGV3by52dHNpLlMydFZ0c2lDb25maWcSMwoP",
+            "bmx1X3Z0c2lfY29uZmlnGAIgASgLMhoub25kZXdvLnZ0c2kuTmx1VnRzaUNv",
+            "bmZpZxIzCg90MnNfdnRzaV9jb25maWcYAyABKAsyGi5vbmRld28udnRzaS5U",
+            "MnNWdHNpQ29uZmlnEjMKD2NzaV92dHNpX2NvbmZpZxgEIAEoCzIaLm9uZGV3",
+            "by52dHNpLkNzaVZ0c2lDb25maWcSRQoYdm9pY2VfaW50ZXJhY3Rpb25fY29u",
+            "ZmlnGAUgASgLMiMub25kZXdvLnZ0c2kuVm9pY2VJbnRlcmFjdGlvbkNvbmZp",
+            "ZxIzCg9zaXBfdnRzaV9jb25maWcYBiABKAsyGi5vbmRld28udnRzaS5TaXBW",
+            "dHNpQ29uZmlnEiYKGW1heF9jYWxsX2R1cmF0aW9uX3NlY29uZHMYByABKA1I",
+            "AIgBAUIcChpfbWF4X2NhbGxfZHVyYXRpb25fc2Vjb25kcyKNBQoNU2lwVnRz",
+            "aUNvbmZpZxIgChNwbGF5YmFja19sYXRlbmN5X21zGAEgASgNSACIAQESIwoW",
+            "c29mdHdhcmVfY2xvY2tfZW5hYmxlZBgCIAEoCEgBiAEBEi4KIXJ0cF9zdGF0",
+            "c19zYW1wbGVfaW50ZXJ2YWxfc2Vjb25kcxgDIAEoAkgCiAEBEjUKKGhhbmd1",
+            "cF93YWl0X2Zvcl9wbGF5YmFja190aW1lb3V0X3NlY29uZHMYBCABKAJIA4gB",
+            "ARIrCh5vdXRnb2luZ19kaWFsX3dhdGNoZG9nX3NlY29uZHMYBSABKAJIBIgB",
+            "ARImChlyZWdpc3Rlcl9pbnRlcnZhbF9zZWNvbmRzGAYgASgNSAWIAQESLQog",
+            "Y2FsbF9hdWRpb19zdHJlYW1fbWF4X2NvbmN1cnJlbnQYByABKA1IBogBARIz",
+            "CiZjYWxsX2F1ZGlvX3N0cmVhbV9tYXhfZHVyYXRpb25fc2Vjb25kcxgIIAEo",
+            "DUgHiAEBQhYKFF9wbGF5YmFja19sYXRlbmN5X21zQhkKF19zb2Z0d2FyZV9j",
+            "bG9ja19lbmFibGVkQiQKIl9ydHBfc3RhdHNfc2FtcGxlX2ludGVydmFsX3Nl",
+            "Y29uZHNCKwopX2hhbmd1cF93YWl0X2Zvcl9wbGF5YmFja190aW1lb3V0X3Nl",
+            "Y29uZHNCIQofX291dGdvaW5nX2RpYWxfd2F0Y2hkb2dfc2Vjb25kc0IcChpf",
+            "cmVnaXN0ZXJfaW50ZXJ2YWxfc2Vjb25kc0IjCiFfY2FsbF9hdWRpb19zdHJl",
+            "YW1fbWF4X2NvbmN1cnJlbnRCKQonX2NhbGxfYXVkaW9fc3RyZWFtX21heF9k",
+            "dXJhdGlvbl9zZWNvbmRzIu8DChZWb2ljZUludGVyYWN0aW9uQ29uZmlnEj8K",
+            "FXR1cm5fZGV0ZWN0aW9uX2NvbmZpZxgBIAEoCzIgLm9uZGV3by52dHNpLlR1",
+            "cm5EZXRlY3Rpb25Db25maWcSTQocaW50ZXJydXB0aW9uX2hhbmRsaW5nX2Nv",
+            "bmZpZxgCIAEoCzInLm9uZGV3by52dHNpLkludGVycnVwdGlvbkhhbmRsaW5n",
+            "Q29uZmlnEkEKFnJlc3BvbnNlX3RpbWluZ19jb25maWcYAyABKAsyIS5vbmRl",
+            "d28udnRzaS5SZXNwb25zZVRpbWluZ0NvbmZpZxJYCiJhbnN3ZXJpbmdfbWFj",
+            "aGluZV9kZXRlY3Rpb25fY29uZmlnGAQgASgLMiwub25kZXdvLnZ0c2kuQW5z",
+            "d2VyaW5nTWFjaGluZURldGVjdGlvbkNvbmZpZxIsCgtkdG1mX2NvbmZpZxgF",
+            "IAEoCzIXLm9uZGV3by52dHNpLkR0bWZDb25maWcSPQoUd2FybV90cmFuc2Zl",
+            "cl9jb25maWcYBiABKAsyHy5vbmRld28udnRzaS5XYXJtVHJhbnNmZXJDb25m",
+            "aWcSOwoTYm90X3RyYW5zZmVyX2NvbmZpZxgHIAEoCzIeLm9uZGV3by52dHNp",
+            "LkJvdFRyYW5zZmVyQ29uZmlnIuUBChFCb3RUcmFuc2ZlckNvbmZpZxIfChJv",
+            "dXRjb21lX3RpbWVvdXRfbXMYASABKA1IAIgBARIaCg1mYWlsZWRfYWN0aW9u",
+            "GAIgASgJSAGIAQESOQosd2FybV90cmFuc2Zlcl9vdXRjb21lX2NvbW1pdF90",
+            "aW1lb3V0X3NlY29uZHMYAyABKAJIAogBAUIVChNfb3V0Y29tZV90aW1lb3V0",
+            "X21zQhAKDl9mYWlsZWRfYWN0aW9uQi8KLV93YXJtX3RyYW5zZmVyX291dGNv",
+            "bWVfY29tbWl0X3RpbWVvdXRfc2Vjb25kcyKoAgoKRHRtZkNvbmZpZxIUCgdl",
+            "bmFibGVkGAEgASgISACIAQESFQoIYmFyZ2VfaW4YAiABKAhIAYgBARIjChZp",
+            "bnRlcl9kaWdpdF90aW1lb3V0X21zGAMgASgNSAKIAQESHgoRdW5kZWNsYXJl",
+            "ZF9wb2xpY3kYBCABKAlIA4gBARIcCg9zcGVlY2hfZ3VhcmRfbXMYBSABKA1I",
+            "BIgBARIaCg10ZXh0X3RlbXBsYXRlGAYgASgJSAWIAQFCCgoIX2VuYWJsZWRC",
+            "CwoJX2JhcmdlX2luQhkKF19pbnRlcl9kaWdpdF90aW1lb3V0X21zQhQKEl91",
+            "bmRlY2xhcmVkX3BvbGljeUISChBfc3BlZWNoX2d1YXJkX21zQhAKDl90ZXh0",
+            "X3RlbXBsYXRlIqoLChJXYXJtVHJhbnNmZXJDb25maWcSFAoHZW5hYmxlZBgB",
+            "IAEoCEgAiAEBEhkKDGludHJvX3Byb21wdBgCIAEoCUgBiAEBEjsKEWludHJv",
+            "X3RleHRfc291cmNlGAMgASgOMiAub25kZXdvLnZ0c2kuV2FybUludHJvVGV4",
+            "dFNvdXJjZRIbCg5yZWFkeV9xdWVzdGlvbhgEIAEoCUgCiAEBEicKGmNvbmZp",
+            "cm1faHVtYW5fYmVmb3JlX2ludHJvGAUgASgISAOIAQESHAoPYWNjZXB0X3F1",
+            "ZXN0aW9uGAYgASgJSASIAQESJAoXZGVjbGluZV9yZWFzb25fcXVlc3Rpb24Y",
+            "ByABKAlIBYgBARIkChdjYWxsZXJfZGVjbGluZWRfbWVzc2FnZRgIIAEoCUgG",
+            "iAEBEicKGmNhbGxlcl91bnJlYWNoYWJsZV9tZXNzYWdlGAkgASgJSAeIAQES",
+            "GAoLYWNjZXB0X2R0bWYYCiABKAlICIgBARIZCgxkZWNsaW5lX2R0bWYYCyAB",
+            "KAlICYgBARIfChJkZWNpc2lvbl90aW1lb3V0X3MYDCABKA1ICogBARIhChRt",
+            "YXhfaW50cm9fZHVyYXRpb25fcxgNIAEoDUgLiAEBEiAKE2NhbGxlZV9kaXNw",
+            "bGF5X25hbWUYDiABKAlIDIgBARIfChJjYWxsZWVfZGVzY3JpcHRpb24YDyAB",
+            "KAlIDYgBARJFChRvbl9pbnRyb191bmF2YWlsYWJsZRgQIAEoDjInLm9uZGV3",
+            "by52dHNpLldhcm1JbnRyb1VuYXZhaWxhYmxlUG9saWN5EiMKFmFwcGx5X3Rv",
+            "X2JvdF90cmFuc2ZlcnMYESABKAhIDogBARIgChNjYWxsZXJfaG9sZF9tZXNz",
+            "YWdlGBIgASgJSA+IAQESHgoRY2FsbGVyX2hvbGRfbXVzaWMYEyABKAhIEIgB",
+            "ARInChpjYWxsZXJfcmVhc3N1cmVfaW50ZXJ2YWxfcxgUIAEoDUgRiAEBEiIK",
+            "FWxsbV9jY2FpX3NlcnZpY2VfbmFtZRgVIAEoCUgSiAEBEiYKGWNhbGxlcl9k",
+            "aXNjbG9zdXJlX21lc3NhZ2UYFiABKAlIE4gBARIkChdjYWxsZXJfYWNjZXB0",
+            "ZWRfbWVzc2FnZRgXIAEoCUgUiAEBEh4KEXN0b3JlX2ludHJvX2F1ZGlvGBgg",
+            "ASgISBWIAQESHAoUaW50cm9fbGlzdGVuZXJfbmFtZXMYGSADKAlCCgoIX2Vu",
+            "YWJsZWRCDwoNX2ludHJvX3Byb21wdEIRCg9fcmVhZHlfcXVlc3Rpb25CHQob",
+            "X2NvbmZpcm1faHVtYW5fYmVmb3JlX2ludHJvQhIKEF9hY2NlcHRfcXVlc3Rp",
+            "b25CGgoYX2RlY2xpbmVfcmVhc29uX3F1ZXN0aW9uQhoKGF9jYWxsZXJfZGVj",
+            "bGluZWRfbWVzc2FnZUIdChtfY2FsbGVyX3VucmVhY2hhYmxlX21lc3NhZ2VC",
+            "DgoMX2FjY2VwdF9kdG1mQg8KDV9kZWNsaW5lX2R0bWZCFQoTX2RlY2lzaW9u",
+            "X3RpbWVvdXRfc0IXChVfbWF4X2ludHJvX2R1cmF0aW9uX3NCFgoUX2NhbGxl",
+            "ZV9kaXNwbGF5X25hbWVCFQoTX2NhbGxlZV9kZXNjcmlwdGlvbkIZChdfYXBw",
+            "bHlfdG9fYm90X3RyYW5zZmVyc0IWChRfY2FsbGVyX2hvbGRfbWVzc2FnZUIU",
+            "ChJfY2FsbGVyX2hvbGRfbXVzaWNCHQobX2NhbGxlcl9yZWFzc3VyZV9pbnRl",
+            "cnZhbF9zQhgKFl9sbG1fY2NhaV9zZXJ2aWNlX25hbWVCHAoaX2NhbGxlcl9k",
+            "aXNjbG9zdXJlX21lc3NhZ2VCGgoYX2NhbGxlcl9hY2NlcHRlZF9tZXNzYWdl",
+            "QhQKEl9zdG9yZV9pbnRyb19hdWRpbyK3AwoPV2FybUludHJvUmVjb3JkEhAK",
+            "CGludHJvX2lkGAEgASgJEjAKCGRlY2lzaW9uGAIgASgOMh4ub25kZXdvLnZ0",
+            "c2kuV2FybUludHJvRGVjaXNpb24SMwoKZGVjaWRlZF9ieRgDIAEoDjIfLm9u",
+            "ZGV3by52dHNpLldhcm1JbnRyb0RlY2lkZWRCeRIeChZkZWNsaW5lX3JlYXNv",
+            "bl9wcmVzZW50GAQgASgIEhcKD2ludHJvX2NhbGxfbmFtZRgFIAEoCRIwCg1y",
+            "aW5nX2R1cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EjEKDmludHJvX2R1cmF0aW9uGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uEjUKC3RleHRfc291cmNlGAggASgOMiAub25kZXdvLnZ0c2kuV2Fy",
+            "bUludHJvVGV4dFNvdXJjZRIWCg50ZXh0X2ZlbGxfYmFjaxgJIAEoCBINCgVj",
+            "YXVzZRgKIAEoCRIYChBub3RpY2VfZGVsaXZlcmVkGAsgASgIEhUKDWludHJv",
+            "X3N0YXJ0ZWQYDCABKAgi5w0KE1R1cm5EZXRlY3Rpb25Db25maWcSQAoEbW9k",
+            "ZRgBIAEoDjIyLm9uZGV3by52dHNpLlR1cm5EZXRlY3Rpb25Db25maWcuVHVy",
+            "bkRldGVjdGlvbk1vZGUSKgodbWluX2VuZHBvaW50aW5nX2RlbGF5X3NlY29u",
+            "ZHMYAiABKAJIAIgBARIqCh1tYXhfZW5kcG9pbnRpbmdfZGVsYXlfc2Vjb25k",
+            "cxgDIAEoAkgBiAEBEkYKDnR1cm5fZWFnZXJuZXNzGAQgASgOMi4ub25kZXdv",
+            "LnZ0c2kuVHVybkRldGVjdGlvbkNvbmZpZy5UdXJuRWFnZXJuZXNzEikKHHR1",
+            "cm5fZGV0ZWN0aW9uX3N5c3RlbV9wcm9tcHQYBSABKAlIAogBARInChp0dXJu",
+            "X2RldGVjdGlvbl91c2VyX3Byb21wdBgGIAEoCUgDiAEBEicKGmNvbnZlcnNh",
+            "dGlvbl9jb250ZXh0X3R1cm5zGAcgASgNSASIAQESIAoTc2VtYW50aWNfbW9k",
+            "ZWxfbmFtZRgIIAEoCUgFiAEBEi4KIWVuZF9vZl90dXJuX3Byb2JhYmlsaXR5",
+            "X3RocmVzaG9sZBgJIAEoAkgGiAEBEkcKCmhvbGRfYmFuZHMYCiABKAsyMy5v",
+            "bmRld28udnRzaS5UdXJuRGV0ZWN0aW9uQ29uZmlnLkVuZE9mVHVybkhvbGRC",
+            "YW5kcxIgChN1bmNlcnRhaW5fbWluX3dvcmRzGAsgASgNSAeIAQESKwoeaW5j",
+            "b21wbGV0ZV9tYXhfc2lsZW5jZV9zZWNvbmRzGAwgASgCSAiIAQESHgoRZXhh",
+            "Y3RfcHJvYmFiaWxpdHkYDSABKAhICYgBARInChpmaW5hbF9tZXJnZV93aW5k",
+            "b3dfc2Vjb25kcxgOIAEoAkgKiAEBEjYKEGRpY3RhdGlvbl9jb25maWcYDyAB",
+            "KAsyHC5vbmRld28udnRzaS5EaWN0YXRpb25Db25maWcSGAoLczJ0X2VtaXRf",
+            "bXMYECABKA1IC4gBARIhChRzMnRfcmVxdWVzdF9wYXJ0aWFscxgRIAEoCEgM",
+            "iAEBEjAKI3MydF9yZXF1ZXN0X2VuZF9vZl9zcGVlY2hfY2FuZGlkYXRlGBIg",
+            "ASgISA2IAQESIQoUc21hcnRfdHVybl90aHJlc2hvbGQYEyABKAJIDogBARIv",
+            "CiJwb3N0X3VubXV0ZV9waGFudG9tX3dpbmRvd19zZWNvbmRzGBQgASgCSA+I",
+            "AQEaVwoSRW5kT2ZUdXJuSG9sZEJhbmRzEkEKBWJhbmRzGAEgAygLMjIub25k",
+            "ZXdvLnZ0c2kuVHVybkRldGVjdGlvbkNvbmZpZy5FbmRPZlR1cm5Ib2xkQmFu",
+            "ZBpLChFFbmRPZlR1cm5Ib2xkQmFuZBIZChF1cHBlcl9wcm9iYWJpbGl0eRgB",
+            "IAEoAhIbChNtYXhfc2lsZW5jZV9zZWNvbmRzGAIgASgCImYKEVR1cm5EZXRl",
+            "Y3Rpb25Nb2RlEiMKH1RVUk5fREVURUNUSU9OX01PREVfVU5TUEVDSUZJRUQQ",
+            "ABIHCgNWQUQQARISCg5TRU1BTlRJQ19NT0RFTBACEg8KC0FVRElPX01PREVM",
+            "EAMiUwoNVHVybkVhZ2VybmVzcxIeChpUVVJOX0VBR0VSTkVTU19VTlNQRUNJ",
+            "RklFRBAAEgsKB1BBVElFTlQQARIKCgZOT1JNQUwQAhIJCgVFQUdFUhADQiAK",
+            "Hl9taW5fZW5kcG9pbnRpbmdfZGVsYXlfc2Vjb25kc0IgCh5fbWF4X2VuZHBv",
+            "aW50aW5nX2RlbGF5X3NlY29uZHNCHwodX3R1cm5fZGV0ZWN0aW9uX3N5c3Rl",
+            "bV9wcm9tcHRCHQobX3R1cm5fZGV0ZWN0aW9uX3VzZXJfcHJvbXB0Qh0KG19j",
+            "b252ZXJzYXRpb25fY29udGV4dF90dXJuc0IWChRfc2VtYW50aWNfbW9kZWxf",
+            "bmFtZUIkCiJfZW5kX29mX3R1cm5fcHJvYmFiaWxpdHlfdGhyZXNob2xkQhYK",
+            "FF91bmNlcnRhaW5fbWluX3dvcmRzQiEKH19pbmNvbXBsZXRlX21heF9zaWxl",
+            "bmNlX3NlY29uZHNCFAoSX2V4YWN0X3Byb2JhYmlsaXR5Qh0KG19maW5hbF9t",
+            "ZXJnZV93aW5kb3dfc2Vjb25kc0IOCgxfczJ0X2VtaXRfbXNCFwoVX3MydF9y",
+            "ZXF1ZXN0X3BhcnRpYWxzQiYKJF9zMnRfcmVxdWVzdF9lbmRfb2Zfc3BlZWNo",
+            "X2NhbmRpZGF0ZUIXChVfc21hcnRfdHVybl90aHJlc2hvbGRCJQojX3Bvc3Rf",
+            "dW5tdXRlX3BoYW50b21fd2luZG93X3NlY29uZHMikAYKD0RpY3RhdGlvbkNv",
+            "bmZpZxIZCgxob2xkX2VuYWJsZWQYASABKAhIAIgBARIjChZleHBlY3RlZF9p",
+            "bnB1dF9lbmFibGVkGAIgASgISAGIAQESLAofcmVhZF9iYWNrX2Zyb21fYm90",
+            "X3RleHRfZW5hYmxlZBgDIAEoCEgCiAEBEiUKGGhvbGRfZ2VuZXJpY19tYXhf",
+            "c2Vjb25kcxgEIAEoAkgDiAEBEmAKHGhvbGRfbWF4X3NlY29uZHNfYnlfY2F0",
+            "ZWdvcnkYBSADKAsyOi5vbmRld28udnRzaS5EaWN0YXRpb25Db25maWcuSG9s",
+            "ZE1heFNlY29uZHNCeUNhdGVnb3J5RW50cnkSKgodaG9sZF9pbnZhbGlkX2No",
+            "ZWNrc3VtX3NlY29uZHMYBiABKAJIBIgBARIrCh5lYXJseV9jb21taXRfb25f",
+            "Y29tcGxldGVfdmFsdWUYByABKAhIBYgBARIuCiFzMnRfc2xvdF9taW5fZHVy",
+            "YXRpb25fb2ZmX3NlY29uZHMYCCABKAJIBogBARI2CilzMnRfc2xvdF9taW5f",
+            "ZHVyYXRpb25fb2ZmX3Jlc3RvcmVfc2Vjb25kcxgJIAEoAkgHiAEBGj8KHUhv",
+            "bGRNYXhTZWNvbmRzQnlDYXRlZ29yeUVudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoAjoCOAFCDwoNX2hvbGRfZW5hYmxlZEIZChdfZXhwZWN0ZWRf",
+            "aW5wdXRfZW5hYmxlZEIiCiBfcmVhZF9iYWNrX2Zyb21fYm90X3RleHRfZW5h",
+            "YmxlZEIbChlfaG9sZF9nZW5lcmljX21heF9zZWNvbmRzQiAKHl9ob2xkX2lu",
+            "dmFsaWRfY2hlY2tzdW1fc2Vjb25kc0IhCh9fZWFybHlfY29tbWl0X29uX2Nv",
+            "bXBsZXRlX3ZhbHVlQiQKIl9zMnRfc2xvdF9taW5fZHVyYXRpb25fb2ZmX3Nl",
+            "Y29uZHNCLAoqX3MydF9zbG90X21pbl9kdXJhdGlvbl9vZmZfcmVzdG9yZV9z",
+            "ZWNvbmRzItwIChpJbnRlcnJ1cHRpb25IYW5kbGluZ0NvbmZpZxIUCgdlbmFi",
+            "bGVkGAEgASgISACIAQESLgohbWluX2ludGVycnVwdGlvbl9kdXJhdGlvbl9z",
+            "ZWNvbmRzGAIgASgCSAGIAQESIwoWbWluX2ludGVycnVwdGlvbl93b3JkcxgD",
+            "IAEoBUgCiAEBEi8KImZhbHNlX2ludGVycnVwdGlvbl90aW1lb3V0X3NlY29u",
+            "ZHMYBCABKAJIA4gBARIsCh9yZXN1bWVfYWZ0ZXJfZmFsc2VfaW50ZXJydXB0",
+            "aW9uGAUgASgISASIAQESHAoPYmFja29mZl9zZWNvbmRzGAYgASgCSAWIAQES",
+            "LAofZmlyc3RfbWVzc2FnZV9wcm90ZWN0ZWRfc2Vjb25kcxgHIAEoAkgGiAEB",
+            "EjEKJHRyYW5zY3JpYmVfb25fZGlzYWJsZWRfaW50ZXJydXB0aW9ucxgIIAEo",
+            "CEgHiAEBEiUKGGludGVycnVwdGlvbl9mYWRlX291dF9tcxgJIAEoBUgIiAEB",
+            "EiwKH2NhbmNlbF9vbl9zcGVlY2hfd2hpbGVfdGhpbmtpbmcYCiABKAhICYgB",
+            "ARIxCiRhaV90ZWFtc19jYW5jZWxfcGVuZGluZ19vbl9pbnRlcnJ1cHQYCyAB",
+            "KAhICogBARIjChZ0MnNfY2FuY2VsX29uX2JhcmdlX2luGAwgASgISAuIAQES",
+            "JQoYbmx1X3R1cm5fY29udHJvbF9lbmFibGVkGA0gASgISAyIAQESIQoUaGVh",
+            "cmRfcmVwb3J0X2VuYWJsZWQYDiABKAhIDYgBARIpChxoZWFyZF90ZXh0X2Fs",
+            "aWdubWVudF9lbmFibGVkGA8gASgISA6IAQFCCgoIX2VuYWJsZWRCJAoiX21p",
+            "bl9pbnRlcnJ1cHRpb25fZHVyYXRpb25fc2Vjb25kc0IZChdfbWluX2ludGVy",
+            "cnVwdGlvbl93b3Jkc0IlCiNfZmFsc2VfaW50ZXJydXB0aW9uX3RpbWVvdXRf",
+            "c2Vjb25kc0IiCiBfcmVzdW1lX2FmdGVyX2ZhbHNlX2ludGVycnVwdGlvbkIS",
+            "ChBfYmFja29mZl9zZWNvbmRzQiIKIF9maXJzdF9tZXNzYWdlX3Byb3RlY3Rl",
+            "ZF9zZWNvbmRzQicKJV90cmFuc2NyaWJlX29uX2Rpc2FibGVkX2ludGVycnVw",
+            "dGlvbnNCGwoZX2ludGVycnVwdGlvbl9mYWRlX291dF9tc0IiCiBfY2FuY2Vs",
+            "X29uX3NwZWVjaF93aGlsZV90aGlua2luZ0InCiVfYWlfdGVhbXNfY2FuY2Vs",
+            "X3BlbmRpbmdfb25faW50ZXJydXB0QhkKF190MnNfY2FuY2VsX29uX2Jhcmdl",
+            "X2luQhsKGV9ubHVfdHVybl9jb250cm9sX2VuYWJsZWRCFwoVX2hlYXJkX3Jl",
+            "cG9ydF9lbmFibGVkQh8KHV9oZWFyZF90ZXh0X2FsaWdubWVudF9lbmFibGVk",
+            "IqcGChRSZXNwb25zZVRpbWluZ0NvbmZpZxIhChR0dXJuX3RpbWVvdXRfc2Vj",
+            "b25kcxgBIAEoAkgAiAEBEi0KIHNpbGVuY2VfZW5kX2NhbGxfdGltZW91dF9z",
+            "ZWNvbmRzGAIgASgCSAGIAQESOwoTc29mdF90aW1lb3V0X2NvbmZpZxgDIAEo",
+            "CzIeLm9uZGV3by52dHNpLlNvZnRUaW1lb3V0Q29uZmlnEioKHXByZWVtcHRp",
+            "dmVfZ2VuZXJhdGlvbl9lbmFibGVkGAQgASgISAKIAQESKgoddDJzX2NodW5r",
+            "ZWRfc3RyZWFtaW5nX2VuYWJsZWQYBSABKAhIA4gBARIeChFzdHJlYW1pbmdf",
+            "ZW5hYmxlZBgGIAEoCEgEiAEBEiQKF25sdV9jYWxsX3N0cmVhbV9lbmFibGVk",
+            "GAcgASgISAWIAQESIAoTdHVybl90aW1lb3V0X2ludGVudBgIIAEoCUgGiAEB",
+            "EiQKF3Qyc19tYXhfZWRnZV9zaWxlbmNlX21zGAkgASgFSAeIAQESMQokbmx1",
+            "X2NhbGxfc3RyZWFtX3R1cm5fdGltZW91dF9zZWNvbmRzGAogASgCSAiIAQES",
+            "Lwoibmx1X2NhbGxfc3RyZWFtX3R1cm5fcXVpZXRfc2Vjb25kcxgLIAEoAkgJ",
+            "iAEBQhcKFV90dXJuX3RpbWVvdXRfc2Vjb25kc0IjCiFfc2lsZW5jZV9lbmRf",
+            "Y2FsbF90aW1lb3V0X3NlY29uZHNCIAoeX3ByZWVtcHRpdmVfZ2VuZXJhdGlv",
+            "bl9lbmFibGVkQiAKHl90MnNfY2h1bmtlZF9zdHJlYW1pbmdfZW5hYmxlZEIU",
+            "ChJfc3RyZWFtaW5nX2VuYWJsZWRCGgoYX25sdV9jYWxsX3N0cmVhbV9lbmFi",
+            "bGVkQhYKFF90dXJuX3RpbWVvdXRfaW50ZW50QhoKGF90MnNfbWF4X2VkZ2Vf",
+            "c2lsZW5jZV9tc0InCiVfbmx1X2NhbGxfc3RyZWFtX3R1cm5fdGltZW91dF9z",
+            "ZWNvbmRzQiUKI19ubHVfY2FsbF9zdHJlYW1fdHVybl9xdWlldF9zZWNvbmRz",
+            "Io8BChFTb2Z0VGltZW91dENvbmZpZxIcCg90aW1lb3V0X3NlY29uZHMYASAB",
+            "KAJIAIgBARIQCghtZXNzYWdlcxgCIAMoCRIfChJtYXhfcGVyX2dlbmVyYXRp",
+            "b24YAyABKAVIAYgBAUISChBfdGltZW91dF9zZWNvbmRzQhUKE19tYXhfcGVy",
+            "X2dlbmVyYXRpb24i/gsKH0Fuc3dlcmluZ01hY2hpbmVEZXRlY3Rpb25Db25m",
+            "aWcSEwoGYWN0aXZlGAEgASgISACIAQESSwoGYWN0aW9uGAIgASgOMjYub25k",
+            "ZXdvLnZ0c2kuQW5zd2VyaW5nTWFjaGluZURldGVjdGlvbkNvbmZpZy5BbWRB",
+            "Y3Rpb25IAYgBARJVCgtzZW5zaXRpdml0eRgDIAEoDjI7Lm9uZGV3by52dHNp",
+            "LkFuc3dlcmluZ01hY2hpbmVEZXRlY3Rpb25Db25maWcuQW1kU2Vuc2l0aXZp",
+            "dHlIAogBARIhChRtYXhfZGVjaXNpb25fdGltZV9tcxgEIAEoBUgDiAEBEiAK",
+            "E21heF9tYWNoaW5lX3dhaXRfbXMYBSABKAVIBIgBARIoChtiZWVwX3dhaXRf",
+            "YWZ0ZXJfZ3JlZXRpbmdfbXMYBiABKAVIBYgBARIfChJpbml0aWFsX3NpbGVu",
+            "Y2VfbXMYByABKAVIBogBARIiChVtYXhfaHVtYW5fZ3JlZXRpbmdfbXMYCCAB",
+            "KAVIB4gBARIkChdncmVldGluZ19lbmRfc2lsZW5jZV9tcxgJIAEoBUgIiAEB",
+            "EiIKFWJlZXBfZGV0ZWN0aW9uX2FjdGl2ZRgKIAEoCEgJiAEBEiIKGmFkZGl0",
+            "aW9uYWxfbWFjaGluZV9waHJhc2VzGAsgAygJEiAKGGFkZGl0aW9uYWxfaHVt",
+            "YW5fcGhyYXNlcxgMIAMoCRIbCg5oYW5nX3VwX29uX2ZheBgNIAEoCEgKiAEB",
+            "EiwKH2hhbmdfdXBfb25fbmV0d29ya19hbm5vdW5jZW1lbnQYDiABKAhIC4gB",
+            "ARIbCg5oYW5nX3VwX29uX2l2chgPIAEoCEgMiAEBEiYKGWhhbmdfdXBfb25f",
+            "Y2FsbF9zY3JlZW5pbmcYECABKAhIDYgBARIhChR2b2ljZV9tZXNzYWdlX2lu",
+            "dGVudBgRIAEoCUgOiAEBEisKHnZvaWNlX21lc3NhZ2VfbWF4X2JlZXBfd2Fp",
+            "dF9tcxgSIAEoBUgPiAEBEiUKGHZvaWNlX21lc3NhZ2VfdGltZW91dF9tcxgT",
+            "IAEoBUgQiAEBEiUKGGtleXdvcmRfZGV0ZWN0aW9uX2FjdGl2ZRgUIAEoCEgR",
+            "iAEBEiUKGGNhZGVuY2VfZGV0ZWN0aW9uX2FjdGl2ZRgVIAEoCEgSiAEBIl4K",
+            "CUFtZEFjdGlvbhIaChZBTURfQUNUSU9OX1VOU1BFQ0lGSUVEEAASCwoHSEFO",
+            "R19VUBABEg8KC0RFVEVDVF9PTkxZEAISFwoTTEVBVkVfVk9JQ0VfTUVTU0FH",
+            "RRADIlAKDkFtZFNlbnNpdGl2aXR5Eh8KG0FNRF9TRU5TSVRJVklUWV9VTlNQ",
+            "RUNJRklFRBAAEgcKA0xPVxABEgoKBk1FRElVTRACEggKBEhJR0gQA0IJCgdf",
+            "YWN0aXZlQgkKB19hY3Rpb25CDgoMX3NlbnNpdGl2aXR5QhcKFV9tYXhfZGVj",
+            "aXNpb25fdGltZV9tc0IWChRfbWF4X21hY2hpbmVfd2FpdF9tc0IeChxfYmVl",
+            "cF93YWl0X2FmdGVyX2dyZWV0aW5nX21zQhUKE19pbml0aWFsX3NpbGVuY2Vf",
+            "bXNCGAoWX21heF9odW1hbl9ncmVldGluZ19tc0IaChhfZ3JlZXRpbmdfZW5k",
+            "X3NpbGVuY2VfbXNCGAoWX2JlZXBfZGV0ZWN0aW9uX2FjdGl2ZUIRCg9faGFu",
+            "Z191cF9vbl9mYXhCIgogX2hhbmdfdXBfb25fbmV0d29ya19hbm5vdW5jZW1l",
+            "bnRCEQoPX2hhbmdfdXBfb25faXZyQhwKGl9oYW5nX3VwX29uX2NhbGxfc2Ny",
+            "ZWVuaW5nQhcKFV92b2ljZV9tZXNzYWdlX2ludGVudEIhCh9fdm9pY2VfbWVz",
+            "c2FnZV9tYXhfYmVlcF93YWl0X21zQhsKGV92b2ljZV9tZXNzYWdlX3RpbWVv",
+            "dXRfbXNCGwoZX2tleXdvcmRfZGV0ZWN0aW9uX2FjdGl2ZUIbChlfY2FkZW5j",
+            "ZV9kZXRlY3Rpb25fYWN0aXZlIigKDVNpcEJhc2VDb25maWcSFwoPc2lwX3Np",
+            "bV92ZXJzaW9uGAEgASgJIs8BCg9TaXBDYWxsZXJDb25maWcSMwoPc2lwX2Jh",
+            "c2VfY29uZmlnGAEgASgLMhoub25kZXdvLnZ0c2kuU2lwQmFzZUNvbmZpZxIR",
+            "CgljYWxsZWVfaWQYAiABKAkSQQoLc2lwX2hlYWRlcnMYAyADKAsyLC5vbmRl",
+            "d28udnRzaS5TaXBDYWxsZXJDb25maWcuU2lwSGVhZGVyc0VudHJ5GjEKD1Np",
+            "cEhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
+            "IuMDCg1Dc2lWdHNpQ29uZmlnEjkKEnMydF92dHNpX2NhbGxiYWNrcxgBIAEo",
+            "CzIdLm9uZGV3by52dHNpLlMydFZ0c2lDYWxsYmFja3MSOQoSbmx1X3Z0c2lf",
+            "Y2FsbGJhY2tzGAIgASgLMh0ub25kZXdvLnZ0c2kuTmx1VnRzaUNhbGxiYWNr",
+            "cxI5ChJ0MnNfdnRzaV9jYWxsYmFja3MYAyABKAsyHS5vbmRld28udnRzaS5U",
+            "MnNWdHNpQ2FsbGJhY2tzEkgKGWF1ZGlvX29iamVjdF9zdG9yZV9jb25maWcY",
+            "BCABKAsyJS5vbmRld28udnRzaS5BdWRpb09iamVjdFN0b3JhZ2VDb25maWcS",
+            "PwoVbWVzc2FnZV9icm9rZXJfY29uZmlnGAUgASgLMiAub25kZXdvLnZ0c2ku",
+            "TWVzc2FnZUJyb2tlckNvbmZpZxImChlhY3RpdmF0ZV9jb250cm9sX21lc3Nh",
+            "Z2VzGAYgASgISACIAQESUAoccHJlZW1wdGl2ZV9nZW5lcmF0aW9uX2NvbmZp",
+            "ZxgHIAEoCzIqLm9uZGV3by52dHNpLkNzaVByZWVtcHRpdmVHZW5lcmF0aW9u",
+            "Q29uZmlnQhwKGl9hY3RpdmF0ZV9jb250cm9sX21lc3NhZ2VzIosBCh1Dc2lQ",
+            "cmVlbXB0aXZlR2VuZXJhdGlvbkNvbmZpZxIUCgdlbmFibGVkGAEgASgISACI",
+            "AQESKAobY29tbWl0X3dhaXRfdGltZW91dF9zZWNvbmRzGAIgASgCSAGIAQFC",
+            "CgoIX2VuYWJsZWRCHgocX2NvbW1pdF93YWl0X3RpbWVvdXRfc2Vjb25kcyLa",
+            "AQoYQXVkaW9PYmplY3RTdG9yYWdlQ29uZmlnEioKHWFjdGl2YXRlX2F1ZGlv",
+            "X29iamVjdF9zdG9yYWdlGAEgASgISACIAQEScAovYXVkaW9fb2JqZWN0X3N0",
+            "b3JhZ2Vfc2VydmljZXNfYWN0aXZhdGlvbl9jb25maWcYAiABKAsyNy5vbmRl",
+            "d28udnRzaS5BdWRpb09iamVjdFN0b3JhZ2VTZXJ2aWNlc0FjdGl2YXRpb25D",
+            "b25maWdCIAoeX2FjdGl2YXRlX2F1ZGlvX29iamVjdF9zdG9yYWdlIoQBCipB",
+            "dWRpb09iamVjdFN0b3JhZ2VTZXJ2aWNlc0FjdGl2YXRpb25Db25maWcSGQoM",
+            "YWN0aXZhdGVfczJ0GAEgASgISACIAQESGQoMYWN0aXZhdGVfdDJzGAIgASgI",
+            "SAGIAQFCDwoNX2FjdGl2YXRlX3MydEIPCg1fYWN0aXZhdGVfdDJzIpACChNN",
+            "ZXNzYWdlQnJva2VyQ29uZmlnEiQKF2FjdGl2YXRlX21lc3NhZ2VfYnJva2Vy",
+            "GAEgASgISAGIAQESZQopbWVzc2FnZV9icm9rZXJfc2VydmljZXNfYWN0aXZh",
+            "dGlvbl9jb25maWcYAiABKAsyMi5vbmRld28udnRzaS5NZXNzYWdlQnJva2Vy",
+            "U2VydmljZXNBY3RpdmF0aW9uQ29uZmlnEjcKEHJhYmJpdF9tcV9jb25maWcY",
+            "AyABKAsyGy5vbmRld28udnRzaS5SYWJiaXRNcUNvbmZpZ0gAQhcKFW1lc3Nh",
+            "Z2VfYnJva2VyX2NvbmZpZ0IaChhfYWN0aXZhdGVfbWVzc2FnZV9icm9rZXIi",
+            "1wEKJU1lc3NhZ2VCcm9rZXJTZXJ2aWNlc0FjdGl2YXRpb25Db25maWcSGQoM",
+            "YWN0aXZhdGVfczJ0GAEgASgISACIAQESGQoMYWN0aXZhdGVfbmx1GAIgASgI",
+            "SAGIAQESGQoMYWN0aXZhdGVfdDJzGAMgASgISAKIAQESGQoMYWN0aXZhdGVf",
+            "c2lwGAQgASgISAOIAQFCDwoNX2FjdGl2YXRlX3MydEIPCg1fYWN0aXZhdGVf",
+            "bmx1Qg8KDV9hY3RpdmF0ZV90MnNCDwoNX2FjdGl2YXRlX3NpcCJcCg5SYWJi",
+            "aXRNcUNvbmZpZxIMCgRob3N0GAEgASgJEgwKBHBvcnQYAiABKAUSDgoGcG9y",
+            "dF8yGAMgASgFEgwKBHVzZXIYBCABKAkSEAoIcGFzc3dvcmQYBSABKAkiSQoQ",
+            "UzJ0VnRzaUNhbGxiYWNrcxIZChFwcmVfczJ0X2NhbGxiYWNrcxgBIAMoCRIa",
+            "ChJwb3N0X3MydF9jYWxsYmFja3MYAiADKAkiSQoQTmx1VnRzaUNhbGxiYWNr",
+            "cxIZChFwcmVfbmx1X2NhbGxiYWNrcxgBIAMoCRIaChJwb3N0X25sdV9jYWxs",
+            "YmFja3MYAiADKAkiSQoQVDJzVnRzaUNhbGxiYWNrcxIZChFwcmVfdDJzX2Nh",
+            "bGxiYWNrcxgBIAMoCRIaChJwb3N0X3Qyc19jYWxsYmFja3MYAiADKAkqigEK",
+            "E1dhcm1JbnRyb1RleHRTb3VyY2USJgoiV0FSTV9JTlRST19URVhUX1NPVVJD",
+            "RV9VTlNQRUNJRklFRBAAEiMKH1dBUk1fSU5UUk9fVEVYVF9TT1VSQ0VfVEVN",
+            "UExBVEUQARImCiJXQVJNX0lOVFJPX1RFWFRfU09VUkNFX0xMTV9TVU1NQVJZ",
+            "EAIquAEKGldhcm1JbnRyb1VuYXZhaWxhYmxlUG9saWN5Ei0KKVdBUk1fSU5U",
+            "Uk9fVU5BVkFJTEFCTEVfUE9MSUNZX1VOU1BFQ0lGSUVEEAASNwozV0FSTV9J",
+            "TlRST19VTkFWQUlMQUJMRV9QT0xJQ1lfQ09OTkVDVF9XSVRIT1VUX0lOVFJP",
+            "EAESMgouV0FSTV9JTlRST19VTkFWQUlMQUJMRV9QT0xJQ1lfUkVUVVJOX1RP",
+            "X0NBTExFUhACKqEBChFXYXJtSW50cm9EZWNpc2lvbhIjCh9XQVJNX0lOVFJP",
+            "X0RFQ0lTSU9OX1VOU1BFQ0lGSUVEEAASIAocV0FSTV9JTlRST19ERUNJU0lP",
+            "Tl9BQ0NFUFRFRBABEiAKHFdBUk1fSU5UUk9fREVDSVNJT05fREVDTElORUQQ",
+            "AhIjCh9XQVJNX0lOVFJPX0RFQ0lTSU9OX05PX0RFQ0lTSU9OEAMqoAEKEldh",
+            "cm1JbnRyb0RlY2lkZWRCeRIlCiFXQVJNX0lOVFJPX0RFQ0lERURfQllfVU5T",
+            "UEVDSUZJRUQQABIeChpXQVJNX0lOVFJPX0RFQ0lERURfQllfRFRNRhABEiAK",
+            "HFdBUk1fSU5UUk9fREVDSURFRF9CWV9TUEVFQ0gQAhIhCh1XQVJNX0lOVFJP",
+            "X0RFQ0lERURfQllfVElNRU9VVBADYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Ondewo.Nlu.IntentReflection.Descriptor, global::Ondewo.S2T.SpeechToTextReflection.Descriptor, global::Ondewo.T2S.TextToSpeechReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ondewo.Vtsi.WarmIntroTextSource), typeof(global::Ondewo.Vtsi.WarmIntroUnavailablePolicy), typeof(global::Ondewo.Vtsi.WarmIntroDecision), typeof(global::Ondewo.Vtsi.WarmIntroDecidedBy), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.BaseServiceConfig), global::Ondewo.Vtsi.BaseServiceConfig.Parser, new[]{ "Host", "Port", "GrpcCert" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.Credentials), global::Ondewo.Vtsi.Credentials.Parser, new[]{ "AccountName", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.NluVtsiConfig), global::Ondewo.Vtsi.NluVtsiConfig.Parser, new[]{ "NluBaseConfig", "Credentials", "AuthToken", "AgentName", "LanguageCode", "InitialIntent", "Contexts", "HttpBasicAuthToken", "Platform", "PreemptiveGenerationConfig" }, new[]{ "Authentication", "Platform" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.NluVtsiConfig), global::Ondewo.Vtsi.NluVtsiConfig.Parser, new[]{ "NluBaseConfig", "Credentials", "AuthToken", "AgentName", "LanguageCode", "InitialIntent", "Contexts", "HttpBasicAuthToken", "Platform", "PreemptiveGenerationConfig", "AiTeamsFillersAudible", "FailureApologyMessage", "SessionIdFromSipContext", "AiTeamsPushMaxAgeSeconds", "AiTeamsPushMaxSpoken" }, new[]{ "Authentication", "Platform", "AiTeamsFillersAudible", "FailureApologyMessage", "SessionIdFromSipContext", "AiTeamsPushMaxAgeSeconds", "AiTeamsPushMaxSpoken" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.NluPreemptiveGenerationConfig), global::Ondewo.Vtsi.NluPreemptiveGenerationConfig.Parser, new[]{ "MaxDraftsPerTurn", "MinStableDwellSeconds", "MinIntervalSeconds" }, new[]{ "MaxDraftsPerTurn", "MinStableDwellSeconds", "MinIntervalSeconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.T2sVtsiConfig), global::Ondewo.Vtsi.T2sVtsiConfig.Parser, new[]{ "T2SBaseConfig", "T2SRequestConfig", "PreemptiveSynthesisConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.T2sVtsiConfig), global::Ondewo.Vtsi.T2sVtsiConfig.Parser, new[]{ "T2SBaseConfig", "T2SRequestConfig", "PreemptiveSynthesisConfig", "SynthesizeTimeoutSeconds", "CacheRetention" }, new[]{ "SynthesizeTimeoutSeconds", "CacheRetention" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.T2sPreemptiveSynthesisConfig), global::Ondewo.Vtsi.T2sPreemptiveSynthesisConfig.Parser, new[]{ "Enabled", "Chunked" }, new[]{ "Enabled", "Chunked" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.S2tVtsiConfig), global::Ondewo.Vtsi.S2tVtsiConfig.Parser, new[]{ "S2TBaseConfig", "S2TTranscribeRequestConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CommonServicesConfig), global::Ondewo.Vtsi.CommonServicesConfig.Parser, new[]{ "S2TVtsiConfig", "NluVtsiConfig", "T2SVtsiConfig", "CsiVtsiConfig", "VoiceInteractionConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VoiceInteractionConfig), global::Ondewo.Vtsi.VoiceInteractionConfig.Parser, new[]{ "TurnDetectionConfig", "InterruptionHandlingConfig", "ResponseTimingConfig", "AnsweringMachineDetectionConfig", "DtmfConfig", "WarmTransferConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DtmfConfig), global::Ondewo.Vtsi.DtmfConfig.Parser, new[]{ "Enabled", "BargeIn", "InterDigitTimeoutMs", "UndeclaredPolicy" }, new[]{ "Enabled", "BargeIn", "InterDigitTimeoutMs", "UndeclaredPolicy" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.S2tVtsiConfig), global::Ondewo.Vtsi.S2tVtsiConfig.Parser, new[]{ "S2TBaseConfig", "S2TTranscribeRequestConfig", "FailureSipTrigger" }, new[]{ "FailureSipTrigger" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.CommonServicesConfig), global::Ondewo.Vtsi.CommonServicesConfig.Parser, new[]{ "S2TVtsiConfig", "NluVtsiConfig", "T2SVtsiConfig", "CsiVtsiConfig", "VoiceInteractionConfig", "SipVtsiConfig", "MaxCallDurationSeconds" }, new[]{ "MaxCallDurationSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SipVtsiConfig), global::Ondewo.Vtsi.SipVtsiConfig.Parser, new[]{ "PlaybackLatencyMs", "SoftwareClockEnabled", "RtpStatsSampleIntervalSeconds", "HangupWaitForPlaybackTimeoutSeconds", "OutgoingDialWatchdogSeconds", "RegisterIntervalSeconds", "CallAudioStreamMaxConcurrent", "CallAudioStreamMaxDurationSeconds" }, new[]{ "PlaybackLatencyMs", "SoftwareClockEnabled", "RtpStatsSampleIntervalSeconds", "HangupWaitForPlaybackTimeoutSeconds", "OutgoingDialWatchdogSeconds", "RegisterIntervalSeconds", "CallAudioStreamMaxConcurrent", "CallAudioStreamMaxDurationSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.VoiceInteractionConfig), global::Ondewo.Vtsi.VoiceInteractionConfig.Parser, new[]{ "TurnDetectionConfig", "InterruptionHandlingConfig", "ResponseTimingConfig", "AnsweringMachineDetectionConfig", "DtmfConfig", "WarmTransferConfig", "BotTransferConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.BotTransferConfig), global::Ondewo.Vtsi.BotTransferConfig.Parser, new[]{ "OutcomeTimeoutMs", "FailedAction", "WarmTransferOutcomeCommitTimeoutSeconds" }, new[]{ "OutcomeTimeoutMs", "FailedAction", "WarmTransferOutcomeCommitTimeoutSeconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DtmfConfig), global::Ondewo.Vtsi.DtmfConfig.Parser, new[]{ "Enabled", "BargeIn", "InterDigitTimeoutMs", "UndeclaredPolicy", "SpeechGuardMs", "TextTemplate" }, new[]{ "Enabled", "BargeIn", "InterDigitTimeoutMs", "UndeclaredPolicy", "SpeechGuardMs", "TextTemplate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.WarmTransferConfig), global::Ondewo.Vtsi.WarmTransferConfig.Parser, new[]{ "Enabled", "IntroPrompt", "IntroTextSource", "ReadyQuestion", "ConfirmHumanBeforeIntro", "AcceptQuestion", "DeclineReasonQuestion", "CallerDeclinedMessage", "CallerUnreachableMessage", "AcceptDtmf", "DeclineDtmf", "DecisionTimeoutS", "MaxIntroDurationS", "CalleeDisplayName", "CalleeDescription", "OnIntroUnavailable", "ApplyToBotTransfers", "CallerHoldMessage", "CallerHoldMusic", "CallerReassureIntervalS", "LlmCcaiServiceName", "CallerDisclosureMessage", "CallerAcceptedMessage", "StoreIntroAudio", "IntroListenerNames" }, new[]{ "Enabled", "IntroPrompt", "ReadyQuestion", "ConfirmHumanBeforeIntro", "AcceptQuestion", "DeclineReasonQuestion", "CallerDeclinedMessage", "CallerUnreachableMessage", "AcceptDtmf", "DeclineDtmf", "DecisionTimeoutS", "MaxIntroDurationS", "CalleeDisplayName", "CalleeDescription", "ApplyToBotTransfers", "CallerHoldMessage", "CallerHoldMusic", "CallerReassureIntervalS", "LlmCcaiServiceName", "CallerDisclosureMessage", "CallerAcceptedMessage", "StoreIntroAudio" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.WarmIntroRecord), global::Ondewo.Vtsi.WarmIntroRecord.Parser, new[]{ "IntroId", "Decision", "DecidedBy", "DeclineReasonPresent", "IntroCallName", "RingDuration", "IntroDuration", "TextSource", "TextFellBack", "Cause", "NoticeDelivered", "IntroStarted" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig), global::Ondewo.Vtsi.TurnDetectionConfig.Parser, new[]{ "Mode", "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnEagerness", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "ConversationContextTurns", "SemanticModelName", "EndOfTurnProbabilityThreshold", "HoldBands", "UncertainMinWords", "IncompleteMaxSilenceSeconds", "ExactProbability", "FinalMergeWindowSeconds", "DictationConfig" }, new[]{ "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "ConversationContextTurns", "SemanticModelName", "EndOfTurnProbabilityThreshold", "UncertainMinWords", "IncompleteMaxSilenceSeconds", "ExactProbability", "FinalMergeWindowSeconds" }, new[]{ typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode), typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBands), global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBands.Parser, new[]{ "Bands" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig), global::Ondewo.Vtsi.TurnDetectionConfig.Parser, new[]{ "Mode", "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnEagerness", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "ConversationContextTurns", "SemanticModelName", "EndOfTurnProbabilityThreshold", "HoldBands", "UncertainMinWords", "IncompleteMaxSilenceSeconds", "ExactProbability", "FinalMergeWindowSeconds", "DictationConfig", "S2TEmitMs", "S2TRequestPartials", "S2TRequestEndOfSpeechCandidate", "SmartTurnThreshold", "PostUnmutePhantomWindowSeconds" }, new[]{ "MinEndpointingDelaySeconds", "MaxEndpointingDelaySeconds", "TurnDetectionSystemPrompt", "TurnDetectionUserPrompt", "ConversationContextTurns", "SemanticModelName", "EndOfTurnProbabilityThreshold", "UncertainMinWords", "IncompleteMaxSilenceSeconds", "ExactProbability", "FinalMergeWindowSeconds", "S2TEmitMs", "S2TRequestPartials", "S2TRequestEndOfSpeechCandidate", "SmartTurnThreshold", "PostUnmutePhantomWindowSeconds" }, new[]{ typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode), typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBands), global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBands.Parser, new[]{ "Bands" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBand), global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBand.Parser, new[]{ "UpperProbability", "MaxSilenceSeconds" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.DictationConfig), global::Ondewo.Vtsi.DictationConfig.Parser, new[]{ "HoldEnabled", "ExpectedInputEnabled", "ReadBackFromBotTextEnabled", "HoldGenericMaxSeconds", "HoldMaxSecondsByCategory", "HoldInvalidChecksumSeconds", "EarlyCommitOnCompleteValue", "S2TSlotMinDurationOffSeconds", "S2TSlotMinDurationOffRestoreSeconds" }, new[]{ "HoldEnabled", "ExpectedInputEnabled", "ReadBackFromBotTextEnabled", "HoldGenericMaxSeconds", "HoldInvalidChecksumSeconds", "EarlyCommitOnCompleteValue", "S2TSlotMinDurationOffSeconds", "S2TSlotMinDurationOffRestoreSeconds" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InterruptionHandlingConfig), global::Ondewo.Vtsi.InterruptionHandlingConfig.Parser, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions", "InterruptionFadeOutMs" }, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions", "InterruptionFadeOutMs" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ResponseTimingConfig), global::Ondewo.Vtsi.ResponseTimingConfig.Parser, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "SoftTimeoutConfig", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled" }, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.InterruptionHandlingConfig), global::Ondewo.Vtsi.InterruptionHandlingConfig.Parser, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions", "InterruptionFadeOutMs", "CancelOnSpeechWhileThinking", "AiTeamsCancelPendingOnInterrupt", "T2SCancelOnBargeIn", "NluTurnControlEnabled", "HeardReportEnabled", "HeardTextAlignmentEnabled" }, new[]{ "Enabled", "MinInterruptionDurationSeconds", "MinInterruptionWords", "FalseInterruptionTimeoutSeconds", "ResumeAfterFalseInterruption", "BackoffSeconds", "FirstMessageProtectedSeconds", "TranscribeOnDisabledInterruptions", "InterruptionFadeOutMs", "CancelOnSpeechWhileThinking", "AiTeamsCancelPendingOnInterrupt", "T2SCancelOnBargeIn", "NluTurnControlEnabled", "HeardReportEnabled", "HeardTextAlignmentEnabled" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.ResponseTimingConfig), global::Ondewo.Vtsi.ResponseTimingConfig.Parser, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "SoftTimeoutConfig", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled", "StreamingEnabled", "NluCallStreamEnabled", "TurnTimeoutIntent", "T2SMaxEdgeSilenceMs", "NluCallStreamTurnTimeoutSeconds", "NluCallStreamTurnQuietSeconds" }, new[]{ "TurnTimeoutSeconds", "SilenceEndCallTimeoutSeconds", "PreemptiveGenerationEnabled", "T2SChunkedStreamingEnabled", "StreamingEnabled", "NluCallStreamEnabled", "TurnTimeoutIntent", "T2SMaxEdgeSilenceMs", "NluCallStreamTurnTimeoutSeconds", "NluCallStreamTurnQuietSeconds" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SoftTimeoutConfig), global::Ondewo.Vtsi.SoftTimeoutConfig.Parser, new[]{ "TimeoutSeconds", "Messages", "MaxPerGeneration" }, new[]{ "TimeoutSeconds", "MaxPerGeneration" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig), global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Parser, new[]{ "Active", "Action", "Sensitivity", "MaxDecisionTimeMs", "MaxMachineWaitMs", "BeepWaitAfterGreetingMs", "InitialSilenceMs", "MaxHumanGreetingMs", "GreetingEndSilenceMs", "BeepDetectionActive", "AdditionalMachinePhrases", "AdditionalHumanPhrases", "HangUpOnFax", "HangUpOnNetworkAnnouncement", "HangUpOnIvr", "HangUpOnCallScreening", "VoiceMessageIntent", "VoiceMessageMaxBeepWaitMs", "VoiceMessageTimeoutMs", "KeywordDetectionActive", "CadenceDetectionActive" }, new[]{ "Active", "Action", "Sensitivity", "MaxDecisionTimeMs", "MaxMachineWaitMs", "BeepWaitAfterGreetingMs", "InitialSilenceMs", "MaxHumanGreetingMs", "GreetingEndSilenceMs", "BeepDetectionActive", "HangUpOnFax", "HangUpOnNetworkAnnouncement", "HangUpOnIvr", "HangUpOnCallScreening", "VoiceMessageIntent", "VoiceMessageMaxBeepWaitMs", "VoiceMessageTimeoutMs", "KeywordDetectionActive", "CadenceDetectionActive" }, new[]{ typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction), typeof(global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ondewo.Vtsi.SipBaseConfig), global::Ondewo.Vtsi.SipBaseConfig.Parser, new[]{ "SipSimVersion" }, null, null, null, null),
@@ -332,25 +398,28 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
-  /// &lt;p>How the briefing of a warm intro is produced&lt;/p>
+  /// How the briefing of a warm intro is produced
   /// </summary>
   public enum WarmIntroTextSource {
     /// <summary>
-    /// See &lt;code>WarmTransferConfig.intro_text_source&lt;/code>
+    /// Chosen by the deployment: &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code> with phase B enabled, else
+    /// &lt;code>WARM_INTRO_TEXT_SOURCE_TEMPLATE&lt;/code> (see &lt;code>WarmTransferConfig.intro_text_source&lt;/code>)
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_TEXT_SOURCE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// &lt;code>WarmTransferConfig.intro_prompt&lt;/code> as a template
+    /// &lt;code>WarmTransferConfig.intro_prompt&lt;/code> as a template with placeholders, else the built-in template.
+    /// Predictable wording, no LLM
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_TEXT_SOURCE_TEMPLATE")] Template = 1,
     /// <summary>
-    /// An LLM summary of the call so far, instructed by &lt;code>WarmTransferConfig.intro_prompt&lt;/code> (phase B)
+    /// &lt;i>Phase B&lt;/i>: an LLM summary of the call so far, instructed by &lt;code>WarmTransferConfig.intro_prompt&lt;/code>;
+    /// the built-in template when no summary can be written (&lt;code>WarmIntroRecord.text_fell_back&lt;/code>)
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY")] LlmSummary = 2,
   }
 
   /// <summary>
-  /// &lt;p>What a WARM transfer does when its warm intro cannot run&lt;/p>
+  /// What a WARM transfer does when its warm intro cannot run
   /// </summary>
   public enum WarmIntroUnavailablePolicy {
     /// <summary>
@@ -358,40 +427,47 @@ namespace Ondewo.Vtsi {
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_UNAVAILABLE_POLICY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Join the target directly, as a WARM transfer without an intro
+    /// Ring the target and join them directly, as a WARM transfer without an intro
+    /// (&lt;code>WarmIntroRecord.intro_started = false&lt;/code>, &lt;code>cause&lt;/code> says why). The caller still reaches
+    /// a person; the target is not briefed
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_UNAVAILABLE_POLICY_CONNECT_WITHOUT_INTRO")] ConnectWithoutIntro = 1,
     /// <summary>
-    /// Hang up the target and keep the call with the bot, which tells the caller
-    /// (&lt;code>TRANSFER_OUTCOME_INTRO_UNAVAILABLE&lt;/code>)
+    /// Hang up the target (or ring nothing) and keep the call with the bot, which tells the caller
+    /// &lt;code>caller_unreachable_message&lt;/code> (&lt;code>TRANSFER_OUTCOME_INTRO_UNAVAILABLE&lt;/code>) and goes on with the
+    /// conversation
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_UNAVAILABLE_POLICY_RETURN_TO_CALLER")] ReturnToCaller = 2,
   }
 
   /// <summary>
-  /// &lt;p>The target&amp;apos;s decision in a warm intro&lt;/p>
+  /// The target&amp;apos;s decision in a warm intro
   /// </summary>
   public enum WarmIntroDecision {
     /// <summary>
-    /// No decision yet (the intro runs, or it never started)
+    /// No decision: the intro still runs, it never started, the target never answered or hung up before deciding
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_DECISION_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// The target accepted and was joined
+    /// The target accepted and was joined; the bot leaves the call
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_DECISION_ACCEPTED")] Accepted = 1,
     /// <summary>
-    /// The target declined; the call stays with the bot
+    /// The target declined and was hung up; the call stays with the bot, which tells the caller
+    /// &lt;code>caller_declined_message&lt;/code>
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_DECISION_DECLINED")] Declined = 2,
     /// <summary>
-    /// The target answered but gave no decision in time (also a mailbox that answered)
+    /// The target answered but gave no decision: no answer within &lt;code>decision_timeout_s&lt;/code> or
+    /// &lt;code>max_intro_duration_s&lt;/code>, two unclear answers, or no yes to the &lt;code>ready_question&lt;/code> (also a
+    /// mailbox that answered). The call stays with the bot, which tells the caller
+    /// &lt;code>caller_unreachable_message&lt;/code>
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_DECISION_NO_DECISION")] NoDecision = 3,
   }
 
   /// <summary>
-  /// &lt;p>How the decision of a warm intro was taken&lt;/p>
+  /// How the decision of a warm intro was taken
   /// </summary>
   public enum WarmIntroDecidedBy {
     /// <summary>
@@ -416,7 +492,9 @@ namespace Ondewo.Vtsi {
 
   #region Messages
   /// <summary>
-  /// Base configuration of services (ondewo-nlu, text-to-speech, speech-to-text, asterisk)
+  /// Address and server trust of one upstream service of a call: the speech-to-text (S2T), NLU and text-to-speech (T2S) services of a &lt;code>CommonServicesConfig&lt;/code>, and the Asterisk of an &lt;code>AsteriskConfig&lt;/code>.
+  ///
+  /// For S2T, NLU and T2S the request is checked LIVE when the caller or listener is started: VTSI connects to the service with these values (the S2T pipeline and the NLU agent are read), so an address that cannot be reached, or a certificate the service&amp;apos;s certificate does not chain to, refuses the request instead of failing later inside the call.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BaseServiceConfig : pb::IMessage<BaseServiceConfig>
@@ -469,8 +547,8 @@ namespace Ondewo.Vtsi {
     public const int HostFieldNumber = 1;
     private string host_ = "";
     /// <summary>
-    /// Host name or IP address of the service. Required: an empty host is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// Host name or IP address of the service, as the call reaches it, e.g. &lt;code>s2t.example.com&lt;/code>.
+    /// Required: an empty host (or one of only whitespace) is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -485,8 +563,8 @@ namespace Ondewo.Vtsi {
     public const int PortFieldNumber = 2;
     private int port_;
     /// <summary>
-    /// TCP port of the service, 1 to 65535. A value of 0 or below (also an unset port) is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// TCP port of the service&amp;apos;s gRPC server, 1 to 65535. A value of 0 or below (also an unset port) or above
+    /// 65535 is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -501,10 +579,17 @@ namespace Ondewo.Vtsi {
     public const int GrpcCertFieldNumber = 3;
     private string grpcCert_ = "";
     /// <summary>
-    /// PEM certificate(s) the service&amp;apos;s gRPC server certificate chains to (CA or self-signed leaf), with real or
-    /// escaped newlines; never a private key. Required for the S2T, NLU and T2S configs of a call unless the VTSI
-    /// server runs with ONDEWO_VTSI_ALLOW_INSECURE_UPSTREAM=True (lab and CI only); an empty value is otherwise
-    /// refused with FAILED_PRECONDITION (UPSTREAM_TLS_REQUIRED).
+    /// Optional: The PEM certificate(s) the service&amp;apos;s gRPC server certificate chains to (its CA, or its
+    /// self-signed certificate), with real or escaped (&lt;code>\n&lt;/code>) newlines. Used for the S2T, NLU and T2S
+    /// services: the connection to them is always TLS, and the server certificate and host name are always
+    /// verified; there is no plaintext mode.
+    /// &lt;p>Empty (the default): the server is verified against the deployment&amp;apos;s CA bundle,
+    /// &lt;code>ONDEWO_VTSI_CALL_UPSTREAM_CLIENT_CA_FILE&lt;/code>. Set: it is verified against these certificates
+    /// instead.&lt;/p>
+    /// &lt;p>Only &lt;code>-----BEGIN CERTIFICATE-----&lt;/code> blocks are accepted. A value carrying a private key, a
+    /// file path, any other PEM block type or a certificate that cannot be parsed is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>: the value is stored with the call and handed to the call, so it must
+    /// never hold secret material.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -705,7 +790,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Credentials
+  /// User name and password the call logs in to the NLU service with (the NLU &lt;code>credentials&lt;/code> of &lt;code>NluVtsiConfig&lt;/code>), usually the project&amp;apos;s technical user.
+  ///
+  /// They are checked when the caller or listener is started: VTSI reads the configured NLU agent with them, so credentials the NLU service (or its login server) refuses refuse the request. Where the deployment logs in through Keycloak, the same login also authorizes the S2T and T2S checks of that request. The password is never logged, and read responses may withhold it depending on the reader&amp;apos;s role (see &lt;code>GetCaller&lt;/code>).
+  ///
+  /// Pooled callers: credentials are not part of the configuration a pooled caller is matched by, but they are compared exactly before one is reused, so a changed password always gets a caller that logs in with it.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Credentials : pb::IMessage<Credentials>
@@ -757,7 +846,7 @@ namespace Ondewo.Vtsi {
     public const int AccountNameFieldNumber = 1;
     private string accountName_ = "";
     /// <summary>
-    /// Account name - usually email address
+    /// Account name the call logs in with, usually an email address, e.g. &lt;code>technical-user@example.com&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -772,7 +861,7 @@ namespace Ondewo.Vtsi {
     public const int PasswordFieldNumber = 2;
     private string password_ = "";
     /// <summary>
-    /// password of the account
+    /// Password of &lt;code>account_name&lt;/code>. Stored with the call and never logged
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -949,7 +1038,13 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// NLU Configuration
+  /// NLU configuration of a call: which NLU agent answers the caller, in which language, how the call authenticates to the NLU, how the conversation is opened, and how the bot behaves when the NLU is slow or unreachable.
+  ///
+  /// Scope: the configuration of a LISTENER applies to every inbound call that listener deployment serves; the configuration of a caller, a campaign or a scheduled caller applies to its own calls. A pooled (persistent) caller is only reused for a request whose configuration is identical (the credentials are compared exactly, so a changed password deploys a new caller).
+  ///
+  /// Unless a field says otherwise, an unset &lt;code>optional&lt;/code> field means &amp;quot;inherit&amp;quot;: the call keeps the built-in default of the speech-to-speech service. A value set here wins for the calls this configuration serves.
+  ///
+  /// The request is validated before any call is placed: the NLU must be reachable and the agent must exist and be readable with the given credentials. A missing &lt;code>agent_name&lt;/code>, an unknown agent or rejected credentials are refused with &lt;code>INVALID_ARGUMENT&lt;/code>; an NLU that does not answer at all is &lt;code>UNAVAILABLE&lt;/code> (retryable).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NluVtsiConfig : pb::IMessage<NluVtsiConfig>
@@ -996,6 +1091,11 @@ namespace Ondewo.Vtsi {
       httpBasicAuthToken_ = other.httpBasicAuthToken_;
       platform_ = other.platform_;
       preemptiveGenerationConfig_ = other.preemptiveGenerationConfig_ != null ? other.preemptiveGenerationConfig_.Clone() : null;
+      aiTeamsFillersAudible_ = other.aiTeamsFillersAudible_;
+      failureApologyMessage_ = other.failureApologyMessage_;
+      sessionIdFromSipContext_ = other.sessionIdFromSipContext_;
+      aiTeamsPushMaxAgeSeconds_ = other.aiTeamsPushMaxAgeSeconds_;
+      aiTeamsPushMaxSpoken_ = other.aiTeamsPushMaxSpoken_;
       switch (other.AuthenticationCase) {
         case AuthenticationOneofCase.Credentials:
           Credentials = other.Credentials.Clone();
@@ -1018,8 +1118,8 @@ namespace Ondewo.Vtsi {
     public const int NluBaseConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.BaseServiceConfig nluBaseConfig_;
     /// <summary>
-    /// Base config
-    /// Host, Port, and [Optional] GRPC cert
+    /// Required: Address of the NLU gRPC server (host, port and the certificate its server certificate chains to).
+    /// See &lt;code>BaseServiceConfig&lt;/code> for what is refused
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1033,7 +1133,10 @@ namespace Ondewo.Vtsi {
     /// <summary>Field number for the "credentials" field.</summary>
     public const int CredentialsFieldNumber = 2;
     /// <summary>
-    /// Credentials with classical username and password
+    /// Account name and password of the NLU user the call talks to the NLU as (typically a technical user of
+    /// the project). Used twice: once when the request is validated (the agent is read with these credentials)
+    /// and once inside the call, which logs in with them. This is the authentication current deployments use.
+    /// The values are never logged and can be withheld when the call configuration is read back
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1048,7 +1151,10 @@ namespace Ondewo.Vtsi {
     /// <summary>Field number for the "auth_token" field.</summary>
     public const int AuthTokenFieldNumber = 3;
     /// <summary>
-    /// Authentication token
+    /// Authentication token. Kept for wire compatibility only: VTSI does not validate the request with it, and
+    /// the speech-to-speech service of current SIP images does not read it, so it has no effect there. It is
+    /// still handed to the call, so a call running an older SIP image (&lt;code>SipBaseConfig.sip_sim_version&lt;/code>)
+    /// may still use it. Use &lt;code>credentials&lt;/code> instead
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1078,7 +1184,8 @@ namespace Ondewo.Vtsi {
     public const int AgentNameFieldNumber = 4;
     private string agentName_ = "";
     /// <summary>
-    /// The resource name of the agent.
+    /// Required: Resource name of the NLU agent that answers the caller. An empty or unknown agent is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>.
     /// Format: &lt;pre>&lt;code>projects/&amp;lt;uuid&amp;gt;/agent&lt;/code>&lt;/pre>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1095,9 +1202,10 @@ namespace Ondewo.Vtsi {
     private string languageCode_ = "";
     /// <summary>
     /// Language of the NLU requests of the call: an ISO 639-1 code (e.g. &lt;code>de&lt;/code>, &lt;code>en&lt;/code>) or a
-    /// language tag the agent supports (e.g. &lt;code>de-DE&lt;/code>). VTSI does not validate it: the NLU agent decides
-    /// whether it supports the value, and an empty value is accepted (a warning is logged, and the agent&amp;apos;s
-    /// default language applies).
+    /// language tag the agent supports (e.g. &lt;code>de-DE&lt;/code>). It is sent with every NLU request of the call and
+    /// also selects the language of the default &lt;code>failure_apology_message&lt;/code>. VTSI does not check it against
+    /// the agent. An empty value is accepted with a warning, but the call then asks the NLU in no language, the
+    /// agent cannot answer and the bot stays silent: always set a language the agent supports
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1112,7 +1220,10 @@ namespace Ondewo.Vtsi {
     public const int InitialIntentFieldNumber = 6;
     private string initialIntent_ = "";
     /// <summary>
-    /// name of intent to trigger at the start of a call
+    /// Display name of the intent that opens the conversation, e.g. &lt;code>Default Welcome Intent&lt;/code>. When the
+    /// call is connected the bot triggers this intent before the caller says anything and speaks its answer (the
+    /// greeting). Empty: the bot says nothing first and waits for the caller to speak. With answering machine
+    /// detection active the intent is triggered only once the detector decided to greet
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1129,7 +1240,11 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Dialogflow.V2.Context.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Context> contexts_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Context>();
     /// <summary>
-    /// ondewo-nlu list of contexts
+    /// Contexts created in the call&amp;apos;s NLU session before the first NLU request, e.g. to hand the agent the
+    /// customer number of an outbound call. Only the last segment of a context&amp;apos;s &lt;code>name&lt;/code> (the
+    /// context id) is used: the context is created in the session of the call. A context without a name is skipped.
+    /// Example: a context named &lt;code>c-customer&lt;/code> with the parameter &lt;code>customer_id&lt;/code> lets the agent
+    /// greet a known customer by the data behind that id
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1141,7 +1256,7 @@ namespace Ondewo.Vtsi {
     public const int HttpBasicAuthTokenFieldNumber = 8;
     private string httpBasicAuthToken_ = "";
     /// <summary>
-    /// http basic auth token
+    /// HTTP basic auth token. Kept for wire compatibility only: it is not forwarded to the call and has no effect
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1158,7 +1273,11 @@ namespace Ondewo.Vtsi {
 
     private global::Ondewo.Nlu.Intent.Types.Message.Types.Platform platform_;
     /// <summary>
-    /// Return the message specified in Intent.Message.Platform platform to the user in the DetectIntentResponse
+    /// Optional: Platform of the response messages the bot speaks. An NLU answer can carry messages for several
+    /// platforms; the bot speaks only the text messages of this platform and skips every other one. Unset:
+    /// &lt;code>PLATFORM_UNSPECIFIED&lt;/code>, the messages without a platform. Set it to the platform the agent&amp;apos;s
+    /// voice answers are written for. A platform the agent&amp;apos;s answers carry no text message for leaves the bot
+    /// silent, so check the agent before changing it
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1186,8 +1305,8 @@ namespace Ondewo.Vtsi {
     public const int PreemptiveGenerationConfigFieldNumber = 10;
     private global::Ondewo.Vtsi.NluPreemptiveGenerationConfig preemptiveGenerationConfig_;
     /// <summary>
-    /// Optional: Bounds of the preemptive (speculative) NLU requests of the call. Unset keeps the deployment&amp;apos;s
-    /// values. Whether preemptive generation runs at all is set with
+    /// Optional: Bounds of the preemptive (speculative) NLU requests of the call. Unset keeps the built-in
+    /// defaults. The bounds only matter while preemptive generation is on, which is set with
     /// &lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1197,6 +1316,186 @@ namespace Ondewo.Vtsi {
       set {
         preemptiveGenerationConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "ai_teams_fillers_audible" field.</summary>
+    public const int AiTeamsFillersAudibleFieldNumber = 11;
+    private readonly static bool AiTeamsFillersAudibleDefaultValue = false;
+
+    private bool aiTeamsFillersAudible_;
+    /// <summary>
+    /// Optional: Speak the filler sentences an AI Teams agent of the NLU sends while it is still working on a slow
+    /// answer (e.g. &amp;quot;One moment, I am checking that for you.&amp;quot;), so the caller does not hear dead air. A
+    /// filler is spoken before the answer of its turn, and a final answer that repeats a filler already spoken is not
+    /// spoken a second time. &lt;code>false&lt;/code>: every filler is dropped and only the answers are spoken. Only
+    /// fillers the NLU marks as fillers are affected; agents that are not AI Teams agents send none. Default:
+    /// &lt;code>true&lt;/code>. There is no deployment-wide setting for it; a value set here wins for this call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AiTeamsFillersAudible {
+      get { if ((_hasBits0 & 2) != 0) { return aiTeamsFillersAudible_; } else { return AiTeamsFillersAudibleDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        aiTeamsFillersAudible_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ai_teams_fillers_audible" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAiTeamsFillersAudible {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "ai_teams_fillers_audible" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAiTeamsFillersAudible() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "failure_apology_message" field.</summary>
+    public const int FailureApologyMessageFieldNumber = 12;
+    private readonly static string FailureApologyMessageDefaultValue = "";
+
+    private string failureApologyMessage_;
+    /// <summary>
+    /// Optional: Text the bot speaks when an NLU request of a turn still fails after its retries (the NLU is
+    /// unreachable), so the caller hears a request to repeat instead of silence. Unset: a built-in apology in the
+    /// language of &lt;code>language_code&lt;/code>, German for &lt;code>de&lt;/code> / &lt;code>de-*&lt;/code> and English for every
+    /// other language (&amp;quot;Sorry, I didn&amp;apos;t quite catch that. Could you please repeat that?&amp;quot;). An empty
+    /// text switches the apology off: the failed turn then stays unanswered. Leading and trailing spaces are removed.
+    /// At most 500 characters and no control characters (a line break included); otherwise refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. There is no deployment-wide setting for it; a value set here wins for this call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FailureApologyMessage {
+      get { return failureApologyMessage_ ?? FailureApologyMessageDefaultValue; }
+      set {
+        failureApologyMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "failure_apology_message" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFailureApologyMessage {
+      get { return failureApologyMessage_ != null; }
+    }
+    /// <summary>Clears the value of the "failure_apology_message" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFailureApologyMessage() {
+      failureApologyMessage_ = null;
+    }
+
+    /// <summary>Field number for the "session_id_from_sip_context" field.</summary>
+    public const int SessionIdFromSipContextFieldNumber = 13;
+    private readonly static bool SessionIdFromSipContextDefaultValue = false;
+
+    private bool sessionIdFromSipContext_;
+    /// <summary>
+    /// Optional: Take the call&amp;apos;s SIP context into the NLU session. &lt;code>true&lt;/code> (default): the NLU session
+    /// id of the call is derived from the SIP header &lt;code>X-ondewo-phonesystem-call-id&lt;/code> when the call carries
+    /// it (an &lt;code>@&lt;/code> becomes &lt;code>_at_&lt;/code>), so the conversation can be found by the phone system&amp;apos;s
+    /// own call id; and the session gets the context &lt;code>c-sip-context&lt;/code>, whose parameters are the SIP
+    /// account (&lt;code>account_name&lt;/code>), the called party (&lt;code>callee_id&lt;/code>) and the SIP headers of the
+    /// call, so the agent can read e.g. a customer header the dialer added. &lt;code>false&lt;/code>: the session id is
+    /// the one generated for the call, no &lt;code>c-sip-context&lt;/code> is created, and an agent that reads SIP headers
+    /// from that context finds nothing. There is no deployment-wide setting for it; a value set here wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SessionIdFromSipContext {
+      get { if ((_hasBits0 & 4) != 0) { return sessionIdFromSipContext_; } else { return SessionIdFromSipContextDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        sessionIdFromSipContext_ = value;
+      }
+    }
+    /// <summary>Gets whether the "session_id_from_sip_context" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSessionIdFromSipContext {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "session_id_from_sip_context" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSessionIdFromSipContext() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "ai_teams_push_max_age_seconds" field.</summary>
+    public const int AiTeamsPushMaxAgeSecondsFieldNumber = 14;
+    private readonly static float AiTeamsPushMaxAgeSecondsDefaultValue = 0F;
+
+    private float aiTeamsPushMaxAgeSeconds_;
+    /// <summary>
+    /// Optional: Seconds a result an AI Teams agent delivers on its own (a push, e.g. the later result of a tool that
+    /// ran in the background) may wait at most to be spoken. A push is held while the caller speaks or the bot is
+    /// still answering, and spoken once the floor is free; a push that has waited longer than this by then is dropped
+    /// without being spoken and reported as dropped with the reason &lt;code>stale&lt;/code>, because a result the caller
+    /// asked for long ago is confusing once the conversation has moved on. Unit: seconds. Default: 30. Valid range:
+    /// 0 - 3600; 0 switches the age limit off (every held push is spoken, subject to
+    /// &lt;code>ai_teams_push_max_spoken&lt;/code>). Pushes only reach the call with
+    /// &lt;code>ResponseTimingConfig.nlu_call_stream_enabled&lt;/code>; agents that are not AI Teams agents send none. A set
+    /// value wins over the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_NLU_PUSH_MAX_AGE_SECONDS&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float AiTeamsPushMaxAgeSeconds {
+      get { if ((_hasBits0 & 8) != 0) { return aiTeamsPushMaxAgeSeconds_; } else { return AiTeamsPushMaxAgeSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        aiTeamsPushMaxAgeSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ai_teams_push_max_age_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAiTeamsPushMaxAgeSeconds {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "ai_teams_push_max_age_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAiTeamsPushMaxAgeSeconds() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "ai_teams_push_max_spoken" field.</summary>
+    public const int AiTeamsPushMaxSpokenFieldNumber = 15;
+    private readonly static int AiTeamsPushMaxSpokenDefaultValue = 0;
+
+    private int aiTeamsPushMaxSpoken_;
+    /// <summary>
+    /// Optional: Number of held pushes (see &lt;code>ai_teams_push_max_age_seconds&lt;/code>) spoken at most when the floor
+    /// becomes free: of the pushes still held after the age limit, only the NEWEST ones up to this number are spoken,
+    /// oldest first; every older one is dropped without being spoken and reported as dropped with the reason
+    /// &lt;code>coalesced&lt;/code>. Example: three tool results arrived while the caller was talking; with 2 the caller
+    /// hears the two latest. Default: 2. Valid range: 0 - 16; 0 switches the limit off (every held push is spoken).
+    /// A set value wins over the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_NLU_PUSH_MAX_SPOKEN&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int AiTeamsPushMaxSpoken {
+      get { if ((_hasBits0 & 16) != 0) { return aiTeamsPushMaxSpoken_; } else { return AiTeamsPushMaxSpokenDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        aiTeamsPushMaxSpoken_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ai_teams_push_max_spoken" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAiTeamsPushMaxSpoken {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "ai_teams_push_max_spoken" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAiTeamsPushMaxSpoken() {
+      _hasBits0 &= ~16;
     }
 
     private object authentication_;
@@ -1245,6 +1544,11 @@ namespace Ondewo.Vtsi {
       if (HttpBasicAuthToken != other.HttpBasicAuthToken) return false;
       if (Platform != other.Platform) return false;
       if (!object.Equals(PreemptiveGenerationConfig, other.PreemptiveGenerationConfig)) return false;
+      if (AiTeamsFillersAudible != other.AiTeamsFillersAudible) return false;
+      if (FailureApologyMessage != other.FailureApologyMessage) return false;
+      if (SessionIdFromSipContext != other.SessionIdFromSipContext) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AiTeamsPushMaxAgeSeconds, other.AiTeamsPushMaxAgeSeconds)) return false;
+      if (AiTeamsPushMaxSpoken != other.AiTeamsPushMaxSpoken) return false;
       if (AuthenticationCase != other.AuthenticationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1263,6 +1567,11 @@ namespace Ondewo.Vtsi {
       if (HttpBasicAuthToken.Length != 0) hash ^= HttpBasicAuthToken.GetHashCode();
       if (HasPlatform) hash ^= Platform.GetHashCode();
       if (preemptiveGenerationConfig_ != null) hash ^= PreemptiveGenerationConfig.GetHashCode();
+      if (HasAiTeamsFillersAudible) hash ^= AiTeamsFillersAudible.GetHashCode();
+      if (HasFailureApologyMessage) hash ^= FailureApologyMessage.GetHashCode();
+      if (HasSessionIdFromSipContext) hash ^= SessionIdFromSipContext.GetHashCode();
+      if (HasAiTeamsPushMaxAgeSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AiTeamsPushMaxAgeSeconds);
+      if (HasAiTeamsPushMaxSpoken) hash ^= AiTeamsPushMaxSpoken.GetHashCode();
       hash ^= (int) authenticationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1319,6 +1628,26 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(82);
         output.WriteMessage(PreemptiveGenerationConfig);
       }
+      if (HasAiTeamsFillersAudible) {
+        output.WriteRawTag(88);
+        output.WriteBool(AiTeamsFillersAudible);
+      }
+      if (HasFailureApologyMessage) {
+        output.WriteRawTag(98);
+        output.WriteString(FailureApologyMessage);
+      }
+      if (HasSessionIdFromSipContext) {
+        output.WriteRawTag(104);
+        output.WriteBool(SessionIdFromSipContext);
+      }
+      if (HasAiTeamsPushMaxAgeSeconds) {
+        output.WriteRawTag(117);
+        output.WriteFloat(AiTeamsPushMaxAgeSeconds);
+      }
+      if (HasAiTeamsPushMaxSpoken) {
+        output.WriteRawTag(120);
+        output.WriteInt32(AiTeamsPushMaxSpoken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1366,6 +1695,26 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(82);
         output.WriteMessage(PreemptiveGenerationConfig);
       }
+      if (HasAiTeamsFillersAudible) {
+        output.WriteRawTag(88);
+        output.WriteBool(AiTeamsFillersAudible);
+      }
+      if (HasFailureApologyMessage) {
+        output.WriteRawTag(98);
+        output.WriteString(FailureApologyMessage);
+      }
+      if (HasSessionIdFromSipContext) {
+        output.WriteRawTag(104);
+        output.WriteBool(SessionIdFromSipContext);
+      }
+      if (HasAiTeamsPushMaxAgeSeconds) {
+        output.WriteRawTag(117);
+        output.WriteFloat(AiTeamsPushMaxAgeSeconds);
+      }
+      if (HasAiTeamsPushMaxSpoken) {
+        output.WriteRawTag(120);
+        output.WriteInt32(AiTeamsPushMaxSpoken);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1403,6 +1752,21 @@ namespace Ondewo.Vtsi {
       }
       if (preemptiveGenerationConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreemptiveGenerationConfig);
+      }
+      if (HasAiTeamsFillersAudible) {
+        size += 1 + 1;
+      }
+      if (HasFailureApologyMessage) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FailureApologyMessage);
+      }
+      if (HasSessionIdFromSipContext) {
+        size += 1 + 1;
+      }
+      if (HasAiTeamsPushMaxAgeSeconds) {
+        size += 1 + 4;
+      }
+      if (HasAiTeamsPushMaxSpoken) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AiTeamsPushMaxSpoken);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1443,6 +1807,21 @@ namespace Ondewo.Vtsi {
           PreemptiveGenerationConfig = new global::Ondewo.Vtsi.NluPreemptiveGenerationConfig();
         }
         PreemptiveGenerationConfig.MergeFrom(other.PreemptiveGenerationConfig);
+      }
+      if (other.HasAiTeamsFillersAudible) {
+        AiTeamsFillersAudible = other.AiTeamsFillersAudible;
+      }
+      if (other.HasFailureApologyMessage) {
+        FailureApologyMessage = other.FailureApologyMessage;
+      }
+      if (other.HasSessionIdFromSipContext) {
+        SessionIdFromSipContext = other.SessionIdFromSipContext;
+      }
+      if (other.HasAiTeamsPushMaxAgeSeconds) {
+        AiTeamsPushMaxAgeSeconds = other.AiTeamsPushMaxAgeSeconds;
+      }
+      if (other.HasAiTeamsPushMaxSpoken) {
+        AiTeamsPushMaxSpoken = other.AiTeamsPushMaxSpoken;
       }
       switch (other.AuthenticationCase) {
         case AuthenticationOneofCase.Credentials:
@@ -1526,6 +1905,26 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(PreemptiveGenerationConfig);
             break;
           }
+          case 88: {
+            AiTeamsFillersAudible = input.ReadBool();
+            break;
+          }
+          case 98: {
+            FailureApologyMessage = input.ReadString();
+            break;
+          }
+          case 104: {
+            SessionIdFromSipContext = input.ReadBool();
+            break;
+          }
+          case 117: {
+            AiTeamsPushMaxAgeSeconds = input.ReadFloat();
+            break;
+          }
+          case 120: {
+            AiTeamsPushMaxSpoken = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1596,6 +1995,26 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(PreemptiveGenerationConfig);
             break;
           }
+          case 88: {
+            AiTeamsFillersAudible = input.ReadBool();
+            break;
+          }
+          case 98: {
+            FailureApologyMessage = input.ReadString();
+            break;
+          }
+          case 104: {
+            SessionIdFromSipContext = input.ReadBool();
+            break;
+          }
+          case 117: {
+            AiTeamsPushMaxAgeSeconds = input.ReadFloat();
+            break;
+          }
+          case 120: {
+            AiTeamsPushMaxSpoken = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -1604,10 +2023,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Bounds of the preemptive (speculative) NLU requests: on a stable partial transcription the speech-to-speech
-  /// service asks the NLU for the answer of a draft BEFORE the final transcription arrives, and keeps it only when the
-  /// final transcription matches the draft. Every field is optional; an unset field keeps the deployment&amp;apos;s value.
-  /// A value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+  /// Bounds of the preemptive (speculative) NLU requests. While preemptive generation is on (&lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>), the bot asks the NLU for the answer of a stable partial transcription BEFORE the caller&amp;apos;s final transcription arrives, and uses that draft only when the final transcription matches it; otherwise the draft is discarded and the caller hears nothing of it. A draft never ends the caller&amp;apos;s turn early; it only saves time when it matches. Every extra draft is an extra NLU request, and these bounds limit how many a turn may cost.
+  ///
+  /// Every field is optional; an unset field keeps the built-in default (there is no deployment-wide setting for these). A value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Example: &lt;code>max_drafts_per_turn=1&lt;/code> and &lt;code>min_stable_dwell_seconds=0.5&lt;/code> allow one draft per turn, started only after the partial transcription stayed unchanged for half a second: fewer extra NLU requests, less time saved.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NluPreemptiveGenerationConfig : pb::IMessage<NluPreemptiveGenerationConfig>
@@ -1664,8 +2084,8 @@ namespace Ondewo.Vtsi {
 
     private int maxDraftsPerTurn_;
     /// <summary>
-    /// Optional: Number of drafts one caller turn may start at most (default: 2, valid range: 0 - 5;
-    /// 0 = no drafts)
+    /// Optional: Number of drafts one caller turn may start at most. Unset: 2. Valid range: 0 - 5; 0 starts no draft
+    /// at all, i.e. preemptive generation does nothing on this call
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1695,8 +2115,9 @@ namespace Ondewo.Vtsi {
 
     private float minStableDwellSeconds_;
     /// <summary>
-    /// Optional: Seconds a partial transcription must stay unchanged before the first draft of a turn starts
-    /// (default: 0.25, valid range: 0 - 2; 0 = no wait)
+    /// Optional: Seconds a partial transcription must stay unchanged before the first draft of a turn starts. A
+    /// longer wait drafts less often on a caller who only paused to breathe. Unset: 0.25. Valid range: 0 - 2;
+    /// 0 = no wait
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1726,8 +2147,9 @@ namespace Ondewo.Vtsi {
 
     private float minIntervalSeconds_;
     /// <summary>
-    /// Optional: Minimum seconds between the starts of two drafts within one turn (default: 0.5,
-    /// valid range: 0 - 5; 0 = no limit)
+    /// Optional: Minimum seconds between the starts of two drafts within one turn, so a caller whose transcription
+    /// keeps changing cannot use up &lt;code>max_drafts_per_turn&lt;/code> at once. Unset: 0.5. Valid range: 0 - 5;
+    /// 0 = no minimum interval
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1941,7 +2363,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Text-2-Speech Configuration
+  /// Text-to-speech configuration of the call: which text-to-speech service and pipeline voices the bot, and how the answers of preemptive drafts are synthesized.
+  ///
+  /// Scope: the configuration of a listener applies to every inbound call that listener deployment serves; the configuration of a caller, a campaign or a scheduled caller applies to its own calls. A pooled persistent caller is reused only for a request with the identical configuration, so callers with different values are never shared.
+  ///
+  /// The service and the pipeline are checked when the request arrives: an empty &lt;code>t2s_pipeline_id&lt;/code>, a pipeline the text-to-speech service does not know and an inactive pipeline are refused with &lt;code>INVALID_ARGUMENT&lt;/code>; a text-to-speech service that does not answer is reported as &lt;code>UNAVAILABLE&lt;/code> (a campaign then retries the call later).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sVtsiConfig : pb::IMessage<T2sVtsiConfig>
@@ -1951,6 +2377,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<T2sVtsiConfig> _parser = new pb::MessageParser<T2sVtsiConfig>(() => new T2sVtsiConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<T2sVtsiConfig> Parser { get { return _parser; } }
@@ -1978,9 +2405,12 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public T2sVtsiConfig(T2sVtsiConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       t2SBaseConfig_ = other.t2SBaseConfig_ != null ? other.t2SBaseConfig_.Clone() : null;
       t2SRequestConfig_ = other.t2SRequestConfig_ != null ? other.t2SRequestConfig_.Clone() : null;
       preemptiveSynthesisConfig_ = other.preemptiveSynthesisConfig_ != null ? other.preemptiveSynthesisConfig_.Clone() : null;
+      synthesizeTimeoutSeconds_ = other.synthesizeTimeoutSeconds_;
+      cacheRetention_ = other.cacheRetention_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1994,7 +2424,8 @@ namespace Ondewo.Vtsi {
     public const int T2SBaseConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.BaseServiceConfig t2SBaseConfig_;
     /// <summary>
-    /// Host, Port, and [Optional] GRPC cert
+    /// Host, port and trust anchor of the text-to-speech service the call uses. Required; see
+    /// &lt;code>BaseServiceConfig&lt;/code> for what is refused
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2009,7 +2440,11 @@ namespace Ondewo.Vtsi {
     public const int T2SRequestConfigFieldNumber = 2;
     private global::Ondewo.T2S.RequestConfig t2SRequestConfig_;
     /// <summary>
-    /// Configuration of Text-2-Speech
+    /// Request configuration sent with the speech synthesis of the bot&amp;apos;s utterances. &lt;code>t2s_pipeline_id&lt;/code>
+    /// is required and selects the text-to-speech pipeline, i.e. the voice the bot speaks with; the other fields
+    /// (e.g. &lt;code>length_scale&lt;/code>, the time stretching of the speech) are optional and keep the pipeline&amp;apos;s
+    /// defaults when unset.
+    /// Example: &lt;code>t2s_pipeline_id=&amp;quot;my-german-voice&amp;quot;&lt;/code> lets the bot speak with that pipeline
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2024,7 +2459,9 @@ namespace Ondewo.Vtsi {
     public const int PreemptiveSynthesisConfigFieldNumber = 3;
     private global::Ondewo.Vtsi.T2sPreemptiveSynthesisConfig preemptiveSynthesisConfig_;
     /// <summary>
-    /// Optional: Speech synthesis of preemptive (speculative) drafts. Unset keeps the deployment&amp;apos;s values
+    /// Optional: Whether and how the answer of a preemptive (speculative) draft is synthesized before the final
+    /// transcription arrives. Unset keeps the built-in defaults listed in &lt;code>T2sPreemptiveSynthesisConfig&lt;/code>.
+    /// Only matters while preemptive generation is on (&lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2033,6 +2470,81 @@ namespace Ondewo.Vtsi {
       set {
         preemptiveSynthesisConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "synthesize_timeout_seconds" field.</summary>
+    public const int SynthesizeTimeoutSecondsFieldNumber = 4;
+    private readonly static float SynthesizeTimeoutSecondsDefaultValue = 0F;
+
+    private float synthesizeTimeoutSeconds_;
+    /// <summary>
+    /// Optional: Seconds one speech synthesis request of the call may take before it is given up (default: 20, valid
+    /// range: 1 - 120). A failed or timed-out request of an answer is retried, so a slow text-to-speech service can
+    /// keep the caller waiting for several times this value; a lower value gives up sooner. The opening message of
+    /// the call stops retrying when the time the caller is kept muted at the start of the call runs out, and an
+    /// audible AI Teams filler gets one attempt of at most 1 s, never more than this value. There is no
+    /// deployment-wide setting for it; a value set here wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SynthesizeTimeoutSeconds {
+      get { if ((_hasBits0 & 1) != 0) { return synthesizeTimeoutSeconds_; } else { return SynthesizeTimeoutSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        synthesizeTimeoutSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "synthesize_timeout_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSynthesizeTimeoutSeconds {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "synthesize_timeout_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSynthesizeTimeoutSeconds() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "cache_retention" field.</summary>
+    public const int CacheRetentionFieldNumber = 5;
+    private readonly static string CacheRetentionDefaultValue = "";
+
+    private string cacheRetention_;
+    /// <summary>
+    /// Optional: How long the synthesized audio of the bot&amp;apos;s answers is kept for reuse (case-insensitive):
+    /// &lt;ul>
+    ///   &lt;li>&lt;code>call&lt;/code> (the default when unset): everything synthesized during a call is dropped when the
+    ///       call ends. Audio synthesized when the speech-to-speech service starts (the greeting, the answers of
+    ///       static intents, fillers) is kept, so the next call still starts without a synthesis wait.&lt;/li>
+    ///   &lt;li>&lt;code>process&lt;/code>: nothing is dropped; an utterance repeated in a later call served by the same
+    ///       container is not synthesized again. The audio of one caller (e.g. a name or an amount the bot read
+    ///       back) then stays in memory while later callers of a listener are served. The audio is reused only for
+    ///       the identical request, so it is never played to another caller unless the bot says the same text.&lt;/li>
+    /// &lt;/ul>
+    /// Any other value is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. There is no deployment-wide setting for it; a
+    /// value set here wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CacheRetention {
+      get { return cacheRetention_ ?? CacheRetentionDefaultValue; }
+      set {
+        cacheRetention_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "cache_retention" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCacheRetention {
+      get { return cacheRetention_ != null; }
+    }
+    /// <summary>Clears the value of the "cache_retention" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCacheRetention() {
+      cacheRetention_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2053,6 +2565,8 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(T2SBaseConfig, other.T2SBaseConfig)) return false;
       if (!object.Equals(T2SRequestConfig, other.T2SRequestConfig)) return false;
       if (!object.Equals(PreemptiveSynthesisConfig, other.PreemptiveSynthesisConfig)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SynthesizeTimeoutSeconds, other.SynthesizeTimeoutSeconds)) return false;
+      if (CacheRetention != other.CacheRetention) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2063,6 +2577,8 @@ namespace Ondewo.Vtsi {
       if (t2SBaseConfig_ != null) hash ^= T2SBaseConfig.GetHashCode();
       if (t2SRequestConfig_ != null) hash ^= T2SRequestConfig.GetHashCode();
       if (preemptiveSynthesisConfig_ != null) hash ^= PreemptiveSynthesisConfig.GetHashCode();
+      if (HasSynthesizeTimeoutSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SynthesizeTimeoutSeconds);
+      if (HasCacheRetention) hash ^= CacheRetention.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2093,6 +2609,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteMessage(PreemptiveSynthesisConfig);
       }
+      if (HasSynthesizeTimeoutSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(SynthesizeTimeoutSeconds);
+      }
+      if (HasCacheRetention) {
+        output.WriteRawTag(42);
+        output.WriteString(CacheRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2115,6 +2639,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(26);
         output.WriteMessage(PreemptiveSynthesisConfig);
       }
+      if (HasSynthesizeTimeoutSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(SynthesizeTimeoutSeconds);
+      }
+      if (HasCacheRetention) {
+        output.WriteRawTag(42);
+        output.WriteString(CacheRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2133,6 +2665,12 @@ namespace Ondewo.Vtsi {
       }
       if (preemptiveSynthesisConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PreemptiveSynthesisConfig);
+      }
+      if (HasSynthesizeTimeoutSeconds) {
+        size += 1 + 4;
+      }
+      if (HasCacheRetention) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CacheRetention);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2163,6 +2701,12 @@ namespace Ondewo.Vtsi {
           PreemptiveSynthesisConfig = new global::Ondewo.Vtsi.T2sPreemptiveSynthesisConfig();
         }
         PreemptiveSynthesisConfig.MergeFrom(other.PreemptiveSynthesisConfig);
+      }
+      if (other.HasSynthesizeTimeoutSeconds) {
+        SynthesizeTimeoutSeconds = other.SynthesizeTimeoutSeconds;
+      }
+      if (other.HasCacheRetention) {
+        CacheRetention = other.CacheRetention;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2202,6 +2746,14 @@ namespace Ondewo.Vtsi {
               PreemptiveSynthesisConfig = new global::Ondewo.Vtsi.T2sPreemptiveSynthesisConfig();
             }
             input.ReadMessage(PreemptiveSynthesisConfig);
+            break;
+          }
+          case 37: {
+            SynthesizeTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 42: {
+            CacheRetention = input.ReadString();
             break;
           }
         }
@@ -2244,6 +2796,14 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(PreemptiveSynthesisConfig);
             break;
           }
+          case 37: {
+            SynthesizeTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 42: {
+            CacheRetention = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2252,8 +2812,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Speech synthesis of the answer of a preemptive (speculative) draft. Every field is optional; an unset field keeps
-  /// the deployment&amp;apos;s value
+  /// Speech synthesis of the answer of a preemptive (speculative) draft. With preemptive generation on, the NLU is asked for the answer of a stable partial transcription while the caller is still finishing the sentence; when the final transcription matches that draft, its answer is used instead of asking again, which shortens the pause before the bot speaks. These two switches decide how much of the speech synthesis is done ahead of time as well.
+  ///
+  /// Every field is optional; an unset field keeps the built-in default listed per field. Neither field has a value that is refused, and both are ignored while preemptive generation is off (&lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sPreemptiveSynthesisConfig : pb::IMessage<T2sPreemptiveSynthesisConfig>
@@ -2309,8 +2870,11 @@ namespace Ondewo.Vtsi {
 
     private bool enabled_;
     /// <summary>
-    /// Optional: Synthesize the answer of a draft before the final transcription arrives, so that a matching draft
-    /// plays at once (default: true). &lt;code>false&lt;/code> asks the NLU only and synthesizes at the commit
+    /// Optional: Synthesize the answer of a draft already while the caller is still speaking (default: true).
+    /// &lt;code>true&lt;/code>: a matching draft is played at once, without waiting for its speech synthesis.
+    /// &lt;code>false&lt;/code>: drafts only ask the NLU; the answer of a matching draft is synthesized after the final
+    /// transcription, like a normal answer. This saves the speech synthesis of every draft that is discarded, and
+    /// gives back the part of the time saving that comes from synthesizing early
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2340,10 +2904,12 @@ namespace Ondewo.Vtsi {
 
     private bool chunked_;
     /// <summary>
-    /// Optional: Hand a matching draft&amp;apos;s answer over chunk by chunk while it is still being synthesized, instead
-    /// of waiting for the whole synthesis (default: false). Needs chunked text-to-speech streaming
-    /// (&lt;code>ResponseTimingConfig.t2s_chunked_streaming_enabled&lt;/code>) and is ignored without it.
-    /// &lt;code>chunked&lt;/code> has no effect when &lt;code>enabled&lt;/code> is false
+    /// Optional: Play the answer of a matching draft chunk by chunk while it is still being synthesized, instead of
+    /// waiting until its whole speech synthesis has finished (default: false). Only takes effect when
+    /// &lt;code>enabled&lt;/code> is true (or unset) and chunked text-to-speech streaming is on
+    /// (&lt;code>ResponseTimingConfig.t2s_chunked_streaming_enabled&lt;/code>, true by default); otherwise it is ignored.
+    /// Example: &lt;code>enabled=true&lt;/code> and &lt;code>chunked=true&lt;/code> give the shortest pause after the caller
+    /// finished speaking for a long answer
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2533,7 +3099,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Speech-2-Text Configuration
+  /// Speech-to-text (S2T) configuration of a call: which S2T service and pipeline transcribe the caller, how each utterance is transcribed, and what happens when the S2T service becomes unreachable during the call.
+  ///
+  /// Checked when the caller or listener is started: the S2T service must be reachable and the pipeline named in &lt;code>s2t_transcribe_request_config.s2t_pipeline_id&lt;/code> must exist and be active, otherwise the request is refused.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tVtsiConfig : pb::IMessage<S2tVtsiConfig>
@@ -2572,6 +3140,7 @@ namespace Ondewo.Vtsi {
     public S2tVtsiConfig(S2tVtsiConfig other) : this() {
       s2TBaseConfig_ = other.s2TBaseConfig_ != null ? other.s2TBaseConfig_.Clone() : null;
       s2TTranscribeRequestConfig_ = other.s2TTranscribeRequestConfig_ != null ? other.s2TTranscribeRequestConfig_.Clone() : null;
+      failureSipTrigger_ = other.failureSipTrigger_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2585,7 +3154,7 @@ namespace Ondewo.Vtsi {
     public const int S2TBaseConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.BaseServiceConfig s2TBaseConfig_;
     /// <summary>
-    /// Host, Port, and [Optional] GRPC cert
+    /// Address and server trust of the S2T service (see &lt;code>BaseServiceConfig&lt;/code>). Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2600,7 +3169,18 @@ namespace Ondewo.Vtsi {
     public const int S2TTranscribeRequestConfigFieldNumber = 2;
     private global::Ondewo.S2T.TranscribeRequestConfig s2TTranscribeRequestConfig_;
     /// <summary>
-    /// Configuration of Speech-2-Text
+    /// The transcription request the call sends to the S2T service for the caller&amp;apos;s audio, e.g. the pipeline,
+    /// the voice activity detection and which results are returned. &lt;code>s2t_pipeline_id&lt;/code> is required: an
+    /// empty one is refused with &lt;code>INVALID_ARGUMENT&lt;/code>, and one that does not exist or is not active
+    /// refuses the request.
+    /// &lt;p>VTSI adds what the call&amp;apos;s &lt;code>VoiceInteractionConfig&lt;/code> needs and never overwrites a value set
+    /// here: for example, with interruptions enabled, preemptive generation enabled or a
+    /// &lt;code>TurnDetectionConfig&lt;/code> present, partial (not final) transcripts and the start-of-speech signal are
+    /// requested unless this config already says otherwise.
+    /// &lt;code>TurnDetectionConfig.min_endpointing_delay_seconds&lt;/code> is applied through the &lt;code>pyannote&lt;/code>
+    /// block of this config. Supply a &lt;code>pyannote&lt;/code> block when you set it: without one the delay is applied
+    /// only where the deployment supports creating the block, and is otherwise dropped with a warning in the server
+    /// log.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2609,6 +3189,46 @@ namespace Ondewo.Vtsi {
       set {
         s2TTranscribeRequestConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "failure_sip_trigger" field.</summary>
+    public const int FailureSipTriggerFieldNumber = 3;
+    private readonly static string FailureSipTriggerDefaultValue = "";
+
+    private string failureSipTrigger_;
+    /// <summary>
+    /// Optional: What the call does when the S2T service stays unreachable after all retries, i.e. when the bot can
+    /// no longer hear the caller:
+    /// &lt;ul>
+    ///   &lt;li>&lt;code>hangup&lt;/code> (the default when unset): the call is ended.&lt;/li>
+    ///   &lt;li>&lt;code>human_handover&lt;/code>: a handover to a human agent is requested. This trigger carries no
+    ///       transfer target, so the call currently ends as with &lt;code>hangup&lt;/code>.&lt;/li>
+    ///   &lt;li>&lt;code>none&lt;/code>: nothing is done; the call stays up, but nothing the caller says is transcribed or
+    ///       answered any more.&lt;/li>
+    /// &lt;/ul>
+    /// Case-insensitive, e.g. &lt;code>HANGUP&lt;/code> is accepted; any other value is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. There is no deployment-wide setting for it: unset always means
+    /// &lt;code>hangup&lt;/code>.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FailureSipTrigger {
+      get { return failureSipTrigger_ ?? FailureSipTriggerDefaultValue; }
+      set {
+        failureSipTrigger_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "failure_sip_trigger" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFailureSipTrigger {
+      get { return failureSipTrigger_ != null; }
+    }
+    /// <summary>Clears the value of the "failure_sip_trigger" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFailureSipTrigger() {
+      failureSipTrigger_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2628,6 +3248,7 @@ namespace Ondewo.Vtsi {
       }
       if (!object.Equals(S2TBaseConfig, other.S2TBaseConfig)) return false;
       if (!object.Equals(S2TTranscribeRequestConfig, other.S2TTranscribeRequestConfig)) return false;
+      if (FailureSipTrigger != other.FailureSipTrigger) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2637,6 +3258,7 @@ namespace Ondewo.Vtsi {
       int hash = 1;
       if (s2TBaseConfig_ != null) hash ^= S2TBaseConfig.GetHashCode();
       if (s2TTranscribeRequestConfig_ != null) hash ^= S2TTranscribeRequestConfig.GetHashCode();
+      if (HasFailureSipTrigger) hash ^= FailureSipTrigger.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2663,6 +3285,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(S2TTranscribeRequestConfig);
       }
+      if (HasFailureSipTrigger) {
+        output.WriteRawTag(26);
+        output.WriteString(FailureSipTrigger);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2681,6 +3307,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(18);
         output.WriteMessage(S2TTranscribeRequestConfig);
       }
+      if (HasFailureSipTrigger) {
+        output.WriteRawTag(26);
+        output.WriteString(FailureSipTrigger);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2696,6 +3326,9 @@ namespace Ondewo.Vtsi {
       }
       if (s2TTranscribeRequestConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(S2TTranscribeRequestConfig);
+      }
+      if (HasFailureSipTrigger) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FailureSipTrigger);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2720,6 +3353,9 @@ namespace Ondewo.Vtsi {
           S2TTranscribeRequestConfig = new global::Ondewo.S2T.TranscribeRequestConfig();
         }
         S2TTranscribeRequestConfig.MergeFrom(other.S2TTranscribeRequestConfig);
+      }
+      if (other.HasFailureSipTrigger) {
+        FailureSipTrigger = other.FailureSipTrigger;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2752,6 +3388,10 @@ namespace Ondewo.Vtsi {
               S2TTranscribeRequestConfig = new global::Ondewo.S2T.TranscribeRequestConfig();
             }
             input.ReadMessage(S2TTranscribeRequestConfig);
+            break;
+          }
+          case 26: {
+            FailureSipTrigger = input.ReadString();
             break;
           }
         }
@@ -2787,6 +3427,10 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(S2TTranscribeRequestConfig);
             break;
           }
+          case 26: {
+            FailureSipTrigger = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2795,7 +3439,15 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Service Configs of Speech-2-Text, NLU, Text-2-Speech and CSI which are common for both listener and caller
+  /// The service configuration of a call: speech-to-text (S2T), NLU, text-to-speech (T2S), the speech-to-speech service (CSI), the voice interaction (turn-taking, interruptions, response timing, AMD, DTMF, transfers) and the media behaviour of the call&amp;apos;s SIP container. The same message is used by callers, listeners, scheduled callers and campaigns.
+  ///
+  /// &lt;b>Unset means inherit.&lt;/b> Every &lt;code>optional&lt;/code> field and every message left unset sends nothing to the call, so the call runs with the deployment&amp;apos;s setting where the operator configured one (an &lt;code>ONDEWO_VTSI_*&lt;/code> setting of the VTSI server, named at the field) and otherwise with the built-in default documented at the field. A value set here always wins over both: per-call value &amp;gt; deployment setting &amp;gt; built-in default. A value outside its documented range is refused with &lt;code>INVALID_ARGUMENT&lt;/code> and nothing is started.
+  ///
+  /// &lt;b>Scope.&lt;/b>
+  ///
+  /// &lt;ul> &lt;li>A &lt;b>listener&lt;/b>&amp;apos;s configuration applies to every inbound call that listener deployment serves, one after the other, until it is stopped. &lt;code>UpdateListener&lt;/code> changes the stored configuration only (see there).&lt;/li> &lt;li>A &lt;b>caller&lt;/b> or &lt;b>scheduled caller&lt;/b> applies its configuration to its own call.&lt;/li> &lt;li>A &lt;b>campaign&lt;/b>&amp;apos;s &lt;code>campaign_common_services_config&lt;/code> is the default of every call of the campaign; each call&amp;apos;s own configuration is merged over it, so a field the call sets wins (see &lt;code>Campaign&lt;/code>).&lt;/li> &lt;li>A &lt;b>pooled persistent caller&lt;/b> is reused only for a request whose configuration is identical (only the callee and its SIP headers may differ), so a different value of any field here gets a different caller.&lt;/li> &lt;/ul>
+  ///
+  /// Example: to let the caller interrupt (barge in on) the bot, set &lt;code>voice_interaction_config.interruption_handling_config.enabled = true&lt;/code> and leave everything else unset to keep the defaults; add e.g. &lt;code>min_interruption_duration_seconds = 0.8&lt;/code> to let short noises pass. (How many words interrupt depends on the turn detection mode, see &lt;code>InterruptionHandlingConfig&lt;/code>.)
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CommonServicesConfig : pb::IMessage<CommonServicesConfig>
@@ -2805,6 +3457,7 @@ namespace Ondewo.Vtsi {
   {
     private static readonly pb::MessageParser<CommonServicesConfig> _parser = new pb::MessageParser<CommonServicesConfig>(() => new CommonServicesConfig());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CommonServicesConfig> Parser { get { return _parser; } }
@@ -2832,11 +3485,14 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonServicesConfig(CommonServicesConfig other) : this() {
+      _hasBits0 = other._hasBits0;
       s2TVtsiConfig_ = other.s2TVtsiConfig_ != null ? other.s2TVtsiConfig_.Clone() : null;
       nluVtsiConfig_ = other.nluVtsiConfig_ != null ? other.nluVtsiConfig_.Clone() : null;
       t2SVtsiConfig_ = other.t2SVtsiConfig_ != null ? other.t2SVtsiConfig_.Clone() : null;
       csiVtsiConfig_ = other.csiVtsiConfig_ != null ? other.csiVtsiConfig_.Clone() : null;
       voiceInteractionConfig_ = other.voiceInteractionConfig_ != null ? other.voiceInteractionConfig_.Clone() : null;
+      sipVtsiConfig_ = other.sipVtsiConfig_ != null ? other.sipVtsiConfig_.Clone() : null;
+      maxCallDurationSeconds_ = other.maxCallDurationSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2850,7 +3506,7 @@ namespace Ondewo.Vtsi {
     public const int S2TVtsiConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.S2tVtsiConfig s2TVtsiConfig_;
     /// <summary>
-    /// speech-to-text service configuration
+    /// Speech-to-text configuration (see &lt;code>S2tVtsiConfig&lt;/code>). Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2865,7 +3521,7 @@ namespace Ondewo.Vtsi {
     public const int NluVtsiConfigFieldNumber = 2;
     private global::Ondewo.Vtsi.NluVtsiConfig nluVtsiConfig_;
     /// <summary>
-    /// ondewo-nlu configuration
+    /// NLU configuration: the agent, its login and its language (see &lt;code>NluVtsiConfig&lt;/code>). Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2880,7 +3536,7 @@ namespace Ondewo.Vtsi {
     public const int T2SVtsiConfigFieldNumber = 3;
     private global::Ondewo.Vtsi.T2sVtsiConfig t2SVtsiConfig_;
     /// <summary>
-    /// text-to-speech service configuration
+    /// Text-to-speech configuration (see &lt;code>T2sVtsiConfig&lt;/code>). Required
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2895,7 +3551,8 @@ namespace Ondewo.Vtsi {
     public const int CsiVtsiConfigFieldNumber = 4;
     private global::Ondewo.Vtsi.CsiVtsiConfig csiVtsiConfig_;
     /// <summary>
-    /// CSI service configuration
+    /// Speech-to-speech service (CSI) configuration: callbacks, message broker, audio storage and preemptive
+    /// generation (see &lt;code>CsiVtsiConfig&lt;/code>)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2910,7 +3567,9 @@ namespace Ondewo.Vtsi {
     public const int VoiceInteractionConfigFieldNumber = 5;
     private global::Ondewo.Vtsi.VoiceInteractionConfig voiceInteractionConfig_;
     /// <summary>
-    /// Voice interaction configuration for turn detection, interruption (barge-in) handling and response timing
+    /// Optional: How the bot talks with the caller: turn detection, interruption (barge-in) handling, response
+    /// timing, answering machine detection, DTMF keys and transfers (see &lt;code>VoiceInteractionConfig&lt;/code>).
+    /// Unset: the call runs with the deployment&amp;apos;s settings and the built-in defaults of every one of them
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2919,6 +3578,60 @@ namespace Ondewo.Vtsi {
       set {
         voiceInteractionConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "sip_vtsi_config" field.</summary>
+    public const int SipVtsiConfigFieldNumber = 6;
+    private global::Ondewo.Vtsi.SipVtsiConfig sipVtsiConfig_;
+    /// <summary>
+    /// Optional: Media and SIP behaviour of the call&amp;apos;s SIP container: audio buffering, the media clock,
+    /// statistics logging, hangup and dial timeouts, the SIP registration and live call audio streams (see
+    /// &lt;code>SipVtsiConfig&lt;/code>). Unset, or an unset field: the container&amp;apos;s default applies
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.SipVtsiConfig SipVtsiConfig {
+      get { return sipVtsiConfig_; }
+      set {
+        sipVtsiConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_call_duration_seconds" field.</summary>
+    public const int MaxCallDurationSecondsFieldNumber = 7;
+    private readonly static uint MaxCallDurationSecondsDefaultValue = 0;
+
+    private uint maxCallDurationSeconds_;
+    /// <summary>
+    /// Optional: Seconds a call may last at most, counted from when it was connected; then VTSI hangs it up (an
+    /// outbound call of a caller, and each inbound call of a listener). Valid range: 1 - 86400; 0 and any value
+    /// outside the range are refused with &lt;code>INVALID_ARGUMENT&lt;/code>. It can only shorten a call: the
+    /// deployment&amp;apos;s own cap on callers (&lt;code>ONDEWO_VTSI_CALLER_MAX_CALL_DURATION_SEC&lt;/code>, default 1200 s,
+    /// counted from the deployment of the caller; for a pooled caller with that cap off,
+    /// &lt;code>ONDEWO_VTSI_CALLER_POOLED_MAX_CALL_DURATION_SEC&lt;/code>) still applies, and whichever is reached first
+    /// ends the call. Unset: only the deployment&amp;apos;s cap applies, and an inbound call of a listener is not capped.
+    /// Example: &lt;code>max_call_duration_seconds=300&lt;/code> ends a survey call after five minutes
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint MaxCallDurationSeconds {
+      get { if ((_hasBits0 & 1) != 0) { return maxCallDurationSeconds_; } else { return MaxCallDurationSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        maxCallDurationSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "max_call_duration_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxCallDurationSeconds {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "max_call_duration_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxCallDurationSeconds() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2941,6 +3654,8 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(T2SVtsiConfig, other.T2SVtsiConfig)) return false;
       if (!object.Equals(CsiVtsiConfig, other.CsiVtsiConfig)) return false;
       if (!object.Equals(VoiceInteractionConfig, other.VoiceInteractionConfig)) return false;
+      if (!object.Equals(SipVtsiConfig, other.SipVtsiConfig)) return false;
+      if (MaxCallDurationSeconds != other.MaxCallDurationSeconds) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2953,6 +3668,8 @@ namespace Ondewo.Vtsi {
       if (t2SVtsiConfig_ != null) hash ^= T2SVtsiConfig.GetHashCode();
       if (csiVtsiConfig_ != null) hash ^= CsiVtsiConfig.GetHashCode();
       if (voiceInteractionConfig_ != null) hash ^= VoiceInteractionConfig.GetHashCode();
+      if (sipVtsiConfig_ != null) hash ^= SipVtsiConfig.GetHashCode();
+      if (HasMaxCallDurationSeconds) hash ^= MaxCallDurationSeconds.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2991,6 +3708,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(42);
         output.WriteMessage(VoiceInteractionConfig);
       }
+      if (sipVtsiConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SipVtsiConfig);
+      }
+      if (HasMaxCallDurationSeconds) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MaxCallDurationSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3021,6 +3746,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(42);
         output.WriteMessage(VoiceInteractionConfig);
       }
+      if (sipVtsiConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SipVtsiConfig);
+      }
+      if (HasMaxCallDurationSeconds) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(MaxCallDurationSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3045,6 +3778,12 @@ namespace Ondewo.Vtsi {
       }
       if (voiceInteractionConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(VoiceInteractionConfig);
+      }
+      if (sipVtsiConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SipVtsiConfig);
+      }
+      if (HasMaxCallDurationSeconds) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(MaxCallDurationSeconds);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3088,6 +3827,15 @@ namespace Ondewo.Vtsi {
         }
         VoiceInteractionConfig.MergeFrom(other.VoiceInteractionConfig);
       }
+      if (other.sipVtsiConfig_ != null) {
+        if (sipVtsiConfig_ == null) {
+          SipVtsiConfig = new global::Ondewo.Vtsi.SipVtsiConfig();
+        }
+        SipVtsiConfig.MergeFrom(other.SipVtsiConfig);
+      }
+      if (other.HasMaxCallDurationSeconds) {
+        MaxCallDurationSeconds = other.MaxCallDurationSeconds;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3140,6 +3888,17 @@ namespace Ondewo.Vtsi {
               VoiceInteractionConfig = new global::Ondewo.Vtsi.VoiceInteractionConfig();
             }
             input.ReadMessage(VoiceInteractionConfig);
+            break;
+          }
+          case 50: {
+            if (sipVtsiConfig_ == null) {
+              SipVtsiConfig = new global::Ondewo.Vtsi.SipVtsiConfig();
+            }
+            input.ReadMessage(SipVtsiConfig);
+            break;
+          }
+          case 56: {
+            MaxCallDurationSeconds = input.ReadUInt32();
             break;
           }
         }
@@ -3196,6 +3955,17 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(VoiceInteractionConfig);
             break;
           }
+          case 50: {
+            if (sipVtsiConfig_ == null) {
+              SipVtsiConfig = new global::Ondewo.Vtsi.SipVtsiConfig();
+            }
+            input.ReadMessage(SipVtsiConfig);
+            break;
+          }
+          case 56: {
+            MaxCallDurationSeconds = input.ReadUInt32();
+            break;
+          }
         }
       }
     }
@@ -3204,8 +3974,648 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the voice interaction behavior of a call:
-  /// turn detection, interruption (barge-in) handling and response timing
+  /// Media and SIP behaviour of the SIP container that carries the call. A container serves one call, one listener deployment (all its inbound calls) or one pooled persistent caller, and a pooled caller is reused only for a request with the same configuration, so every field applies to the call(s) of exactly this configuration.
+  ///
+  /// Every field is &lt;code>optional&lt;/code>. An unset field sends nothing, and the container&amp;apos;s built-in default applies. &lt;code>register_interval_seconds&lt;/code> has a deployment-wide setting (&lt;code>ONDEWO_VTSI_SIP_REGISTER_INTERVAL_S&lt;/code>), which a set value wins over. For the two live call audio stream limits the deployment&amp;apos;s own limit applies in addition, so the stricter of the two wins. A value outside its range (including NaN for a float field) is refused with &lt;code>INVALID_ARGUMENT&lt;/code> naming the field.
+  ///
+  /// The defaults are the recommended values; most integrations leave this message unset.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipVtsiConfig : pb::IMessage<SipVtsiConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipVtsiConfig> _parser = new pb::MessageParser<SipVtsiConfig>(() => new SipVtsiConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipVtsiConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipVtsiConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipVtsiConfig(SipVtsiConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      playbackLatencyMs_ = other.playbackLatencyMs_;
+      softwareClockEnabled_ = other.softwareClockEnabled_;
+      rtpStatsSampleIntervalSeconds_ = other.rtpStatsSampleIntervalSeconds_;
+      hangupWaitForPlaybackTimeoutSeconds_ = other.hangupWaitForPlaybackTimeoutSeconds_;
+      outgoingDialWatchdogSeconds_ = other.outgoingDialWatchdogSeconds_;
+      registerIntervalSeconds_ = other.registerIntervalSeconds_;
+      callAudioStreamMaxConcurrent_ = other.callAudioStreamMaxConcurrent_;
+      callAudioStreamMaxDurationSeconds_ = other.callAudioStreamMaxDurationSeconds_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipVtsiConfig Clone() {
+      return new SipVtsiConfig(this);
+    }
+
+    /// <summary>Field number for the "playback_latency_ms" field.</summary>
+    public const int PlaybackLatencyMsFieldNumber = 1;
+    private readonly static uint PlaybackLatencyMsDefaultValue = 0;
+
+    private uint playbackLatencyMs_;
+    /// <summary>
+    /// Optional: Milliseconds of audio the sound device&amp;apos;s playback buffer holds for the caller&amp;apos;s audio on
+    /// its way to the speech-to-text service (and to a live LISTEN stream of the call). A smaller buffer lets the
+    /// bot hear the caller sooner (faster turn ends and interruptions); a larger one rides out short stalls of the
+    /// host better, at the price of that delay. Unit: milliseconds. Default: 60. Valid range: 40 - 1000; 140 is the
+    /// previous default and the rollback value. Values below 60 save little and tolerate stalls worse.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PlaybackLatencyMs {
+      get { if ((_hasBits0 & 1) != 0) { return playbackLatencyMs_; } else { return PlaybackLatencyMsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        playbackLatencyMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "playback_latency_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlaybackLatencyMs {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "playback_latency_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlaybackLatencyMs() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "software_clock_enabled" field.</summary>
+    public const int SoftwareClockEnabledFieldNumber = 2;
+    private readonly static bool SoftwareClockEnabledDefaultValue = false;
+
+    private bool softwareClockEnabled_;
+    /// <summary>
+    /// Optional: Whether the call&amp;apos;s media (sending RTP and reading the caller&amp;apos;s audio) is clocked by a
+    /// software clock instead of the sound device. The software clock keeps the call&amp;apos;s audio running in real
+    /// time when the sound device stalls; with the sound device&amp;apos;s clock a stall delays or drops audio in both
+    /// directions. Default: true; false is the rollback to the sound device&amp;apos;s clock.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SoftwareClockEnabled {
+      get { if ((_hasBits0 & 2) != 0) { return softwareClockEnabled_; } else { return SoftwareClockEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        softwareClockEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "software_clock_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSoftwareClockEnabled {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "software_clock_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSoftwareClockEnabled() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "rtp_stats_sample_interval_seconds" field.</summary>
+    public const int RtpStatsSampleIntervalSecondsFieldNumber = 3;
+    private readonly static float RtpStatsSampleIntervalSecondsDefaultValue = 0F;
+
+    private float rtpStatsSampleIntervalSeconds_;
+    /// <summary>
+    /// Optional: Seconds between two RTP statistics log lines (packets, loss, jitter per direction) of a live call.
+    /// Diagnostics only: it changes nothing about the audio. Unit: seconds. Default: 10. Valid: 0 (no periodic
+    /// lines; the statistics line at the end of each audio stream is still written) or 1 - 3600.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float RtpStatsSampleIntervalSeconds {
+      get { if ((_hasBits0 & 4) != 0) { return rtpStatsSampleIntervalSeconds_; } else { return RtpStatsSampleIntervalSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        rtpStatsSampleIntervalSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "rtp_stats_sample_interval_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRtpStatsSampleIntervalSeconds {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "rtp_stats_sample_interval_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRtpStatsSampleIntervalSeconds() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "hangup_wait_for_playback_timeout_seconds" field.</summary>
+    public const int HangupWaitForPlaybackTimeoutSecondsFieldNumber = 4;
+    private readonly static float HangupWaitForPlaybackTimeoutSecondsDefaultValue = 0F;
+
+    private float hangupWaitForPlaybackTimeoutSeconds_;
+    /// <summary>
+    /// Optional: Seconds a graceful hangup waits at most for audio files still playing into the call before it
+    /// ends the call anyway. A hangup that ends the call at once does not wait. Unit: seconds. Default: 5.0. Valid
+    /// range: 0 - 60; 0 hangs up without waiting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float HangupWaitForPlaybackTimeoutSeconds {
+      get { if ((_hasBits0 & 8) != 0) { return hangupWaitForPlaybackTimeoutSeconds_; } else { return HangupWaitForPlaybackTimeoutSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        hangupWaitForPlaybackTimeoutSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hangup_wait_for_playback_timeout_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHangupWaitForPlaybackTimeoutSeconds {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "hangup_wait_for_playback_timeout_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHangupWaitForPlaybackTimeoutSeconds() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "outgoing_dial_watchdog_seconds" field.</summary>
+    public const int OutgoingDialWatchdogSecondsFieldNumber = 5;
+    private readonly static float OutgoingDialWatchdogSecondsDefaultValue = 0F;
+
+    private float outgoingDialWatchdogSeconds_;
+    /// <summary>
+    /// Optional: Seconds an outbound call of a pooled persistent caller may stay at
+    /// &lt;code>OUTGOING_CALL_INITIATED&lt;/code> with no SIP session behind it before the call is failed and the caller
+    /// is made ready for its next call. It has no effect on listeners or on callers that are not pooled. Unit:
+    /// seconds. Default: 45. Valid range: above 30 up to 600 (30 itself is refused): it must stay above the 30 s a
+    /// lookup of the callee&amp;apos;s address may take, or a slow but working dial would be cut short.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float OutgoingDialWatchdogSeconds {
+      get { if ((_hasBits0 & 16) != 0) { return outgoingDialWatchdogSeconds_; } else { return OutgoingDialWatchdogSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        outgoingDialWatchdogSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "outgoing_dial_watchdog_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOutgoingDialWatchdogSeconds {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "outgoing_dial_watchdog_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutgoingDialWatchdogSeconds() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "register_interval_seconds" field.</summary>
+    public const int RegisterIntervalSecondsFieldNumber = 6;
+    private readonly static uint RegisterIntervalSecondsDefaultValue = 0;
+
+    private uint registerIntervalSeconds_;
+    /// <summary>
+    /// Optional: Seconds the container asks the Asterisk to keep its SIP registration; the Asterisk may grant less
+    /// (it grants no less than 60 s and, by default, no more than 7200 s), and the registration is renewed 30 s
+    /// before the GRANTED time expires. A listener can be reached by inbound calls only while it is registered.
+    /// Unit: seconds. Default: 600. Valid range: 60 - 86400; a value above the Asterisk&amp;apos;s maximum behaves like
+    /// that maximum. A set value wins over the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_SIP_REGISTER_INTERVAL_S&lt;/code>;
+    /// unset, that setting applies when the operator set it above 0, else the default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint RegisterIntervalSeconds {
+      get { if ((_hasBits0 & 32) != 0) { return registerIntervalSeconds_; } else { return RegisterIntervalSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        registerIntervalSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "register_interval_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRegisterIntervalSeconds {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "register_interval_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRegisterIntervalSeconds() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "call_audio_stream_max_concurrent" field.</summary>
+    public const int CallAudioStreamMaxConcurrentFieldNumber = 7;
+    private readonly static uint CallAudioStreamMaxConcurrentDefaultValue = 0;
+
+    private uint callAudioStreamMaxConcurrent_;
+    /// <summary>
+    /// Optional: Live call audio streams (&lt;code>StreamCallAudio&lt;/code>, &lt;code>ListenCallAudio&lt;/code>) the call admits
+    /// at the same time; at most one of them may TALK. A stream beyond the limit is refused with
+    /// &lt;code>RESOURCE_EXHAUSTED&lt;/code>. The deployment&amp;apos;s own limit
+    /// (&lt;code>ONDEWO_VTSI_CALL_AUDIO_STREAM_MAX_CONCURRENT&lt;/code>) applies as well. Default: 2. Valid range:
+    /// 1 - 2.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CallAudioStreamMaxConcurrent {
+      get { if ((_hasBits0 & 64) != 0) { return callAudioStreamMaxConcurrent_; } else { return CallAudioStreamMaxConcurrentDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        callAudioStreamMaxConcurrent_ = value;
+      }
+    }
+    /// <summary>Gets whether the "call_audio_stream_max_concurrent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCallAudioStreamMaxConcurrent {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "call_audio_stream_max_concurrent" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCallAudioStreamMaxConcurrent() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "call_audio_stream_max_duration_seconds" field.</summary>
+    public const int CallAudioStreamMaxDurationSecondsFieldNumber = 8;
+    private readonly static uint CallAudioStreamMaxDurationSecondsDefaultValue = 0;
+
+    private uint callAudioStreamMaxDurationSeconds_;
+    /// <summary>
+    /// Optional: Seconds a live call audio stream of the call may last at most; it then ends with
+    /// &lt;code>CALL_AUDIO_END_REASON_MAX_DURATION&lt;/code>. A stream&amp;apos;s own &lt;code>max_duration_s&lt;/code> can only
+    /// lower it, and the deployment&amp;apos;s limit (&lt;code>ONDEWO_VTSI_CALL_AUDIO_STREAM_MAX_DURATION_S&lt;/code>)
+    /// applies as well. Unit: seconds. Default: 3600. Valid range: 1 - 86400.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint CallAudioStreamMaxDurationSeconds {
+      get { if ((_hasBits0 & 128) != 0) { return callAudioStreamMaxDurationSeconds_; } else { return CallAudioStreamMaxDurationSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        callAudioStreamMaxDurationSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "call_audio_stream_max_duration_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCallAudioStreamMaxDurationSeconds {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "call_audio_stream_max_duration_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCallAudioStreamMaxDurationSeconds() {
+      _hasBits0 &= ~128;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipVtsiConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipVtsiConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PlaybackLatencyMs != other.PlaybackLatencyMs) return false;
+      if (SoftwareClockEnabled != other.SoftwareClockEnabled) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(RtpStatsSampleIntervalSeconds, other.RtpStatsSampleIntervalSeconds)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(HangupWaitForPlaybackTimeoutSeconds, other.HangupWaitForPlaybackTimeoutSeconds)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(OutgoingDialWatchdogSeconds, other.OutgoingDialWatchdogSeconds)) return false;
+      if (RegisterIntervalSeconds != other.RegisterIntervalSeconds) return false;
+      if (CallAudioStreamMaxConcurrent != other.CallAudioStreamMaxConcurrent) return false;
+      if (CallAudioStreamMaxDurationSeconds != other.CallAudioStreamMaxDurationSeconds) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasPlaybackLatencyMs) hash ^= PlaybackLatencyMs.GetHashCode();
+      if (HasSoftwareClockEnabled) hash ^= SoftwareClockEnabled.GetHashCode();
+      if (HasRtpStatsSampleIntervalSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(RtpStatsSampleIntervalSeconds);
+      if (HasHangupWaitForPlaybackTimeoutSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(HangupWaitForPlaybackTimeoutSeconds);
+      if (HasOutgoingDialWatchdogSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OutgoingDialWatchdogSeconds);
+      if (HasRegisterIntervalSeconds) hash ^= RegisterIntervalSeconds.GetHashCode();
+      if (HasCallAudioStreamMaxConcurrent) hash ^= CallAudioStreamMaxConcurrent.GetHashCode();
+      if (HasCallAudioStreamMaxDurationSeconds) hash ^= CallAudioStreamMaxDurationSeconds.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasPlaybackLatencyMs) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlaybackLatencyMs);
+      }
+      if (HasSoftwareClockEnabled) {
+        output.WriteRawTag(16);
+        output.WriteBool(SoftwareClockEnabled);
+      }
+      if (HasRtpStatsSampleIntervalSeconds) {
+        output.WriteRawTag(29);
+        output.WriteFloat(RtpStatsSampleIntervalSeconds);
+      }
+      if (HasHangupWaitForPlaybackTimeoutSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(HangupWaitForPlaybackTimeoutSeconds);
+      }
+      if (HasOutgoingDialWatchdogSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(OutgoingDialWatchdogSeconds);
+      }
+      if (HasRegisterIntervalSeconds) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RegisterIntervalSeconds);
+      }
+      if (HasCallAudioStreamMaxConcurrent) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(CallAudioStreamMaxConcurrent);
+      }
+      if (HasCallAudioStreamMaxDurationSeconds) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CallAudioStreamMaxDurationSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasPlaybackLatencyMs) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PlaybackLatencyMs);
+      }
+      if (HasSoftwareClockEnabled) {
+        output.WriteRawTag(16);
+        output.WriteBool(SoftwareClockEnabled);
+      }
+      if (HasRtpStatsSampleIntervalSeconds) {
+        output.WriteRawTag(29);
+        output.WriteFloat(RtpStatsSampleIntervalSeconds);
+      }
+      if (HasHangupWaitForPlaybackTimeoutSeconds) {
+        output.WriteRawTag(37);
+        output.WriteFloat(HangupWaitForPlaybackTimeoutSeconds);
+      }
+      if (HasOutgoingDialWatchdogSeconds) {
+        output.WriteRawTag(45);
+        output.WriteFloat(OutgoingDialWatchdogSeconds);
+      }
+      if (HasRegisterIntervalSeconds) {
+        output.WriteRawTag(48);
+        output.WriteUInt32(RegisterIntervalSeconds);
+      }
+      if (HasCallAudioStreamMaxConcurrent) {
+        output.WriteRawTag(56);
+        output.WriteUInt32(CallAudioStreamMaxConcurrent);
+      }
+      if (HasCallAudioStreamMaxDurationSeconds) {
+        output.WriteRawTag(64);
+        output.WriteUInt32(CallAudioStreamMaxDurationSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasPlaybackLatencyMs) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PlaybackLatencyMs);
+      }
+      if (HasSoftwareClockEnabled) {
+        size += 1 + 1;
+      }
+      if (HasRtpStatsSampleIntervalSeconds) {
+        size += 1 + 4;
+      }
+      if (HasHangupWaitForPlaybackTimeoutSeconds) {
+        size += 1 + 4;
+      }
+      if (HasOutgoingDialWatchdogSeconds) {
+        size += 1 + 4;
+      }
+      if (HasRegisterIntervalSeconds) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(RegisterIntervalSeconds);
+      }
+      if (HasCallAudioStreamMaxConcurrent) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CallAudioStreamMaxConcurrent);
+      }
+      if (HasCallAudioStreamMaxDurationSeconds) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(CallAudioStreamMaxDurationSeconds);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipVtsiConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasPlaybackLatencyMs) {
+        PlaybackLatencyMs = other.PlaybackLatencyMs;
+      }
+      if (other.HasSoftwareClockEnabled) {
+        SoftwareClockEnabled = other.SoftwareClockEnabled;
+      }
+      if (other.HasRtpStatsSampleIntervalSeconds) {
+        RtpStatsSampleIntervalSeconds = other.RtpStatsSampleIntervalSeconds;
+      }
+      if (other.HasHangupWaitForPlaybackTimeoutSeconds) {
+        HangupWaitForPlaybackTimeoutSeconds = other.HangupWaitForPlaybackTimeoutSeconds;
+      }
+      if (other.HasOutgoingDialWatchdogSeconds) {
+        OutgoingDialWatchdogSeconds = other.OutgoingDialWatchdogSeconds;
+      }
+      if (other.HasRegisterIntervalSeconds) {
+        RegisterIntervalSeconds = other.RegisterIntervalSeconds;
+      }
+      if (other.HasCallAudioStreamMaxConcurrent) {
+        CallAudioStreamMaxConcurrent = other.CallAudioStreamMaxConcurrent;
+      }
+      if (other.HasCallAudioStreamMaxDurationSeconds) {
+        CallAudioStreamMaxDurationSeconds = other.CallAudioStreamMaxDurationSeconds;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PlaybackLatencyMs = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            SoftwareClockEnabled = input.ReadBool();
+            break;
+          }
+          case 29: {
+            RtpStatsSampleIntervalSeconds = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            HangupWaitForPlaybackTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            OutgoingDialWatchdogSeconds = input.ReadFloat();
+            break;
+          }
+          case 48: {
+            RegisterIntervalSeconds = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            CallAudioStreamMaxConcurrent = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            CallAudioStreamMaxDurationSeconds = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PlaybackLatencyMs = input.ReadUInt32();
+            break;
+          }
+          case 16: {
+            SoftwareClockEnabled = input.ReadBool();
+            break;
+          }
+          case 29: {
+            RtpStatsSampleIntervalSeconds = input.ReadFloat();
+            break;
+          }
+          case 37: {
+            HangupWaitForPlaybackTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 45: {
+            OutgoingDialWatchdogSeconds = input.ReadFloat();
+            break;
+          }
+          case 48: {
+            RegisterIntervalSeconds = input.ReadUInt32();
+            break;
+          }
+          case 56: {
+            CallAudioStreamMaxConcurrent = input.ReadUInt32();
+            break;
+          }
+          case 64: {
+            CallAudioStreamMaxDurationSeconds = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// How the bot of a call takes turns, lets the caller interrupt it, times its answers, reads the caller&amp;apos;s keypad and transfers the call: turn detection, interruption (barge-in) handling, response timing, answering machine detection, DTMF keys, warm intros and the transfers the bot starts itself.
+  ///
+  /// Scope: set in the &lt;code>CommonServicesConfig&lt;/code> of a listener, it applies to every inbound call that listener deployment serves; set for a caller, a campaign or a scheduled caller, it applies to each of its own calls. A pooled persistent caller is reused only for a request with an identical configuration, so two requests that differ here never share a caller.
+  ///
+  /// Precedence: every sub-message and every field is optional, and unset means inherit. A set per-call value wins over the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_*&lt;/code> setting for the same behaviour (where one exists), which wins over the built-in default. A value outside its documented range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VoiceInteractionConfig : pb::IMessage<VoiceInteractionConfig>
@@ -3222,7 +4632,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3248,6 +4658,7 @@ namespace Ondewo.Vtsi {
       answeringMachineDetectionConfig_ = other.answeringMachineDetectionConfig_ != null ? other.answeringMachineDetectionConfig_.Clone() : null;
       dtmfConfig_ = other.dtmfConfig_ != null ? other.dtmfConfig_.Clone() : null;
       warmTransferConfig_ = other.warmTransferConfig_ != null ? other.warmTransferConfig_.Clone() : null;
+      botTransferConfig_ = other.botTransferConfig_ != null ? other.botTransferConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3261,7 +4672,8 @@ namespace Ondewo.Vtsi {
     public const int TurnDetectionConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.TurnDetectionConfig turnDetectionConfig_;
     /// <summary>
-    /// Configuration of the turn detection
+    /// When the caller&amp;apos;s turn is over and the bot may answer: turn detection mode, endpointing delays, partial
+    /// transcriptions and dictation holds (see &lt;code>TurnDetectionConfig&lt;/code>). Unset keeps the defaults
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3276,7 +4688,9 @@ namespace Ondewo.Vtsi {
     public const int InterruptionHandlingConfigFieldNumber = 2;
     private global::Ondewo.Vtsi.InterruptionHandlingConfig interruptionHandlingConfig_;
     /// <summary>
-    /// Configuration of the interruption (barge-in) handling
+    /// Whether and how the caller can interrupt (barge in on) the bot while it speaks, and what happens to the
+    /// interrupted answer (see &lt;code>InterruptionHandlingConfig&lt;/code>). Unset: speech never interrupts the bot; a
+    /// DTMF key the bot asked for still does unless &lt;code>DtmfConfig.barge_in&lt;/code> is false
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3291,7 +4705,8 @@ namespace Ondewo.Vtsi {
     public const int ResponseTimingConfigFieldNumber = 3;
     private global::Ondewo.Vtsi.ResponseTimingConfig responseTimingConfig_;
     /// <summary>
-    /// Configuration of the response timing
+    /// When and how the bot responds, e.g. after caller silence, with fillers while it is thinking, and how its
+    /// answers are streamed (see &lt;code>ResponseTimingConfig&lt;/code>). Unset keeps the defaults
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3352,6 +4767,24 @@ namespace Ondewo.Vtsi {
       }
     }
 
+    /// <summary>Field number for the "bot_transfer_config" field.</summary>
+    public const int BotTransferConfigFieldNumber = 7;
+    private global::Ondewo.Vtsi.BotTransferConfig botTransferConfig_;
+    /// <summary>
+    /// How the transfers the bot starts itself behave: a transfer the NLU agent or an LLM agent decides on during
+    /// the conversation, not one a client asks for with &lt;code>TransferCall&lt;/code> (see
+    /// &lt;code>BotTransferConfig&lt;/code>). Unset keeps the defaults: wait up to 5 s for the outcome, and keep the
+    /// call with the bot when the transfer fails
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ondewo.Vtsi.BotTransferConfig BotTransferConfig {
+      get { return botTransferConfig_; }
+      set {
+        botTransferConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3373,6 +4806,7 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(AnsweringMachineDetectionConfig, other.AnsweringMachineDetectionConfig)) return false;
       if (!object.Equals(DtmfConfig, other.DtmfConfig)) return false;
       if (!object.Equals(WarmTransferConfig, other.WarmTransferConfig)) return false;
+      if (!object.Equals(BotTransferConfig, other.BotTransferConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3386,6 +4820,7 @@ namespace Ondewo.Vtsi {
       if (answeringMachineDetectionConfig_ != null) hash ^= AnsweringMachineDetectionConfig.GetHashCode();
       if (dtmfConfig_ != null) hash ^= DtmfConfig.GetHashCode();
       if (warmTransferConfig_ != null) hash ^= WarmTransferConfig.GetHashCode();
+      if (botTransferConfig_ != null) hash ^= BotTransferConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3428,6 +4863,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteMessage(WarmTransferConfig);
       }
+      if (botTransferConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(BotTransferConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3462,6 +4901,10 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(50);
         output.WriteMessage(WarmTransferConfig);
       }
+      if (botTransferConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(BotTransferConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3489,6 +4932,9 @@ namespace Ondewo.Vtsi {
       }
       if (warmTransferConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(WarmTransferConfig);
+      }
+      if (botTransferConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BotTransferConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3538,6 +4984,12 @@ namespace Ondewo.Vtsi {
         }
         WarmTransferConfig.MergeFrom(other.WarmTransferConfig);
       }
+      if (other.botTransferConfig_ != null) {
+        if (botTransferConfig_ == null) {
+          BotTransferConfig = new global::Ondewo.Vtsi.BotTransferConfig();
+        }
+        BotTransferConfig.MergeFrom(other.BotTransferConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3597,6 +5049,13 @@ namespace Ondewo.Vtsi {
               WarmTransferConfig = new global::Ondewo.Vtsi.WarmTransferConfig();
             }
             input.ReadMessage(WarmTransferConfig);
+            break;
+          }
+          case 58: {
+            if (botTransferConfig_ == null) {
+              BotTransferConfig = new global::Ondewo.Vtsi.BotTransferConfig();
+            }
+            input.ReadMessage(BotTransferConfig);
             break;
           }
         }
@@ -3660,6 +5119,13 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(WarmTransferConfig);
             break;
           }
+          case 58: {
+            if (botTransferConfig_ == null) {
+              BotTransferConfig = new global::Ondewo.Vtsi.BotTransferConfig();
+            }
+            input.ReadMessage(BotTransferConfig);
+            break;
+          }
         }
       }
     }
@@ -3668,12 +5134,370 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the DTMF keys a caller presses. A key reaches the bot only when the bot&amp;apos;s last answer
-  /// declared a key menu or a key entry (ondewo-cai intent tags &lt;code>ondewo-voice:dtmf-menu:&amp;lt;id&amp;gt;&lt;/code> /
-  /// &lt;code>ondewo-voice:dtmf-digits:&amp;lt;id&amp;gt;&lt;/code>); it is then sent to the NLU as the turn text
-  /// &lt;code>[DTMF:&amp;lt;keys&amp;gt;]&lt;/code>. Every field is &lt;code>optional&lt;/code>; unset keeps the deployment&amp;apos;s value
-  /// (the &lt;code>ONDEWO_VTSI_CSI_DTMF_*&lt;/code> / &lt;code>ONDEWO_VTSI_SIP_DTMF_FORWARD_ACTIVE&lt;/code> settings, else
-  /// the default).
+  /// The transfers the bot of a call starts itself, i.e. a transfer the NLU agent or an LLM agent decides on during the conversation. A transfer a client requests with &lt;code>TransferCall&lt;/code> is not affected (its wait is the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_TRANSFER_OUTCOME_TIMEOUT_MS&lt;/code>).
+  ///
+  /// What the caller experiences: the bot sends the transfer to the phone system and waits up to &lt;code>outcome_timeout_ms&lt;/code> for its answer. Accepted: the caller is handed over to the target and the bot leaves the call. Rejected (e.g. the target does not exist): the call stays up and &lt;code>failed_action&lt;/code> decides what happens next. No answer in time: the call stays up as well (if the phone system accepts the transfer later, the caller is still handed over and the bot leaves); &lt;code>continue&lt;/code> and &lt;code>exit&lt;/code> then keep the call with the bot, &lt;code>hangup&lt;/code> ends it. A transfer refused because invited participants are in the call always keeps the call, whatever &lt;code>failed_action&lt;/code> says. When the call&amp;apos;s warm transfer configuration asks for warm intros on the bot&amp;apos;s transfers, the bot&amp;apos;s transfer is handed to that warm intro instead and the call stays with the bot meanwhile.
+  ///
+  /// Scope and precedence as in &lt;code>VoiceInteractionConfig&lt;/code>; these fields have no deployment setting, so unset means the built-in default. Every field is &lt;code>optional&lt;/code>, and a value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Example: to send a caller whose transfer failed to the project&amp;apos;s exit extension (e.g. a queue) rather than back to the bot, and to wait up to 8 s for the phone system: &lt;code>outcome_timeout_ms: 8000, failed_action: &amp;quot;exit&amp;quot;&lt;/code>
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BotTransferConfig : pb::IMessage<BotTransferConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BotTransferConfig> _parser = new pb::MessageParser<BotTransferConfig>(() => new BotTransferConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BotTransferConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BotTransferConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BotTransferConfig(BotTransferConfig other) : this() {
+      _hasBits0 = other._hasBits0;
+      outcomeTimeoutMs_ = other.outcomeTimeoutMs_;
+      failedAction_ = other.failedAction_;
+      warmTransferOutcomeCommitTimeoutSeconds_ = other.warmTransferOutcomeCommitTimeoutSeconds_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BotTransferConfig Clone() {
+      return new BotTransferConfig(this);
+    }
+
+    /// <summary>Field number for the "outcome_timeout_ms" field.</summary>
+    public const int OutcomeTimeoutMsFieldNumber = 1;
+    private readonly static uint OutcomeTimeoutMsDefaultValue = 0;
+
+    private uint outcomeTimeoutMs_;
+    /// <summary>
+    /// Optional: Milliseconds a bot transfer waits for the phone system to accept or reject it before the call is
+    /// treated as not transferred (default: 5000, valid range: 0 - 10000). &lt;code>0&lt;/code> is the blind transfer:
+    /// the bot leaves the call at once without waiting, so a rejection cannot be noticed and
+    /// &lt;code>failed_action&lt;/code> does not apply to it
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint OutcomeTimeoutMs {
+      get { if ((_hasBits0 & 1) != 0) { return outcomeTimeoutMs_; } else { return OutcomeTimeoutMsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        outcomeTimeoutMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "outcome_timeout_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasOutcomeTimeoutMs {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "outcome_timeout_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearOutcomeTimeoutMs() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "failed_action" field.</summary>
+    public const int FailedActionFieldNumber = 2;
+    private readonly static string FailedActionDefaultValue = "";
+
+    private string failedAction_;
+    /// <summary>
+    /// Optional: What happens when a transfer the bot started fails while the call is still up (default:
+    /// &lt;code>continue&lt;/code>). &lt;code>continue&lt;/code>: the bot keeps the call and the conversation goes on.
+    /// &lt;code>hangup&lt;/code>: the call is ended. &lt;code>exit&lt;/code>: the call is transferred once more, to the
+    /// &lt;code>exit&lt;/code> extension of the project&amp;apos;s phone system, and ended if that fails too; while the first
+    /// transfer is still waiting for its answer, the call is kept instead. The same action applies when a bot
+    /// transfer that was handed to a warm intro is not taken up in time. Case-insensitive; any other value is refused
+    /// with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FailedAction {
+      get { return failedAction_ ?? FailedActionDefaultValue; }
+      set {
+        failedAction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "failed_action" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFailedAction {
+      get { return failedAction_ != null; }
+    }
+    /// <summary>Clears the value of the "failed_action" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFailedAction() {
+      failedAction_ = null;
+    }
+
+    /// <summary>Field number for the "warm_transfer_outcome_commit_timeout_seconds" field.</summary>
+    public const int WarmTransferOutcomeCommitTimeoutSecondsFieldNumber = 3;
+    private readonly static float WarmTransferOutcomeCommitTimeoutSecondsDefaultValue = 0F;
+
+    private float warmTransferOutcomeCommitTimeoutSeconds_;
+    /// <summary>
+    /// Optional: Only used with warm intros (&lt;code>WarmTransferConfig&lt;/code>). After a warm transfer failed (the
+    /// target declined or could not be reached, or a bot transfer handed to a warm intro was not taken up), the bot
+    /// tells the caller. An NLU that answers warm transfer outcomes writes what the bot says; this is how many
+    /// seconds the bot waits for that answer, and for a moment in which nobody speaks, before it speaks the
+    /// notice&amp;apos;s fallback text instead (&lt;code>WarmTransferConfig.caller_declined_message&lt;/code> /
+    /// &lt;code>caller_unreachable_message&lt;/code>, else a built-in text) (default: 5.0, valid range: above 0 - 60).
+    /// The notice is never dropped by this timeout
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float WarmTransferOutcomeCommitTimeoutSeconds {
+      get { if ((_hasBits0 & 2) != 0) { return warmTransferOutcomeCommitTimeoutSeconds_; } else { return WarmTransferOutcomeCommitTimeoutSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        warmTransferOutcomeCommitTimeoutSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "warm_transfer_outcome_commit_timeout_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWarmTransferOutcomeCommitTimeoutSeconds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "warm_transfer_outcome_commit_timeout_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWarmTransferOutcomeCommitTimeoutSeconds() {
+      _hasBits0 &= ~2;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BotTransferConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BotTransferConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (OutcomeTimeoutMs != other.OutcomeTimeoutMs) return false;
+      if (FailedAction != other.FailedAction) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(WarmTransferOutcomeCommitTimeoutSeconds, other.WarmTransferOutcomeCommitTimeoutSeconds)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasOutcomeTimeoutMs) hash ^= OutcomeTimeoutMs.GetHashCode();
+      if (HasFailedAction) hash ^= FailedAction.GetHashCode();
+      if (HasWarmTransferOutcomeCommitTimeoutSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(WarmTransferOutcomeCommitTimeoutSeconds);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasOutcomeTimeoutMs) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(OutcomeTimeoutMs);
+      }
+      if (HasFailedAction) {
+        output.WriteRawTag(18);
+        output.WriteString(FailedAction);
+      }
+      if (HasWarmTransferOutcomeCommitTimeoutSeconds) {
+        output.WriteRawTag(29);
+        output.WriteFloat(WarmTransferOutcomeCommitTimeoutSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasOutcomeTimeoutMs) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(OutcomeTimeoutMs);
+      }
+      if (HasFailedAction) {
+        output.WriteRawTag(18);
+        output.WriteString(FailedAction);
+      }
+      if (HasWarmTransferOutcomeCommitTimeoutSeconds) {
+        output.WriteRawTag(29);
+        output.WriteFloat(WarmTransferOutcomeCommitTimeoutSeconds);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasOutcomeTimeoutMs) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(OutcomeTimeoutMs);
+      }
+      if (HasFailedAction) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FailedAction);
+      }
+      if (HasWarmTransferOutcomeCommitTimeoutSeconds) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BotTransferConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasOutcomeTimeoutMs) {
+        OutcomeTimeoutMs = other.OutcomeTimeoutMs;
+      }
+      if (other.HasFailedAction) {
+        FailedAction = other.FailedAction;
+      }
+      if (other.HasWarmTransferOutcomeCommitTimeoutSeconds) {
+        WarmTransferOutcomeCommitTimeoutSeconds = other.WarmTransferOutcomeCommitTimeoutSeconds;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            OutcomeTimeoutMs = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            FailedAction = input.ReadString();
+            break;
+          }
+          case 29: {
+            WarmTransferOutcomeCommitTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            OutcomeTimeoutMs = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            FailedAction = input.ReadString();
+            break;
+          }
+          case 29: {
+            WarmTransferOutcomeCommitTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// How the call treats the DTMF keys (the telephone keypad) the caller presses. Keys let a caller answer a menu (&amp;quot;for sales press 1, for support press 2&amp;quot;) or type a value such as a PIN or a customer number instead of speaking it.
+  ///
+  /// A key reaches the bot only when the bot&amp;apos;s LAST answer asked for keys: a key menu or a key entry, declared in the ONDEWO NLU agent by the intent tags &lt;code>ondewo-voice:dtmf-menu:&amp;lt;id&amp;gt;&lt;/code> / &lt;code>ondewo-voice:dtmf-digits:&amp;lt;id&amp;gt;&lt;/code> (or by an AI team through its &lt;code>c-voice-turn&lt;/code> context). The finished choice or entry is then sent to the NLU as the caller&amp;apos;s turn, by default as the text &lt;code>[DTMF:&amp;lt;keys&amp;gt;]&lt;/code> (&lt;code>*&lt;/code> and &lt;code>#&lt;/code> spelled &lt;code>STAR&lt;/code> and &lt;code>HASH&lt;/code>, an invalid entry as &lt;code>[DTMF:INVALID]&lt;/code>), together with a one-turn context &lt;code>c-dtmf&lt;/code>. A menu key is sent at once; a key entry is sent when the caller presses the terminator (&lt;code>#&lt;/code> by default), reaches the declared maximum number of keys, or stops pressing for &lt;code>inter_digit_timeout_ms&lt;/code>. Keys are never written to a log in clear.
+  ///
+  /// While a key entry is open, and shortly after a key turn, the caller&amp;apos;s speech is not sent to the NLU: a key wins its turn. Keys are also ignored while answering machine detection is still deciding on an outbound call.
+  ///
+  /// Scope: applies to every call of the deployment it is set on: every inbound call a listener serves, every call of a caller, a campaign or a scheduled caller. A pooled persistent caller is only reused for a call with an identical configuration.
+  ///
+  /// Every field is &lt;code>optional&lt;/code>. A field left unset inherits: the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_DTMF_*&lt;/code> / &lt;code>ONDEWO_VTSI_SIP_DTMF_FORWARD_ACTIVE&lt;/code> setting where one exists and is set, else the built-in default listed per field. A set value always wins over the deployment setting. Leaving the whole message unset keeps the deployment settings, and without them gives the built-in behaviour: keys on, a key interrupts the bot, keys the bot did not ask for are ignored.
+  ///
+  /// Example: a bot that must let the caller finish listening before keys count, and that treats every key as a menu choice even when no menu was declared:
+  ///
+  /// &lt;pre>&lt;code>dtmf_config { barge_in: false undeclared_policy: &amp;quot;COMMIT_SINGLE&amp;quot; }&lt;/code>&lt;/pre>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DtmfConfig : pb::IMessage<DtmfConfig>
@@ -3691,7 +5515,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3716,6 +5540,8 @@ namespace Ondewo.Vtsi {
       bargeIn_ = other.bargeIn_;
       interDigitTimeoutMs_ = other.interDigitTimeoutMs_;
       undeclaredPolicy_ = other.undeclaredPolicy_;
+      speechGuardMs_ = other.speechGuardMs_;
+      textTemplate_ = other.textTemplate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3731,8 +5557,11 @@ namespace Ondewo.Vtsi {
 
     private bool enabled_;
     /// <summary>
-    /// Whether a pressed key is forwarded to the bot at all (default true). &lt;code>false&lt;/code> ignores every key of
-    /// the call
+    /// Optional: Whether the caller&amp;apos;s keys are used at all (default: &lt;code>true&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_CSI_DTMF_ACTIVE&lt;/code> and &lt;code>ONDEWO_VTSI_SIP_DTMF_FORWARD_ACTIVE&lt;/code>).
+    /// &lt;code>false&lt;/code> ignores every key of the call: no key interrupts the bot and no key turn reaches the NLU,
+    /// also when the bot declared a menu or an entry. &lt;code>true&lt;/code> switches keys on for this call even when
+    /// the deployment switched them off. The other fields have no effect while this is &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3762,7 +5591,15 @@ namespace Ondewo.Vtsi {
 
     private bool bargeIn_;
     /// <summary>
-    /// Whether a key pressed while the bot speaks stops the bot, like a spoken interruption (default true)
+    /// Optional: Whether a key pressed while the bot speaks stops the bot at once, like a spoken interruption
+    /// (default: &lt;code>true&lt;/code>; deployment setting &lt;code>ONDEWO_VTSI_CSI_DTMF_BARGE_IN_ACTIVE&lt;/code>).
+    /// &lt;p>A key interruption is always treated as a real one (a key is never mistaken for a cough), and it
+    /// applies even when spoken interruptions are switched off for the call
+    /// (&lt;code>InterruptionHandlingConfig&lt;/code>): a key is the caller&amp;apos;s deliberate choice. A key entry interrupts
+    /// at its first key, a menu key when it is taken. Only a key the bot asked for interrupts; a key that is ignored
+    /// (see &lt;code>undeclared_policy&lt;/code>) never does.&lt;/p>
+    /// &lt;p>&lt;code>false&lt;/code> lets the bot finish its sentence first; the key is still collected and sent as the
+    /// caller&amp;apos;s next turn.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3792,9 +5629,16 @@ namespace Ondewo.Vtsi {
 
     private uint interDigitTimeoutMs_;
     /// <summary>
-    /// Milliseconds after the last key of a key entry (e.g. a PIN) without a terminator before the entry is sent
-    /// (default 2000, valid range 300 - 10000; a value outside the range is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>)
+    /// Optional: Milliseconds of no further key after which an open key entry (e.g. a PIN or a customer number) is
+    /// considered finished and sent to the NLU, when the caller presses no terminator (default: 2000, valid range:
+    /// 300 - 10000; deployment setting &lt;code>ONDEWO_VTSI_CSI_DTMF_INTER_DIGIT_TIMEOUT_MS&lt;/code>). A value outside
+    /// the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// &lt;p>It applies to key entries only, never to a menu (a menu key is taken at once), and only to an entry
+    /// whose declaration names no timeout of its own: the tag option &lt;code>timeout_ms=N&lt;/code> of
+    /// &lt;code>ondewo-voice:dtmf-digits&lt;/code> wins. An entry ended by this timeout with fewer keys than the
+    /// declared minimum is sent as &lt;code>[DTMF:INVALID]&lt;/code>.&lt;/p>
+    /// &lt;p>Example: &lt;code>4000&lt;/code> gives callers who type a long customer number slowly more time between two
+    /// keys; a smaller value answers sooner after the last key.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3824,9 +5668,16 @@ namespace Ondewo.Vtsi {
 
     private string undeclaredPolicy_;
     /// <summary>
-    /// What a key the bot declared nothing for does: &lt;code>DROP&lt;/code> (default; the key is ignored and the bot is
-    /// not interrupted) or &lt;code>COMMIT_SINGLE&lt;/code> (the key is sent to the NLU as a one-key turn). Any other
-    /// value is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: What a key does that the bot did not ask for, i.e. when the bot&amp;apos;s last answer declared no menu
+    /// and no entry, or the declared one was already used (default: &lt;code>DROP&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_CSI_DTMF_UNDECLARED_POLICY&lt;/code>). The values, written exactly in upper case:
+    /// &lt;ul>
+    /// &lt;li>&lt;code>DROP&lt;/code>: the key is ignored; it does not interrupt the bot and starts no turn, so a project
+    /// that declares no keys sees no change&lt;/li>
+    /// &lt;li>&lt;code>COMMIT_SINGLE&lt;/code>: every such key is taken as a one-key menu choice: it interrupts a speaking bot
+    /// (when &lt;code>barge_in&lt;/code> is on) and is sent to the NLU as its own turn, e.g. &lt;code>[DTMF:1]&lt;/code>&lt;/li>
+    /// &lt;/ul>
+    /// Any other value (also &lt;code>drop&lt;/code> in lower case) is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3849,6 +5700,78 @@ namespace Ondewo.Vtsi {
       undeclaredPolicy_ = null;
     }
 
+    /// <summary>Field number for the "speech_guard_ms" field.</summary>
+    public const int SpeechGuardMsFieldNumber = 5;
+    private readonly static uint SpeechGuardMsDefaultValue = 0;
+
+    private uint speechGuardMs_;
+    /// <summary>
+    /// Optional: Milliseconds after a key turn was sent during which a spoken sentence of the caller is NOT sent to
+    /// the NLU, so a word the caller says while pressing does not become a second turn (default: 300, valid range:
+    /// 0 - 5000; no deployment setting). A value outside the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// &lt;code>0&lt;/code> switches this guard off. It does not change that speech is ignored while a key entry is still
+    /// open, nor while an entry declared with the tag option &lt;code>nospeech&lt;/code> is asked for
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint SpeechGuardMs {
+      get { if ((_hasBits0 & 8) != 0) { return speechGuardMs_; } else { return SpeechGuardMsDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        speechGuardMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "speech_guard_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSpeechGuardMs {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "speech_guard_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSpeechGuardMs() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "text_template" field.</summary>
+    public const int TextTemplateFieldNumber = 6;
+    private readonly static string TextTemplateDefaultValue = "";
+
+    private string textTemplate_;
+    /// <summary>
+    /// Optional: The text a key choice or key entry is sent to the NLU as, with &lt;code>{digits}&lt;/code> standing for
+    /// the keys (default: &lt;code>[DTMF:{digits}]&lt;/code>; no deployment setting). Example: &lt;code>Taste {digits}&lt;/code>
+    /// sends the entry 4711 as &lt;code>Taste 4711&lt;/code> and an invalid entry as &lt;code>Taste INVALID&lt;/code>.
+    /// &lt;p>Rules: 1 - 64 characters, no control character; &lt;code>{digits}&lt;/code> must occur exactly once and no
+    /// other placeholder may occur (write a literal brace twice: &lt;code>{{&lt;/code> / &lt;code>}}&lt;/code>, but not around
+    /// the word &lt;code>digits&lt;/code>). Otherwise refused with &lt;code>INVALID_ARGUMENT&lt;/code>.&lt;/p>
+    /// &lt;p>Change it only together with the training phrases of the NLU agent: the ONDEWO NLU recognises a key turn
+    /// by the default &lt;code>[DTMF:...]&lt;/code> form only (it passes that form to intent detection unchanged,
+    /// matches &lt;code>[DTMF:ANY]&lt;/code> training phrases and stores masked entries masked). With another template
+    /// the turn is handled like ordinary text.&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TextTemplate {
+      get { return textTemplate_ ?? TextTemplateDefaultValue; }
+      set {
+        textTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "text_template" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTextTemplate {
+      get { return textTemplate_ != null; }
+    }
+    /// <summary>Clears the value of the "text_template" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTextTemplate() {
+      textTemplate_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3868,6 +5791,8 @@ namespace Ondewo.Vtsi {
       if (BargeIn != other.BargeIn) return false;
       if (InterDigitTimeoutMs != other.InterDigitTimeoutMs) return false;
       if (UndeclaredPolicy != other.UndeclaredPolicy) return false;
+      if (SpeechGuardMs != other.SpeechGuardMs) return false;
+      if (TextTemplate != other.TextTemplate) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3879,6 +5804,8 @@ namespace Ondewo.Vtsi {
       if (HasBargeIn) hash ^= BargeIn.GetHashCode();
       if (HasInterDigitTimeoutMs) hash ^= InterDigitTimeoutMs.GetHashCode();
       if (HasUndeclaredPolicy) hash ^= UndeclaredPolicy.GetHashCode();
+      if (HasSpeechGuardMs) hash ^= SpeechGuardMs.GetHashCode();
+      if (HasTextTemplate) hash ^= TextTemplate.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3913,6 +5840,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(UndeclaredPolicy);
       }
+      if (HasSpeechGuardMs) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SpeechGuardMs);
+      }
+      if (HasTextTemplate) {
+        output.WriteRawTag(50);
+        output.WriteString(TextTemplate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3939,6 +5874,14 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(34);
         output.WriteString(UndeclaredPolicy);
       }
+      if (HasSpeechGuardMs) {
+        output.WriteRawTag(40);
+        output.WriteUInt32(SpeechGuardMs);
+      }
+      if (HasTextTemplate) {
+        output.WriteRawTag(50);
+        output.WriteString(TextTemplate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3960,6 +5903,12 @@ namespace Ondewo.Vtsi {
       }
       if (HasUndeclaredPolicy) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UndeclaredPolicy);
+      }
+      if (HasSpeechGuardMs) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(SpeechGuardMs);
+      }
+      if (HasTextTemplate) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TextTemplate);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3984,6 +5933,12 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasUndeclaredPolicy) {
         UndeclaredPolicy = other.UndeclaredPolicy;
+      }
+      if (other.HasSpeechGuardMs) {
+        SpeechGuardMs = other.SpeechGuardMs;
+      }
+      if (other.HasTextTemplate) {
+        TextTemplate = other.TextTemplate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4018,6 +5973,14 @@ namespace Ondewo.Vtsi {
           }
           case 34: {
             UndeclaredPolicy = input.ReadString();
+            break;
+          }
+          case 40: {
+            SpeechGuardMs = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            TextTemplate = input.ReadString();
             break;
           }
         }
@@ -4055,6 +6018,14 @@ namespace Ondewo.Vtsi {
             UndeclaredPolicy = input.ReadString();
             break;
           }
+          case 40: {
+            SpeechGuardMs = input.ReadUInt32();
+            break;
+          }
+          case 50: {
+            TextTemplate = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -4063,35 +6034,23 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Warm intro of a WARM transfer: after the human target answered and before the target is joined, an ONDEWO bot
-  /// (a free listener of the project, in an NLU session of its own) greets the target, confirms that a person is on
-  /// the line, briefs them (who calls and why), asks whether they accept the call and, on a decline, asks what to tell
-  /// the caller. Meanwhile the caller stays with the paused bot of the call. On accept the target is joined and the
-  /// bot leaves as in every WARM transfer; on a decline, no decision or an unreachable target the call stays with the
-  /// bot, which tells the caller (&lt;code>caller_declined_message&lt;/code> / &lt;code>caller_unreachable_message&lt;/code>).&lt;/p>
-  /// &lt;p>Levels: unset fields inherit, the most specific level winning per field (protobuf &lt;code>MergeFrom&lt;/code>):
-  /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> &amp;gt; &lt;code>VoiceInteractionConfig.warm_transfer_config&lt;/code>
-  /// of the call (listener, caller, campaign) &amp;gt; &lt;code>VtsiProject.warm_transfer_defaults&lt;/code> &amp;gt; the
-  /// deployment&amp;apos;s &lt;code>ONDEWO_VTSI_WARM_TRANSFER_*&lt;/code> settings &amp;gt; the ONDEWO NLU agent&amp;apos;s warm transfer
-  /// settings (texts only) &amp;gt; the built-in default. &lt;code>enabled&lt;/code> unset at every level is
-  /// &lt;code>false&lt;/code>: a WARM transfer then behaves exactly as before 9.5.0. An NLU agent whose warm transfer
-  /// settings switch warm intros off makes the intro unavailable, and &lt;code>on_intro_unavailable&lt;/code> decides.&lt;/p>
-  /// &lt;p>Requires the deployment switch &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED=true&lt;/code> (default
-  /// &lt;code>false&lt;/code>); otherwise an explicit &lt;code>enabled=true&lt;/code> is refused with
-  /// &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=warm-intro-disabled&lt;/code>, at every level (also on
-  /// &lt;code>UpdateVtsiProject&lt;/code>). &lt;code>VtsiProject.feature_availability.warm_intro&lt;/code> says up front whether
-  /// warm intros can run in a project. Fields marked &lt;i>phase B&lt;/i> are refused with &lt;code>FAILED_PRECONDITION&lt;/code>
-  /// &lt;code>reason=phase-b-not-enabled&lt;/code> while the deployment has not enabled phase B
-  /// (&lt;code>VtsiProject.feature_availability.warm_intro_phase_b&lt;/code>).&lt;/p>
-  /// &lt;p>Texts are spoken by text-to-speech in the language of the intro bot. The placeholders are
-  /// &lt;code>{project}&lt;/code>, &lt;code>{caller_name}&lt;/code>, &lt;code>{callee_name}&lt;/code>, &lt;code>{topic}&lt;/code>,
-  /// &lt;code>{summary}&lt;/code> and &lt;code>{reason}&lt;/code>, where a field lists them; an unknown placeholder is refused with
-  /// &lt;code>INVALID_ARGUMENT&lt;/code>. A text must not contain SIP markup (&lt;code>&amp;lt;SIP:&lt;/code>): refused with
-  /// &lt;code>INVALID_ARGUMENT&lt;/code>. No text of an intro (the briefing, the decline reason) is ever stored by VTSI,
-  /// logged, sent in an event or a SIP header: it lives only in the intro bot&amp;apos;s NLU session.&lt;/p>
-  /// &lt;p>Every scalar is &lt;code>optional&lt;/code>: unset inherits, a set value (also &lt;code>&amp;quot;&amp;quot;&lt;/code> or
-  /// &lt;code>0&lt;/code>) is that level&amp;apos;s value. Values outside a documented range are refused with
-  /// &lt;code>INVALID_ARGUMENT&lt;/code>.&lt;/p>
+  /// Warm intro of a WARM transfer: after the human target answered and before the target is joined, an ONDEWO bot (a free listener of the project, in an NLU session of its own) greets the target, confirms that a person is on the line, briefs them (who calls and why), asks whether they accept the call and, on a decline, asks what to tell the caller. Meanwhile the caller stays with the paused bot of the call and hears only what &lt;code>caller_disclosure_message&lt;/code>, &lt;code>caller_hold_message&lt;/code> and &lt;code>caller_hold_music&lt;/code> configure (silence by default). On accept the caller hears &lt;code>caller_accepted_message&lt;/code>, the target is joined and the bot leaves as in every WARM transfer; on a decline, no decision or an unreachable target the target is hung up and the call stays with the bot, which tells the caller (&lt;code>caller_declined_message&lt;/code> / &lt;code>caller_unreachable_message&lt;/code>) and goes on with the conversation.
+  ///
+  /// The conversation with the target, step by step, with the default settings:
+  ///
+  /// &lt;pre>&amp;#10;1. ready_question   &amp;quot;... Ich habe einen Anruf für Sie. Sind Sie am Apparat? Sagen Sie ja oder drücken&amp;#10;                    Sie 1.&amp;quot;&amp;#10;                    yes / key 1: go on; anything else: asked once more; no answer within decision_timeout_s or&amp;#10;                    a second unclear answer: NO_DECISION (a mailbox is suspected)&amp;#10;2. briefing + accept_question&amp;#10;                    &amp;quot;{caller_name} möchte mit Ihnen sprechen. Es geht um {topic}. Möchten Sie das Gespräch&amp;#10;                    übernehmen? Ja oder 1, nein oder 2.&amp;quot;&amp;#10;                    yes / key 1: ACCEPTED; no / key 2: step 3; unclear: asked once more, then NO_DECISION&amp;#10;3. decline_reason_question  &amp;quot;Was darf ich dem Anrufer ausrichten?&amp;quot;&amp;#10;                    whatever the target says next is the reason; silence: a decline without a reason&amp;#10;&lt;/pre>
+  ///
+  /// Levels: unset fields inherit, the most specific level winning per field (protobuf &lt;code>MergeFrom&lt;/code>): &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> (one transfer) &amp;gt; &lt;code>VoiceInteractionConfig.warm_transfer_config&lt;/code> of the call (listener, caller, campaign, scheduled caller) &amp;gt; &lt;code>VtsiProject.warm_transfer_defaults&lt;/code> &amp;gt; the built-in defaults documented at each field. The texts &lt;code>ready_question&lt;/code>, &lt;code>accept_question&lt;/code>, &lt;code>decline_reason_question&lt;/code>, &lt;code>caller_declined_message&lt;/code> and &lt;code>caller_unreachable_message&lt;/code> have one more level between the project and the built-in text: the warm transfer settings of the ONDEWO NLU agent, in the intro&amp;apos;s language. The built-in texts exist in German and English; any other language gets the English one. The deployment settings &lt;code>ONDEWO_VTSI_WARM_TRANSFER_*&lt;/code> are not field defaults: they switch the feature on and off and govern how many listeners are kept free (below). A LISTENER&amp;apos;s config applies to every inbound call that listener serves, a caller&amp;apos;s, campaign&amp;apos;s or scheduled caller&amp;apos;s config to its own calls; a pooled persistent caller is only reused for a call with an identical configuration.
+  ///
+  /// Example: the project sets &lt;code>warm_transfer_defaults { enabled: true caller_hold_message: &amp;quot;Einen Moment bitte, ich kündige Sie an.&amp;quot; }&lt;/code>; one campaign sets &lt;code>warm_transfer_config { decision_timeout_s: 30 }&lt;/code>. A WARM transfer of that campaign then runs an intro with the project&amp;apos;s hold message and a 30 s decision timeout, and every other field at its default.
+  ///
+  /// Requires the deployment switch &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED=true&lt;/code> (default &lt;code>false&lt;/code>); otherwise an explicit &lt;code>enabled=true&lt;/code> is refused with &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=warm-intro-disabled&lt;/code>, at every level (also on &lt;code>UpdateVtsiProject&lt;/code>), and a value stored before the switch was turned off is ignored: every WARM transfer behaves exactly as before 9.5.0. &lt;code>VtsiProject.feature_availability.warm_intro&lt;/code> says up front whether warm intros can run in a project. Fields marked &lt;i>phase B&lt;/i> (&lt;code>intro_text_source = WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code>, &lt;code>caller_hold_music = true&lt;/code>, a non-empty &lt;code>llm_ccai_service_name&lt;/code>) are refused with &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=phase-b-not-enabled&lt;/code> while the deployment has not enabled phase B (&lt;code>ONDEWO_VTSI_WARM_TRANSFER_PHASE_B&lt;/code>, &lt;code>VtsiProject.feature_availability.warm_intro_phase_b&lt;/code>).
+  ///
+  /// A WARM transfer with an enabled intro is refused before anything rings when the target is not a person (&lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=warm-intro-target-not-human&lt;/code>: only a phone number or a softphone account can be briefed) and with &lt;code>FAILED_PRECONDITION&lt;/code> when in-call control is not configured (&lt;code>ONDEWO_VTSI_CALL_CONTROL_KEY&lt;/code>, &lt;code>reason=call-control-disabled&lt;/code>), the call has no live NLU session (&lt;code>no-nlu-session&lt;/code>), the project has no listener to spare (&lt;code>warm-intro-needs-listener&lt;/code>), a listener the intro may reach uses another NLU project than the call (&lt;code>warm-intro-cross-project&lt;/code>) or the call cannot tell the caller the outcome (&lt;code>warm-intro-notice-unsupported&lt;/code>: an older component, or a listener or pooled caller deployed before warm intros were switched on in the deployment; such a container refuses warm intros until it is redeployed). What can only fail once the transfer runs (no listener free at that moment, the NLU agent has warm intros switched off, the intro could not be prepared within &lt;code>ONDEWO_VTSI_WARM_TRANSFER_PREPARE_TIMEOUT_S&lt;/code>, default 6 s) makes the intro unavailable, and &lt;code>on_intro_unavailable&lt;/code> decides.
+  ///
+  /// Texts are spoken by text-to-speech: what the target hears in the voice and language of the intro bot, what the caller hears (&lt;code>caller_disclosure_message&lt;/code>, &lt;code>caller_hold_message&lt;/code>, &lt;code>caller_accepted_message&lt;/code>) in the voice and language of the call. The placeholders are &lt;code>{project}&lt;/code>, &lt;code>{caller_name}&lt;/code>, &lt;code>{callee_name}&lt;/code>, &lt;code>{topic}&lt;/code>, &lt;code>{summary}&lt;/code> and &lt;code>{reason}&lt;/code>, where a field lists them; any other placeholder is refused with &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=unknown-placeholder&lt;/code>. A text must not contain SIP markup (&lt;code>&amp;lt;SIP:&lt;/code>): refused with &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=sip-markup&lt;/code>. No text of an intro (the briefing, the decline reason) is ever stored by VTSI, logged, sent in an event or a SIP header: it lives only in the intro bot&amp;apos;s NLU session.
+  ///
+  /// Every scalar is &lt;code>optional&lt;/code>: unset inherits, a set value (also &lt;code>&amp;quot;&amp;quot;&lt;/code> or &lt;code>0&lt;/code>) is that level&amp;apos;s value. Values outside a documented range are refused with &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=out-of-range&lt;/code>, &lt;code>text-too-long&lt;/code>, ...), naming the field.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmTransferConfig : pb::IMessage<WarmTransferConfig>
@@ -4109,7 +6068,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4170,7 +6129,12 @@ namespace Ondewo.Vtsi {
 
     private bool enabled_;
     /// <summary>
-    /// Master switch of the warm intro. Unset at every level means &lt;code>false&lt;/code>
+    /// Master switch of the warm intro: &lt;code>true&lt;/code> turns every WARM transfer on this level into a WARM
+    /// transfer with an intro. Unset at every level means &lt;code>false&lt;/code>: the target is joined without an intro,
+    /// as before 9.5.0. Only a WARM transfer gets an intro. &lt;code>enabled=true&lt;/code> needs
+    /// &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED=true&lt;/code> in the deployment, else &lt;code>FAILED_PRECONDITION&lt;/code>
+    /// &lt;code>reason=warm-intro-disabled&lt;/code>. Set &lt;code>false&lt;/code> on a &lt;code>TransferCallRequest&lt;/code> to skip the
+    /// intro for that one transfer while the project or the call enables it
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4200,11 +6164,17 @@ namespace Ondewo.Vtsi {
 
     private string introPrompt_;
     /// <summary>
-    /// TEMPLATE: the briefing spoken to the target after the readiness answer, with the placeholders
-    /// &lt;code>{caller_name}&lt;/code>, &lt;code>{callee_name}&lt;/code>, &lt;code>{topic}&lt;/code> and &lt;code>{summary}&lt;/code>
-    /// (default e.g. &amp;quot;Ich habe {caller_name} in der Leitung, es geht um {topic}.&amp;quot;). LLM_SUMMARY
-    /// (&lt;i>phase B&lt;/i>): the instruction to the LLM that writes the briefing from the call so far. At most 4000
-    /// characters
+    /// With &lt;code>WARM_INTRO_TEXT_SOURCE_TEMPLATE&lt;/code>: the briefing the target hears after the
+    /// &lt;code>ready_question&lt;/code>, with the placeholders &lt;code>{caller_name}&lt;/code>, &lt;code>{callee_name}&lt;/code>,
+    /// and &lt;code>{topic}&lt;/code> (what the call&amp;apos;s NLU session knows of the caller and the topic; a value that is
+    /// not known renders empty, an unknown caller as &amp;quot;Ein Anrufer&amp;quot; / &amp;quot;A caller&amp;quot;).
+    /// &lt;code>{summary}&lt;/code> is accepted but always renders empty with a TEMPLATE: only an LLM summary writes one.
+    /// Unset or empty: the built-in template, (de) &amp;quot;{caller_name} möchte mit Ihnen sprechen. Es
+    /// geht um {topic}.&amp;quot; (without the second sentence when no topic is known). Example: &amp;quot;{caller_name} ruft
+    /// wegen {topic} an.&amp;quot; With &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code> (&lt;i>phase B&lt;/i>): the instruction
+    /// to the LLM that writes the briefing from the call so far; unset or empty, a built-in instruction asks for at
+    /// most two short sentences on who calls and why. The briefing spoken is capped at 600 characters. At most 4000
+    /// characters, else &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4231,10 +6201,13 @@ namespace Ondewo.Vtsi {
     public const int IntroTextSourceFieldNumber = 3;
     private global::Ondewo.Vtsi.WarmIntroTextSource introTextSource_ = global::Ondewo.Vtsi.WarmIntroTextSource.Unspecified;
     /// <summary>
-    /// How the briefing is produced. &lt;code>WARM_INTRO_TEXT_SOURCE_UNSPECIFIED&lt;/code> means
-    /// &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code> when phase B is enabled and the project has an LLM service,
-    /// else &lt;code>WARM_INTRO_TEXT_SOURCE_TEMPLATE&lt;/code>. &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code> is
-    /// &lt;i>phase B&lt;/i>; when the LLM fails or is too slow the TEMPLATE is used (&lt;code>WarmIntroRecord.text_fell_back&lt;/code>)
+    /// How the briefing is produced. &lt;code>WARM_INTRO_TEXT_SOURCE_UNSPECIFIED&lt;/code> (default) means
+    /// &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code> when the deployment has enabled phase B, else
+    /// &lt;code>WARM_INTRO_TEXT_SOURCE_TEMPLATE&lt;/code>. An LLM summary that cannot be written (the project has no LLM
+    /// service, the LLM fails, is too slow or answers nothing) falls back to the built-in template, and
+    /// &lt;code>WarmIntroRecord.text_fell_back&lt;/code> says so. An explicit &lt;code>WARM_INTRO_TEXT_SOURCE_LLM_SUMMARY&lt;/code>
+    /// is &lt;i>phase B&lt;/i>: refused with &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=phase-b-not-enabled&lt;/code> while
+    /// the deployment has not enabled phase B
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4251,10 +6224,12 @@ namespace Ondewo.Vtsi {
 
     private string readyQuestion_;
     /// <summary>
-    /// The first sentence the target hears, before anything about the caller (it carries no personal data, so a
-    /// mailbox that answers records nothing about the caller). Placeholder &lt;code>{project}&lt;/code>. Default (de):
-    /// &amp;quot;Hier ist der digitale Assistent von {project}. Ich habe einen Anruf für Sie. Sind Sie am Apparat? Sagen
-    /// Sie ja oder drücken Sie 1.&amp;quot; At most 1000 characters
+    /// The first sentence the target hears, before anything about the caller: it carries no personal data, so a
+    /// mailbox that answers records nothing about the caller. Placeholder &lt;code>{project}&lt;/code> (the project&amp;apos;s
+    /// display name). Unset or empty: the NLU agent&amp;apos;s text, else the built-in one, (de) &amp;quot;Hier ist der
+    /// digitale Assistent von {project}. Ich habe einen Anruf für Sie. Sind Sie am Apparat? Sagen Sie ja oder drücken
+    /// Sie 1.&amp;quot; (the effective &lt;code>accept_dtmf&lt;/code> in place of 1). A configured text should name the accept
+    /// key itself. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4283,9 +6258,12 @@ namespace Ondewo.Vtsi {
 
     private bool confirmHumanBeforeIntro_;
     /// <summary>
-    /// Whether the briefing is spoken only after the target answered the &lt;code>ready_question&lt;/code> (by voice or
-    /// &lt;code>accept_dtmf&lt;/code>). Default &lt;code>true&lt;/code>: the mailbox guard. &lt;code>false&lt;/code> briefs the target
-    /// right after the &lt;code>ready_question&lt;/code>
+    /// Whether the briefing is spoken only after the target confirmed being there, by saying yes or pressing
+    /// &lt;code>accept_dtmf&lt;/code> at the &lt;code>ready_question&lt;/code>. Default &lt;code>true&lt;/code>: the mailbox guard, so a
+    /// voicemail that answers never records the briefing; an intro whose &lt;code>ready_question&lt;/code> gets no yes ends
+    /// with &lt;code>WARM_INTRO_DECISION_NO_DECISION&lt;/code> (cause &lt;code>voicemail-suspected&lt;/code>). &lt;code>false&lt;/code>
+    /// skips the &lt;code>ready_question&lt;/code>: the target hears the briefing and the &lt;code>accept_question&lt;/code> at
+    /// once, which is faster but lets a mailbox record the briefing
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4315,8 +6293,11 @@ namespace Ondewo.Vtsi {
 
     private string acceptQuestion_;
     /// <summary>
-    /// The question after the briefing. Default (de): &amp;quot;Möchten Sie das Gespräch übernehmen? Ja oder 1, nein oder
-    /// 2.&amp;quot; At most 1000 characters
+    /// The question after the briefing. Unset or empty: the NLU agent&amp;apos;s text, else the built-in one, (de)
+    /// &amp;quot;Möchten Sie das Gespräch übernehmen? Ja oder 1, nein oder 2.&amp;quot; (the effective
+    /// &lt;code>accept_dtmf&lt;/code> / &lt;code>decline_dtmf&lt;/code> in place of 1 / 2). A configured text should name the keys
+    /// itself. An answer that is neither yes nor no is asked once more, a second one ends the intro with
+    /// &lt;code>WARM_INTRO_DECISION_NO_DECISION&lt;/code>. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4345,11 +6326,14 @@ namespace Ondewo.Vtsi {
 
     private string declineReasonQuestion_;
     /// <summary>
-    /// Asked after a decline, to learn what to tell the caller. Default (de): &amp;quot;Was darf ich dem Anrufer
-    /// ausrichten?&amp;quot;, (en) &amp;quot;What may I tell the caller?&amp;quot;. &lt;code>&amp;quot;&amp;quot;&lt;/code> means: do not ask,
-    /// the caller hears the decline without a reason. The answer is relayed to the caller only through the bot&amp;apos;s
-    /// NLU (normalised: SIP markup removed, at most 300 characters, digit runs of 12 or more masked); VTSI never
-    /// receives it. At most 1000 characters
+    /// Asked after a decline, to learn what to tell the caller. Unset: the NLU agent&amp;apos;s text, else the built-in
+    /// one, (de) &amp;quot;Was darf ich dem Anrufer ausrichten?&amp;quot;, (en) &amp;quot;What may I tell the caller?&amp;quot;.
+    /// &lt;code>&amp;quot;&amp;quot;&lt;/code> means: do not ask; the intro bot thanks the target (&amp;quot;Danke, ich richte es
+    /// aus.&amp;quot;) and hangs up, and the caller hears the decline without a reason. Whatever the target says next
+    /// is the reason (a key press gives none; no answer within &lt;code>decision_timeout_s&lt;/code> is a decline without a
+    /// reason). The reason is relayed to the caller only
+    /// through the bot&amp;apos;s NLU (normalised: SIP markup removed, at most 300 characters, digit runs of 12 or more
+    /// masked); VTSI never receives it. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4379,8 +6363,12 @@ namespace Ondewo.Vtsi {
     private string callerDeclinedMessage_;
     /// <summary>
     /// What the caller hears after a decline, placeholders &lt;code>{callee_name}&lt;/code> and &lt;code>{reason}&lt;/code>.
-    /// Default (de): &amp;quot;{callee_name} kann das Gespräch gerade nicht übernehmen und lässt ausrichten:
-    /// {reason}&amp;quot;; without a reason a variant without the clause is spoken. At most 1000 characters
+    /// Unset or empty: the NLU agent&amp;apos;s text, else the built-in one, (de) &amp;quot;{callee_name} kann das Gespräch
+    /// gerade nicht übernehmen und lässt ausrichten: {reason}&amp;quot;, or &amp;quot;{callee_name} kann das Gespräch gerade
+    /// nicht übernehmen.&amp;quot; when the target gave no reason. A configured text that names &lt;code>{reason}&lt;/code> is
+    /// used only when a reason was given (else the built-in text without a reason is spoken); one without
+    /// &lt;code>{reason}&lt;/code> is always used. An unknown target is named &amp;quot;Die gewünschte Person&amp;quot; / &amp;quot;The
+    /// person you asked for&amp;quot;. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4409,9 +6397,11 @@ namespace Ondewo.Vtsi {
 
     private string callerUnreachableMessage_;
     /// <summary>
-    /// What the caller hears when the target was busy, did not answer, gave no decision, hung up during the intro or
-    /// the intro could not run (with &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_RETURN_TO_CALLER&lt;/code>). Placeholder
-    /// &lt;code>{callee_name}&lt;/code>. At most 1000 characters
+    /// What the caller hears when the target was busy, did not answer, gave no decision, hung up during the intro, or
+    /// the intro could not run with &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_RETURN_TO_CALLER&lt;/code>. Placeholder
+    /// &lt;code>{callee_name}&lt;/code>. Unset or empty: the NLU agent&amp;apos;s text, else the built-in one, (de)
+    /// &amp;quot;{callee_name} ist gerade nicht erreichbar.&amp;quot;, (en) &amp;quot;{callee_name} cannot be reached right
+    /// now.&amp;quot; At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4440,8 +6430,10 @@ namespace Ondewo.Vtsi {
 
     private string acceptDtmf_;
     /// <summary>
-    /// The key that accepts (and answers the &lt;code>ready_question&lt;/code>). Default &lt;code>1&lt;/code>; exactly one of
-    /// &lt;code>0-9 * #&lt;/code>
+    /// The key the target presses to accept, which also answers the &lt;code>ready_question&lt;/code>. Default
+    /// &lt;code>1&lt;/code>; exactly one of &lt;code>0-9 * #&lt;/code>, else &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// &lt;code>reason=invalid-dtmf-key&lt;/code>. A key is decisive at once; speech (&amp;quot;ja&amp;quot;, &amp;quot;yes&amp;quot;, the
+    /// NLU agent&amp;apos;s extra phrases) works as well
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4470,8 +6462,10 @@ namespace Ondewo.Vtsi {
 
     private string declineDtmf_;
     /// <summary>
-    /// The key that declines. Default &lt;code>2&lt;/code>; exactly one of &lt;code>0-9 * #&lt;/code>, different from the
-    /// effective &lt;code>accept_dtmf&lt;/code>
+    /// The key the target presses to decline. Default &lt;code>2&lt;/code>; exactly one of &lt;code>0-9 * #&lt;/code> and
+    /// different from the effective &lt;code>accept_dtmf&lt;/code>: equal keys on one level, or after inheritance when the
+    /// transfer starts (e.g. the project sets &lt;code>accept_dtmf=&amp;quot;2&amp;quot;&lt;/code> and nothing overrides the default
+    /// &lt;code>decline_dtmf&lt;/code>), are refused with &lt;code>INVALID_ARGUMENT&lt;/code> &lt;code>reason=dtmf-keys-equal&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4500,8 +6494,10 @@ namespace Ondewo.Vtsi {
 
     private uint decisionTimeoutS_;
     /// <summary>
-    /// Seconds from a question to the target&amp;apos;s decision before the intro ends with
-    /// &lt;code>WARM_INTRO_DECISION_NO_DECISION&lt;/code>. Default 20, valid range 5 - 60
+    /// Seconds the target has to answer each question (&lt;code>ready_question&lt;/code>, &lt;code>accept_question&lt;/code>,
+    /// &lt;code>decline_reason_question&lt;/code>), counted from the moment the question is asked plus the time it takes to
+    /// speak. No answer in time ends the intro: &lt;code>WARM_INTRO_DECISION_NO_DECISION&lt;/code> at the first two
+    /// questions, a decline without a reason at the third. Default 20, valid range 5 - 60
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4531,8 +6527,9 @@ namespace Ondewo.Vtsi {
 
     private uint maxIntroDurationS_;
     /// <summary>
-    /// Hard cap in seconds from the target&amp;apos;s answer to the decision. Default 90, valid range 30 - 300. The caller
-    /// waits at most the ring time plus this
+    /// Hard cap in seconds from the moment the target answered the call to the decision, whatever the questions do.
+    /// Past it the intro bot is hung up and the intro ends with &lt;code>WARM_INTRO_DECISION_NO_DECISION&lt;/code> (cause
+    /// &lt;code>intro-timeout&lt;/code>). Default 90, valid range 30 - 300. The caller waits at most the ring time plus this
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4562,9 +6559,11 @@ namespace Ondewo.Vtsi {
 
     private string calleeDisplayName_;
     /// <summary>
-    /// Who the target is, spoken as &lt;code>{callee_name}&lt;/code>, e.g. &amp;quot;Frau Berger, Buchhaltung&amp;quot;. Unset
-    /// resolves from the target softphone account&amp;apos;s &lt;code>display_name&lt;/code>, then from
-    /// &lt;code>VtsiProject.transfer_target_directory&lt;/code>. At most 128 characters. Meaningful per transfer only
+    /// Who the target is, spoken as &lt;code>{callee_name}&lt;/code> to the target and to the caller, e.g. &amp;quot;Frau
+    /// Berger, Buchhaltung&amp;quot;. Unset or empty: the target softphone account&amp;apos;s &lt;code>display_name&lt;/code>, then
+    /// the target&amp;apos;s entry in &lt;code>VtsiProject.transfer_target_directory&lt;/code>, else no name (the texts then use
+    /// a name-less wording). At most 128 characters. Meaningful per transfer only: set it on the
+    /// &lt;code>TransferCallRequest&lt;/code>, or let the directory name every target
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4593,9 +6592,9 @@ namespace Ondewo.Vtsi {
 
     private string calleeDescription_;
     /// <summary>
-    /// The target&amp;apos;s role and context for the briefing (LLM_SUMMARY). Unset resolves from the target softphone
-    /// account&amp;apos;s &lt;code>description&lt;/code>, then from &lt;code>VtsiProject.transfer_target_directory&lt;/code>. At most
-    /// 512 characters. Meaningful per transfer only
+    /// The target&amp;apos;s role and context, handed to the briefing (LLM_SUMMARY). Unset or empty: the target softphone
+    /// account&amp;apos;s &lt;code>description&lt;/code>, then the target&amp;apos;s entry in
+    /// &lt;code>VtsiProject.transfer_target_directory&lt;/code>. At most 512 characters. Meaningful per transfer only
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4622,9 +6621,11 @@ namespace Ondewo.Vtsi {
     public const int OnIntroUnavailableFieldNumber = 16;
     private global::Ondewo.Vtsi.WarmIntroUnavailablePolicy onIntroUnavailable_ = global::Ondewo.Vtsi.WarmIntroUnavailablePolicy.Unspecified;
     /// <summary>
-    /// What happens when the intro cannot run (no free listener, the NLU could not prepare the intro).
-    /// &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_UNSPECIFIED&lt;/code> means
-    /// &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_CONNECT_WITHOUT_INTRO&lt;/code>
+    /// What happens when the intro cannot run although the transfer was accepted: no listener free at that moment, the
+    /// NLU agent has warm intros switched off, or the intro could not be prepared in time. Not consulted for the
+    /// refusals before anything rings (see the message). &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_UNSPECIFIED&lt;/code>
+    /// (default) means &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_CONNECT_WITHOUT_INTRO&lt;/code>; choose
+    /// &lt;code>WARM_INTRO_UNAVAILABLE_POLICY_RETURN_TO_CALLER&lt;/code> when a target must never be joined unannounced
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4641,10 +6642,13 @@ namespace Ondewo.Vtsi {
 
     private bool applyToBotTransfers_;
     /// <summary>
-    /// Whether the bot&amp;apos;s OWN transfers to a human (the NLU answer&amp;apos;s transfer or human handover) get a warm
-    /// intro too: the transfer is handed to VTSI instead of being sent by the bot. Default &lt;code>false&lt;/code>. Valid
-    /// on the call and project levels; set on a &lt;code>TransferCallRequest&lt;/code> it is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Whether the bot&amp;apos;s OWN transfers to a person (a transfer or human handover the NLU answer asks for, to a
+    /// phone number or a softphone account) get a warm intro too: the bot does not send the transfer itself but hands
+    /// it to VTSI, which runs it as a WARM transfer with an intro. Only when &lt;code>enabled&lt;/code> is effectively
+    /// &lt;code>true&lt;/code> and &lt;code>ONDEWO_VTSI_CALL_CONTROL_KEY&lt;/code> is set; any other bot transfer is sent exactly
+    /// as the bot asked. Default &lt;code>false&lt;/code>. Valid on the call and project levels; set on a
+    /// &lt;code>TransferCallRequest&lt;/code> it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// &lt;code>reason=field-not-valid-on-level&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4675,8 +6679,8 @@ namespace Ondewo.Vtsi {
     private string callerHoldMessage_;
     /// <summary>
     /// Spoken to the caller while the intro runs, after &lt;code>caller_disclosure_message&lt;/code>, e.g. &amp;quot;Einen
-    /// Moment bitte, ich verbinde Sie.&amp;quot; &lt;code>&amp;quot;&amp;quot;&lt;/code> or unset: none (silence). At most 1000
-    /// characters
+    /// Moment bitte, ich verbinde Sie.&amp;quot; &lt;code>&amp;quot;&amp;quot;&lt;/code> or unset: none (silence, or the hold music).
+    /// Repeated every &lt;code>caller_reassure_interval_s&lt;/code>. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4705,7 +6709,9 @@ namespace Ondewo.Vtsi {
 
     private bool callerHoldMusic_;
     /// <summary>
-    /// &lt;i>Phase B&lt;/i>: music on hold for the caller between the hold messages. Default &lt;code>false&lt;/code> (silence)
+    /// &lt;i>Phase B&lt;/i>: music on hold for the caller between the hold messages while the intro runs. Default
+    /// &lt;code>false&lt;/code> (silence). &lt;code>true&lt;/code> is refused with &lt;code>FAILED_PRECONDITION&lt;/code>
+    /// &lt;code>reason=phase-b-not-enabled&lt;/code> while the deployment has not enabled phase B
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4735,8 +6741,9 @@ namespace Ondewo.Vtsi {
 
     private uint callerReassureIntervalS_;
     /// <summary>
-    /// Repeat &lt;code>caller_hold_message&lt;/code> every N seconds while the intro runs. &lt;code>0&lt;/code> (default): never.
-    /// Valid: 0 or 15 - 120
+    /// Repeat &lt;code>caller_hold_message&lt;/code> while the intro runs, with N seconds of silence between two
+    /// repetitions. &lt;code>0&lt;/code> (default): it is spoken once. Valid: 0 or 15 - 120, e.g. 20 to reassure a waiting
+    /// caller about every 20 seconds. Without a &lt;code>caller_hold_message&lt;/code> it has no effect
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4766,8 +6773,13 @@ namespace Ondewo.Vtsi {
 
     private string llmCcaiServiceName_;
     /// <summary>
-    /// The LLM service of the ONDEWO NLU agent that writes the briefing (LLM_SUMMARY, &lt;i>phase B&lt;/i>). Empty: the
-    /// agent&amp;apos;s warm transfer setting, else the project&amp;apos;s first LLM service
+    /// &lt;i>Phase B&lt;/i>: the resource name of the LLM service of the ONDEWO NLU project that writes the briefing of an
+    /// LLM_SUMMARY intro (and decides a spoken answer to its &lt;code>accept_question&lt;/code> that the built-in phrases
+    /// leave unclear). Empty (default): the NLU agent&amp;apos;s warm transfer setting, else the project&amp;apos;s first LLM
+    /// service of the intro&amp;apos;s language. A name the project has no LLM service of for that language means no LLM:
+    /// the built-in template is spoken (&lt;code>WarmIntroRecord.text_fell_back&lt;/code>). A non-empty value is refused with
+    /// &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=phase-b-not-enabled&lt;/code> while the deployment has not enabled
+    /// phase B
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4796,8 +6808,8 @@ namespace Ondewo.Vtsi {
 
     private string callerDisclosureMessage_;
     /// <summary>
-    /// Spoken to the caller FIRST when the intro starts, e.g. that the call is being announced to the target.
-    /// Default empty: none. At most 1000 characters
+    /// Spoken to the caller FIRST when the intro starts, e.g. that the call is being announced to the target:
+    /// &amp;quot;Ich kündige Sie jetzt bei der Kollegin an.&amp;quot; Default empty: none. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4828,7 +6840,9 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// Spoken to the caller after the target accepted and before the target is joined, placeholder
     /// &lt;code>{callee_name}&lt;/code>, e.g. &amp;quot;Ich verbinde Sie jetzt mit {callee_name}.&amp;quot; The target does not
-    /// hear it. Default empty: none. At most 1000 characters
+    /// hear it; the join waits until it has been spoken, at most
+    /// &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ACCEPTED_CLIP_MAX_S&lt;/code> (default 6 s). Default empty: none, the target is
+    /// joined at once. At most 1000 characters
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4857,8 +6871,9 @@ namespace Ondewo.Vtsi {
 
     private bool storeIntroAudio_;
     /// <summary>
-    /// Whether the intro bot&amp;apos;s NLU session stores the intro audio (the target&amp;apos;s voice and the bot&amp;apos;s).
-    /// Default &lt;code>false&lt;/code>: no audio is stored; the session&amp;apos;s text follows the conversation retention
+    /// Whether the intro bot&amp;apos;s NLU session may store the intro audio (the target&amp;apos;s voice and the
+    /// bot&amp;apos;s). Default &lt;code>false&lt;/code>. This version validates and inherits the field but does not act on it
+    /// yet: setting it to &lt;code>true&lt;/code> changes nothing
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4889,9 +6904,12 @@ namespace Ondewo.Vtsi {
     private readonly pbc::RepeatedField<string> introListenerNames_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Project level only: listeners (&lt;pre>&lt;code>projects/&amp;lt;project_uuid&amp;gt;/listeners/&amp;lt;listener_uuid&amp;gt;&lt;/code>&lt;/pre>)
-    /// reserved as intro bots. Empty (default): any free listener of the project, keeping at least one ready
-    /// listener free for customer calls. At most 50 entries; set on another level it is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// reserved as intro bots. Empty (default): any free listener of the project takes the intro, but only while more
+    /// than &lt;code>ONDEWO_VTSI_WARM_TRANSFER_RESERVED_LISTENERS&lt;/code> (default 1) listeners are ready, so customer calls
+    /// keep that many. Listed: only these listeners take intros, and they no longer answer customer calls (no reserve
+    /// is kept); a project whose listed listeners are none of them deployed refuses an intro with
+    /// &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=warm-intro-needs-listener&lt;/code>. At most 50 distinct listeners
+    /// of this project; set on another level it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5607,8 +7625,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Audit of one warm intro, in &lt;code>CallTransferRecord.warm_intro&lt;/code>. Output only. Holds NO intro text and NO
-  /// decline reason text.&lt;/p>
+  /// Audit of one warm intro, in &lt;code>CallTransferRecord.warm_intro&lt;/code>. Output only. Holds NO intro text and NO decline reason text.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmIntroRecord : pb::IMessage<WarmIntroRecord>
@@ -5625,7 +7642,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5715,7 +7732,8 @@ namespace Ondewo.Vtsi {
     public const int DeclineReasonPresentFieldNumber = 4;
     private bool declineReasonPresent_;
     /// <summary>
-    /// Whether the target gave a reason for a decline (the reason itself never leaves the intro bot&amp;apos;s NLU session)
+    /// Whether the target gave a reason for a decline (the reason itself never leaves the intro bot&amp;apos;s NLU
+    /// session); &lt;code>false&lt;/code> also when &lt;code>decline_reason_question&lt;/code> is &lt;code>&amp;quot;&amp;quot;&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5776,7 +7794,7 @@ namespace Ondewo.Vtsi {
     public const int TextSourceFieldNumber = 8;
     private global::Ondewo.Vtsi.WarmIntroTextSource textSource_ = global::Ondewo.Vtsi.WarmIntroTextSource.Unspecified;
     /// <summary>
-    /// The text source actually used
+    /// The text source actually requested (UNSPECIFIED resolved); see &lt;code>text_fell_back&lt;/code> for what was spoken
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5791,7 +7809,8 @@ namespace Ondewo.Vtsi {
     public const int TextFellBackFieldNumber = 9;
     private bool textFellBack_;
     /// <summary>
-    /// Whether the LLM summary failed or timed out and the TEMPLATE was used
+    /// Whether the LLM summary could not be written (no LLM, failed, too slow, empty) and the built-in template was
+    /// spoken instead
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5807,8 +7826,10 @@ namespace Ondewo.Vtsi {
     private string cause_ = "";
     /// <summary>
     /// Bounded kebab-case token naming why the intro ended or did not run, e.g. &lt;code>declined&lt;/code>,
-    /// &lt;code>voicemail-suspected&lt;/code>, &lt;code>target-hung-up&lt;/code>, &lt;code>no-free-listener&lt;/code>,
-    /// &lt;code>prepare-failed&lt;/code>, &lt;code>intro-timeout&lt;/code>; empty on accept
+    /// &lt;code>no-decision&lt;/code>, &lt;code>voicemail-suspected&lt;/code>, &lt;code>intro-timeout&lt;/code>,
+    /// &lt;code>target-hung-up&lt;/code>, &lt;code>busy&lt;/code>, &lt;code>no-answer&lt;/code>, &lt;code>no-free-listener&lt;/code>,
+    /// &lt;code>prepare-failed&lt;/code>; empty on accept. New tokens may be added: treat an unknown one as a failure
+    /// without a known cause
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5825,7 +7846,8 @@ namespace Ondewo.Vtsi {
     /// <summary>
     /// Whether the caller&amp;apos;s bot queued the outcome notice (decline / unreachable) for the caller. Only meaningful
     /// when a notice was owed (every decision but &lt;code>WARM_INTRO_DECISION_ACCEPTED&lt;/code>); &lt;code>false&lt;/code> there
-    /// goes with &lt;code>VTSI_EVENT_CALL_WARM_TRANSFER_OUTCOME_NOTICE_UNDELIVERED&lt;/code>
+    /// goes with &lt;code>VTSI_EVENT_CALL_WARM_TRANSFER_OUTCOME_NOTICE_UNDELIVERED&lt;/code>: the caller may not have been
+    /// told
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6277,7 +8299,19 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the turn detection, i.e. deciding when the caller has finished speaking
+  /// Configuration of the turn detection of a call, i.e. how the bot decides that the caller has finished speaking and that it is its turn to answer. Too eager, and the bot answers a caller who only paused (&amp;quot;Ich möchte ... einen Termin am Dienstag&amp;quot; becomes two turns); too patient, and the caller waits in silence for every answer.
+  ///
+  /// Two services take part: the speech-to-text service ends an utterance after a silence (voice activity detection) and, with a turn detection model, judges whether the words so far are a finished turn; the speech-to-speech service of the call decides which final transcription becomes ONE turn for the NLU, and when the caller may interrupt the bot.
+  ///
+  /// Presence and precedence: every &lt;code>optional&lt;/code> field is applied only when it is set; an unset field inherits, in this order, the deployment setting of the VTSI server (the &lt;code>ONDEWO_VTSI_*&lt;/code> variable named at the field, where one exists), then the built-in default of the service that applies it. A set per-call value wins over the deployment setting. Leaving the whole message unset keeps the deployment&amp;apos;s turn detection: the deployment-wide turn detection model when the operator switched it on (&lt;code>ONDEWO_VTSI_S2T_TURN_DETECTION_ACTIVE&lt;/code>), else the speech-to-text pipeline&amp;apos;s own silence detection. Setting the message at all also asks the speech-to-text service for partial transcriptions and the start of speech, which every timer of the turn detection needs.
+  ///
+  /// Scope: the configuration of a LISTENER applies to every inbound call that listener deployment serves; the one of a caller, a campaign or a scheduled caller to each of its own calls. A pooled persistent caller is only reused for a call with an identical configuration.
+  ///
+  /// Validation: a value outside its range, and a field that only the semantic turn detection model reads set together with the mode &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, are refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Example, a line that collects phone numbers and wants patient turn taking:
+  ///
+  /// &lt;pre>&lt;code>mode: SEMANTIC_MODEL&amp;#10;turn_eagerness: PATIENT&amp;#10;final_merge_window_seconds: 0.7&amp;#10;dictation_config { hold_max_seconds_by_category { key: &amp;quot;phone&amp;quot; value: 3.0 } }&lt;/code>&lt;/pre>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnDetectionConfig : pb::IMessage<TurnDetectionConfig>
@@ -6295,7 +8329,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6331,6 +8365,11 @@ namespace Ondewo.Vtsi {
       exactProbability_ = other.exactProbability_;
       finalMergeWindowSeconds_ = other.finalMergeWindowSeconds_;
       dictationConfig_ = other.dictationConfig_ != null ? other.dictationConfig_.Clone() : null;
+      s2TEmitMs_ = other.s2TEmitMs_;
+      s2TRequestPartials_ = other.s2TRequestPartials_;
+      s2TRequestEndOfSpeechCandidate_ = other.s2TRequestEndOfSpeechCandidate_;
+      smartTurnThreshold_ = other.smartTurnThreshold_;
+      postUnmutePhantomWindowSeconds_ = other.postUnmutePhantomWindowSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6344,7 +8383,8 @@ namespace Ondewo.Vtsi {
     public const int ModeFieldNumber = 1;
     private global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode mode_ = global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnDetectionMode.Unspecified;
     /// <summary>
-    /// Mode of the turn detection. Defaults to SEMANTIC_MODEL if unspecified
+    /// How the end of the caller&amp;apos;s turn is detected (see &lt;code>TurnDetectionMode&lt;/code>). Default:
+    /// &lt;code>TURN_DETECTION_MODE_UNSPECIFIED&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6361,10 +8401,17 @@ namespace Ondewo.Vtsi {
 
     private float minEndpointingDelaySeconds_;
     /// <summary>
-    /// Optional: Minimum delay in seconds before a confidently detected end of turn is committed
-    /// (default: 0.5, valid range: 0 - 10). When both delays are set, it must not be larger than
-    /// &lt;code>max_endpointing_delay_seconds&lt;/code>; a request with min &amp;gt; max, or a value outside the range, is
-    /// refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Seconds of caller silence after which the speech-to-text service ends an utterance and sends its
+    /// final transcription (its minimum silence; valid range: 0 - 10). Applies in every mode and is scaled by
+    /// &lt;code>turn_eagerness&lt;/code> (e.g. 1.0 with &lt;code>PATIENT&lt;/code> becomes 1.7 s, clamped to 10). Unset keeps
+    /// the minimum silence of the call&amp;apos;s speech-to-text pipeline. It is delivered only where the call&amp;apos;s
+    /// speech-to-text configuration can carry it: when &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code>
+    /// contains a &lt;code>pyannote&lt;/code> block, or when the deployment declares a pyannote speech-to-text pipeline
+    /// (&lt;code>ONDEWO_VTSI_S2T_PYANNOTE_PARTIAL_BLOCK_SUPPORTED=True&lt;/code>); otherwise the value is not applied and
+    /// the VTSI server logs a warning naming the call. A larger value lets a hesitant caller pause longer, at the
+    /// cost of a longer wait before every answer. When both delays are set it must not be larger than
+    /// &lt;code>max_endpointing_delay_seconds&lt;/code>; min &amp;gt; max, or a value outside the range, is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6394,9 +8441,14 @@ namespace Ondewo.Vtsi {
 
     private float maxEndpointingDelaySeconds_;
     /// <summary>
-    /// Optional: Maximum delay in seconds to wait for an end of turn before the turn is committed
-    /// from the latest stable partial transcription (default: 3.0, valid range: 0 - 10; at least
-    /// &lt;code>min_endpointing_delay_seconds&lt;/code> when both are set)
+    /// Optional: Safety net for a slow end of turn: once the caller&amp;apos;s partial transcription has stopped changing,
+    /// the turn is committed from it after this many seconds even if the speech-to-text service has not sent its
+    /// final transcription yet (valid range: 0 - 10; scaled by &lt;code>turn_eagerness&lt;/code>). Default: 0 = off, the
+    /// turn always waits for the final transcription. The risk is answering a caller who only paused longer than this
+    /// mid-sentence; when the final transcription then differs, the bot answers again. Use a value above the usual
+    /// end-of-turn latency, e.g. 3.0. When both delays are set it must be at least
+    /// &lt;code>min_endpointing_delay_seconds&lt;/code> (so 0 together with a minimum above 0 is refused); a value outside
+    /// the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6424,7 +8476,10 @@ namespace Ondewo.Vtsi {
     public const int TurnEagernessFieldNumber = 4;
     private global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness turnEagerness_ = global::Ondewo.Vtsi.TurnDetectionConfig.Types.TurnEagerness.Unspecified;
     /// <summary>
-    /// Eagerness of the turn detection: scales both endpointing delays. Defaults to NORMAL if unspecified
+    /// How eagerly the bot takes the turn: scales &lt;code>min_endpointing_delay_seconds&lt;/code> and
+    /// &lt;code>max_endpointing_delay_seconds&lt;/code> (see &lt;code>TurnEagerness&lt;/code>). It only scales delays set in this
+    /// message: with neither delay set it has no effect. Default: &lt;code>TURN_EAGERNESS_UNSPECIFIED&lt;/code>
+    /// (&lt;code>NORMAL&lt;/code>)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6441,11 +8496,13 @@ namespace Ondewo.Vtsi {
 
     private string turnDetectionSystemPrompt_;
     /// <summary>
-    /// Optional: System prompt for the semantic (LLM) turn detection model of the speech-to-text service. Unset uses
-    /// the model&amp;apos;s built-in prompt. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set
-    /// together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code> it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
-    /// VTSI enforces no length limit; the speech-to-text service may refuse a prompt that exceeds its model&amp;apos;s
-    /// context
+    /// Optional: System prompt for a chat-LLM turn detection model of the speech-to-text service (the model that
+    /// answers yes or no to &amp;quot;is this turn finished?&amp;quot;). Unset uses the model&amp;apos;s built-in prompt. Only a
+    /// chat-LLM model reads it; the other turn detection models ignore it. Only valid with the mode
+    /// &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>
+    /// it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. No length limit is enforced here; the speech-to-text
+    /// service may refuse a prompt that exceeds its model&amp;apos;s context. A value already set in the call&amp;apos;s
+    /// &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code> wins
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6474,8 +8531,8 @@ namespace Ondewo.Vtsi {
 
     private string turnDetectionUserPrompt_;
     /// <summary>
-    /// Optional: User prompt for the semantic (LLM) turn detection model of the speech-to-text service, with the
-    /// rules of &lt;code>turn_detection_system_prompt&lt;/code>
+    /// Optional: User prompt for a chat-LLM turn detection model of the speech-to-text service, with the rules of
+    /// &lt;code>turn_detection_system_prompt&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6505,12 +8562,14 @@ namespace Ondewo.Vtsi {
     private uint conversationContextTurns_;
     /// <summary>
     /// Optional: Number of the latest conversation turns (the caller&amp;apos;s committed turns and the bot&amp;apos;s
-    /// utterances as the caller heard them) handed to the semantic turn detection model of the speech-to-text
-    /// service together with the utterance it judges (default: 0 = off, valid range: 0 - 10). Use it only where
-    /// the speech-to-text service serves a turn detection model trained with conversation context. Used only by an
-    /// end-of-utterance model; a chat model ignores it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or
-    /// unspecified): a value above 0 together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or a value outside
-    /// the range, is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// utterances as the caller heard them, cut where the caller interrupted) handed to the turn detection model
+    /// together with the utterance it judges, so that a bare &amp;quot;vierzehn&amp;quot; is judged as the answer to
+    /// &amp;quot;Wie alt sind Sie?&amp;quot; (valid range: 0 - 10; default: 0 = off). Use it only where the speech-to-text
+    /// service serves a turn detection model trained with conversation context (an end-of-utterance model); a
+    /// chat-LLM model and the audio Smart Turn model ignore it. Each turn sent adds up to 1000 characters to every
+    /// speech-to-text request. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): a value above
+    /// 0 together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or a value outside the range, is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6540,10 +8599,17 @@ namespace Ondewo.Vtsi {
 
     private string semanticModelName_;
     /// <summary>
-    /// Optional: Name of the semantic turn detection model the speech-to-text service asks for this call. Unset uses
-    /// the model configured in the speech-to-text pipeline. The model&amp;apos;s endpoint is deliberately not
-    /// configurable per call. Valid: 1 - 256 characters, no whitespace or control characters. Only valid with the
-    /// mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
+    /// Optional: Name of the turn detection model the speech-to-text service uses for this call; the name also
+    /// selects the kind of model: &lt;code>livekit/turn-detector&lt;/code> is an end-of-utterance model, a name starting
+    /// with &lt;code>pipecat-smart-turn&lt;/code> the audio Smart Turn model, a name starting with
+    /// &lt;code>ondewo-s2t-model-de-vad-tsd-ondewo-qwen3&lt;/code> or &lt;code>ondewo-s2t-model-de-fusion-turn-detection&lt;/code>
+    /// one of the ONDEWO German turn detection models, any other name a chat-LLM model. A model or a detector
+    /// already named in the call&amp;apos;s &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code> wins over this value
+    /// (it is then applied only when it selects the same kind of model). Unset uses that model, else the
+    /// deployment&amp;apos;s &lt;code>ONDEWO_VTSI_S2T_TURN_DETECTION_MODEL&lt;/code>. The model must be served by the
+    /// deployment: its endpoint is deliberately not configurable per call. Valid: 1 - 256 characters, no whitespace
+    /// or control characters.
+    /// Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
     /// &lt;code>AUDIO_MODEL&lt;/code>, or invalid, it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6573,11 +8639,13 @@ namespace Ondewo.Vtsi {
 
     private float endOfTurnProbabilityThreshold_;
     /// <summary>
-    /// Optional: End-of-turn probability at or above which the semantic turn detection model takes the caller to
-    /// have finished the turn (valid range: 0 - 1). Unset uses the speech-to-text service&amp;apos;s configured threshold
-    /// for the language of the call. Used only by an end-of-utterance model; a chat model ignores it. Only valid
-    /// with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
-    /// &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: End-of-turn probability at or above which the turn detection model takes the caller to have
+    /// finished the turn (valid range: 0 - 1). Higher means more patient: a turn needs a more certain
+    /// &amp;quot;finished&amp;quot; to be committed. Unset uses the speech-to-text service&amp;apos;s configured threshold for
+    /// the language of the call. Read by every turn detection model that computes a probability; a chat-LLM model,
+    /// which answers yes or no, ignores it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified):
+    /// set together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6605,13 +8673,15 @@ namespace Ondewo.Vtsi {
     public const int HoldBandsFieldNumber = 10;
     private global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBands holdBands_;
     /// <summary>
-    /// Optional: Hold bands of the semantic turn detection model: how long a turn judged finished, but only with a
-    /// probability below a band&amp;apos;s upper bound, waits for further silence before it is committed. Set with no
-    /// bands, a turn at or above the threshold is committed at once; unset uses the speech-to-text service&amp;apos;s
-    /// configured bands for the language of the call. At most 10 bands, with the ranges of
-    /// &lt;code>EndOfTurnHoldBand&lt;/code>. Used only by an end-of-utterance model; a chat model ignores it. Only valid
-    /// with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
-    /// &lt;code>AUDIO_MODEL&lt;/code>, or invalid, it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Hold bands of an end-of-utterance turn detection model: a turn judged finished, but only with a
+    /// probability below a band&amp;apos;s upper bound, waits for that band&amp;apos;s silence before it is committed, and is
+    /// judged again if the caller speaks on. Unset uses the speech-to-text service&amp;apos;s configured bands for the
+    /// language of the call; set with NO bands, every turn at or above the threshold is committed without a hold.
+    /// At most 10 bands, with the ranges of &lt;code>EndOfTurnHoldBand&lt;/code>. Only an end-of-utterance model reads it;
+    /// the other models ignore it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set
+    /// together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or invalid, it is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. Example: bands (0.7, 1.0 s) and (0.9, 0.4 s) hold a turn judged finished with
+    /// 0.6 for 1.0 s and one with 0.8 for 0.4 s, and commit one with 0.95 at once
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6629,10 +8699,10 @@ namespace Ondewo.Vtsi {
     private uint uncertainMinWords_;
     /// <summary>
     /// Optional: Minimum number of words a turn needs before a hold band may hold it; a shorter turn judged finished
-    /// is committed at once (default: 3, valid range: 0 - 20). Used only by an end-of-utterance model; a chat model
-    /// ignores it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with
-    /// &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// is committed without the hold, so that short answers such as &amp;quot;ja&amp;quot; are answered quickly (valid
+    /// range: 0 - 20; unset uses the speech-to-text service&amp;apos;s default, 3). Only an end-of-utterance model reads
+    /// it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code>
+    /// or &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6662,11 +8732,13 @@ namespace Ondewo.Vtsi {
 
     private float incompleteMaxSilenceSeconds_;
     /// <summary>
-    /// Optional: Seconds of silence after a turn the semantic turn detection model (of either kind) judged NOT
-    /// finished before it is committed anyway (default: the voice activity detection&amp;apos;s minimum silence, valid
-    /// range: 0 - 4; the speech-to-text service raises a value below that minimum silence to it). Only valid with
-    /// the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
-    /// &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Seconds of silence after which a turn the turn detection model judged NOT finished is committed
+    /// anyway, so that a caller who really stopped is still answered (valid range: 0 - 4). Unset uses the
+    /// speech-to-text service&amp;apos;s configured value, else its minimum silence; the speech-to-text service raises a
+    /// value below the minimum silence to it. It also caps every hold band. Read with every kind of turn detection
+    /// model. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with
+    /// &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code>, or outside the range, it is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6697,11 +8769,12 @@ namespace Ondewo.Vtsi {
     private bool exactProbability_;
     /// <summary>
     /// Optional: Compute the exact end-of-turn probability instead of reading it from the model&amp;apos;s returned top
-    /// log probabilities (default: false). Requires a deployment that returns prompt log probabilities (vLLM
+    /// log probabilities (default: false). Requires a model deployment that returns prompt log probabilities (vLLM
     /// &lt;code>prompt_logprobs&lt;/code>); on any other deployment every turn waits for
-    /// &lt;code>incomplete_max_silence_seconds&lt;/code>. Used only by an end-of-utterance model; a chat model ignores it.
-    /// Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or unspecified): set together with &lt;code>VAD&lt;/code> or
-    /// &lt;code>AUDIO_MODEL&lt;/code> it is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// &lt;code>incomplete_max_silence_seconds&lt;/code>, so leave it unset unless the operator confirmed that support.
+    /// Only an end-of-utterance model reads it. Only valid with the mode &lt;code>SEMANTIC_MODEL&lt;/code> (or
+    /// unspecified): set together with &lt;code>VAD&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code> it is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6731,9 +8804,15 @@ namespace Ondewo.Vtsi {
 
     private float finalMergeWindowSeconds_;
     /// <summary>
-    /// Optional: Seconds a speech-to-text final that looks like half a sentence is held, to be merged with the
-    /// caller&amp;apos;s continuation into ONE turn (default: 0 = off, valid range: 0 - 2). Valid with every mode. A value
-    /// outside the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Seconds a final transcription that looks like half a sentence is held, so that it is sent to the NLU
+    /// together with the caller&amp;apos;s continuation as ONE turn instead of being answered on its own (valid range:
+    /// 0 - 2; default: 0 = off). A final is held only when it ends on a continuation word (&amp;quot;und&amp;quot;,
+    /// &amp;quot;oder&amp;quot;, &amp;quot;and&amp;quot;, ...), is a single short word that is not a complete answer, or was cut at
+    /// the speech-to-text service&amp;apos;s maximum utterance length; never while the bot is speaking. When the caller
+    /// goes on inside the window, the held part waits for the next final (up to 4 s after the last sign of speech);
+    /// otherwise it is sent alone when the window ends, so an answer such as &amp;quot;ja&amp;quot; is delayed by at most the
+    /// window, never dropped. Every second is added latency on such finals; 0.5 - 1.0 is a typical value. Valid with
+    /// every mode. A value outside the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6761,9 +8840,10 @@ namespace Ondewo.Vtsi {
     public const int DictationConfigFieldNumber = 15;
     private global::Ondewo.Vtsi.DictationConfig dictationConfig_;
     /// <summary>
-    /// Configuration of the dictation hold, i.e. waiting for the rest of a dictated value (digits, phone or card
-    /// number, IBAN, address, date, ...) instead of ending the turn at the caller&amp;apos;s pause between its groups.
-    /// Valid with every mode. Unset fields keep the defaults
+    /// Optional: Configuration of the dictation hold: waiting for the rest of a dictated value (digits, a phone or
+    /// card number, an IBAN, an address, a date, ...) instead of ending the turn at the caller&amp;apos;s pause between
+    /// its groups (see &lt;code>DictationConfig&lt;/code>). Valid with every mode. Unset, and every unset field of it,
+    /// keeps the deployment setting, else the default (a hold only for a turn whose NLU answer asks for a value)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6772,6 +8852,183 @@ namespace Ondewo.Vtsi {
       set {
         dictationConfig_ = value;
       }
+    }
+
+    /// <summary>Field number for the "s2t_emit_ms" field.</summary>
+    public const int S2TEmitMsFieldNumber = 16;
+    private readonly static uint S2TEmitMsDefaultValue = 0;
+
+    private uint s2TEmitMs_;
+    /// <summary>
+    /// Optional: Milliseconds of caller audio the call sends to the speech-to-text service per request (valid range:
+    /// 20 - 1000; default: 40). Smaller values let the speech-to-text service react sooner at the cost of more
+    /// requests; larger values bundle audio and add up to that much latency to every transcription. Unset keeps the
+    /// deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_S2T_EMIT_MS&lt;/code>, else 40; a set value wins. A value outside the
+    /// range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint S2TEmitMs {
+      get { if ((_hasBits0 & 256) != 0) { return s2TEmitMs_; } else { return S2TEmitMsDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        s2TEmitMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "s2t_emit_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasS2TEmitMs {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "s2t_emit_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearS2TEmitMs() {
+      _hasBits0 &= ~256;
+    }
+
+    /// <summary>Field number for the "s2t_request_partials" field.</summary>
+    public const int S2TRequestPartialsFieldNumber = 17;
+    private readonly static bool S2TRequestPartialsDefaultValue = false;
+
+    private bool s2TRequestPartials_;
+    /// <summary>
+    /// Optional: Ask the speech-to-text service for partial transcriptions and the start of speech wherever the
+    /// call&amp;apos;s speech-to-text configuration says nothing about them (default: true). The interruption noise
+    /// gate, &lt;code>max_endpointing_delay_seconds&lt;/code>, the merge window and the dictation hold&amp;apos;s early commit
+    /// all depend on them. Note that a call carrying this message already asks for both in its speech-to-text
+    /// configuration (see the message comment), so &lt;code>false&lt;/code> here does not switch them off; to switch
+    /// partial transcriptions off, set &lt;code>utterance_detection.transcribe_not_final=false&lt;/code> explicitly in
+    /// &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code>, which always wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool S2TRequestPartials {
+      get { if ((_hasBits0 & 512) != 0) { return s2TRequestPartials_; } else { return S2TRequestPartialsDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        s2TRequestPartials_ = value;
+      }
+    }
+    /// <summary>Gets whether the "s2t_request_partials" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasS2TRequestPartials {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "s2t_request_partials" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearS2TRequestPartials() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "s2t_request_end_of_speech_candidate" field.</summary>
+    public const int S2TRequestEndOfSpeechCandidateFieldNumber = 18;
+    private readonly static bool S2TRequestEndOfSpeechCandidateDefaultValue = false;
+
+    private bool s2TRequestEndOfSpeechCandidate_;
+    /// <summary>
+    /// Optional: Ask the speech-to-text service for an early end-of-speech candidate while preemptive generation is
+    /// active, so that the bot can start preparing its answer while the turn detection model still holds the
+    /// caller&amp;apos;s turn open, before the final transcription (default: true). The candidate is sent only with a
+    /// speech-to-text turn detection model and never shortens the turn: a prepared answer is only used when the
+    /// final transcription confirms it. &lt;code>false&lt;/code> saves one speech-to-text response per pause; it has no
+    /// effect while preemptive generation is off
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool S2TRequestEndOfSpeechCandidate {
+      get { if ((_hasBits0 & 1024) != 0) { return s2TRequestEndOfSpeechCandidate_; } else { return S2TRequestEndOfSpeechCandidateDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        s2TRequestEndOfSpeechCandidate_ = value;
+      }
+    }
+    /// <summary>Gets whether the "s2t_request_end_of_speech_candidate" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasS2TRequestEndOfSpeechCandidate {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "s2t_request_end_of_speech_candidate" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearS2TRequestEndOfSpeechCandidate() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "smart_turn_threshold" field.</summary>
+    public const int SmartTurnThresholdFieldNumber = 19;
+    private readonly static float SmartTurnThresholdDefaultValue = 0F;
+
+    private float smartTurnThreshold_;
+    /// <summary>
+    /// Optional: End-of-turn probability threshold of the audio-native turn detection of the mode
+    /// &lt;code>AUDIO_MODEL&lt;/code> (valid range: 0 - 1; default: 0.5). The released speech-to-speech service does not
+    /// run that model yet (see &lt;code>AUDIO_MODEL&lt;/code>), so today the value does not change the call. The threshold
+    /// of the speech-to-text service&amp;apos;s turn detection model, the audio Smart Turn model included, is
+    /// &lt;code>end_of_turn_probability_threshold&lt;/code>. A value outside the range is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float SmartTurnThreshold {
+      get { if ((_hasBits0 & 2048) != 0) { return smartTurnThreshold_; } else { return SmartTurnThresholdDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        smartTurnThreshold_ = value;
+      }
+    }
+    /// <summary>Gets whether the "smart_turn_threshold" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSmartTurnThreshold {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "smart_turn_threshold" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSmartTurnThreshold() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "post_unmute_phantom_window_seconds" field.</summary>
+    public const int PostUnmutePhantomWindowSecondsFieldNumber = 20;
+    private readonly static float PostUnmutePhantomWindowSecondsDefaultValue = 0F;
+
+    private float postUnmutePhantomWindowSeconds_;
+    /// <summary>
+    /// Optional: Phantom-turn guard after the bot stops speaking (valid range: 0 - 1; default: 0.3; 0 = off). While
+    /// the caller&amp;apos;s audio is muted during the bot&amp;apos;s speech (interruptions disabled and
+    /// &lt;code>InterruptionHandlingConfig.transcribe_on_disabled_interruptions&lt;/code> off), the speech-to-text service
+    /// can open an utterance right after the audio is unmuted although the caller says nothing, and the bot would
+    /// answer words nobody said. A final transcription whose speech started within this many seconds after the
+    /// unmute is dropped when no voiced caller audio arrived since the unmute; a caller who really starts speaking
+    /// as the bot stops always keeps the turn. It has no effect while the caller&amp;apos;s audio is not muted. A value
+    /// outside the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PostUnmutePhantomWindowSeconds {
+      get { if ((_hasBits0 & 4096) != 0) { return postUnmutePhantomWindowSeconds_; } else { return PostUnmutePhantomWindowSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        postUnmutePhantomWindowSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "post_unmute_phantom_window_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPostUnmutePhantomWindowSeconds {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "post_unmute_phantom_window_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPostUnmutePhantomWindowSeconds() {
+      _hasBits0 &= ~4096;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6804,6 +9061,11 @@ namespace Ondewo.Vtsi {
       if (ExactProbability != other.ExactProbability) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FinalMergeWindowSeconds, other.FinalMergeWindowSeconds)) return false;
       if (!object.Equals(DictationConfig, other.DictationConfig)) return false;
+      if (S2TEmitMs != other.S2TEmitMs) return false;
+      if (S2TRequestPartials != other.S2TRequestPartials) return false;
+      if (S2TRequestEndOfSpeechCandidate != other.S2TRequestEndOfSpeechCandidate) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(SmartTurnThreshold, other.SmartTurnThreshold)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PostUnmutePhantomWindowSeconds, other.PostUnmutePhantomWindowSeconds)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6826,6 +9088,11 @@ namespace Ondewo.Vtsi {
       if (HasExactProbability) hash ^= ExactProbability.GetHashCode();
       if (HasFinalMergeWindowSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FinalMergeWindowSeconds);
       if (dictationConfig_ != null) hash ^= DictationConfig.GetHashCode();
+      if (HasS2TEmitMs) hash ^= S2TEmitMs.GetHashCode();
+      if (HasS2TRequestPartials) hash ^= S2TRequestPartials.GetHashCode();
+      if (HasS2TRequestEndOfSpeechCandidate) hash ^= S2TRequestEndOfSpeechCandidate.GetHashCode();
+      if (HasSmartTurnThreshold) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(SmartTurnThreshold);
+      if (HasPostUnmutePhantomWindowSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PostUnmutePhantomWindowSeconds);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6904,6 +9171,26 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(122);
         output.WriteMessage(DictationConfig);
       }
+      if (HasS2TEmitMs) {
+        output.WriteRawTag(128, 1);
+        output.WriteUInt32(S2TEmitMs);
+      }
+      if (HasS2TRequestPartials) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(S2TRequestPartials);
+      }
+      if (HasS2TRequestEndOfSpeechCandidate) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(S2TRequestEndOfSpeechCandidate);
+      }
+      if (HasSmartTurnThreshold) {
+        output.WriteRawTag(157, 1);
+        output.WriteFloat(SmartTurnThreshold);
+      }
+      if (HasPostUnmutePhantomWindowSeconds) {
+        output.WriteRawTag(165, 1);
+        output.WriteFloat(PostUnmutePhantomWindowSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6974,6 +9261,26 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(122);
         output.WriteMessage(DictationConfig);
       }
+      if (HasS2TEmitMs) {
+        output.WriteRawTag(128, 1);
+        output.WriteUInt32(S2TEmitMs);
+      }
+      if (HasS2TRequestPartials) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(S2TRequestPartials);
+      }
+      if (HasS2TRequestEndOfSpeechCandidate) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(S2TRequestEndOfSpeechCandidate);
+      }
+      if (HasSmartTurnThreshold) {
+        output.WriteRawTag(157, 1);
+        output.WriteFloat(SmartTurnThreshold);
+      }
+      if (HasPostUnmutePhantomWindowSeconds) {
+        output.WriteRawTag(165, 1);
+        output.WriteFloat(PostUnmutePhantomWindowSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7028,6 +9335,21 @@ namespace Ondewo.Vtsi {
       }
       if (dictationConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DictationConfig);
+      }
+      if (HasS2TEmitMs) {
+        size += 2 + pb::CodedOutputStream.ComputeUInt32Size(S2TEmitMs);
+      }
+      if (HasS2TRequestPartials) {
+        size += 2 + 1;
+      }
+      if (HasS2TRequestEndOfSpeechCandidate) {
+        size += 2 + 1;
+      }
+      if (HasSmartTurnThreshold) {
+        size += 2 + 4;
+      }
+      if (HasPostUnmutePhantomWindowSeconds) {
+        size += 2 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7091,6 +9413,21 @@ namespace Ondewo.Vtsi {
           DictationConfig = new global::Ondewo.Vtsi.DictationConfig();
         }
         DictationConfig.MergeFrom(other.DictationConfig);
+      }
+      if (other.HasS2TEmitMs) {
+        S2TEmitMs = other.S2TEmitMs;
+      }
+      if (other.HasS2TRequestPartials) {
+        S2TRequestPartials = other.S2TRequestPartials;
+      }
+      if (other.HasS2TRequestEndOfSpeechCandidate) {
+        S2TRequestEndOfSpeechCandidate = other.S2TRequestEndOfSpeechCandidate;
+      }
+      if (other.HasSmartTurnThreshold) {
+        SmartTurnThreshold = other.SmartTurnThreshold;
+      }
+      if (other.HasPostUnmutePhantomWindowSeconds) {
+        PostUnmutePhantomWindowSeconds = other.PostUnmutePhantomWindowSeconds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7175,6 +9512,26 @@ namespace Ondewo.Vtsi {
               DictationConfig = new global::Ondewo.Vtsi.DictationConfig();
             }
             input.ReadMessage(DictationConfig);
+            break;
+          }
+          case 128: {
+            S2TEmitMs = input.ReadUInt32();
+            break;
+          }
+          case 136: {
+            S2TRequestPartials = input.ReadBool();
+            break;
+          }
+          case 144: {
+            S2TRequestEndOfSpeechCandidate = input.ReadBool();
+            break;
+          }
+          case 157: {
+            SmartTurnThreshold = input.ReadFloat();
+            break;
+          }
+          case 165: {
+            PostUnmutePhantomWindowSeconds = input.ReadFloat();
             break;
           }
         }
@@ -7262,6 +9619,26 @@ namespace Ondewo.Vtsi {
             input.ReadMessage(DictationConfig);
             break;
           }
+          case 128: {
+            S2TEmitMs = input.ReadUInt32();
+            break;
+          }
+          case 136: {
+            S2TRequestPartials = input.ReadBool();
+            break;
+          }
+          case 144: {
+            S2TRequestEndOfSpeechCandidate = input.ReadBool();
+            break;
+          }
+          case 157: {
+            SmartTurnThreshold = input.ReadFloat();
+            break;
+          }
+          case 165: {
+            PostUnmutePhantomWindowSeconds = input.ReadFloat();
+            break;
+          }
         }
       }
     }
@@ -7273,51 +9650,74 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Mode of the turn detection
+      /// How the end of the caller&amp;apos;s turn is detected
       /// </summary>
       public enum TurnDetectionMode {
         /// <summary>
-        /// Unspecified turn detection mode defaults to SEMANTIC_MODEL
+        /// No mode chosen: the speech-to-text side is configured as for &lt;code>SEMANTIC_MODEL&lt;/code> (its turn
+        /// detection model is used where the deployment provides one), and the interruption rules follow what the
+        /// call actually got: those of &lt;code>SEMANTIC_MODEL&lt;/code> when a turn detection model is active for the call,
+        /// those of &lt;code>VAD&lt;/code> otherwise. Every field of this message is valid with it
         /// </summary>
         [pbr::OriginalName("TURN_DETECTION_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Turn detection based on voice activity detection, i.e. pauses in the caller audio (fallback mode)
+        /// The turn ends on silence alone: the speech-to-text service commits a final transcription once the caller
+        /// was silent for its minimum silence (&lt;code>min_endpointing_delay_seconds&lt;/code>). VTSI asks no turn
+        /// detection model, not even a deployment-wide one; a turn detection block already in the call&amp;apos;s
+        /// &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code> is passed on unchanged, so remove it there as
+        /// well. With interruptions enabled, any caller speech that lasts the
+        /// minimum interruption duration interrupts the bot. The fields read only by a turn detection model are
+        /// refused with this mode
         /// </summary>
         [pbr::OriginalName("VAD")] Vad = 1,
         /// <summary>
-        /// Turn detection based on a semantic (LLM) turn detection model of the speech-to-text service (default)
+        /// The speech-to-text service asks a turn detection model whether the words so far are a finished turn, so
+        /// that a caller who pauses mid-sentence keeps the turn. The model must be provided by the deployment (a
+        /// turn detection endpoint configured with &lt;code>ONDEWO_VTSI_S2T_TURN_DETECTION_BASE_URL&lt;/code>, an audio
+        /// Smart Turn model, or a turn detection block in the call&amp;apos;s
+        /// &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code>); without one the call keeps silence-based
+        /// endpointing and only the interruption rules below apply. With interruptions enabled, a final
+        /// transcription with at least one meaningful word interrupts the bot, and a partial transcription needs
+        /// &lt;code>InterruptionHandlingConfig.min_interruption_words&lt;/code>, so a short &amp;quot;mhm&amp;quot; does not stop
+        /// the bot
         /// </summary>
         [pbr::OriginalName("SEMANTIC_MODEL")] SemanticModel = 2,
         /// <summary>
-        /// Turn detection based on an audio-native turn detection model
+        /// Reserved for an audio-native turn detection model run by the speech-to-speech service on the caller
+        /// audio. The released speech-to-speech service does not run such a model yet: a call in this mode ends its
+        /// turns on the speech-to-text silence detection, as with &lt;code>VAD&lt;/code>, and applies the interruption
+        /// rules of &lt;code>SEMANTIC_MODEL&lt;/code>. The fields read only by a turn detection model are refused with this
+        /// mode. To use an audio turn model today, choose &lt;code>SEMANTIC_MODEL&lt;/code> with a Smart Turn model in
+        /// &lt;code>semantic_model_name&lt;/code>
         /// </summary>
         [pbr::OriginalName("AUDIO_MODEL")] AudioModel = 3,
       }
 
       /// <summary>
-      /// Eagerness of the turn detection
+      /// How eagerly the bot takes the turn
       /// </summary>
       public enum TurnEagerness {
         /// <summary>
-        /// Unspecified turn eagerness defaults to NORMAL
+        /// No eagerness chosen: the same as &lt;code>NORMAL&lt;/code>
         /// </summary>
         [pbr::OriginalName("TURN_EAGERNESS_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Patient turn taking: scales the endpointing delays by a factor of 1.7
+        /// Patient turn taking, e.g. for collecting structured information: both endpointing delays are multiplied
+        /// by 1.7
         /// </summary>
         [pbr::OriginalName("PATIENT")] Patient = 1,
         /// <summary>
-        /// Normal turn taking: keeps the endpointing delays unchanged (factor 1.0)
+        /// Normal turn taking: both endpointing delays are used as set (factor 1.0)
         /// </summary>
         [pbr::OriginalName("NORMAL")] Normal = 2,
         /// <summary>
-        /// Eager turn taking: scales the endpointing delays by a factor of 0.6
+        /// Eager turn taking, for quick exchanges: both endpointing delays are multiplied by 0.6
         /// </summary>
         [pbr::OriginalName("EAGER")] Eager = 3,
       }
 
       /// <summary>
-      /// Hold bands of the semantic turn detection model
+      /// Hold bands of an end-of-utterance turn detection model (see &lt;code>hold_bands&lt;/code>). The message is a wrapper so that &amp;quot;no bands&amp;quot; can be told apart from &amp;quot;unset&amp;quot;
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EndOfTurnHoldBands : pb::IMessage<EndOfTurnHoldBands>
@@ -7370,8 +9770,9 @@ namespace Ondewo.Vtsi {
             = pb::FieldCodec.ForMessage(10, global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBand.Parser);
         private readonly pbc::RepeatedField<global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBand> bands_ = new pbc::RepeatedField<global::Ondewo.Vtsi.TurnDetectionConfig.Types.EndOfTurnHoldBand>();
         /// <summary>
-        /// The bands (at most 10). The first band, sorted by &lt;code>upper_probability&lt;/code>, whose upper probability
-        /// exceeds the end-of-turn probability decides the hold; a probability above every band is committed at once
+        /// The bands (at most 10, in any order). They are sorted by &lt;code>upper_probability&lt;/code>, and the first
+        /// band whose upper probability is above the end-of-turn probability decides the hold; a probability at or
+        /// above every band&amp;apos;s upper bound is committed without a hold. Empty: no turn is held
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7511,7 +9912,7 @@ namespace Ondewo.Vtsi {
       }
 
       /// <summary>
-      /// One hold band of the semantic turn detection model
+      /// One hold band of an end-of-utterance turn detection model
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class EndOfTurnHoldBand : pb::IMessage<EndOfTurnHoldBand>
@@ -7563,7 +9964,8 @@ namespace Ondewo.Vtsi {
         public const int UpperProbabilityFieldNumber = 1;
         private float upperProbability_;
         /// <summary>
-        /// Exclusive upper bound of the end-of-turn probabilities the band covers (valid range: 0 - 1)
+        /// Exclusive upper bound of the end-of-turn probabilities the band covers (valid range: 0 - 1); the lower
+        /// bound is the next lower band&amp;apos;s upper bound, or the end-of-turn threshold
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7578,8 +9980,9 @@ namespace Ondewo.Vtsi {
         public const int MaxSilenceSecondsFieldNumber = 2;
         private float maxSilenceSeconds_;
         /// <summary>
-        /// Seconds of silence a turn in the band waits before it is committed (valid range: 0 - 4; never longer than
-        /// &lt;code>incomplete_max_silence_seconds&lt;/code>)
+        /// Seconds of silence a turn in the band waits before it is committed; speech inside it resumes the turn
+        /// (valid range: 0 - 4, and at most &lt;code>incomplete_max_silence_seconds&lt;/code> when that is set in the same
+        /// message)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7761,9 +10164,15 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the dictation hold of a call: a final transcription whose dictated value is not complete yet is
-  /// held until the caller continues, so that the groups of the value reach the NLU as ONE turn. Every unset field
-  /// keeps its default; a field that is out of range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+  /// Configuration of the dictation hold of a call. A caller who dictates a value often pauses 1 - 2.5 s between its groups (&amp;quot;null sechs sechs vier ... eins zwei drei ...&amp;quot;), and the speech-to-text service ends an utterance at every such pause, so without the hold the bot answers half a phone number. With the hold, a final transcription whose dictated value is not complete yet is held until the caller continues, and the groups reach the NLU as ONE turn; a complete value is released at once (a value that is only weakly complete is held at most &lt;code>hold_generic_max_seconds&lt;/code>). The value recognition is German (number words, spelled letters, months); the hold is never applied while the bot speaks, and a caller who is not dictating costs no latency.
+  ///
+  /// The hold is ON by default, but only for a turn whose NLU answer asks for a dictated value (an expected slot, read with &lt;code>expected_input_enabled&lt;/code>, also on by default): a turn that asks for no value is never held, so the default adds no latency there. How long a value is held depends on what the bot asked for: the expected value&amp;apos;s category cap applies. The generic rule, a hold WITHOUT an expected value (a trailing digit group after a lead-in such as &amp;quot;Kundennummer&amp;quot;, or a trailing &amp;quot;Stiege&amp;quot;, &amp;quot;Stock&amp;quot;, &amp;quot;Tür&amp;quot;, &amp;quot;am&amp;quot;, &amp;quot;um&amp;quot;, ...), is a guess and stays off unless &lt;code>hold_enabled&lt;/code> is set to true.
+  ///
+  /// Presence and precedence: every field is applied only when it is set; an unset field keeps the deployment setting (the &lt;code>ONDEWO_VTSI_CSI_DICTATION_*&lt;/code> variable named at the field), else the default. A set per-call value wins over the deployment setting. A field that is out of range, and an unknown category, are refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Example, a line that collects IBANs from an agent whose prompts ask for them and gives an IBAN 4 s (the hold under the expected value is on by default):
+  ///
+  /// &lt;pre>&lt;code>hold_max_seconds_by_category { key: &amp;quot;iban&amp;quot; value: 4.0 }&lt;/code>&lt;/pre>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DictationConfig : pb::IMessage<DictationConfig>
@@ -7781,7 +10190,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7826,7 +10235,13 @@ namespace Ondewo.Vtsi {
 
     private bool holdEnabled_;
     /// <summary>
-    /// Optional: Hold a final transcription whose dictated value is unfinished (default: false)
+    /// Optional: Hold a final transcription whose dictated value is unfinished, up to the cap of its category (or
+    /// the generic cap), instead of committing the turn at the caller&amp;apos;s pause. Unset (the default): the hold
+    /// applies only to a turn whose NLU answer asks for a value (an expected slot, see
+    /// &lt;code>expected_input_enabled&lt;/code>), and a turn that asks for none is never held. True: the generic rule
+    /// (&lt;code>hold_generic_max_seconds&lt;/code>) holds turns without an expected value too. False: the master switch is
+    /// off, and nothing else in this message holds a turn. Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_HOLD_ACTIVE&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7856,8 +10271,12 @@ namespace Ondewo.Vtsi {
 
     private bool expectedInputEnabled_;
     /// <summary>
-    /// Optional: Read the expected value (slot) from the NLU answer, so that the hold applies the rule of the value
-    /// the bot asked for (default: false; without it only the generic rule holds)
+    /// Optional: Read the expected value (slot) from every NLU answer, so that the hold applies the rule and cap of
+    /// the value the bot asked for (default: true; false leaves the default hold nothing to hold under, and with
+    /// &lt;code>hold_enabled&lt;/code> true only the generic rule holds). The slot comes from a
+    /// slot-filling prompt for a required parameter, a read-back intent, or an AI Team&amp;apos;s expected input; every
+    /// answer replaces it, so a slot never leaks into a later turn. Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_EXPECTED_INPUT_ACTIVE&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7888,7 +10307,13 @@ namespace Ondewo.Vtsi {
     private bool readBackFromBotTextEnabled_;
     /// <summary>
     /// Optional: With &lt;code>expected_input_enabled&lt;/code>, take a bot answer that reads a complete value back and asks
-    /// for confirmation as asking for a confirmation of that value (default: false)
+    /// for confirmation (&amp;quot;Ich wiederhole: 0664 1234567. Ist das korrekt?&amp;quot;) as asking to confirm that value,
+    /// also when the NLU answer carries no read-back marker (default: false). After such a read-back (from the marker
+    /// or from this text rule) and while the hold is on, a lone &amp;quot;nein&amp;quot; is held up to the
+    /// &lt;code>confirm_value&lt;/code> cap for the correction that usually follows (&amp;quot;Nein, die letzte ist
+    /// sieben&amp;quot;), and a lone &amp;quot;ja&amp;quot; for 0.6 s. Recognises digit, phone, card, IBAN, BIC and social
+    /// security numbers read back in German; dates, times, addresses and e-mail addresses are not recognised. No
+    /// deployment setting exists for it
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7918,8 +10343,11 @@ namespace Ondewo.Vtsi {
 
     private float holdGenericMaxSeconds_;
     /// <summary>
-    /// Optional: Seconds the generic rule (no expected value) holds at most (default: 1.5, valid range: 0 - 2;
-    /// 0 switches the generic rule off)
+    /// Optional: Seconds the generic rule (no expected value; only with &lt;code>hold_enabled&lt;/code> true) holds at most,
+    /// and the longest hold of an expected value that is only weakly complete (e.g. an address with only the street
+    /// line, a date with only day and month) (valid range: 0 - 2; default: 1.5; 0 switches both off). The generic
+    /// rule holds on a guess, which is why its ceiling is lower than a category&amp;apos;s. Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_HOLD_GENERIC_MAX_SECONDS&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7949,14 +10377,16 @@ namespace Ondewo.Vtsi {
         = new pbc::MapField<string, float>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForFloat(21, 0F), 42);
     private readonly pbc::MapField<string, float> holdMaxSecondsByCategory_ = new pbc::MapField<string, float>();
     /// <summary>
-    /// Optional: Seconds an unfinished value of a category is held at most, keyed by the category: &lt;code>digits&lt;/code>,
-    /// &lt;code>phone&lt;/code>, &lt;code>card&lt;/code>, &lt;code>expiry_cvc&lt;/code>, &lt;code>iban&lt;/code>, &lt;code>bic&lt;/code>,
-    /// &lt;code>svnr&lt;/code>, &lt;code>address&lt;/code>, &lt;code>date&lt;/code>, &lt;code>time&lt;/code>, &lt;code>email&lt;/code> or
-    /// &lt;code>confirm_value&lt;/code> (valid range: 0 - 4 each). The rule without an expected value is not a category: it
-    /// is set with &lt;code>hold_generic_max_seconds&lt;/code>. An unknown category, &lt;code>generic&lt;/code> included, is
-    /// refused with &lt;code>INVALID_ARGUMENT&lt;/code>. The map is ONE field: a non-empty map replaces the whole
-    /// replica-wide table of the deployment, so a category not listed here keeps the speech-to-speech service's
-    /// default cap, not a cap the replica-wide table set; an empty map keeps the replica-wide table
+    /// Optional: Seconds an unfinished value of a category is held at most, keyed by the category (valid range: 0 - 4
+    /// each; 0 = no hold for that category). Categories and their defaults: &lt;code>digits&lt;/code> 2.5,
+    /// &lt;code>phone&lt;/code> 2.5, &lt;code>card&lt;/code> 3.0, &lt;code>expiry_cvc&lt;/code> 2.0, &lt;code>iban&lt;/code> 3.5,
+    /// &lt;code>bic&lt;/code> 2.5, &lt;code>svnr&lt;/code> 2.5, &lt;code>address&lt;/code> 3.0, &lt;code>date&lt;/code> 2.0,
+    /// &lt;code>time&lt;/code> 1.5, &lt;code>email&lt;/code> 2.5 and &lt;code>confirm_value&lt;/code> 2.5 (the correction after a
+    /// read-back). The rule without an expected value is not a category: it is set with
+    /// &lt;code>hold_generic_max_seconds&lt;/code>. An unknown category, &lt;code>generic&lt;/code> included, is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. The map is ONE field: a non-empty map replaces the whole table of the
+    /// deployment setting &lt;code>ONDEWO_VTSI_CSI_DICTATION_HOLD_MAX_SECONDS&lt;/code>, so a category not listed here
+    /// keeps its default above, not a cap the deployment setting chose; an empty map keeps the deployment setting
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7970,8 +10400,10 @@ namespace Ondewo.Vtsi {
 
     private float holdInvalidChecksumSeconds_;
     /// <summary>
-    /// Optional: Seconds a full-length value whose checksum fails is held, so that the bot can ask again
-    /// (default: 1.5, valid range: 0 - 4)
+    /// Optional: Seconds a full-length value whose checksum fails (an IBAN, a card number, ...) is held at most, so
+    /// that the caller can still correct it but the bot soon gets the turn to ask again instead of waiting out the
+    /// category&amp;apos;s cap (valid range: 0 - 4; default: 1.5; never longer than the category&amp;apos;s cap). Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_HOLD_INVALID_CHECKSUM_SECONDS&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8001,8 +10433,12 @@ namespace Ondewo.Vtsi {
 
     private bool earlyCommitOnCompleteValue_;
     /// <summary>
-    /// Optional: Commit the turn on a partial transcription as soon as the expected value is complete; needs
-    /// &lt;code>hold_enabled&lt;/code> and &lt;code>expected_input_enabled&lt;/code> (default: false)
+    /// Optional: Commit the turn as soon as a stable partial transcription shows the expected value complete (and its
+    /// checksum valid, where it has one), instead of waiting for the speech-to-text service&amp;apos;s end-of-utterance
+    /// silence (default: false). Saves the silence wait after a dictated value. Needs the hold (not
+    /// &lt;code>hold_enabled&lt;/code> false), &lt;code>expected_input_enabled&lt;/code> and partial transcriptions; without an
+    /// expected value it does nothing.
+    /// Deployment setting: &lt;code>ONDEWO_VTSI_CSI_DICTATION_EARLY_COMMIT_ON_COMPLETE_VALUE&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8033,9 +10469,17 @@ namespace Ondewo.Vtsi {
     private float s2TSlotMinDurationOffSeconds_;
     /// <summary>
     /// Optional: Minimum silence in seconds the speech-to-text service waits before it ends an utterance while a value
-    /// is expected (default: 0 = off, valid range: 0 or 0.5 - 4). Only takes effect when a value to restore after the
-    /// turn is known: &lt;code>s2t_slot_min_duration_off_restore_seconds&lt;/code> or the minimum silence of the
-    /// speech-to-text configuration
+    /// is expected, so that the speech-to-text service itself stops cutting between the groups (valid: 0 = off, or
+    /// 0.5 - 4; default: 0). Applies while an expected value other than a read-back confirmation is known, so it
+    /// needs &lt;code>expected_input_enabled&lt;/code> (not &lt;code>hold_enabled&lt;/code>); after the turn the minimum silence
+    /// is set back to &lt;code>s2t_slot_min_duration_off_restore_seconds&lt;/code>. It only takes effect when the call&amp;apos;s
+    /// speech-to-text configuration carries a &lt;code>pyannote&lt;/code> block (supplied in
+    /// &lt;code>S2tVtsiConfig.s2t_transcribe_request_config&lt;/code>, or created from
+    /// &lt;code>TurnDetectionConfig.min_endpointing_delay_seconds&lt;/code> on a deployment that supports creating it) and
+    /// the restore value is known (set, or a minimum silence in that block), and it needs a speech-to-text service
+    /// that accepts the change mid-call. A value between 0 and 0.5 is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_S2T_SLOT_MIN_DURATION_OFF_SECONDS&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8066,7 +10510,10 @@ namespace Ondewo.Vtsi {
     private float s2TSlotMinDurationOffRestoreSeconds_;
     /// <summary>
     /// Optional: Minimum silence in seconds restored on the speech-to-text service after a turn with an expected value
-    /// (default: the minimum silence of the speech-to-text configuration, valid range: 0.05 - 4)
+    /// (valid range: 0.05 - 4; default: the minimum silence of the call&amp;apos;s speech-to-text configuration). Set it to
+    /// the pipeline&amp;apos;s normal minimum silence when the speech-to-text configuration carries none; without any
+    /// restore value, &lt;code>s2t_slot_min_duration_off_seconds&lt;/code> stays off. Deployment setting:
+    /// &lt;code>ONDEWO_VTSI_CSI_DICTATION_S2T_SLOT_MIN_DURATION_OFF_RESTORE_SECONDS&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8414,7 +10861,19 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the interruption (barge-in) handling, i.e. the caller speaking while the bot is speaking
+  /// Interruption (barge-in) handling: what happens when the caller speaks while the bot is speaking. Off by default: the caller is not listened to while the bot speaks, and speech never stops the bot. A DTMF key the bot asked for still stops it (&lt;code>DtmfConfig.barge_in&lt;/code>, on by default; set it to false as well for a disclaimer that must be heard in full).
+  ///
+  /// With &lt;code>enabled=true&lt;/code>, caller speech over the bot goes through these steps:
+  ///
+  /// (1) Is it an interruption? Speech within &lt;code>first_message_protected_seconds&lt;/code> after the greeting started, speech shorter than &lt;code>min_interruption_duration_seconds&lt;/code> and sounds without words (&amp;quot;hmm&amp;quot;, &amp;quot;mhm&amp;quot;) are ignored. Otherwise, with the turn detection mode &lt;code>VAD&lt;/code> (and whenever no semantic turn detection runs for the call), any recognised speech interrupts; with &lt;code>SEMANTIC_MODEL&lt;/code> or &lt;code>AUDIO_MODEL&lt;/code> a final transcription with at least one word interrupts at once, and a partial transcription interrupts once it has &lt;code>min_interruption_words&lt;/code> words. Speech that does not interrupt is dropped: the bot keeps talking and the speech is not answered. One exception: a final transcription with at least one word that is refused only because it was shorter than &lt;code>min_interruption_duration_seconds&lt;/code> does not stop the bot either, but it is kept and answered as the caller&amp;apos;s next turn once the bot has finished speaking.
+  ///
+  /// (2) The bot pauses: its voice fades out over &lt;code>interruption_fade_out_ms&lt;/code>, and the rest of its answer is kept.
+  ///
+  /// (3) Real or false? If the caller&amp;apos;s speech becomes a complete turn (a final transcription) within &lt;code>false_interruption_timeout_seconds&lt;/code>, the interruption is REAL: the rest of the answer is discarded, the bot stays silent for &lt;code>backoff_seconds&lt;/code> and then answers what the caller said. Its synthesis is cancelled (&lt;code>t2s_cancel_on_barge_in&lt;/code>), and an NLU that supports it is told which turn was cut and what the caller heard of it (&lt;code>nlu_turn_control_enabled&lt;/code>, &lt;code>heard_report_enabled&lt;/code>). If no turn is committed in time, the interruption is FALSE (a cough, a short noise): with &lt;code>resume_after_false_interruption&lt;/code> the bot continues where its fade-out ended, so nothing is heard twice, else the rest of the answer is dropped, and then, as after a real one, its synthesis is cancelled and a call action it carries is dropped (&lt;code>t2s_cancel_on_barge_in&lt;/code>). The window waits for a caller who is still speaking: each partial transcription that changes what the caller said extends it, up to twice &lt;code>false_interruption_timeout_seconds&lt;/code> (at most 9 s) after the interruption.
+  ///
+  /// Example: let the caller interrupt, ignore anything shorter than 0.6 s, and never interrupt the first 3 s of the greeting: &lt;code>enabled: true, min_interruption_duration_seconds: 0.6, first_message_protected_seconds: 3&lt;/code>
+  ///
+  /// Scope and precedence as in &lt;code>VoiceInteractionConfig&lt;/code>: unset means inherit, i.e. the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_*&lt;/code> setting where a field names one, else the default given at the field. A value outside a field&amp;apos;s range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class InterruptionHandlingConfig : pb::IMessage<InterruptionHandlingConfig>
@@ -8432,7 +10891,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8462,6 +10921,12 @@ namespace Ondewo.Vtsi {
       firstMessageProtectedSeconds_ = other.firstMessageProtectedSeconds_;
       transcribeOnDisabledInterruptions_ = other.transcribeOnDisabledInterruptions_;
       interruptionFadeOutMs_ = other.interruptionFadeOutMs_;
+      cancelOnSpeechWhileThinking_ = other.cancelOnSpeechWhileThinking_;
+      aiTeamsCancelPendingOnInterrupt_ = other.aiTeamsCancelPendingOnInterrupt_;
+      t2SCancelOnBargeIn_ = other.t2SCancelOnBargeIn_;
+      nluTurnControlEnabled_ = other.nluTurnControlEnabled_;
+      heardReportEnabled_ = other.heardReportEnabled_;
+      heardTextAlignmentEnabled_ = other.heardTextAlignmentEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8477,8 +10942,15 @@ namespace Ondewo.Vtsi {
 
     private bool enabled_;
     /// <summary>
-    /// Optional: Enable interruption (barge-in) handling, i.e. the caller can interrupt the bot while it is speaking
-    /// (default: false, i.e. the bot cannot be interrupted)
+    /// Optional: Let the caller interrupt (barge in on) the bot by speaking while it speaks (default: false). False:
+    /// the caller&amp;apos;s speech is not heard while the bot speaks, and speech never stops the bot. A DTMF key the bot
+    /// asked for still stops it (see &lt;code>DtmfConfig.barge_in&lt;/code>, on by default; set it to false as well for a
+    /// disclaimer that must be heard in full). The speech-related fields of this message only matter when this is
+    /// true. Exceptions: &lt;code>transcribe_on_disabled_interruptions&lt;/code> and
+    /// &lt;code>cancel_on_speech_while_thinking&lt;/code>, plus &lt;code>interruption_fade_out_ms&lt;/code>,
+    /// &lt;code>t2s_cancel_on_barge_in&lt;/code>, &lt;code>nlu_turn_control_enabled&lt;/code>, &lt;code>heard_report_enabled&lt;/code>,
+    /// &lt;code>heard_text_alignment_enabled&lt;/code> and &lt;code>ai_teams_cancel_pending_on_interrupt&lt;/code>, which also
+    /// apply when a key stops the bot, when an operator mutes it and when a turn is replaced
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8508,8 +10980,11 @@ namespace Ondewo.Vtsi {
 
     private float minInterruptionDurationSeconds_;
     /// <summary>
-    /// Optional: Minimum duration in seconds of caller speech while the bot is speaking
-    /// to trigger an interruption (noise gate) (default: 0.5)
+    /// Optional: Minimum duration in seconds the caller must have been speaking over the bot before it counts as an
+    /// interruption, measured from the start of the caller&amp;apos;s speech (noise gate) (default: 0.5, valid range:
+    /// 0 - 10). Raise it (e.g. 0.8) to let short noises pass without stopping the bot. A final transcription with
+    /// at least one word that is too short to interrupt is not lost: it is answered as the caller&amp;apos;s next turn
+    /// once the bot has finished speaking
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8539,8 +11014,12 @@ namespace Ondewo.Vtsi {
 
     private int minInterruptionWords_;
     /// <summary>
-    /// Optional: Minimum number of transcribed words of caller speech while the bot is speaking
-    /// to trigger an interruption (default: 2)
+    /// Optional: Minimum number of words a PARTIAL transcription of caller speech over the bot needs to interrupt
+    /// it early (default: 2, valid range: 0 - 10; 0 and 1 both let one word interrupt). Only used with the turn
+    /// detection modes &lt;code>SEMANTIC_MODEL&lt;/code> and &lt;code>AUDIO_MODEL&lt;/code>: a FINAL transcription with at
+    /// least one word always interrupts, so a short &amp;quot;no&amp;quot; still stops the bot, and with &lt;code>VAD&lt;/code>
+    /// any recognised speech interrupts. Higher values keep the bot talking over short remarks until the caller has
+    /// said more
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8570,8 +11049,12 @@ namespace Ondewo.Vtsi {
 
     private float falseInterruptionTimeoutSeconds_;
     /// <summary>
-    /// Optional: Time in seconds after an interruption trigger without a committed transcription
-    /// after which the interruption is classified as a false interruption (default: 2.0)
+    /// Optional: Seconds after an interruption within which the caller&amp;apos;s speech must become a complete turn for
+    /// the interruption to be REAL; otherwise it is FALSE (a cough, brief noise) and
+    /// &lt;code>resume_after_false_interruption&lt;/code> decides (default: 2.0, valid: 0 or more). Each partial
+    /// transcription that changes what the caller said re-arms the window. The window lasts at most twice this value
+    /// after the interruption, and never more than 9 s (a window of 9 s or more is not extended). The paused rest of
+    /// an answer is kept for at most 10 s, so a longer window cannot resume it
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8601,8 +11084,9 @@ namespace Ondewo.Vtsi {
 
     private bool resumeAfterFalseInterruption_;
     /// <summary>
-    /// Optional: Resume the paused bot response after a false interruption,
-    /// e.g. a cough or brief background noise (default: true)
+    /// Optional: After a FALSE interruption, continue the paused answer where the bot&amp;apos;s fade-out ended, with a
+    /// short fade-in, so nothing the caller already heard is played twice, whatever
+    /// &lt;code>interruption_fade_out_ms&lt;/code> is (default: true). False: the rest of the answer is dropped
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8632,7 +11116,8 @@ namespace Ondewo.Vtsi {
 
     private float backoffSeconds_;
     /// <summary>
-    /// Optional: Silence in seconds after a real interruption before the next bot response is played (default: 1.0)
+    /// Optional: Seconds of silence after a REAL interruption before the bot&amp;apos;s next answer plays, so the caller
+    /// keeps the floor for a moment (default: 1.0, valid: 0 or more)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8662,8 +11147,9 @@ namespace Ondewo.Vtsi {
 
     private float firstMessageProtectedSeconds_;
     /// <summary>
-    /// Optional: Protect the first bot message from interruptions
-    /// for the given number of seconds (default: 0 = no protection)
+    /// Optional: Seconds, counted from the start of the greeting, during which caller speech never interrupts the
+    /// bot (default: 0 = no protection, valid: 0 or more). Speech in that window is ignored, not answered. Example:
+    /// 5 makes sure the first 5 s of a greeting are heard
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8693,8 +11179,8 @@ namespace Ondewo.Vtsi {
 
     private bool transcribeOnDisabledInterruptions_;
     /// <summary>
-    /// Optional: Transcribe caller speech while the bot is speaking even if interruptions are disabled
-    /// (default: false, i.e. caller speech during bot speech is not transcribed while &lt;code>enabled&lt;/code> is false)
+    /// Optional: Transcribe the caller while the bot speaks although interruptions are disabled (default: false).
+    /// The speech neither stops the bot nor is answered. Only matters when &lt;code>enabled&lt;/code> is false
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8724,9 +11210,11 @@ namespace Ondewo.Vtsi {
 
     private int interruptionFadeOutMs_;
     /// <summary>
-    /// Optional: Duration in milliseconds over which the bot&amp;apos;s voice fades out (raised cosine) when the caller
-    /// interrupts it, instead of stopping abruptly (default: 100, valid range: 0 - 500; 0 = stop at once).
-    /// A value outside the range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Milliseconds over which the bot&amp;apos;s voice fades out (raised cosine) when the caller interrupts it,
+    /// so the bot trails off like a person instead of stopping with a click (default: 100, valid range: 0 - 500;
+    /// 0 = stop at once). Any value above 0 also gives every other stop of the bot&amp;apos;s voice a 5 ms ramp and fades
+    /// a resumed answer back in over 20 ms. A set value wins over the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_INTERRUPTION_FADE_OUT_MS&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8748,6 +11236,234 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearInterruptionFadeOutMs() {
       _hasBits0 &= ~256;
+    }
+
+    /// <summary>Field number for the "cancel_on_speech_while_thinking" field.</summary>
+    public const int CancelOnSpeechWhileThinkingFieldNumber = 10;
+    private readonly static bool CancelOnSpeechWhileThinkingDefaultValue = false;
+
+    private bool cancelOnSpeechWhileThinking_;
+    /// <summary>
+    /// &lt;p>Optional: Let the caller replace a turn the bot is still thinking about (default: false). When a caller turn
+    /// is committed while the bot is still working on the previous one (its answer is being generated and nothing of
+    /// it plays yet), that answer is cancelled and never spoken, and the new turn is answered at once; the earlier
+    /// turn stays in the conversation history. Example: the caller says &amp;quot;I need a taxi&amp;quot; and, before the bot
+    /// answers, &amp;quot;for tomorrow morning&amp;quot;: with true the bot answers only the second turn; with false it first
+    /// speaks its answer to &amp;quot;I need a taxi&amp;quot;, then answers the second.&lt;/p>
+    /// &lt;p>Trade-off: a caller who says one sentence in two parts with a pause gets only the second part answered.
+    /// Works whether or not &lt;code>enabled&lt;/code> is set; has no effect with
+    /// &lt;code>ResponseTimingConfig.streaming_enabled=false&lt;/code>. The greeting and DTMF key entries are never
+    /// replaced. An NLU that supports turn control is told to cancel the replaced turn
+    /// (&lt;code>nlu_turn_control_enabled&lt;/code>); another NLU still finishes it, but its answer is not spoken. A set
+    /// value wins over the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_CANCEL_ON_SPEECH_WHILE_THINKING&lt;/code>&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CancelOnSpeechWhileThinking {
+      get { if ((_hasBits0 & 512) != 0) { return cancelOnSpeechWhileThinking_; } else { return CancelOnSpeechWhileThinkingDefaultValue; } }
+      set {
+        _hasBits0 |= 512;
+        cancelOnSpeechWhileThinking_ = value;
+      }
+    }
+    /// <summary>Gets whether the "cancel_on_speech_while_thinking" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCancelOnSpeechWhileThinking {
+      get { return (_hasBits0 & 512) != 0; }
+    }
+    /// <summary>Clears the value of the "cancel_on_speech_while_thinking" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCancelOnSpeechWhileThinking() {
+      _hasBits0 &= ~512;
+    }
+
+    /// <summary>Field number for the "ai_teams_cancel_pending_on_interrupt" field.</summary>
+    public const int AiTeamsCancelPendingOnInterruptFieldNumber = 11;
+    private readonly static bool AiTeamsCancelPendingOnInterruptDefaultValue = false;
+
+    private bool aiTeamsCancelPendingOnInterrupt_;
+    /// <summary>
+    /// &lt;p>Optional: Whether a turn that was cut cancels the AI Teams asynchronous tool calls it dispatched that have
+    /// not started yet. A turn is cut by a caller&amp;apos;s interruption, by a turn replaced through
+    /// &lt;code>cancel_on_speech_while_thinking&lt;/code>, by an operator mute or takeover, or by the end of the call while
+    /// its answer is still being generated (default: unset = the NLU deployment&amp;apos;s own setting, which is
+    /// on unless its operator turned it off). True or false decides it for this call alone, also against the
+    /// deployment&amp;apos;s setting.&lt;/p>
+    /// &lt;p>Only tools, agents or members whose team document declares &lt;code>async.on_interrupt: cancel_pending&lt;/code>
+    /// are ever cancelled (one declaring &lt;code>keep&lt;/code> never is), only while the task is still pending (a task
+    /// already running is delivered as usual), and only when the caller did not hear the dispatch acknowledged. Needs
+    /// an NLU with turn control, &lt;code>nlu_turn_control_enabled&lt;/code> and the call-length NLU request
+    /// (&lt;code>ResponseTimingConfig.nlu_call_stream_enabled&lt;/code>); without them nothing is cancelled and this value
+    /// never reaches the NLU. Example:
+    /// false keeps a callback the caller asked for even when they talked over the bot&amp;apos;s confirmation&lt;/p>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AiTeamsCancelPendingOnInterrupt {
+      get { if ((_hasBits0 & 1024) != 0) { return aiTeamsCancelPendingOnInterrupt_; } else { return AiTeamsCancelPendingOnInterruptDefaultValue; } }
+      set {
+        _hasBits0 |= 1024;
+        aiTeamsCancelPendingOnInterrupt_ = value;
+      }
+    }
+    /// <summary>Gets whether the "ai_teams_cancel_pending_on_interrupt" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAiTeamsCancelPendingOnInterrupt {
+      get { return (_hasBits0 & 1024) != 0; }
+    }
+    /// <summary>Clears the value of the "ai_teams_cancel_pending_on_interrupt" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAiTeamsCancelPendingOnInterrupt() {
+      _hasBits0 &= ~1024;
+    }
+
+    /// <summary>Field number for the "t2s_cancel_on_barge_in" field.</summary>
+    public const int T2SCancelOnBargeInFieldNumber = 12;
+    private readonly static bool T2SCancelOnBargeInDefaultValue = false;
+
+    private bool t2SCancelOnBargeIn_;
+    /// <summary>
+    /// Optional: When an interruption discards the rest of the bot&amp;apos;s answer, stop producing it (default: true).
+    /// That is a REAL interruption, or a FALSE one while &lt;code>resume_after_false_interruption&lt;/code> is false. In
+    /// that case the answer&amp;apos;s speech synthesis is cancelled at once, and a call action the answer carries (e.g. a
+    /// transfer or hangup the answer would have triggered) is dropped. While a false interruption may still resume
+    /// the answer, a further message of it is held until that is decided instead of starting. False restores the
+    /// previous behaviour: the interrupted answer is synthesised to its end unheard, nothing is held and its call
+    /// actions still run. A set value wins over the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_CSI_T2S_CANCEL_ON_BARGE_IN&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool T2SCancelOnBargeIn {
+      get { if ((_hasBits0 & 2048) != 0) { return t2SCancelOnBargeIn_; } else { return T2SCancelOnBargeInDefaultValue; } }
+      set {
+        _hasBits0 |= 2048;
+        t2SCancelOnBargeIn_ = value;
+      }
+    }
+    /// <summary>Gets whether the "t2s_cancel_on_barge_in" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasT2SCancelOnBargeIn {
+      get { return (_hasBits0 & 2048) != 0; }
+    }
+    /// <summary>Clears the value of the "t2s_cancel_on_barge_in" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearT2SCancelOnBargeIn() {
+      _hasBits0 &= ~2048;
+    }
+
+    /// <summary>Field number for the "nlu_turn_control_enabled" field.</summary>
+    public const int NluTurnControlEnabledFieldNumber = 13;
+    private readonly static bool NluTurnControlEnabledDefaultValue = false;
+
+    private bool nluTurnControlEnabled_;
+    /// <summary>
+    /// Optional: Tell an NLU that supports turn control which turn was cancelled (default: true): the turn a real
+    /// interruption cut, a turn replaced by &lt;code>cancel_on_speech_while_thinking&lt;/code>, and a turn still being
+    /// generated when the call ends. The NLU then stops generating it and stores it as an interrupted turn. An NLU
+    /// without turn control is sent nothing either way. An operator mute or takeover through call control also tells
+    /// the NLU that the current turn was cut. Turn control rides the call-length NLU request, so it needs
+    /// &lt;code>ResponseTimingConfig.streaming_enabled&lt;/code> and &lt;code>nlu_call_stream_enabled&lt;/code> (both true by
+    /// default); without them nothing is sent. &lt;code>heard_report_enabled&lt;/code> and
+    /// &lt;code>ai_teams_cancel_pending_on_interrupt&lt;/code> depend on it. A set value wins over the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_CSI_NLU_TURN_CONTROL_ACTIVE&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NluTurnControlEnabled {
+      get { if ((_hasBits0 & 4096) != 0) { return nluTurnControlEnabled_; } else { return NluTurnControlEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 4096;
+        nluTurnControlEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "nlu_turn_control_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNluTurnControlEnabled {
+      get { return (_hasBits0 & 4096) != 0; }
+    }
+    /// <summary>Clears the value of the "nlu_turn_control_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNluTurnControlEnabled() {
+      _hasBits0 &= ~4096;
+    }
+
+    /// <summary>Field number for the "heard_report_enabled" field.</summary>
+    public const int HeardReportEnabledFieldNumber = 14;
+    private readonly static bool HeardReportEnabledDefaultValue = false;
+
+    private bool heardReportEnabled_;
+    /// <summary>
+    /// Optional: Report to an NLU that supports turn control what the caller actually heard of an interrupted
+    /// answer, so the conversation history and the agent&amp;apos;s memory hold what was said rather than everything that
+    /// was generated (default: true). Example: the bot is cut after &amp;quot;Your appointment is on Monday&amp;quot; of a
+    /// longer answer; the agent&amp;apos;s next turn knows the caller heard only that much. Needs
+    /// &lt;code>nlu_turn_control_enabled&lt;/code> and the call-length NLU request
+    /// (&lt;code>ResponseTimingConfig.nlu_call_stream_enabled&lt;/code>). A set value wins over the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_CSI_HEARD_REPORT_ACTIVE&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HeardReportEnabled {
+      get { if ((_hasBits0 & 8192) != 0) { return heardReportEnabled_; } else { return HeardReportEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 8192;
+        heardReportEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "heard_report_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHeardReportEnabled {
+      get { return (_hasBits0 & 8192) != 0; }
+    }
+    /// <summary>Clears the value of the "heard_report_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHeardReportEnabled() {
+      _hasBits0 &= ~8192;
+    }
+
+    /// <summary>Field number for the "heard_text_alignment_enabled" field.</summary>
+    public const int HeardTextAlignmentEnabledFieldNumber = 15;
+    private readonly static bool HeardTextAlignmentEnabledDefaultValue = false;
+
+    private bool heardTextAlignmentEnabled_;
+    /// <summary>
+    /// Optional: Place the cut of an interrupted answer on the sentence or word it fell in, using the timings the
+    /// text-to-speech service returns, instead of estimating it proportionally over the whole message (default:
+    /// true). Makes the heard report (&lt;code>heard_report_enabled&lt;/code>) more precise and only matters with it; with
+    /// a text-to-speech service that returns no timings nothing changes. A set value wins over the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_CSI_HEARD_TEXT_ALIGNMENT_ACTIVE&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HeardTextAlignmentEnabled {
+      get { if ((_hasBits0 & 16384) != 0) { return heardTextAlignmentEnabled_; } else { return HeardTextAlignmentEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 16384;
+        heardTextAlignmentEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "heard_text_alignment_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHeardTextAlignmentEnabled {
+      get { return (_hasBits0 & 16384) != 0; }
+    }
+    /// <summary>Clears the value of the "heard_text_alignment_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHeardTextAlignmentEnabled() {
+      _hasBits0 &= ~16384;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8774,6 +11490,12 @@ namespace Ondewo.Vtsi {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FirstMessageProtectedSeconds, other.FirstMessageProtectedSeconds)) return false;
       if (TranscribeOnDisabledInterruptions != other.TranscribeOnDisabledInterruptions) return false;
       if (InterruptionFadeOutMs != other.InterruptionFadeOutMs) return false;
+      if (CancelOnSpeechWhileThinking != other.CancelOnSpeechWhileThinking) return false;
+      if (AiTeamsCancelPendingOnInterrupt != other.AiTeamsCancelPendingOnInterrupt) return false;
+      if (T2SCancelOnBargeIn != other.T2SCancelOnBargeIn) return false;
+      if (NluTurnControlEnabled != other.NluTurnControlEnabled) return false;
+      if (HeardReportEnabled != other.HeardReportEnabled) return false;
+      if (HeardTextAlignmentEnabled != other.HeardTextAlignmentEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8790,6 +11512,12 @@ namespace Ondewo.Vtsi {
       if (HasFirstMessageProtectedSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FirstMessageProtectedSeconds);
       if (HasTranscribeOnDisabledInterruptions) hash ^= TranscribeOnDisabledInterruptions.GetHashCode();
       if (HasInterruptionFadeOutMs) hash ^= InterruptionFadeOutMs.GetHashCode();
+      if (HasCancelOnSpeechWhileThinking) hash ^= CancelOnSpeechWhileThinking.GetHashCode();
+      if (HasAiTeamsCancelPendingOnInterrupt) hash ^= AiTeamsCancelPendingOnInterrupt.GetHashCode();
+      if (HasT2SCancelOnBargeIn) hash ^= T2SCancelOnBargeIn.GetHashCode();
+      if (HasNluTurnControlEnabled) hash ^= NluTurnControlEnabled.GetHashCode();
+      if (HasHeardReportEnabled) hash ^= HeardReportEnabled.GetHashCode();
+      if (HasHeardTextAlignmentEnabled) hash ^= HeardTextAlignmentEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8844,6 +11572,30 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(72);
         output.WriteInt32(InterruptionFadeOutMs);
       }
+      if (HasCancelOnSpeechWhileThinking) {
+        output.WriteRawTag(80);
+        output.WriteBool(CancelOnSpeechWhileThinking);
+      }
+      if (HasAiTeamsCancelPendingOnInterrupt) {
+        output.WriteRawTag(88);
+        output.WriteBool(AiTeamsCancelPendingOnInterrupt);
+      }
+      if (HasT2SCancelOnBargeIn) {
+        output.WriteRawTag(96);
+        output.WriteBool(T2SCancelOnBargeIn);
+      }
+      if (HasNluTurnControlEnabled) {
+        output.WriteRawTag(104);
+        output.WriteBool(NluTurnControlEnabled);
+      }
+      if (HasHeardReportEnabled) {
+        output.WriteRawTag(112);
+        output.WriteBool(HeardReportEnabled);
+      }
+      if (HasHeardTextAlignmentEnabled) {
+        output.WriteRawTag(120);
+        output.WriteBool(HeardTextAlignmentEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8890,6 +11642,30 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(72);
         output.WriteInt32(InterruptionFadeOutMs);
       }
+      if (HasCancelOnSpeechWhileThinking) {
+        output.WriteRawTag(80);
+        output.WriteBool(CancelOnSpeechWhileThinking);
+      }
+      if (HasAiTeamsCancelPendingOnInterrupt) {
+        output.WriteRawTag(88);
+        output.WriteBool(AiTeamsCancelPendingOnInterrupt);
+      }
+      if (HasT2SCancelOnBargeIn) {
+        output.WriteRawTag(96);
+        output.WriteBool(T2SCancelOnBargeIn);
+      }
+      if (HasNluTurnControlEnabled) {
+        output.WriteRawTag(104);
+        output.WriteBool(NluTurnControlEnabled);
+      }
+      if (HasHeardReportEnabled) {
+        output.WriteRawTag(112);
+        output.WriteBool(HeardReportEnabled);
+      }
+      if (HasHeardTextAlignmentEnabled) {
+        output.WriteRawTag(120);
+        output.WriteBool(HeardTextAlignmentEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8926,6 +11702,24 @@ namespace Ondewo.Vtsi {
       }
       if (HasInterruptionFadeOutMs) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(InterruptionFadeOutMs);
+      }
+      if (HasCancelOnSpeechWhileThinking) {
+        size += 1 + 1;
+      }
+      if (HasAiTeamsCancelPendingOnInterrupt) {
+        size += 1 + 1;
+      }
+      if (HasT2SCancelOnBargeIn) {
+        size += 1 + 1;
+      }
+      if (HasNluTurnControlEnabled) {
+        size += 1 + 1;
+      }
+      if (HasHeardReportEnabled) {
+        size += 1 + 1;
+      }
+      if (HasHeardTextAlignmentEnabled) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -8966,6 +11760,24 @@ namespace Ondewo.Vtsi {
       if (other.HasInterruptionFadeOutMs) {
         InterruptionFadeOutMs = other.InterruptionFadeOutMs;
       }
+      if (other.HasCancelOnSpeechWhileThinking) {
+        CancelOnSpeechWhileThinking = other.CancelOnSpeechWhileThinking;
+      }
+      if (other.HasAiTeamsCancelPendingOnInterrupt) {
+        AiTeamsCancelPendingOnInterrupt = other.AiTeamsCancelPendingOnInterrupt;
+      }
+      if (other.HasT2SCancelOnBargeIn) {
+        T2SCancelOnBargeIn = other.T2SCancelOnBargeIn;
+      }
+      if (other.HasNluTurnControlEnabled) {
+        NluTurnControlEnabled = other.NluTurnControlEnabled;
+      }
+      if (other.HasHeardReportEnabled) {
+        HeardReportEnabled = other.HeardReportEnabled;
+      }
+      if (other.HasHeardTextAlignmentEnabled) {
+        HeardTextAlignmentEnabled = other.HeardTextAlignmentEnabled;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -9019,6 +11831,30 @@ namespace Ondewo.Vtsi {
           }
           case 72: {
             InterruptionFadeOutMs = input.ReadInt32();
+            break;
+          }
+          case 80: {
+            CancelOnSpeechWhileThinking = input.ReadBool();
+            break;
+          }
+          case 88: {
+            AiTeamsCancelPendingOnInterrupt = input.ReadBool();
+            break;
+          }
+          case 96: {
+            T2SCancelOnBargeIn = input.ReadBool();
+            break;
+          }
+          case 104: {
+            NluTurnControlEnabled = input.ReadBool();
+            break;
+          }
+          case 112: {
+            HeardReportEnabled = input.ReadBool();
+            break;
+          }
+          case 120: {
+            HeardTextAlignmentEnabled = input.ReadBool();
             break;
           }
         }
@@ -9076,6 +11912,30 @@ namespace Ondewo.Vtsi {
             InterruptionFadeOutMs = input.ReadInt32();
             break;
           }
+          case 80: {
+            CancelOnSpeechWhileThinking = input.ReadBool();
+            break;
+          }
+          case 88: {
+            AiTeamsCancelPendingOnInterrupt = input.ReadBool();
+            break;
+          }
+          case 96: {
+            T2SCancelOnBargeIn = input.ReadBool();
+            break;
+          }
+          case 104: {
+            NluTurnControlEnabled = input.ReadBool();
+            break;
+          }
+          case 112: {
+            HeardReportEnabled = input.ReadBool();
+            break;
+          }
+          case 120: {
+            HeardTextAlignmentEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -9084,7 +11944,13 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the response timing, i.e. when and how the bot responds
+  /// Response timing of the call: what the bot does while the caller stays silent, how it bridges a slow answer, and how an answer is requested from the NLU and streamed to the caller.
+  ///
+  /// Every scalar is &lt;code>optional&lt;/code>: an unset field inherits, i.e. the call keeps the deployment&amp;apos;s value where a replica-wide &lt;code>ONDEWO_VTSI_*&lt;/code> setting exists for it (named per field), and the built-in default listed per field otherwise. A set value always wins over the deployment setting. A value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Scope: the configuration of a listener applies to every inbound call that listener deployment serves; the configuration of a caller, a campaign or a scheduled caller applies to its own calls. A pooled persistent caller is reused only for a request with the identical configuration.
+  ///
+  /// The caller-silence windows (&lt;code>turn_timeout_seconds&lt;/code>, &lt;code>silence_end_call_timeout_seconds&lt;/code>) restart whenever the caller speaks, presses a key or the bot plays audio, and never elapse while the bot is speaking, an answer is being prepared or an interruption is being decided. While listening is paused through call control, neither window and no soft-timeout filler fires.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResponseTimingConfig : pb::IMessage<ResponseTimingConfig>
@@ -9102,7 +11968,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9128,6 +11994,12 @@ namespace Ondewo.Vtsi {
       softTimeoutConfig_ = other.softTimeoutConfig_ != null ? other.softTimeoutConfig_.Clone() : null;
       preemptiveGenerationEnabled_ = other.preemptiveGenerationEnabled_;
       t2SChunkedStreamingEnabled_ = other.t2SChunkedStreamingEnabled_;
+      streamingEnabled_ = other.streamingEnabled_;
+      nluCallStreamEnabled_ = other.nluCallStreamEnabled_;
+      turnTimeoutIntent_ = other.turnTimeoutIntent_;
+      t2SMaxEdgeSilenceMs_ = other.t2SMaxEdgeSilenceMs_;
+      nluCallStreamTurnTimeoutSeconds_ = other.nluCallStreamTurnTimeoutSeconds_;
+      nluCallStreamTurnQuietSeconds_ = other.nluCallStreamTurnQuietSeconds_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9143,8 +12015,13 @@ namespace Ondewo.Vtsi {
 
     private float turnTimeoutSeconds_;
     /// <summary>
-    /// Optional: Seconds of caller silence after a bot response until a follow-up event
-    /// is triggered (default: 20.0, valid range: 1.0 - 30.0)
+    /// Optional: Seconds of caller silence after which the bot re-engages the caller by triggering
+    /// &lt;code>turn_timeout_intent&lt;/code> (default: 20.0, valid range: 1.0 - 30.0). Has no effect unless
+    /// &lt;code>turn_timeout_intent&lt;/code> is set. As long as the caller stays silent, the re-engagement repeats every
+    /// &lt;code>turn_timeout_seconds&lt;/code>.
+    /// Example: &lt;code>turn_timeout_seconds=8&lt;/code> with &lt;code>turn_timeout_intent=&amp;quot;i.still.there&amp;quot;&lt;/code>
+    /// plays the answer of the intent &lt;code>i.still.there&lt;/code> (e.g. &amp;quot;Are you still there?&amp;quot;) after 8 s of
+    /// silence
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9174,8 +12051,13 @@ namespace Ondewo.Vtsi {
 
     private float silenceEndCallTimeoutSeconds_;
     /// <summary>
-    /// Optional: Seconds of caller silence until the call is ended.
-    /// Unset = off (-1 is also accepted as explicit off)
+    /// Optional: Seconds of caller silence after which the bot hangs up (default: off). Any value above 0 is
+    /// accepted; -1 is also accepted as an explicit off, and 0 or any other negative value is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. The hangup happens at once, without a closing message. Every bot utterance
+    /// restarts this window, a turn-timeout re-engagement included: with &lt;code>turn_timeout_intent&lt;/code> set, the
+    /// call only ends on silence when this value is below &lt;code>turn_timeout_seconds&lt;/code>.
+    /// Example: &lt;code>silence_end_call_timeout_seconds=30&lt;/code> without a &lt;code>turn_timeout_intent&lt;/code> ends a
+    /// call after 30 s in which neither the caller nor the bot said anything
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9203,7 +12085,8 @@ namespace Ondewo.Vtsi {
     public const int SoftTimeoutConfigFieldNumber = 3;
     private global::Ondewo.Vtsi.SoftTimeoutConfig softTimeoutConfig_;
     /// <summary>
-    /// Configuration of the soft timeout filler messages
+    /// Optional: Filler messages the bot speaks while an answer takes long to prepare (default: off). See
+    /// &lt;code>SoftTimeoutConfig&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9220,11 +12103,12 @@ namespace Ondewo.Vtsi {
 
     private bool preemptiveGenerationEnabled_;
     /// <summary>
-    /// Optional, DEPRECATED: use &lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>.
-    /// Enable preemptive response generation on an eagerly detected end of turn (default: the deployment&amp;apos;s
-    /// setting, which is true unless changed). Still honoured when it is set alone; set together with
-    /// &lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code> to a different value, the request is refused
-    /// with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional, DEPRECATED: use &lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code>, which does the same.
+    /// Ask the NLU for the answer of a stable partial transcription before the caller finished speaking, so that a
+    /// matching answer is ready sooner (default: the deployment&amp;apos;s
+    /// &lt;code>ONDEWO_VTSI_CSI_PREEMPTIVE_GENERATION_ACTIVE&lt;/code>, which is true unless changed). Still honoured when
+    /// it is set alone; set together with &lt;code>CsiVtsiConfig.preemptive_generation_config.enabled&lt;/code> to the same
+    /// value it is accepted, to a different value the request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9254,7 +12138,11 @@ namespace Ondewo.Vtsi {
 
     private bool t2SChunkedStreamingEnabled_;
     /// <summary>
-    /// Optional: Enable chunked text-to-speech streaming for a lower time to first audio (default: false)
+    /// Optional: Start playing an answer as soon as its first audio chunk is synthesized, instead of waiting until the
+    /// speech synthesis of the whole answer has finished (default: true). Shortens the pause before the bot answers,
+    /// the more the longer the answer. &lt;code>false&lt;/code> waits for the whole synthesis of every answer. Applies to
+    /// the answers of caller turns while &lt;code>streaming_enabled&lt;/code> is on (its default); the opening message of
+    /// the call and the turn-timeout re-engagement are always synthesized whole
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9278,6 +12166,214 @@ namespace Ondewo.Vtsi {
       _hasBits0 &= ~8;
     }
 
+    /// <summary>Field number for the "streaming_enabled" field.</summary>
+    public const int StreamingEnabledFieldNumber = 6;
+    private readonly static bool StreamingEnabledDefaultValue = false;
+
+    private bool streamingEnabled_;
+    /// <summary>
+    /// Optional: Ask the NLU for each answer with its streaming request instead of the unary one (default: the
+    /// deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_STREAMING_ACTIVE&lt;/code>, and true when that is not set).
+    /// &lt;code>false&lt;/code> asks every caller turn with the unary request, and the caller is not transcribed while an
+    /// answer is being prepared, so speech in that time is lost. It also turns off &lt;code>nlu_call_stream_enabled&lt;/code>
+    /// (and with it turn control, heard reports and results the NLU delivers on its own), the chunked playback of
+    /// answers (&lt;code>t2s_chunked_streaming_enabled&lt;/code>) and
+    /// &lt;code>InterruptionHandlingConfig.cancel_on_speech_while_thinking&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool StreamingEnabled {
+      get { if ((_hasBits0 & 16) != 0) { return streamingEnabled_; } else { return StreamingEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        streamingEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "streaming_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStreamingEnabled {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "streaming_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStreamingEnabled() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "nlu_call_stream_enabled" field.</summary>
+    public const int NluCallStreamEnabledFieldNumber = 7;
+    private readonly static bool NluCallStreamEnabledDefaultValue = false;
+
+    private bool nluCallStreamEnabled_;
+    /// <summary>
+    /// Optional: Keep ONE streaming NLU request open for the whole call instead of opening one per caller turn
+    /// (default: the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_CSI_NLU_CALL_STREAM_ACTIVE&lt;/code>, and true when that is not
+    /// set). Only takes effect while &lt;code>streaming_enabled&lt;/code> is on. It is the only way an NLU can deliver a
+    /// result on its own, e.g. the later result of an AI Teams tool that ran in the background: with
+    /// &lt;code>false&lt;/code> such results never reach the call
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NluCallStreamEnabled {
+      get { if ((_hasBits0 & 32) != 0) { return nluCallStreamEnabled_; } else { return NluCallStreamEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        nluCallStreamEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "nlu_call_stream_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNluCallStreamEnabled {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "nlu_call_stream_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNluCallStreamEnabled() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "turn_timeout_intent" field.</summary>
+    public const int TurnTimeoutIntentFieldNumber = 8;
+    private readonly static string TurnTimeoutIntentDefaultValue = "";
+
+    private string turnTimeoutIntent_;
+    /// <summary>
+    /// Optional: Display name of the NLU intent the bot triggers to re-engage a silent caller after
+    /// &lt;code>turn_timeout_seconds&lt;/code>; the bot speaks the answer of that intent (default: none, i.e. silence never
+    /// triggers a re-engagement). Name an intent of the NLU agent of the call. 1 - 256 characters, not blank, no
+    /// control characters; any other value is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// Example: &lt;code>&amp;quot;i.still.there&amp;quot;&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TurnTimeoutIntent {
+      get { return turnTimeoutIntent_ ?? TurnTimeoutIntentDefaultValue; }
+      set {
+        turnTimeoutIntent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "turn_timeout_intent" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTurnTimeoutIntent {
+      get { return turnTimeoutIntent_ != null; }
+    }
+    /// <summary>Clears the value of the "turn_timeout_intent" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTurnTimeoutIntent() {
+      turnTimeoutIntent_ = null;
+    }
+
+    /// <summary>Field number for the "t2s_max_edge_silence_ms" field.</summary>
+    public const int T2SMaxEdgeSilenceMsFieldNumber = 9;
+    private readonly static int T2SMaxEdgeSilenceMsDefaultValue = 0;
+
+    private int t2SMaxEdgeSilenceMs_;
+    /// <summary>
+    /// Optional: Milliseconds of silence kept at most at the start and at the end of every synthesized bot utterance;
+    /// longer silence at the edges is cut off, so the bot starts speaking sooner and the caller is not kept waiting
+    /// after it (default: 40, valid range: -1 - 1000). Silence inside an utterance is never changed. 0 keeps no edge
+    /// silence at all; -1 turns the trimming off and plays the audio exactly as synthesized. A value outside the range
+    /// is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int T2SMaxEdgeSilenceMs {
+      get { if ((_hasBits0 & 64) != 0) { return t2SMaxEdgeSilenceMs_; } else { return T2SMaxEdgeSilenceMsDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        t2SMaxEdgeSilenceMs_ = value;
+      }
+    }
+    /// <summary>Gets whether the "t2s_max_edge_silence_ms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasT2SMaxEdgeSilenceMs {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "t2s_max_edge_silence_ms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearT2SMaxEdgeSilenceMs() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "nlu_call_stream_turn_timeout_seconds" field.</summary>
+    public const int NluCallStreamTurnTimeoutSecondsFieldNumber = 10;
+    private readonly static float NluCallStreamTurnTimeoutSecondsDefaultValue = 0F;
+
+    private float nluCallStreamTurnTimeoutSeconds_;
+    /// <summary>
+    /// Optional: Seconds a caller turn waits at most for the first answer of the NLU on the call-length NLU request
+    /// (&lt;code>nlu_call_stream_enabled&lt;/code>); past it the turn is treated as a failed NLU request, i.e. the bot
+    /// speaks &lt;code>NluVtsiConfig.failure_apology_message&lt;/code> (default: 120, valid range: 5 - 600). A lower value
+    /// keeps a caller whose NLU hangs from waiting in silence for two minutes, but cuts off an agent that
+    /// legitimately thinks longer. Only matters with &lt;code>streaming_enabled&lt;/code> and
+    /// &lt;code>nlu_call_stream_enabled&lt;/code> on; the per-turn request has its own deadline. There is no
+    /// deployment-wide setting for it; a value set here wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float NluCallStreamTurnTimeoutSeconds {
+      get { if ((_hasBits0 & 128) != 0) { return nluCallStreamTurnTimeoutSeconds_; } else { return NluCallStreamTurnTimeoutSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        nluCallStreamTurnTimeoutSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "nlu_call_stream_turn_timeout_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNluCallStreamTurnTimeoutSeconds {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "nlu_call_stream_turn_timeout_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNluCallStreamTurnTimeoutSeconds() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "nlu_call_stream_turn_quiet_seconds" field.</summary>
+    public const int NluCallStreamTurnQuietSecondsFieldNumber = 11;
+    private readonly static float NluCallStreamTurnQuietSecondsDefaultValue = 0F;
+
+    private float nluCallStreamTurnQuietSeconds_;
+    /// <summary>
+    /// Optional: Seconds of silence on the call-length NLU request after a turn was already answered that end the turn
+    /// when the NLU never marks it finished (default: 5, valid range: 1 - 60). While a turn is open the next caller
+    /// turn waits behind it, so a lower value frees it sooner; it must stay above the longest pause the agent makes
+    /// between two parts of one answer, or the rest of the answer is lost. Only matters with
+    /// &lt;code>streaming_enabled&lt;/code> and &lt;code>nlu_call_stream_enabled&lt;/code> on. There is no deployment-wide
+    /// setting for it; a value set here wins
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float NluCallStreamTurnQuietSeconds {
+      get { if ((_hasBits0 & 256) != 0) { return nluCallStreamTurnQuietSeconds_; } else { return NluCallStreamTurnQuietSecondsDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        nluCallStreamTurnQuietSeconds_ = value;
+      }
+    }
+    /// <summary>Gets whether the "nlu_call_stream_turn_quiet_seconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNluCallStreamTurnQuietSeconds {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "nlu_call_stream_turn_quiet_seconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNluCallStreamTurnQuietSeconds() {
+      _hasBits0 &= ~256;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -9298,6 +12394,12 @@ namespace Ondewo.Vtsi {
       if (!object.Equals(SoftTimeoutConfig, other.SoftTimeoutConfig)) return false;
       if (PreemptiveGenerationEnabled != other.PreemptiveGenerationEnabled) return false;
       if (T2SChunkedStreamingEnabled != other.T2SChunkedStreamingEnabled) return false;
+      if (StreamingEnabled != other.StreamingEnabled) return false;
+      if (NluCallStreamEnabled != other.NluCallStreamEnabled) return false;
+      if (TurnTimeoutIntent != other.TurnTimeoutIntent) return false;
+      if (T2SMaxEdgeSilenceMs != other.T2SMaxEdgeSilenceMs) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(NluCallStreamTurnTimeoutSeconds, other.NluCallStreamTurnTimeoutSeconds)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(NluCallStreamTurnQuietSeconds, other.NluCallStreamTurnQuietSeconds)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9310,6 +12412,12 @@ namespace Ondewo.Vtsi {
       if (softTimeoutConfig_ != null) hash ^= SoftTimeoutConfig.GetHashCode();
       if (HasPreemptiveGenerationEnabled) hash ^= PreemptiveGenerationEnabled.GetHashCode();
       if (HasT2SChunkedStreamingEnabled) hash ^= T2SChunkedStreamingEnabled.GetHashCode();
+      if (HasStreamingEnabled) hash ^= StreamingEnabled.GetHashCode();
+      if (HasNluCallStreamEnabled) hash ^= NluCallStreamEnabled.GetHashCode();
+      if (HasTurnTimeoutIntent) hash ^= TurnTimeoutIntent.GetHashCode();
+      if (HasT2SMaxEdgeSilenceMs) hash ^= T2SMaxEdgeSilenceMs.GetHashCode();
+      if (HasNluCallStreamTurnTimeoutSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NluCallStreamTurnTimeoutSeconds);
+      if (HasNluCallStreamTurnQuietSeconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(NluCallStreamTurnQuietSeconds);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9348,6 +12456,30 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(40);
         output.WriteBool(T2SChunkedStreamingEnabled);
       }
+      if (HasStreamingEnabled) {
+        output.WriteRawTag(48);
+        output.WriteBool(StreamingEnabled);
+      }
+      if (HasNluCallStreamEnabled) {
+        output.WriteRawTag(56);
+        output.WriteBool(NluCallStreamEnabled);
+      }
+      if (HasTurnTimeoutIntent) {
+        output.WriteRawTag(66);
+        output.WriteString(TurnTimeoutIntent);
+      }
+      if (HasT2SMaxEdgeSilenceMs) {
+        output.WriteRawTag(72);
+        output.WriteInt32(T2SMaxEdgeSilenceMs);
+      }
+      if (HasNluCallStreamTurnTimeoutSeconds) {
+        output.WriteRawTag(85);
+        output.WriteFloat(NluCallStreamTurnTimeoutSeconds);
+      }
+      if (HasNluCallStreamTurnQuietSeconds) {
+        output.WriteRawTag(93);
+        output.WriteFloat(NluCallStreamTurnQuietSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9378,6 +12510,30 @@ namespace Ondewo.Vtsi {
         output.WriteRawTag(40);
         output.WriteBool(T2SChunkedStreamingEnabled);
       }
+      if (HasStreamingEnabled) {
+        output.WriteRawTag(48);
+        output.WriteBool(StreamingEnabled);
+      }
+      if (HasNluCallStreamEnabled) {
+        output.WriteRawTag(56);
+        output.WriteBool(NluCallStreamEnabled);
+      }
+      if (HasTurnTimeoutIntent) {
+        output.WriteRawTag(66);
+        output.WriteString(TurnTimeoutIntent);
+      }
+      if (HasT2SMaxEdgeSilenceMs) {
+        output.WriteRawTag(72);
+        output.WriteInt32(T2SMaxEdgeSilenceMs);
+      }
+      if (HasNluCallStreamTurnTimeoutSeconds) {
+        output.WriteRawTag(85);
+        output.WriteFloat(NluCallStreamTurnTimeoutSeconds);
+      }
+      if (HasNluCallStreamTurnQuietSeconds) {
+        output.WriteRawTag(93);
+        output.WriteFloat(NluCallStreamTurnQuietSeconds);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9402,6 +12558,24 @@ namespace Ondewo.Vtsi {
       }
       if (HasT2SChunkedStreamingEnabled) {
         size += 1 + 1;
+      }
+      if (HasStreamingEnabled) {
+        size += 1 + 1;
+      }
+      if (HasNluCallStreamEnabled) {
+        size += 1 + 1;
+      }
+      if (HasTurnTimeoutIntent) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TurnTimeoutIntent);
+      }
+      if (HasT2SMaxEdgeSilenceMs) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(T2SMaxEdgeSilenceMs);
+      }
+      if (HasNluCallStreamTurnTimeoutSeconds) {
+        size += 1 + 4;
+      }
+      if (HasNluCallStreamTurnQuietSeconds) {
+        size += 1 + 4;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9432,6 +12606,24 @@ namespace Ondewo.Vtsi {
       }
       if (other.HasT2SChunkedStreamingEnabled) {
         T2SChunkedStreamingEnabled = other.T2SChunkedStreamingEnabled;
+      }
+      if (other.HasStreamingEnabled) {
+        StreamingEnabled = other.StreamingEnabled;
+      }
+      if (other.HasNluCallStreamEnabled) {
+        NluCallStreamEnabled = other.NluCallStreamEnabled;
+      }
+      if (other.HasTurnTimeoutIntent) {
+        TurnTimeoutIntent = other.TurnTimeoutIntent;
+      }
+      if (other.HasT2SMaxEdgeSilenceMs) {
+        T2SMaxEdgeSilenceMs = other.T2SMaxEdgeSilenceMs;
+      }
+      if (other.HasNluCallStreamTurnTimeoutSeconds) {
+        NluCallStreamTurnTimeoutSeconds = other.NluCallStreamTurnTimeoutSeconds;
+      }
+      if (other.HasNluCallStreamTurnQuietSeconds) {
+        NluCallStreamTurnQuietSeconds = other.NluCallStreamTurnQuietSeconds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9473,6 +12665,30 @@ namespace Ondewo.Vtsi {
           }
           case 40: {
             T2SChunkedStreamingEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            StreamingEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            NluCallStreamEnabled = input.ReadBool();
+            break;
+          }
+          case 66: {
+            TurnTimeoutIntent = input.ReadString();
+            break;
+          }
+          case 72: {
+            T2SMaxEdgeSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 85: {
+            NluCallStreamTurnTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            NluCallStreamTurnQuietSeconds = input.ReadFloat();
             break;
           }
         }
@@ -9517,6 +12733,30 @@ namespace Ondewo.Vtsi {
             T2SChunkedStreamingEnabled = input.ReadBool();
             break;
           }
+          case 48: {
+            StreamingEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            NluCallStreamEnabled = input.ReadBool();
+            break;
+          }
+          case 66: {
+            TurnTimeoutIntent = input.ReadString();
+            break;
+          }
+          case 72: {
+            T2SMaxEdgeSilenceMs = input.ReadInt32();
+            break;
+          }
+          case 85: {
+            NluCallStreamTurnTimeoutSeconds = input.ReadFloat();
+            break;
+          }
+          case 93: {
+            NluCallStreamTurnQuietSeconds = input.ReadFloat();
+            break;
+          }
         }
       }
     }
@@ -9525,8 +12765,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the soft timeout, i.e. filler messages played
-  /// when the response generation takes longer than the timeout
+  /// Soft timeout of the call: filler messages (e.g. &amp;quot;One moment please.&amp;quot;) the bot speaks while the answer to a caller turn takes longer than &lt;code>timeout_seconds&lt;/code> to prepare, so that the caller does not hear a silent line. The timer starts when the NLU is asked for the answer and is stopped as soon as the answer starts playing; a filler is never played after the answer. With interruptions enabled, the caller can interrupt a filler like any other bot utterance.
+  ///
+  /// Example: &lt;code>timeout_seconds=3&lt;/code>, &lt;code>messages=[&amp;quot;One moment please.&amp;quot;, &amp;quot;Let me check that.&amp;quot;]&lt;/code> and &lt;code>max_per_generation=1&lt;/code> speak &amp;quot;One moment please.&amp;quot; when an answer is not ready after 3 s, &amp;quot;Let me check that.&amp;quot; the next time it happens in the call, and then start over.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftTimeoutConfig : pb::IMessage<SoftTimeoutConfig>
@@ -9544,7 +12785,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9583,8 +12824,9 @@ namespace Ondewo.Vtsi {
 
     private float timeoutSeconds_;
     /// <summary>
-    /// Optional: Seconds after which a filler message is played while the response is still being generated.
-    /// Unset = off (-1 is also accepted as explicit off). Recommended: 3.0
+    /// Optional: Seconds an answer may take before a filler message is played (default: off; valid range:
+    /// 0.5 - 8.0, and -1 as an explicit off). Any other value is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// Fillers are only played while this is set. Recommended: 3.0
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9614,7 +12856,10 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> messages_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Filler messages, rotated per soft timeout (maximum 7 messages, each 1 - 200 characters)
+    /// Filler messages, spoken one per filler in the order given and starting over after the last one; the rotation
+    /// runs over the whole call. At most 7 messages, each 1 - 200 characters and not blank; anything else is refused
+    /// with &lt;code>INVALID_ARGUMENT&lt;/code>. Write them in the language of the call: when the list is empty, a short
+    /// built-in filler is used
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9628,7 +12873,10 @@ namespace Ondewo.Vtsi {
 
     private int maxPerGeneration_;
     /// <summary>
-    /// Optional: Maximum number of filler messages per response generation (default: 1)
+    /// Optional: Maximum number of filler messages played while one answer is prepared (default: 1; 0 or more, a
+    /// negative value is refused with &lt;code>INVALID_ARGUMENT&lt;/code>; 0 plays no filler at all). With a value above 1,
+    /// the next filler follows about &lt;code>timeout_seconds&lt;/code> after the previous one while the answer is still
+    /// not ready
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9832,29 +13080,27 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the answering machine detection (AMD) of an outbound call, i.e. deciding in the first
-  /// seconds after the callee answered whether a person, an answering machine, a fax, an IVR or a network
-  /// announcement picked up, and hanging up on the non-human ones.
-  /// Detection listens first: the bot stays silent until the verdict is reached or the decision window ends.
-  /// Every field is optional: an unset field takes the default of the CSI container (listed per field below).
-  /// Only accepted for pooled persistent callers; the settings are part of the caller container configuration,
-  /// so callers with different AMD settings are never pooled together.
-  /// The verdict of a call is reported as ondewo.sip.SipStatus.amd_result. Reaching a hang-up-eligible verdict sets
-  /// the non-terminal status ondewo.sip.SipStatus.StatusType.OUTGOING_CALL_ANSWERING_MACHINE_DETECTED (the call is
-  /// still up), and a call ended by AMD reaches the terminal status OUTGOING_CALL_FINISHED with one of these
-  /// descriptions:
-  /// &lt;ul>
-  /// &lt;li>"Answering machine detected with hang up": the caller hung up without leaving a voice message&lt;/li>
-  /// &lt;li>"Answering machine detected with left voice message and hang up": the caller hung up after starting the
-  /// voice message&lt;/li>
-  /// &lt;li>"Answering machine detected, call ended by the answering machine": the far end hung up before a voice
-  /// message was started&lt;/li>
-  /// &lt;li>"Answering machine detected, call ended by the answering machine after leaving a voice message": the far
-  /// end hung up after the voice message was started&lt;/li>
-  /// &lt;/ul>
-  /// The description is also recorded on the call as Call.answering_machine_detection_end_description.
-  /// Compliance: leaving a recorded message on a consumer's mailbox for marketing purposes requires the consent of
-  /// the callee in many jurisdictions (e.g. in Germany § 7 UWG). HANG_UP is therefore the default action.
+  /// Answering machine detection (AMD) of an outbound call: in the first seconds after the callee answered, the call decides who or what picked up (a person, an answering machine, a fax, an automated menu (IVR), a call screening assistant or a network announcement such as &amp;quot;the number is not reachable&amp;quot;) and can hang up on the ones that are not a person, or leave a voice message on a mailbox.
+  ///
+  /// How the call behaves while AMD decides: detection LISTENS first. The bot stays silent and nothing the callee says reaches the NLU until a verdict is reached or the decision window ends; the bot&amp;apos;s greeting therefore starts only after the verdict. The possible verdicts and what happens with each:
+  ///
+  /// &lt;ul> &lt;li>a person, no speech at all (&lt;code>initial_silence_ms&lt;/code>) or no verdict in time (UNKNOWN): the call continues with the bot&amp;apos;s greeting like any other call; it is never hung up&lt;/li> &lt;li>an answering machine (MACHINE): hung up under &lt;code>HANG_UP&lt;/code>; under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> a voice message is spoken first&lt;/li> &lt;li>a fax, a network announcement, an IVR or a call screening assistant: hung up (also under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code>, without a message) only when its switch &lt;code>hang_up_on_fax&lt;/code> / &lt;code>hang_up_on_network_announcement&lt;/code> / &lt;code>hang_up_on_ivr&lt;/code> / &lt;code>hang_up_on_call_screening&lt;/code> is on; otherwise the call continues like a call to a person&lt;/li> &lt;li>under &lt;code>DETECT_ONLY&lt;/code> nothing is ever hung up&lt;/li> &lt;/ul>
+  ///
+  /// Reporting: the verdict is reported as &lt;code>ondewo.sip.SipStatus.amd_result&lt;/code>. A verdict that would hang up (MACHINE, or a verdict whose &lt;code>hang_up_on_*&lt;/code> switch is on) sets the non-terminal status &lt;code>ondewo.sip.SipStatus.StatusType.OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> (the call is still up), also under &lt;code>DETECT_ONLY&lt;/code>. A call ended by AMD reaches the terminal status &lt;code>OUTGOING_CALL_FINISHED&lt;/code> exactly once, with one of these descriptions, also recorded on the call as &lt;code>Call.answering_machine_detection_end_description&lt;/code>:
+  ///
+  /// &lt;ul> &lt;li>&amp;quot;Answering machine detected with hang up&amp;quot;: the caller hung up without leaving a voice message&lt;/li> &lt;li>&amp;quot;Answering machine detected with left voice message and hang up&amp;quot;: the caller hung up after starting the voice message&lt;/li> &lt;li>&amp;quot;Answering machine detected, call ended by the answering machine&amp;quot;: the far end hung up before a voice message was started&lt;/li> &lt;li>&amp;quot;Answering machine detected, call ended by the answering machine after leaving a voice message&amp;quot;: the far end hung up after the voice message was started&lt;/li> &lt;/ul>
+  ///
+  /// Where it is accepted: only on a caller served by the caller pool (a pooled persistent caller), i.e. &lt;code>StartCaller&lt;/code> / &lt;code>StartCallers&lt;/code> and the callers of a campaign while the deployment setting &lt;code>ONDEWO_VTSI_CALLER_PERSISTENT&lt;/code> is on (the default). On a listener (also in &lt;code>UpdateListener&lt;/code>), a scheduled caller, an &lt;code>UpdateCaller&lt;/code> of a caller that is not pooled, or while &lt;code>ONDEWO_VTSI_CALLER_PERSISTENT&lt;/code> is off the request is refused with &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=amd-requires-persistent-caller&lt;/code>) instead of placing calls that are silently not screened. The settings are part of the pooled caller&amp;apos;s configuration: callers with different AMD settings are never pooled together, so a pooled caller is only reused for calls with identical settings.
+  ///
+  /// Defaults and precedence: every scalar is &lt;code>optional&lt;/code>. A field left unset inherits the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_AMD_&amp;lt;FIELD&amp;gt;&lt;/code> setting when the operator set one (e.g. &lt;code>ONDEWO_VTSI_AMD_SENSITIVITY&lt;/code>), else the built-in default listed per field. A set value always wins over the deployment setting. Leaving the whole message unset runs no detection unless the deployment switched it on with &lt;code>ONDEWO_VTSI_AMD_ACTIVE&lt;/code>. A value outside a documented range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
+  ///
+  /// Example: screen a campaign and hang up on mailboxes and faxes, with the built-in tuning:
+  ///
+  /// &lt;pre>&lt;code>answering_machine_detection_config { active: true action: HANG_UP }&lt;/code>&lt;/pre>
+  ///
+  /// To calibrate first, run the same campaign with &lt;code>action: DETECT_ONLY&lt;/code>: every call is detected and reported but every callee is greeted.
+  ///
+  /// Compliance: leaving a recorded message on a consumer&amp;apos;s mailbox for marketing purposes requires the consent of the callee in many jurisdictions (e.g. in Germany § 7 UWG). &lt;code>HANG_UP&lt;/code> is therefore the default action.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AnsweringMachineDetectionConfig : pb::IMessage<AnsweringMachineDetectionConfig>
@@ -9872,7 +13118,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9929,7 +13175,9 @@ namespace Ondewo.Vtsi {
 
     private bool active_;
     /// <summary>
-    /// Optional: Master switch of the answering machine detection (default: false)
+    /// Optional: Master switch: &lt;code>true&lt;/code> runs the detection on every outbound call of this caller
+    /// (default: &lt;code>false&lt;/code>; deployment setting &lt;code>ONDEWO_VTSI_AMD_ACTIVE&lt;/code>). While it is
+    /// &lt;code>false&lt;/code> no other field of this message has an effect and calls behave exactly as without AMD
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9959,7 +13207,8 @@ namespace Ondewo.Vtsi {
 
     private global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdAction action_;
     /// <summary>
-    /// Optional: Action on a non-human verdict (default: HANG_UP)
+    /// Optional: What the call does on a verdict that is not a person (default: &lt;code>HANG_UP&lt;/code>; deployment
+    /// setting &lt;code>ONDEWO_VTSI_AMD_ACTION&lt;/code>). See &lt;code>AmdAction&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9989,7 +13238,8 @@ namespace Ondewo.Vtsi {
 
     private global::Ondewo.Vtsi.AnsweringMachineDetectionConfig.Types.AmdSensitivity sensitivity_;
     /// <summary>
-    /// Optional: Sensitivity of the detection (default: LOW)
+    /// Optional: How readily a machine is detected (default: &lt;code>LOW&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_SENSITIVITY&lt;/code>). See &lt;code>AmdSensitivity&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10019,9 +13269,11 @@ namespace Ondewo.Vtsi {
 
     private int maxDecisionTimeMs_;
     /// <summary>
-    /// Optional: Maximum time in milliseconds after the callee answered to reach a verdict when no
-    /// machine-leaning evidence was seen; the verdict is UNKNOWN when it is reached
-    /// (default: 4000, valid range: 1500 - 10000)
+    /// Optional: Milliseconds after the callee answered by which a verdict must be reached when nothing so far
+    /// pointed to a machine (default: 4000, valid range: 1500 - 10000; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_MAX_DECISION_TIME_MS&lt;/code>). When it is reached the verdict is UNKNOWN and the call
+    /// continues with the greeting. It is roughly the longest a person waits for the bot when nothing pointed to a
+    /// machine; a smaller value greets sooner, a larger one gives the detection more time
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10051,8 +13303,12 @@ namespace Ondewo.Vtsi {
 
     private int maxMachineWaitMs_;
     /// <summary>
-    /// Optional: Maximum time in milliseconds after the callee answered to reach a verdict once
-    /// machine-leaning evidence extended the decision window (default: 11000, valid range: 4000 - 20000)
+    /// Optional: Milliseconds after the callee answered by which a verdict must be reached once something pointed
+    /// to a machine, e.g. a long greeting, a weaker machine phrase or beep, or continuous music (default: 11000,
+    /// valid range: 4000 - 20000; deployment setting &lt;code>ONDEWO_VTSI_AMD_MAX_MACHINE_WAIT_MS&lt;/code>). Such
+    /// evidence extends the decision window from &lt;code>max_decision_time_ms&lt;/code> to this value, because a
+    /// mailbox greeting can be long. When it is reached without a decision the verdict is UNKNOWN and the call
+    /// continues with the greeting
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10082,8 +13338,10 @@ namespace Ondewo.Vtsi {
 
     private int beepWaitAfterGreetingMs_;
     /// <summary>
-    /// Optional: Time in milliseconds to wait for a beep after a long greeting ended
-    /// (default: 1500, valid range: 0 - 4000)
+    /// Optional: Milliseconds to keep listening for a mailbox beep after a long greeting ended (default: 1500, valid
+    /// range: 0 - 4000; deployment setting &lt;code>ONDEWO_VTSI_AMD_BEEP_WAIT_AFTER_GREETING_MS&lt;/code>). Under
+    /// &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> it is also the shortest silence after the greeting before the voice message
+    /// may start without a beep, so a message does not talk over a late beep
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10113,8 +13371,11 @@ namespace Ondewo.Vtsi {
 
     private int initialSilenceMs_;
     /// <summary>
-    /// Optional: Silence in milliseconds after the callee answered without any speech, after which the verdict
-    /// is NO_SPEECH, which is treated like a person (default: 3500, valid range: 1000 - 10000)
+    /// Optional: Milliseconds of silence after the callee answered, without any speech, after which the verdict is
+    /// NO_SPEECH (default: 3500, valid range: 1000 - 10000; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_INITIAL_SILENCE_MS&lt;/code>). NO_SPEECH is treated like a person: the bot greets, the call
+    /// is not hung up. Needs &lt;code>cadence_detection_active&lt;/code>; without it a silent line ends as UNKNOWN at
+    /// &lt;code>max_decision_time_ms&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10144,8 +13405,12 @@ namespace Ondewo.Vtsi {
 
     private int maxHumanGreetingMs_;
     /// <summary>
-    /// Optional: Continuous speech in milliseconds beyond which a greeting is machine-leaning
-    /// (default: 2400, valid range: 1000 - 6000)
+    /// Optional: Milliseconds of continuous speech beyond which a greeting points to a machine (default: 2400,
+    /// valid range: 1000 - 6000; deployment setting &lt;code>ONDEWO_VTSI_AMD_MAX_HUMAN_GREETING_MS&lt;/code>). People
+    /// answer briefly (&amp;quot;Hello?&amp;quot;), mailboxes talk longer. A long greeting alone never hangs up; it extends
+    /// the window to &lt;code>max_machine_wait_ms&lt;/code> and, from sensitivity &lt;code>MEDIUM&lt;/code>, can decide together
+    /// with other evidence. A larger value treats long-winded people more safely and recognises fewer machines by
+    /// their greeting length
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10175,8 +13440,10 @@ namespace Ondewo.Vtsi {
 
     private int greetingEndSilenceMs_;
     /// <summary>
-    /// Optional: Silence in milliseconds after the first speech burst that ends a human greeting
-    /// (default: 900, valid range: 300 - 3000)
+    /// Optional: Milliseconds of silence after the callee&amp;apos;s first words that end a short, person-like greeting
+    /// (default: 900, valid range: 300 - 3000; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_GREETING_END_SILENCE_MS&lt;/code>). Under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> it is also a
+    /// lower bound of the silence after the machine greeting before the voice message may start
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10206,7 +13473,10 @@ namespace Ondewo.Vtsi {
 
     private bool beepDetectionActive_;
     /// <summary>
-    /// Optional: Enable the tone detector for the beep of an answering machine (default: true)
+    /// Optional: Whether the tone detector listens for the beep of an answering machine (default: &lt;code>true&lt;/code>;
+    /// deployment setting &lt;code>ONDEWO_VTSI_AMD_BEEP_DETECTION_ACTIVE&lt;/code>). With &lt;code>false&lt;/code> a beep is no
+    /// evidence, and under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> the message starts when the greeting ended in silence or
+    /// at &lt;code>voice_message_max_beep_wait_ms&lt;/code> instead of after the beep
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10236,8 +13506,14 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(90);
     private readonly pbc::RepeatedField<string> additionalMachinePhrases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Additional phrases that indicate an answering machine, added to the built-in de and en phrase lists
-    /// (maximum 50 phrases, each 1 - 80 characters)
+    /// Phrases that indicate an answering machine, added to the built-in German and English phrase lists (at most
+    /// 50 phrases, each 1 - 80 characters and not blank; otherwise refused with &lt;code>INVALID_ARGUMENT&lt;/code>; no
+    /// deployment setting). Hearing one of them in the callee&amp;apos;s greeting is strong evidence: it alone decides
+    /// MACHINE, at every sensitivity. Phrases are matched word by word against the transcribed greeting, ignoring
+    /// case, punctuation and the spelling of umlauts and tolerating small transcription differences. Empty (the
+    /// default) adds nothing.
+    /// Example: &lt;code>&amp;quot;mailbox von&amp;quot;&lt;/code>, the wording of a carrier&amp;apos;s mailbox the built-in lists do
+    /// not know. Needs &lt;code>keyword_detection_active&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10251,8 +13527,11 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(98);
     private readonly pbc::RepeatedField<string> additionalHumanPhrases_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Additional phrases that indicate a person, added to the built-in de and en phrase lists
-    /// (maximum 50 phrases, each 1 - 80 characters)
+    /// Phrases that indicate a person, added to the built-in German and English phrase lists (at most 50 phrases,
+    /// each 1 - 80 characters and not blank; otherwise refused with &lt;code>INVALID_ARGUMENT&lt;/code>; no deployment
+    /// setting). Hearing one of them counts as evidence of a person, matched like
+    /// &lt;code>additional_machine_phrases&lt;/code>, e.g. the way the people you call usually answer the phone. Empty
+    /// (the default) adds nothing. Needs &lt;code>keyword_detection_active&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10266,7 +13545,10 @@ namespace Ondewo.Vtsi {
 
     private bool hangUpOnFax_;
     /// <summary>
-    /// Optional: Hang up on a FAX verdict when the action is HANG_UP (default: true)
+    /// Optional: Hang up on a FAX verdict (default: &lt;code>true&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_HANG_UP_ON_FAX&lt;/code>). Applies under &lt;code>HANG_UP&lt;/code> and
+    /// &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> (a fax never gets a voice message); &lt;code>false&lt;/code> lets the call continue
+    /// with the greeting
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10296,8 +13578,11 @@ namespace Ondewo.Vtsi {
 
     private bool hangUpOnNetworkAnnouncement_;
     /// <summary>
-    /// Optional: Hang up on a NETWORK_ANNOUNCEMENT verdict, e.g. "the number is not reachable",
-    /// when the action is HANG_UP (default: true)
+    /// Optional: Hang up on a NETWORK_ANNOUNCEMENT verdict, e.g. &amp;quot;the number is not reachable&amp;quot; or a special
+    /// information tone (default: &lt;code>true&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_HANG_UP_ON_NETWORK_ANNOUNCEMENT&lt;/code>). Applies under &lt;code>HANG_UP&lt;/code> and
+    /// &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> (no voice message is left); &lt;code>false&lt;/code> lets the call continue with
+    /// the greeting
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10327,7 +13612,10 @@ namespace Ondewo.Vtsi {
 
     private bool hangUpOnIvr_;
     /// <summary>
-    /// Optional: Hang up on an IVR verdict, i.e. an automated menu, when the action is HANG_UP (default: false)
+    /// Optional: Hang up on an IVR verdict, i.e. an automated menu such as &amp;quot;press 1 for ...&amp;quot; (default:
+    /// &lt;code>false&lt;/code>; deployment setting &lt;code>ONDEWO_VTSI_AMD_HANG_UP_ON_IVR&lt;/code>). With the default the bot
+    /// greets the IVR. Applies under &lt;code>HANG_UP&lt;/code> and &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> (no voice message is
+    /// left)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10357,8 +13645,10 @@ namespace Ondewo.Vtsi {
 
     private bool hangUpOnCallScreening_;
     /// <summary>
-    /// Optional: Hang up on a CALL_SCREENING verdict, i.e. a call screening assistant asking for the reason of
-    /// the call, when the action is HANG_UP (default: false)
+    /// Optional: Hang up on a CALL_SCREENING verdict, i.e. a call screening assistant asking for the reason of the
+    /// call (default: &lt;code>false&lt;/code>; deployment setting &lt;code>ONDEWO_VTSI_AMD_HANG_UP_ON_CALL_SCREENING&lt;/code>).
+    /// With the default the bot greets the assistant, which may then put the call through to the person. Applies
+    /// under &lt;code>HANG_UP&lt;/code> and &lt;code>LEAVE_VOICE_MESSAGE&lt;/code> (no voice message is left)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10388,9 +13678,12 @@ namespace Ondewo.Vtsi {
 
     private string voiceMessageIntent_;
     /// <summary>
-    /// Optional: Name of the NLU intent whose fulfillment is the voice message when the action is
-    /// LEAVE_VOICE_MESSAGE; it is triggered once (default: the welcome intent of the NLU project,
-    /// 1 - 200 characters when set)
+    /// Optional: Name of the NLU intent whose fulfillment is the voice message under
+    /// &lt;code>LEAVE_VOICE_MESSAGE&lt;/code>; it is triggered once per call (default: the welcome intent of the NLU
+    /// project; 1 - 200 characters and not blank when set, otherwise refused with &lt;code>INVALID_ARGUMENT&lt;/code>;
+    /// deployment setting &lt;code>ONDEWO_VTSI_AMD_VOICE_MESSAGE_INTENT&lt;/code>). Ignored under the other actions.
+    /// Example: an intent &lt;code>i.voice_message&lt;/code> whose response is &amp;quot;Hello, this is ... Please call us back
+    /// at ...&amp;quot;
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10419,9 +13712,11 @@ namespace Ondewo.Vtsi {
 
     private int voiceMessageMaxBeepWaitMs_;
     /// <summary>
-    /// Optional: Maximum time in milliseconds after the verdict to wait for the beep, or for the end of the
-    /// machine greeting, before the voice message is spoken when the action is LEAVE_VOICE_MESSAGE;
-    /// 0 speaks immediately (default: 10000, valid range: 0 - 30000)
+    /// Optional: Under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code>, the longest time in milliseconds after the verdict to wait
+    /// for the beep, or for the machine greeting to end in silence, before the voice message is spoken anyway
+    /// (default: 10000, valid range: 0 - 30000; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_VOICE_MESSAGE_MAX_BEEP_WAIT_MS&lt;/code>). &lt;code>0&lt;/code> speaks it immediately at the
+    /// verdict, possibly over the rest of the greeting. Ignored under the other actions
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10451,9 +13746,11 @@ namespace Ondewo.Vtsi {
 
     private int voiceMessageTimeoutMs_;
     /// <summary>
-    /// Optional: Maximum time in milliseconds after the verdict until the call is hung up when the action is
-    /// LEAVE_VOICE_MESSAGE, also when the voice message has not finished playing
-    /// (default: 30000, valid range: 5000 - 120000)
+    /// Optional: Under &lt;code>LEAVE_VOICE_MESSAGE&lt;/code>, the time in milliseconds after the verdict at which the call
+    /// is hung up at the latest, also when the voice message has not finished playing (default: 30000, valid range:
+    /// 5000 - 120000; deployment setting &lt;code>ONDEWO_VTSI_AMD_VOICE_MESSAGE_TIMEOUT_MS&lt;/code>). It bounds the wait
+    /// for the beep plus the message itself, so choose it above &lt;code>voice_message_max_beep_wait_ms&lt;/code> plus
+    /// the length of the message, or the message is cut off. Ignored under the other actions
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10483,9 +13780,11 @@ namespace Ondewo.Vtsi {
 
     private bool keywordDetectionActive_;
     /// <summary>
-    /// Optional: Enable the detection of machine and person phrases in the transcribed greeting, i.e. the
-    /// built-in phrase lists plus additional_machine_phrases and additional_human_phrases; turning it off
-    /// removes this evidence and the detection rules that need it (default: true)
+    /// Optional: Whether the words of the transcribed greeting are used as evidence, i.e. the built-in phrase lists
+    /// plus &lt;code>additional_machine_phrases&lt;/code> and &lt;code>additional_human_phrases&lt;/code> (default:
+    /// &lt;code>true&lt;/code>; deployment setting &lt;code>ONDEWO_VTSI_AMD_KEYWORD_DETECTION_ACTIVE&lt;/code>). With
+    /// &lt;code>false&lt;/code> the call is decided on tones and the rhythm of speech and silence alone: a mailbox phrase
+    /// can no longer lead to a hangup, and the two phrase lists have no effect
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10515,9 +13814,12 @@ namespace Ondewo.Vtsi {
 
     private bool cadenceDetectionActive_;
     /// <summary>
-    /// Optional: Enable the detection based on the speech and silence cadence of the greeting, e.g. its
-    /// length and the silence after it; turning it off removes this evidence and the detection rules that
-    /// need it (default: true)
+    /// Optional: Whether the rhythm of speech and silence of the greeting is used as evidence, e.g. its length and
+    /// the silence after it (default: &lt;code>true&lt;/code>; deployment setting
+    /// &lt;code>ONDEWO_VTSI_AMD_CADENCE_DETECTION_ACTIVE&lt;/code>). With &lt;code>false&lt;/code> the call is decided on tones and
+    /// phrases alone; &lt;code>max_human_greeting_ms&lt;/code>, &lt;code>greeting_end_silence_ms&lt;/code> and
+    /// &lt;code>initial_silence_ms&lt;/code> then no longer decide the verdict, and a silent line ends as UNKNOWN at
+    /// &lt;code>max_decision_time_ms&lt;/code> instead of NO_SPEECH. The start of a voice message is still timed
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11146,52 +14448,66 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// What to do once a non-human verdict is reached
+      /// What the call does once a verdict is reached that is not a person
       /// </summary>
       public enum AmdAction {
         /// <summary>
-        /// Unspecified action defaults to HANG_UP
+        /// Not set explicitly. As a value of &lt;code>action&lt;/code> it selects the built-in default
+        /// &lt;code>HANG_UP&lt;/code>; leave &lt;code>action&lt;/code> unset instead to inherit the deployment setting
+        /// &lt;code>ONDEWO_VTSI_AMD_ACTION&lt;/code>
         /// </summary>
         [pbr::OriginalName("AMD_ACTION_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Hang up at once on a non-human verdict whose per-verdict hang-up switch is on
-        /// (an answering machine is always hung up on) (default)
+        /// Hang up at once on an answering machine, and on a fax, a network announcement, an IVR or a call
+        /// screening assistant whose &lt;code>hang_up_on_*&lt;/code> switch is on (default). The bot says nothing
+        /// before the hangup
         /// </summary>
         [pbr::OriginalName("HANG_UP")] HangUp = 1,
         /// <summary>
-        /// Only detect and record the verdict, never hang up: OUTGOING_CALL_ANSWERING_MACHINE_DETECTED is still
-        /// set, then the far end is treated as a person and the call continues with the greeting and ends
-        /// normally (shadow mode to calibrate the detection before enabling HANG_UP)
+        /// Shadow mode: detect and report the verdict, never hang up.
+        /// &lt;code>OUTGOING_CALL_ANSWERING_MACHINE_DETECTED&lt;/code> is still set for a verdict that would hang up, then
+        /// the far end is treated as a person: the call continues with the greeting and ends normally. Use it to
+        /// measure how the detection would decide on real calls before switching to &lt;code>HANG_UP&lt;/code>
         /// </summary>
         [pbr::OriginalName("DETECT_ONLY")] DetectOnly = 2,
         /// <summary>
-        /// Leave a voice message on a hang-up-eligible verdict, then hang up: the fulfillment of
-        /// voice_message_intent is spoken once after the beep (or after the end of the machine greeting),
-        /// and the call is hung up when it finished playing or when voice_message_timeout_ms elapsed,
-        /// whichever comes first. A FAX verdict never gets a voice message; it is hung up on when
-        /// hang_up_on_fax is on. See the compliance note above before enabling it
+        /// Leave a voice message on an answering machine, then hang up. Only a MACHINE verdict gets a message: a
+        /// fax, a network announcement, an IVR or a call screening assistant is not a mailbox and is hung up on at
+        /// once, without a message, when its &lt;code>hang_up_on_*&lt;/code> switch is on.
+        /// &lt;p>The fulfillment of &lt;code>voice_message_intent&lt;/code> is prepared at the verdict and spoken once, when
+        /// the first of these happens: the beep of the mailbox ended, the greeting ended in silence, or
+        /// &lt;code>voice_message_max_beep_wait_ms&lt;/code> passed. The call is hung up when the message finished
+        /// playing or when &lt;code>voice_message_timeout_ms&lt;/code> after the verdict elapsed, whichever comes first.
+        /// If the NLU fails, no apology is spoken onto the mailbox. The voice message intent is triggered on the
+        /// call&amp;apos;s NLU session at the verdict, also when the machine hangs up before the message is played.
+        /// See the compliance note above before enabling it&lt;/p>
         /// </summary>
         [pbr::OriginalName("LEAVE_VOICE_MESSAGE")] LeaveVoiceMessage = 3,
       }
 
       /// <summary>
-      /// Sensitivity of the detection: selects the enabled detection rules and their internal thresholds
+      /// How readily the detection decides that a machine answered. It selects which detection rules may hang up; the timing fields below are not changed by it. Whatever the sensitivity, a person-like answer, silence and an undecided call are never hung up on
       /// </summary>
       public enum AmdSensitivity {
         /// <summary>
-        /// Unspecified sensitivity defaults to LOW
+        /// Not set explicitly. As a value of &lt;code>sensitivity&lt;/code> it selects the built-in default
+        /// &lt;code>LOW&lt;/code>; leave &lt;code>sensitivity&lt;/code> unset instead to inherit the deployment setting
+        /// &lt;code>ONDEWO_VTSI_AMD_SENSITIVITY&lt;/code>
         /// </summary>
         [pbr::OriginalName("AMD_SENSITIVITY_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Most conservative towards people: only strong machine evidence leads to a machine verdict (default)
+        /// Most conservative towards people (default): a machine verdict needs one piece of strong evidence on its
+        /// own, e.g. a clear mailbox beep or a mailbox phrase such as &amp;quot;leave a message after the beep&amp;quot;.
+        /// Fewest people hung up on; some machines are missed and greeted
         /// </summary>
         [pbr::OriginalName("LOW")] Low = 1,
         /// <summary>
-        /// Balanced between missed machines and people classified as machines
+        /// Balanced: in addition, a long greeting together with a weaker machine phrase is enough
         /// </summary>
         [pbr::OriginalName("MEDIUM")] Medium = 2,
         /// <summary>
-        /// Most aggressive: detects more machines at a higher risk of hanging up on a person
+        /// Most aggressive: in addition, a long greeting together with a weaker beep is enough. Detects the most
+        /// machines, at the highest risk of hanging up on a person
         /// </summary>
         [pbr::OriginalName("HIGH")] High = 3,
       }
@@ -11202,8 +14518,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The base config is for both the listener and caller. If you only provide it you will get a listener
-  /// You will need to provide &lt;code>SipCallerConfig&lt;/code> for the caller
+  /// SIP side of a listener or caller: which version of the SIP container image carries the call. A listener is started with this message alone (&lt;code>StartListenerRequest.sip_base_config&lt;/code>); a caller needs the callee as well and carries it inside &lt;code>SipCallerConfig&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipBaseConfig : pb::IMessage<SipBaseConfig>
@@ -11220,7 +14535,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11254,7 +14569,15 @@ namespace Ondewo.Vtsi {
     public const int SipSimVersionFieldNumber = 1;
     private string sipSimVersion_ = "";
     /// <summary>
-    /// version of sip to use for call, semantic versioning e.g., 1.0.0, 1.1.0-pre-release, etc.
+    /// Optional: Tag of the SIP container image the call runs in, e.g. a semantic version (&lt;code>5.1.0&lt;/code>,
+    /// &lt;code>1.1.0-pre-release&lt;/code>), a moving tag (&lt;code>latest&lt;/code>, &lt;code>develop&lt;/code>) or a build tag.
+    /// Empty (the default): the deployment&amp;apos;s &lt;code>ONDEWO_VTSI_DEFAULT_SIP_IMAGE_TAG&lt;/code> is filled in and
+    /// stored with the call. A valid tag is up to 128 letters, digits, &lt;code>.&lt;/code>, &lt;code>_&lt;/code> or
+    /// &lt;code>-&lt;/code>, starting with a letter, digit or &lt;code>_&lt;/code>; anything else (a &lt;code>/&lt;/code>, a
+    /// &lt;code>:&lt;/code>, whitespace, a leading &lt;code>.&lt;/code> or &lt;code>-&lt;/code>) is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>. A host that already has the image runs its copy at once and refreshes it in
+    /// the background, so after a moving tag was re-pointed a call may still run the previous image. Pin a version
+    /// to know exactly which image a call ran. Part of the configuration a pooled persistent caller is matched by.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11407,7 +14730,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the SIP caller
+  /// SIP side of an outbound call: the SIP container image, whom to dial and the SIP headers of the INVITE. Used by &lt;code>StartCaller&lt;/code>, scheduled callers and campaigns (&lt;code>Campaign.campaign_sip_caller_config&lt;/code>, merged under each call&amp;apos;s own value).
+  ///
+  /// Pooled persistent callers: &lt;code>callee_id&lt;/code> and &lt;code>sip_headers&lt;/code> are sent with each call and are NOT part of the configuration a pooled caller is matched by, so calls to different callees, or with different headers, can reuse the same caller; &lt;code>sip_base_config&lt;/code> is part of it.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SipCallerConfig : pb::IMessage<SipCallerConfig>
@@ -11424,7 +14749,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11460,7 +14785,7 @@ namespace Ondewo.Vtsi {
     public const int SipBaseConfigFieldNumber = 1;
     private global::Ondewo.Vtsi.SipBaseConfig sipBaseConfig_;
     /// <summary>
-    /// SIP configuration
+    /// SIP container image of the call (see &lt;code>SipBaseConfig&lt;/code>)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11503,10 +14828,11 @@ namespace Ondewo.Vtsi {
     /// SIP headers sent on the outbound INVITE, header name to value, e.g.
     /// &lt;code>{"X-ondewo-phonesystem-call-id": "4711"}&lt;/code>. At most 64 entries, otherwise
     /// &lt;code>INVALID_ARGUMENT&lt;/code>. Keys are sent as SIP header names, so they should be valid header names (by
-    /// convention &lt;code>X-&lt;/code> headers); VTSI does not restrict them further, and a header the SIP stack or the
-    /// Asterisk cannot send is dropped by them. Unlike &lt;code>TransferCallRequest.headers&lt;/code>, which only takes
-    /// &lt;code>X-ondewo-*&lt;/code> keys because it is delivered through the dialplan, these are sent by the caller&amp;apos;s
-    /// own SIP stack. Updatable on a scheduled caller with &lt;code>UpdateScheduledCaller&lt;/code>.
+    /// convention &lt;code>X-&lt;/code> headers). &lt;code>X-ondewo-vtsi-caller-call-id&lt;/code> is reserved: on a pooled
+    /// persistent caller VTSI replaces it with the id of the call. VTSI does not restrict the other keys; a header
+    /// the SIP stack or the Asterisk cannot send is dropped by them. Unlike &lt;code>TransferCallRequest.headers&lt;/code>,
+    /// which only takes &lt;code>X-ondewo-*&lt;/code> keys because it is delivered through the dialplan, these are sent by
+    /// the caller&amp;apos;s own SIP stack. Updatable on a scheduled caller with &lt;code>UpdateScheduledCaller&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11703,7 +15029,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// CSI configuration
+  /// Configuration of the speech-to-speech service of a call (the service that streams the caller&amp;apos;s audio to speech-to-text, sends the transcriptions to the NLU and plays the synthesized answers): control messages, preemptive generation, storage of the call audio and publishing of call events to a RabbitMQ message broker.
+  ///
+  /// Scope: the configuration of a LISTENER applies to every inbound call that listener deployment serves; the configuration of a caller, a campaign or a scheduled caller applies to its own calls. A pooled (persistent) caller is only reused for a request whose configuration is identical.
+  ///
+  /// Unset fields inherit: the deployment-wide &lt;code>ONDEWO_VTSI_*&lt;/code> setting where a field names one, else the built-in default. A value set here wins over both for this call.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CsiVtsiConfig : pb::IMessage<CsiVtsiConfig>
@@ -11721,7 +15051,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11762,7 +15092,7 @@ namespace Ondewo.Vtsi {
     public const int S2TVtsiCallbacksFieldNumber = 1;
     private global::Ondewo.Vtsi.S2tVtsiCallbacks s2TVtsiCallbacks_;
     /// <summary>
-    /// Callback for the Speech-2-Text platform
+    /// Speech-to-text callbacks. Accepted and validated, but they have no effect: see &lt;code>S2tVtsiCallbacks&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11777,7 +15107,7 @@ namespace Ondewo.Vtsi {
     public const int NluVtsiCallbacksFieldNumber = 2;
     private global::Ondewo.Vtsi.NluVtsiCallbacks nluVtsiCallbacks_;
     /// <summary>
-    /// Callback for the NLU platform
+    /// NLU callbacks. Accepted and validated, but they have no effect: see &lt;code>NluVtsiCallbacks&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11792,7 +15122,7 @@ namespace Ondewo.Vtsi {
     public const int T2SVtsiCallbacksFieldNumber = 3;
     private global::Ondewo.Vtsi.T2sVtsiCallbacks t2SVtsiCallbacks_;
     /// <summary>
-    /// Callback for the Text-2-Speech platform
+    /// Text-to-speech callbacks. Accepted and validated, but they have no effect: see &lt;code>T2sVtsiCallbacks&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11807,7 +15137,8 @@ namespace Ondewo.Vtsi {
     public const int AudioObjectStoreConfigFieldNumber = 4;
     private global::Ondewo.Vtsi.AudioObjectStorageConfig audioObjectStoreConfig_;
     /// <summary>
-    /// Configuration of the Minio Audio Object Store
+    /// Optional: Store the audio of the call (what the caller said and what the bot said) as audio files of the
+    /// call&amp;apos;s NLU session. Unset: nothing is stored. See &lt;code>AudioObjectStorageConfig&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11822,7 +15153,9 @@ namespace Ondewo.Vtsi {
     public const int MessageBrokerConfigFieldNumber = 5;
     private global::Ondewo.Vtsi.MessageBrokerConfig messageBrokerConfig_;
     /// <summary>
-    /// Configuration of the RabbitMQ Message Broker
+    /// Optional: Publish the events of the call (transcriptions, NLU answers, synthesized answers, SIP status) to a
+    /// RabbitMQ message broker and receive control messages for the call from it. Unset: nothing is published. See
+    /// &lt;code>MessageBrokerConfig&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11839,17 +15172,16 @@ namespace Ondewo.Vtsi {
 
     private bool activateControlMessages_;
     /// <summary>
-    /// Setting to activate if it is possible to send control messages
-    /// &lt;ul>
-    ///   &lt;li>via RabbitMQ to remote control the system&lt;/li>
-    ///   &lt;li>via embeddings in NLU text responses&lt;/li>
-    /// &lt;/ul>
-    /// Explicitly optional: leaving the field unset means the caller expresses no preference and the
-    /// server keeps its own configured default. That is NOT the same as sending
-    /// &lt;pre>&lt;code>false&lt;/code>&lt;/pre>, which is a request to switch control messages off. A
-    /// presence-less bool cannot tell the two apart, so an unset field arrived as
-    /// &lt;pre>&lt;code>false&lt;/code>&lt;/pre> and silently disabled control messages for callers that never
-    /// mentioned them.
+    /// Optional: Execute the control messages the NLU agent returns with an answer. A control message is an
+    /// intent&amp;apos;s webhook payload that names a &lt;code>service&lt;/code> (&lt;code>ondewo_nlu&lt;/code>,
+    /// &lt;code>ondewo_s2t&lt;/code>, &lt;code>ondewo_t2s&lt;/code> or &lt;code>ondewo_sip&lt;/code>), a &lt;code>method&lt;/code> and its
+    /// &lt;code>parameters&lt;/code>; with this switch on, the bot performs that action in the call when the intent
+    /// answers (e.g. a SIP action of the call or a change of the speech settings). &lt;code>false&lt;/code>: payloads are
+    /// ignored and the answers are only spoken. Control messages that arrive over RabbitMQ are not governed by this
+    /// switch but by &lt;code>message_broker_config&lt;/code>.
+    /// &lt;p>Unset is NOT the same as &lt;code>false&lt;/code>: unset keeps the deployment-wide setting
+    /// &lt;code>ONDEWO_VTSI_CSI_SERVER_ACTIVATE_CONTROL_MESSAGES&lt;/code> (default &lt;code>true&lt;/code>), while
+    /// &lt;code>false&lt;/code> switches control messages off for this call.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11877,7 +15209,9 @@ namespace Ondewo.Vtsi {
     public const int PreemptiveGenerationConfigFieldNumber = 7;
     private global::Ondewo.Vtsi.CsiPreemptiveGenerationConfig preemptiveGenerationConfig_;
     /// <summary>
-    /// Optional: Preemptive (speculative) generation of the answer. Unset keeps the deployment&amp;apos;s values
+    /// Optional: Preemptive (speculative) generation of the answer: whether it runs on this call and how long a
+    /// matching draft may still take. Unset keeps the deployment&amp;apos;s setting. See
+    /// &lt;code>CsiPreemptiveGenerationConfig&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12228,12 +15562,11 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Preemptive (speculative) generation of the answer: on a stable partial transcription a draft answer is generated
-  /// before the final transcription arrives, and played only when the final transcription matches it; a draft that
-  /// does not match is discarded and the caller hears nothing of it. Every field is optional; an unset field keeps
-  /// the deployment&amp;apos;s value. A value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
-  /// The NLU bounds are set with &lt;code>NluVtsiConfig.preemptive_generation_config&lt;/code>, the speech synthesis of a
-  /// draft with &lt;code>T2sVtsiConfig.preemptive_synthesis_config&lt;/code>
+  /// Preemptive (speculative) generation of the answer: on a stable partial transcription a draft answer is generated before the caller&amp;apos;s final transcription arrives, and played only when the final transcription matches it; a draft that does not match is discarded and the caller hears nothing of it. A matching draft answers the caller sooner; every draft costs an extra NLU request (and, unless switched off, a speech synthesis), also when it is discarded. It never ends the caller&amp;apos;s turn early.
+  ///
+  /// Every field is optional. An unset &lt;code>enabled&lt;/code> keeps the deployment&amp;apos;s setting (see the field); an unset &lt;code>commit_wait_timeout_seconds&lt;/code> keeps the built-in default given at the field. A value outside its range is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. The NLU bounds (how many drafts a turn may start) are set with &lt;code>NluVtsiConfig.preemptive_generation_config&lt;/code>, the speech synthesis of a draft with &lt;code>T2sVtsiConfig.preemptive_synthesis_config&lt;/code>.
+  ///
+  /// Example: &lt;code>enabled=false&lt;/code> switches speculation off for this call, e.g. to save NLU requests on an agent whose answers are expensive.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CsiPreemptiveGenerationConfig : pb::IMessage<CsiPreemptiveGenerationConfig>
@@ -12251,7 +15584,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12289,9 +15622,11 @@ namespace Ondewo.Vtsi {
 
     private bool enabled_;
     /// <summary>
-    /// Optional: Enable preemptive generation (default: the deployment&amp;apos;s setting, which is true unless changed).
-    /// Replaces the deprecated &lt;code>ResponseTimingConfig.preemptive_generation_enabled&lt;/code>; set together with it
-    /// to a different value, the request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Optional: Enable preemptive generation on this call. Precedence: this field, else the deprecated
+    /// &lt;code>ResponseTimingConfig.preemptive_generation_enabled&lt;/code>, else the deployment-wide setting
+    /// &lt;code>ONDEWO_VTSI_CSI_PREEMPTIVE_GENERATION_ACTIVE&lt;/code> (default &lt;code>true&lt;/code>). Set together with the
+    /// deprecated field to a different value, the request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>; the same
+    /// value in both is accepted
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12322,9 +15657,10 @@ namespace Ondewo.Vtsi {
     private float commitWaitTimeoutSeconds_;
     /// <summary>
     /// Optional: Seconds a draft that matches the final transcription may still take before it is discarded and the
-    /// turn is answered normally (default: 3.0, valid range: 0 - 3). While
-    /// &lt;code>T2sPreemptiveSynthesisConfig.chunked&lt;/code> is off the commit waits for the whole draft; while it is on,
-    /// only for the draft&amp;apos;s first chunk
+    /// turn is answered normally. While the bot waits here the caller hears nothing, so a long wait on a slow draft
+    /// adds to the silence instead of saving time. Unset: 3.0. Valid range: 0 - 3. While
+    /// &lt;code>T2sPreemptiveSynthesisConfig.chunked&lt;/code> is off the wait is for the whole draft; while it is on, only
+    /// for the draft&amp;apos;s first chunk. Only matters while preemptive generation is on
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12514,7 +15850,13 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Minio Audio Object Store
+  /// Storage of the call audio: the caller&amp;apos;s audio of every final transcription and the bot&amp;apos;s audio of every answer as it was played (an answer the caller interrupted is stored as far as it played) are stored as audio files of the call&amp;apos;s NLU session, next to the session&amp;apos;s text.
+  ///
+  /// Nothing is stored unless &lt;code>activate_audio_object_storage&lt;/code> AND the flag of the side are &lt;code>true&lt;/code>. Every unset flag counts as &lt;code>false&lt;/code>; there is no deployment-wide default for these flags.
+  ///
+  /// Example: &lt;code>activate_audio_object_storage=true&lt;/code>, &lt;code>audio_object_storage_services_activation_config.activate_s2t=true&lt;/code> and &lt;code>activate_t2s=true&lt;/code> store both sides of the conversation. With only &lt;code>activate_audio_object_storage=true&lt;/code> nothing is stored.
+  ///
+  /// The audio of a warm-transfer intro call is governed by &lt;code>WarmTransferConfig.store_intro_audio&lt;/code> instead.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AudioObjectStorageConfig : pb::IMessage<AudioObjectStorageConfig>
@@ -12532,7 +15874,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12570,7 +15912,8 @@ namespace Ondewo.Vtsi {
 
     private bool activateAudioObjectStorage_;
     /// <summary>
-    /// Audio storage should be activated or not
+    /// Optional: Master switch of the audio storage of the call. Unset or &lt;code>false&lt;/code>: no audio of the call
+    /// is stored, whatever the per-side flags say
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12598,7 +15941,8 @@ namespace Ondewo.Vtsi {
     public const int AudioObjectStorageServicesActivationConfigFieldNumber = 2;
     private global::Ondewo.Vtsi.AudioObjectStorageServicesActivationConfig audioObjectStorageServicesActivationConfig_;
     /// <summary>
-    /// Configuration of the Minio Audio Object Store
+    /// Which side of the conversation is stored while &lt;code>activate_audio_object_storage&lt;/code> is
+    /// &lt;code>true&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12784,7 +16128,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the Minio Audio Object Store
+  /// Which side of the conversation is stored. Only takes effect while &lt;code>AudioObjectStorageConfig.activate_audio_object_storage&lt;/code> is &lt;code>true&lt;/code>; every unset flag counts as &lt;code>false&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AudioObjectStorageServicesActivationConfig : pb::IMessage<AudioObjectStorageServicesActivationConfig>
@@ -12802,7 +16146,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12840,7 +16184,8 @@ namespace Ondewo.Vtsi {
 
     private bool activateS2T_;
     /// <summary>
-    /// Should audio object store save audio sent to the Speech-2-Text platform
+    /// Optional: Store the caller&amp;apos;s audio (the audio sent to speech-to-text), one file per final transcription.
+    /// Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12870,7 +16215,7 @@ namespace Ondewo.Vtsi {
 
     private bool activateT2S_;
     /// <summary>
-    /// Should audio object store save audio generated from the Text-2-Speech platform
+    /// Optional: Store the bot&amp;apos;s audio (the synthesized answers as they were played). Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13060,7 +16405,13 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the RabbitMQ Message Broker
+  /// Publishing of call events to a RabbitMQ message broker, and receiving control messages for the call from it.
+  ///
+  /// While &lt;code>activate_message_broker&lt;/code> is &lt;code>true&lt;/code>, the call publishes its NLU project and session with every NLU answer, starts listening for control messages addressed to its session after the first final transcription (they are executed in the call), and publishes the events of every service whose flag in &lt;code>message_broker_services_activation_config&lt;/code> is &lt;code>true&lt;/code>. Every unset flag counts as &lt;code>false&lt;/code>; there is no deployment-wide default for these flags.
+  ///
+  /// Activating the broker requires a complete &lt;code>rabbit_mq_config&lt;/code>: host, both ports, user and password must be set. When the request is validated the broker must be reachable over TLS, present a certificate for &lt;code>host&lt;/code> that the deployment trusts, accept VTSI&amp;apos;s client certificate and accept the credentials; otherwise the request is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. The call connects to the broker over TLS as well.
+  ///
+  /// Example: &lt;code>activate_message_broker=true&lt;/code> with &lt;code>message_broker_services_activation_config.activate_s2t=true&lt;/code> publishes every final transcription of the call, e.g. for a live transcript in another application.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MessageBrokerConfig : pb::IMessage<MessageBrokerConfig>
@@ -13078,7 +16429,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13122,7 +16473,8 @@ namespace Ondewo.Vtsi {
 
     private bool activateMessageBroker_;
     /// <summary>
-    /// Should the broker be activated or not
+    /// Optional: Master switch of the message broker for the call. Unset or &lt;code>false&lt;/code>: nothing is published,
+    /// no control message is received over RabbitMQ, and &lt;code>rabbit_mq_config&lt;/code> is not validated
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13150,7 +16502,7 @@ namespace Ondewo.Vtsi {
     public const int MessageBrokerServicesActivationConfigFieldNumber = 2;
     private global::Ondewo.Vtsi.MessageBrokerServicesActivationConfig messageBrokerServicesActivationConfig_;
     /// <summary>
-    /// Configuration of the Broker service activation
+    /// Which services publish their events while &lt;code>activate_message_broker&lt;/code> is &lt;code>true&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13164,7 +16516,8 @@ namespace Ondewo.Vtsi {
     /// <summary>Field number for the "rabbit_mq_config" field.</summary>
     public const int RabbitMqConfigFieldNumber = 3;
     /// <summary>
-    /// Configuration of the RabbitMQ Message Broker
+    /// Address and credentials of the RabbitMQ server. Required while &lt;code>activate_message_broker&lt;/code> is
+    /// &lt;code>true&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13413,7 +16766,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the RabbitMQ Message Broker
+  /// Which services of the call publish their events to RabbitMQ. Only takes effect while &lt;code>MessageBrokerConfig.activate_message_broker&lt;/code> is &lt;code>true&lt;/code>; every unset flag counts as &lt;code>false&lt;/code>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MessageBrokerServicesActivationConfig : pb::IMessage<MessageBrokerServicesActivationConfig>
@@ -13431,7 +16784,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13471,7 +16824,7 @@ namespace Ondewo.Vtsi {
 
     private bool activateS2T_;
     /// <summary>
-    /// should RabbitMQ Message Broker be activated for Speech-2-Text platform
+    /// Optional: Publish every final transcription of the caller. Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13501,7 +16854,7 @@ namespace Ondewo.Vtsi {
 
     private bool activateNlu_;
     /// <summary>
-    /// should RabbitMQ Message Broker be activated for NLU platform
+    /// Optional: Publish every NLU answer. Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13531,7 +16884,7 @@ namespace Ondewo.Vtsi {
 
     private bool activateT2S_;
     /// <summary>
-    /// should RabbitMQ Message Broker be activated for Text-2-Speech platform
+    /// Optional: Publish every synthesized answer. Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13561,7 +16914,7 @@ namespace Ondewo.Vtsi {
 
     private bool activateSip_;
     /// <summary>
-    /// should RabbitMQ Message Broker be activated for SIP platform
+    /// Optional: Publish the SIP information of the call with every NLU answer. Unset: &lt;code>false&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13799,7 +17152,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Configuration of the RabbitMQ Message Broker
+  /// Address and credentials of the RabbitMQ server the call publishes to. Validated only while &lt;code>MessageBrokerConfig.activate_message_broker&lt;/code> is &lt;code>true&lt;/code>: then every field is required, and the server is contacted with these credentials when the request is validated
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RabbitMqConfig : pb::IMessage<RabbitMqConfig>
@@ -13816,7 +17169,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13854,7 +17207,8 @@ namespace Ondewo.Vtsi {
     public const int HostFieldNumber = 1;
     private string host_ = "";
     /// <summary>
-    /// host where the rabbit mq server runs
+    /// Host name or IP address of the RabbitMQ server. Required while the broker is activated; empty is
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13885,9 +17239,9 @@ namespace Ondewo.Vtsi {
     public const int Port2FieldNumber = 3;
     private int port2_;
     /// <summary>
-    /// Management (HTTP API) port of the RabbitMQ server (typically &lt;code>15672&lt;/code>), 1 to 65535. It is passed to
-    /// the call&amp;apos;s CSI process as &lt;code>RABBIT_PORT_2&lt;/code> and is not used for the connectivity check. 0 or below
-    /// is &lt;code>INVALID_ARGUMENT&lt;/code>
+    /// Management (HTTP API) port of the RabbitMQ server (typically &lt;code>15672&lt;/code>), 1 to 65535. Required while
+    /// the broker is activated (0 or below is &lt;code>INVALID_ARGUMENT&lt;/code>), but currently not used: neither the
+    /// connectivity check nor the call connects to it
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13902,7 +17256,8 @@ namespace Ondewo.Vtsi {
     public const int UserFieldNumber = 4;
     private string user_ = "";
     /// <summary>
-    /// user of server
+    /// User name on the RabbitMQ server. Required while the broker is activated; empty is
+    /// &lt;code>INVALID_ARGUMENT&lt;/code>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13917,7 +17272,8 @@ namespace Ondewo.Vtsi {
     public const int PasswordFieldNumber = 5;
     private string password_ = "";
     /// <summary>
-    /// password of server
+    /// Password of &lt;code>user&lt;/code>. Required while the broker is activated; empty is &lt;code>INVALID_ARGUMENT&lt;/code>.
+    /// Never logged, and can be withheld when the call configuration is read back
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14167,10 +17523,8 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Callbacks for the Speech-2-Text platform.
-  /// &lt;p>Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The
-  /// callbacks are accepted and validated but currently NOT executed: no component of the call consumes them. The
-  /// field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be
-  /// documented then; do not rely on any effect.&lt;/p>
+  ///
+  /// Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The callbacks are accepted and validated but currently NOT executed: no component of the call consumes them, and a call behaves exactly the same with or without them. The field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be documented then; do not rely on any effect.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class S2tVtsiCallbacks : pb::IMessage<S2tVtsiCallbacks>
@@ -14187,7 +17541,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14224,7 +17578,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> preS2TCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed before the Speech-2-Text will be called
+    /// Names of callbacks to run before the audio is sent to speech-to-text. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14238,7 +17592,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> postS2TCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed after the Speech-2-Text has been called
+    /// Names of callbacks to run after speech-to-text returned a transcription. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14393,10 +17747,8 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Callbacks for the NLU platform.
-  /// &lt;p>Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The
-  /// callbacks are accepted and validated but currently NOT executed: no component of the call consumes them. The
-  /// field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be
-  /// documented then; do not rely on any effect.&lt;/p>
+  ///
+  /// Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The callbacks are accepted and validated but currently NOT executed: no component of the call consumes them, and a call behaves exactly the same with or without them. The field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be documented then; do not rely on any effect.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NluVtsiCallbacks : pb::IMessage<NluVtsiCallbacks>
@@ -14413,7 +17765,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14450,7 +17802,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> preNluCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed before the NLU will be called
+    /// Names of callbacks to run before a request is sent to the NLU. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14464,7 +17816,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> postNluCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed after the NLU has been called
+    /// Names of callbacks to run after the NLU answered. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14619,10 +17971,8 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// Callbacks for the Text-2-Speech platform.
-  /// &lt;p>Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The
-  /// callbacks are accepted and validated but currently NOT executed: no component of the call consumes them. The
-  /// field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be
-  /// documented then; do not rely on any effect.&lt;/p>
+  ///
+  /// Each entry is a non-empty string (an empty entry is &lt;code>INVALID_ARGUMENT&lt;/code>) naming a callback. The callbacks are accepted and validated but currently NOT executed: no component of the call consumes them, and a call behaves exactly the same with or without them. The field is kept for wire compatibility and reserved for a future callback mechanism, whose naming scheme will be documented then; do not rely on any effect.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sVtsiCallbacks : pb::IMessage<T2sVtsiCallbacks>
@@ -14639,7 +17989,7 @@ namespace Ondewo.Vtsi {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Ondewo.Vtsi.CallConfigsReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14676,7 +18026,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(10);
     private readonly pbc::RepeatedField<string> preT2SCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed before the Text-2-Speech will be called
+    /// Names of callbacks to run before a text is synthesized. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14690,7 +18040,7 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> postT2SCallbacks_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Callback executed after the Text-2-Speech has been called
+    /// Names of callbacks to run after a text was synthesized. No effect (see the message comment)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

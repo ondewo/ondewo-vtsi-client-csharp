@@ -42,13 +42,11 @@ namespace Ondewo.Nlu {
   ///
   /// You can provide additional information for the Dialogflow API to use to match user input to an intent by adding the following to your intent.
   ///
-  /// &lt;ul>
-  ///   &lt;li>&lt;strong>Contexts&lt;/strong> - provide additional context for intent analysis. For example, if an intent is related to an object in your application that plays music, you can provide a context to determine when to match the intent if the user input is &amp;quot;turn it off&amp;quot;.  You can include a context that matches the intent when there is previous user input of &amp;quot;play music&amp;quot;, and not when there is previous user input of &amp;quot;turn on the light&amp;quot;.&lt;/li>
+  /// &lt;ul> &lt;li>&lt;strong>Contexts&lt;/strong> - provide additional context for intent analysis. For example, if an intent is related to an object in your application that plays music, you can provide a context to determine when to match the intent if the user input is &amp;quot;turn it off&amp;quot;.  You can include a context that matches the intent when there is previous user input of &amp;quot;play music&amp;quot;, and not when there is previous user input of &amp;quot;turn on the light&amp;quot;.&lt;/li>
   ///
-  ///   &lt;li>&lt;strong>Events&lt;/strong> - allow for matching an intent by using an event name instead of user input. Your application can provide an event name and related parameters to the Dialogflow API to match an intent. For example, when your application starts, you can send a welcome event with a user name parameter to the Dialogflow API to match an intent with a personalized welcome message for the user.&lt;/li>
+  /// &lt;li>&lt;strong>Events&lt;/strong> - allow for matching an intent by using an event name instead of user input. Your application can provide an event name and related parameters to the Dialogflow API to match an intent. For example, when your application starts, you can send a welcome event with a user name parameter to the Dialogflow API to match an intent with a personalized welcome message for the user.&lt;/li>
   ///
-  ///   &lt;li>&lt;strong>Training phrases&lt;/strong> - provide examples of user input to train the Dialogflow API agent to better match intents.&lt;/li>
-  /// &lt;/ul>
+  /// &lt;li>&lt;strong>Training phrases&lt;/strong> - provide examples of user input to train the Dialogflow API agent to better match intents.&lt;/li> &lt;/ul>
   ///
   /// For more information about intents, see the &lt;a href="https://dialogflow.com/docs/intents">Dialogflow documentation&lt;/a>.
   /// </summary>

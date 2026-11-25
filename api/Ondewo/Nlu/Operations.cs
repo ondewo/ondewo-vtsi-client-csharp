@@ -5599,10 +5599,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Describes one docker container started by a remote operation. A single operation may start several
-  /// containers sequentially (hardware-check, GPU pre-allocation, build-cache, and one training container
-  /// per algorithm), so containers are enumerated by
-  /// &lt;a href="index.html#ondewo.nlu.Operations.ListRemoteOperationContainers">Operations.ListRemoteOperationContainers&lt;/a>.
+  /// Describes one docker container started by a remote operation. A single operation may start several containers sequentially (hardware-check, GPU pre-allocation, build-cache, and one training container per algorithm), so containers are enumerated by &lt;a href="index.html#ondewo.nlu.Operations.ListRemoteOperationContainers">Operations.ListRemoteOperationContainers&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RemoteOperationContainer : pb::IMessage<RemoteOperationContainer>

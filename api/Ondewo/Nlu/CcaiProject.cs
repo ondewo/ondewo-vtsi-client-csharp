@@ -239,9 +239,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Defines the types of CCAI (Call Center AI) services available in the system.
   ///
-  /// Each service type represents a specific capability or module within the ONDEWO platform
-  /// that enables comprehensive call center and customer interaction management. Services can be
-  /// composed in workflows and are identified by their type, language code, and provider configuration.
+  /// Each service type represents a specific capability or module within the ONDEWO platform that enables comprehensive call center and customer interaction management. Services can be composed in workflows and are identified by their type, language code, and provider configuration.
   /// </summary>
   public enum CcaiServiceType {
     /// <summary>
@@ -5600,8 +5598,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to delete a CCAI service project
-  /// If a deployed CCAI service project was deleted then it was undeployed beforehand automatically
+  /// Request to delete a CCAI service project If a deployed CCAI service project was deleted then it was undeployed beforehand automatically
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCcaiProjectRequest : pb::IMessage<DeleteCcaiProjectRequest>
@@ -5846,8 +5843,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Response to delete a CCAI service project
-  /// If a deployed CCAI service project was deleted then it was undeployed beforehand automatically
+  /// Response to delete a CCAI service project If a deployed CCAI service project was deleted then it was undeployed beforehand automatically
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCcaiProjectResponse : pb::IMessage<DeleteCcaiProjectResponse>

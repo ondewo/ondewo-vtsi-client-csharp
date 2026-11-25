@@ -1394,12 +1394,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The metric an A/B rollout optimizes when comparing each variant against the
-  /// control. Each value maps to a quantity already produced by the per-variant
-  /// results rollup (see GetAbExperimentResults). Higher-is-better vs.
-  /// lower-is-better is implied by the metric (e.g. PASS_RATE / CRITERION_SCORE /
-  /// SAFETY_SCORE are higher-is-better; ERROR_RATE / MEAN_LATENCY are
-  /// lower-is-better) and applied server-side when picking the winner.
+  /// The metric an A/B rollout optimizes when comparing each variant against the control. Each value maps to a quantity already produced by the per-variant results rollup (see GetAbExperimentResults). Higher-is-better vs. lower-is-better is implied by the metric (e.g. PASS_RATE / CRITERION_SCORE / SAFETY_SCORE are higher-is-better; ERROR_RATE / MEAN_LATENCY are lower-is-better) and applied server-side when picking the winner.
   /// </summary>
   public enum LlmEvaluationAbOptimizeMetric {
     /// <summary>
@@ -7467,8 +7462,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListDatasets. All fields are optional; multiple fields
-  /// set at the same time are combined via logical AND.
+  /// Filter conditions for ListDatasets. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationDatasetFilter : pb::IMessage<LlmEvaluationDatasetFilter>
@@ -10227,8 +10221,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListExamples. All fields are optional; multiple fields
-  /// set at the same time are combined via logical AND.
+  /// Filter conditions for ListExamples. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationExampleFilter : pb::IMessage<LlmEvaluationExampleFilter>
@@ -12849,8 +12842,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListExperiments. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListExperiments. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationExperimentFilter : pb::IMessage<LlmEvaluationExperimentFilter>
@@ -15544,8 +15536,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListFeedback. All fields are optional; multiple fields
-  /// set at the same time are combined via logical AND.
+  /// Filter conditions for ListFeedback. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationFeedbackFilter : pb::IMessage<LlmEvaluationFeedbackFilter>
@@ -17726,8 +17717,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Threshold set evaluated by a release gate. Nested in a dedicated message so
-  /// presence can be detected at the message level (proto3 scalars carry no presence).
+  /// Threshold set evaluated by a release gate. Nested in a dedicated message so presence can be detected at the message level (proto3 scalars carry no presence).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReleaseGateThresholds : pb::IMessage<LlmEvaluationReleaseGateThresholds>
@@ -18069,8 +18059,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Safety section of a release gate: a separate adversarial experiment scored
-  /// with safety evaluators.
+  /// Safety section of a release gate: a separate adversarial experiment scored with safety evaluators.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReleaseGateSafetyConfig : pb::IMessage<LlmEvaluationReleaseGateSafetyConfig>
@@ -18456,8 +18445,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// A release gate: a named set of thresholds over evaluator scores, regression
-  /// deltas and telemetry that decides whether a candidate configuration ships.
+  /// A release gate: a named set of thresholds over evaluator scores, regression deltas and telemetry that decides whether a candidate configuration ships.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReleaseGate : pb::IMessage<LlmEvaluationReleaseGate>
@@ -21372,8 +21360,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListReleaseGates. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListReleaseGates. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReleaseGateFilter : pb::IMessage<LlmEvaluationReleaseGateFilter>
@@ -23655,8 +23642,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListReleaseGateRuns. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListReleaseGateRuns. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReleaseGateRunFilter : pb::IMessage<LlmEvaluationReleaseGateRunFilter>
@@ -24851,8 +24837,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// A scorecard: a named weighted multi-criteria roll-up definition applied to
-  /// experiments for release reporting.
+  /// A scorecard: a named weighted multi-criteria roll-up definition applied to experiments for release reporting.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationScorecard : pb::IMessage<LlmEvaluationScorecard>
@@ -26054,8 +26039,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListScorecards. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListScorecards. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationScorecardFilter : pb::IMessage<LlmEvaluationScorecardFilter>
@@ -33845,8 +33829,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListSchedules. All fields are optional; multiple fields
-  /// set at the same time are combined via logical AND.
+  /// Filter conditions for ListSchedules. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationScheduleFilter : pb::IMessage<LlmEvaluationScheduleFilter>
@@ -35436,8 +35419,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// An immutable persisted report artifact (release summaries, gate sign-offs,
-  /// exported evaluation snapshots).
+  /// An immutable persisted report artifact (release summaries, gate sign-offs, exported evaluation snapshots).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReport : pb::IMessage<LlmEvaluationReport>
@@ -36781,8 +36763,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListReports. All fields are optional; multiple fields
-  /// set at the same time are combined via logical AND.
+  /// Filter conditions for ListReports. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationReportFilter : pb::IMessage<LlmEvaluationReportFilter>
@@ -38188,13 +38169,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// RAGFlow variant override for an A/B experiment running on a RAG-classifier
-  /// project (&lt;code>IntentRagflowClassifier&lt;/code>). Where an IntentAgent variant
-  /// overrides the LLM via &lt;code>ccai_service_names&lt;/code>, a RAG variant overrides
-  /// the project's chat-assistant LLM CcaiService and the retrieval parameters used
-  /// when answering the assigned sessions. Override-or-inherit semantics apply per
-  /// field: an empty / zero value means "inherit the project's base
-  /// IntentRagflowClassifier config for this field".
+  /// RAGFlow variant override for an A/B experiment running on a RAG-classifier project (&lt;code>IntentRagflowClassifier&lt;/code>). Where an IntentAgent variant overrides the LLM via &lt;code>ccai_service_names&lt;/code>, a RAG variant overrides the project's chat-assistant LLM CcaiService and the retrieval parameters used when answering the assigned sessions. Override-or-inherit semantics apply per field: an empty / zero value means "inherit the project's base IntentRagflowClassifier config for this field".
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagVariantConfig : pb::IMessage<RagVariantConfig>
@@ -38570,19 +38545,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// One routing variant of an A/B experiment. The variant overrides the model used
-  /// for the sessions assigned to it. A variant is one of two shapes depending on
-  /// the project's classifier:
-  /// &lt;ul>
-  ///   &lt;li>&lt;b>IntentAgent projects&lt;/b> — the variant overrides the LLM connection
-  ///       via &lt;code>ccai_service_names&lt;/code> (+ optional &lt;code>model_name&lt;/code> /
-  ///       &lt;code>prompt_version&lt;/code>).&lt;/li>
-  ///   &lt;li>&lt;b>RAG projects&lt;/b> (&lt;code>IntentRagflowClassifier&lt;/code>) — the variant
-  ///       overrides the chat-assistant LLM CcaiService and retrieval parameters via
-  ///       &lt;code>rag_variant_config&lt;/code>.&lt;/li>
-  /// &lt;/ul>
-  /// The two override shapes are mutually exclusive per variant; the server applies
-  /// whichever matches the project's classifier type.
+  /// One routing variant of an A/B experiment. The variant overrides the model used for the sessions assigned to it. A variant is one of two shapes depending on the project's classifier: &lt;ul> &lt;li>&lt;b>IntentAgent projects&lt;/b> — the variant overrides the LLM connection via &lt;code>ccai_service_names&lt;/code> (+ optional &lt;code>model_name&lt;/code> / &lt;code>prompt_version&lt;/code>).&lt;/li> &lt;li>&lt;b>RAG projects&lt;/b> (&lt;code>IntentRagflowClassifier&lt;/code>) — the variant overrides the chat-assistant LLM CcaiService and retrieval parameters via &lt;code>rag_variant_config&lt;/code>.&lt;/li> &lt;/ul> The two override shapes are mutually exclusive per variant; the server applies whichever matches the project's classifier type.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbVariant : pb::IMessage<LlmEvaluationAbVariant>
@@ -39123,8 +39086,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// An A/B experiment: a set of routing variants split over live DetectIntent
-  /// traffic for a (project, language_code) scope.
+  /// An A/B experiment: a set of routing variants split over live DetectIntent traffic for a (project, language_code) scope.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbExperiment : pb::IMessage<LlmEvaluationAbExperiment>
@@ -40907,8 +40869,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListAbExperiments. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListAbExperiments. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbExperimentFilter : pb::IMessage<LlmEvaluationAbExperimentFilter>
@@ -43550,12 +43511,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// A computed, read-only rollout recommendation for an A/B experiment: which
-  /// variant currently wins against the control on the chosen optimize metric,
-  /// under the requested statistical guard-rails. Stateless — recomputed on demand
-  /// by &lt;code>LlmEvaluationGetAbRolloutRecommendation&lt;/code> from the per-variant
-  /// results rollup; nothing is persisted and no traffic / config changes. The
-  /// operator decides whether to apply it via &lt;code>LlmEvaluationApplyAbRollout&lt;/code>.
+  /// A computed, read-only rollout recommendation for an A/B experiment: which variant currently wins against the control on the chosen optimize metric, under the requested statistical guard-rails. Stateless — recomputed on demand by &lt;code>LlmEvaluationGetAbRolloutRecommendation&lt;/code> from the per-variant results rollup; nothing is persisted and no traffic / config changes. The operator decides whether to apply it via &lt;code>LlmEvaluationApplyAbRollout&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbRolloutRecommendation : pb::IMessage<LlmEvaluationAbRolloutRecommendation>
@@ -44077,13 +44033,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The persisted audit record of an A/B rollout that an operator explicitly
-  /// applied: it captures which variant's config was promoted to the project's
-  /// classifier default, on which metric, and the statistics at the moment of
-  /// application. Written + returned by &lt;code>LlmEvaluationApplyAbRollout&lt;/code>;
-  /// read back via &lt;code>LlmEvaluationGetAbRolloutDecision&lt;/code> /
-  /// &lt;code>LlmEvaluationListAbRolloutDecisions&lt;/code>. There is no auto-rollout —
-  /// every decision row corresponds to an explicit operator action.
+  /// The persisted audit record of an A/B rollout that an operator explicitly applied: it captures which variant's config was promoted to the project's classifier default, on which metric, and the statistics at the moment of application. Written + returned by &lt;code>LlmEvaluationApplyAbRollout&lt;/code>; read back via &lt;code>LlmEvaluationGetAbRolloutDecision&lt;/code> / &lt;code>LlmEvaluationListAbRolloutDecisions&lt;/code>. There is no auto-rollout — every decision row corresponds to an explicit operator action.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbRolloutDecision : pb::IMessage<LlmEvaluationAbRolloutDecision>
@@ -44837,10 +44787,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to compute a rollout recommendation for an A/B experiment. Read-only /
-  /// stateless — computes the winner-vs-control statistics on demand under the
-  /// supplied guard-rails and returns a LlmEvaluationAbRolloutRecommendation
-  /// without mutating anything.
+  /// Request to compute a rollout recommendation for an A/B experiment. Read-only / stateless — computes the winner-vs-control statistics on demand under the supplied guard-rails and returns a LlmEvaluationAbRolloutRecommendation without mutating anything.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetLlmEvaluationAbRolloutRecommendationRequest : pb::IMessage<GetLlmEvaluationAbRolloutRecommendationRequest>
@@ -45291,10 +45238,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to apply an A/B rollout: promotes the chosen variant's config to the
-  /// project's classifier default, stops the experiment and writes the audit
-  /// decision. Idempotent — re-applying the same already-applied experiment returns
-  /// the existing decision rather than promoting twice.
+  /// Request to apply an A/B rollout: promotes the chosen variant's config to the project's classifier default, stops the experiment and writes the audit decision. Idempotent — re-applying the same already-applied experiment returns the existing decision rather than promoting twice.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ApplyLlmEvaluationAbRolloutRequest : pb::IMessage<ApplyLlmEvaluationAbRolloutRequest>
@@ -45662,8 +45606,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to get a single A/B rollout decision (the applied audit record) for an
-  /// experiment.
+  /// Request to get a single A/B rollout decision (the applied audit record) for an experiment.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetLlmEvaluationAbRolloutDecisionRequest : pb::IMessage<GetLlmEvaluationAbRolloutDecisionRequest>
@@ -45998,8 +45941,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListAbRolloutDecisions. All fields are optional;
-  /// multiple fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListAbRolloutDecisions. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAbRolloutDecisionFilter : pb::IMessage<LlmEvaluationAbRolloutDecisionFilter>
@@ -46244,8 +46186,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to list A/B rollout decisions within a project, optionally narrowed by
-  /// filter (typically by experiment).
+  /// Request to list A/B rollout decisions within a project, optionally narrowed by filter (typically by experiment).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLlmEvaluationAbRolloutDecisionsRequest : pb::IMessage<ListLlmEvaluationAbRolloutDecisionsRequest>
@@ -46871,9 +46812,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Optional filter narrowing which already-persisted live session steps an
-  /// online-evaluation config samples. All fields are optional; multiple fields set
-  /// at the same time are combined via logical AND.
+  /// Optional filter narrowing which already-persisted live session steps an online-evaluation config samples. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationOnlineSessionFilter : pb::IMessage<LlmEvaluationOnlineSessionFilter>
@@ -47168,11 +47107,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// An online-evaluation config: a per-(project, language_code) definition that a
-  /// swarm-safe background worker uses to sample already-persisted live session
-  /// steps, score the recorded answer with a reference-free evaluator set, and
-  /// enqueue failing steps into the annotation queue. Mirrors the LlmEvaluationSchedule
-  /// scoping / audit / enabled-flag shape.
+  /// An online-evaluation config: a per-(project, language_code) definition that a swarm-safe background worker uses to sample already-persisted live session steps, score the recorded answer with a reference-free evaluator set, and enqueue failing steps into the annotation queue. Mirrors the LlmEvaluationSchedule scoping / audit / enabled-flag shape.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationOnlineConfig : pb::IMessage<LlmEvaluationOnlineConfig>
@@ -48777,8 +48712,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListOnlineConfigs. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListOnlineConfigs. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationOnlineConfigFilter : pb::IMessage<LlmEvaluationOnlineConfigFilter>
@@ -50328,11 +50262,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// A self-contained online-evaluation result: one row per scored session step.
-  /// Per-criterion feedbacks are stored as an embedded repeated LlmEvaluationFeedback
-  /// list (exactly like LlmEvaluationTurnResult.feedbacks — NOT persisted into the
-  /// experiment-scoped llm_feedback table). Produced by the online-evaluation worker;
-  /// read-only over the API.
+  /// A self-contained online-evaluation result: one row per scored session step. Per-criterion feedbacks are stored as an embedded repeated LlmEvaluationFeedback list (exactly like LlmEvaluationTurnResult.feedbacks — NOT persisted into the experiment-scoped llm_feedback table). Produced by the online-evaluation worker; read-only over the API.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationOnlineResult : pb::IMessage<LlmEvaluationOnlineResult>
@@ -51326,8 +51256,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListOnlineResults. All fields are optional; multiple
-  /// fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListOnlineResults. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationOnlineResultFilter : pb::IMessage<LlmEvaluationOnlineResultFilter>
@@ -52239,9 +52168,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// A human-review annotation-queue item: one per failing session step enqueued by
-  /// the online-evaluation worker. The reviewer annotates (status / reason) and may
-  /// promote the offending session into a regression dataset.
+  /// A human-review annotation-queue item: one per failing session step enqueued by the online-evaluation worker. The reviewer annotates (status / reason) and may promote the offending session into a regression dataset.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAnnotationQueueItem : pb::IMessage<LlmEvaluationAnnotationQueueItem>
@@ -53325,8 +53252,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Filter conditions for ListAnnotationQueueItems. All fields are optional;
-  /// multiple fields set at the same time are combined via logical AND.
+  /// Filter conditions for ListAnnotationQueueItems. All fields are optional; multiple fields set at the same time are combined via logical AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmEvaluationAnnotationQueueItemFilter : pb::IMessage<LlmEvaluationAnnotationQueueItemFilter>
@@ -54589,9 +54515,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request to promote an annotation-queue item into a regression dataset. Thin
-  /// server-side composition over LlmEvaluationCreateExamplesFromSession; the item
-  /// status is flipped to PROMOTED and the dataset name stamped on success.
+  /// Request to promote an annotation-queue item into a regression dataset. Thin server-side composition over LlmEvaluationCreateExamplesFromSession; the item status is flipped to PROMOTED and the dataset name stamped on success.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PromoteLlmEvaluationAnnotationQueueItemRequest : pb::IMessage<PromoteLlmEvaluationAnnotationQueueItemRequest>

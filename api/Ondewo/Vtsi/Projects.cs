@@ -197,53 +197,65 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
-  /// &lt;p>Whether a project can run warm intros, and if not, why&lt;/p>
+  /// Whether a project can run warm intros, and if not, why. When several reasons apply, the first one in this order is reported: &lt;code>DISABLED_BY_DEPLOYMENT&lt;/code>, &lt;code>NEEDS_CALL_CONTROL_KEY&lt;/code>, &lt;code>NEEDS_LOCAL_ASTERISK&lt;/code>, &lt;code>NEEDS_LISTENER&lt;/code>.
   /// </summary>
   public enum WarmIntroAvailability {
     /// <summary>
-    /// Not computed (e.g. an older server)
+    /// Not computed, e.g. by a server older than warm intros. Treat it as unknown, not as available.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Warm intros can run
+    /// Warm intros can run: a WARM transfer whose effective &lt;code>WarmTransferConfig.enabled&lt;/code> is
+    /// &lt;code>true&lt;/code> runs one.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_AVAILABLE")] Available = 1,
     /// <summary>
-    /// The deployment switch &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code> is off
+    /// The operator switched warm intros off for the whole deployment (&lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code>
+    /// is &lt;code>false&lt;/code>, its default). Writing &lt;code>enabled=true&lt;/code> at any level is refused with
+    /// &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=warm-intro-disabled&lt;/code>.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_DISABLED_BY_DEPLOYMENT")] DisabledByDeployment = 2,
     /// <summary>
-    /// The project&amp;apos;s Asterisk is not run by this server (or is older than Asterisk 22)
+    /// The deployment runs on several hosts, where the server cannot reach the
+    /// project&amp;apos;s Asterisk directly to run the intro.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_LOCAL_ASTERISK")] NeedsLocalAsterisk = 3,
     /// <summary>
-    /// The project has no listener to run the intro (a project with pooled callers only)
+    /// The project cannot spare a listener to run the intro bot: its &lt;code>max_listeners&lt;/code> is not above the
+    /// number of listeners the deployment keeps free for customer calls (1 unless the operator changed it), and
+    /// &lt;code>warm_transfer_defaults.intro_listener_names&lt;/code> reserves none. A caller-only project
+    /// (&lt;code>max_listeners = 0&lt;/code>) is the typical case. Raise &lt;code>max_listeners&lt;/code> or reserve intro
+    /// listeners.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_LISTENER")] NeedsListener = 4,
     /// <summary>
-    /// The deployment has no call-control key (&lt;code>ONDEWO_VTSI_CALL_CONTROL_KEY&lt;/code>)
+    /// The operator has not configured in-call control for the deployment (no
+    /// &lt;code>ONDEWO_VTSI_CALL_CONTROL_KEY&lt;/code>), so the bot of a running call cannot be paused while the intro runs.
     /// </summary>
     [pbr::OriginalName("WARM_INTRO_AVAILABILITY_NEEDS_CALL_CONTROL_KEY")] NeedsCallControlKey = 5,
   }
 
   /// <summary>
-  /// &lt;p>Whether a project can use IVR menus, and if not, why&lt;/p>
+  /// Whether a project can use IVR menus, and if not, why. The same for every project of a deployment.
   /// </summary>
   public enum IvrAvailability {
     /// <summary>
-    /// Not computed (e.g. an older server)
+    /// Not computed, e.g. by a server older than IVR menus. Treat it as unknown, not as available.
     /// </summary>
     [pbr::OriginalName("IVR_AVAILABILITY_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// IVR menus can be published and routed
+    /// IVR menus can be published and route inbound numbers (unless the project switched its routes off with
+    /// &lt;code>VtsiProject.ivr_menus_enabled = false&lt;/code>).
     /// </summary>
     [pbr::OriginalName("IVR_AVAILABILITY_AVAILABLE")] Available = 1,
     /// <summary>
-    /// The deployment switch &lt;code>ONDEWO_VTSI_IVR_ACTIVE&lt;/code> is off
+    /// The operator switched IVR menus off for the whole deployment (&lt;code>ONDEWO_VTSI_IVR_ACTIVE&lt;/code> is
+    /// &lt;code>false&lt;/code>): no menu routes an inbound call.
     /// </summary>
     [pbr::OriginalName("IVR_AVAILABILITY_DISABLED_BY_DEPLOYMENT")] DisabledByDeployment = 2,
     /// <summary>
-    /// The project&amp;apos;s Asterisk is not run by this server
+    /// The deployment runs on several hosts, where the server cannot reach the
+    /// project&amp;apos;s Asterisk directly to apply the routes.
     /// </summary>
     [pbr::OriginalName("IVR_AVAILABILITY_NEEDS_LOCAL_ASTERISK")] NeedsLocalAsterisk = 3,
   }
@@ -280,10 +292,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Status of a VtsiProject.
-  /// Released with unprefixed value names, which are package scoped in proto3 (so no other enum of
-  /// &lt;code>ondewo.vtsi&lt;/code> can declare e.g. &lt;code>UNSPECIFIED&lt;/code>); kept for wire and source
-  /// compatibility.
+  /// Status of a VtsiProject. Released with unprefixed value names, which are package scoped in proto3 (so no other enum of &lt;code>ondewo.vtsi&lt;/code> can declare e.g. &lt;code>UNSPECIFIED&lt;/code>); kept for wire and source compatibility.
   /// </summary>
   public enum VtsiProjectStatus {
     /// <summary>
@@ -353,11 +362,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Sorting mode.
-  /// Note: unlike most enums of this API the zero value is a real mode, &lt;code>ASCENDING&lt;/code>, not an
-  /// &lt;code>..._UNSPECIFIED&lt;/code> placeholder, so an unset mode means ascending. Released this way and kept
-  /// for wire and source compatibility (it is also reused by
-  /// &lt;a href="index.html#ondewo.vtsi.SoftphoneAccountSorting">SoftphoneAccountSorting&lt;/a>).
+  /// Sorting mode. Note: unlike most enums of this API the zero value is a real mode, &lt;code>ASCENDING&lt;/code>, not an &lt;code>..._UNSPECIFIED&lt;/code> placeholder, so an unset mode means ascending. Released this way and kept for wire and source compatibility (it is also reused by &lt;a href="index.html#ondewo.vtsi.SoftphoneAccountSorting">SoftphoneAccountSorting&lt;/a>).
   /// </summary>
   public enum VtsiProjectSortingMode {
     /// <summary>
@@ -375,13 +380,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Structure of VTSI_PROJECT view
-  /// &lt;ul>
-  ///   &lt;li>CreateVTSI_PROJECT: VTSI_PROJECT_VIEW_SHALLOW&lt;/li>
-  ///   &lt;li>UpdateVTSI_PROJECT: VTSI_PROJECT_VIEW_SHALLOW&lt;/li>
-  ///   &lt;li>GetVTSI_PROJECT: VTSI_PROJECT_VIEW_FULL&lt;/li>
-  ///   &lt;li>ListVTSI_PROJECTs: VTSI_PROJECT_VIEW_SHALLOW&lt;/li>
-  /// &lt;/ul>
+  /// Structure of VTSI_PROJECT view &lt;ul> &lt;li>CreateVTSI_PROJECT: VTSI_PROJECT_VIEW_SHALLOW&lt;/li> &lt;li>UpdateVTSI_PROJECT: VTSI_PROJECT_VIEW_SHALLOW&lt;/li> &lt;li>GetVTSI_PROJECT: VTSI_PROJECT_VIEW_FULL&lt;/li> &lt;li>ListVTSI_PROJECTs: VTSI_PROJECT_VIEW_SHALLOW&lt;/li> &lt;/ul>
   /// </summary>
   public enum VtsiProjectView {
     /// <summary>
@@ -743,13 +742,47 @@ namespace Ondewo.Vtsi {
         = pb::FieldCodec.ForString(138);
     private readonly pbc::RepeatedField<string> transferPhoneNumberAllowlist_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// OPTIONAL: Restricts the phone numbers a call of this project may be transferred to with
-    /// &lt;pre>&lt;code>TransferCall&lt;/code>&lt;/pre> and a &lt;pre>&lt;code>CallTarget.phone_number&lt;/code>&lt;/pre>. Each entry is an E.164
-    /// number or number prefix (&lt;pre>&lt;code>^\+[1-9][0-9]{0,14}$&lt;/code>&lt;/pre>), e.g. &lt;pre>&lt;code>+43&lt;/code>&lt;/pre> or
-    /// &lt;pre>&lt;code>+4312345678&lt;/code>&lt;/pre>; a number is allowed when it starts with any entry. Empty: any valid E.164
-    /// number is allowed. A refused number answers &lt;pre>&lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code>&lt;/pre> with
-    /// &lt;pre>&lt;code>error_reason = number-not-allowed&lt;/code>&lt;/pre> and nothing is sent.
-    /// Updatable with the update mask path &lt;pre>&lt;code>transfer_phone_number_allowlist&lt;/code>&lt;/pre>.
+    /// OPTIONAL: The project&amp;apos;s transfer phone-number allowlist: the phone numbers any call of this project may be
+    /// transferred to. Each entry is an E.164 number or a prefix of one (&lt;code>+&lt;/code> and 1 to 15 digits, the first
+    /// not &lt;code>0&lt;/code>: &lt;code>^\+[1-9][0-9]{0,14}$&lt;/code>), and a number is allowed when it STARTS WITH any
+    /// entry.
+    /// &lt;p>Empty (the default): no project restriction. A &lt;code>CallTarget.phone_number&lt;/code> target must still be a
+    /// number the deployment accepts as dialable (by default &lt;code>+&lt;/code> and 7 to 15 digits; the operator can
+    /// change the accepted format). A legacy &lt;code>transfer_id&lt;/code> and the bot&amp;apos;s own transfers are not held to
+    /// that format unless the operator changed it. There is no per-call setting and no deployment-wide list: the
+    /// allowlist is the project&amp;apos;s alone and applies to every listener, caller, campaign and scheduled caller of
+    /// the project.&lt;/p>
+    /// &lt;p>Example: &lt;code>[&amp;quot;+43&amp;quot;, &amp;quot;+4930123456&amp;quot;]&lt;/code> allows every Austrian number, the number
+    /// &lt;code>+4930123456&lt;/code> and every extension dialled behind it (&lt;code>+4930123456789&lt;/code>), and refuses
+    /// &lt;code>+4989...&lt;/code>.&lt;/p>
+    /// &lt;p>What it is checked against:&lt;/p>
+    /// &lt;ul>
+    /// &lt;li>&lt;code>TransferCall&lt;/code> with a &lt;code>CallTarget.phone_number&lt;/code> target, BLIND or WARM: a number
+    /// outside the list answers &lt;code>TRANSFER_OUTCOME_TARGET_INVALID&lt;/code> with
+    /// &lt;code>error_reason = number-not-allowed&lt;/code>; nothing is sent and the call stays as it was. Read at the
+    /// moment of the transfer, so an edit applies to the next transfer of every running call.&lt;/li>
+    /// &lt;li>The legacy raw &lt;code>transfer_id&lt;/code> of &lt;code>TransferCall&lt;/code> when it is shaped like a phone number
+    /// (&lt;code>+&lt;/code> and digits, or 4 digits followed by more characters, e.g. &lt;code>+4312345678&lt;/code>,
+    /// &lt;code>4312345678&lt;/code> or &lt;code>12345&lt;/code>): its digits must pass the list, so the raw field is no way
+    /// around it; while the list is non-empty such an id that carries anything but digits is refused too. A softphone
+    /// user name routed in the project is not checked even when it looks like a number, nor is an id of any other
+    /// shape.&lt;/li>
+    /// &lt;li>The bot&amp;apos;s OWN transfers (a transfer the NLU agent asks for during the call): checked inside the call;
+    /// there every phone-shaped target, a numeric softphone user name included, counts as a number. A listener or
+    /// caller receives the list when it is DEPLOYED, so a running listener keeps the list it was started with until
+    /// it is redeployed; a pooled (persistent) caller started before an edit is not
+    /// reused afterwards, a new one is deployed with the new list. A listener or caller whose project allowlist cannot
+    /// be read is not deployed (&lt;code>FAILED_PRECONDITION&lt;/code>, &lt;code>reason=transfer-allowlist-unreadable&lt;/code>),
+    /// rather than started with no restriction.&lt;/li>
+    /// &lt;li>The phone-number keys of &lt;code>transfer_target_directory&lt;/code> and the phone-number targets of IVR menu
+    /// ROUTE nodes: an update that leaves a directory key outside the list is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> (&lt;code>reason=number-not-allowed&lt;/code>), and a menu routing to such a number
+    /// does not validate.&lt;/li>
+    /// &lt;/ul>
+    /// &lt;p>At most 256 entries; a malformed entry or a longer list is refused with &lt;code>INVALID_ARGUMENT&lt;/code> naming
+    /// it. Duplicates are dropped. Order does not matter. Withheld from &lt;code>PROJECT_EXECUTOR&lt;/code> and
+    /// &lt;code>PROJECT_USER&lt;/code>. Updatable with the update mask path &lt;code>transfer_phone_number_allowlist&lt;/code> (the
+    /// whole list is replaced; an empty list removes the restriction); it touches no Asterisk and ends no call.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -834,15 +867,39 @@ namespace Ondewo.Vtsi {
     public const int WarmTransferDefaultsFieldNumber = 22;
     private global::Ondewo.Vtsi.WarmTransferConfig warmTransferDefaults_;
     /// <summary>
-    /// OPTIONAL: The project&amp;apos;s default warm intro of a WARM transfer (see
-    /// &lt;a href="index.html#ondewo.vtsi.WarmTransferConfig">WarmTransferConfig&lt;/a>): the level below a call&amp;apos;s
-    /// &lt;code>VoiceInteractionConfig.warm_transfer_config&lt;/code> and a
-    /// &lt;code>TransferCallRequest.warm_transfer_config&lt;/code>. &lt;code>enabled=true&lt;/code> while the deployment switch
-    /// &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code> is off, or a phase-B field while phase B is off, is refused
-    /// with &lt;code>FAILED_PRECONDITION&lt;/code> (&lt;code>reason=warm-intro-disabled&lt;/code> /
-    /// &lt;code>reason=phase-b-not-enabled&lt;/code>); an invalid field with &lt;code>INVALID_ARGUMENT&lt;/code> naming it.
-    /// Updatable with the update mask path &lt;code>warm_transfer_defaults&lt;/code> or its leaf paths, e.g.
-    /// &lt;code>warm_transfer_defaults.enabled&lt;/code>. Touches no Asterisk.
+    /// OPTIONAL: The project&amp;apos;s defaults for the warm intro of a WARM transfer (see
+    /// &lt;a href="index.html#ondewo.vtsi.WarmTransferConfig">WarmTransferConfig&lt;/a>): before a human transfer target
+    /// is joined, an ONDEWO bot greets the target, briefs them and asks whether they accept the call.
+    /// &lt;p>How it combines with the call: every field is resolved on its own, the most specific level that SETS it
+    /// winning: &lt;code>TransferCallRequest.warm_transfer_config&lt;/code> (one transfer) &amp;gt; the call&amp;apos;s
+    /// &lt;code>VoiceInteractionConfig.warm_transfer_config&lt;/code> (set when the listener, caller, campaign or scheduled
+    /// caller was started) &amp;gt; these project defaults &amp;gt; the built-in default of the field. A field left unset here
+    /// inherits the built-in default; a text left unset everywhere is the ONDEWO NLU agent&amp;apos;s warm transfer text,
+    /// else the built-in text in the intro&amp;apos;s language.&lt;/p>
+    /// &lt;p>Example: set &lt;code>enabled=true&lt;/code> and &lt;code>decision_timeout_s=30&lt;/code> here to give every WARM
+    /// transfer of the project an intro in which the target has 30 seconds to accept; a campaign that sets
+    /// &lt;code>enabled=false&lt;/code> in its own &lt;code>warm_transfer_config&lt;/code> then joins its targets without an intro,
+    /// and a single &lt;code>TransferCall&lt;/code> may still switch it back on.&lt;/p>
+    /// &lt;p>When the deployment switch &lt;code>ONDEWO_VTSI_WARM_TRANSFER_ENABLED&lt;/code> is off no intro runs, whatever any
+    /// level says (a WARM transfer joins the target as before warm intros existed), and writing
+    /// &lt;code>enabled=true&lt;/code> here is refused with &lt;code>FAILED_PRECONDITION&lt;/code>
+    /// &lt;code>reason=warm-intro-disabled&lt;/code>; defaults stored earlier are kept and apply again once it is on. A
+    /// phase-B field (an LLM summary, hold music) while the deployment has not enabled phase B is refused with
+    /// &lt;code>FAILED_PRECONDITION&lt;/code> &lt;code>reason=phase-b-not-enabled&lt;/code>. Check
+    /// &lt;code>feature_availability&lt;/code> first. A field out of its documented range is refused with
+    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it; &lt;code>intro_listener_names&lt;/code> is valid on this level only.&lt;/p>
+    /// &lt;p>When it takes effect: the intro settings are read at the moment of each transfer, so an edit applies to the
+    /// next transfer of every running call. Whether the bot&amp;apos;s OWN transfers to a human can get an intro is fixed
+    /// when a listener or caller is DEPLOYED: switching &lt;code>apply_to_bot_transfers&lt;/code> (or &lt;code>enabled&lt;/code>)
+    /// on reaches a running listener, and a pooled caller deployed before the edit, only after they are redeployed.
+    /// Switching it off applies to the next bot transfer of every running call, which is then sent without an
+    /// intro.&lt;/p>
+    /// &lt;p>Unset: no project defaults; only the call&amp;apos;s and the transfer&amp;apos;s values and the built-in defaults
+    /// apply (&lt;code>enabled&lt;/code> unset everywhere is &lt;code>false&lt;/code>). Withheld from
+    /// &lt;code>PROJECT_EXECUTOR&lt;/code> and &lt;code>PROJECT_USER&lt;/code>. Updatable with the update mask path
+    /// &lt;code>warm_transfer_defaults&lt;/code> or its leaf paths, e.g. &lt;code>warm_transfer_defaults.enabled&lt;/code>. The
+    /// update itself reloads no Asterisk and ends no call; a changed &lt;code>intro_listener_names&lt;/code> reaches the
+    /// project&amp;apos;s Asterisk the next time its configuration is written, e.g. on the next deploy.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -857,9 +914,13 @@ namespace Ondewo.Vtsi {
     public const int FeatureAvailabilityFieldNumber = 23;
     private global::Ondewo.Vtsi.VtsiProjectFeatureAvailability featureAvailability_;
     /// <summary>
-    /// Output only. Which features can run in this project with the deployment, the Asterisk and the listeners it
-    /// has now, computed on every &lt;code>GetVtsiProject&lt;/code> / &lt;code>ListVtsiProjects&lt;/code> (it costs no RPC).
-    /// Read it instead of learning from a refusal. Ignored on create and update.
+    /// Output only. Which optional call features can run in this project right now, given the deployment&amp;apos;s
+    /// switches, where the project&amp;apos;s Asterisk runs and the project&amp;apos;s listener capacity. Computed on every
+    /// &lt;code>GetVtsiProject&lt;/code>, &lt;code>ListVtsiProjects&lt;/code> and &lt;code>UpdateVtsiProject&lt;/code> answer at no extra
+    /// cost. Read it before offering or configuring a feature instead of learning from a refusal: e.g. a
+    /// &lt;code>warm_intro&lt;/code> other than &lt;code>WARM_INTRO_AVAILABILITY_AVAILABLE&lt;/code> means a warm intro cannot be
+    /// expected to run in this project, whatever &lt;code>warm_transfer_defaults&lt;/code> or a call configures.
+    /// Withheld from &lt;code>PROJECT_EXECUTOR&lt;/code> and &lt;code>PROJECT_USER&lt;/code>. Ignored on create and update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -876,11 +937,16 @@ namespace Ondewo.Vtsi {
 
     private bool ivrMenusEnabled_;
     /// <summary>
-    /// OPTIONAL: Whether the project&amp;apos;s published IVR menus route its inbound phone numbers. Unset means
-    /// &lt;code>true&lt;/code>. &lt;code>false&lt;/code> switches every route off at once (every inbound number reaches the
-    /// listener queue as without a menu) and keeps the menus and their phone number bindings, so &lt;code>true&lt;/code>
-    /// restores them. Updatable with the update mask path &lt;code>ivr_menus_enabled&lt;/code>; it reloads no Asterisk and
-    /// ends no call.
+    /// OPTIONAL: The project&amp;apos;s master switch for IVR menus: whether its PUBLISHED IVR menus answer the inbound
+    /// phone numbers they are bound to. Unset means &lt;code>true&lt;/code>.
+    /// &lt;p>&lt;code>false&lt;/code> switches every route of the project off at once: an inbound call to any number reaches
+    /// the project&amp;apos;s listener queue exactly as if no menu existed. The menus and their phone number bindings are
+    /// kept and can still be edited and published, so setting &lt;code>true&lt;/code> again restores every route as
+    /// published. It does not change &lt;code>feature_availability.ivr&lt;/code>, which is about the deployment, not
+    /// this switch. There is no per-call setting.&lt;/p>
+    /// &lt;p>Withheld from &lt;code>PROJECT_EXECUTOR&lt;/code> and &lt;code>PROJECT_USER&lt;/code>. Updatable with the update mask
+    /// path &lt;code>ivr_menus_enabled&lt;/code>; on a &lt;code>DEPLOYED&lt;/code> project it only rewrites the inbound routes of
+    /// the running Asterisk: no reload, and no call ends.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -910,15 +976,28 @@ namespace Ondewo.Vtsi {
         = new pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Ondewo.Vtsi.TransferTargetDirectoryItem.Parser), 202);
     private readonly pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem> transferTargetDirectory_ = new pbc::MapField<string, global::Ondewo.Vtsi.TransferTargetDirectoryItem>();
     /// <summary>
-    /// OPTIONAL: Directory of the project&amp;apos;s human transfer targets, keyed by the target: an E.164 phone number
-    /// (&lt;code>^\+[1-9][0-9]{6,14}$&lt;/code>, which must pass &lt;code>transfer_phone_number_allowlist&lt;/code>) or the
-    /// &lt;code>sip_username&lt;/code> of a softphone account of the project. It names a target in a warm intro
-    /// (&lt;code>{callee_name}&lt;/code>) and describes it, below a transfer&amp;apos;s own
-    /// &lt;code>WarmTransferConfig.callee_display_name&lt;/code> / &lt;code>callee_description&lt;/code> and the softphone
-    /// account&amp;apos;s &lt;code>display_name&lt;/code> / &lt;code>description&lt;/code>. That is how the bot&amp;apos;s own handover to
-    /// a target names the right person. At most 200 entries; an invalid key or entry is refused with
-    /// &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Updatable with the update mask path
-    /// &lt;code>transfer_target_directory&lt;/code> (the whole map is replaced). Touches no Asterisk.
+    /// OPTIONAL: Directory of the project&amp;apos;s HUMAN transfer targets: who a target is and what they do, so that a
+    /// warm intro can name the target (&lt;code>{callee_name}&lt;/code>) and brief the bot about them. It changes what the
+    /// intro bot SAYS, never where a call is transferred to.
+    /// &lt;p>Keyed by the target: an E.164 phone number (&lt;code>+&lt;/code> and 7 to 15 digits,
+    /// &lt;code>^\+[1-9][0-9]{6,14}$&lt;/code>, which must also pass &lt;code>transfer_phone_number_allowlist&lt;/code>) or the
+    /// &lt;code>sip_username&lt;/code> of a softphone account of the project.&lt;/p>
+    /// &lt;p>How it combines: the name and the description are each taken from the first source that has one: the
+    /// transfer&amp;apos;s effective &lt;code>WarmTransferConfig.callee_display_name&lt;/code> /
+    /// &lt;code>callee_description&lt;/code> (the transfer, the call, then &lt;code>warm_transfer_defaults&lt;/code>), then the
+    /// target softphone account&amp;apos;s &lt;code>display_name&lt;/code> / &lt;code>description&lt;/code>, then this directory. With
+    /// none, the intro speaks a variant without a name. This is how the bot&amp;apos;s own handover to a target (the NLU
+    /// agent naming a softphone user, e.g. &lt;code>berger&lt;/code>) names the right person.&lt;/p>
+    /// &lt;p>Example (JSON):&lt;/p>
+    /// &lt;pre>&lt;code>{&amp;quot;berger&amp;quot;: {&amp;quot;displayName&amp;quot;: &amp;quot;Frau Berger, Buchhaltung&amp;quot;,
+    ///   &amp;quot;description&amp;quot;: &amp;quot;Handles invoices and reminders&amp;quot;},
+    ///  &amp;quot;+4312345678&amp;quot;: {&amp;quot;displayName&amp;quot;: &amp;quot;Support hotline&amp;quot;}}&lt;/code>&lt;/pre>
+    /// &lt;p>Read at the moment of each warm intro, so an edit applies to the next transfer. At most 200 entries; a key
+    /// that is neither an allowed phone number nor a softphone user name of the project, or an invalid entry (see
+    /// &lt;code>TransferTargetDirectoryItem&lt;/code>), is refused with &lt;code>INVALID_ARGUMENT&lt;/code> naming it. Empty (the
+    /// default): targets are named only by the transfer&amp;apos;s settings and the softphone accounts. Withheld from
+    /// &lt;code>PROJECT_EXECUTOR&lt;/code> and &lt;code>PROJECT_USER&lt;/code>. Updatable with the update mask path
+    /// &lt;code>transfer_target_directory&lt;/code> (the whole map is replaced). Touches no Asterisk and ends no call.&lt;/p>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1668,7 +1747,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One human transfer target of &lt;code>VtsiProject.transfer_target_directory&lt;/code>. Carries no secret&lt;/p>
+  /// One human transfer target of &lt;code>VtsiProject.transfer_target_directory&lt;/code>: how a warm intro names and describes the person behind one phone number or softphone account. Both texts are given to the intro bot and may be spoken to the target; neither may contain SIP markup (&lt;code>&amp;lt;SIP:&lt;/code>), which is refused with &lt;code>INVALID_ARGUMENT&lt;/code>. Carries no secret.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TransferTargetDirectoryItem : pb::IMessage<TransferTargetDirectoryItem>
@@ -1720,7 +1799,8 @@ namespace Ondewo.Vtsi {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Who the target is, e.g. &lt;code>Frau Berger, Buchhaltung&lt;/code>. 1 to 128 characters
+    /// Required. Who the target is, spoken as &lt;code>{callee_name}&lt;/code> in a warm intro, e.g.
+    /// &lt;code>Frau Berger, Buchhaltung&lt;/code>. 1 to 128 characters, not blank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1735,7 +1815,8 @@ namespace Ondewo.Vtsi {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// The target&amp;apos;s role and context, for a warm intro&amp;apos;s briefing. At most 512 characters
+    /// OPTIONAL: The target&amp;apos;s role and context, given to the intro bot for its briefing, e.g.
+    /// &lt;code>Handles invoices and payment reminders&lt;/code>. At most 512 characters; empty: no description.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1912,7 +1993,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Which features can run in a VTSI project. Output only&lt;/p>
+  /// Which optional call features can run in a VTSI project, and if not, why. Output only; computed from the deployment&amp;apos;s switches, where the project&amp;apos;s Asterisk runs and the project&amp;apos;s listener capacity, never from a single call&amp;apos;s configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VtsiProjectFeatureAvailability : pb::IMessage<VtsiProjectFeatureAvailability>
@@ -1965,7 +2046,10 @@ namespace Ondewo.Vtsi {
     public const int WarmIntroFieldNumber = 1;
     private global::Ondewo.Vtsi.WarmIntroAvailability warmIntro_ = global::Ondewo.Vtsi.WarmIntroAvailability.Unspecified;
     /// <summary>
-    /// Whether a WARM transfer can run a warm intro
+    /// Whether a WARM transfer of this project can run a warm intro. Anything but
+    /// &lt;code>WARM_INTRO_AVAILABILITY_AVAILABLE&lt;/code> means an intro cannot be expected to run, whatever
+    /// &lt;code>VtsiProject.warm_transfer_defaults&lt;/code>, a call or a transfer configures; with
+    /// &lt;code>WARM_INTRO_AVAILABILITY_DISABLED_BY_DEPLOYMENT&lt;/code> a WARM transfer joins its target without one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1980,7 +2064,10 @@ namespace Ondewo.Vtsi {
     public const int WarmIntroPhaseBFieldNumber = 2;
     private bool warmIntroPhaseB_;
     /// <summary>
-    /// Whether the phase-B fields of &lt;code>WarmTransferConfig&lt;/code> (LLM summary, hold music) are accepted
+    /// Whether the phase-B fields of &lt;code>WarmTransferConfig&lt;/code> (an LLM-written summary, hold music for the
+    /// caller) are accepted: &lt;code>true&lt;/code> exactly when the deployment has enabled warm intros AND phase B. While
+    /// &lt;code>false&lt;/code>, setting one of them at any level is refused with &lt;code>FAILED_PRECONDITION&lt;/code>
+    /// &lt;code>reason=phase-b-not-enabled&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1995,7 +2082,8 @@ namespace Ondewo.Vtsi {
     public const int IvrFieldNumber = 3;
     private global::Ondewo.Vtsi.IvrAvailability ivr_ = global::Ondewo.Vtsi.IvrAvailability.Unspecified;
     /// <summary>
-    /// Whether the project can publish and route IVR menus
+    /// Whether the project can publish IVR menus and route inbound numbers through them. Independent of the
+    /// project&amp;apos;s own switch &lt;code>VtsiProject.ivr_menus_enabled&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4532,8 +4620,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to list VTSI projects. The filters are combined with AND; the values within one repeated
-  /// field are combined with OR; an unset field or an empty repeated field does not filter.
+  /// Request to list VTSI projects. The filters are combined with AND; the values within one repeated field are combined with OR; an unset field or an empty repeated field does not filter.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListVtsiProjectsRequest : pb::IMessage<ListVtsiProjectsRequest>
@@ -5661,8 +5748,7 @@ namespace Ondewo.Vtsi {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Enum to specify the sorting field for VTSI projects.
-      /// Enum defining the field by which VTSI projects can be sorted
+      /// Enum to specify the sorting field for VTSI projects. Enum defining the field by which VTSI projects can be sorted
       /// </summary>
       public enum VtsiProjectSortingField {
         /// <summary>
@@ -6381,9 +6467,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to delete a VTSI project
-  /// A deployed VTSI project is undeployed automatically before it is deleted (see
-  /// &lt;a href="index.html#ondewo.vtsi.Projects.DeleteVtsiProject">DeleteVtsiProject&lt;/a>).
+  /// Request to delete a VTSI project A deployed VTSI project is undeployed automatically before it is deleted (see &lt;a href="index.html#ondewo.vtsi.Projects.DeleteVtsiProject">DeleteVtsiProject&lt;/a>).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteVtsiProjectRequest : pb::IMessage<DeleteVtsiProjectRequest>

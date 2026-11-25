@@ -194,8 +194,7 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
-  /// Which process inside the container emitted a log entry. All of these share a single docker log
-  /// stream, because ondewo-csi runs as a child process of the ondewo-sip container.
+  /// Which process inside the container emitted a log entry. All of these share a single docker log stream, because ondewo-csi runs as a child process of the ondewo-sip container.
   /// </summary>
   public enum LogSource {
     /// <summary>
@@ -245,9 +244,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The state of VTSI&amp;apos;s capture of one log stream. This describes the CAPTURE, not the container:
-  /// a healthy container whose capture lease was lost is &lt;code>DETACHED&lt;/code>, and a container that no
-  /// longer exists but whose capture completed cleanly is &lt;code>STOPPED&lt;/code>.
+  /// The state of VTSI&amp;apos;s capture of one log stream. This describes the CAPTURE, not the container: a healthy container whose capture lease was lost is &lt;code>DETACHED&lt;/code>, and a container that no longer exists but whose capture completed cleanly is &lt;code>STOPPED&lt;/code>.
   /// </summary>
   public enum LogCaptureState {
     /// <summary>
@@ -273,9 +270,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Identifies a field of &lt;a href="index.html#ondewo.vtsi.CallLogFilter">CallLogFilter&lt;/a>. Used by
-  /// &lt;a href="index.html#ondewo.vtsi.ListCallLogsResponse">ListCallLogsResponse.scope_limited_filters&lt;/a>
-  /// to declare which filters could only be applied inside the returned window.
+  /// Identifies a field of &lt;a href="index.html#ondewo.vtsi.CallLogFilter">CallLogFilter&lt;/a>. Used by &lt;a href="index.html#ondewo.vtsi.ListCallLogsResponse">ListCallLogsResponse.scope_limited_filters&lt;/a> to declare which filters could only be applied inside the returned window.
   /// </summary>
   public enum CallLogFilterField {
     /// <summary>
@@ -313,9 +308,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Why the SERVER ended a &lt;code>StreamCallLogs&lt;/code> stream. Carried by the final
-  /// &lt;a href="index.html#ondewo.vtsi.StreamCallLogsResponse">StreamCallLogsResponse&lt;/a> beside the
-  /// human-readable &lt;code>end_reason&lt;/code>. A stream ended by the client has no final message.
+  /// Why the SERVER ended a &lt;code>StreamCallLogs&lt;/code> stream. Carried by the final &lt;a href="index.html#ondewo.vtsi.StreamCallLogsResponse">StreamCallLogsResponse&lt;/a> beside the human-readable &lt;code>end_reason&lt;/code>. A stream ended by the client has no final message.
   /// </summary>
   public enum LogStreamEndReason {
     /// <summary>
@@ -351,9 +344,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// File format of an &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">ExportCallLogs&lt;/a> export. Every
-  /// format is UTF-8 with &lt;code>\n&lt;/code> line endings and one entry per record; a multi-line entry stays one
-  /// record.
+  /// File format of an &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">ExportCallLogs&lt;/a> export. Every format is UTF-8 with &lt;code>\n&lt;/code> line endings and one entry per record; a multi-line entry stays one record.
   /// </summary>
   public enum LogExportFormat {
     /// <summary>
@@ -389,9 +380,7 @@ namespace Ondewo.Vtsi {
 
   #region Messages
   /// <summary>
-  /// A single captured container log record. One record may span several physical docker log lines: a
-  /// Python traceback, a protobuf &lt;code>str()&lt;/code> dump and a multi-line configuration banner are all
-  /// one record, and are stored and returned as one entry.
+  /// A single captured container log record. One record may span several physical docker log lines: a Python traceback, a protobuf &lt;code>str()&lt;/code> dump and a multi-line configuration banner are all one record, and are stored and returned as one entry.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CallLogEntry : pb::IMessage<CallLogEntry>
@@ -1428,12 +1417,9 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Narrows a log query. Every field is optional; an empty repeated field means &amp;quot;do not filter on
-  /// this&amp;quot;. Fields are combined with AND; the values within one repeated field are combined with OR.
+  /// Narrows a log query. Every field is optional; an empty repeated field means &amp;quot;do not filter on this&amp;quot;. Fields are combined with AND; the values within one repeated field are combined with OR.
   ///
-  /// &lt;p>Filters fall into two groups. IDENTITY filters select which containers and which calls are of
-  /// interest and are resolved against VTSI&amp;apos;s own call records. CONTENT filters select which
-  /// entries of those containers to return.&lt;/p>
+  /// Filters fall into two groups. IDENTITY filters select which containers and which calls are of interest and are resolved against VTSI&amp;apos;s own call records. CONTENT filters select which entries of those containers to return.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CallLogFilter : pb::IMessage<CallLogFilter>
@@ -2749,9 +2735,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// One capture generation of one container on one docker channel. A container that is recreated
-  /// yields a NEW log stream, because a recreated container is a different docker container and the
-  /// previous container&amp;apos;s logs no longer exist anywhere except here.
+  /// One capture generation of one container on one docker channel. A container that is recreated yields a NEW log stream, because a recreated container is a different docker container and the previous container&amp;apos;s logs no longer exist anywhere except here.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CallLogStream : pb::IMessage<CallLogStream>
@@ -3825,8 +3809,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.StreamCallLogs">Logs.StreamCallLogs&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.StreamCallLogs">Logs.StreamCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamCallLogsRequest : pb::IMessage<StreamCallLogsRequest>
@@ -4258,10 +4241,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.StreamCallLogs">Logs.StreamCallLogs&lt;/a>. The stream carries an
-  /// envelope rather than a bare entry so that a viewer can tell a healthy quiet container from a
-  /// capture that has died.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Logs.StreamCallLogs">Logs.StreamCallLogs&lt;/a>. The stream carries an envelope rather than a bare entry so that a viewer can tell a healthy quiet container from a capture that has died.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamCallLogsResponse : pb::IMessage<StreamCallLogsResponse>
@@ -4703,8 +4683,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogs">Logs.ListCallLogs&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogs">Logs.ListCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCallLogsRequest : pb::IMessage<ListCallLogsRequest>
@@ -5342,8 +5321,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogs">Logs.ListCallLogs&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogs">Logs.ListCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCallLogsResponse : pb::IMessage<ListCallLogsResponse>
@@ -5904,8 +5882,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.GetCallLogStream">Logs.GetCallLogStream&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.GetCallLogStream">Logs.GetCallLogStream&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetCallLogStreamRequest : pb::IMessage<GetCallLogStreamRequest>
@@ -6205,8 +6182,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogStreams">Logs.ListCallLogStreams&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogStreams">Logs.ListCallLogStreams&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCallLogStreamsRequest : pb::IMessage<ListCallLogStreamsRequest>
@@ -6651,8 +6627,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogStreams">Logs.ListCallLogStreams&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Logs.ListCallLogStreams">Logs.ListCallLogStreams&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCallLogStreamsResponse : pb::IMessage<ListCallLogStreamsResponse>
@@ -6886,8 +6861,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.DeleteCallLogs">Logs.DeleteCallLogs&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.DeleteCallLogs">Logs.DeleteCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCallLogsRequest : pb::IMessage<DeleteCallLogsRequest>
@@ -7186,8 +7160,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.DeleteCallLogs">Logs.DeleteCallLogs&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Logs.DeleteCallLogs">Logs.DeleteCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteCallLogsResponse : pb::IMessage<DeleteCallLogsResponse>
@@ -7432,8 +7405,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">Logs.ExportCallLogs&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Logs.ExportCallLogs">Logs.ExportCallLogs&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExportCallLogsRequest : pb::IMessage<ExportCallLogsRequest>

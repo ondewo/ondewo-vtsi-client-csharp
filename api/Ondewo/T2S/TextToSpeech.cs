@@ -324,7 +324,7 @@ namespace Ondewo.T2S {
   }
   #region Enums
   /// <summary>
-  /// &lt;p>Represents a pulse-code modulation technique.&lt;/p>
+  /// Represents a pulse-code modulation technique.
   /// </summary>
   public enum Pcm {
     /// <summary>
@@ -358,7 +358,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>AudioFormat enum represents various audio file formats for storing digital audio data.&lt;/p>
+  /// AudioFormat enum represents various audio file formats for storing digital audio data.
   /// </summary>
   public enum AudioFormat {
     /// <summary>
@@ -395,8 +395,9 @@ namespace Ondewo.T2S {
 
   #region Messages
   /// <summary>
-  /// &lt;p>Represents a Synthesize Request.&lt;/p>
-  /// &lt;p>A Synthesize Request contains the information need to perform a text to speech conversion.&lt;/p>
+  /// Represents a Synthesize Request.
+  ///
+  /// A Synthesize Request contains the information need to perform a text to speech conversion.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeRequest : pb::IMessage<SynthesizeRequest>
@@ -852,7 +853,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>BatchSynthesizeRequest message is used to send a batch request for synthesis.&lt;/p>
+  /// BatchSynthesizeRequest message is used to send a batch request for synthesis.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSynthesizeRequest : pb::IMessage<BatchSynthesizeRequest>
@@ -1045,7 +1046,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>StreamingSynthesizeRequest is used to perform streaming synthesize.&lt;/p>
+  /// StreamingSynthesizeRequest is used to perform streaming synthesize.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingSynthesizeRequest : pb::IMessage<StreamingSynthesizeRequest>
@@ -1299,7 +1300,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>BatchSynthesizeResponse message is used to store the responses for a batch synthesis request.&lt;/p>
+  /// BatchSynthesizeResponse message is used to store the responses for a batch synthesis request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSynthesizeResponse : pb::IMessage<BatchSynthesizeResponse>
@@ -1492,7 +1493,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Represents a Configuration for the text to speech conversion.&lt;/p>
+  /// Represents a Configuration for the text to speech conversion.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RequestConfig : pb::IMessage<RequestConfig>
@@ -2544,7 +2545,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Configuration for cloud provider settings for Text-to-Speech (T2S).&lt;/p>
+  /// Configuration for cloud provider settings for Text-to-Speech (T2S).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudProviderConfig : pb::IMessage<T2sCloudProviderConfig>
@@ -2855,7 +2856,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Eleven Labs text-to-speech provider.&lt;/p>
+  /// Configuration details specific to the Eleven Labs text-to-speech provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudProviderConfigElevenLabs : pb::IMessage<T2sCloudProviderConfigElevenLabs>
@@ -3220,7 +3221,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Microsoft text-to-speech provider.&lt;/p>
+  /// Configuration details specific to the Microsoft text-to-speech provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudProviderConfigMicrosoft : pb::IMessage<T2sCloudProviderConfigMicrosoft>
@@ -3424,7 +3425,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Configuration details specific to the Google text-to-speech provider.&lt;/p>
+  /// Configuration details specific to the Google text-to-speech provider.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudProviderConfigGoogle : pb::IMessage<T2sCloudProviderConfigGoogle>
@@ -3708,8 +3709,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Represents a Synthesize Response.&lt;/p>
-  /// &lt;p>A Synthesize Response contains the generated audio, requested text and all other properties of this generated audio.&lt;/p>
+  /// Represents a Synthesize Response.
+  ///
+  /// A Synthesize Response contains the generated audio, requested text and all other properties of this generated audio.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SynthesizeResponse : pb::IMessage<SynthesizeResponse>
@@ -4202,9 +4204,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Represents a Streaming Synthesize Response.&lt;/p>
-  /// &lt;p>A Streaming Synthesize Response contains the generated audio, requested text and and
-  /// all other properties of this generated audio.&lt;/p>
+  /// Represents a Streaming Synthesize Response.
+  ///
+  /// A Streaming Synthesize Response contains the generated audio, requested text and and all other properties of this generated audio.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingSynthesizeResponse : pb::IMessage<StreamingSynthesizeResponse>
@@ -4697,7 +4699,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>NormalizeTextRequest message is used to request text normalization.&lt;/p>
+  /// NormalizeTextRequest message is used to request text normalization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizeTextRequest : pb::IMessage<NormalizeTextRequest>
@@ -4941,7 +4943,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>NormalizeTextResponse message is used to store the normalized text response.&lt;/p>
+  /// NormalizeTextResponse message is used to store the normalized text response.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class NormalizeTextResponse : pb::IMessage<NormalizeTextResponse>
@@ -5145,7 +5147,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Version information of the service&lt;/p>
+  /// Version information of the service
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2SGetServiceInfoResponse : pb::IMessage<T2SGetServiceInfoResponse>
@@ -5349,9 +5351,11 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Pipeline Request representation.&lt;/p>
-  /// &lt;p>The request message for ListT2sPipelines.&lt;/p>
-  /// &lt;p>Filter pipelines by attributed in request.&lt;/p>
+  /// Pipeline Request representation.
+  ///
+  /// The request message for ListT2sPipelines.
+  ///
+  /// Filter pipelines by attributed in request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sPipelinesRequest : pb::IMessage<ListT2sPipelinesRequest>
@@ -5660,8 +5664,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Pipeline Response representation.&lt;/p>
-  /// &lt;p>The response message for ListT2sPipelines.&lt;/p>
+  /// Pipeline Response representation.
+  ///
+  /// The response message for ListT2sPipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sPipelinesResponse : pb::IMessage<ListT2sPipelinesResponse>
@@ -5856,9 +5861,11 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Language Request representation.&lt;/p>
-  /// &lt;p>The request message for ListT2sLanguages.&lt;/p>
-  /// &lt;p>Filter languages of pipelines by attributed in request.&lt;/p>
+  /// Language Request representation.
+  ///
+  /// The request message for ListT2sLanguages.
+  ///
+  /// Filter languages of pipelines by attributed in request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sLanguagesRequest : pb::IMessage<ListT2sLanguagesRequest>
@@ -6138,8 +6145,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Language Response representation.&lt;/p>
-  /// &lt;p>The response message for ListT2sLanguages.&lt;/p>
+  /// Language Response representation.
+  ///
+  /// The response message for ListT2sLanguages.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sLanguagesResponse : pb::IMessage<ListT2sLanguagesResponse>
@@ -6333,9 +6341,11 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Domain Request representation.&lt;/p>
-  /// &lt;p>The request message for ListT2sDomains.&lt;/p>
-  /// &lt;p>Filter domains of pipelines by attributed in request.&lt;/p>
+  /// Domain Request representation.
+  ///
+  /// The request message for ListT2sDomains.
+  ///
+  /// Filter domains of pipelines by attributed in request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sDomainsRequest : pb::IMessage<ListT2sDomainsRequest>
@@ -6615,8 +6625,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Domains Response representation.&lt;/p>
-  /// &lt;p>The response message for ListT2sDomains.&lt;/p>
+  /// Domains Response representation.
+  ///
+  /// The response message for ListT2sDomains.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sDomainsResponse : pb::IMessage<ListT2sDomainsResponse>
@@ -6810,8 +6821,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>The request message for ListT2sNormalizationPipelines.&lt;/p>
-  /// &lt;p>Filter pipelines by attributed in request.&lt;/p>
+  /// The request message for ListT2sNormalizationPipelines.
+  ///
+  /// Filter pipelines by attributed in request.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sNormalizationPipelinesRequest : pb::IMessage<ListT2sNormalizationPipelinesRequest>
@@ -7015,8 +7027,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Pipeline Response representation.&lt;/p>
-  /// &lt;p>The response message for ListT2sNormalizationPipelines.&lt;/p>
+  /// Pipeline Response representation.
+  ///
+  /// The response message for ListT2sNormalizationPipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListT2sNormalizationPipelinesResponse : pb::IMessage<ListT2sNormalizationPipelinesResponse>
@@ -7211,8 +7224,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Pipeline Id representation.&lt;/p>
-  /// &lt;p>Used in the creation, deletion and getter of pipelines.&lt;/p>
+  /// Pipeline Id representation.
+  ///
+  /// Used in the creation, deletion and getter of pipelines.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sPipelineId : pb::IMessage<T2sPipelineId>
@@ -7416,7 +7430,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Configuration of text-to-speech models representation.&lt;/p>
+  /// Configuration of text-to-speech models representation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Text2SpeechConfig : pb::IMessage<Text2SpeechConfig>
@@ -7856,7 +7870,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2SDescription message is used to describe the text-to-speech service.&lt;/p>
+  /// T2SDescription message is used to describe the text-to-speech service.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2SDescription : pb::IMessage<T2SDescription>
@@ -8260,7 +8274,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2SInference message is used to specify the text-to-speech inference settings.&lt;/p>
+  /// T2SInference message is used to specify the text-to-speech inference settings.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2SInference : pb::IMessage<T2SInference>
@@ -8613,7 +8627,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>CompositeInference message combines text-to-mel and mel-to-audio inference settings.&lt;/p>
+  /// CompositeInference message combines text-to-mel and mel-to-audio inference settings.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CompositeInference : pb::IMessage<CompositeInference>
@@ -8875,7 +8889,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>SingleInference message inference settings of text2audio models.&lt;/p>
+  /// SingleInference message inference settings of text2audio models.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SingleInference : pb::IMessage<SingleInference>
@@ -9088,7 +9102,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Text2Mel message contains settings for text-to-mel inference.&lt;/p>
+  /// Text2Mel message contains settings for text-to-mel inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Text2Mel : pb::IMessage<Text2Mel>
@@ -9391,7 +9405,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Text2Audio message contains settings for text-to-audio inference.&lt;/p>
+  /// Text2Audio message contains settings for text-to-audio inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Text2Audio : pb::IMessage<Text2Audio>
@@ -9990,7 +10004,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>GlowTTS message contains settings for the GlowTTS inference.&lt;/p>
+  /// GlowTTS message contains settings for the GlowTTS inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GlowTTS : pb::IMessage<GlowTTS>
@@ -10423,7 +10437,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>GlowTTSTriton message contains settings for the GlowTTS Triton inference.&lt;/p>
+  /// GlowTTSTriton message contains settings for the GlowTTS Triton inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GlowTTSTriton : pb::IMessage<GlowTTSTriton>
@@ -10936,7 +10950,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Vits message contains settings for the Vits inference.&lt;/p>
+  /// Vits message contains settings for the Vits inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Vits : pb::IMessage<Vits>
@@ -11369,7 +11383,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>VitsTriton message contains settings for the Vits Triton inference.&lt;/p>
+  /// VitsTriton message contains settings for the Vits Triton inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VitsTriton : pb::IMessage<VitsTriton>
@@ -11882,7 +11896,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2sCloudServiceElevenLabs message contains settings for the ElevenLabs Cloud service inference.&lt;/p>
+  /// T2sCloudServiceElevenLabs message contains settings for the ElevenLabs Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudServiceElevenLabs : pb::IMessage<T2sCloudServiceElevenLabs>
@@ -12255,7 +12269,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>VoiceSettings message contains settings for ElevenLabs inference.&lt;/p>
+  /// VoiceSettings message contains settings for ElevenLabs inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VoiceSettings : pb::IMessage<VoiceSettings>
@@ -12579,7 +12593,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2sCloudServiceAmazon message contains settings for the Amazon Cloud service inference.&lt;/p>
+  /// T2sCloudServiceAmazon message contains settings for the Amazon Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudServiceAmazon : pb::IMessage<T2sCloudServiceAmazon>
@@ -12823,7 +12837,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2sCloudServiceGoogle message contains settings for the Google Cloud service inference.&lt;/p>
+  /// T2sCloudServiceGoogle message contains settings for the Google Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudServiceGoogle : pb::IMessage<T2sCloudServiceGoogle>
@@ -13187,7 +13201,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2sCloudServiceMicrosoft message contains settings for the Microsoft Cloud service inference.&lt;/p>
+  /// T2sCloudServiceMicrosoft message contains settings for the Microsoft Cloud service inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2sCloudServiceMicrosoft : pb::IMessage<T2sCloudServiceMicrosoft>
@@ -13431,7 +13445,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Qwen3TtsCustomVoice message contains settings for inference of qwen3-TTS-CustomVoice model.&lt;/p>
+  /// Qwen3TtsCustomVoice message contains settings for inference of qwen3-TTS-CustomVoice model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Qwen3TtsCustomVoice : pb::IMessage<Qwen3TtsCustomVoice>
@@ -13844,7 +13858,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Qwen3TtsBase message contains settings for inference of qwen3-TTS-Base model.&lt;/p>
+  /// Qwen3TtsBase message contains settings for inference of qwen3-TTS-Base model.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Qwen3TtsBase : pb::IMessage<Qwen3TtsBase>
@@ -14257,7 +14271,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Mel2Audio message contains settings for mel-to-audio inference.&lt;/p>
+  /// Mel2Audio message contains settings for mel-to-audio inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Mel2Audio : pb::IMessage<Mel2Audio>
@@ -14609,7 +14623,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>HiFiGan message contains settings for the HiFiGan inference.&lt;/p>
+  /// HiFiGan message contains settings for the HiFiGan inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HiFiGan : pb::IMessage<HiFiGan>
@@ -14933,7 +14947,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>HiFiGanTriton message contains settings for the HiFiGan Triton inference.&lt;/p>
+  /// HiFiGanTriton message contains settings for the HiFiGan Triton inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HiFiGanTriton : pb::IMessage<HiFiGanTriton>
@@ -15257,7 +15271,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>MbMelganTriton message contains settings for the MbMelgan Triton inference.&lt;/p>
+  /// MbMelganTriton message contains settings for the MbMelgan Triton inference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class MbMelganTriton : pb::IMessage<MbMelganTriton>
@@ -15621,7 +15635,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Caching message contains settings for caching.&lt;/p>
+  /// Caching message contains settings for caching.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Caching : pb::IMessage<Caching>
@@ -16025,7 +16039,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Represents the configuration for text-to-speech normalization.&lt;/p>
+  /// Represents the configuration for text-to-speech normalization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2SNormalization : pb::IMessage<T2SNormalization>
@@ -16507,7 +16521,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Postprocessing message contains settings for postprocessing.&lt;/p>
+  /// Postprocessing message contains settings for postprocessing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Postprocessing : pb::IMessage<Postprocessing>
@@ -16887,7 +16901,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Logmnse message contains settings for Logmnse postprocessing.&lt;/p>
+  /// Logmnse message contains settings for Logmnse postprocessing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Logmnse : pb::IMessage<Logmnse>
@@ -17171,7 +17185,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Wiener message contains settings for Wiener postprocessing.&lt;/p>
+  /// Wiener message contains settings for Wiener postprocessing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Wiener : pb::IMessage<Wiener>
@@ -17535,7 +17549,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Apodization message contains settings for apodization postprocessing.&lt;/p>
+  /// Apodization message contains settings for apodization postprocessing.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Apodization : pb::IMessage<Apodization>
@@ -17739,7 +17753,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>T2SCustomLengthScales message contains custom length scales for text types.&lt;/p>
+  /// T2SCustomLengthScales message contains custom length scales for text types.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class T2SCustomLengthScales : pb::IMessage<T2SCustomLengthScales>
@@ -18223,7 +18237,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>PhonemizerId message represents the ID of a phonemizer.&lt;/p>
+  /// PhonemizerId message represents the ID of a phonemizer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PhonemizerId : pb::IMessage<PhonemizerId>
@@ -18427,7 +18441,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>CustomPhonemizerProto message represents a custom phonemizer.&lt;/p>
+  /// CustomPhonemizerProto message represents a custom phonemizer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CustomPhonemizerProto : pb::IMessage<CustomPhonemizerProto>
@@ -18660,7 +18674,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>Map message represents a word-to-phoneme mapping in a custom phonemizer.&lt;/p>
+  /// Map message represents a word-to-phoneme mapping in a custom phonemizer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Map : pb::IMessage<Map>
@@ -18904,7 +18918,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>ListCustomPhonemizerResponse message represents the response for listing custom phonemizers.&lt;/p>
+  /// ListCustomPhonemizerResponse message represents the response for listing custom phonemizers.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCustomPhonemizerResponse : pb::IMessage<ListCustomPhonemizerResponse>
@@ -19097,7 +19111,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>ListCustomPhonemizerRequest message represents the request for listing custom phonemizers.&lt;/p>
+  /// ListCustomPhonemizerRequest message represents the request for listing custom phonemizers.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListCustomPhonemizerRequest : pb::IMessage<ListCustomPhonemizerRequest>
@@ -19290,7 +19304,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>UpdateCustomPhonemizerRequest message represents the request for updating a custom phonemizer.&lt;/p>
+  /// UpdateCustomPhonemizerRequest message represents the request for updating a custom phonemizer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateCustomPhonemizerRequest : pb::IMessage<UpdateCustomPhonemizerRequest>
@@ -19566,8 +19580,7 @@ namespace Ondewo.T2S {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The update method to be used.
-      /// UpdateMethod enum defines the method for updating custom phonemizers.
+      /// The update method to be used. UpdateMethod enum defines the method for updating custom phonemizers.
       /// </summary>
       public enum UpdateMethod {
         /// <summary>
@@ -19590,7 +19603,7 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>CreateCustomPhonemizerRequest message represents the request for creating a custom phonemizer.&lt;/p>
+  /// CreateCustomPhonemizerRequest message represents the request for creating a custom phonemizer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateCustomPhonemizerRequest : pb::IMessage<CreateCustomPhonemizerRequest>
@@ -19823,9 +19836,9 @@ namespace Ondewo.T2S {
   }
 
   /// <summary>
-  /// &lt;p>VoiceCloningRequest message represents the request for cloning a voice.&lt;/p>
-  /// &lt;p>A VoiceCloningRequest contains a sample audio of the speaker to be cloned together with
-  /// its transcription and the information about the speaker and the model to use for cloning.&lt;/p>
+  /// VoiceCloningRequest message represents the request for cloning a voice.
+  ///
+  /// A VoiceCloningRequest contains a sample audio of the speaker to be cloned together with its transcription and the information about the speaker and the model to use for cloning.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VoiceCloningRequest : pb::IMessage<VoiceCloningRequest>

@@ -24,12 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Nlu {
   /// <summary>
-  /// LangSmith-style evaluation surface: datasets, examples, experiments, evaluator
-  /// runs, feedback (LLM-as-judge / human / heuristic / custom code / pairwise),
-  /// pairwise comparisons, release gates + persisted gate runs, scorecards,
-  /// per-project evaluation settings (judge configuration), the evaluator registry,
-  /// golden-transcript recording from sessions, conversation simulation
-  /// (standard + adversarial red-teaming), recurring schedules and report artifacts.
+  /// LangSmith-style evaluation surface: datasets, examples, experiments, evaluator runs, feedback (LLM-as-judge / human / heuristic / custom code / pairwise), pairwise comparisons, release gates + persisted gate runs, scorecards, per-project evaluation settings (judge configuration), the evaluator registry, golden-transcript recording from sessions, conversation simulation (standard + adversarial red-teaming), recurring schedules and report artifacts.
   /// </summary>
   public static partial class LlmEvaluations
   {

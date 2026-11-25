@@ -237,10 +237,7 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
-  /// How a softphone account secures its SIP signalling to the project&amp;apos;s Asterisk. Both modes use TLS
-  /// for signalling, SRTP for media and SIP digest authentication with the account&amp;apos;s own credentials;
-  /// they differ in which TLS port the softphone connects to and whether it must present a client
-  /// certificate.
+  /// How a softphone account secures its SIP signalling to the project&amp;apos;s Asterisk. Both modes use TLS for signalling, SRTP for media and SIP digest authentication with the account&amp;apos;s own credentials; they differ in which TLS port the softphone connects to and whether it must present a client certificate.
   /// </summary>
   public enum SoftphoneTransportSecurity {
     /// <summary>
@@ -299,8 +296,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Reachability of one registered contact of a softphone account, as the project&amp;apos;s Asterisk
-  /// qualifies it (SIP &lt;code>OPTIONS&lt;/code>).
+  /// Reachability of one registered contact of a softphone account, as the project&amp;apos;s Asterisk qualifies it (SIP &lt;code>OPTIONS&lt;/code>).
   /// </summary>
   public enum SoftphoneContactStatus {
     /// <summary>
@@ -348,8 +344,7 @@ namespace Ondewo.Vtsi {
 
   #region Messages
   /// <summary>
-  /// A SIP account on a VTSI project&amp;apos;s Asterisk for a human using a softphone. Never carries a
-  /// secret.
+  /// A SIP account on a VTSI project&amp;apos;s Asterisk for a human using a softphone. Never carries a secret.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneAccount : pb::IMessage<SoftphoneAccount>
@@ -1466,9 +1461,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// A client certificate issued to a softphone account by the project&amp;apos;s SOFTPHONE certificate
-  /// authority. Carries public material only: the private key exists solely inside the PKCS#12 bundle that
-  /// was returned once when the certificate was issued. Every field is output only.
+  /// A client certificate issued to a softphone account by the project&amp;apos;s SOFTPHONE certificate authority. Carries public material only: the private key exists solely inside the PKCS#12 bundle that was returned once when the certificate was issued. Every field is output only.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneCertificate : pb::IMessage<SoftphoneCertificate>
@@ -2362,10 +2355,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// ONE-TIME secrets of a softphone account, returned only by &lt;code>CreateSoftphoneAccount&lt;/code> and
-  /// &lt;code>RotateSoftphoneCredentials&lt;/code>. VTSI keeps no copy of the private key or of
-  /// &lt;code>pkcs12_password&lt;/code> and cannot return them again: store them now, or rotate later. Never log
-  /// this message.
+  /// ONE-TIME secrets of a softphone account, returned only by &lt;code>CreateSoftphoneAccount&lt;/code> and &lt;code>RotateSoftphoneCredentials&lt;/code>. VTSI keeps no copy of the private key or of &lt;code>pkcs12_password&lt;/code> and cannot return them again: store them now, or rotate later. Never log this message.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneCredentials : pb::IMessage<SoftphoneCredentials>
@@ -2704,8 +2694,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Everything needed to configure a softphone for one account, except the secrets. Every field is output
-  /// only.
+  /// Everything needed to configure a softphone for one account, except the secrets. Every field is output only.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneProvisioning : pb::IMessage<SoftphoneProvisioning>
@@ -3690,9 +3679,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Narrows a softphone account listing. Every field is optional; an unset field or an empty repeated
-  /// field or map means &amp;quot;do not filter on this&amp;quot;. Fields are combined with AND; the values within
-  /// one repeated field are combined with OR; the entries of &lt;code>labels&lt;/code> are combined with AND.
+  /// Narrows a softphone account listing. Every field is optional; an unset field or an empty repeated field or map means &amp;quot;do not filter on this&amp;quot;. Fields are combined with AND; the values within one repeated field are combined with OR; the entries of &lt;code>labels&lt;/code> are combined with AND.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneAccountFilter : pb::IMessage<SoftphoneAccountFilter>
@@ -4214,8 +4201,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Narrows a softphone certificate listing. Combined like
-  /// &lt;a href="index.html#ondewo.vtsi.SoftphoneAccountFilter">SoftphoneAccountFilter&lt;/a>.
+  /// Narrows a softphone certificate listing. Combined like &lt;a href="index.html#ondewo.vtsi.SoftphoneAccountFilter">SoftphoneAccountFilter&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneCertificateFilter : pb::IMessage<SoftphoneCertificateFilter>
@@ -4825,8 +4811,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.CreateSoftphoneAccount">Softphones.CreateSoftphoneAccount&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.CreateSoftphoneAccount">Softphones.CreateSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSoftphoneAccountRequest : pb::IMessage<CreateSoftphoneAccountRequest>
@@ -5138,8 +5123,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.CreateSoftphoneAccount">Softphones.CreateSoftphoneAccount&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Softphones.CreateSoftphoneAccount">Softphones.CreateSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSoftphoneAccountResponse : pb::IMessage<CreateSoftphoneAccountResponse>
@@ -5403,8 +5387,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneAccount">Softphones.GetSoftphoneAccount&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneAccount">Softphones.GetSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSoftphoneAccountRequest : pb::IMessage<GetSoftphoneAccountRequest>
@@ -5660,8 +5643,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.UpdateSoftphoneAccount">Softphones.UpdateSoftphoneAccount&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.UpdateSoftphoneAccount">Softphones.UpdateSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateSoftphoneAccountRequest : pb::IMessage<UpdateSoftphoneAccountRequest>
@@ -5940,8 +5922,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.DeleteSoftphoneAccount">Softphones.DeleteSoftphoneAccount&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.DeleteSoftphoneAccount">Softphones.DeleteSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSoftphoneAccountRequest : pb::IMessage<DeleteSoftphoneAccountRequest>
@@ -6146,8 +6127,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.DeleteSoftphoneAccount">Softphones.DeleteSoftphoneAccount&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Softphones.DeleteSoftphoneAccount">Softphones.DeleteSoftphoneAccount&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteSoftphoneAccountResponse : pb::IMessage<DeleteSoftphoneAccountResponse>
@@ -6391,8 +6371,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneAccounts">Softphones.ListSoftphoneAccounts&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneAccounts">Softphones.ListSoftphoneAccounts&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSoftphoneAccountsRequest : pb::IMessage<ListSoftphoneAccountsRequest>
@@ -6841,8 +6820,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneAccounts">Softphones.ListSoftphoneAccounts&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneAccounts">Softphones.ListSoftphoneAccounts&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSoftphoneAccountsResponse : pb::IMessage<ListSoftphoneAccountsResponse>
@@ -7075,10 +7053,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.RotateSoftphoneCredentials">Softphones.RotateSoftphoneCredentials&lt;/a>.
-  /// At least one of &lt;code>rotate_sip_password&lt;/code> and &lt;code>rotate_certificate&lt;/code> must be
-  /// &lt;code>true&lt;/code>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.RotateSoftphoneCredentials">Softphones.RotateSoftphoneCredentials&lt;/a>. At least one of &lt;code>rotate_sip_password&lt;/code> and &lt;code>rotate_certificate&lt;/code> must be &lt;code>true&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RotateSoftphoneCredentialsRequest : pb::IMessage<RotateSoftphoneCredentialsRequest>
@@ -7364,8 +7339,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.RotateSoftphoneCredentials">Softphones.RotateSoftphoneCredentials&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Softphones.RotateSoftphoneCredentials">Softphones.RotateSoftphoneCredentials&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RotateSoftphoneCredentialsResponse : pb::IMessage<RotateSoftphoneCredentialsResponse>
@@ -7628,8 +7602,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneCertificates">Softphones.ListSoftphoneCertificates&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneCertificates">Softphones.ListSoftphoneCertificates&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSoftphoneCertificatesRequest : pb::IMessage<ListSoftphoneCertificatesRequest>
@@ -8132,8 +8105,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The response message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneCertificates">Softphones.ListSoftphoneCertificates&lt;/a>.
+  /// The response message for &lt;a href="index.html#ondewo.vtsi.Softphones.ListSoftphoneCertificates">Softphones.ListSoftphoneCertificates&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListSoftphoneCertificatesResponse : pb::IMessage<ListSoftphoneCertificatesResponse>
@@ -8366,8 +8338,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneCertificate">Softphones.GetSoftphoneCertificate&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneCertificate">Softphones.GetSoftphoneCertificate&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSoftphoneCertificateRequest : pb::IMessage<GetSoftphoneCertificateRequest>
@@ -8622,8 +8593,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.RevokeSoftphoneCertificate">Softphones.RevokeSoftphoneCertificate&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.RevokeSoftphoneCertificate">Softphones.RevokeSoftphoneCertificate&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RevokeSoftphoneCertificateRequest : pb::IMessage<RevokeSoftphoneCertificateRequest>
@@ -8869,8 +8839,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneProvisioning">Softphones.GetSoftphoneProvisioning&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneProvisioning">Softphones.GetSoftphoneProvisioning&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSoftphoneProvisioningRequest : pb::IMessage<GetSoftphoneProvisioningRequest>
@@ -9075,8 +9044,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The request message for
-  /// &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneRegistration">Softphones.GetSoftphoneRegistration&lt;/a>.
+  /// The request message for &lt;a href="index.html#ondewo.vtsi.Softphones.GetSoftphoneRegistration">Softphones.GetSoftphoneRegistration&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetSoftphoneRegistrationRequest : pb::IMessage<GetSoftphoneRegistrationRequest>
@@ -9333,8 +9301,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// The live registrations of one softphone account on its project&amp;apos;s Asterisk. Every field is output
-  /// only. Never carries a secret.
+  /// The live registrations of one softphone account on its project&amp;apos;s Asterisk. Every field is output only. Never carries a secret.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SoftphoneRegistration : pb::IMessage<SoftphoneRegistration>

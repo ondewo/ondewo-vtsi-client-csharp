@@ -31,10 +31,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-// File-level comment for <code>ondewo/nlu/rag.proto</code>.
-// This file contains a single service <a href="#ondewo.nlu.Rags">Rags</a>. The Rags service provides RAG (Retrieval-Augmented Generation) and web crawler functionality.
-// Fields marked as <code>optional</code> carry explicit presence, so that an explicitly set default value (<code>0</code>, <code>false</code>, <code>""</code>) can be distinguished from a field that was never set. Without the <code>optional</code> keyword it would for instance not be possible to distinguish between an integer <code>0</code> and <code>null</code>.
-// The marker is applied where that distinction is actually consumed — the partial-update inputs (an unset field leaves the stored value untouched, an explicit default clears it) and the retrieval overrides that are forwarded to RAGFlow (an explicit <code>0.0</code> or <code>false</code> must override the server-side default rather than fall back to it). Fields that carry no such distinction are deliberately left without the keyword, and for message-typed fields it is omitted because proto3 gives them explicit presence anyway.
+// File-level comment for <code>ondewo/nlu/rag.proto</code>. This file contains a single service <a href="#ondewo.nlu.Rags">Rags</a>. The Rags service provides RAG (Retrieval-Augmented Generation) and web crawler functionality. Fields marked as <code>optional</code> carry explicit presence, so that an explicitly set default value (<code>0</code>, <code>false</code>, <code>""</code>) can be distinguished from a field that was never set. Without the <code>optional</code> keyword it would for instance not be possible to distinguish between an integer <code>0</code> and <code>null</code>. The marker is applied where that distinction is actually consumed — the partial-update inputs (an unset field leaves the stored value untouched, an explicit default clears it) and the retrieval overrides that are forwarded to RAGFlow (an explicit <code>0.0</code> or <code>false</code> must override the server-side default rather than fall back to it). Fields that carry no such distinction are deliberately left without the keyword, and for message-typed fields it is omitted because proto3 gives them explicit presence anyway.
 #pragma warning disable 0414, 1591, 8981, 0612
 #region Designer generated code
 
@@ -42,8 +39,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Nlu {
   /// <summary>
-  /// Provides RAG and web crawler endpoints.
-  /// Most of the RAG related endpoints largely mirror &lt;a href="https://github.com/ondewo/ragflow">RAGFlow's&lt;/a> HTTP API endpoints. For more information on RAGFlow refer to the &lt;a href="https://ragflow.io/docs/dev/">official documentation&lt;/a>
+  /// Provides RAG and web crawler endpoints. Most of the RAG related endpoints largely mirror &lt;a href="https://github.com/ondewo/ragflow">RAGFlow's&lt;/a> HTTP API endpoints. For more information on RAGFlow refer to the &lt;a href="https://ragflow.io/docs/dev/">official documentation&lt;/a>
   /// </summary>
   public static partial class Rags
   {

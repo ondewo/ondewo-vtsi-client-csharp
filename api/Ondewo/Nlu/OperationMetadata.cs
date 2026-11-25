@@ -65,8 +65,7 @@ namespace Ondewo.Nlu {
   }
   #region Messages
   /// <summary>
-  /// Represents the metadata of the long-running operation that can be a parent operation for sub-operations or
-  /// can be a sub-operation itself
+  /// Represents the metadata of the long-running operation that can be a parent operation for sub-operations or can be a sub-operation itself
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class OperationMetadata : pb::IMessage<OperationMetadata>
@@ -1136,8 +1135,7 @@ namespace Ondewo.Nlu {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Structure to set status of operation.
-      /// An operation may not be started if NOT_STARTED is set, in progress if IN_PROGRESS, finished if DONE, interrupted if CANCELED or failed if FAILED.
+      /// Structure to set status of operation. An operation may not be started if NOT_STARTED is set, in progress if IN_PROGRESS, finished if DONE, interrupted if CANCELED or failed if FAILED.
       /// </summary>
       public enum Status {
         /// <summary>
@@ -1167,8 +1165,7 @@ namespace Ondewo.Nlu {
       }
 
       /// <summary>
-      /// Type of operation.
-      /// It can be creating, importing, exporting, deleting, restoring, building cache, training or exporting benchmark an agent
+      /// Type of operation. It can be creating, importing, exporting, deleting, restoring, building cache, training or exporting benchmark an agent
       /// </summary>
       public enum OperationType {
         /// <summary>

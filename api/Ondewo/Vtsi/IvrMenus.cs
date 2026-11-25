@@ -208,7 +208,7 @@ namespace Ondewo.Vtsi {
   }
   #region Enums
   /// <summary>
-  /// &lt;p>The kind of an IVR node&lt;/p>
+  /// The kind of an IVR node
   /// </summary>
   public enum IvrNodeType {
     /// <summary>
@@ -242,7 +242,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Publication state of an IVR menu&lt;/p>
+  /// Publication state of an IVR menu
   /// </summary>
   public enum IvrMenuState {
     /// <summary>
@@ -300,7 +300,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>State of a test call of an IVR menu&lt;/p>
+  /// State of a test call of an IVR menu
   /// </summary>
   public enum IvrMenuTestState {
     /// <summary>
@@ -329,10 +329,7 @@ namespace Ondewo.Vtsi {
 
   #region Messages
   /// <summary>
-  /// &lt;p>An IVR menu of a VTSI project. The graph fields (&lt;code>entry_node_id&lt;/code>, &lt;code>nodes&lt;/code>,
-  /// &lt;code>language_code&lt;/code>, &lt;code>t2s_pipeline_id&lt;/code>) are versioned by &lt;code>revision&lt;/code>; the routing
-  /// fields (&lt;code>inbound_phone_numbers&lt;/code>, &lt;code>default_inbound&lt;/code>, &lt;code>disabled&lt;/code>) take effect on the
-  /// next publish.&lt;/p>
+  /// An IVR menu of a VTSI project. The graph fields (&lt;code>entry_node_id&lt;/code>, &lt;code>nodes&lt;/code>, &lt;code>language_code&lt;/code>, &lt;code>t2s_pipeline_id&lt;/code>) are versioned by &lt;code>revision&lt;/code>; the routing fields (&lt;code>inbound_phone_numbers&lt;/code>, &lt;code>default_inbound&lt;/code>, &lt;code>disabled&lt;/code>) take effect on the next publish.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrMenu : pb::IMessage<IvrMenu>
@@ -1415,8 +1412,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One node of an IVR menu. Which fields apply depends on &lt;code>type&lt;/code>; a field set on a node type it does not
-  /// apply to is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.&lt;/p>
+  /// One node of an IVR menu. Which fields apply depends on &lt;code>type&lt;/code>; a field set on a node type it does not apply to is refused with &lt;code>INVALID_ARGUMENT&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrNode : pb::IMessage<IvrNode>
@@ -2252,7 +2248,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One key of a MENU node&lt;/p>
+  /// One key of a MENU node
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrOption : pb::IMessage<IvrOption>
@@ -2537,7 +2533,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>An audio prompt. Exactly one source must be set.&lt;/p>
+  /// An audio prompt. Exactly one source must be set.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrPrompt : pb::IMessage<IvrPrompt>
@@ -2940,7 +2936,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Position of a node on the editor canvas&lt;/p>
+  /// Position of a node on the editor canvas
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrNodePosition : pb::IMessage<IvrNodePosition>
@@ -3184,7 +3180,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>Traffic counters of one node, in &lt;code>IvrMenu.node_stats&lt;/code>. Approximate.&lt;/p>
+  /// Traffic counters of one node, in &lt;code>IvrMenu.node_stats&lt;/code>. Approximate.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrNodeStats : pb::IMessage<IvrNodeStats>
@@ -6444,7 +6440,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One problem of an IVR menu draft&lt;/p>
+  /// One problem of an IVR menu draft
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrMenuIssue : pb::IMessage<IvrMenuIssue>
@@ -7291,8 +7287,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Request to clone an IVR menu. The clone has no &lt;code>inbound_phone_numbers&lt;/code>, &lt;code>default_inbound&lt;/code>
-  /// &lt;code>false&lt;/code> and the state DRAFT.
+  /// Request to clone an IVR menu. The clone has no &lt;code>inbound_phone_numbers&lt;/code>, &lt;code>default_inbound&lt;/code> &lt;code>false&lt;/code> and the state DRAFT.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CloneIvrMenuRequest : pb::IMessage<CloneIvrMenuRequest>
@@ -7914,7 +7909,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One saved revision of an IVR menu&lt;/p>
+  /// One saved revision of an IVR menu
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrMenuRevision : pb::IMessage<IvrMenuRevision>
@@ -8570,7 +8565,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One step of the key script of a test call&lt;/p>
+  /// One step of the key script of a test call
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrTestStep : pb::IMessage<IvrTestStep>
@@ -9296,7 +9291,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>One node entry of a test call&lt;/p>
+  /// One node entry of a test call
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrTraversalStep : pb::IMessage<IvrTraversalStep>
@@ -9671,7 +9666,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// &lt;p>A test call of an IVR menu, started by &lt;code>TestIvrMenu&lt;/code>. Leaves no call record and no NLU session.&lt;/p>
+  /// A test call of an IVR menu, started by &lt;code>TestIvrMenu&lt;/code>. Leaves no call record and no NLU session.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class IvrMenuTest : pb::IMessage<IvrMenuTest>

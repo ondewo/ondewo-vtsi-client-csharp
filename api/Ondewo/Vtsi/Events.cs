@@ -301,30 +301,12 @@ namespace Ondewo.Vtsi {
   #region Enums
   /// <summary>
   /// Every event VTSI reports. Values are grouped by resource in blocks of 100; numbers are stable.
-  /// &lt;p>&lt;b>Attributes.&lt;/b> &lt;code>VtsiEventMessage.attributes&lt;/code> carries the event-specific values listed at
-  /// each value below; a key whose value is unknown is left out, and keys not listed are never sent. Formats:
-  /// counts and numbers are base-10 integers without separators (&lt;code>3&lt;/code>); booleans are
-  /// &lt;code>true&lt;/code> / &lt;code>false&lt;/code>; times are RFC 3339 in UTC with a numeric offset
-  /// (&lt;code>2026-10-11T12:00:00+00:00&lt;/code>, fractional seconds possible); resource names are complete
-  /// (&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;&lt;/code>); &lt;code>updated_fields&lt;/code> is a
-  /// comma-separated list of &lt;code>update_mask&lt;/code> paths without spaces (&lt;code>display_name,url&lt;/code>);
-  /// a campaign &lt;code>state&lt;/code> / &lt;code>previous_state&lt;/code> is the &lt;code>CampaignState&lt;/code> name WITHOUT
-  /// its &lt;code>CAMPAIGN_STATE_&lt;/code> prefix (&lt;code>RUNNING&lt;/code>). An event carries at most 20 attributes and
-  /// a value at most 256 characters (longer values are cut); &lt;code>description&lt;/code> and
-  /// &lt;code>sip_status_description&lt;/code> at most 1024 characters.&lt;/p>
-  /// &lt;p>&lt;b>Call status attributes&lt;/b>, on every event derived from a change of a call&amp;apos;s SIP status (marked
-  /// "call status attributes" below): &lt;code>caller_name&lt;/code>, &lt;code>listener_name&lt;/code> or
-  /// &lt;code>scheduled_caller_name&lt;/code> (the resource that owns the call, the one that applies) and
-  /// &lt;code>phone_number&lt;/code> (the callee or caller number in clear, where recorded; treat it as personal
-  /// data). Such an event also sets &lt;code>call_name&lt;/code>, &lt;code>sip_status_type&lt;/code>,
-  /// &lt;code>previous_sip_status_type&lt;/code> (unset for a new call record), &lt;code>sip_status_description&lt;/code>
-  /// and &lt;code>resource_sequence&lt;/code> (the call&amp;apos;s status change number), and has a deterministic
-  /// &lt;code>event_id&lt;/code>, so replicas observing the same change report one event.&lt;/p>
-  /// &lt;p>&lt;b>Campaign call attributes&lt;/b>, on the &lt;code>VTSI_EVENT_CAMPAIGN_CALL_*&lt;/code> events:
-  /// &lt;code>attempt_number&lt;/code> (attempts started so far), &lt;code>phone_number&lt;/code> (the callee in clear) and
-  /// &lt;code>caller_name&lt;/code> (caller of the current or last attempt). They also set &lt;code>call_name&lt;/code>,
-  /// &lt;code>campaign_name&lt;/code>, &lt;code>sip_status_type&lt;/code>, &lt;code>sip_status_description&lt;/code> and
-  /// &lt;code>resource_sequence&lt;/code>; never &lt;code>campaign_statistics&lt;/code>.&lt;/p>
+  ///
+  /// &lt;b>Attributes.&lt;/b> &lt;code>VtsiEventMessage.attributes&lt;/code> carries the event-specific values listed at each value below; a key whose value is unknown is left out, and keys not listed are never sent. Formats: counts and numbers are base-10 integers without separators (&lt;code>3&lt;/code>); booleans are &lt;code>true&lt;/code> / &lt;code>false&lt;/code>; times are RFC 3339 in UTC with a numeric offset (&lt;code>2026-10-11T12:00:00+00:00&lt;/code>, fractional seconds possible); resource names are complete (&lt;code>projects/&amp;lt;project_uuid&amp;gt;/callers/&amp;lt;caller_uuid&amp;gt;&lt;/code>); &lt;code>updated_fields&lt;/code> is a comma-separated list of &lt;code>update_mask&lt;/code> paths without spaces (&lt;code>display_name,url&lt;/code>); a campaign &lt;code>state&lt;/code> / &lt;code>previous_state&lt;/code> is the &lt;code>CampaignState&lt;/code> name WITHOUT its &lt;code>CAMPAIGN_STATE_&lt;/code> prefix (&lt;code>RUNNING&lt;/code>). An event carries at most 20 attributes and a value at most 256 characters (longer values are cut); &lt;code>description&lt;/code> and &lt;code>sip_status_description&lt;/code> at most 1024 characters.
+  ///
+  /// &lt;b>Call status attributes&lt;/b>, on every event derived from a change of a call&amp;apos;s SIP status (marked "call status attributes" below): &lt;code>caller_name&lt;/code>, &lt;code>listener_name&lt;/code> or &lt;code>scheduled_caller_name&lt;/code> (the resource that owns the call, the one that applies) and &lt;code>phone_number&lt;/code> (the callee or caller number in clear, where recorded; treat it as personal data). Such an event also sets &lt;code>call_name&lt;/code>, &lt;code>sip_status_type&lt;/code>, &lt;code>previous_sip_status_type&lt;/code> (unset for a new call record), &lt;code>sip_status_description&lt;/code> and &lt;code>resource_sequence&lt;/code> (the call&amp;apos;s status change number), and has a deterministic &lt;code>event_id&lt;/code>, so replicas observing the same change report one event.
+  ///
+  /// &lt;b>Campaign call attributes&lt;/b>, on the &lt;code>VTSI_EVENT_CAMPAIGN_CALL_*&lt;/code> events: &lt;code>attempt_number&lt;/code> (attempts started so far), &lt;code>phone_number&lt;/code> (the callee in clear) and &lt;code>caller_name&lt;/code> (caller of the current or last attempt). They also set &lt;code>call_name&lt;/code>, &lt;code>campaign_name&lt;/code>, &lt;code>sip_status_type&lt;/code>, &lt;code>sip_status_description&lt;/code> and &lt;code>resource_sequence&lt;/code>; never &lt;code>campaign_statistics&lt;/code>.
   /// </summary>
   public enum VtsiEvent {
     /// <summary>
@@ -938,10 +920,8 @@ namespace Ondewo.Vtsi {
 
   /// <summary>
   /// HTTP method of a webhook request.
-  /// &lt;p>Note: the zero value &lt;code>WEBHOOK_HTTP_METHOD_UNSPECIFIED&lt;/code> is not "no method" but means
-  /// &lt;code>POST&lt;/code>, the default. It keeps its released name for wire and source compatibility; a webhook
-  /// written with it is stored and sent as POST, and &lt;code>Webhook.http_method&lt;/code> then reads back
-  /// &lt;code>WEBHOOK_HTTP_METHOD_POST&lt;/code>.&lt;/p>
+  ///
+  /// Note: the zero value &lt;code>WEBHOOK_HTTP_METHOD_UNSPECIFIED&lt;/code> is not "no method" but means &lt;code>POST&lt;/code>, the default. It keeps its released name for wire and source compatibility; a webhook written with it is stored and sent as POST, and &lt;code>Webhook.http_method&lt;/code> then reads back &lt;code>WEBHOOK_HTTP_METHOD_POST&lt;/code>.
   /// </summary>
   public enum WebhookHttpMethod {
     /// <summary>
@@ -962,8 +942,7 @@ namespace Ondewo.Vtsi {
 
   #region Messages
   /// <summary>
-  /// One event. This is the body of a webhook request (proto3 JSON with the original field names)
-  /// and the unit of the &lt;code>SubscribeVtsiEvents&lt;/code> stream.
+  /// One event. This is the body of a webhook request (proto3 JSON with the original field names) and the unit of the &lt;code>SubscribeVtsiEvents&lt;/code> stream.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VtsiEventMessage : pb::IMessage<VtsiEventMessage>
@@ -2452,8 +2431,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Delivery counters of a webhook. Approximate: summed over every server replica and flushed every
-  /// few seconds.
+  /// Delivery counters of a webhook. Approximate: summed over every server replica and flushed every few seconds.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WebhookDeliveryStatistics : pb::IMessage<WebhookDeliveryStatistics>
@@ -3701,9 +3679,7 @@ namespace Ondewo.Vtsi {
   }
 
   /// <summary>
-  /// Selects events for &lt;code>SubscribeVtsiEvents&lt;/code> without a stored subscription, and narrows a
-  /// &lt;code>RedeliverWebhookEvents&lt;/code> window. Every set field narrows the selection (AND); the entries of one
-  /// list are alternatives (OR).
+  /// Selects events for &lt;code>SubscribeVtsiEvents&lt;/code> without a stored subscription, and narrows a &lt;code>RedeliverWebhookEvents&lt;/code> window. Every set field narrows the selection (AND); the entries of one list are alternatives (OR).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VtsiEventFilter : pb::IMessage<VtsiEventFilter>

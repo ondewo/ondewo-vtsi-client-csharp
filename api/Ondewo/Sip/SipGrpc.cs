@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Sip {
   /// <summary>
-  /// &lt;p>ONDEWO-SIP API available at &lt;a href="https://github.com/ondewo/ondewo-sip-api">GitHub&lt;/a>&lt;/p>
+  /// ONDEWO-SIP API available at &lt;a href="https://github.com/ondewo/ondewo-sip-api">GitHub&lt;/a>
   /// </summary>
   public static partial class Sip
   {

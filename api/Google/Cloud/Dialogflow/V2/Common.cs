@@ -4940,8 +4940,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Message for streaming notifications in real time via
-  /// &lt;a href="index.html#ondewo.nlu.Users.StreamNotifications">Users.StreamNotifications&lt;/a>.
+  /// Message for streaming notifications in real time via &lt;a href="index.html#ondewo.nlu.Users.StreamNotifications">Users.StreamNotifications&lt;/a>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamNotificationsRequest : pb::IMessage<StreamNotificationsRequest>

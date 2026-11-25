@@ -1193,8 +1193,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// On complete success: no fields set (empty message).
-  /// On partial success/failure: both fields set.
+  /// On complete success: no fields set (empty message). On partial success/failure: both fields set.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagPartialSuccess : pb::IMessage<RagPartialSuccess>
@@ -1928,24 +1927,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Document parser configuration.
   ///
-  /// Used fields depend on the chunking method of the document.
-  /// &lt;ul>
-  ///     &lt;li>&lt;code>naive&lt;/code>: uses the following fields (all optional)&lt;/li>
-  ///     &lt;ul>
-  ///         &lt;li>&lt;code>auto_keywords&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>auto_questions&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>chunk_token_num&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>delimiter&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>html4excel&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>layout_recognize&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>tag_kb_ids&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>task_page_size&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>raptor&lt;/code>&lt;/li>
-  ///         &lt;li>&lt;code>graphrag&lt;/code>&lt;/li>
-  ///     &lt;/ul>
-  ///     &lt;li>&lt;code>qa&lt;/code>, &lt;code>manual&lt;/code>, &lt;code>paper&lt;/code>, &lt;code>book&lt;/code>, &lt;code>laws&lt;/code>, &lt;code>presentation&lt;/code>: uses only the &lt;code>raptor&lt;/code> field&lt;/li>
-  ///     &lt;li>&lt;code>table&lt;/code>, &lt;code>picture&lt;/code>, &lt;code>one&lt;/code>, &lt;code>email&lt;/code>: does not use any field (expects empty message)&lt;/li>
-  /// &lt;/ul>
+  /// Used fields depend on the chunking method of the document. &lt;ul> &lt;li>&lt;code>naive&lt;/code>: uses the following fields (all optional)&lt;/li> &lt;ul> &lt;li>&lt;code>auto_keywords&lt;/code>&lt;/li> &lt;li>&lt;code>auto_questions&lt;/code>&lt;/li> &lt;li>&lt;code>chunk_token_num&lt;/code>&lt;/li> &lt;li>&lt;code>delimiter&lt;/code>&lt;/li> &lt;li>&lt;code>html4excel&lt;/code>&lt;/li> &lt;li>&lt;code>layout_recognize&lt;/code>&lt;/li> &lt;li>&lt;code>tag_kb_ids&lt;/code>&lt;/li> &lt;li>&lt;code>task_page_size&lt;/code>&lt;/li> &lt;li>&lt;code>raptor&lt;/code>&lt;/li> &lt;li>&lt;code>graphrag&lt;/code>&lt;/li> &lt;/ul> &lt;li>&lt;code>qa&lt;/code>, &lt;code>manual&lt;/code>, &lt;code>paper&lt;/code>, &lt;code>book&lt;/code>, &lt;code>laws&lt;/code>, &lt;code>presentation&lt;/code>: uses only the &lt;code>raptor&lt;/code> field&lt;/li> &lt;li>&lt;code>table&lt;/code>, &lt;code>picture&lt;/code>, &lt;code>one&lt;/code>, &lt;code>email&lt;/code>: does not use any field (expects empty message)&lt;/li> &lt;/ul>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagParserConfig : pb::IMessage<RagParserConfig>
@@ -4696,8 +4678,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request message for updating an existing dataset.
-  /// The same field constraints as for &lt;code>RagCreateDatasetRequest&lt;/code> apply here.
+  /// Request message for updating an existing dataset. The same field constraints as for &lt;code>RagCreateDatasetRequest&lt;/code> apply here.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagUpdateDatasetRequest : pb::IMessage<RagUpdateDatasetRequest>
@@ -8988,8 +8969,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// File chunk for streaming downloads.&lt;br>
-  /// First chunk contains metadata, subsequent chunks only contain data.
+  /// File chunk for streaming downloads.&lt;br> First chunk contains metadata, subsequent chunks only contain data.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagFileChunk : pb::IMessage<RagFileChunk>
@@ -10333,8 +10313,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Condition to filter document metadata on.
-  /// String comparison is always case-insensitive.
+  /// Condition to filter document metadata on. String comparison is always case-insensitive.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagMetadataCondition : pb::IMessage<RagMetadataCondition>
@@ -11560,8 +11539,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request message for retrieving chunks using vector similarity search.&lt;br>
-  /// Supports hybrid search combining vector similarity with keyword matching.
+  /// Request message for retrieving chunks using vector similarity search.&lt;br> Supports hybrid search combining vector similarity with keyword matching.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagRetrievalRequest : pb::IMessage<RagRetrievalRequest>
@@ -12913,8 +12891,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Chunk of text extracted from a document.&lt;br>
-  /// Chunks are the basic retrieval units used for vector similarity search in RAG.
+  /// Chunk of text extracted from a document.&lt;br> Chunks are the basic retrieval units used for vector similarity search in RAG.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagChunk : pb::IMessage<RagChunk>
@@ -16673,17 +16650,9 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// RagCrawler definition.
   ///
-  /// This object represents a reusable crawler profile that can be run multiple times.
-  /// It is modeled after Crawl4AI concepts:
-  /// &lt;ul>
-  ///     &lt;li>seed/sitemap discovery (&lt;code>RagCrawlerSources&lt;/code>)&lt;/li>
-  ///     &lt;li>URL/domain constraints (&lt;code>RagCrawlerFilters&lt;/code>)&lt;/li>
-  ///     &lt;li>authentication/session bootstrap (&lt;code>RagCrawlerAuth&lt;/code>, &lt;code>RagCrawlerBrowserConfig&lt;/code>)&lt;/li>
-  ///     &lt;li>run behavior and extraction output (&lt;code>RagCrawlerConfig&lt;/code>)&lt;/li>
-  /// &lt;/ul>
+  /// This object represents a reusable crawler profile that can be run multiple times. It is modeled after Crawl4AI concepts: &lt;ul> &lt;li>seed/sitemap discovery (&lt;code>RagCrawlerSources&lt;/code>)&lt;/li> &lt;li>URL/domain constraints (&lt;code>RagCrawlerFilters&lt;/code>)&lt;/li> &lt;li>authentication/session bootstrap (&lt;code>RagCrawlerAuth&lt;/code>, &lt;code>RagCrawlerBrowserConfig&lt;/code>)&lt;/li> &lt;li>run behavior and extraction output (&lt;code>RagCrawlerConfig&lt;/code>)&lt;/li> &lt;/ul>
   ///
-  /// The same crawler can be executed multiple times; each execution creates
-  /// a separate crawler run and result set.
+  /// The same crawler can be executed multiple times; each execution creates a separate crawler run and result set.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawler : pb::IMessage<RagCrawler>
@@ -17409,9 +17378,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Crawl entry points.
   ///
-  /// Both inputs can be provided at the same time:
-  /// - Sitemaps are expanded into a crawl URL list (in discovery order)
-  /// - Seed URLs are appended afterwards (in the order provided)
+  /// Both inputs can be provided at the same time: - Sitemaps are expanded into a crawl URL list (in discovery order) - Seed URLs are appended afterwards (in the order provided)
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerSources : pb::IMessage<RagCrawlerSources>
@@ -17636,11 +17603,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// URL and domain restrictions.
   ///
-  /// Filters are evaluated during link discovery/scheduling and help avoid
-  /// crawling irrelevant, duplicate, or unsafe sections (auth/logout pages,
-  /// marketing subdomains, binary downloads, etc.).
-  /// These include domains to be excluded in the sources (e.g. through sitemaps or seed URLs)
-  /// and domains to be excluded in the deep crawl or extraction of pages to be crawled.
+  /// Filters are evaluated during link discovery/scheduling and help avoid crawling irrelevant, duplicate, or unsafe sections (auth/logout pages, marketing subdomains, binary downloads, etc.). These include domains to be excluded in the sources (e.g. through sitemaps or seed URLs) and domains to be excluded in the deep crawl or extraction of pages to be crawled.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerFilters : pb::IMessage<RagCrawlerFilters>
@@ -18381,8 +18344,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Authentication configuration.
   ///
-  /// Supports both browser/form login and HTTP auth patterns used by Crawl4AI pipelines when crawling protected content.
-  /// HTTP Auth is used on all pages of the sources, while html_auth is a separate authentication flow used in the beginning of the crawl to extract the cookies. This is done through a login screen. If HTTP Auth is set, this would ALSO be used on the HTML auth page.
+  /// Supports both browser/form login and HTTP auth patterns used by Crawl4AI pipelines when crawling protected content. HTTP Auth is used on all pages of the sources, while html_auth is a separate authentication flow used in the beginning of the crawl to extract the cookies. This is done through a login screen. If HTTP Auth is set, this would ALSO be used on the HTML auth page.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerAuth : pb::IMessage<RagCrawlerAuth>
@@ -18646,8 +18608,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Form/HTML login configuration.
   ///
-  /// Selector types and selector strings identify login form fields in the page
-  /// DOM. Credentials are then filled before form submission.
+  /// Selector types and selector strings identify login form fields in the page DOM. Credentials are then filled before form submission.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerHtmlAuth : pb::IMessage<RagCrawlerHtmlAuth>
@@ -19377,9 +19338,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Browser runtime configuration.
   ///
-  /// This block maps closely to Crawl4AI BrowserConfig and controls browser
-  /// process setup (engine, headless mode, viewport, context, proxy, cookies,
-  /// user-agent behavior, and launch arguments).
+  /// This block maps closely to Crawl4AI BrowserConfig and controls browser process setup (engine, headless mode, viewport, context, proxy, cookies, user-agent behavior, and launch arguments).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerBrowserConfig : pb::IMessage<RagCrawlerBrowserConfig>
@@ -20187,8 +20146,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Crawl run behavior.
   ///
-  /// This block controls scheduling, traversal, extraction outputs, retries,
-  /// diagnostics capture, and deep crawling options for each crawler run.
+  /// This block controls scheduling, traversal, extraction outputs, retries, diagnostics capture, and deep crawling options for each crawler run.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerConfig : pb::IMessage<RagCrawlerConfig>
@@ -21103,8 +21061,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Structured output configuration.
   ///
-  /// Use this block to define result payload shape and metadata behavior,
-  /// similar to Crawl4AI markdown/output-generation toggles.
+  /// Use this block to define result payload shape and metadata behavior, similar to Crawl4AI markdown/output-generation toggles.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerResultsConfig : pb::IMessage<RagCrawlerResultsConfig>
@@ -23024,8 +22981,7 @@ namespace Ondewo.Nlu {
   ///
   /// A page is reused from the most recent completed run of the same crawler when its sitemap/ &lt;code>&amp;lt;lastmod&amp;gt;&lt;/code> is not newer than the &lt;code>page_last_updated_date&lt;/code> of the copy that run holds. A reused page is part of the new run exactly like a freshly fetched one; only &lt;code>RagCrawlerResult.last_crawled_date&lt;/code> still reports when its content was actually fetched.
   ///
-  /// A page is always fetched when any of the following holds: its sitemap entry carries no &lt;code>&amp;lt;lastmod&amp;gt;&lt;/code>; the most recent completed run did not contain it; there is no completed previous
-  /// run; the crawler configuration changed since that run; or &lt;code>max_age_days&lt;/code> has elapsed.
+  /// A page is always fetched when any of the following holds: its sitemap entry carries no &lt;code>&amp;lt;lastmod&amp;gt;&lt;/code>; the most recent completed run did not contain it; there is no completed previous run; the crawler configuration changed since that run; or &lt;code>max_age_days&lt;/code> has elapsed.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerIncrementalConfig : pb::IMessage<RagCrawlerIncrementalConfig>
@@ -23877,8 +23833,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Crawler result entity.
   ///
-  /// Each result corresponds to one crawled URL in a crawler run and includes
-  /// extracted content, metadata, diagnostics, and optional binary artifacts.
+  /// Each result corresponds to one crawled URL in a crawler run and includes extracted content, metadata, diagnostics, and optional binary artifacts.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagCrawlerResult : pb::IMessage<RagCrawlerResult>
@@ -24404,8 +24359,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Request message for running a crawler.
   ///
-  /// This starts a long-running operation and returns immediately.
-  /// Clients should poll operation status via &lt;code>RagGetCrawlerRun&lt;/code>.
+  /// This starts a long-running operation and returns immediately. Clients should poll operation status via &lt;code>RagGetCrawlerRun&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagStartCrawlerRequest : pb::IMessage<RagStartCrawlerRequest>
@@ -25692,9 +25646,7 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Request message for deleting crawler runs.
   ///
-  /// Deletion candidates are the union of:
-  /// - explicit run names in &lt;code>crawler_run_names&lt;/code>
-  /// - all runs belonging to crawlers listed in &lt;code>crawler_names&lt;/code>
+  /// Deletion candidates are the union of: - explicit run names in &lt;code>crawler_run_names&lt;/code> - all runs belonging to crawlers listed in &lt;code>crawler_names&lt;/code>
   ///
   /// If both lists are empty, the call is a no-op.
   /// </summary>
@@ -26767,14 +26719,9 @@ namespace Ondewo.Nlu {
   /// <summary>
   /// Request message for getting crawler results of a crawler run.
   ///
-  /// Results are returned in pages. Request the first page with an empty
-  /// &lt;code>page_token&lt;/code>, then continue with each response &lt;code>next_page_token&lt;/code>.
+  /// Results are returned in pages. Request the first page with an empty &lt;code>page_token&lt;/code>, then continue with each response &lt;code>next_page_token&lt;/code>.
   ///
-  /// Example:
-  /// &lt;pre>&lt;code>RagGetCrawlerResults(run_name, page_token="")
-  /// -> next_page_token="..."
-  /// RagGetCrawlerResults(run_name, page_token="...")
-  /// &lt;/code>&lt;/pre>
+  /// Example: &lt;pre>&lt;code>RagGetCrawlerResults(run_name, page_token="")&amp;#10;-> next_page_token="..."&amp;#10;RagGetCrawlerResults(run_name, page_token="...")&amp;#10;&lt;/code>&lt;/pre>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagGetCrawlerResultsRequest : pb::IMessage<RagGetCrawlerResultsRequest>
@@ -27952,8 +27899,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Request message for adding crawler output to one or more datasets.&lt;br>
-  /// Either &lt;code>crawler_names&lt;/code> or &lt;code>crawler_result_names&lt;/code> (or both) must be provided.
+  /// Request message for adding crawler output to one or more datasets.&lt;br> Either &lt;code>crawler_names&lt;/code> or &lt;code>crawler_result_names&lt;/code> (or both) must be provided.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RagAddCrawlerResultsToDatasetsRequest : pb::IMessage<RagAddCrawlerResultsToDatasetsRequest>

@@ -24,51 +24,17 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Vtsi {
   /// <summary>
-  /// &lt;p>ONDEWO VTSI API&lt;/p>
-  /// &lt;p>Manages VTSI (Virtual Telephone System Integration) PROJECTS: the per-project configuration of an
-  /// Asterisk SIP server (its SIP trunk, its ports, its Asterisk version) together with the caller and
-  /// listener capacity of the project and the ONDEWO NLU agents it serves. Deploying a project starts its
-  /// Asterisk container; callers, listeners, campaigns and softphone accounts of the project need a
-  /// &lt;code>DEPLOYED&lt;/code> project to place or take calls.&lt;/p>
-  /// &lt;p>Errors are reported as gRPC status codes. The &lt;code>error_message&lt;/code> fields of the responses
-  /// are never set, neither on success nor on failure (they predate the status codes and are kept for wire
-  /// compatibility): &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, an unknown &lt;code>update_mask&lt;/code>
-  /// or &lt;code>field_mask&lt;/code> path, a malformed &lt;code>page_token&lt;/code> or an out-of-range value (each
-  /// naming the field); &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>ALREADY_EXISTS&lt;/code> when
-  /// &lt;code>CreateVtsiProject&lt;/code> names a project that exists; &lt;code>FAILED_PRECONDITION&lt;/code> when the
-  /// project is in a status that does not allow the operation (each RPC names its cases);
-  /// &lt;code>ABORTED&lt;/code> when another create, update, deploy, undeploy or delete of the same project held
-  /// it for longer than the server waits (about 30 seconds), in which case nothing was changed and the
-  /// request can be retried; &lt;code>UNAVAILABLE&lt;/code> when the docker daemon or the database cannot be
-  /// reached.&lt;/p>
-  /// &lt;p>Authorization (only when the server enforces it, i.e. &lt;code>ONDEWO_VTSI_KEYCLOAK_AUTH_ENABLED&lt;/code>
-  /// and &lt;code>ONDEWO_VTSI_AUTH_REQUIRED&lt;/code> are both true): a caller without a credential is
-  /// &lt;code>UNAUTHENTICATED&lt;/code> whatever it sent. A caller needs a server role (&lt;code>SERVER_ADMIN&lt;/code>,
-  /// &lt;code>SERVER_MANAGER&lt;/code> or &lt;code>SERVER_USER&lt;/code>), else every RPC is
-  /// &lt;code>PERMISSION_DENIED&lt;/code>. The project roles are derived from the caller&amp;apos;s roles on the
-  /// project&amp;apos;s &lt;code>nlu_agent_names&lt;/code>: &lt;code>CreateVtsiProject&lt;/code>,
-  /// &lt;code>GetVtsiProject&lt;/code>, &lt;code>UpdateVtsiProject&lt;/code>, &lt;code>DeleteVtsiProject&lt;/code>,
-  /// &lt;code>DeployVtsiProject&lt;/code> and &lt;code>UndeployVtsiProject&lt;/code> require
-  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher (&lt;code>PROJECT_ADMIN&lt;/code>); &lt;code>ListVtsiProjects&lt;/code>
-  /// is open to every project role and returns only the projects the caller holds a role on.
-  /// &lt;code>SERVER_ADMIN&lt;/code> passes every project check. With enforcement on, a well-formed request naming
-  /// a project the caller holds no role on, an unknown project included, is answered
-  /// &lt;code>PERMISSION_DENIED&lt;/code> rather than &lt;code>NOT_FOUND&lt;/code>, so the answer does not reveal
-  /// whether the project exists; &lt;code>NOT_FOUND&lt;/code> is then reserved to &lt;code>SERVER_ADMIN&lt;/code>. With
-  /// enforcement off (the default) every request is served and only logged.&lt;/p>
-  /// &lt;p>&lt;b>Credentials.&lt;/b> &lt;code>AsteriskConfigsVariables.sip_trunk_password&lt;/code> is stored and returned
-  /// as sent (it is not write-only): &lt;code>GetVtsiProject&lt;/code>, &lt;code>CreateVtsiProject&lt;/code>,
-  /// &lt;code>UpdateVtsiProject&lt;/code> and &lt;code>ListVtsiProjects&lt;/code> return it to every caller allowed to
-  /// call them with a view that populates &lt;code>asterisk_configs&lt;/code>. With enforcement on,
-  /// &lt;code>ListVtsiProjects&lt;/code> withholds the whole &lt;code>asterisk_configs&lt;/code> (and every other
-  /// configuration field) from a caller whose highest role on the project is &lt;code>PROJECT_EXECUTOR&lt;/code>
-  /// or &lt;code>PROJECT_USER&lt;/code>. Use a &lt;code>field_mask&lt;/code> without &lt;code>asterisk_configs&lt;/code> where
-  /// the password is not needed.&lt;/p>
-  /// &lt;p>Events: every change emits the matching &lt;code>VtsiEvent&lt;/code> of the project
-  /// (&lt;code>VTSI_EVENT_VTSI_PROJECT_UPDATED&lt;/code>, &lt;code>_DEPLOYED&lt;/code>, &lt;code>_DEPLOY_FAILED&lt;/code>,
-  /// &lt;code>_UNDEPLOYED&lt;/code>, &lt;code>_UNDEPLOY_FAILED&lt;/code>, &lt;code>_DELETED&lt;/code>) and, for every change
-  /// of &lt;code>vtsi_project_status&lt;/code>, &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code>. A request
-  /// with &lt;code>validate_only&lt;/code> emits nothing.&lt;/p>
+  /// ONDEWO VTSI API
+  ///
+  /// Manages VTSI (Virtual Telephone System Integration) PROJECTS: the per-project configuration of an Asterisk SIP server (its SIP trunk, its ports, its Asterisk version) together with the caller and listener capacity of the project and the ONDEWO NLU agents it serves. Deploying a project starts its Asterisk container; callers, listeners, campaigns and softphone accounts of the project need a &lt;code>DEPLOYED&lt;/code> project to place or take calls.
+  ///
+  /// Errors are reported as gRPC status codes. The &lt;code>error_message&lt;/code> fields of the responses are never set, neither on success nor on failure (they predate the status codes and are kept for wire compatibility): &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, an unknown &lt;code>update_mask&lt;/code> or &lt;code>field_mask&lt;/code> path, a malformed &lt;code>page_token&lt;/code> or an out-of-range value (each naming the field); &lt;code>NOT_FOUND&lt;/code> for an unknown project; &lt;code>ALREADY_EXISTS&lt;/code> when &lt;code>CreateVtsiProject&lt;/code> names a project that exists; &lt;code>FAILED_PRECONDITION&lt;/code> when the project is in a status that does not allow the operation (each RPC names its cases); &lt;code>ABORTED&lt;/code> when another create, update, deploy, undeploy or delete of the same project held it for longer than the server waits (about 30 seconds), in which case nothing was changed and the request can be retried; &lt;code>UNAVAILABLE&lt;/code> when the docker daemon or the database cannot be reached.
+  ///
+  /// Authorization (only when the server enforces it, i.e. &lt;code>ONDEWO_VTSI_KEYCLOAK_AUTH_ENABLED&lt;/code> and &lt;code>ONDEWO_VTSI_AUTH_REQUIRED&lt;/code> are both true): a caller without a credential is &lt;code>UNAUTHENTICATED&lt;/code> whatever it sent. A caller needs a server role (&lt;code>SERVER_ADMIN&lt;/code>, &lt;code>SERVER_MANAGER&lt;/code> or &lt;code>SERVER_USER&lt;/code>), else every RPC is &lt;code>PERMISSION_DENIED&lt;/code>. The project roles are derived from the caller&amp;apos;s roles on the project&amp;apos;s &lt;code>nlu_agent_names&lt;/code>: &lt;code>CreateVtsiProject&lt;/code>, &lt;code>GetVtsiProject&lt;/code>, &lt;code>UpdateVtsiProject&lt;/code>, &lt;code>DeleteVtsiProject&lt;/code>, &lt;code>DeployVtsiProject&lt;/code> and &lt;code>UndeployVtsiProject&lt;/code> require &lt;code>PROJECT_DEVELOPER&lt;/code> or higher (&lt;code>PROJECT_ADMIN&lt;/code>); &lt;code>ListVtsiProjects&lt;/code> is open to every project role and returns only the projects the caller holds a role on. &lt;code>SERVER_ADMIN&lt;/code> passes every project check. With enforcement on, a well-formed request naming a project the caller holds no role on, an unknown project included, is answered &lt;code>PERMISSION_DENIED&lt;/code> rather than &lt;code>NOT_FOUND&lt;/code>, so the answer does not reveal whether the project exists; &lt;code>NOT_FOUND&lt;/code> is then reserved to &lt;code>SERVER_ADMIN&lt;/code>. With enforcement off (the default) every request is served and only logged.
+  ///
+  /// &lt;b>Credentials.&lt;/b> &lt;code>AsteriskConfigsVariables.sip_trunk_password&lt;/code> is stored and returned as sent (it is not write-only): &lt;code>GetVtsiProject&lt;/code>, &lt;code>CreateVtsiProject&lt;/code>, &lt;code>UpdateVtsiProject&lt;/code> and &lt;code>ListVtsiProjects&lt;/code> return it to every caller allowed to call them with a view that populates &lt;code>asterisk_configs&lt;/code>. With enforcement on, &lt;code>ListVtsiProjects&lt;/code> withholds the whole &lt;code>asterisk_configs&lt;/code> (and every other configuration field) from a caller whose highest role on the project is &lt;code>PROJECT_EXECUTOR&lt;/code> or &lt;code>PROJECT_USER&lt;/code>. Use a &lt;code>field_mask&lt;/code> without &lt;code>asterisk_configs&lt;/code> where the password is not needed.
+  ///
+  /// Events: every change emits the matching &lt;code>VtsiEvent&lt;/code> of the project (&lt;code>VTSI_EVENT_VTSI_PROJECT_UPDATED&lt;/code>, &lt;code>_DEPLOYED&lt;/code>, &lt;code>_DEPLOY_FAILED&lt;/code>, &lt;code>_UNDEPLOYED&lt;/code>, &lt;code>_UNDEPLOY_FAILED&lt;/code>, &lt;code>_DELETED&lt;/code>) and, for every change of &lt;code>vtsi_project_status&lt;/code>, &lt;code>VTSI_EVENT_VTSI_PROJECT_STATUS_CHANGED&lt;/code>. A request with &lt;code>validate_only&lt;/code> emits nothing.
   /// </summary>
   public static partial class Projects
   {

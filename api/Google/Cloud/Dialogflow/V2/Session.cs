@@ -1175,8 +1175,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
   #region Enums
   /// <summary>
-  /// Identifies whether a transcription was produced by an automatic
-  /// speech-to-text system or by a human annotator.
+  /// Identifies whether a transcription was produced by an automatic speech-to-text system or by a human annotator.
   /// </summary>
   public enum TranscriptionType {
     /// <summary>
@@ -1194,8 +1193,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Effort level for reasoning models (e.g. o1, o3). Controls the trade-off
-  /// between speed and quality.
+  /// Effort level for reasoning models (e.g. o1, o3). Controls the trade-off between speed and quality.
   /// </summary>
   public enum ReasoningEffort {
     /// <summary>
@@ -1479,8 +1477,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Audio encoding of the audio content sent in the conversational query request.
-  /// Refer to the &lt;a href="/speech/docs/basics">Cloud Speech API documentation&lt;/a> for more details.
+  /// Audio encoding of the audio content sent in the conversational query request. Refer to the &lt;a href="/speech/docs/basics">Cloud Speech API documentation&lt;/a> for more details.
   /// </summary>
   public enum AudioEncoding {
     /// <summary>
@@ -1629,8 +1626,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The calendar granularity of a feedback time series. When set (non-unspecified) it overrides the
-  /// fixed-width bucket_width_seconds on the request.
+  /// The calendar granularity of a feedback time series. When set (non-unspecified) it overrides the fixed-width bucket_width_seconds on the request.
   /// </summary>
   public enum FeedbackTimeGranularity {
     /// <summary>
@@ -5093,8 +5089,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Thinking / reasoning block emitted by the model (e.g. Anthropic extended thinking,
-  /// OpenAI o-series reasoning).
+  /// Thinking / reasoning block emitted by the model (e.g. Anthropic extended thinking, OpenAI o-series reasoning).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmThinkingMetadata : pb::IMessage<LlmThinkingMetadata>
@@ -8708,11 +8703,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Native safety assessment for one LLM call, computed at telemetry build time by
-  /// a dependency-free (regex / substring) assessor over the call's input / output
-  /// text. Additive, optional: absent when safety scoring is disabled. This is the
-  /// live MONITORING signal; the offline LLM-judge safety evaluators live in
-  /// &lt;code>llm_evaluation.proto&lt;/code>.
+  /// Native safety assessment for one LLM call, computed at telemetry build time by a dependency-free (regex / substring) assessor over the call's input / output text. Additive, optional: absent when safety scoring is disabled. This is the live MONITORING signal; the offline LLM-judge safety evaluators live in &lt;code>llm_evaluation.proto&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmSafetyAssessment : pb::IMessage<LlmSafetyAssessment>
@@ -9098,9 +9089,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// One retrieved RAG chunk surfaced during an LLM call. Mirrors the five-field
-  /// chunk already emitted into &lt;code>outputs.retrieved_chunks&lt;/code> (Struct) plus
-  /// a typed &lt;code>rank&lt;/code>.
+  /// One retrieved RAG chunk surfaced during an LLM call. Mirrors the five-field chunk already emitted into &lt;code>outputs.retrieved_chunks&lt;/code> (Struct) plus a typed &lt;code>rank&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmRetrievedChunk : pb::IMessage<LlmRetrievedChunk>
@@ -9505,9 +9494,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Typed view of the chunks retrieved for one LLM call. Populated alongside the
-  /// unstructured &lt;code>outputs.retrieved_chunks&lt;/code> Struct (field 18 on
-  /// LlmTelemetry, kept for back-compat); both carry the same chunk list.
+  /// Typed view of the chunks retrieved for one LLM call. Populated alongside the unstructured &lt;code>outputs.retrieved_chunks&lt;/code> Struct (field 18 on LlmTelemetry, kept for back-compat); both carry the same chunk list.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmRetrievalMetadata : pb::IMessage<LlmRetrievalMetadata>
@@ -12134,9 +12121,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Per-base-URL usage rollup across the scope. One entry per distinct
-  /// &lt;code>LlmTelemetry.base_url&lt;/code>; calls whose model configuration states no base URL are
-  /// grouped under an empty &lt;code>base_url&lt;/code>.
+  /// Per-base-URL usage rollup across the scope. One entry per distinct &lt;code>LlmTelemetry.base_url&lt;/code>; calls whose model configuration states no base URL are grouped under an empty &lt;code>base_url&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmBaseUrlUsage : pb::IMessage<LlmBaseUrlUsage>
@@ -14750,10 +14735,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Aggregated telemetry across all LLM calls in one DetectIntent turn, or across
-  /// a session / agent-domain scope when used as a statistics report payload. The
-  /// breakdown fields (6+) are populated only for the matching report type; a
-  /// *_LLM_TOTAL_STATISTICS report populates all of them.
+  /// Aggregated telemetry across all LLM calls in one DetectIntent turn, or across a session / agent-domain scope when used as a statistics report payload. The breakdown fields (6+) are populated only for the matching report type; a *_LLM_TOTAL_STATISTICS report populates all of them.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmTelemetryReport : pb::IMessage<LlmTelemetryReport>
@@ -15991,8 +15973,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Native-safety breakdown aggregate across the LLM calls in scope. Computed from
-  /// the per-call LlmSafetyAssessment records.
+  /// Native-safety breakdown aggregate across the LLM calls in scope. Computed from the per-call LlmSafetyAssessment records.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmSafetyStats : pb::IMessage<LlmSafetyStats>
@@ -18421,9 +18402,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Emitted on a streaming DetectIntent when a node of an AI Team graph starts, completes or fails.
-  /// A node inside a nested graph (a subgraph, or a member agent of a supervisor or swarm) is reported too,
-  /// with its full &lt;code>llm_agent_node_event_node_path&lt;/code>.
+  /// Emitted on a streaming DetectIntent when a node of an AI Team graph starts, completes or fails. A node inside a nested graph (a subgraph, or a member agent of a supervisor or swarm) is reported too, with its full &lt;code>llm_agent_node_event_node_path&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class LlmAgentNodeEvent : pb::IMessage<LlmAgentNodeEvent>
@@ -20391,10 +20370,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The top-level message sent by the client to the &lt;code>StreamingDetectIntent&lt;/code> method.
-  /// Multiple request messages should be sent in order:
-  /// 1.  The first message must contain &lt;code>session&lt;/code>, &lt;code>query_input&lt;/code> plus optionally &lt;code>query_params&lt;/code> and/or &lt;code>single_utterance&lt;/code>. The message must not contain &lt;code>input_audio&lt;/code>.
-  /// 2.  If &lt;code>query_input&lt;/code> was set to a streaming input audio config, all subsequent messages must contain only &lt;code>input_audio&lt;/code>. Otherwise, finish the request stream.
+  /// The top-level message sent by the client to the &lt;code>StreamingDetectIntent&lt;/code> method. Multiple request messages should be sent in order: 1.  The first message must contain &lt;code>session&lt;/code>, &lt;code>query_input&lt;/code> plus optionally &lt;code>query_params&lt;/code> and/or &lt;code>single_utterance&lt;/code>. The message must not contain &lt;code>input_audio&lt;/code>. 2.  If &lt;code>query_input&lt;/code> was set to a streaming input audio config, all subsequent messages must contain only &lt;code>input_audio&lt;/code>. Otherwise, finish the request stream.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingDetectIntentRequest : pb::IMessage<StreamingDetectIntentRequest>
@@ -20891,10 +20867,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The top-level message returned from the &lt;code>StreamingDetectIntent&lt;/code> method.
-  /// Multiple response messages can be returned in order:
-  /// 1.  If the input was set to streaming audio, the first one or more messages contain &lt;code>recognition_result&lt;/code>. Each &lt;code>recognition_result&lt;/code> represents a more complete transcript of what the user said. The last &lt;code>recognition_result&lt;/code> has &lt;code>is_final&lt;/code> set to &lt;code>true&lt;/code>.
-  /// 2.  The next message contains &lt;code>response_id&lt;/code>, &lt;code>query_result&lt;/code> and optionally &lt;code>webhook_status&lt;/code> if a WebHook was called.
+  /// The top-level message returned from the &lt;code>StreamingDetectIntent&lt;/code> method. Multiple response messages can be returned in order: 1.  If the input was set to streaming audio, the first one or more messages contain &lt;code>recognition_result&lt;/code>. Each &lt;code>recognition_result&lt;/code> represents a more complete transcript of what the user said. The last &lt;code>recognition_result&lt;/code> has &lt;code>is_final&lt;/code> set to &lt;code>true&lt;/code>. 2.  The next message contains &lt;code>response_id&lt;/code>, &lt;code>query_result&lt;/code> and optionally &lt;code>webhook_status&lt;/code> if a WebHook was called.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingDetectIntentResponse : pb::IMessage<StreamingDetectIntentResponse>
@@ -21763,8 +21736,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Controls one turn of a session. Sent as &lt;code>StreamingDetectIntentRequest.turn_control&lt;/code> on a call-length
-  /// stream, or in an &lt;code>InterruptTurnRequest&lt;/code>.
+  /// Controls one turn of a session. Sent as &lt;code>StreamingDetectIntentRequest.turn_control&lt;/code> on a call-length stream, or in an &lt;code>InterruptTurnRequest&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class TurnControl : pb::IMessage<TurnControl>
@@ -22125,8 +22097,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Cancels a turn. At least one of &lt;code>response_id&lt;/code> and &lt;code>client_turn_id&lt;/code> must be set; when both
-  /// are, &lt;code>client_turn_id&lt;/code> is authoritative.
+  /// Cancels a turn. At least one of &lt;code>response_id&lt;/code> and &lt;code>client_turn_id&lt;/code> must be set; when both are, &lt;code>client_turn_id&lt;/code> is authoritative.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CancelTurn : pb::IMessage<CancelTurn>
@@ -23106,9 +23077,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Reports what the user heard of a turn's answer. At least one of &lt;code>response_id&lt;/code> and
-  /// &lt;code>client_turn_id&lt;/code> must be set. The server keeps the report with the highest &lt;code>revision&lt;/code> per
-  /// turn and ignores a lower or equal one.
+  /// Reports what the user heard of a turn's answer. At least one of &lt;code>response_id&lt;/code> and &lt;code>client_turn_id&lt;/code> must be set. The server keeps the report with the highest &lt;code>revision&lt;/code> per turn and ignores a lower or equal one.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class HeardReport : pb::IMessage<HeardReport>
@@ -23543,11 +23512,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Discards the session step of a preemptive draft: a turn the client started speculatively on a partial
-  /// transcript and then did not use. The server deletes the session step only when it belongs to this session and its
-  /// request carried &lt;code>QueryParameters.preemptive_draft&lt;/code> = true; it answers
-  /// &lt;code>TURN_CONTROL_ACK_STATUS_DRAFT_DISCARDED&lt;/code>. Any other step is kept and the server answers
-  /// &lt;code>TURN_CONTROL_ACK_STATUS_UNKNOWN_TURN&lt;/code>.
+  /// Discards the session step of a preemptive draft: a turn the client started speculatively on a partial transcript and then did not use. The server deletes the session step only when it belongs to this session and its request carried &lt;code>QueryParameters.preemptive_draft&lt;/code> = true; it answers &lt;code>TURN_CONTROL_ACK_STATUS_DRAFT_DISCARDED&lt;/code>. Any other step is kept and the server answers &lt;code>TURN_CONTROL_ACK_STATUS_UNKNOWN_TURN&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscardDraft : pb::IMessage<DiscardDraft>
@@ -24544,11 +24509,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// The configuration of one warm transfer intro, as resolved by the caller of
-  /// &lt;code>PrepareWarmTransferIntro&lt;/code>. A text left empty (or unset, for an &lt;code>optional&lt;/code> field) falls back
-  /// to the agent's default text for the language (&lt;code>Agent.warm_transfer_settings&lt;/code>), then to the built-in
-  /// default. Texts are spoken to the target, never to the caller, except &lt;code>caller_declined_message&lt;/code> and
-  /// &lt;code>caller_unreachable_message&lt;/code>.
+  /// The configuration of one warm transfer intro, as resolved by the caller of &lt;code>PrepareWarmTransferIntro&lt;/code>. A text left empty (or unset, for an &lt;code>optional&lt;/code> field) falls back to the agent's default text for the language (&lt;code>Agent.warm_transfer_settings&lt;/code>), then to the built-in default. Texts are spoken to the target, never to the caller, except &lt;code>caller_declined_message&lt;/code> and &lt;code>caller_unreachable_message&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmTransferIntroConfig : pb::IMessage<WarmTransferIntroConfig>
@@ -26677,8 +26638,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// 3.  transcript: &amp;quot;to be&amp;quot;
   ///
-  /// 4.  transcript: &amp;quot;to be or not to be&amp;quot;
-  ///     is_final: true
+  /// 4.  transcript: &amp;quot;to be or not to be&amp;quot; is_final: true
   ///
   /// 5.  transcript: &amp;quot; that&amp;apos;s&amp;quot;
   ///
@@ -26686,17 +26646,13 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// 7.  recognition_event_type: &lt;code>RECOGNITION_EVENT_END_OF_SINGLE_UTTERANCE&lt;/code>
   ///
-  /// 8.  transcript: &amp;quot; that is the question&amp;quot;
-  ///     is_final: true
+  /// 8.  transcript: &amp;quot; that is the question&amp;quot; is_final: true
   ///
   /// Only two of the responses contain final results (#4 and #8 indicated by &lt;code>is_final: true&lt;/code>). Concatenating these generates the full transcript: &lt;code>"to be or not to be that is the question"&lt;/code>.
   ///
   /// In each response we populate:
   ///
-  /// &lt;ul>
-  ///     &lt;li>for &lt;code>MESSAGE_TYPE_TRANSCRIPT&lt;/code>: &lt;code>transcript&lt;/code> and possibly &lt;code>is_final&lt;/code>.&lt;/li>
-  ///     &lt;li>for &lt;code>MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE&lt;/code>: only &lt;code>event_type&lt;/code>.&lt;/li>
-  /// &lt;/ul>
+  /// &lt;ul> &lt;li>for &lt;code>MESSAGE_TYPE_TRANSCRIPT&lt;/code>: &lt;code>transcript&lt;/code> and possibly &lt;code>is_final&lt;/code>.&lt;/li> &lt;li>for &lt;code>MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE&lt;/code>: only &lt;code>event_type&lt;/code>.&lt;/li> &lt;/ul>
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamingRecognitionResult : pb::IMessage<StreamingRecognitionResult>
@@ -27633,9 +27589,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Events allow for matching intents by event name instead of the natural language input.
-  /// For instance, input &lt;code>&amp;lt;event: { name: &amp;quot;welcome_event&amp;quot;, parameters: { name: &amp;quot;Sam&amp;quot; } }&amp;gt;&lt;/code> can trigger a personalized welcome response.
-  /// The parameter &lt;code>name&lt;/code> may be used by the agent in the response: &lt;code>&amp;quot;Hello #welcome_event.name! What can I do for you today?&amp;quot;&lt;/code>.
+  /// Events allow for matching intents by event name instead of the natural language input. For instance, input &lt;code>&amp;lt;event: { name: &amp;quot;welcome_event&amp;quot;, parameters: { name: &amp;quot;Sam&amp;quot; } }&amp;gt;&lt;/code> can trigger a personalized welcome response. The parameter &lt;code>name&lt;/code> may be used by the agent in the response: &lt;code>&amp;quot;Hello #welcome_event.name! What can I do for you today?&amp;quot;&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class EventInput : pb::IMessage<EventInput>
@@ -28395,8 +28349,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Represents the options for views of a session.
-      /// A session can be a sizable object. Therefore, we provide a resource view that does not return all data
+      /// Represents the options for views of a session. A session can be a sizable object. Therefore, we provide a resource view that does not return all data
       /// </summary>
       public enum View {
         /// <summary>
@@ -35428,8 +35381,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// Request to persist a session review for a given session.
-  /// As a side effect, training data in ondewo-cai may also be updated.
+  /// Request to persist a session review for a given session. As a side effect, training data in ondewo-cai may also be updated.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateSessionReviewRequest : pb::IMessage<CreateSessionReviewRequest>
@@ -36180,8 +36132,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Represents the options for views of a session_review.
-      /// A session_review can be a sizable object. Therefore, we provide a resource view that does not return all data
+      /// Represents the options for views of a session_review. A session_review can be a sizable object. Therefore, we provide a resource view that does not return all data
       /// </summary>
       public enum View {
         /// <summary>
@@ -46583,12 +46534,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   /// <summary>
   /// A single piece of user feedback about a whole session or a single session step (turn).
   ///
-  /// The rating is intentionally extensible: &lt;code>rating&lt;/code> carries the thumbs signal surfaced in the UI
-  /// today, while &lt;code>score&lt;/code> and &lt;code>categorical_value&lt;/code> allow richer scales (star / NPS / CSAT)
-  /// to be added later without a schema change. The feedback is pinned to the exact forensic context it is
-  /// about (&lt;code>session_id&lt;/code>, &lt;code>session_step_id&lt;/code>, &lt;code>response_id&lt;/code>,
-  /// &lt;code>session_step_llm_telemetry_id&lt;/code>) so the full conversation state up to the feedback can be
-  /// reconstructed from the already-persisted session step.
+  /// The rating is intentionally extensible: &lt;code>rating&lt;/code> carries the thumbs signal surfaced in the UI today, while &lt;code>score&lt;/code> and &lt;code>categorical_value&lt;/code> allow richer scales (star / NPS / CSAT) to be added later without a schema change. The feedback is pinned to the exact forensic context it is about (&lt;code>session_id&lt;/code>, &lt;code>session_step_id&lt;/code>, &lt;code>response_id&lt;/code>, &lt;code>session_step_llm_telemetry_id&lt;/code>) so the full conversation state up to the feedback can be reconstructed from the already-persisted session step.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SessionFeedback : pb::IMessage<SessionFeedback>
@@ -49829,9 +49775,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   }
 
   /// <summary>
-  /// A key + up/down counts breakdown bucket (by language / intent / author type / ...).
-  /// A feedback-native filter for feedback list + analytics requests, complementing SessionFilter (which
-  /// filters the parent sessions). All set fields are AND-combined; repeated fields are OR-within-field.
+  /// A key + up/down counts breakdown bucket (by language / intent / author type / ...). A feedback-native filter for feedback list + analytics requests, complementing SessionFilter (which filters the parent sessions). All set fields are AND-combined; repeated fields are OR-within-field.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FeedbackFilter : pb::IMessage<FeedbackFilter>

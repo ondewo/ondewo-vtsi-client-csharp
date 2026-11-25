@@ -228,8 +228,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The state of CAI&amp;apos;s capture of one log stream. This describes the CAPTURE, not the process or the
-  /// container.
+  /// The state of CAI&amp;apos;s capture of one log stream. This describes the CAPTURE, not the process or the container.
   /// </summary>
   public enum CaiLogCaptureState {
     /// <summary>
@@ -257,9 +256,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Identifies a field of &lt;a href="index.html#ondewo.nlu.CaiLogFilter">CaiLogFilter&lt;/a>. Used by
-  /// &lt;a href="index.html#ondewo.nlu.ListLogsResponse">ListLogsResponse.scope_limited_filters&lt;/a> to declare which
-  /// filters could only be applied inside the returned window.
+  /// Identifies a field of &lt;a href="index.html#ondewo.nlu.CaiLogFilter">CaiLogFilter&lt;/a>. Used by &lt;a href="index.html#ondewo.nlu.ListLogsResponse">ListLogsResponse.scope_limited_filters&lt;/a> to declare which filters could only be applied inside the returned window.
   /// </summary>
   public enum CaiLogFilterField {
     /// <summary>
@@ -293,9 +290,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Why the SERVER ended a &lt;code>StreamLogs&lt;/code> stream. Carried by the final
-  /// &lt;a href="index.html#ondewo.nlu.StreamLogsResponse">StreamLogsResponse&lt;/a> beside the human-readable
-  /// &lt;code>end_reason&lt;/code>. A stream ended by the client has no final message.
+  /// Why the SERVER ended a &lt;code>StreamLogs&lt;/code> stream. Carried by the final &lt;a href="index.html#ondewo.nlu.StreamLogsResponse">StreamLogsResponse&lt;/a> beside the human-readable &lt;code>end_reason&lt;/code>. A stream ended by the client has no final message.
   /// </summary>
   public enum CaiLogStreamEndReason {
     /// <summary>
@@ -329,8 +324,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// File format of an &lt;a href="index.html#ondewo.nlu.Logs.ExportLogs">ExportLogs&lt;/a> export. Every format is UTF-8
-  /// with &lt;code>\n&lt;/code> line endings and one entry per record; a multi-line entry stays one record.
+  /// File format of an &lt;a href="index.html#ondewo.nlu.Logs.ExportLogs">ExportLogs&lt;/a> export. Every format is UTF-8 with &lt;code>\n&lt;/code> line endings and one entry per record; a multi-line entry stays one record.
   /// </summary>
   public enum CaiLogExportFormat {
     /// <summary>
@@ -365,8 +359,7 @@ namespace Ondewo.Nlu {
 
   #region Messages
   /// <summary>
-  /// A single captured log record. One record may span several physical lines: a Python traceback, a protobuf
-  /// &lt;code>str()&lt;/code> dump and a multi-line banner are all one record and are stored and returned as one entry.
+  /// A single captured log record. One record may span several physical lines: a Python traceback, a protobuf &lt;code>str()&lt;/code> dump and a multi-line banner are all one record and are stored and returned as one entry.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CaiLogEntry : pb::IMessage<CaiLogEntry>
@@ -1360,12 +1353,9 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Narrows a log query. Every field is optional; an empty repeated field means &amp;quot;do not filter on
-  /// this&amp;quot;. Fields are combined with AND; the values within one repeated field are combined with OR.
+  /// Narrows a log query. Every field is optional; an empty repeated field means &amp;quot;do not filter on this&amp;quot;. Fields are combined with AND; the values within one repeated field are combined with OR.
   ///
-  /// &lt;p>Filters fall into two groups. IDENTITY filters (fields 1 to 19) select which log streams, operations and
-  /// projects are of interest. CONTENT filters (fields 20 to 30) select which entries of those to return. The time
-  /// window (fields 31, 32) is neither.&lt;/p>
+  /// Filters fall into two groups. IDENTITY filters (fields 1 to 19) select which log streams, operations and projects are of interest. CONTENT filters (fields 20 to 30) select which entries of those to return. The time window (fields 31, 32) is neither.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CaiLogFilter : pb::IMessage<CaiLogFilter>
@@ -2327,8 +2317,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// One capture of one server process or of one container. A server process that restarts, and a container
-  /// recreated under a new id, yield a NEW log stream.
+  /// One capture of one server process or of one container. A server process that restarts, and a container recreated under a new id, yield a NEW log stream.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CaiLogStream : pb::IMessage<CaiLogStream>
@@ -3796,9 +3785,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The response message for &lt;a href="index.html#ondewo.nlu.Logs.StreamLogs">Logs.StreamLogs&lt;/a>. The stream
-  /// carries an envelope rather than a bare entry so that a viewer can tell a healthy quiet source from a capture
-  /// that has died.
+  /// The response message for &lt;a href="index.html#ondewo.nlu.Logs.StreamLogs">Logs.StreamLogs&lt;/a>. The stream carries an envelope rather than a bare entry so that a viewer can tell a healthy quiet source from a capture that has died.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StreamLogsResponse : pb::IMessage<StreamLogsResponse>

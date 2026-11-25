@@ -44,13 +44,11 @@ namespace Google.Cloud.Dialogflow.V2 {
   ///
   /// There are three types of entities:
   ///
-  /// &lt;ul>
-  ///   &lt;li>&lt;strong>System&lt;/strong> - entities that are defined by the Dialogflow API for common data types such as date, time, currency, and so on. A system entity is represented by the &lt;code>EntityType&lt;/code> type.&lt;/li>
+  /// &lt;ul> &lt;li>&lt;strong>System&lt;/strong> - entities that are defined by the Dialogflow API for common data types such as date, time, currency, and so on. A system entity is represented by the &lt;code>EntityType&lt;/code> type.&lt;/li>
   ///
-  ///   &lt;li>&lt;strong>Developer&lt;/strong> - entities that are defined by you that represent actionable data that is meaningful to your application. For example, you could define a &lt;code>pizza.sauce&lt;/code> entity for red or white pizza sauce, a &lt;code>pizza.cheese&lt;/code> entity for the different types of cheese on a pizza, a &lt;code>pizza.topping&lt;/code> entity for different toppings, and so on. A developer entity is represented by the &lt;code>EntityType&lt;/code> type.&lt;/li>
+  /// &lt;li>&lt;strong>Developer&lt;/strong> - entities that are defined by you that represent actionable data that is meaningful to your application. For example, you could define a &lt;code>pizza.sauce&lt;/code> entity for red or white pizza sauce, a &lt;code>pizza.cheese&lt;/code> entity for the different types of cheese on a pizza, a &lt;code>pizza.topping&lt;/code> entity for different toppings, and so on. A developer entity is represented by the &lt;code>EntityType&lt;/code> type.&lt;/li>
   ///
-  ///   &lt;li>&lt;strong>User&lt;/strong> - entities that are built for an individual user such as favorites, preferences, playlists, and so on. A user entity is represented by the &lt;a href="index.html#ondewo.nlu.SessionEntityType">SessionEntityType&lt;/a> type.&lt;/li>
-  /// &lt;/ul>
+  /// &lt;li>&lt;strong>User&lt;/strong> - entities that are built for an individual user such as favorites, preferences, playlists, and so on. A user entity is represented by the &lt;a href="index.html#ondewo.nlu.SessionEntityType">SessionEntityType&lt;/a> type.&lt;/li> &lt;/ul>
   ///
   /// For more information about entity types, see the &lt;a href="https://dialogflow.com/docs/entities">Dialogflow documentation&lt;/a>.
   /// </summary>

@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.T2S {
   /// <summary>
-  /// &lt;p>Text2Speech service provides endpoints for text-to-speech generation.&lt;/p>
+  /// Text2Speech service provides endpoints for text-to-speech generation.
   /// </summary>
   public static partial class Text2Speech
   {

@@ -1827,8 +1827,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The agent's settings of warm transfer intros. A text a &lt;code>WarmTransferIntroConfig&lt;/code> leaves empty falls back
-  /// to the agent's text for the intro's language, then to the built-in default.
+  /// The agent's settings of warm transfer intros. A text a &lt;code>WarmTransferIntroConfig&lt;/code> leaves empty falls back to the agent's text for the intro's language, then to the built-in default.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmTransferAgentSettings : pb::IMessage<WarmTransferAgentSettings>
@@ -2150,8 +2149,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// The default texts of warm transfer intros in one language. An empty text = the built-in default. The fields and
-  /// placeholders are those of the same-named fields of &lt;code>WarmTransferIntroConfig&lt;/code>.
+  /// The default texts of warm transfer intros in one language. An empty text = the built-in default. The fields and placeholders are those of the same-named fields of &lt;code>WarmTransferIntroConfig&lt;/code>.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmTransferAgentTexts : pb::IMessage<WarmTransferAgentTexts>
@@ -2531,9 +2529,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Additional entries of the closed decision lexicon of warm transfer intros in one language, matched before an LLM
-  /// classifies an answer. At most 50 entries in &lt;code>accept_phrases&lt;/code> and &lt;code>decline_phrases&lt;/code>
-  /// together.
+  /// Additional entries of the closed decision lexicon of warm transfer intros in one language, matched before an LLM classifies an answer. At most 50 entries in &lt;code>accept_phrases&lt;/code> and &lt;code>decline_phrases&lt;/code> together.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class WarmTransferAgentLexicon : pb::IMessage<WarmTransferAgentLexicon>
@@ -28844,8 +28840,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Response with the freshly minted technical user's credentials.
-  /// The password is returned ONCE and cannot be retrieved later.
+  /// Response with the freshly minted technical user's credentials. The password is returned ONCE and cannot be retrieved later.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProjectTechnicalUserResponse : pb::IMessage<CreateProjectTechnicalUserResponse>
@@ -30431,8 +30426,7 @@ namespace Ondewo.Nlu {
   }
 
   /// <summary>
-  /// Response with the rotated password.
-  /// The password is returned ONCE and cannot be retrieved later.
+  /// Response with the rotated password. The password is returned ONCE and cannot be retrieved later.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RotateProjectTechnicalUserPasswordResponse : pb::IMessage<RotateProjectTechnicalUserPasswordResponse>

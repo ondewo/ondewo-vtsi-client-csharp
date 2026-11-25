@@ -24,29 +24,15 @@ using grpc = global::Grpc.Core;
 
 namespace Ondewo.Vtsi {
   /// <summary>
-  /// &lt;p>ONDEWO VTSI API&lt;/p>
-  /// &lt;p>Reads, follows, exports and erases the CONTAINER LOGS VTSI captures from the per-call
-  /// ondewo-sip / ondewo-csi containers of a VTSI project. Entries are served from the VTSI database, not
-  /// from the docker daemon, so the logs of a container that was already removed stay readable until
-  /// retention or &lt;code>DeleteCallLogs&lt;/code> removes them.&lt;/p>
-  /// &lt;p>&lt;b>Secrets are redacted server-side&lt;/b> in every RPC that returns log text
-  /// (&lt;code>StreamCallLogs&lt;/code>, &lt;code>ListCallLogs&lt;/code>, &lt;code>ExportCallLogs&lt;/code>): the
-  /// project&amp;apos;s SIP passwords, the call-control secrets and, unless the operator disabled it
-  /// (&lt;code>ONDEWO_VTSI_LOG_MASK_IDENTIFIERS&lt;/code>, default true), identifiers such as phone numbers. The
-  /// redaction runs when the entry is read, so a redaction rule added later also applies to entries
-  /// captured before it.&lt;/p>
-  /// &lt;p>Errors are reported as gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name,
-  /// filter, cursor, &lt;code>page_token&lt;/code> or &lt;code>field_mask&lt;/code> (each naming the field);
-  /// &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the
-  /// server already serves its maximum of concurrent streams or exports; &lt;code>UNAVAILABLE&lt;/code> when the
-  /// database cannot be reached.&lt;/p>
-  /// &lt;p>Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller
-  /// without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires
-  /// &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project (&lt;code>PROJECT_EXECUTOR&lt;/code> and
-  /// &lt;code>PROJECT_USER&lt;/code> are refused, because log text can carry conversation content), otherwise
-  /// &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project. A long-running
-  /// &lt;code>StreamCallLogs&lt;/code> or &lt;code>ExportCallLogs&lt;/code> re-checks the caller&amp;apos;s role
-  /// periodically and ends when it was revoked or the credential expired.&lt;/p>
+  /// ONDEWO VTSI API
+  ///
+  /// Reads, follows, exports and erases the CONTAINER LOGS VTSI captures from the per-call ondewo-sip / ondewo-csi containers of a VTSI project. Entries are served from the VTSI database, not from the docker daemon, so the logs of a container that was already removed stay readable until retention or &lt;code>DeleteCallLogs&lt;/code> removes them.
+  ///
+  /// &lt;b>Secrets are redacted server-side&lt;/b> in every RPC that returns log text (&lt;code>StreamCallLogs&lt;/code>, &lt;code>ListCallLogs&lt;/code>, &lt;code>ExportCallLogs&lt;/code>): the project&amp;apos;s SIP passwords, the call-control secrets and, unless the operator disabled it (&lt;code>ONDEWO_VTSI_LOG_MASK_IDENTIFIERS&lt;/code>, default true), identifiers such as phone numbers. The redaction runs when the entry is read, so a redaction rule added later also applies to entries captured before it.
+  ///
+  /// Errors are reported as gRPC status codes: &lt;code>INVALID_ARGUMENT&lt;/code> for a malformed name, filter, cursor, &lt;code>page_token&lt;/code> or &lt;code>field_mask&lt;/code> (each naming the field); &lt;code>NOT_FOUND&lt;/code> for an unknown project or log stream; &lt;code>RESOURCE_EXHAUSTED&lt;/code> when the server already serves its maximum of concurrent streams or exports; &lt;code>UNAVAILABLE&lt;/code> when the database cannot be reached.
+  ///
+  /// Authorization (only when the server enforces it, see the &lt;code>Projects&lt;/code> service): a caller without a credential is &lt;code>UNAUTHENTICATED&lt;/code>; every RPC of this service requires &lt;code>PROJECT_DEVELOPER&lt;/code> or higher on the project (&lt;code>PROJECT_EXECUTOR&lt;/code> and &lt;code>PROJECT_USER&lt;/code> are refused, because log text can carry conversation content), otherwise &lt;code>PERMISSION_DENIED&lt;/code>, also for an unknown project. A long-running &lt;code>StreamCallLogs&lt;/code> or &lt;code>ExportCallLogs&lt;/code> re-checks the caller&amp;apos;s role periodically and ends when it was revoked or the credential expired.
   /// </summary>
   public static partial class Logs
   {
